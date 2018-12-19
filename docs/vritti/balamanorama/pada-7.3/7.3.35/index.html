@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="जनीवध्योश्च। अत उपधायाः इत्यत उपधाया इति, मृजेर्वृद्धिरित्यतो वृद्धिरिति, नोदात्तोपदेशस्येत्यतो नेति, आतो युगित्यतश्चिणकृतोरिति, अचो ञ्णितीत्यतो ञ्णितीति चानुवर्तते। तदाह&ndash;अनयोरिति। दीपीधातुरीदित्।दीपजनेति च्लेश्चिण्विकल्पं मत्वाह&mdash;अदीपि अदीपिष्टेति। पूरीधातुरपि ईदित्। दीपजनेति चिण्विकल्पं मत्वाह&ndash; अपूरि अपूरिष्टेति।तूरी इत्यादयोऽपि चूरी दाहे इत्यन्ता ईदित एव।तप ऐ�आर्ये वेति। श्यन् आत्मनेपदं चेति शेषः। उभयोः प्रकृतत्वादित्यभिप्रेत्य शेषं पूरयति&ndash;श्यनं तङं चेति। अन्यदा त्विति। ऐ�आर्यादन्यार्थे वृत्तिदशायामित्यर्थः। केचित्त्विति। तप ऐ�आर्ये वावृतु वरणे इति धातुपाठे स्थितम्। तत्र वावृतु वरणे इत्येवं वाशब्दं वृतु इत्यस्य आद्यवयवमिच्छन्तीत्यर्थः। एवं च तप ऐ�आर्ये इत्येव स्थितम्। अस्मिन्पक्षेतपधातोर्नित्यमेव श्यन् तङ् चेति भावः। तप्यते इति। ईष्टे इत्यर्थः। प्रथमपक्षे ऐ�आर्ये तपतीत्यपि भवति। पत इतीति। तपधातोस्तकारपकारयोः क्रमव्यत्यासेन पत ऐ�आर्ये वा इति पाठान्तरमित्यर्थः। एवं व्यत्यासेन पाठे प्रयोगं दर्शयति&ndash;द्युतद्यामा नियुत इति। प्रवायुमच्छा बृतीत्यृच एकदेशोऽयम्। पत्यमान इत्यस्य ईशान इत्यर्थः। अत्र लटः शानजात्मनेपदं श्यन् च। पक्षान्तरे इति। वावृतु इति पाठपक्षे इत्यर्थः। वावृत्यते इति। वृणोतीत्यर्थः। अपेक्षते इति यावत्। वावृतुधातोः प्रयोगं दर्शयति&ndash; ततोवावृत्यमानेति। अपेक्षमाणेत्यर्थः।न्यविवक्षतेति।नेर्विशः इत्यात्मनेपदम्। शल इगुपधादिति क्सः। अथ पञ्च स्वरितेत इति। शप आक्रोसे इत्यन्ता इत्यर्थः। शुच्यतीति। क्लिन्नं भवतीत्यर्थः। अशुचदिति। इरित्त्वादङिति भावः। णह बन्धने इति। णोपदेशोऽयम्। अनिट्। ननाहेति। नेहतुः। भारद्वाजनियमात्थलि वेडिति मत्वाह&ndash; नेहिथ ननद्धेति। इट्पक्षे थलि चे सेटीत्येत्त्वाभ्यासलोपौ। इडभावे तु नहो धः इति हस्य ध इति भावः। रञ्ज रागे। अनिट्। रज्यतीति। अनिदितामिति नलोप इति भावः। ररञ्ज ररञ्जतुः। ररञ्जिथ- ररङ्क्थ। ररञ्जिव। रङ्क्ता इत्यादि। अथैकादशेति। लिश अल्पीभावे इत्यन्ता इत्यर्थः। पद गतौ। अनिट्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.35.md">Edit 7.3.35!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.3.35";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.3.36\",\"Previous\":\"7.3.34\",\"अकारादिक्रमसङ्ख्या\":1486,\"कौमुदीक्रमसङ्ख्या\":2512,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"जनिवध्योश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

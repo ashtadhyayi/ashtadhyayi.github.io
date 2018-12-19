@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सन्वल्लघुनि। अनग्लोपे इति च्छेदः। बहुव्रीहिरिति। चङ् परो यस्मादिति विग्रह इति भावः। कर्मदारयमाश्रित्य चङि परे इति नार्थः, परग्रहणवैयर्थ्यात्। ननु बहुव्रीह्याश्रयणेऽपि अत्र लोपोऽभ्यासस्येत्यतोऽभ्यासस्येत्यनुवृत्तौ चङपरके लघुनि परेऽभ्यासः सन्वदित्यर्थो लभ्यते। तथा सति अण्यन्तेभ्यः श्रिद्रुरुआउभ्यश्चङि द्वित्वे अशिश्रियत् अदुद्रुवत् असुरुआउवदित्यत्रापि सन्वत्त्वं स्यात्। ततश्च दीर्घो लघोरिति सन्वद्भावविषये अभ्यासस्य वक्ष्यमाणो दीर्घः स्यादित्यत आह&ndash;अन्यपदार्थो णिरिति। तथा च चङ्परे णौ इति लभ्यते। अशिश्रियादित्यादौ च णेरभावान्न सन्वत्त्वमिति भावः। स चाङ्गस्येति चेति। बहुव्रीहिगम्यो णिः, अङ्गस्येत्यावृत्तौ एकं चङ्परे इत्यत्रान्वेति। निमित्तनिमित्तभावे षष्ठी। तथा च अङ्गसंज्ञानिमित्तभूते चङपरके वर्णे परे इति लभ्यते। चङ्परकश्च वर्णोऽर्थाण्णेरिकार एव, न तु श्रिद्रुरुआउवामन्त्यवर्णः, तस्य अप्रत्ययत्वेन अङ्गसंज्ञाप्रापकत्वाऽभावात्। एतदर्थमेव अङ्गस्येत्स्य निमित्तषष्ठ�न्ततामाश्रित्य चङ्पर इत्यनेनान्वयोऽभ्युपगतः। चङ्पर इत्येतावतैव तु णाविति न लभ्यते, श्रिद्रुरुआउषु व्यभिचारात्। द्वितीयं त्वङ्गस्येत्येतत् अभ्यासस्येत्यनुवृत्तेन अन्वेति। सन्वदिति सप्तम्यन्ताद्वतः। तदाह&ndash; अङ्गसंज्ञानिमित्तमित्यादिना। अथवेति। अस्मिन्व्याख्याने चङ्परे इत्येतदङ्गस्येत्यत्रान्वेति, न तु लघुनि। अङ्गस्य च प्रत्ययनिमित्तत्वादेव णेरन्यपदार्थस्य लाभः। लघुनीति तु अभ्यासस्येत्यत्रैवान्वेति। तदाह&ndash; चङ्परे णौ यदङ्गमित्यादिना। प्राग्वदिति। सनीव कार्यं स्याण्णावग्लोपेऽसतीत्यर्थः। अत्र प्रथमपक्ष एव भाष्यसंमतः, अजजागर इत्यत्र चङ्परे णौ यल्लघु, तदभ्यासव्यवहितमिति न सन्वत्त्वमिति भाष्योक्तेः। एवं च प्रथमपक्षे उन्देर्ण्यन्ताच्चङि द्वित्वे उन्दिदि अ त् इत्यत्र अभ्यासोत्तरखण्डे चङ्परे णौ लघोरभावेनाऽभ्यासस्य तथाविधलघुपरकत्वविरहात्सन्वत्त्वाऽभावान्नाऽभ्यासदीर्घः। द्वितीयपक्षे तु चङ्परे णौ यदङ्गम्--उन्दिद्` इत्येतत् , &ndash; तदीयोऽभ्यासश्चङमादाय,लुप्तं णिमादाय वा लघुपर इति सन्वत्त्वसत्त्वादभ्यासदीर्घ इति भेदः। एवं च प्रकृते क कम् अ त इत्यत्र व्याख्याद्वयेऽपि सन्वत्त्वं स्थितम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.93.md">Edit 7.3.93!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.3.93";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.3.94\",\"Previous\":\"7.3.92\",\"अकारादिक्रमसङ्ख्या\":2635,\"कौमुदीक्रमसङ्ख्या\":2452,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्ङिति सार्वधातुके अङ्गकार्याणि\",\"विषयः २\":\"ईट्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ब्रुव ईट्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

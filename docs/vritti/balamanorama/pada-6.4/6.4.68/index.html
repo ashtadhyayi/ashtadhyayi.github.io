@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="आशीर्लिङि आत्त्वे कृते ग्ला-यात्-इति स्थिते&ndash;वाऽन्यस्य। आर्द्धधातुक इत्यधिकृतम्। एर्लिङीत्यनुवर्तते। एरिति प्रथमान्तम्। आतो लोप इटि चेत्यत आत इत्यनुवर्तते। कस्मादन्यस्येत्यपेक्षायां घुमास्थागापाजहातिसां हलीति प्रकृतत्वात्तेभ्योऽन्यस्येति लभ्यते। तदाह--घुमास्थादेरित्यादिना। कतीति।दीङो युडचि क्ङितीत्यतस्तदनुवृत्तेरिति भावः। ङितीति तु नानुवर्तते, लिङार्द्धधातुकस्य ङित्त्वाऽसंभवात्। अग्लासीदिति।यमरमेत्यादन्तत्वात्सगिटौ। अग्लासिष्टाम् अग्लासिषुरित्यादि। अग्लास्यत्। म्लायतीति। ग्लैधातोरिव रूपाणीति भावः। द्यै न्यक्करणे।यकारमध्योऽयम्। इत आरभ्य ऐकारान्तानां संयोगादीनां ग्लैवदेव रूपाणि प्रत्येतव्यानि।रै शब्देइत्यादीनां त्वसंयोगादीनामाशीर्लिङिवाऽन्यस्य संयोगादेरित्येत्त्वं न भवति, [तेन] रायादित्यादि रूपमिति विशेषः। स्त्यै ष्ट�ऐ इति। षोपदेशेषु स्त्यादातोः पर्युदासाद्यो न षोपदेशः। द्वितीयस्तु षोपदेशः। तकारस्य ष्टुत्वसंपन्नटकारनिर्देशः। सत्वे कृते इति।धात्वादेरिति षस्य सकारे सति निमित्ताऽपायात् ष्टुत्वनिवृत्तिरिति भावः। तिष्ट�आसतीति। ष्ट�ऐधातोः कृतसत्वात्सनि आत्त्वे स्त्या स इति सन्नन्ताल्लटि तिपि सपिसन्यङोरिति द्वित्वेशर्पूर्वाः खयःइति सकारयकारनिवृत्तौतास्त्यासतिइति स्थिते अभ्यासह्रस्वेसन्यतःइति इत्वे सकारस्य इणः परत्वादादेशसकारत्वाच्च षत्वेतिष्ट�आसतीति रूपम्। स्वाभाविकसकारादित्वे त्वादेशसकारादित्वाऽभावात्षत्वं न स्यादिति भावः। अतिष्ट�पदिति। ष्ट�ऐधातोः कृतसत्वाण्णौ आत्त्वेअतिह्रीति पुकि स्त्यापि इति ण्यन्ताल्लुङि अडागमे तिपिइतश्चइति इकारलोपेणिश्रिद्रुरुआउभ्यःइति च्लेश्चङिणेरनिटीति णिलोपेणौ चङ्युपधायाःइति ह्रस्वेचङिइति स्त्यबित्यस्य द्वित्वेशपूर्वा इति सकारयकारपकाराणां निवृत्तौ सत्यां सन्यतः इति इत्वे, इणः परत्वादादेशसकारत्वाच्च सस्य षत्वे, तस्य ष्टुत्वे अतिष्ठ�पदितिरूपम्। स्वाभाविकसकारत्वेत्वादेशसकारत्वाऽभावात्षत्वं न स्यादिति भावः। जजौ ससाविति। जैधातोः षैधातोश्च णलि आत्त्वे द्वित्वादौ वृद्धिरिति भावः। ननु एर्लिङीत्यत्र घुमास्थागापाजहातिसामित्यनुवृत्त्या सैधातोराशीर्लिङि सायादित्यत्र एत्त्वं स्यत्। तथा लुङि सगिटोः&ndash;असासात् असासिष्टामित्येव इष्यते। तत्र विभाषा घ्राधेट्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.68.md">Edit 6.4.68!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.4.68";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.4.69\",\"Previous\":\"6.4.67\",\"अकारादिक्रमसङ्ख्या\":3130,\"कौमुदीक्रमसङ्ख्या\":2378,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एत्वम्\",\"विषयः २\":\"आर्धधातुके\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"वाऽन्यस्य संयोगादेः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

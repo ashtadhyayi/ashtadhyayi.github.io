@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="उदात्तयणः, स्वरितयणश्च इति। उदात्तस्थाने यो यण स उदात्तयण; स्वरितस्थाने यो यण्? स स्वरितयणित्यर्थः। कुमार्यौ, कुमार्यः इति। अत्र अनुदात्तौ सुप्तितौ (3.1.4) इत्यौजसावनुदात्तौ, तयोरुदात्तयणोः परयोः स्वरितो भवति। उदात्तनिवृत्तिस्वरेण इति। उदात्तलोपनिमित्तस्वरः पूर्वमुदात्तस्य लोपो यस्मात्(), स पुनरुदात्तनिवृत्तिस्वरः अनुदात्तस्य च यत्रोदात्तलोपः (6.1.155) इत्यत्र यो विहिसः स [नास्ति&ndash;कांउ। पाठे] वेदितव्यः। कृत्स्वरेणान्तोदात्तौ इति। ल्व्या प्व्या इति। लूपूभ्यां धातुस्वरेणान्तोदात्ताभ्यां क्विप्(), उपपदमतिङ्() (2.2.19) इति समासः। गतिकारकोपपदात्? कृत्() (6.2.138) इति कृदन्तस्योत्तरपदस्य प्रकृतिभावदिधानादेतौ कृत्स्वरेणान्तोदात्तौ भवतः। उदात्तयणाअदेशश्च इति। इहनेन सूत्रेणानुदात्तयोदात्तयणः परस्य स्वरितो विधीयते, स्वरितयणश्च परसय सप्तम्येकवचनस्य पूर्वेण प्रकारेण स्वरितो विधीयत इति दर्शयति। तस्य यो यण्() इति। तस्येत्यनेन सप्तम्येकवचनस्य परामर्शः। आशाशब्दाकारस्यानुदात्तस्य इति। आशाया अदिगारव्या चेत्() (फि।सू।१।१८) इत्याशाशब्द आद्युदात्तः, तेन अनुदात्तं पदमेकवर्जम्() (6."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.4.md">Edit 8.2.4!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.2.4";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.2.5\",\"Previous\":\"8.2.3\",\"अकारादिक्रमसङ्ख्या\":735,\"कौमुदीक्रमसङ्ख्या\":3657,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकदेश-स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उदात्तस्वरितयोर्यणः स्वरितोऽनुदात्तस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

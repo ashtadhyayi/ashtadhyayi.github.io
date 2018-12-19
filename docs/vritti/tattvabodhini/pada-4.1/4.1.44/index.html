@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="गुणवचनात्। गुणो नाम नेहादेङ्रूपः, उतःइति विशेषणाद्वचनग्रहणाच्च, नापि विशेषणमात्रमिदम्, आखुर्द्रव्यमित्यादावतिप्रसङ्गादिति चेत्। अत्राहुः&ndash;संज्ञाजातिक्रियाशब्दान् हित्वाऽन्ये गुणवाचिनः। चतुष्टयीशब्दानां प्रवृत्तिरित्याकरग्रन्थनिष्कर्षादेव निर्णयः इति। भाष्ये तु सत्त्वे निविशतेऽपैति पृथग्जातिषु दृश्यते। आधेयश्चाऽक्रियाजश्च सोऽसत्त्वप्रकृतिर्गुणः।इति स्थितम्। सत्त्वं द्रव्यम्। सत्त्व एव निविशतो इति सावधारणं व्याख्येयम्। एतेनसत्ता व्यावर्त्त्यते। सा हि न केवलं द्रव्ये वर्तते किन्तु द्रव्यगुणकर्मसु। ननु द्रव्य एव द्रत्र्यत्वं वर्तत इति तत्राऽतिव्याप्तिरत आह&mdash;अपैतीति। अपगच्छतीत्यर्थः। अर्थात्सत्त्वादेव। यथा पीततायां जातायां फलादेर्नीलताऽपैति, नैवं द्रव्यत्वं द्रव्यादपैति। एवमपि गोत्वं गोषु वर्तते अ�आआदेश्चापैति तत्रातिव्याप्तिरत आह&ndash;पृथग्जातिषुदृश्यत इति। गोत्वं हि द्रव्यत्वाऽवान्तरनानाजातिषु न दृश्यते। गुणस्तु दृश्यते। यथा अम्रे दृष्टा नीलता तृणादिष्वपि दृश्यते। एतेन पूर्वार्धेन सकलजातेव्र्यवच्छेदः। एवं तर्हि कर्म द्रव्ये वर्तते ततोऽपैति पृथग्जातिषु दृश्यते चेति तत्रातिव्याप्तिरत आह&ndash;आधेयश्चाक्रियाजश्चेति। उत्पाद्योऽनुत्पाद्य इत्यर्थः। उत्पाद्यो&ndash;यथा घटादेः पाकजो रूपादिः। अक्रियाजोऽनुत्पाद्यः। स यथा आकाशादेर्महत्त्वादिः। क्रिया तु सर्वाप्युत्पाद्यैव न नित्येति तस्या द्वेविध्याऽभावाद्गुणत्वाऽभावाः। एवमपिल द्रव्यस्य गुणत्वं प्राप्नोति, अवयविद्रव्यं ह्यस्तपादादिषु दृश्यते, द्विविधं च भवति नित्याऽनित्यभेदेन, निरवयवस्याऽत्मपरमाण्वादेर्नित्यात्वादवयविद्रव्यस्य तु घटादेरनित्यत्वादत आह&ndash;असत्त्वपर्कृतिरिति। अद्रव्यस्वभाव इत्यर्थः। पतिवरेति। एवं च पाणिग्रहणोत्कण्ठाभिधायित्वाद्गुणवचनोऽयमिति भावः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-4.1/4.1.44.md">Edit 4.1.44!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.1.44";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.1.45\",\"Previous\":\"4.1.43\",\"अकारादिक्रमसङ्ख्या\":3316,\"कौमुदीक्रमसङ्ख्या\":502,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वोतो गुणवचनात्‌\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="क्षुब्धस्वान्त। क्षुब्ध, स्वान्त, ध्वान्त, लग्न, म्लिष्ट, विरिब्ध, फाण्ट, बाढ एषामष्टानां द्वन्द्वात्प्रथमाबहुवचनम्। मन्थ, मनः, तमः, सक्त, अविस्पष्ट, स्वर, अनायास, भृश एषामष्टानां द्वन्द्वात्सप्तमी। यथासङ्ख्यमन्वयः। समुदायेनेति। मन्थादिष्वेते रूढाः। अवयवार्थाऽभिनिवेशो न कर्तव्य इत्याह- द्रव्यद्रव्येति। अत्र याज्ञिकप्रसिद्धिरेव शरणीकर्तव्या। मन्थनदण्डश्चेति। वैशाखमन्थमन्थानमन्थानोमन्थदण्डके इत्यमरः। क्षुब्ध इति। क्षुभ संचलने अस्मात् क्तः, इडभावो निपात्यते। झषस्तथोरिति धः , जश्त्वम्। स्वान्तमिति। स्वनधातोः क्तः, अनुनासिकस्य क्वीति दीर्घः। निपातनान्नेट्। स्वान्तं ह्मन्मानसं मनः इत्यमरः। ध्वान्तं तम इति ध्वनेः क्तः। अनुनासिकस्य क्वीति दीर्घः। अन्धकारोऽस्त्रियां ध्वान्तं तमिरुआं तिमिरं तमः इत्यमरः। लग्नं सक्तमिति। संबद्धमित्यर्थः। लगेः क्तः, इडभावः। ततर् रदाभ्यां परतवाऽभावात्कतं निष्ठानत्वमित्यत आह&ndash; निपातनादिति। म्लिष्टमविस्पष्टमिति। इडभावे व्रश्चेत षः। तकारस्य ष्टुत्वेन टः। अथ म्लिष्टमविस्पष्टमित्यमरः। विरब्धः स्वर इति। स्वरविशेष इत्यर्थः। रेभृ शब्दे अस्मात् क्तः, इडभावे झषस्तथोर्धोऽध इति धः। उभयत्र धातुस्वरूपं प्रदर्शयन्नाह&ndash; म्लेछ रेभृ अनयोरिति। इत्त्वमपीति। इडभावश्चेत्यर्थः। फाण्टमिति। फणेः क्तः, इडभावः, निष्ठातस्य टत्वं च निपात्यते। तस्याऽसिद्धत्वात् अनुनासिकस्येति दीर्घः। अनायासकृतं फाण्टमित्यमरः। वृत्तिकृन्मतमाह&ndash;कषायविशेष इति।यदशृतमपिष्टं च कषायमुदकसंसर्गमात्राद्विभक्तरसमीपषदुष्णं तत्फाम्टमित्युच्यते इति वृत्तौ स्थितम्। वेदभाष्ये आहेति। तद्वै नवनीतं भवति। घृतं वै देवानां फाण्टं मननुष्याणामिति शतपथब्राआहृणव्याख्यावसरे आहेत्यर्थः। बाढं भृशमिति। बाह्म प्रयत्ने अस्मात् क्तः, इडभावः, ढत्वधत्वष्टुत्वढलोपाः। अन्यत्र त्विति। मन्थादेर्वाच्यत्वाऽभाव इत्यर्थः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.2/7.2.18.md">Edit 7.2.18!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.2.18";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.2.19\",\"Previous\":\"7.2.17\",\"अकारादिक्रमसङ्ख्या\":1236,\"कौमुदीक्रमसङ्ख्या\":3058,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"निषेधः\",\"विषयः ३\":\"निष्ठा\",\"सूत्रम्‌\":\"क्षुब्धस्वान्तध्वान्तलग्नम्लिष्टविरिब्धफाण्टबाढानि मन्थमनस्तमःसक्ताविस्पष्टस्वरानायासभृशेषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="हेतौ। हेत्वर्थे इति। हेतुरिह कारणपर्यायो लौकिक एव विवक्षितो, नतु तत्प्रयोजको हेतुश्चेति कृत्रिमः, तस्य चकारेण कर्तृसंज्ञाया अपि सत्त्वेन कर्तृतृतीययैव सिद्धेः। ननु हेतोरपि करणत्वादेव तृतीया सिद्धेत्याशङ्क्य हेतुत्वकरणत्वयोर्भेदमाह&ndash;द्रव्यादिसाधारणमिति। आदिना गुणक्रियासङ्ग्रहः। द्रव्यं गुणं क्रियं च प्रति यज्जनकं, तत्र सर्वत्र विद्यमानमित्यर्थः। निर्वापारसाधारणं चेति। द्वारीभूतव्यापारवति तद्रहिते च विद्यमानं चेत्यर्थः। एवं च द्रव्यगुणक्रियात्मककार्यत्रयनिरूपितं निर्व्यापारसव्यापारवृत्ति च यत्तद्धेतुत्वमिति फलति। करणत्वं त्विति। क्रियाजनकमात्रवृत्ति व्यापारवद्वृत्ति च यत्तदेव करणत्वमित्यर्थः। एवं च हेतुत्वकरणत्वयोर्भेदादन्यतरेण अन्यतरस्य नान्यथासिद्धिरिति भावः। तत्र द्रव्यं प्रति हेतुमुदाहरति&ndash;दण्डेन घट इति। दण्डहेतुको घट इत्यर्थः। दण्डे व्यापारसत्त्वेऽपि क्रियाजनकत्वाऽभावान्न करणत्वमिति भावः। क्रियां प्रति हेतुमुदाहरति-पुण्येन दृष्टो हरिरिति। वागादिना स्वर्गादिफले जननीये यदवान्तरव्यापारभूतमपूर्वं तत् पुण्यमित्युच्यते। तस्य हरिदर्शनजनकत्वेऽपि निर्व्यापारत्वान्न करणत्वमिति भावः। गुणं प्रति हेतुत्वे तु पुण्येन ब्राहृवर्चसमित्याद्युदाहार्यम्। नन्वध्ययनेन वसतीत्यत्र कथं तृतीया, अध्ययनस्य गुरुकुलवासं प्रति हेतुत्वाऽभावात्, प्रत्युत अध्ययनस्य वाससाध्यत्वादित्यत आह&ndash;फलमपीह हेतुरिति। अध्ययनं यद्यपि वासफलं तथापि वासं प्रति हेतुरपि भवति, इष्टसाधनताज्ञानस्य प्रवृत्तिहेतुतया अध्ययनस्य फलस्य स्वज्ञानद्वारा वासजनकत्वात्। यदा त्वध्ययने फले एतादृशं हेतुत्वमविवक्षित्वा अध्ययनार्थमेव वासो विवक्ष्यते, तदा चतुर्थ्येव भवति-अध्ययनाय वसतीति। एतच्च प्रकृतसूत्रे कैयटे स्पष्टम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.3/2.3.23.md">Edit 2.3.23!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.3.23";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.3.24\",\"Previous\":\"2.3.22\",\"अकारादिक्रमसङ्ख्या\":3957,\"कौमुदीक्रमसङ्ख्या\":568,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृतीया\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"हेतौ\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

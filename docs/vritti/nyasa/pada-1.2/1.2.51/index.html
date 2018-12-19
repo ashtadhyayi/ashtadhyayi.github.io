@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अभिधेयस्य लिङ्गसङख्ययोः प्राप्तयोरयमारम्भः। लुबिति प्रत्ययस्यादर्शनम्,तच्चाभावात्मकम्। न चाभावे व्यक्तिवचनयोः शक्यतेऽतिदेशः कर्त्तुम्। तस्माल्लुप्संज्ञया लुप्तस्य प्रत्ययस्यार्थो लुप्शब्देन विवक्षित इति मत्वाऽह&ndash;लुपीति लुप्संज्ञया इत्यादि। कथं पुनरेतल्लभ्यते, यावता प्रत्ययादर्शनस्यैषा संज्ञा, न तु प्रत्ययार्थस्य? साहचर्यात्। साहचय्र्यन्तु यत्र लुप्, तत्रावश्यं प्रत्ययार्थस्य सद्भावात्। युक्तवदिति निष्ठाप्रत्ययेन क्तवतुना प्रकृत्यर्थ उच्यते इति। अत्र कारणमाह&ndash; स हि इत्यादि। युनक्ति = अभिसम्बध्नाति, विशेषणविशेष्यभावलक्षणसम्बन्धेनात्मसम्बन्धिनं करोतीत्यर्थः। तत्र तस्य निवासः इत्यादि प्रत्ययार्थो विशेष्यः,पञ्चालादिशब्दस्यार्थः प्रकृत्यर्थो विशेषणम्। तेन हि पूर्व विज्ञातेन स्वाम्यन्तरव्यवच्छेदेन प्रत्ययार्थो विशिष्यते। अथ वा इत्यादि। पूर्वं युजिर् योगे (धा।पा।१४४४) इत्यस्माद्धातो क्तवतुप्रत्यये सति युक्तवदित्यतद्रूपं प्रदर्शितम्, इदानीं तस्यैव धातोः क्तप्रत्ययाद्वतिप्रत्यये सति युक्तवदित्येतद्रूपं दर्शयति। यद्यपि द्विष्ठत्वात् सम्बन्धस्य &ndash; यथा प्रत्ययार्थेन प्रकृत्यर्थो युक्तः, तथा प्रकृत्यर्थेनापि प्रत्ययार्थः; तथापि प्रत्ययार्थसम्बन्धिनोव्र्यक्तिवचनयोः प्रत्ययार्थ एवातिदेशोऽनर्थक इति प्रकृत्यर्थ एवात्र युक्तशब्देन विवक्षित इति मत्वाऽह&ndash; युक्तः प्रकृत्यर्थः इति। सप्तम्यर्थे वतिः इति। लुपीति सप्तमीनिर्देशात्। व्यक्तिशब्दः प्रादुर्भावादावप्यर्थे वत्र्तते, वचनशब्दो हि भाषणादिषु, अतस्तत्संप्रत्ययो मा भूदित्यत आह&ndash; व्यक्तिवचने इति। किं पुनः कारणं पूर्वाचार्यनिर्देश आश्रीयत इत्यत्र आह&ndash; तदीयम् इत्यादि। कुत एतदित्यत आह&ndash; तथा च इत्यादि। न हि स्वकीयस्यैव प्रत्याख्यानं युक्तमिति भावः। पञ्चालाः क्षत्रियाः इति। पञ्()चालस्यापत्यानि बहूनीति विवक्षायाम् जनपदशब्दात् क्षत्रियादञ् (4."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.51.md">Edit 1.2.51!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.51";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.52\",\"Previous\":\"1.2.50\",\"अकारादिक्रमसङ्ख्या\":3013,\"कौमुदीक्रमसङ्ख्या\":1294,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुपि युक्तवद्भावः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लुपि युक्तवद्व्यक्तिवचने\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

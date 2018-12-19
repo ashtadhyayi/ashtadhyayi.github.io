@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="वामि। यू स्त्र्याख्यौ नदी नेयहुवङ्स्थानावस्त्रीत्यनुवर्तनादाह&mdash;इयङुवङ्स्थानावित्यादिना। यद्यपि ने ति प्रकृतो निषेधोऽनेन विकल्प्यते तथापि निषेधविकल्पे विधिविकल्प एव फलतीति स एव सूत्रार्थ उचित इत्याशयेनाह---वा नदीसंज्ञौ स्त इति।ङिति ह्रस्वश्चेति सूत्रेऽप्येवमेव। प्रधीशब्दस्य त्विति।एरनेकाचइचि यणा इयङो बाधनात्नेयङुवङ्स्थानाविति निषेधोऽत्र न प्रवर्तते। यत्र त्वपवादेनेयङुवङौ बाध्यते तत्र न निषेध इत्याशयेन व्याचष्टे---लक्ष्मीवद्रूपमिति।अमि शसि च विशेषं इत्यनुपदमेव वक्ष्यति। पुंवद्रूपमिति। अयं च मतभेदःप्रकृष्टा धीर्यस्याः`प्रकर्षेण ध्यायतीति वा विग्रहे बोध्यः। लक्ष्मीवदिति। मतद्वयेऽपीति शेषः। सुष्ठु धीर्यस्या इति। नन्वस्मिन्विग्रहे कैयटमते सुधीशब्दस्य नित्यस्त्रीत्वाऽभावेऽपि धीशब्दस्य नित्यस्त्रीत्वा त्प्रथमलिङ्गग्रहणं चेति सुधीशब्दः श्रीवदेव भवति, नतु पुंवदिति चेदत्राहुः&mdash;-नेयङुवङ्स्थानावस्त्रीति धीशब्दे नदीसंज्ञानिषेधात्सुधीशब्दे प्रथमलिङ्गग्रहणं चेत्यस्याऽप्रवृत्तिः, तथा वृत्तिमतेइति ग्रन्थः स्वरसत सङ्गच्छते इति। मतान्तर इति। लिङ्गान्तरानभिधायकत्वं तदिति कैयटमते इत्यर्थः। श्रीवदेवेति। बुद्धिवाचकधीशब्दस्य नित्यस्त्रीत्वान्मतद्वयेऽपि श्रीवदेवेत्यर्थः। (264) स्त्रियां च।7।1।96।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.4/1.4.5.md">Edit 1.4.5!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.5";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.6\",\"Previous\":\"1.4.4\",\"अकारादिक्रमसङ्ख्या\":3127,\"कौमुदीक्रमसङ्ख्या\":304,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"नदी\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वाऽऽमि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

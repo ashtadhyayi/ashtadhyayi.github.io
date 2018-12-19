@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="युक्तारोह्राविपरिग्रहार्थः इति। युक्तारोह्रादिषु युक्तारोह्रादिभिर्वा परिगर्होऽर्थः प्रयोजनं यस्य पाठस्य स तथोक्कतः। किमर्थं पुनर्युक्तारोह्रादिषु परिग्रहस्तेषामिष्यत इत्याह&ndash; पूर्वपदाद्युदात्तत्वं यथा स्यात् इति युक्तारोह्रादीनां हि युक्तारोह्रादयश्च (6.2.81) इत्यनेन पूरवपदाद्युदात्तत्वं विधीयते। तत्र यदि ये क्तान्तास्ते न पठ()एरन्, तदा तेषामाद्युदात्तत्वं न स्यात्। कथं पुनः पात्रेसमितादयो युक्तारोह्रादिग्रहणेन गृह्रन्ते; यतस्तेषां विधीयमानमाद्युदात्तत्वं पात्रेसमितादीनमपि भवतीत्याह&ndash; युक्तारोह्रादिषु हि इत्यादि। उदुम्बरमशकादिषूपमया क्षेपः इति। यस्तत्रैवावरुद्धो न क्वचिद्()गच्छति तमव विशिष्टचं मन्यते&ndash; नास्मात्परमस्तीति, सोऽदृष्टविस्तार उच्यत उदुम्बरमशक इति। एवमन्यत्राप्यपमानात् क्षेपः। प्रतिषिद्धसेवनेन इति। यः कश्चित् प्रतिषिद्धमाचरति स मातरिपुरुषः इत्युच्यते। निरीहतया इति। यो न किञ्चित् कर्तुं समर्थः स पिण्डीशूरः इत्येवमादिभिः पदैरभिधीयते। चकारोऽवधारणार्थः इति। पात्रेसमितादय एव यता स्युः, यदन्यत् समासान्तरं तेषां प्राप्नोति तन्मा भूदिति। तेन परमपात्रेसमिता इत#इ सन्महत् (2."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.47.md">Edit 2.1.47!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.47";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.48\",\"Previous\":\"2.1.46\",\"अकारादिक्रमसङ्ख्या\":1240,\"कौमुदीक्रमसङ्ख्या\":724,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सप्तमी\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"क्षेपे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

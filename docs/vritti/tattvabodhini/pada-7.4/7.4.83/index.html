@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="दीर्घोऽकितः। अकितः किम् ?। यंयम्यते। रंरम्यते। ननु दीर्घश्रुत्योपस्थितेनाऽचा अत्र लोपोऽभ्यासस्येत्यतोऽनुवृत्तमभ्यासस्येत्येतद्विशिष्येत। ततश्चाऽजन्ताभ्यासस्य दीर्घो भवतीत्यर्थात् पापच्यत इत्यादावेव दीर्घो भवेन्न तु यंयम्यते जङ्घनीतित्यादौ। तत्र हि परत्वान्नुकि कृतेऽभ्यासस्याऽजन्तत्वाऽभावाद्दीर्घस्य प्रसक्तिरेव नास्तीति किमनेनाऽकित इत्यनेन। न चाभ्यासावयवस्याऽचो दीर्घ इति वैयधिकरण्यान्वये स्वीकृतेऽकिद्ग्रहणं प्रयोजनवदिति वाच्यं, संभवति सामानाधिकरणे वैयधिकरण्यस्याऽन्याय्यत्वात्। येन नाप्राप्तिन्यायेन नुको दीर्घापवादत्वस्वीकाराच्च। तस्मादकित इति व्यर्थमिति चेत्। अत्राहुः&ndash; डोढौक्यते इत्यत्राभ्यासह्रस्वं बाधित्वा परत्वात् दीर्घोऽकितः इति दीर्घे कृते डोढौक्यत इति स्यात्। तस्मादभ्यासविकारेषु उत्सर्गविधीन्बाधका न बाधन्त इति ज्ञापनायाऽकित इति ग्रहणं कर्तव्यमिति। रतथाचोक्तज्ञापकनिर्वाहाय दीर्घोऽकितः इत्यत्राऽभ्यासस्याऽच इति वैयकरम्यपक्षस्याश्रयणाद्यंयम्यत इत्यादौ दीर्घात्प्रागेव नुकि कृतेऽपि दीर्घः स्यात्, तद्वारणार्थमकित इत्यावश्यकमिति दिक्। अटाट�त इति। इह ट�शब्दस्य द्वित्वम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-7.4/7.4.83.md">Edit 7.4.83!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.4.83";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.4.84\",\"Previous\":\"7.4.82\",\"अकारादिक्रमसङ्ख्या\":1888,\"कौमुदीक्रमसङ्ख्या\":2632,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"यङ् यङ्-लुक्\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"दीर्घोऽकितः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="स्वतन्त्रम् इति। यो ह्रन्यस्यावयवभूतो न भवति केवलः कतशब्दस्तत् स्वतन्त्रं प्रातिपदिकम्। यस्तु कुरुकतशब्दस्यावयवः कतशब्दस्तस्य स्वान्तन्त्र्यं नास्ति; समुदायप्रतिबद्धत्वात्। कः पुनरसौ कतशब्दः स्वतन्त्रं प्रातिपदिकमित्यत आह&ndash; कपिशब्दात् इत्यादि। लौहित्यायनी। शांसित्यायनीइति। लोहितशंसितशब्दाभ्यां गर्गादित्वाद्यञ्।वाभ्रव्यायणीइति। अत्रापि बभ्रुशब्दात्मधुबभ्रुवोब्र्राआहृणकौशिकयोः(4.1.106) इति यञ्ओर्गुणः(6.4.146),वान्तो यि प्रत्यये(6.1.76) इति वान्तादेशः, यञन्तेभ्यः ष्फः। कण्वात्तुइत्यादि। कण्वशब्दात् पूर्वः शकलशब्द इष्यते, कतशब्दात्तूत्तरः। किमेवं सति भवतीत्याह--पूर्वोत्तरोइत्यादि। एवं सति पूर्वोत्तरो गणौ तदन्तादी भवतः। तच्छब्देन शकलशब्दः प्रत्यवमृश्यते। शकलशब्दोऽन्त आदिश्च यथाक्रमं ययोः पूर्वोत्तरयोर्गणयोस्तौ तदन्तादी पूर्वोत्तरगणौ। लोहितादिः शकलशब्दान्तो भवति पूर्वो यथः। उत्तर गणः कण्वादिः शकलशब्दादिर्भवति। किं पुनः पूर्वोत्तरयोर्गणयोस्तदन्तादित्वे प्रयोजनमित्याह--ष्फाणौ तत्र प्रयोजनम्इति। पूर्वस्य गणस्यशकलान्तत्वे ष्फः प्रयोजनम्। उत्तरस्य शकलादित्वेऽण् प्रयोजनम्। प्रातिपदिकेष्वन्यथा पाठःइति। कपिकत, कुरुकत, अनडुह्, कण्व, शकल -- इत्यनयाऽनुपूव्र्या प्रातिपदिकेषु पाठः।स एवं व्यवस्थापयितव्यःइति। कण्वात्तु शकलः पूर्वःइत्यादिना याऽ‌ऽनुपर्वी दर्शिता तया व्यवस्थापयितव्यः। अत एतदुक्तं भवति&ndash; कुरुकत, अनडुह्&ndash; इत्येतावन्यस्मिन् स्थाने पठितव्यौ, शकलशब्दस्तु कतकण्वशब्दयोर्मध्ये पठितव्यः। मन्यते इति श्लोवार्त्तिकारः। कथं पुनरेवं पाठे सति शकलशब्दात् ष्फाणौ सिध्यत आह&ndash; कतन्तेभ्यः इत्यादि। कतस्यान्तः कतन्त इति तत्पुरुषः कतन्तेभ्यःइति निपातनात्पररूपत्वम्। कतशब्दोऽन्ते येषां लोहितादीनां ते कतन्ता इति बहुव्रीहिः। कतन्तश्च शकलशब्दः, कतन्ताश्च लोहितादय इति कतन्तश्च कतन्ताश्चेति सरूपाणामेकशेषः। तथा इत्यादिना यथा कतन्तेभ्य इत्यत्र बहुव्रीहितत्पुरुषयोरेकशेषः, तथा कण्वादिभ्य इत्यत्रापीति दर्शयति। कण्वस्यादिः कण्वादिः शकलशब्दः कण्वशब्दः आदिर्येषां गोकक्षादीनां ते कण्वादयः, कण्वादिश्च कण्वादयश्च कण्वादयः, पूर्ववदेकशेषः। तत्पुरुषवृत्त्यासंगृहीतःइति। कतन्तेभ्यः इत्यत्र कण्वादिब्यः (4."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.18.md">Edit 4.1.18!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.1.18";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.1.19\",\"Previous\":\"4.1.17\",\"अकारादिक्रमसङ्ख्या\":3676,\"कौमुदीक्रमसङ्ख्या\":476,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ष्फ\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सर्वत्र लोहितादिकतान्तेभ्यः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

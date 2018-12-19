@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="धृषिशसी। वियातः = अविनीतः, तस्य भावो वैयात्यम्। तत्र ञि धृषा प्रागल्भ्ये इत्यस्य आदित्तवादेवेण्निषेधः सिद्धः, शसु हिंसायामित्यस्य तु उदितो वेति क्त्वायां वेट्कत्वात् यस्य विभाषेतीण्निषेधः सिद्धः, अतो नियमार्थमित्याह&ndash; अविनय एवेति। धृष्टो विशस्त इति। अविनीत इत्यर्थः। अन्यत्रेति। वैयात्याऽभावे इत्यर्थः। धर्षित इति। बालात्कृत इत्यर्थः। विससित इति। हिंसित इत्यर्थः। अत्र वैयात्याऽभावादिण्निषेधो नेति भावः। ननु धृषेरादित्त्वात् विभाषा भावादिकर्मणोरिति भावे आदिकर्मणि च इड्विकल्पे प्राप्ते तदंशे नित्यार्थोऽत्र विधिरस्तु, ततश्च भावादिकर्मभ्यामन्यत्र वैयात्याऽभावेऽपि आदितश्चेतीण्निषेद एव स्यादित्यत आह&ndash; भावादिकर्मणोस्त्विति। नास्तीति। अनभिधानादिति भावः। तत्र वृद्धसंमतिमाह&ndash; अत एवेति। भावकर्मणोर्धृषेरनभिधानादेवेत्यर्थः। अन्यथा धृषेरादित्त्वात् विभाषा भावादिकर्मणोरिति भावे आदिकर्मणि च इड्विकल्पे प्राप्ते तदंशे नित्यार्थतया विधानार्थत्वापत्तेरिति भावः। चिन्त्यमिति। धृषेरादित्त्वं हि नवैयात्ये आदित्त्वलक्षणेण्निषेधार्थं , धृषिशसी वैयात्ये इत्येव सिद्धेः, नापि वैयात्यादन्यत्र आदित्त्वलक्षणेण्निषेधार्थम्, धृषेर्वैयात्य एव इष्निषेधनियमेन ततोऽन्यत्र आदित्त्वलक्षणनिषेधाऽभावात्। नापि धृषेर्वैयात्ये भावादिकर्मणोर्विषये विभाषा भावादिकर्मणोरिति इड्विकल्पार्थं, भावादिकर्णोर्वैयात्ये धृषेरनभिधानात्। तस्माद्धृषेरादित्त्वं व्यर्थमिति हरदत्त आहेत्यर्थः। माध्वस्त्विति। अवैयात्ये भावादिकर्मणोरनभिधाने प्रमाणाऽभावादिति भावः। तत्र अवैयात्ये भावे उदाहरति&ndash; धृष्टं धर्षितमिति। आदिकर्मण्युदाहरति&ndash; प्रधृष्टओः प्रधर्षित इति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.2/7.2.19.md">Edit 7.2.19!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.2.19";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.2.20\",\"Previous\":\"7.2.18\",\"अकारादिक्रमसङ्ख्या\":2008,\"कौमुदीक्रमसङ्ख्या\":3059,\"प्रकारः\":\"अधिकारः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"निषेधः\",\"विषयः ३\":\"निष्ठा\",\"सूत्रम्‌\":\"धृषिशसी वैयात्ये\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

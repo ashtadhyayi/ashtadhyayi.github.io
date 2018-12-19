@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अत्र अन्यत्र संज्ञाविधौ प्रत्ययग्रणे तदन्तविधिर्नास्ति इत्यतन्नोपतिष्ठते, यस्मादप्रत्यय इति प्रतिषेधे प्राप्ते वचनमिदम्। अप्रत्ययः इति प्रत्ययान्तस्य प्रतिषेधः उक्तः। तेन यत्र संज्ञायाः प्रतिषेधस्तत्रेयमारभ्यमाणा तदन्तस्यैव भवतीत्येतच्चेतसि कृत्वाऽ‌ऽह&ndash; अप्रत्यय इति पूर्वसूत्रे पर्युदासात् कृदन्तस्य इत्यादि। अथ समासग्रहणं किमर्थम्? यावता समासस्यार्थवत्त्वात् पूर्वेणैव संज्ञा सिद्धेत्यत आह&ndash; अर्थवत्समुदायानाम् इत्यादि। निर्धारणषष्ठीयम्&ndash; अर्थवन्तो ये समुदायास्तेषां मध्ये समासस्यार्थवतः समुदायस्य प्रातिपदिकसंज्ञा यथा स्यादिति नियमार्थं समासग्रहणम्। यद्येवम्, प्रकृतिप्रत्ययसमुदायस्यार्थवतः प्रातिपदिकसंज्ञा न स्यात्&ndash; बहुपटव उच्चकैरिति? कोऽत्र दोषः? चितः (6.1.157) इत्यस्मिन् सूत्रे चितः सप्रकृतेर्बहुजकजर्थमिति वचनादेतद्वयवस्थाप्यते&ndash; प्रकृतिमन्तर्भाव्य चित्स्वरो विधीयत इति। बहुपटव इत्यत्र बहुचि विहिते यदि प्रातिपदिकसंज्ञा न स्यात्,तदा प्रातिपदिकत्वाभावात् यथा सुबुत्पत्तिर्न स्यात् तथोत्पन्नाया अपि विभक्तेः सुपो धातुप्रातिपदिकयोः (2."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.46.md">Edit 1.2.46!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.46";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.47\",\"Previous\":\"1.2.45\",\"अकारादिक्रमसङ्ख्या\":1142,\"कौमुदीक्रमसङ्ख्या\":179,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":136,\"विषयः १\":\"प्रातिपदिकम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कृत्तद्धितसमासाश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

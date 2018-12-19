@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="णिनिरनुवत्र्तते, न खश्िति। णिनेरेव स्वरितत्वात्। क्व पुनर्यागः करणमित्याह--अग्निष्टोमः फलभावनायाम्इत्यादि। फलं स्वर्गः, तस्य या भावनोत्पादना = यजमानसम्बन्धी व्यापारः, तत्राग्निष्टोमयागः करणं भवति। ननु चाग्निष्टोमव्यतिरेकेण यजमानसय् व्यापारो भावनाख्यो नास्त्येव, यत्र यागः करणमिष्यते, तथाह्रग्निष्टोमाख्येनैव ह्रसौ यागेन स्वर्गाख्यं फलमुत्पादयति? नैतदेवम्; विशेषव्यापारे हि सामान्यव्यापारोऽस्ति, विक्षेषस्य सामान्यव्यभिचारात्। सामान्यव्यापार एव ह्रादौ फलार्थिनो बुद्धौ सन्निविशते। तथा हि-- प्रतिपत्ता फळं समीहमानः स्वयमेव फलकामः सन्स्वर्गो मनसि कत्र्तव्यःइति सामान्यव्यापारं बुद्धावारोपयति, ततः अग्निष्टोमेन स्वर्गकामो यजेतइति शास्त्रस्याग्निष्टोमेन करणेन स्वर्ग भावयेदितीममर्थ प्रतिपाद्य, स्वर्गभावनां प्रति करणत्वेनाग्निष्टोममाश्रयति। तस्मात् सामान्यव्यापारे स्वर्गस्योत्पादो विशेषव्यापारोऽग्निष्टोमाख्यो यागः स्वर्गाभावनायां करणं भवति। ननु चानुष्ठीयमानः कर्मत्वमनुभवति, तथापि तस्य शक्तिभेदात् करणत्वं न विरुध्यते, यथा --निपीयमानेन मधुना मत्तः` इत्यत्र कर्मभावमनुभवतोऽपि मधुनः करणभावो भवति। तदेवमग्निष्टोमयाजीत्यस्यायमर्थः&ndash; अग्निष्टोमेन करणेन स्वर्ग भावितवानिति। स्वर्गशब्दस्तु वृत्तादन्तर्हितत्वान्न प्रयुज्यते॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.85.md">Edit 3.2.85!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.2.85";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.2.86\",\"Previous\":\"3.2.84\",\"अकारादिक्रमसङ्ख्या\":985,\"कौमुदीक्रमसङ्ख्या\":2996,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"णिनिः\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"करणे यजः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

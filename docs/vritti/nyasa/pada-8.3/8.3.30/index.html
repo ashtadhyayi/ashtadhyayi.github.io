@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="चकारो धुडित्यनुकर्षणार्थः। ननु च स्वरितत्वादेवानुवर्त्तिष्यते, न चोत्तरत्रानुवर्त्तिष्यते, आगमान्तरस्योपादानात्(), अस्वरितत्वाद्वा? सत्यमेतत्(); प्रतिपत्तिगौरवं तु मन्दधियां स्यात्()। अथ भवान्त्साय इत्यत्र धुटश्चात्वे कृते नश्छव्यप्रशान्() (८।३।७) इति रुः कस्मान्न भवति? इत्याह&ndash;धुटश्चत्र्वस्य चासिद्धत्वात्() इत्यादि। यदि केवलस्य चत्वेस्य धुटो वासिद्धत्वं स्यात्(), तथापि रुत्वप्राप्तेरसम्भव एव, किं पुनरुभयोरसिद्धत्वे सतीति रुत्वप्राप्तेरत्यन्तासभ्भवं दर्शयितुमुभयोग्र्रहणम्()। क्वचित्? घुटश्चत्र्वस्यासिद्धत्वात्() इति पाठः। तत्राप्ययमर्थो वेदितव्यः&ndash;विनापि हि चकारेण तदर्थो गम्यते, यताहरहर्नयमानो वैवस्थतो गाम()आं पुरुषं पशुमित्यादौ वाक्ये। अथ वा&ndash;अस्मि पाठे धुटो यच्चार्त्वं तस्यासिद्धत्वादित्यर्थः। ननु धुडप्यसिद्ध एव, तत्? कुतश्चत्र्वस्यासिद्धावमुच्यते? पुनर्धुटोऽपि? नैतत्(); सत्यपि धुटि विना चर्त्वेन रुत्वप्रप्तिरेव नास्ति। ततो यस्मिन्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.30.md">Edit 8.3.30!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.30";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.31\",\"Previous\":\"8.3.29\",\"अकारादिक्रमसङ्ख्या\":2130,\"कौमुदीक्रमसङ्ख्या\":132,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":105,\"विषयः १\":\"कुक् टुक् धुक् तुक् ङमुट्\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"नश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

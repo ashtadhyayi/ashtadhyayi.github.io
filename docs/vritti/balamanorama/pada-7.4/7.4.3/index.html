@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="भ्राजभास। णौ चङ्युपधाया ह्रस्वः इत्यनुवर्तते। तदाह - एषामिति। नित्ये उपधाह्रस्वे प्राप्ते विकल्पोऽयम्। ह्रस्वपक्षे लघुपरकत्वात्सन्वत्त्वादभ्यासदीर्घ इत्यभिप्रेत्य आह&ndash; अपीपिडदिति। अत्र उत्तरखण्डे ह्रस्वः, पूर्वखण्डे तु दीर्घः। ह्रस्वाऽभावपक्षे तु लघुपरकत्वाऽभावात्सन्वत्त्वविरहान्नाऽभ्यासदीर्घ इति मत्वाह&ndash; अपीपीडदिति। अत्र उत्तरखण्डे दीर्घः। पूर्वखण्डे ह्रस्वः। नट अवस्पन्दने। इति। अवस्पन्दनं नाट�म्। नाटयति। अनीनटत्। श्रथ प्रयत्ने। श्राथयति। अशिश्रथत्। सन्वत्त्वविधौ नेकहल्व्यवधनेऽपि लघुपरत्वं न विरुध्यते, अत्स्मृदृ?त्वरेति ईत्त्वापवादस्य अत्त्वस्य विधानाल्लिङ्गात्। अन्यथा अपप्रथदित्यादौ अनेकहल्व्यवधानाल्लघुपरत्वाऽभावादेव इत्त्वाऽप्रसक्त्या किं तेन ?। पृ? पूरणे। ननु ह्रस्वात् एवायं धातुर्निर्दिश्यतां, तावतैव पारयतीत्यादि सिद्धेः। न च णिजभावपक्षे परिता परिष्यतीत्यत्र इडर्थं दीर्गोच्चारणम्, ऋदन्तत्वे अनिट्कत्वप्रसिङ्गादिति वाच्यं, चुरादिणिचो नित्यत्वेन ततो णिजभावस्य शशशृङ्गायमाणत्वादित्त आह - दीर्घोच्चारणं णिचः पाक्षिकत्वे लिङ्गमिति।पृ?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.4/7.4.3.md">Edit 7.4.3!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.4.3";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.4.4\",\"Previous\":\"7.4.2\",\"अकारादिक्रमसङ्ख्या\":2706,\"कौमुदीक्रमसङ्ख्या\":2565,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"णिच्+चङ्-अङ्गकार्यम्\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"भ्राजभासभाषदीपजीवमीलपीडामन्यतरस्याम्‌\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

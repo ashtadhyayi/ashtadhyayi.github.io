@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="द्वौ हलौ यस्य तद्()द्विहल्()। आनङ्ग, आनङ्गतुः, आनङ्गुः इति। अगि रगि लगि गत्यर्थाः (धा।पा।१४६,१४४,१४५), इदित्त्वान्नुम्()। आनञ्ज, आनञ्जतुः, आनञ्जुः इति। अन्जू व्यक्तिम्रक्षणकान्तिगतिषु (धा।पा।१४५८)। ऐऔच्() (मा।सू।४) इत्यत्र प्रत्याहारे वर्णेषु ये वर्णैकदेशा वर्णान्तरसमानाकृतयः, तेषु तत्कार्यं न भवति, तच्छायानुकारिणो हि ते, न पुनस्त एव; पृथक्प्रयत्ननिर्वर्त्त्यं हि वर्णमिच्छन्त्याचार्याः इत्युक्त्वा नुड्()विधिलादेशविनामेष्वृकारे प्रतिविधातव्यम्() इत्युक्तम्()। तत्रावसरप्राप्त्या ऋकारे नुङ्()विधौ प्रतिविधानमाह&ndash;ऋकारैकदेशो रेफौ हल्ग्रहणेन गृह्रते इति। आनुधतुः, आनृधुः इति। ऋधु वृद्धौ (धा।पा।१२७१)। कथं पुनर्वर्माअत्मकानां हला ग्रहणेनावर्णात्मक ऋकारैकादेशो रेफो गृह्रते? द्विहल्ग्रहणसाममथ्र्यादिति भावः। अत्र तस्मान्नुट्() इत्येवं वक्त्व्यम्()। न चैवं सत्याटतुः, आटुरित्यादौ नुट्प्रसङ्गो भवति; अश्नोतेरित्यस्य नियमार्थत्वात्()&ndash;अद्विहलो यदि भवति नुट्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.4/7.4.71.md">Edit 7.4.71!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.4.71";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.4.72\",\"Previous\":\"7.4.70\",\"अकारादिक्रमसङ्ख्या\":1687,\"कौमुदीक्रमसङ्ख्या\":2288,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"लिटि\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"तस्मान्नुड् द्विहलः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

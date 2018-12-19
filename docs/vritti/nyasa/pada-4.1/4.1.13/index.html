@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="इहान्यतरस्यांग्रहमस्य डापः मुक्ते पक्षे प्रतिषेधोऽपि यथा स्यादित्येतद्वा प्रयोजनं स्यात्? डाप्प्रतिषेधाभ्यां मुक्ते पक्षे ङीबपि यथा स्यादित्येतद्वा? तत्राद्यं तावदयुक्तम्;डाबपि ह्रुच्यते, प्रतिषेधोऽपि, तावुभावपि वचनसामथ्र्याद्भविष्यतः। द्वितीयमप्ययुक्तम्। अन्यतरस्यांग्रहमेन ह्रनुपधालोपिनो वा बहुव्रीहेः पक्षे ङीब्विधीयते? उपधालोपिनो वा? तत्र प्रथमस्तावत् पक्षो नोपपद्यते, यदि ह्रत्रानुपधालोपिनःपक्षे ङीब्विधीयेत प्रतिषेधवचनमनर्थकं स्यात्; द्वितीयोऽपि नोपपद्यते, अन उपधालोपिनोऽन्यतरस्याम् (4.1.28) इति प्रतिपदं विकल्पेन ङीपो विधास्यमानत्वात्। न च तदन्यतरस्यांग्रहमं न करिष्याम इतीहान्यतरस्यांग्रहणं कर्त्तुं युक्तम्; तद्ध्यवश्यमेव कत्र्तव्यम्, उपधालोपिनो हि ङीपा मुक्ते डाप्प्रतिषेधौ यथा स्याताम्&ndash; बहुराज्ञ्यौ, बहुराजानौ, बहुराजे इति। इतरथा हि डाप्प्रतिषेधौ सुपर्वादिष्वनुपधालोपिषु सावकाशौ परत्वान्ङीपा बाध्येयाताम्। तस्माद्वक्ष्यमाणमप्यन्यतरस्यांग्रहणं कत्र्तव्यमेवेति तत्सर्वं मनसि कृत्वाऽ‌ऽह&ndash; अन्यतरस्यांग्रहणं किमर्थम् इति। निरर्थकमिति भावः। बहुव्रीहौइत्यादि। वनो र च (4."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.13.md">Edit 4.1.13!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.1.13";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.1.14\",\"Previous\":\"4.1.12\",\"अकारादिक्रमसङ्ख्या\":1570,\"कौमुदीक्रमसङ्ख्या\":461,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"डाप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"डाबुभाभ्यामन्यतरस्याम्‌\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="उरत्। उः&ndash;अदिति छेदः। ऋइत्यस्य उरिति षष्ठ�एकवचनम्। अत्र लोपोऽभ्यासस्येत्यस्मादभ्यासस्येत्यनुवर्तते। अङ्गस्येत्यधिकृतं। तद्वशात्प्रत्यये परत इति लभ्यते। प्रत्यये परत एव अङ्गसंज्ञाविधानात्। तदाह&ndash;अभ्यासऋवर्णस्येत्यादिना। रपरत्वमिति। अभ्यासऋवर्णादेशस्याऽकारस्योरण्?रपर इति रपरत्वमित्यर्थः। तथा च कर् कृ ए इति स्थिते। हलादिः शेष इति। रेफस्य निवृत्तिरिति भावः। प्रत्यये किमिति। अङ्गेनैव प्रत्ययस्याक्षिप्तत्वात्प्रत्यये परत इति किमर्थमित्यर्थः। वव्रश्चेति। ओ व्रश्चू च्छेदने , लिटि णल् द्वित्वं। लिट�भ्यासस्येत्यभ्यासरेफस्य सम्प्रसारणमृकारः। उरत्। रपरत्वम्। हलादिः। शेषः। वव्रश्चेति रूपम्। अत्र अभ्यासऋवर्णस्य रेफस्थानिकस्य सम्प्रसारणस्य य उरदत्वसम्पन्नोऽकारस्तस्य अचः परस्मिन्निति स्थानिवत्त्वेन सम्प्रसारणतया तस्मिन्परे वकारस्य न सम्प्रसारणे सम्प्रसारणमिति निषेधान्न सम्प्रसारममिति स्थितिः। उरदित्यत्र प्रत्यये परत इत्यनुक्तौ तु सम्प्रसारणभूतऋकारस्थानिकस्य अकारस्य परनिमित्तकत्वाऽभावेन स्थानिवत्त्वाऽप्रसक्तेः सम्प्रसारणत्वाऽभावात्तस्मिन् परतो न सम्प्रसारणे सम्प्रसारणमिति निषेधो न स्यादिति भावः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.4/7.4.66.md">Edit 7.4.66!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.4.66";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.4.67\",\"Previous\":\"7.4.65\",\"अकारादिक्रमसङ्ख्या\":819,\"कौमुदीक्रमसङ्ख्या\":2244,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"सामान्यम्\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"उरत्‌\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

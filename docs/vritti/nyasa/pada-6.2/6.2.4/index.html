@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="शम्बगाधम्() इति। गाध्यत इति गाधः, गाधृप्रतिष्ठालिप्सयोः(धा।पा।४) [प्रतिष्ठालिप्सयोग्र्रन्थे च--धा।पा।] अर्धर्चादित्वात्? (2.4.31) पक्षे नपुंसकत्वम्()।अर्तिलूधूसूइति। अनेन सूत्रैकदेशेनअर्तिलूधूसूखनसहचर इत्रः(3.2.184) इत्येतत्सूत्रमुपलक्ष्यते।मध्योदात्तःइति। प्रत्ययस्वरेण।अशूप्रुषिइति।अशूप्रुषिलटिकणिघटिविशिभ्यः कन्()(द।उ।८।१२५) [अशूप्रुषिप्लुषिलटिकटिकणिखटिविशिभ्य) क्वन्()--द।उ।] इति सूत्रमुपलक्षयति। ननु चायामः=प्रमाणम्(),आयामस्तु प्रमाणं स्यात्()इति वचनात्(); न च शम्बगाधमित्यादिस्तत्पुरुषः प्रमाणवाची, किं तर्हि, इयत्तावाची? इत्याह--प्रमाणम्()इत्यादि। इयतो भाव इयत्ता, सा परिच्छिद्यते येन स इयत्तापरिच्छेदः, स एवात्र प्रमाणं वेदितव्यम्()। न पुनरायाम एव। तत्? कथम्()? प्रमीयतेऽनेनेति प्रमाणमिति क्रियाशब्दोऽत्र प्रमाणशब्दो गृह्रते, न तु रूढिशब्दः; लक्ष्यानुरोधात्()। तेन येनेयत्ता परिच्छिद्यते तत्? सर्वं प्रमाणम्()।स्वरव्यङ्ग्यं चइति। अस्य स्वरे योऽयं प्रकृतिभावो विधीयते तेन व्यङ्ग्यं द्योत्यमित्यर्थ-।एतेषाम्()` इति। शम्बगाधादीनाम्()॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.4.md">Edit 6.2.4!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.2.4";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.2.5\",\"Previous\":\"6.2.3\",\"अकारादिक्रमसङ्ख्या\":1290,\"कौमुदीक्रमसङ्ख्या\":3738,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गाधलवणयोः प्रमाणे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

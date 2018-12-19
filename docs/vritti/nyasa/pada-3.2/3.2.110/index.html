@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="ङकारः नित्यं ङितः (3.4.99) इति विशेषणार्थः। उकारः लुङलङलृङक्ष्वडुदात्तः(6.4.71) इति विशेषणार्थः। भूतसामान्ये चायं लुङ वेदितव्यः; भूतविशेषणेऽनद्यतन्यां लङलिटोर्विधानात्। अकार्षीत् इति। सिचि वृद्धिः परस्मैपदेषु (7.2.1) इति वृद्धिः; पूर्ववदीट्। वसतेः इत्यादि। वस निवासे (धा।पा।१००५) इत्यस्मादनद्यतने लङि प्राप्ते लुङ वक्तव्यः। दिवसः सकलोऽतिक्रान्ताया रात्रेश्चतुर्थो याम आगामिन्याश्च प्रथमो यामः&ndash; इत्येषोऽनद्यतनः कालः। तत्र रात्रिविशेषेऽतिक्रान्ताया रात्रेश्चतुर्थे यामे प्रत्युत्थितः क्व भवानुषितः? इति केनचित् पृष्टः कश्चित्, स तस्मिन् रात्रविशेषे दिवा वा प्रतिवचनं प्रयच्छन् लुङं प्रयुङ्क्ते&ndash; अहमत्रावात्सम् इति। स च न प्राप्नोति; यस्मादसौ ततो रात्रिशेषात् पूर्वभागं प्रहरत्रयलक्षमधिशयितः, सोऽस्यानद्यतनकालः, ततश्चानद्यतने लङ स्यात्; तसमाल्लुङ् वक्तव्यः = व्याख्येयः। व्याख्यानं त्विहापि बहुलग्रहणमाश्रित्य कत्र्तव्यम्। जागरणसन्ततौ इति। यद्यसौ रात्रिशेषं सकलं सन्तत्याऽविच्छेदेन जागरितवानेवं लुङ् भवति। मुहूत्र्तमपि यद्यस्मिन् रात्रिविशेषे शयितवांस्ततो लङेव&ndash; आहमत्रावसमिति। अवात्सम् इति। लुङ्, मिप्, तस्थस्थ (3."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.110.md">Edit 3.2.110!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.2.110";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.2.111\",\"Previous\":\"3.2.109\",\"अकारादिक्रमसङ्ख्या\":3007,\"कौमुदीक्रमसङ्ख्या\":2218,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुङ्\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"लुङ्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

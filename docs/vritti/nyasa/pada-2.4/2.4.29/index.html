@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="परवल्लिङ्गतया स्त्रीनपुंसकयोः प्राप्तयोः इति। रात्रिशब्दस्य स्त्रीलिङ्गत्वादहः शब्दस्य च नपुंसकत्वात्। द्विरात्रः इति। द्वयो रात्र्योः समाहारः। तद्धितार्थ (2.1.50) इत्यादिना समाहारे द्विगुः। अहः सर्वैकदेशसंख्यातपुण्याच्च रात्रेः (5.4.87) इत्यच् समासान्तः। अत्र हि अच् प्रत्यन्ववपूर्वात् सामलोम्नः (5.4.75) इत्यतोऽजित्यनुवत्र्तते। पूर्वाह्णः इति।र अह्नः पूर्वमिति विगृह्र पूर्वापर (2.2.1) इत्यादिना समासः, राजाहःसखिभ्यष्टच् (5.4.91) इति टच्, अह्नोऽह्न एतेभ्यः (5.4.88) इत्यह्नादेशः; अह्नोऽदन्तात् (8.4.7) इति णत्वम्। द्वयहः इति। पूर्ववत् समाहारे द्विगुः। पूर्ववत् टच्। न संख्यादेः समाहारे (5.4.89) इति प्रतिषेधावह्नदेशो न भवति। अह्नष्टखोरेव (6.4.145) इति टिलोपः। अनुवाकादयः इति। केचिदाहः&ndash; बहुव्रीहिरयम्, अनुक्रान्तो वाकोऽनयानेन वाऽनुवाकः। स्त्रीलिङ्गे नपुंसकलिङ्गे च प्राप्ते वचनम्। अन्ये च मन्यन्ते&ndash; योऽयं घञ् स सामथ्र्यात् पुंल्लिङ्गः। तस्य हि नपुंसके भावे क्तोऽपवादः, स्त्रियाञ्च क्तिन्। तेनासौ सामथ्र्यात् पुंस्यवावतिष्ठते। यस्त्वकत्र्तरि कारके विधीयते स पुंसि नपुंसके च वत्र्तते; बाधकाभावात्। स्त्रियान्तु न भवति; यतः स्त्रियां क्तिन् (3."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.4/2.4.29.md">Edit 2.4.29!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.29";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.30\",\"Previous\":\"2.4.28\",\"अकारादिक्रमसङ्ख्या\":2927,\"कौमुदीक्रमसङ्ख्या\":814,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्वन्द्व-तत्पुरुषयोः लिङ्गनिर्णयः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रात्राह्नाहाः पुंसि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

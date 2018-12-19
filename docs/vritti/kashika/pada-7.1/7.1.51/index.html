@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="छन्दसि इत्यतःप्रभृति निवृत्तम्। अश्व क्षीर वृष लवण इत्येतेषाम् अङ्गानाम् आत्मप्रीतिविषये क्यचि परतो ऽसुगागमो भवति। अश्वस्यति वडवा। क्षीरस्यति माणवकः। वृषस्यति गौः लवणस्यत्युष्ट्रः। आत्मप्रीतौ इति किम्? अश्वीयति। क्षीरियति। वृषीयति। लवणीयति। अश्ववृषयोर्मैथुनेच्छायाम् इति वक्तव्यम्। क्षीरलवणयोर् लालसायाम् इति वक्तव्यम्। तृष्णातिरेको लालसा। अन्यत्रात्मप्रीतावपि न भवति। अपर आह सर्वप्रातिपदिकेभ्यो लालसायामसुग्वक्तव्यः। दध्यस्यति, मध्वस्यति इत्येवम् आद्यर्थम्। अपर आह सुग्वक्तव्यः। दधिस्यति, मधुस्यति इत्येवम् आद्यर्थम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-7.1/7.1.51.md">Edit 7.1.51!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.1.51";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.1.52\",\"Previous\":\"7.1.50\",\"अकारादिक्रमसङ्ख्या\":416,\"कौमुदीक्रमसङ्ख्या\":2662,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"असुक्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अश्वक्षीरवृषलवणानामात्मप्रीतौ क्यचि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

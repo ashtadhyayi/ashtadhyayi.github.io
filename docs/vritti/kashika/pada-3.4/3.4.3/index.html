@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अनेकक्रियाध्याहारः समुच्चयः। समुच्चीयमानक्रियावचनाद् धातोरन्यतरस्यां लोट् प्रत्ययो भवति, तस्य लोटो हिस्वौ आदेशौ भवतः। तध्वंभाविनस्तु वा भवतः। भ्राष्ट्रमट, मठमट, खदूरमट, स्थाल्यपिधानम् अट इत्येव अयम् अटति, इमावटतः, इमे ऽटन्ति। भ्राष्ट्रमट, मठमट, खदूरम् अट, स्थाल्यपिधानम् अट इत्येव त्वम् अटसि, युवाम् अटथः, यूयम् अटथ। अथ वा, भ्राष्ट्रम् अटत, मठम् अटत, खदूरम् अटत, स्थाल्युपिधानम् अटत इत्येव यूयम् अटथ। भ्राष्ट्रम् अट, मठम् अट, खदूरम् अट, स्थाल्युपिधानम् अट इत्येव अहम् अटामि, आवाम् अटावः, वयम् अटामः। अथ वा, भ्राष्ट्रम् अटति, मठम् अटति, खदूरम् अटति, स्थाल्युपिधानम् अटति इत्येव अयम् अटति, इमा वटतः, इमे ऽटन्ति। भ्राष्ट्रम् अटसि, मठम् अटसि, खदूरम् अटसि, स्थाल्युपिधानम् अटसि, इत्येव त्वम् अटसि, युवाम् अटथः, यूयम् अटथ। भ्राष्ट्रम् अटामि, मठम् अटामि, खदूरम् अटामि, स्थाल्युपिधानम् अटामि इत्येव अहम् अटामि, आवाम् अटावः, वयम् अटाअमः। छन्दो ऽधीष्व, व्याकरणम् अधीष्व, निरुक्तम् अधीष्व इत्येव अयम् अधीते, इमावधीयाते, इमे ऽधीयते। छन्दो ऽधीष्व, व्याकरणम् अधीध्वम् इत्येव यूयम् अधीध्वे। छन्दो ऽधीष्व, व्याकरणम् अधीष्व, निरुक्तम् अधीष्व इत्येव अहम् अधीये, आवाम् अधीवहे, वयम् अधीमहे। अथ वा, छन्दो ऽधीते, व्याकरणम् अधीते, निरुक्तमधीते, इत्येव अयम् अधीते, इमावधीयाते, इमे ऽधीयते। छन्दो ऽधीषे, व्याकरणम् अधीषे, निरुक्तम् अधीषे इत्येव त्वम् अधीषे, युवाम् अधीयाथे, यूयम् अधीध्वे। छन्दो ऽधीये, व्याकरणम् अधीये, निरुक्तम् अधीये इत्येव अहम् अधीये, आवाम् अधीवहे, वयम् अधीमहे।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-3.4/3.4.3.md">Edit 3.4.3!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.4.3";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.4.4\",\"Previous\":\"3.4.2\",\"अकारादिक्रमसङ्ख्या\":3650,\"कौमुदीक्रमसङ्ख्या\":2826,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययार्थाः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"समुच्चयेऽन्यतरस्याम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

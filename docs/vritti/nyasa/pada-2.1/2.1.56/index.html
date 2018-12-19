@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="भेदकं विशेषणम् इति। {शिष्लृ विशरणे इति मुद्रित); शिष्लृ शेषणे, विपूर्वः-- पदमंजरी} शिष्लृ विशेषणे (धा।पा।१४५१) इत्यस्माद्धातोर्विपूर्वात् करणे ल्युट्। विशिष्यतेऽनेनेति विशेषणम्। तस्येदं लक्षणम्&ndash; भदेमिति। यत् सामान्याकारेण प्रवृत्तमनेकप्रकारवद्वस्तु प्रकारान्तरेभ्यो व्यवच्छिद्यैकत्र प्रकारे व्यवस्थापयति, तद् भेदकं विशेषणमिति। भेद्यं विशेषणम् इति। विशेषणीयं विशेष्यम्। विपूर्वात् तस्माद्धातोः ऋहलोण्र्यत् (3.1.124) इति कर्मणि ण्यत्। तस्येदं लक्षणम्, भेद्यमिति। यदनेकप्रकारवद्वस्तु प्रकारान्तरेभ्यो व्यवच्छिद्यैकत्र प्रकारे व्यवस्थाप्यते तद्भेद्यं विशेष्यमिति। अथ किमर्थं विशेषणविशेष्ययोरुभयोरुपादानं क्रियते? न; अन्यतरस्यैव क्रियेत, सम्बन्धिशब्दत्वाद्धि तयोरन्यतरोपादानेनैवेतरस्याप्यवगतिर्भवत्येव? सत्यमेतत्; यत्र पूर्वोत्तरपदे प्रत्येकं विशेषणविशेष्यभूते भवतस्त्रैव समासो भवतीति ज्ञापानार्थमुभयोरुपादानम्, यथा&ndash; नीलोत्पलमिति। अत्र नीलार्थो भ्रमरादिभ्यो व्यावत्र्योत्पलार्थेनोत्पले व्यवस्थाप्यते। उत्पलार्थोऽपि रक्तोत्पलादिभ्यो व्यावत्र्य नीलार्थेन नीले व्यवस्थाप्यत इत्यस्ति प्रत्येकं विशेषणविशेष्यभावः। स यत्र नासत्ि तत्र तु न समासः यथा&ndash; वृक्षः शिंशपेति। वृक्षो हि शिंशपात्वं व्यभिचरति, शिंशपा तु न वृक्षत्वम्। अतस्तत्प्रकारान्तरेभ्यः पलाशादिभ्यस्तं व्यवच्छिनत्तीति शिंशपा तस्य विशेषणं भवति, न तु विशेष्यम्। वृक्षस्तु विशेष्यः शिंशपार्थस्तु वृक्षत्वं न व्यभिचरतीति न तस्यासौ विशेषणं भवति। अथ किं न भवितव्यमेव शिंशपावृक्षः, आम्रवृक्ष इति?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.56.md">Edit 2.1.56!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.56";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.57\",\"Previous\":\"2.1.55\",\"अकारादिक्रमसङ्ख्या\":771,\"कौमुदीक्रमसङ्ख्या\":734,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"उपमितं व्याघ्रादिभिः सामान्याप्रयोगे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

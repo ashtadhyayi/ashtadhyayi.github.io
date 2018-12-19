@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सर्वादीनीति। तद्गुणसंविज्ञानो बहुव्रीहिरयम्। अदः सर्वेषामिति लिङ्गम्। आदिशब्दोऽत्रावयववाची। सर्व आदिराद्यावययो येषां तानीति विग्रहः। उद्भूतावयवभेदः समुदायः समासार्थं इति बहुवचनम्। तस्य समुदायस्य युगपल्लक्ष्ये प्रयोगाभावात् आनर्थक्यात्तदङ्गेषु इति न्यायेन तदवयवेषु प्रवर्तमाना सर्वनामसंज्ञाऽविशेषात्सर्वशब्देऽपि प्रवर्तत इति युक्तं तद्गुणसंविज्ञानत्वम्। तस्यान्यपदार्थस्य गुणा वर्तिपदार्थरूपाणि विशेषणानि तेषा कार्यान्वयितया संविज्ञानं यत्र स तद्गुणसंविज्ञान इत्यक्षरार्थः। लोकवेदयोरपि संयोगसमवायान्यतरसम्बन्धे लोहितोष्णीषाऋत्विजश्चरन्ति,लम्बकर्णमानयेत्यादौ तद्गुणसंविज्ञानत्वमेव। स्वस्वामिभावसंबन्धे त्वतद्गुणसंविज्ञानत्वं चित्रगुमानयेत्यादौ। ननु सर्वनामानीत्यत्र पूर्वपदात्संज्ञायामिति णत्वं कस्मान्न भवति ?। सौत्रत्वान्नेति चेत्,लोके सर्वनामशब्दस्याऽसाधुत्वापत्त्या सर्वनामसंज्ञानि स्युरित्युत्तरग्रन्थस्याऽसाधुत्वापत्तेरिति चेन्मैवम्। निपातनाण्णत्वं नेति भाष्योक्तव्याख्याश्रयणादिष्टसिद्धेः। अत्र भाष्यानुसाराद्बाधकान्येव निपातनानि भवन्तीति पक्ष आश्रितः। अब#आधकान्यपि निपातनानि भवन्तीत् पक्षस्तु विभाषा फाल्गुनीति सूत्रे श्रवणाशब्दे निपातितेऽपि श्रावणीति प्रयोगोऽपि साधुरित्येवमर्थमाश्रयिष्यते। विशेषणानुगुणं विशेष्यमध्याहरति-शब्दस्वरूपाणीति। द्वन्द्वे चेति। स हि निषेधः समुदायस्यैव न त्ववयवानामिति वक्ष्यति, न च तदन्तविधिं विना समुदाये संज्ञाप्रसक्तिरस्तीति भावः। नन्वङ्गाधिरकारे तदन्तविधिं विनैव परमसर्वस्मै इत्यादौ स्मायादिसिद्धेस्तदन्तसंज्ञायाः किं फलमित्यत आह&ndash;तेनेति। न चेहापि प्रातिपदिकादित्यनुवृत्ते सर्वनाम्नस्तद्विशेषणत्वे तदन्तविधिर्भविष्यतीति वाच्यं, समासप्रत्ययविधौ प्रतिषेधः इत्युक्तत्वादिति भावः। अकच्चेति चकारात्परमसर्वत इत्यत्र तसिल्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.1/1.1.27.md">Edit 1.1.27!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.1.27";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.1.28\",\"Previous\":\"1.1.26\",\"अकारादिक्रमसङ्ख्या\":3690,\"कौमुदीक्रमसङ्ख्या\":213,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":170,\"विषयः १\":\"सर्वनाम\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सर्वादीनि सर्वनामानि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

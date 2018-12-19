@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="आध्रियन्ते क्रियागुणा अस्मिन्नित्याधारः इति। अध्यायन्यायोद्यावट (3.3.122) इत्यादिनाऽ‌ऽधारशब्दोऽधिकरणे घञन्तो व्यत्पादित-। क्रियापेक्षत्वत् कारकस्येति क्रियाग्रहणम्। यद्याध्रियन्ति क्रिया यस्मिन् स आधारः इति, एवं हि सति कर्तृकर्मणोरेवाधिकरणसंज्ञा प्रसज्येत, तयोरेव हि क्रिया आध्रियन्ते। तथा हि- कत्र्तस्था व #आ क्रिया भवति, कर्मस्था वा, अनवकाशत्वात् कर्त्तृकर्मणोः संज्ञा न भविष्यत्येष दोष प्रसङग् इति, एतच्चानुत्तरम्; सत्यपि ह्रनवकाशत्वे तयोः पर्यायः स्यात्। एकदाधिकरणसंज्ञा भवितव्यं तं दर्शयति। प्रतिराभिमुख्ये।क्रियां प्रति य आधारःइति॥ क्रियाया अभिमुखो य आधार इत्यर्थः। यश्च क्रियां धारयति स क्रियाया अभिमुखो भवति। क्रियायास्तु धारणं साक्षात्, व्यवधानेन वा; कर्त्तृकर्मणोः क्रियाश्रययोर्धारणात्। अत्र पूर्वस्य व्यवच्छेदार्थंकर्त्तृर्मणोःइत्युक्तम्। तदेतदुक्तं भवति-- कर्त्तृकर्मणोः क्रियाधारभूतयोर्धारणात् क्रियाया अभिमुखो य आधारस्तस्याधिकरणसंज्ञा भवतीति। तदेवं क्रियाधारभूतकर्त्तृकर्मधारणद्वारेण क्रियाया अभिमुखो य आधारस्तस्याधिकरणसंज्ञा; यतोऽनेन विधीयते ततो न भवति पूर्वस्य दोषप्रसङ्गः। न हि कर्त्तृकर्मणोरनेन प्रकारेण क्रियां प्रत्याधारत्वम्; अपि तु साक्षादेव क्रियाधारणात्। नन्वेवमपि कर्त्तृकर्मणोर्मुख्यं क्रियाधारत्वम्, साक्षादेव क्रियाधारणात्, कर्त्तृकर्माधारस्य तु कटादेर्गौणत्वं क्रियाश्रयभूतकर्त्तृकर्मधारणद्वारेण क्रियाधारणात्। तत्र मुख्य आधारे सति गौणस्याधिकरणसंज्ञा न प्राप्नोतीति स दोषसत्दवस्थ एव?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.4/1.4.45.md">Edit 1.4.45!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.45";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.46\",\"Previous\":\"1.4.44\",\"अकारादिक्रमसङ्ख्या\":536,\"कौमुदीक्रमसङ्ख्या\":632,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अधिकरणम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आधारोऽधिकरणम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

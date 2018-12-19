@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पुमः। रु ग्रहणमनुवर्तते। अम् परो यस्मादिति विग्रहः। तदाह-अम्परे खयीति। पुमान्-कोकिल इति कर्मधारये सुपो धातुप्रातिपदिकयोरिति सुब्लुकि संयोगान्तस्य लोप इति सकारलोपे पुम्-कोकिल इति स्थिते मस्य रुत्वम्, अनुनासिकानुस्वारविकल्पः, विसर्गः, संपुंकानामिति सः। ननु विसर्जनीयस्य स इत्येव सिद्धे संपुंकानामित्यत्र पुग्रहणं व्यर्थमित्यत आह। व्युत्पत्तीत्यादि। &gt;&lt;क&gt;&lt;पयोः प्राप्तौ संपुंकानामिति स इत्यन्वयः। विसर्जनीयस्य स इति सत्वापवादं कुप्वो &gt;&lt;क&gt;&lt;चेति विधिं बाधितुं पुंग्रहणमित्येव वक्तुमुचितमित्यत आह&ndash;अप्रत्ययस्येति षत्वपर्युदासादिति। पूञो डुम्सुन्नित्यौणादिकप्रत्ययस्थमकारस्थानिकत्वाद्विसर्गस्येति भावः। ननूणादयोऽव्युत्पन्नानि प्रातिपदिकानीत्यायनेयीति सूत्रस्थभाष्यरीत्या औणादिकप्रत्ययान्तेषु प्रकृतिप्रत्ययविभागाभावात्कथमिहाप्रत्ययस्येति पर्युदास इत्यत आह&ndash;व्युत्पत्तिपक्ष इति। औणादिकशब्देषु प्रकृतिप्रत्ययविभागाभावात्कथमिहाप्रत्ययस्येति पर्युदास इत्यत आह&ndash;व्युत्पत्तिपक्ष इति। औणादिकशब्देषु प्रकृतिप्रत्ययविभागव्युत्पादनमस्ति नास्तीति पक्षद्वयमादेशप्रत्यययोरिति सूत्रभाष्ये स्थितम्। तत्र व्युत्पत्तिपक्षे पुंस्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.3/8.3.6.md">Edit 8.3.6!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.6";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.7\",\"Previous\":\"8.3.5\",\"अकारादिक्रमसङ्ख्या\":2388,\"कौमुदीक्रमसङ्ख्या\":139,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":113,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"रु, पूर्वस्य अनुनासिकः\",\"सूत्रम्‌\":\"पुमः खय्यम्परे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

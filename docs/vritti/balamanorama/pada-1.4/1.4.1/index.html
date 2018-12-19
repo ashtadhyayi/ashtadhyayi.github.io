@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="नह्यत्र द्वयोरपि संज्ञयोः समावेसे विरोधोऽस्ति, तव्यत्तव्यानीयरादौ कृत्कृत्यप्रत्ययादिसंज्ञासमावेशदर्शनादित्यत आह-आ कडारा। आङ्मर्यादायामित्याह&ndash;कडाराः कर्मधारये इति। आङिह नाभिविधौ। कडारशब्दस्यापि प्रवेशे प्रयोजनाऽभावात्। प्राक्कडारादिति कडारशब्दस्तु नोत्तरावधिः। कडाराः कर्मधारये इति कडारशब्दस्य उत्तरावधित्वेऽधिकलाभात्। प्राक्कडारादित्युत्तरं तत्पुरुषः द्विगुश्चेति चकाराच्च। संज्ञाद्वयसमावेशषार्थो हि चकारः। तत्रैकसंज्ञाया नियमाऽप्रवृत्तौ किं तेन ?। नन्वस्त्विह एकैव संज्ञा, तथापि विनिगमनाविरहाद्भसंज्ञैवेति कुतो लाभः ?। तत्राह--या परेत्यादि। विरोधाऽभावेन विप्रतिषेधसूत्रस्य सामान्याद्विशेषबलीयस्त्वस्य चाऽप्रवृत्तावपि परत्वनिरवकाशत्वयोरन्यत्र बलवत्त्वेन दृष्टत्वादिहापि ताभ्यां व्यवश्ता युज्यते इति भावः। द्वयोः सावकाशयोः परा संज्ञा बलवती। अन्यतरस्या निरवकाशत्वे तु सैवेति बोध्यम्। तत्र परा यथा--धनुषा शरैर्विध्यतीत्यत्र शराणां विश्लेषं प्रत्यवधिभूतस्यैव धनुषा व्यधनं प्रति साधकतमत्वादपादानत्वे करणत्वे च प्राप्ते परा करणसंज्ञैव भवति। अनवकाशा यथाअततक्षदिति। अत्र तकारादकारस्यसंयोगे गुरुइति गुरुसंज्ञैवाऽनवलकाशत्वाद्भवति, नतु लघुसंज्ञा। तस्या असंयोगे परे चरितार्थत्वात्। अतः सन्वल्लघुनीति तत्र न प्रवर्तते। तेनेति। अनवकाशत्वेनेत्यर्थः। अत इति। पदत्वाऽभावाज्जश्त्वं नेत्यर्थः। जश्त्वमिति। दत्-भ्यामिति स्थितेस्वादिष्वसर्वनामस्थानेइति पदान्तत्वात्।झलां जशोऽन्तेइति जश्त्वमित्यर्थः। इत्यादीति। दद्भिः दते इत्यादिरादिशब्दार्थः।खरि चइति चर्त्वे-दत्सु। पक्षे रामवत्। मास इति। मासशब्दस्य शसिपद्दन्नइति मासित्यादेशे रूपम्। मासेति तृतीयैकवचनम्। रुत्व इति। मास्-भ्याम् इति स्थिते स्वादिष्विति पदत्वात्ससजुषोःइति रुः।भोभगोइति तस्य यकारेहलि सर्वेषामिति तस्य लोपे माभ्यां माभिरिति रूपमित्यर्थः। इत्यादीति। माब्यः इत्यादिरादिशब्दार्थः। मास्-सु इति स्थिते रुत्वे खरवसानयोः इति विसर्गे वा शरि इति सत्वविकल्पः। मास्सु-माःसु।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.4/1.4.1.md">Edit 1.4.1!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.1";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.2\",\"Previous\":\"1.3.93\",\"अकारादिक्रमसङ्ख्या\":457,\"कौमुदीक्रमसङ्ख्या\":232,\"प्रकारः\":\"अधिकारः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":186,\"विषयः १\":\"एकसंज्ञाधिकारः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आ कडारादेका संज्ञा\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सुप्प्रतिना। सुबित्यनुवर्तमाने पुनः सुब्ग्रहणमव्ययनिवृत्त्यर्थमिति ध्वनयन्नुदाहरति&ndash;शाकप्रतीति।नन्वारम्भसामर्थ्यादव्ययभिन्नमेव सुप्समस्यत इति चेत्। अत्राहुः&ndash;पुनः सुब्ग्रहणाऽभावे दोषामन्यमहर्दिवामन्या रात्रिरिति वृत्तिविषये सत्त्वप्रधानतादर्शनात्तादृशाव्ययान्येव मात्रार्थे प्रतिना समस्येरन्, तथा च दिवसस्य लेशो दिवाप्रति दोषाप्रतीत्यादीनाहरणत्वं संभाव्येतेति। वृक्षं प्रतीति। ननु लक्षणादौ प्रतेः कर्मप्रवचनीयसंज्ञाविधानसामर्थ्याद्ध्वितीयागर्भं वाक्यमेव स्यात्, न तु समासः, तस्य लेशार्थे सावकाशत्वादिति चेत्। मैवम्। वृक्षं प्रति सिञ्चन्तीत्यादौ षत्वनिवारकत्वेन कर्मप्रवचनीयसंज्ञाविधानस्य चरुतार्थत्वान्मात्रार्थग्रहणाऽभावे लक्षणादाबप्यनेन समासप्रसङ्गात्। वीप्सायामव्ययीभावे तु प्रत्यादेः पूर्वनिपातत्वे प्रत्यर्थं सिञ्चन्तीत्यादौ षत्वाऽप्रसक्त्या कर्मप्रवचनीयविधानस्याऽचरितार्थतया तत्सामर्थ्याद्द्वितीयागर्भं वाक्यमपीत्युक्तं मूलकृता अव्ययं विभक्तीति सूत्रे। अत्र नव्याः&ndash;प्रत्यर्थमित्यव्ययीभावे वीप्सायां द्योतकत्वेन विद्यमानमव्ययं समस्यते। वीप्साद्योतकस्य यदि कर्म प्रवचनीयसंज्ञाविधिः स्वीक्रियते, तदापि प्रतिस्तवनं प्रतिस्थानमित्यादौ षत्वनिवारणाय प्रतीत्यस्य कर्मप्रवचनीयसंज्ञा चरितार्थैव। वस्तुतस्तु वीप्सायां विषयभूतायां प्रत्यादेः कर्मप्रवचनीयसंज्ञा, न तु वीप्साद्योतकस्यैव। अन्यथा वृक्षं वृक्षं प्रति सिञ्चतीत्यत्र द्विर्वचनेनैव वीप्सा द्योत्यते। प्रतिशब्दस्तु क्रियाया संबध्यते। कर्मणि द्वितीया। कर्मप्रवचनीयसंज्ञया उपसर्गसंज्ञाया बाधात् षत्वं ने&rsquo;त्यादिमनोरमाग्रन्थस्य लक्षणेत्थंभूतेति सूत्रस्थस्य दत्तजलाञ्जलिः स्यात्, ततश्च संज्ञाविधानसामर्थ्यास्योपक्षीणत्वात्, अर्थमर्थं प्रतीत्यादिभाष्यप्रयोगादेव द्वितीयागर्भं वाक्यमपि भवतीत्येवं व्याख्येयमित्याहुः। पराजयं द्योतयितुमाह&mdash;विपरीतं वृत्तमिति। पूर्वं जये यथा वृत्तं तथा न वृत्तमित्यर्थः। एकपरीति। एकंन विपरीतं वृत्तमित्यर्थः। एवं द्विपरीत्यादि। विभाषाऽपपरिबहिरिति योगं विभज्य व्याचष्टे।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.1/2.1.9.md">Edit 2.1.9!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.9";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.10\",\"Previous\":\"2.1.8\",\"अकारादिक्रमसङ्ख्या\":3764,\"कौमुदीक्रमसङ्ख्या\":663,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययीभावः समासः\",\"विषयः २\":\"समासः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सुप्प्रतिना मात्राऽर्थे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

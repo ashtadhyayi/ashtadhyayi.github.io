@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अथ लुङि सिचि वीभावे सार्वधातुकार्द्धधातुकयोरिति गुणे प्राप्ते&ndash; सिचि वृद्धिः। इगन्तस्येति। वृद्धिश्रुत्या इक इत्युपस्थितमङ्गस्येत्यधिकृतस्य विशेषणं, तदन्तविधिरिति भावः। एवं च अकोषीत्यादौ व्यञ्जनस्य न वृद्धिः। अवैषीदिति। लुङिस्तिप्। इकारलोपः। सिचि वीभावः। एकाच इति इण्निषेधः। वृद्धिः। अडागमः। षत्वम्। आजीदिति। सिज्लोपः। वदव्रजेति हलन्तलक्षणायां वृद्धौ नेटीति निषिद्धायामाडागमे आटश्चेति वृद्धिः। लृङि अवेष्यत् आजिष्यत्। तेज पालन इत्यादि। स्पष्टम्। एजृ कम्पन इति। दीप्तौ त्वात्मनेपदी गतः। टु ओ स्फूर्जेति। आदिर्ञिटुडव इति टुरित्, उपदेशेऽनुनासिकत्वादोकार आकारश्च इत्। ट्वितोऽथुजित्थथुच्, आदितश्चेति निष्ठानत्वम्, ओदितश्चेति निष्ठायामिण्निषेधश्च। तत्फलानि। उपधायां चेति दीर्घस्याऽनित्यत्वज्ञापनार्थमिह दीर्घ ऊकारः पठितः। तेन हुर्छतीत्यादौ न दीर्घ इत्याहुः। स्फूर्जतीति। लिटि&ndash;पुस्फूर्ज, अस्फूर्जीत्। क्षि क्षय इति। क्षयो&ndash;नाशः। अन्तर्भावितण्यर्थ इति। नाशनार्थक इत्यर्थः। अजन्तेष्वेवास्य पाठो युक्तः। क्षयतीति। नश्यतीत्यर्थः,नाशयतीति वा। शपि गुणेऽयादेशः। चिक्षायेति। णलि वृद्धिः। आयादेशः। चिक्षियतुरिति। असंयोगादिति कित्त्वान् गुणः। इयङ्। चिक्षयिथ&ndash; चिक्षेथेति। पित्त्वेन कित्त्वाऽभावाद्गुणः। अजन्तत्वात्तासौ नित्याऽनिट्त्वाच्च भारद्वाजनियमात्थलि वेट्। इट्पक्षेऽयादेशः। चिक्षियथुः। चिक्षिय। चिक्षाय चिक्षय। वस्मसोस्तु क्रादिनियमान्नित्मिट्। तदाह&mdash;चिक्षियिव चिक्षियिमेति। क्षेता। क्षेष्यति। क्षयतु। अक्षयत्। क्षयेत्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.2/7.2.1.md">Edit 7.2.1!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.2.1";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.2.2\",\"Previous\":\"7.1.103\",\"अकारादिक्रमसङ्ख्या\":3731,\"कौमुदीक्रमसङ्ख्या\":2297,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सिचि वृद्धिः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सिचि वृद्धिः परस्मैपदेषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

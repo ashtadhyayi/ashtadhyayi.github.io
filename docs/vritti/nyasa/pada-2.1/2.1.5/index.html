@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="यथावृद्धम् इत्यत्राव्ययीभावत्वे सति अव्ययीभावश्च (2.4.18) इति नपुंसकत्वे नाव्ययीभावादतोऽम्त्वपञ्चम्याः (2.4.83) इत्येष विधिर्भवति। अन्वर्थसंज्ञा चेयम् इति। अनव्ययमव्ययं भवतीत्यव्ययीभावः। पूर्वपदार्थप्राधान्यम् इत्यादिना अन्वर्थसंज्ञायाः फलमाह। प्रायेण ह्रव्ययीभावे पूर्वपदमव्ययम्, परपदमन्यव्ययम्; समुदायो नाव्ययम्()। स यदि पूर्वपदवशेन तस्य पूर्वपदस्य यो धर्मोऽव्ययत्वं तत्प्रतिपद्यते ततो।ञनव्ययस्वभावः सन्नव्ययस्वभावो भवति। एवञ्च पूर्वपदवशेन तद्धर्मं प्रतिपद्यते यदि पूर्वपदं प्रधानं भवति, नान्यथा। प्रधानवशेन हि वस्तुनः स्वधर्मपरित्यागेन धर्मान्तरापत्तिर्युक्ता। तदेवमन्वर्थसंज्ञेयं भवन्ती पूर्वपदार्थप्राधान्यमव्ययीभावस्य दर्शयति। तेन यदा पूर्वपदार्थस्य प्राधान्यं भवति तदाव्ययीभावो भवति, नान्यथेत्युक्तं भवति॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.5.md">Edit 2.1.5!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.5";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.6\",\"Previous\":\"2.1.4\",\"अकारादिक्रमसङ्ख्या\":404,\"कौमुदीक्रमसङ्ख्या\":651,\"प्रकारः\":\"संज्ञा; अधिकारः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययीभावः समासः\",\"विषयः २\":\"समासः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अव्ययीभावः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

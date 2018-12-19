@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="उपसर्गस्याऽयतौ। अयताविति श्तिपा निर्देशः। कृपो रो ल इत्यतो रो ल इत्यनुवर्तते। तदाह&ndash;अयतिपरस्येत्यादिना। प्लायत इति। प्र इत्युपसर्गः। प्लायत इति। परा इत्याकारान्त उपसर्गः। ननु निरयते दुरयत इत्यत्रापि लत्वं स्यादित्यत आह&mdash;निस्दुसोरिति। तर्हि निलयते दुलयत इति कथमित्यत आह&ndash;निर्दुरोस्त्विति। एतदर्थमेव प्रादिषु रेफान्तयोश्च निर्देश इति भावः। तर्हि प्रत्यय इत्यत्रापि प्रतेरयतिपरत्वाद्रस्य लत्वं स्यादित्यत आह&mdash; प्रत्यय इति त्विति। प्रतिपूर्वकादिण्धातोरतच्प्रत्यये प्रत्यय इति रूपम्। अयतिपरत्वाऽभावान्न लत्वमित्यर्थः। अयधातुमादय प्लत्यय इति न, अनभिधानादिति कैयटः। कथमुदयतीति। उत्पूर्वकादयधातोः शत्रन्तात्सप्तम्यन्तमिति मत्वा आक्षेपः। अनुदात्तेत्त्वेन लटः शानच्प्रसङ्गादिति भावः। प्रश्लिष्टस्येति। इधातोरिति शेषः। तस्य अनुदात्तेत्त्वाऽबावाच्छतृप्रत्ययो निर्बाध इति भावः। ज्ञापकादिति। चक्षिङ् धातोरिकारस्याऽनुदात्ततया अनुदात्तेत्त्वादेवात्मनेपदसिद्धौ ङित्करणमनुदात्तेत्त्वप्रयुक्तात्मनेपदस्याऽनित्यतां ज्ञापयति। तस्याऽनित्यत्वे तु नित्यात्मनेपदार्थं ङित्करणमर्थवदिति भावः। इदं तु भाष्ये न दृश्यते। वादित्वादिति वयधातोर्लिटि वादित्वादेत्वाभ्यासलोपयोरभावे सतिववयेइति रूपमित्यर्थः। णयधातुर्णोपदेश इति मत्वा आह--प्रणयत इति।उपसर्गादसमासेऽपीति णत्वमिति भावः। दयांचक्र इति।दयायासश्चेत्याम्। ऊयांचक्र इति। इजादित्वादाम्। उन्दने चेति। क्लेदने चेत्यर्थः। स्फायी ओप्यायीति। ओदित्त्वम्ओदितश्चेति निष्ठानत्वार्थम्। ईदित्त्वं तु�आईदितो निष्ठाया`मितीण्निषेधार्थम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.2/8.2.19.md">Edit 8.2.19!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.2.19";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.2.20\",\"Previous\":\"8.2.18\",\"अकारादिक्रमसङ्ख्या\":779,\"कौमुदीक्रमसङ्ख्या\":2326,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उपसर्गस्यायतौ\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

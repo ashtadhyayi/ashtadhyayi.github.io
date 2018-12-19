@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="श्नभ्यस्तयोरातः। गमहनेत्यतो लोपः क्ङितीत्यनुवर्तते। अत उदित्यतः सार्वधातुके इति। तदाह&ndash;अनयोरिति। स्नाप्रत्ययस्य, अभ्यस्तस्य चेत्यर्थः। दरिद्रतीति। जक्षित्यादित्वादभ्यस्तत्वात् अदभ्यास्तादिति झस्य अदादेशे आकारलोपः। दरिद्रासि दरिद्रिथः। दरिद्रिथ। दरिद्रामि दरिद्रिवः दरिद्रिमः। लिट�आह&ndash; अनेकाच्त्वादामिति। इदं च कास्प्रत्ययादिति सूत्रभाष्ये स्पष्टम्। दरिद्रांचकारेति। आमि सवर्णदीर्घः। कैयटमतमाह&ndash; आत इति। आत औ णलःर इत्त्र प्रथमातिक्रमे कारणाऽभावादोकार एव विधातुमुचितः। वृद्धौ स्तयां तावतैव ययौ इत्यादिसिद्धेः। तस्मादौकराविधानं दरिद्राधातोर्णलि दरिद्रातेरार्द्धधातुके लोपो वक्तव्यः इत्याल्लोपे ददरिद्रौ इत्यौकारश्रवणार्थं संपद्यते। ओकारविधाने तु आल्लोपे सति वृद्धेसंभवाद्दरिद्रातेर्लिटि आम्नेति विज्ञायते। आमि सति णल एवाऽप्रसक्तेरित्यर्थः। इदं च वस्वेकाजाद्धसामिति सूत्रभाष्ये द्वनितं, कैयटेन स्पष्टीकृतम्। तन्निर्मूलमेवेति। ददरिद्र। ददरिद्रौ ददरिद्रिव ददरिद्रिम। आर्द्धधातुके विवक्षिते इति। आतो लोप इटिचे त्याल्लोपो दरिद्रातेर्भवन् क्ङिति अक्ङिति च अजादावार्द्धातुके भवति। स च आर्द्धधातुके विवक्षिते ततः प्रागेव भवतीति वक्तव्यमित्यर्थः। तेन दरिद्रातीति दरिद्रः। आल्लोपे कृते पचाद्यच् सिध्यति। आर्द्धधातुके परे आल्लोपप्रवृत्तौ तु श्याद्वद्यधेत्यादन्तलक्षमो णप्रत्ययः स्यात्। ततश्च कृते णप्रत्यये आल्लोपं बाधित्वा आतो युक् चिण्कृतोरिति युकिदरिद्रायइति स्यात्। आर्द्धधातुके विवक्षिते ततः प्रागेव आल्लोपे तु कृते आदन्तत्वाऽभावाण्णप्रत्ययाऽभावे पचाद्यच्प्रत्ययो निर्बाधः। तदिदं भाष्ये स्पष्टम्। लुङि वेति। लुङि आल्लोपो वा वक्तव्य इत्यर्थः।अद्यतन्यां वेति वक्तव्यमिति वार्तिकार्थसङ्ग्रहोऽयम्। अद्यतन्यामित्यनेन अद्यतनभूतार्थकविहितलुङ्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.112.md">Edit 6.4.112!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.4.112";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.4.113\",\"Previous\":\"6.4.111\",\"अकारादिक्रमसङ्ख्या\":3442,\"कौमुदीक्रमसङ्ख्या\":2483,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आ-लोपः श्नाभ्यस्तयोः\",\"विषयः २\":\"किति ङिति\",\"विषयः ३\":\"सार्वधातुके\",\"सूत्रम्‌\":\"श्नाऽभ्यस्तयोरातः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

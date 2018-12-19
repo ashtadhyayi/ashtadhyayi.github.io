@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सामथ्र्यादेकदेशवचनाः इति। यदि हि पूर्वादयः शब्दा एकदेशवचना न स्युसतदोत्तरपदस्यैकदेशित्वं न गम्येत;एकदेशिन एकदेशापेक्षत्वात्। तस्मात् सामान्योक्ता अपि पूर्वादयः शब्दा सामथ्र्यादेकदेशवचनाः समस्यन्त इति विज्ञायते। एकाधिकरणग्रहणमेकदेशिनो विशेषणमित्यस्यार्थं विस्पष्टीकर्तुमाह&ndash; एकं च इत्यादि। एकमित्येकसंख्याविशिष्टं द्रव्यमित्यर्थः। एकद्रव्यम् इत्यनेनाधिकरमशब्दोऽत्र द्रव्ये वत्र्तमान उपात्त ति दर्शयति। ननु एकदेशिना इति तृतीयान्तमेतत्, एकाधिकरणे इत्येतत् सप्तम्यन्तम्, तत् कथं तयोर्भिन्नविभक्तिकयोः सामानाधिकरण्येन विशेषणविशेष्यभाव उपपद्यते, कथञ्च न स्यात्; भिन्नार्थत्वात्? नैतदस्ति;छन्दोवत् सूत्राणि भवन्ति(म।भा।१।१।१) इत्यतोव्यत्ययो बहुलम्(3.1.85) इति बहुलवचनात्।एकाधिकरणेइत्यत्र तृतीयार्थ एवैषा सप्तमी। नसप्तम्यधिकरणे च(2.3.36) इत्यनेन। अतो नास्ति भिन्नार्थत्वमित्यदोषः।षष्ठीसमासापवादोऽयं योगःइति।एकदेशिनाइति वचनात् पूर्वादयः शब्दा एकदेशवचना आश्रीयन्ते। सम्बन्धिशब्दा हि नियतमेव प्रतियोगिनमुपस्थापयन्ति। तत्रावयवावयविसम्बन्धे स्तेयकदेशिनः षष्ठ()आमुपजनितायांषष्ठी(2."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.2/2.2.1.md">Edit 2.2.1!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.2.1";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.2.2\",\"Previous\":\"2.1.72\",\"अकारादिक्रमसङ्ख्या\":2429,\"कौमुदीक्रमसङ्ख्या\":712,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकदेशि तत्पुरुषः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"पूर्वापराधरोत्तरमेकदेशिनैकाधिकरणे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

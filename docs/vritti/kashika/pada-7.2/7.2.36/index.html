@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="नियमार्थम् इदम्। स्नुक्रमोः आर्धधातुकस्य वलादेः इडागमो भवति, न चेत् स्नुक्रमी आत्मनेपदस्य निमित्तं भवतः। क्व च तावात्मनेपदस्य निमित्तम्? यत्र आत्मनेपदं तदाश्रयं भवति, भावकर्मकर्मकर्तृकर्मव्यतिहाराः क्रमेर् वृत्त्यादयश्च। तेन अयम् सत्यात्मनेपदे प्रतिषेधो भवति न असति इति। प्रतिषेधफलं च इदं सूत्रम्। स्नुक्रमोरुदित्वातिट् सिद्ध एव। प्रस्नविता। प्रस्नवितुम्। प्रस्नवितव्यम्। प्रक्रमिता। प्रक्रमितुम्। प्रक्रमितव्यम्। अनात्मनेपदनिमित्ते इति किम्? प्रस्नोषीष्ट। प्रक्रंसीष्ट। प्रस्नोष्यते। प्रक्रंस्यते। प्रसुस्नूषिष्यते। प्रचिक्रंसिष्यते। सर्वत्र एव अत्र स्नैतिः क्रमिश्च आत्मनेपदस्य निमित्तम्। सनन्तादपि पूर्ववत्सनः (*1,3.62) इति आत्मनेपदं विधीयते। निमित्तग्रहणं किम्? सीयुडादेस् तत्परपरस्य च प्रतिषेधार्थम्। इह तु प्रस्नवितेवाचरति इति प्रस्नवित्रीयते इति क्यङतम् आत्मनेपदस्य निमित्तम्, न स्नौतिः। क्रमेस् तु कर्तर्यात्मनेपदविषयादसत्यात्मनेपदे कृति प्रतिषेधो वक्तव्यः। प्रक्रन्ता। उपक्रन्ता। कर्तरि इति किम्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-7.2/7.2.36.md">Edit 7.2.36!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.2.36";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.2.37\",\"Previous\":\"7.2.35\",\"अकारादिक्रमसङ्ख्या\":3842,\"कौमुदीक्रमसङ्ख्या\":2323,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"आर्धधातुकस्य\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"स्नुक्रमोरनात्मनेपदनिमित्ते\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

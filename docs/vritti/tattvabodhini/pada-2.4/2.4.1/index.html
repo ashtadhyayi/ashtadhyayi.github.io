@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="द्विगुरेकवचनम्। वक्तीति वचनम्। बाहुलकात्कर्तरि ल्युट्। सामान्ये नपुंसकम्। द्विगुः समास एकर्थप्रतिपादको भवतीत्यर्थः। न च वस्तुतोऽनेकार्थस्यैकार्थत्वं कथंचिदुपपद्यत इति सामर्थ्यादतिदेशः संपद्यत इत्याह&ndash;एकवत्स्यादिति। समाहारेइति तूपसङ्ख्यानाल्लभ्यते। समाहारे यो द्विगुस्तदर्थ एकवदित्यवयः। समाहारे किम्?। तद्धितार्थे माभूत्। पञ्चसु कपालेषु संस्कृताः पञ्चकपालाः, पञ्चभिर्गोभिः क्रीताः पञ्चगवः पटाः। पञ्चगवे पञ्चगवानीत्यत्र तु प्रथम् द्विगर्थस्यैकवद्भावे कृते योऽयमेकशेषे कृते द्विगर्थसमुदायस्तस्याऽद्विगर्थत्वाद्बहिरङ्गत्वाच्चैतवद्भावो न भवतीति स्थितमाकरे। यदा तद्धितार्थइति सूत्रे समाहारेइति कर्मसाधनस्तदा समाह्मतप्रधानो द्विगुरिति बहुत्वे प्राप्तेऽनेन एकवद्भावः क्रियते। यदा तु भावसाधन एव समाहारस्तदा समूहप्रधानत्वाद्द्विगोः, समूहस्य चैकत्वात्सिद्धमेकत्वमिति नास्य प्रयोजनम्। न च स नपुंसकमिति नपुंसकत्वार्थमेकत्वविधानमितिवाच्यं, समुदायवाचकेषु सामान्ये नपुंसकमित्यभ्युपगमे बाधकाऽभावादित्याहुः। वस्तुतस्तु तद्धितार्तइति सूत्रे समाहार इति भावे घञ्न तु कर्मणि। पञ्चगवमित्यत्र पञ्च गव#ः समाह्मता इत्यर्थाभ्युपगमे समाह्रियमाणानां बहुत्वेन एकवचनानुपपत्तेः। न च द्विगुरेकवचनमिति सूत्रान्नैवमिति वाच्यम्, पञ्चखट्वीत्यसिद्धेः। तत्र हि पञ्च खट्वाः समाह्मताः, पञ्चसु खट्वासु समाह्मतास्वित्येवं विग्रहसंभवेन नियतविभक्तित्वाऽभावादेविभक्ति चापूर्वनिपाते इत्यप्रवृत्तेरनुपसर्जनत्वात् गोस्त्रियोरिति ह्रस्वो न स्यात्। ततश्च आबन्तो वेति स्त्रीत्वपक्षे द्विगोःइत्यदन्तलक्षणो ङीब्न स्यात्। भावसाधनत्वे त्वेकविभक्तित्वादुपसर्जनत्वमव्याहतमेव। समाहारापेक्षया नियमेन वर्तिपदानां षष्ठ�न्तत्वात्, तथा च पञ्चखट्वीत्यादिरूपं निर्बाधमेवेति दिक्। स नपुंसकमिति। एतस्यार्थो मूल एव स्फुटीभविष्यति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.4/2.4.1.md">Edit 2.4.1!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.1";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.2\",\"Previous\":\"2.3.73\",\"अकारादिक्रमसङ्ख्या\":1943,\"कौमुदीक्रमसङ्ख्या\":731,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकवद्भावः\",\"विषयः २\":\"द्विगुद्वन्द्वयोः वचननिर्णयः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"द्विगुरेकवचनम्‌\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

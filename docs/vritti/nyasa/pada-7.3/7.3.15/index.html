@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="द्विसांवत्सरिकः इति। पूर्ववत्? तद्धितार्थे समासः। ततः प्राग्वतीयष्ठञ्()। द्विषाष्टिकः, द्विसाप्ततिकः इति। ननु च तमधीष्टो भृतो भृतो भावी (5.1.79) इत्यत्र कालादिति। (5.1.77) वत्र्तते, न द्विषष्ट()आदिः कालशब्दः, किं तर्हि? संख्याशब्दः, तत्कथं कालाधिकारविहितं प्रत्ययमुत्पादयति? इत्याह&ndash;द्विषष्ट()आदिशब्दः इत्यादि। कालवाचिशब्दस्तत्र कालग्रहणेन गृह्रते, द्विषष्ट()आदिशब्दो हि यदा वर्षेषु संख्येयेषु वत्र्तते, तदा कालवाचित्वात्? कालश्ब्दो भवति। ततः कालाधिकारीयं प्रत्ययमुत्यादयति। अथ संवत्सरग्रहणं किमर्थम्(), यावतः परिमाणान्तस्यासंज्ञाशाणयोः (7.3.17) इत्यत्र परिमाणशब्देन परिच्छेदहेतुमात्र गृह्रते, न तु प्रस्थादिवदारोहपरिणाहपरिच्छेदहेतुः, अन्यथा हि शाणप्रतिषेधोऽनर्थकः स्यात्(), न हि शाणः परिमाणमारोहपरणाहपरिच्छेदहेतुः, अतः कालोऽपि परिच्छेदहेतुर्भवति, ततश्च सोऽपि परिमाणमिति संवत्सरशब्दस्य परिमाणस्यासंज्ञाशाणयोः (७।३।१७) इत्येव सिद्धम्()?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.3/7.3.15.md">Edit 7.3.15!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.3.15";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.3.16\",\"Previous\":\"7.3.14\",\"अकारादिक्रमसङ्ख्या\":3517,\"कौमुदीक्रमसङ्ख्या\":1752,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"उत्तरपदस्य वृद्धिः तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"संख्यायाः संवत्सरसंख्यस्य च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

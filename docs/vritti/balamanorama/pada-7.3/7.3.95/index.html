@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="तुरुस्तु। तु रु स्तु शमि अम् एषां समाहारद्वन्द्वात्पञ्चम्येकवचम्। उतो वृद्धिरित्यतो हलीति, भूसुवोरित्यतस्तिङीति, ब्राउव ईडित्यत ईडिति, यङो वेत्यतो वेति चानुवर्तते। तदाह&mdash; एभ्य इत्यादिना। नाभ्यस्तस्येति। नाभ्यस्तस्याऽचि पिति सार्वधातुके इत्यतः सार्वधातुके इत्यनुवृत्तिसंभवे पुनः सार्वधातुकग्रहणं पितीत्यस्याऽनुवृत्तिर्मा भूदित्येतदर्थमित्यर्थः। रवीतिति। ईट्पक्षे हलादित्वाऽभावादुतो वृद्धिर्नेति भावः। रौतीति। ईडभावेउतो वृद्धिरिति भावः। रुवीतः रुत इति। अपित्त्वेऽपि ईड्विकल्प इति भावः। रुवन्तीति। अन्तादेशे कृते हलादित्वाऽभावादीडभावे उवङिति भावः। शाम्यतीति। श्यनस्तिङ्त्वाऽभावादीण्नेति भावः। आशिषि रूयादिति। आद्र्धधातुकत्वादीडभावेअकृत्सार्वधातुकयोरिति दीर्घः। विध्यादौ त्विति। आदिना निमन्त्रणादिसङ्ग्रहः। रुयात् रुवीयादिति। हलादिसार्वधातुकत्वादीड्विकल्प इति भावः। ईडभावपक्षे हलादौ पिति सार्वधातुकेउतो वृद्धिरिति बोध्यम्। ननु धातुपाठे तुधातोरदर्शनाद्धातुत्वाऽभावात्कथं ततः सार्वधातुकस्य ईड्विधिरित्यत आह--तु इति सौत्रो धातुरिति। गतिवृद्धिहिंसास्विति। अत्र व्याख्यानमेव शरमम्। ननु शपा व्यवदानादस्य सार्वधातुकपरत्वं कथमित्यत आह--अयं च लुग्विकरण इति स्मरन्तीति। अव्यवहिततिङ ईड्विधानमेवाऽत्र बीजम्। शम्यमोस्तुशमीध्वम् अभ्यमीती`ति वेदे शपो लुकि बोध्यम्। अयमनिट्। हलादौ सार्वधातुके रुधातुवत्। आद्र्धधातुके तु नेट्। तदाह&mdash;तोतेति। णु स्तुताविति। णोपदेशोऽयं सेट्। युधातुवद्रूपाणि। क्षुक्ष्णुस्नु धातवः सेट। युधातुवद्रूपाणि। चुक्षाव। चुक्ष्णाव। सुष्णाव इति। षोपदेशोऽयमिति भावः। ऊर्णुञ्धातुरुभयपदी। सेट्। उतो वृद्धेर्नित्यं प्राप्तौ&ndash;"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.95.md">Edit 7.3.95!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.3.95";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.3.96\",\"Previous\":\"7.3.94\",\"अकारादिक्रमसङ्ख्या\":1757,\"कौमुदीक्रमसङ्ख्या\":2444,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्ङिति सार्वधातुके अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तुरुस्तुशम्यमः सार्वधातुके\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

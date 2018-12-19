@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="लूञ् छेदने इत्येतत् प्रभृति वृ̄ञ् वरणे इति यावत् वृत्करणेन समापिता ल्वादयो गृह्यन्ते। तेभ्यः उत्तरस्य निष्ठातकारस्य नकारादेशो भवति। लूनः। लूनवान्। धूनः। धूनवान्। जीनः। जीनवान्। ऋकारल्वादिभ्यः क्तिन्निष्ठावद्भवति इति वक्तव्यम्। कीर्णिः। गीर्णिः। शीर्णिः। लूनिः। पूनिः। दुग्वोर्दिर्घश्च इति वक्तव्यम्। दु आदूनः। दु विगूनः। पूञो विनाश इति वक्तव्यम्। पूना यवाः। विनष्टाः इत्यर्थः। विनाशे इति किम्? पूतम् धान्यम्। सिनोतेर् ग्रासकर्मकर्तृकस्य इति वक्तव्यम्। सिनो ग्रासः स्वयम् एव। ग्रासकर्मकर्तृकस्य इति किम्? सिता पाशेन सूकरी। ग्रासो ऽपि यदा कर्मैव भवति न कर्मकर्ता, तदा न भवति, सितो ग्रासो देवदत्तेन इति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.2/8.2.44.md">Edit 8.2.44!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.2.44";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.2.45\",\"Previous\":\"8.2.43\",\"अकारादिक्रमसङ्ख्या\":3040,\"कौमुदीक्रमसङ्ख्या\":3018,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निष्ठा-तकारादेशः\",\"विषयः २\":\"नकारादेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ल्वादिभ्यः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

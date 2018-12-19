@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="मूर्धन्य इति वर्तते, सः इति च। उपसर्गस्थान् निमित्तातुत्तरस्य सुनोति सुवति स्यति स्तौति स्तोभति स्था सेनय सेध सिच सञ्ज स्वञ्ज इत्येतेषां सकारस्य मूर्धन्यादेशो भवति। सुनोति अभिषुणोति। परिषुणोति। अभ्यषुणोत्। पर्यषुणोत्। सुवति अभिषुवति। परिषुवति। अभ्यषुवत्। पर्यषुवत्। स्यति अभिष्यति। परिष्यति। अभ्यष्यत्। पर्यष्यत्। स्तौति तभिष्टौति। परिष्टौति। अभ्यष्तौत्। पर्यष्टौत्। स्तोभति अभिष्टोभते। परिष्तोभते। अभ्यष्टोभत। पर्यष्टोभत। स्था अभिष्ठास्यति। परिष्ठास्यति। अभ्यष्टात्। पर्यष्ठात्। अभितष्टौ। परितष्ठौ। सेनय अभिषेणयति। परिषेणयति। अभ्यषेणयत्। पर्यषेणयत्। अभिषिषेणयिषति। परिषिषेणयिषति। सेध अभिषेधति। प्रिषेधति। अभ्यषेधत्। पर्यषेधत्। सिच अभिषिञ्चति। परिषिञ्चति। अभ्यषिञ्चत्। पर्यषिञ्चत्। अभिषिषिक्षति। परिषिषिक्षति। सञ्ज अभिषजति। परिषजति। अभ्यषजत्। पर्यषजत्। अभिषिषङ्क्षति। प्रिरङ्क्षति। स्वञ्ज अभिष्वजते। परिष्वजते। अभ्यष्वजत। पर्यष्वजत। अभिषिष्वङ्क्षते। परिषिष्वङ्क्षते। सेध इति शब्विकरणनिर्देशः सिध्यतिनिवृत्त्यर्थः। उपसर्गातिति किम्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.3/8.3.65.md">Edit 8.3.65!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.65";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.66\",\"Previous\":\"8.3.64\",\"अकारादिक्रमसङ्ख्या\":784,\"कौमुदीक्रमसङ्ख्या\":2270,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उपसर्गात्‌ सुनोतिसुवतिस्यतिस्तौतिस्तोभतिस्थासेनयसेधसिचसञ्जस्वञ्जाम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अथ लिङस्तिपि इतश्चेतीकारलोपे शपि गुणेऽवादेशे भव त् इति स्थिते&ndash;यासुट् पर। लिङ सीयुडित्यतो लिङ इत्यनुवर्तते। षष्ठ�र्थे सप्तमी। तदाह&ndash;लिङः परस्मैपदानामिति। सीयुटोऽपवादः। यासुटि टकार इत्, उकार उच्चारणार्थः। टित्त्वात्तिबादीनामाद्यवयवः। अवयवे ङित्त्वं च आनर्थक्यात्तदङ्गेषु इति न्यायेन समुदाये आगमविशिष्टतिबादौ विश्राम्यति। आगमा अनुदात्ता इति यासुटोऽनुदात्तत्वे प्राप्ते उदात्तवचनम्। इदमेव वचनम् आगमा अनुदात्ता इत्यत्र ज्ञापकमिति भाष्यम्। स्तुयात् स्तुयातामित्यादौ गुणादिनिषेधार्थं यासुटो ङित्त्ववचनम्। ननु यदागमा इति न्यायेन यासुडागमो लिङादेशपरस्मैपदावयवः, ततश्च स्थानिवत्त्वेनैव ङित्त्वसिद्धेर्यासुटो ङित्तवविधिर्?व्यर्थः। न च स्थानिभूतलिङो ङकारस्याऽल इत्त्वेन गुणनिषेधविधावाश्रयणादनल्विधाविति निषेधः शङ्क्यः, घुमास्थागापाजहातिसां हलीति क्ङिति विहितस्य ईत्वस्य न ल्यपीति निषेधेन लिङ्गेनाऽनुबन्धकार्ये अनल्विधाविति निषेधाऽभावज्ञापनादित्यत आह&ndash; ङित्त्वोक्तेरिति। क्वचदनुबन्धकार्येऽपि अनल्विधाविति निषेध इति। यासुटो ङित्त्वेन ज्ञायत इत्यन्वयः। तथा च एतज्ज्ञापनार्थमेव यासुटो ङित्त्वमिति भावः। ज्ञापनफलं तु वक्ष्यमाणेत्यत्र ङीबभावः। अन्यथा लृडादेशस्य शानचः स्थानिवत्त्वेन टित्त्वान्ङीप् स्यात्। ननु क्वचिदनुबन्धकार्येऽप्यनल्विधाविति निषेध इत्यत्र यासुटो ङित्त्ववचनं न ज्ञापकम्। अनुबन्धकार्ये सर्वत्र अनल्विधाविति निषेधाऽभावे सत्यपि यासुटो ङित्त्वस्य तिप्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.4/3.4.103.md">Edit 3.4.103!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.4.103";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.4.104\",\"Previous\":\"3.4.102\",\"अकारादिक्रमसङ्ख्या\":2862,\"कौमुदीक्रमसङ्ख्या\":2209,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"यासुट् परस्मैपदेषूदात्तो ङिच्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

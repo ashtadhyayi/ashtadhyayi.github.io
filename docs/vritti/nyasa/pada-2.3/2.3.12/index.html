@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="यदि क्रियामात्रमिह चेष्टाशब्देनोच्यते तदा चेष्टाग्रहणमपार्थकम्। सर्वो हि धातुः क्रियावचनः। तस्माद्विशेषणं पादानसामथ्र्यात् परिस्पन्दवचनोऽयं चेष्टाशब्दो विज्ञायते, इत्याह&ndash; परिस्पन्दक्रियाणाम् इति। परिस्पन्दः = शरीरव्यापारः, सा क्रिया येषां ते तथोक्ताः। अध्वनीत्यर्थग्रहणम् इति। अर्थप्रधानत्वन्निर्देशस्य, सप्तमीनिर्देशाच्च। यदीह स्वरूपग्रहणं स्यात् अनध्वनः इति कुर्यात्। आस्थितप्रतिषेधश्चायं {विज्ञेयः- काशिका।} विज्ञायते इति। येन देशविशेषेण प्राप्यं ग्रामादिकं प्राप्यते स देशविशेषो लोकेऽध्वेति रूढः। केन च प्राप्यं प्राप्यते? यः पन्था आक्रान्तस्तेन। तस्मात् तस्यैवायं प्रतिषेधः। यदा तु स एवोत्पथेन प्राप्यते तदा तस्य पथोऽध्वव्यपदेशो न भवतीति भवत्येव तत्र चतुर्थी।द्वितीयाग्रहणं किम्इति। कर्मणि कारके चतुर्थ्यां विकल्पितायां पक्षे न्यायप्राप्तैव द्वितीयेति भावः। तत् क्रियते बाधकबाधनार्थम्।अपवादविषयेऽपि यथा स्यात्` इति। अथार्थग्रहणं किमर्थम्, न गतिकर्मणीत्येवोच्येत, यावता गतिरर्थ एव?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.3/2.3.12.md">Edit 2.3.12!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.3.12";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.3.13\",\"Previous\":\"2.3.11\",\"अकारादिक्रमसङ्ख्या\":1264,\"कौमुदीक्रमसङ्ख्या\":585,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्वितीया\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गत्यर्थकर्मणि द्वितीयाचतुर्थ्यौ चेष्टायामनध्वनि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="यज याच रुच प्रवच ऋच इत्येतेषां ण्ये परतः कवर्गादेशो न भवति। यज याज्यम्। याच याच्यम्। रुच रोच्यम्। प्रवच प्रवाच्यम्। ऋच अर्च्यम्। ऋदुपधादपि ऋचेरत एव निपातनात् ण्यत् भवति। प्रवचग्रहणं शब्दसंज्ञार्थम्। प्रवाच्यो नाम पाठविशेषोपलक्षितो ग्रन्थो ऽस्ति। अपरे पुनराहुः, उपसर्गपूर्वस्य नियमार्थम्, प्रपूर्वस्य एव वचेरशब्दसंज्ञायां कुत्वप्रतिषेधो यथा स्यात्, अन्योपसर्गपूर्वस्य मा भूतिति। अविवाक्यमहः इति पठन्ति। एतत् तु विशेष एव इष्यते, दशरात्रस्य यद् दशममहः। अन्यत्र अविवाच्यम् एव भवति। ण्यति प्रतिषेधे त्यजेरुपसङ्ख्यानम्। त्याज्यम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-7.3/7.3.66.md">Edit 7.3.66!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.3.66";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.3.67\",\"Previous\":\"7.3.65\",\"अकारादिक्रमसङ्ख्या\":2815,\"कौमुदीक्रमसङ्ख्या\":2882,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"चजोः कुत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"विविधाः आदेशाः\",\"सूत्रम्‌\":\"यजयाचरुचप्रवचर्चश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

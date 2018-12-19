@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="गणपरिपठितेषुइत्यादि। भिदादयोऽङन्ता एव गणे पठ()न्ते, तेभ्योयदि पुनरिहाङ विहितः प्रातिपदिकेभ्यो विहितः स्यात्, तच्चायुक्तें स्यात्, धात्वधिकारात्,तस्माते तेषु याः प्रकृतयोऽवयवभूतास्ता निष्कृष्य पृथक्कृत्वा षिद्भिदादिभ्योऽङ् इति भिदादिग्रहणेन निर्दिश्यन्ते। ताः पुनः भिदिर् विदारणे (धा।पा।१४३९), छिदिर् द्वैधीकरणे (धा।पा।१४४०), विद ज्ञाने (धा।पा।१०६४), क्षिप प्रेरणे (धा।पा।१२८५), गुहू संवरणे (धा।पा।८९६), डुधाञ् धारणपोषणयोः (धा।पा।१०९२), {मिदृ मेधाहिंसनयोः-धा।पा।}{मेदृ सङ्गमे च।धा।पा।} मेधृ हिंसासंक्लेशनयोः(धा।पा।८६८,८६९),ऋ गतौ(धा।पा।१०९८),ह्मञ् हरणे(धा।पा।८९९)हुकृञ् करणे(धा।पा।१४७२),क्षि क्षये(धा।पा।२३६), अथवाक्षि निवासगत्योः(धा।पा।१४०७),तृ प्लवनतरणयोः(धा।पा।९६९),घृञ् धारणे(९००),लिख अक्षरविन्यासे(धा।पा।१३६५),चुद {सञ्चोदने-धा।पा।}समुच्छ्रये(धा।पा।१५९२), पीड अवगाहने (धा।पा।१५४४), डुवप {बीजतन्तुसन्ताने, छेदनेऽपि#ऋधा।पा।} बीजतन्तुसन्ताने (धा।पा।१००३), वस निवासे (धा।पा।१९४२), {मृजू-धा।पा।}मृजूष् शुद्धौ (धा।पा।१०६६),क्रप {कृपायां गत#औ च-धा।पा।} (धा।पा।७७१) इत्येते वेदितव्याः। यदि तर्हि प्रकृतयो निर्दिश्यन्ते भिदादीनां गणे पाठोऽनर्थकः?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.3/3.3.104.md">Edit 3.3.104!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.3.104";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.3.105\",\"Previous\":\"3.3.103\",\"अकारादिक्रमसङ्ख्या\":3497,\"कौमुदीक्रमसङ्ख्या\":3281,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"स्त्र्यां भावे अकर्तरि\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"षिद्भिदादिभ्योऽङ्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

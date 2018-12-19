@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="तपः कर्मकस्यैव इति। एवकारो विस्पष्टार्थः; व्यवच्छेदफलत्वात्, सर्ववाक्यानामित्येवं तदर्थस्य लब्धत्वात्। यदि ह्रतपःकर्मकस्यापि स्यात्, तपःकर्मग्रहणमनर्थकं स्यात्। नान्यकर्मकस्य इत्यवधारणेन यद्व्यवच्छिन्नं तद्दर्शयति। क्रियाभेदात् इति। क्रियाविसदृशत्वादित्यर्थः। पूर्वं हि क्रियासादृश्ये कर्मवद्भावो विहित इति वैसदृश्येन प्राप्नोति, अतो विध्यर्थमेतत्। अत एव कर्मस्थया क्रियया तुल्यत्वं न सम्भवतीति कर्मणा तुल्यक्रियः (3.1.87) इत्येतन्नानुवत्र्तते। उपवासादीनि इत्यादिना तमेव क्रियाभेदं दर्शयति। उपवासादिशब्देन तपः शब्दस्यार्थमाचष्टे। दुःखयन्तीत्यर्थः इत्यनेन तापसस्य कर्मावस्थायां तपेर्दुःखनमर्थ इति दर्शयति। स्वर्गाय तपस्तप्यते इति। तपःशब्दोऽत्र ज्ञानविषेय स्वर्गाद्यवाप्तिहेतौ वत्र्तते। अर्जयीत्यर्थःइत्यनेन तापसस्य कत्र्रवस्थायां तपिरर्जने वत्र्तत इति दर्शयति। निवत्र्तयतीत्यर्थ इति, न दुःखयतीति; तपसोऽचेतनत्वाद्दुःखासम्भवात्॥ उत्तपति सुवर्णम् इत्यादौ सुवर्णकर्मकत्वात् तपेः कर्मवद्भावो न भवति॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.1/3.1.88.md">Edit 3.1.88!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.1.88";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.1.89\",\"Previous\":\"3.1.87\",\"अकारादिक्रमसङ्ख्या\":1666,\"कौमुदीक्रमसङ्ख्या\":2771,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मवत्\",\"विषयः २\":\"विकरण-प्रत्ययाः\",\"विषयः ३\":\"धातोः प्रत्ययः परः च\",\"सूत्रम्‌\":\"तपस्तपःकर्मकस्यैव\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

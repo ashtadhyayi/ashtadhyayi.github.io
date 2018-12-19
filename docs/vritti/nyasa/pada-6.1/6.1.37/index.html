@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="वयेद्र्वौ यणौ, तत्र पूर्वण वकारस्य सम्प्रसारणप्रतिषेधे प्राप्ते यकारस्यानेन सम्प्रसारणं लिटि प्रतिषिद्ध्यते। तत्र प्रतिषिद्धे यकारः सम्प्रसारणभाग्न भवतीति वकारस्य सम्प्रसारणं भवति धातोरभ्यासस्य च; तत्र धातोग्र्रह्रादिसूत्रेण (6.1.16) अभ्यासस्य लिट()ब्यासस्योभयेषाम्() (6.1.17) इत्यनेन। अथ किमर्थं लिह्ग्रहणम्(), यावता वयेरादेशस्य लिटोऽन्यत्र सम्भवो नास्ति, तद्विधौ लिट()न्यतरस्याम्() (2.4.40) इत्यतो लिङ्ग्रहणानुवृत्तेः, तत्सामथ्र्यादेव लिटि भविष्यति? इत्यत आह&ndash;लिङ्ग्रहणमुत्तरार्थम्() इति। वेञः (6.1.39) इति प्रतिषेधो लिटि यथा स्यादित्येवमर्थं लिङ्ग्रहणम्()॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.37.md">Edit 6.1.37!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.1.37";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.1.38\",\"Previous\":\"6.1.36\",\"अकारादिक्रमसङ्ख्या\":2077,\"कौमुदीक्रमसङ्ख्या\":363,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रसारणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न सम्प्रसारणे सम्प्रसारणम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

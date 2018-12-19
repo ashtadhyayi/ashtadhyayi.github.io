@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="तनादिभ्यस्तथासोः। गातिस्तेत्यतः सिच इति, ण्यक्षत्रियार्षे त्यतो लुगिति, विभाषा घ्राधेडित्यतो विभाषेति चानुवर्तते। तदाह&mdash; तनादेरित्यादिना। एकवचनशब्दो गृह्यत इति। नतु लुङादेशपरस्मैपदमध्यमपुरुषबहुवचनतादेशोऽपीत्यर्थः। यूयमिति। लुङि मध्यमपुरुषबुहवचने सिचि वृद्धिविकल्पे सति अतनिष्ट अतानिष्टेत्यत्र सिचो नायं लुग्विकल्प इत्यर्थः। तदेवं प्रत्युदाहरममुक्त्तवा सूत्रस्योदाहरणं वक्ष्यन्प्रक्रियां दर्शयति&ndash; अनुदात्तोदेशेत्यनुसाकिलोपस्तङीति। तङि प्रथमैकवचने, तशब्दे मध्यमपुरुषैकवचने, तशब्दे मध्यमपुरुषैकवचने थासि च सिचो लुकि अनुदात्तोपदेसेति नकारस्य लोप इत्यर्थः। तदाह&ndash; अतत अतनिष्टेति। अतथाः अतनिष्ठा इति च। अतनिषातामित्यादि सुगमम्। षणु दाने। षोपदेशोऽयम्?। तनुवद्रूपाणि। असातेति। सिचो लुक्पक्षे रूपम्। असनिष्टेति। इट्। झलादिपरकत्वाऽभावादात्त्वं नेति भावः। क्षणुधातुरदुपधः। वज्रेऽध्वर्युः क्षण्वीतेति तैत्तिरीये। क्षिणु चेति। इदुपधः। अयमपि हिंसायमित्यर्थः। वज्रेऽध्वर्युः क्षिण्वीतेति शाखान्तरं शाबरभाष्ये उदाह्मतम्। ननु क्षिणोतीत्यत्र उप्रत्ययमाश्रित्य इकारस्य लघूपधगुणः कस्मान्नेत्यत आह&ndash; उप्रत्ययनिमित्त इति। ऋणु गतौ। अत्रापि क्षिणुवन्मतभेदाल्लघूपधगुणतदभावौ। तदाह &ndash; ऋणोति अर्मोतीति।एवमग्रेऽपि। अर्ण्वन्तीति। इको यणचीति यणिति भावः। डु कृञ् करणे। करोतीति। उप्रत्यमाश्रित्य ऋकारस्य गुणः। रपरत्वम्। उकारस्य तु तिपमाश्रित्यगुणः। कुरुत इति। तसो ङित्त्वादुकारस्य न गुणः। रकुरु अन्तीति स्थिते आह&ndash; यणिति। इको यणचीत्यनेनेति शेषः। उकारस्य यणि कुर्व् अन्ति इति स्थिते हलि चेति दीर्घमाशङ्क्याह&ndash; नभेति। वसि मसि च लोपस्चास्यान्यतरस्यामित्युकारलोपविकल्पे प्राप्ते &ndash; नित्यं करोतेः। उतश्च प्रत्ययादित्यनुवर्तते, लोपश्चास्यान्यतरस्यामित्यतो लोपः, म्वोरिति च। तदाह- - करोतेरिति। चकर्थेति। कृ?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.4/2.4.79.md">Edit 2.4.79!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.79";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.80\",\"Previous\":\"2.4.78\",\"अकारादिक्रमसङ्ख्या\":1658,\"कौमुदीक्रमसङ्ख्या\":2547,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुक्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तनादिभ्यस्तथासोः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

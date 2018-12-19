@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पतिः समास एव। एवकार इष्टतोऽवधारणार्थः। अन्यथा हि समासे पतिरेवेति नियमः संभाव्येत्, ततश्च महाकविनेत्यादिप्रयोगो न सिध्यते। अनल्विधौ, धात्वादेरित्यादिज्ञापकानुसरणे तु प्रतिपत्तिगौरवं स्यादिति भावः। पत्येत्यादि। नन्वेवं शेषो ध्यसखिपतीइत्येवोच्यतां, किमनेन पतिः समास एवेति सूत्रेणेति चेन्न; समुदायस्य पतिरूपत्वाऽभावने बहुच्पूर्वकपतिशब्दस्यापि घिसंज्ञा स्यात्। ततश्च सुसखिनेत्यादिवद्बहुपतिनेत्यादिवब्दहुपतिनेत्यादि प्रसज्येत, इष्यते तु वहुपत्येत्यादि। नापि सखिपती समास एवे त्येवसूत्र्यतामिति शङ्क्यम्, बहुपत्येत्यादिवद्बहुसख्येत्याद्यापत्तेः, इष्यते तु बहुसखिनेत्यादि। अथ कथं सीतायाःपतये नमःइति, नष्टे मृते प्रव्रजिते क्लीबे इः इत्यौणादिक इप्रत्यये णेरनिटीति णिलोपे च निष्पन्नोऽयं पतिशब्दः पतिः समास एव इत्यत्र न गृह्यते, लाक्षणिकत्वादिति। एतेन कृष्णस्य सखिर्जुनःइति भारतम्, सखिना वानरेन्द्रेणेति रामायणं च व्याख्यातम्। कति शब्द इति। का सङ्ख्या येषां ते कति। किमः सङ्ख्यापरिमाणे डति च इति डतौ डित्त्वाट्टिलोपः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.4/1.4.8.md">Edit 1.4.8!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.8";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.9\",\"Previous\":\"1.4.7\",\"अकारादिक्रमसङ्ख्या\":2269,\"कौमुदीक्रमसङ्ख्या\":257,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":205,\"विषयः १\":\"घि\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पतिः समास एव\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="भव्यगेय। कर्तरि वेति। कर्तरि कृदित्यतः कर्तरीत्यनुवृत्तं वेत्यनेन संबध्यते। तथा च कर्तरि वा एते निपात्यन्ते। अन्यत्र नेति फलति। तत्र अन्यत्रेत्यस्याऽनिर्धारणादाह&ndash; पक्षे इति। अन्यत्रापि न सर्वत्र, किंतु तयोरेव कृत्यक्तखलर्थाः इति सूत्रेण सकर्मकात्कर्मणि, अकर्मकाद्भावे एते कृत्या ज्ञेया इत्यर्थः। तयोरेव कृत्येति सूत्रे लः कर्मणि चेत्यस्मात्सकर्मकेभ्यः कर्मणि अकर्मकेभ्यो भाव इत्यनुवर्तते इति भावः। भव्य इति। कर्तरि अचो यत्। भव्यमनेन वेति। भावे यत्।गेयः साम्नामयमित। गाधातोः कर्तरि यत्। ईद्यतीति प्रकृतेरीत्त्वम्। गुणः। साम्नां कर्मणामनभिहितत्वात्कृद्योगे षष्ठी। कर्तुरभिहितत्वात्प्रथमा। गेयं सामाऽनेनेति। कर्मणि यत्, सकर्मकत्वात्, नतु भावे, कर्तुरनभिहितत्वात्तृतीया। कृद्योगषष्टी तु कृत्ययोगे कर्तरि वैकल्पिकी, कृत्यानां कर्तरि वा इत्युक्तेः। इत्यादीति। प्रवचनीयो गुरुर्वेदस्य। प्रवक्तेत्यर्थः। कर्तरि अनीयर्। प्रवचनीयो वेदो गुरुणेति वा। उपस्थानीयः शिष्यो गुरोः, उपस्थानीयो गुरुः शिष्येणेति वा। जन्योऽसौ। जायते इत्यर्थः। जन्यमनेनेति वा। आप्लवतेऽसौ आप्लाव्यः। ओरावश्यके इति कर्तरि ण्यत्। आप्लाव्यमनेनेति वा। आपतत्यसौ आपात्यः।ऋहलोरिति कर्तरि ण्यत्।आपात्यमनेन वा।शकि लिङ् चेत्यपि व्याख्यातं प्राक् विशेषविवक्षया सूत्रक्रमादिहोपन्यस्तम्। नन्विह चकारानुकृष्टकृत्यविधिर्व्यर्थः, शक्तौ अशक्तौ च भावकर्मणोः सामान्यतः कृत्यविदित एव शक्तावपि सिद्धेरित्यत आह-- लिङा बाधेति।शकि लिङित्येतावत्येवोक्ते शक्तौ विशेषविहितेन लिङा कृत्यानां बाधः स्यात्, अशक्तौ कृत्यानां चरितार्थत्वात्। वासरूपविधिस्तु स्त्र्यधिकारादूर्ध्वं नेत्युक्तमेवेति भावः। लाघवादिति। इह चकारमात्रेण वासरूपविधेः स्त्र्यधिकारादूर्ध्वमनित्यताज्ञापनं संभवति, अतःप्रैषातिसर्गेति सूत्रे कृत्यग्रहणेनअर्हे कृत्यतृचश्चे`त्यत्र कृत्यतृज्ग्रहणेन च तज्ज्ञापनाश्रयणे गौरवमिति भावः। इति कृत्यप्रक्रिया।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.4/3.4.68.md">Edit 3.4.68!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.4.68";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.4.69\",\"Previous\":\"3.4.67\",\"अकारादिक्रमसङ्ख्या\":2654,\"कौमुदीक्रमसङ्ख्या\":2894,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लकार-कृत्-अर्थाः\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"भव्यगेयप्रवचनीयोपस्थानीयजन्याप्लाव्यापात्या वा\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="स्वाङ्गाच् च उपसर्जनातित्येव। बह्वज्लक्षणे संयोगोपधलक्षणे च प्रतिषेधे प्राप्ते वचनम्। सहनञ्विद्यमानलक्षणस् तु प्रतिषेधो भवत्येव। नासिकाऽअद्यन्तात् प्रातिपदिकात् स्त्रियां वा ङीष् प्रत्ययो भवति। तुङ्गनासिकी, तुङ्गनासिका। तिलोदरी, तिलोदरा। बम्बोष्ठी, बम्बोष्ठा। दीर्घजङ्घी, दीर्घजङ्घा। समदन्ती, समदन्ता। चारुकर्णी, चारुकर्णा। तीक्षणशृङ्गी, तीक्ष्णशृङ्गा। पुच्छाच् च इति वक्तवय्म्। कल्याणपुच्छी, कल्याणपुच्छा। कबरमणिविषशरेभ्यो नित्यम्। कबरपुच्छी। मणिपुच्छी। विषयुच्छी। शरपुच्छी। उपमानात् पक्षाच् च पुच्छात् च। उलूकपक्षीसेना। उलूकपुच्छी शाला।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-4.1/4.1.55.md">Edit 4.1.55!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.1.55";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.1.56\",\"Previous\":\"4.1.54\",\"अकारादिक्रमसङ्ख्या\":2164,\"कौमुदीक्रमसङ्ख्या\":511,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नासिकोदरौष्ठजङ्घादन्तकर्णशृङ्गाच्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

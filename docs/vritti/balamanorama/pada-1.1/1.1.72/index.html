@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="यच्छब्दस्वरूपमुपादाय यो विधिरारभ्यते स तस्य तदन्तस्य च भवतीत्येतद्वक्तुमाह-येन विधिः। विधीयत इति विधिः। उपसर्गे घोः किरिति धाधातोर्भावे किप्रत्ययः। येनेति करणे तृतीया। शास्त्राकृद्विधाने कर्ता। धातोरित्यधिकृत्य #एरजिति इकारेण करणेन धातोरच्प्रत्ययं विधत्ते पाणिनिः। करणं च व्यापारवत्। एरजित्यत्र विशेषणस्य इकारस्य पाणिनिकर्तृकविधानक्रियायां करणस्य इतरव्यावर्तनमेव व्यापारः। ततश्च विशेषणमेवात्र येनेति तृतीयान्तेनोच्यते। स्वं रूपमित्यतः स्वमित्यनुवर्तते षष्ठ�न्ततया च विपरिणम्यते। एवं च विशेषणसमर्पकः शब्दस्तदन्तस्य स्वस्य च प्रत्यायक इति फलति। तदाह&ndash;विशेषणमित्यादि। विशेषणसमर्पकः शब्दस्तदन्तस्य शब्दस्य, विशेषण समर्पकशब्दस्य च बोधकः स्यादिति यावत्। ततश्च एरजित्यत्र इकारान्ताद्धातोरच्प्रत्ययः स्यात्, इकाररूपाद्धातोश्चेति फलति। यथा-चयः, अयः। केचित्तु करणं कर्तृपरतन्त्रमिति तृतीयया पारतन्त्र्यं लक्ष्यते, तच्च शब्दानां विशेषणत्वेनेति विशेषणपरत्वं यच्छब्दस्य लभ्यत इत्याहुः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.1/1.1.72.md">Edit 1.1.72!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.1.72";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.1.73\",\"Previous\":\"1.1.71\",\"अकारादिक्रमसङ्ख्या\":2890,\"कौमुदीक्रमसङ्ख्या\":26,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्याहारः \\nतदन्तग्राहकसूत्रम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"येन विधिस्तदन्तस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

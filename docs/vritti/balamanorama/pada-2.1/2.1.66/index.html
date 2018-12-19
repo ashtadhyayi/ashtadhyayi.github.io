@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="प्रशंसावचनैश्च। एतैरिति। रूढ�आ प्रशंसावाचकैरित्यर्थः। जातिरिति। पोटायुवतीत्यतस्तदनुवृत्तेरिति भावः। प्राग्वदिति। समानाधिकरणैः समस्यते स तत्पुरुष इत्यर्थः। जातेः पूर्वंनिपातनियमार्थं सूत्रम्। गोमतल्लिकेति। मतल्लिका चासौ गौश्चेति विग्रहः। गोमचर्चिकेति। मचर्चिका चासौ गौश्चेति विग्रहः। गोप्रकाण्डमिति। प्रकाण्डं चासौ गौश्चेति विग्रहः। गवोद्ध इति। उद्धश्चासौ गोश्चेति विग्रहः। अवङ् स्फोटायनस्य आद्गुणः। गोतल्लज इति। तल्लजश्चासौ गौश्चेति विग्रहः। सर्वत्र परवल्लिङ्गता। मतल्लिकादिशब्दानमप्रसिद्धत्वाद्व्याचष्टे&ndash;प्रशस्ता गौरित्यर्थ इति। गोशब्दस्य स्त्रीलिङ्गत्वाभिप्रायात्प्रशस्तेति स्त्रीलिङ्गनिर्देशः। गोशब्दस्य पुंलिङगत्वे तु प्रशस्त इति पाठ�म्। ननु गोशब्दस्य पुंलिङ्गत्वे मतल्लिकामचर्चिकाप्रकाण्डशब्दानामपि विशेष्यनिग्नत्वात्पुंलिङ्गतापत्तिः। गोशब्दस्य स्त्रीलिङ्गत्वे तु प्रकाण्डोद्धतल्लजानामपि स्त्रीलिङ्गतापत्तिश्चेत्यत आह&ndash;मतल्लिकादय इति। मतल्लिका मचर्चिका प्रकाण्डमुद्धतल्लजौ। प्रशस्तवाचकान्यमूनीत्यमरः। कुमारी मतल्लिकेति। अवस्थाविशेषात्मकवयोविशेषवाचित्वान्न जातिवाची कुमारीशब्द इति न समासः। समासे तु पुंवत्कर्मधारयेति पुंवत्त्वं स्यादिति भावः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.1/2.1.66.md">Edit 2.1.66!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.66";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.67\",\"Previous\":\"2.1.65\",\"अकारादिक्रमसङ्ख्या\":2504,\"कौमुदीक्रमसङ्ख्या\":744,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"प्रशंसावचनैश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

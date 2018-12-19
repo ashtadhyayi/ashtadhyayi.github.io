@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="तृतीया। नाव्ययीभावादित्यस्मादत इत्यनुवर्तते, तदाह&ndash;अदन्तादिति। अमादेशाऽभावे तु नाव्ययीभावादित्यलुक्। ननु वेति सिद्धे किं बहुलग्रहणेनेत्यत आह&ndash;बहुलग्रहणादिति। तदेवमव्ययमिति योगं विभज्य व्याख्याय तदुत्तरखण्डं व्याख्यातुमुपक्रमते-विभक्तीत्यादेरयमर्थ इति। विभक्तीत्यनेन विभक्त्यर्थो विवक्षितः। उच्यन्त इति वचनाः। कर्मणि ल्युट्। विभक्ति-समीप समृद्धि-व्यृद्धि-अर्था-ऽभावाऽत्यया-ऽसंप्रति-शब्दप्रादुर्भाव-पश्चात्-यथा-ऽऽनुपूर्व्य-यौगपद्य-सादृश्य-संपत्ति-साकल्य-अन्त--एतेषां षोडशानां द्वन्द्वः। ते च ते वचनाश्चेति विग्रहः। विभक्त्यर्थादिषु वाच्ये�इआत्यर्थः।अव्ययमित्यनुवर्तते।अव्ययीभावःसमासइति चाधिकृतं। तदाह--विभक्त्यर्थादिष्विति। विभक्तौ तावदिति। विभक्त्यर्थे प्रथममुदाह्रियत इत्यर्थः। हरौ इत्यधिहरीति। हरौ इति लौकिकविग्रहः। तेन यावदवगम्यते तावदेवाधिहरीति समासेनाप्युच्यत इत्यर्थः। अधिशब्दस्य हरावित्यनेन अव्ययीभावसमासे सुब्लुकि समासविधावव्ययमिति प्रथमानिर्दिष्टत्वादधेः पूर्वनिपाते समासादुत्पन्नस्य सुपःअव्ययादाप्सुपःइति लुगिति भावः। ननु लौकिकविग्रहे समस्यमान#ओऽधिशब्दः कुतो नोपात्त इत्यत आह--सप्तम्यर्थस्यैवात्रेति। तथाचाऽधिद्योत्यार्थस्याऽधिकरणत्वस्य सप्तम्यैव उक्तत्वादधिशब्दो न पृथगुपात्तः, नित्यसमासताया वक्ष्यमाणत्वेन स्वपदविग्रहानोचित्नादिति भावः। ननु हरौ इति परिनिष्ठितसन्धिकार्यस्य समासे सतिऔइत्यस्य सुपो लुकि समासे रेफादिकारः कुतः श्रूयेतेत्यत आह-हरि ङि इति। संधिकार्यात्प्रागलौकिकविग्रहवाक्य एव समासप्रवृत्तेःप्रत्ययोत्तरपदयोश्चेति भाष्यसंमतत्वादिति भावः। यथा चैत्तथाभूतंपूर्वइत्यत्रानुपदमेवोक्तम्। नन्वधिना निपातेनाकरणत्वस्योक्तत्वात् कथं हराविति सप्तमीत्यत आह-अत्र निपातेनेति। वचनेति। सुप्तेयनुवर्त्त्य सुबन्तेनाऽत्र समासविधिसामर्थ्यात् सप्तमी स्यादेवेति भावः। वस्तुतस्तु अनभिहितसूत्रभाष्ये तिङ्कृत्तद्धितसमासैरित्येव परिगणमनं दृष्टम्। अतो निपातेनाऽधिना अभिहितेऽप्यधिकरणत्वे सप्तमी निर्बाधा।विषवृक्षोऽपि संबर्ध्य स्वयं छेत्तुमसांप्रतमित्यत्र तुएष्टव्यइत्यध्याहार्यम्। कृताऽभिधानाद्विषवृक्षाद्द्वितीया न भवति। नच कृत्तद्धितसमासैरिति परिगणनं भाष्ये प्रत्याख्यातमिति वाच्यम्,कटं करोति भीष्ममुदारं दर्शनीय`मित्यत्र परिगणनफलस्याऽन्यथासिद्धेरेव तत्रोक्तत्वादित्यास्तां तावत्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.4/2.4.84.md">Edit 2.4.84!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.84";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.85\",\"Previous\":\"2.4.83\",\"अकारादिक्रमसङ्ख्या\":1774,\"कौमुदीक्रमसङ्ख्या\":658,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुक्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तृतीयासप्तम्योर्बहुलम्‌\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

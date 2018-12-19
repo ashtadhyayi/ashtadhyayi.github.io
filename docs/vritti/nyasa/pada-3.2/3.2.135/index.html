@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="मुण्डयितारः इति। मुण्डां कुर्वन्तीति मुण्डमिश्र (3.1.21) इत्यादिना णिच्, इष्ठवद्भावेन टिलोपः। {मुण्डयितारः श्राविष्ठायना भवन्ति बधूमूढाम्&ndash;काशिका।} वधूमूढां श्राविष्ठायना मुण्डयन्तिइति। एतेषां कुलधर्मः।आह्वरकाः श्राद्धे सिद्धेऽन्नमपहरन्तिइति। एतेषामाचारः। यः कटं साधु करोतीति स कत्र्ता कटमिति। खेटं यो लीलया गच्छति स साधु गच्छति। तृन्विधौइत्यादि। अताच्छील्यार्थ आरम्भः। अ()स्मस्तृन्विधावनुपसर्गस्य धातोस्तृन् वक्तव्य ऋत्विक्ष्वभिधेयेषु।होताइति।हु {दानादनयोः। आदाने इत्येके।प्रीणनेऽपि इति भाष्यम्&ndash; धा।पा।} दाने(धा।पा।१०८३)।पोताइति।पूङ पवने(धा।पा।९६६)।उद्गाताइति।कै गै शब्दे(धा।पा।९१६,९१७)।स्वरे विक्षेषःइति। तृचि सतिगतिकारकोपपदात् कृत्(6.2.138) इति प्रकृतिस्वरेणान्तोदात्तत्वं भवति, तृनि तु सतिगतिरनन्तरः(6.2.49) इत्यनुवत्र्तमाने तादौ च निति कृत्यतौ (6.2.49) इति पूर्ववदस्य प्रकृतिस्वरः प्रसज्येत। नयतेः षुक् च इति। कृते गुणे षुगागमो वेदितव्यः; अन्यथा ह्रलघूपधत्वाद्()गुणो न स्यात्। गुणोऽपि वा वक्तव्यः। अत्र ऋत्विगिति वत्र्तते। अयमप्यताच्छील्यार्थ आरम्भः। त्विषेःट इत्यादि।त्विष दीप्तौ(धा।पा।१००१) इत्यस्माद्देवतायामभिधेयां तृन् वक्तव्यः, अकारश्चोपधाया आदेशो भवति।अनिट्()त्वं चइति। एतस्य सर्वशेषत्वे चास्य पोतेत्यत्रानिट्()त्वं सिद्धं भवति। क्षदेःइत्यादि।क्षदइति सौत्रो धातुः।गुधृवीपचिवयियमिसदि क्षदिभ्यस्त्रः(पं।उ।४।१६६) इत्याद्युणादिसूत्रपाठात्। उणादिषु निपातितत्वात् होत्रादय इति सिद्धम्। तत्र हिनप्तृनेष्टृत्वष्टृक्षतृपोतृहोतृभ्रातृजामातृपितृदुहितृ` (द।उ।२।३।) इत्येते निपातिताः॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.135.md">Edit 3.2.135!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.2.135";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.2.136\",\"Previous\":\"3.2.134\",\"अकारादिक्रमसङ्ख्या\":1776,\"कौमुदीक्रमसङ्ख्या\":3115,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृन्\",\"विषयः २\":\"वर्तमाने ताच्छील्य-अर्थ-अधिकारः\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"तृन्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

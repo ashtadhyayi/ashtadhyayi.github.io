@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="संहितायाम् इति वर्तते। मत्वन्तस्य वस्वन्तस्य च पदस्य रुः इत्ययम् आदेशो भवति सम्बुद्धौ परतः छन्दसि विषये। मत्वन्तस्य तावत् इन्द्र मरुत्व इह पाहि सोमम्। हरिवो मेदिनं त्वा। मरुतो ऽस्य सन्ति, हरयो ऽस्य सन्ति इति मतुप्। सुप्तकारयोः हल्ङ्यादिलोपे संयोगान्तस्य लोपे च कृते नकारस्य रुः भवति। वस्वन्तस्य खल्वपि मीढ्वस्तोकाय तनयाय मृल। इन्द्र साह्वः। क्वसोर् निपातनम् दाश्वान्साह्वान्मीढ्वांश्च इति। मतुवसोः इति किम्? ब्रह्मन् स्तोष्यामः। सम्बुद्धौ इति किम्? य एवं विद्वानग्निम् उपतिष्ठते। छन्दसि इति किम्? हे गोमन्। हे पपिवन्। वन उपसङ्ख्यानं कर्तव्यम्। यस्त्वायन्तं वसुना प्रातरित्वः। इणः प्रातःपूर्वस्य छन्दसि क्वनिप्। विभाषा भवद्भगवदघवतामोच्चावस्य। छन्दसि भाषायां च भवत् भगवतघवतित्येतेषां विभाष रुः वक्तव्यः, अवशब्दस्य च ओकारादेशः। सामान्येन छन्दसि भाषायां च इदं वचनम्। भवत् हे भोः, हे भवन्। भगवत् हे भगोः, हे भगवन्। अघवन् हे अघोः, हे अघवन्। निपातनविज्ञानाद् वा सिद्धम्। अथ वा भो इत्येवम् आदयो निपाता द्रष्टव्याः। असम्बुद्धौ अपि द्विवचनबहुवचनयोरपि दृश्यन्ते। भो देवदत्तयज्ञदत्तौ। भो देवदत्तयज्ञदत्तविष्णुमित्राः। तथा स्त्रियाम् अपि च दृश्यन्ते, भो ब्राह्मणि इत्यादि। संहिताधिकार उत्तरत्र उपयुज्यते, यत्र भिन्नपदस्थौ निमित्तनिमित्तिनौ नश्छव्यप्रशान् (*8,3."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.3/8.3.1.md">Edit 8.3.1!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.1";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.2\",\"Previous\":\"8.2.108\",\"अकारादिक्रमसङ्ख्या\":2715,\"कौमुदीक्रमसङ्ख्या\":3628,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"रु\",\"सूत्रम्‌\":\"मतुवसो रु सम्बुद्धौ छन्दसि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

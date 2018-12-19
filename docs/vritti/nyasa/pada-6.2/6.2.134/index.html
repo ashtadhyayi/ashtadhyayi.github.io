@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="चेलखेटकटुककाण्डम्() (६।२।१२६) इत्यादिषु चतुर्षु योगेषु सन्निविष्टानि काण्डादीनि षट्? गृह्रन्ते। यद्येवं तैरेव योगैरेषामाद्युदात्तत्वं सिद्धम्(), तत्किमर्थमिदम्()? यत्र तैर्विहित ततोऽन्यत्रापि यथा स्यात्? प्राणिषष्ठ()आश्च मा भूदित्येवमर्थञ्च। दर्भकाण्डम्() इति। दृ()दलिभ्यां भः (पं।उ।३।१५१) इति भप्रत्ययान्तो दर्भशब्दोऽन्तोदात्तः। तृणधान्यानाञ्च द्व्यषाम्() (फि।सू।२।२७) इति वा। शरकाण्डम्() इति। शरशब्दोऽप्यनन्तरेणैव द्व्यषाम्() इत्याद्युदात्तः। एवं कुशशब्दोऽपि। तथा तिलशब्दोऽपि। पललमूलकशब्दावुक्तस्वरौ। नदडति पचादिषु पठ()ते, तेन टित्त्वान्नदशब्दान्ङीप्? यस्येति च (6.4.148) इत्यकारलोपः, अनुदात्तस्य च यत्रोदात्तलोपः (6.1.155) इति ङीप उदात्तत्वम्()। तेन नदीशब्दोऽन्तोदात्तः। पाटलापालङ्काम्बासागरार्थानाम्() (फि।सू।१।२) इति फिषा समुद्रशब्दोऽन्तोदात्तः। राजसूदः इति। शूदशब्दः षङ्भ्यः परः पठ()ते। तेनात्र समासान्तोदात्तत्वमेव भवति। सर्वे च ते दर्भकाण्डादयः षष्ठीसमासाः॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.134.md">Edit 6.2.134!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.2.134";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.2.135\",\"Previous\":\"6.2.133\",\"अकारादिक्रमसङ्ख्या\":1427,\"कौमुदीक्रमसङ्ख्या\":3868,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"चूर्णादीन्यप्राणिषष्ठ्याः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="ङमो ह्रस्वात्। ङम् प्रत्याहारः, संज्ञायां च कृतं टित्त्वं सामर्थ्यात्संज्ञिभिः संबध्यते। तेन यथासङ्ख्यं ङुट्-णुट्-नुटः प्रवर्तन्ते। नित्यग्रहणं विस्पष्टार्थं, हे मपरे इति मय उञो वेति च विकल्पद्वयस्य मध्ये पाठादेव नित्यत्व लाभात्। नन्विह नित्यग्रहणाऽभावे हे मपरे वेति वाग्रहणमुत्तरसूत्रेषु पञ्चस्वप्यनुवर्तते वा न वेति शङ्का स्यादिति चेत्सत्यम्। अतएव विस्पष्टार्थमित्युक्तं न तु व्यर्थमिति। तस्मात्परस्याऽच इति। ननु ङम इत्यस्य षष्ठ�न्ततामाश्रित्याऽचि परे पूर्वस्यैव विधीयतां को दोष इति चेन्मैवम्, तथाहि सति ङमन्तस्य पदस्य पूर्वावयवः स्यादित्यनिष्टं प्रसज्येत। पदस्य यो ङम् तस्येति वैयधिकरण्येन व्याख्यायामपि कुर्वन्नास्ते इत्यत्र णत्वं प्रसज्येत, पदान्तस्येति निषेधस्याऽप्रवृत्तेः। यद्यपि बहिरङ्गपरिभाषया ङमुड्विधेरसिद्धत्वादिष्टं सिध्यति, तथापि यथोद्देशपक्षे त्रैपादिकेऽन्तरङ्गे बहिरङ्गपरिभाषाया अप्रवृत्तेः प्रसज्यत एव णत्वमिति यथोक्तव्याख्यानमेव सांध्विति दिक्। सुगण्णीश इति। ण्यल्लोपौ न स्थानिवत्, पूर्वत्रासिद्धे तन्निषेधात्। ननु परमदण्डिनावित्यादावन्तर्वर्तिविभक्तया पदत्वान्नुट् स्यादिति चेन्न; उत्तरपदत्वे चापदादिविधौ इति प्रत्ययलक्षणप्रतिषेधात्। अतएव परमवाचौ&rsquo; परमगौदुहौ परमलिहावित्यादौ कुत्वघत्वनत्वादीनि न। प्राचा तु उञि च पदे इत्यतः पदे इत्यनुवर्त्त्य अजादेः पदस्येति व्याख्यानान्ङमुण्नेत्युक्तं, तदनेन प्रत्युक्तम्। इहैव नलोपं वारयितुमुक्तरीतेरेव तेनाऽप्यनुसर्तव्यत्वात्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-8.3/8.3.32.md">Edit 8.3.32!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.32";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.33\",\"Previous\":\"8.3.31\",\"अकारादिक्रमसङ्ख्या\":1368,\"कौमुदीक्रमसङ्ख्या\":134,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":107,\"विषयः १\":\"कुक् टुक् धुक् तुक् ङमुट्\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"ङमो ह्रस्वादचि ङमुण्नित्यम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

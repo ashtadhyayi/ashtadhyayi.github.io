@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पूर्वं प्रकृत्यर्थगतयोर्लिङ्गसंख्ययोर्लुबर्थेऽतिधेशात् तद्विशेषणानामपि रमणीयादीनां व्यक्तिवचनातिदेशः सिद्ध एव। यद्यपि भिन्नं विशेषणानां प्रवृत्तिनिमित्तम्; तथापि तेन भिन्नेनापि तत्र प्रवत्र्तमानानां स एव लुबर्थोऽतिदिष्टव्यक्तिवचनस्तेषामभिधेयः, तस्मात् तद्गतेनैव लिङ्गसंख्याभिधाने सिद्धे जातिप्रतिषेधार्थमिदं वचनम्। गोदौरमणीयौ इति। गोदौ नाम ह्यदौ, तयोरदूरभवो ग्राम इत्यर्थेऽण्। वरणादिभ्यश्च (4.2.81) इति लुप् तस्य। पञ्चालाः जनपदः। गोदौ ग्रामःइति। जनपदग्रामशब्दौ जातिवचनौ। ताभ्यां जातिनिमत्ताभ्यां स एव लुबर्थो जातिरूपेणोच्यत इति तयोरपि व्यक्तवचने युक्तवत् स्याताम्। ततो जातेः इति प्रतिषेधः। जात्यर्थस्य इत्यादि। जातिशब्दस्यार्थो जात्यर्थः, तस्यायम् अजातेः इति युक्तवद्भावप्रतिषेधः, न जातिशब्दस्यैवेत्यर्थः। किमेव सति सिद्धं भवतीत्यत आह- तेन इत्यादि। अर्थस्य युक्तवद्भावप्रतिषेधे सति यथा जातिशब्दस्य तत्रार्थे वत्र्तमानस्य तदीये लिङ्गसंख्ये न भवतः, तथा तद्विशेषणानामपि युक्तवद्भावो न बह्वन्न इत्यादौ न स्यात्, रमणीयादीनामजातिशब्दत्वात्। द्वारग्रहणं लुबर्थे जातिशब्द्स्य प्रवृत्तत्वात्, लुबर्थे जातिविशेषणानां साक्षादप्रवृत्तेः। तानि हि साक्षाज्जातिमेव विशेषयन्ति। तस्यां तु विशेषितायां लुबर्थोऽपि विशिष्ट एव प्रतीयत इति जातिद्वारेण तस्य तानि विशेषणानि भवन्ति। मनुष्यलुपि इति। मनुष्यलक्षणो यो लुप् तस्य विशेषणानां युक्तवद्भावप्रतिषेध इति। स च विभाषाग्रहणानुवृत्तेव्र्यवस्थितविभाषाविज्ञानाल्लभ्यते। चञ्चाभिरूपः इति। चञ्चेव मनुष्यश्चञ्चा&ndash; इवे प्रतिकृतौ (5."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.52.md">Edit 1.2.52!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.52";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.53\",\"Previous\":\"1.2.51\",\"अकारादिक्रमसङ्ख्या\":3266,\"कौमुदीक्रमसङ्ख्या\":1300,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुपि युक्तवद्भावः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"विशेषणानां चाजातेः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

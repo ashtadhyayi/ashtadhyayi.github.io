@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="प्र-अन्च् इति स्थिते&ndash;अनिदिताम्। अङ्गस्येत्यधिकृतं बहुवचनेन विपरिणम्यते। हल इति तद्विशेषणम्। तदन्तविधिः। अनिदितामित्यपि तद्विशेषणम्। इत्=ह्रस्व इकारः, इत्=इत्संक्षको येषां तानि इदिन्ति, न इदिन्ति, अनिदिन्ति, तेषामिति विग्रहः। अवयवषष्ठ�न्तमेततदुपधाया इत्यत्रान्वेति। उपधाया इत्यप्यवयवषष्ठ�न्तम्। तश्च श्नान्न लोपः इत्यतो नेत्यनुवृत्ते लुप्तषष्ठीके अन्वेति। क् च ङ् च क्ङौ, तौ इतौ यस्येति विग्रहः। तदाह&ndash;हलन्तानामित्यादिना। इति चकारात्पूर्वस्य नकारस्य लोपः। प्र अच् प्राच् इति स्थितम्। तस्मात्सुबुत्पत्तिः। सुटि विशेषमाह&ndash;उगिदचामिति नुमिति। सौ विशेषमाह&ndash;संयोगान्तस्य लोप इति। हल्ङ्यादिना सुलोपे सतीति शेषः। कुत्वेन ङकार इति। नासिकास्थानसाम्यादिति भावः। अनुस्वारपरसवर्णाविति। प्राच् औ इति स्थिते-अचः। अच इत्यन्चुधातोः अनिदितामिति लुप्तनकारस्यानुस्वार। अनुस्वारस्य यीति तस्य परसवर्णो ञकारः। नस्य श्चुत्वं तु न भवति, अनुस्वारं प्रति तस्याऽसिद्धत्वादित्यर्थः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.24.md">Edit 6.4.24!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.4.24";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.4.25\",\"Previous\":\"6.4.23\",\"अकारादिक्रमसङ्ख्या\":184,\"कौमुदीक्रमसङ्ख्या\":415,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"न-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"अनिदितां हल उपधायाः क्ङिति\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

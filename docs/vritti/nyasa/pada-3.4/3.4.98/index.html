@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="करवाव इति। लेटोऽडाटौ (3.4.94) इत्याट्। उत्तमग्रहणम् इत्यादि। यदि तर्हि पुरुषान्तरे मा भूदित्येवमर्थमुत्तमग्रहणं क्रियते? न ; वस्मस्ग्रहणमेव कत्र्तव्यम्, अत्राप्ययमर्थः&ndash; सकारग्रहणं कर्तव्यं न भवति, अलोऽन्त्यपरिभाषयैव सकालोपो भवति? अशक्यं वस्मस्ग्रहणं कर्त्तुम्; तस्मिन् सति यदा व्यत्यनेन पुरुषान्तरस्य स्थाने तौ भवतस्तदापि लोपः स्यात्, यदा चोत्तमपुरुषस्य स्थाने थस् क्रियते तदा लोपो न स्यात्। उत्तमग्रहणे सत्येव दोषो न भवति स्थानिवद्भावेन मध्यमोत्तमसंज्ञयोर्भवन्त्योरेकसंज्ञाधिकारादसति समावेश उत्तमसंज्ञया मध्यमसंज्ञाया निवृत्तिः। सकारग्रहणञ्च यदि न क्रियेत, तदोत्तमस्य व्यत्ययेन वचनान्तरेषु कृतेषु वर्णान्तरस्यापि लोपः स्यात्। तस्माद्यथान्यासमेवास्तु॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.4/3.4.98.md">Edit 3.4.98!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.4.98";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.4.99\",\"Previous\":\"3.4.97\",\"अकारादिक्रमसङ्ख्या\":3502,\"कौमुदीक्रमसङ्ख्या\":3428,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"स उत्तमस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

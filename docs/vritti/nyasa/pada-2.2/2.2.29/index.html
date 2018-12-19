@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="कः पुनरयं चार्थो नामेत्याह&ndash; समुच्चयाऽन्वाचय इत्यादि। समुच्चितिः = समुच्चयः। साधनमेकं क्रियां वा प्रति क्रियासाधनानामात्मरूपभेदनेन चीयमानताऽनेकत्वमिति यावत्। स पुनस्तुल्यबलानामनियतक्रमयोगपद्यानामेव भवति, यथा&ndash; गाम()आं पुरुषं पशुञ्चाहरहर्नयमानो वैवस्वतस्तृ()प्त नोपयातीति। अन्वाचयोऽपि यत्रैकस्य प्राधान्यम्, इतरदप्रधानम्, तदनुरोधेनान्वाचीयमानता, यथा&ndash; भो वटो भिक्षामट गाञ्चानयेति। इतरेतरयोगः समाहारश्च समुच्चयस्यैव प्रभेदः। स एव हि परस्परापेक्षाणामवयवभेदानुगत इतरेतरयोगः, यथा&ndash; देवदत्तयज्ञदत्ताभ्यामिदं कार्यं कत्र्तव्यम्। उभावपि तत्कार्यं प्रति परस्परापेक्षौ। तथा हि तदेकस्याप्यभावे न क्रियते। अवयवप्रधानश्चायमिति द्वित्वाद्द्विचवचनं भवति। परस्परापेक्षाणामेव तिरोहितावयवभेदः संहतिप्रधानः समाहारः; यथा&ndash; छत्रोपानहमतिति। अत्रापि कस्याञ्चित् क्रियायां छत्त्रादेः परस्परापेक्षत्वम्। संहतिप्रधानत्वाच्चैकवचनम्। यदि तर्हि समुच्चयान्वाचयावपि चार्थौ तदा तयोरपि समासः प्राप्नोतीत्तयत आह&ndash; तत्र इत्यादि। समुच्चये तावत् परस्परानभिसम्बन्धा एव गवादयो नयनादिभिः सम्बध्यमानाः समुचीयन्त इत्यासामथ्र्यात् सत्यपि चार्थे तस्मिन् न भवति समासः। अन्वाचयेऽप्येकं सापेक्षं नेतरत्, यथा&ndash; पूर्वोक्त उदाहरणे। त्तर हि गवानयनं भिक्षाटनमपेक्षते, न तु भिक्षाटनं गवानयनम्,; विनापि तेन तदनुष्ठानात्। स यदि गां पश्यति तदा तामप्यानयति, न चेत् भिक्षामेवाटतीत्यन्यतरापेक्षारहिते चार्थे न भवति समासः। इतरेतरयोगे समाहारे च विधीयते इति। तत्र सर्वेषां सामथ्र्यस्य विद्यामानत्वात्। वाक्त्वचम्, वाग्दृषदम् इति। द्वन्द्()वाच्चुदषहान्तात् समाहारे (5."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.2/2.2.29.md">Edit 2.2.29!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.2.29";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.2.30\",\"Previous\":\"2.2.28\",\"अकारादिक्रमसङ्ख्या\":1410,\"कौमुदीक्रमसङ्ख्या\":901,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्वन्द्वः समासः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"चार्थे द्वंद्वः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

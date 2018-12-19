@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="उत्तमैकाभ्यां च। ननु उत्तमशब्दात्परस्याऽहन्शब्दस्याऽह्नादेशाऽप्रसक्तेरुत्तमग्रहणं व्यर्थमित्यत आह&ndash;उत्तमशब्द इति। उत्तमशब्दोऽन्त्ये वर्तते। यथा द्वादशाहे उदयनीयातिरात्र उत्तममहः इति अन्त्यमिति गम्यते। अहःसर्वैकदेशसङ्ख्यातपुण्यादित्युपात्तेषु अन्त्यः पुण्यशब्दो विवक्षित इत्यर्थः। तर्हि पुण्यैकाभ्यामित्येव कुतो न सूत्रितमित्याशङ्क्य स्वतन्त्रेच्छत्वान्नमहर्षेरित्याह&ndash;पुण्यैकाभ्यामित्येवेति। पुण्याहमिति। पुण्यमहरिति विग्रहे विशेषणसमासः, टच्, टिलोपः। पुण्यसुदिनाभ्यां चेति नपुंसकत्वम्। एकाह इति। एकमहरिति विग्रहे पूर्वकालैकेति समासः। टच् टिलोपः। उपान्त्यस्यापीति। लक्षणयेति शेषः। परुण्येत्यनुक्त्वा उत्तमग्रहणमेव लक्षणाबीजम्। उत्तमे च एकं चेति द्वन्द्वः, सौत्रं द्विवचनमिति भावः। सङ्ख्याताह इति। सङ्ख्यातमहरिति विग्रहे विशेषणसमासः, टच्, टिलोपः। रात्राह्नाहा इति पुंस्त्वम्। उपान्त्यसङ्खातशब्दपूर्वकत्वान्नाऽह्नादेशः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-5.4/5.4.90.md">Edit 5.4.90!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "5.4.90";
+          let sutraBasics = JSON.parse("{\"Next\":\"5.4.91\",\"Previous\":\"5.4.89\",\"अकारादिक्रमसङ्ख्या\":713,\"कौमुदीक्रमसङ्ख्या\":794,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तत्पुरुषसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"उत्तमैकाभ्यां च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

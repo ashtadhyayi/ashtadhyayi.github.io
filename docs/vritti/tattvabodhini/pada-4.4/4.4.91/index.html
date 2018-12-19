@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="नौवयोधर्म। नावादिभ्यो यथासङ्ख्यं तार्यादिष्वष्टस्वर्थेषु यत्स्याते। इह तार्यादियोगे यथासम्भवं करणे कर्तरि हेतौ तुल्यार्थयोगे च तृतीया भवतीति सैवेह समर्थविभक्तिरर्थाल्लभ्यते। अत्र प्रथमं मूलान्तानां पञ्चानां द्वन्द्वं कृत्वा द्वितीयमूलादिद्वन्द्वेन सह समाहारद्वन्द्वः। मूलान्तानां द्वित्राणां वा मूलादीनामेव वा द्वन्द्वं कृत्वा नावादिषु द्वन्द्वः। तेन सारुप्याऽभावादेकशेषो न भवति। नावा तार्यमिति। शक्यार्थे ऋहलोर्ण्यत्। करणे तृतीया। वयस्य इति। रिउआग्धो वयस्यः सवयाःइत्यमरः। वयसा तुल्यः शत्रुरित्यत्र तु न भवति। संज्ञाधिकारात्। विषेण वध्य इति। विषेण वधमर्हतीत्यर्थः। दण्डादिभ्यःइति सूत्रेण वधशब्दादर्हार्थे यद्विधानात्। मूलेनाम्यमिति। मूलं नाम पटादीनामुत्पत्त्यर्थं वणिग्भिर्विनियुक्तं द्रव्यम्। तेन स्वस्मादतिरिक्तं लाभाक्यं यद्द्रव्यमात्मानं प्रति शेषीक्रियते=आत्मन उपकारकं क्रियते , तत् &mdash;आनाम्यम्। आङ्पूर्वको नमिरभिभवे वर्तते, तस्मात् पोरदुपधादिति यति प्राप्ते अतएव निपातनाण्ण्यत्। तथा चानाम्यमभिभवनीयम्=आत्मानं प्रति शेषीकर्तव्यम्। स च लाबाख्यो भाग एव।लोके तु यावता द्रव्येण पटादिकं विक्रीयते तत्रैव समुदाये मूल्यशब्दः प्रसिद्धो, न तु मूलातिरिक्तभागमात्रे। एवं च लाभमात्रे व्युत्पादितस्य मूल्यशब्दस्यच तद्धटिते सङ्घाते निरूढलक्षणा बोध्या। सीतेति। सीता=हलाग्रं। सम्पूर्वादिणः क्तः। समितं=सङ्गतं, निम्नोन्नता दिरहितं कृतमित्यर्थः। समीकृतमिति यावत्। रथसीताहलेभ्यो यद्विधौ इति तदन्तविधिः। परमसीत्यम्। द्वाभ्यां सीताभ्यां समितमिति तद्धितार्थे समासस्ततो यत्। द्विसीत्यम्। तुलया संमितमिति। संमितं=परिच्छिन्नम्। रूढिशब्दोऽयं संज्ञायामित्यधिकारात्। अतएव तुल्यमिति सदृशमात्रे प्रयुज्यते, न तु तुलायामागद्रहः क्रियते।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-4.4/4.4.91.md">Edit 4.4.91!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.4.91";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.4.92\",\"Previous\":\"4.4.90\",\"अकारादिक्रमसङ्ख्या\":2249,\"कौमुदीक्रमसङ्ख्या\":1643,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्घिताद्यत्‌।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"नौवयोधर्मविषमूलमूलसीतातुलाभ्यस्तार्यतुल्यप्राप्यवध्यानाम्यसमसमितसम्मितेषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

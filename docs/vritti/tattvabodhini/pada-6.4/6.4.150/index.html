@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="हलस्तद्धितस्य। हलइति पञ्चमी। यस्येति चेत् सूत्रात्&ndash;ईतीत्यनुवर्तते। नस्ताद्धितेइत्यतस्तद्धित नानुवर्तते, आपत्यस्य चेत्यत्तरसूत्रे पुनस्तद्धितग्रहणात्तदाह&mdash;हल उत्तरस्येत्यादि। तद्धितेइत्यनुवृत्तौ त्विहापि स्यात्,&mdash;साङ्काश्यकः। काम्पिल्यकः। सङ्काशादिभ्यो णयः। ततो धन्वयोपधादिति वुञ्। उपधाभूतस्येति। सूर्यतिष्येत्यत उपधायाइत्यनुवर्तत इति भावः। ननु यस्येति चेति यञोऽकारलोपे कृते यकारस्य ईकारपरत्वमस्त्येव किमुपधाग्रहणानुवृत्त्या?। न चाऽल्लपोस्य स्थानिवद्भावो, यलोपे तन्निषेधात्। अत्राहुः&ndash;यलोपे कर्तव्येऽल्लोपस्याभीयत्वनाऽसिद्धत्वादुपधाग्रहणानुवृत्तिरभ्युपगन्तव्येति। अन्ये त्वाहुः&ndash;सूत्रारम्भसामथ्र्यादल्लोपस्याऽसिद्धकत्वं न भवति। तथा चोपधाग्रहणं विनापि नात्र क्षतिः। एवं च सूर्यतिष्येति सूत्रेऽप्युपधाग्रहणं त्यक्तुं शक्यमुक्तयुक्तेरिति। गार्गीति। गोत्रप्रत्ययान्तस्य जातित्वेऽपि योपधत्बादत्र जातेरिति ङीषिन भवति। तथाच आद्युदात्तमेवेदं पदम्। अनपत्याधिकारेति। यद्यपि आपत्यग्रहणं कर्तव्य वार्तिकम्, तथाप्यपत्याधिकारविहितपरं तत्। तादृशश्च गर्गादियञेव न तु देवाद्यञ्। तस्याऽपत्याधिकाररात्प्रागेवन पाठात्। अतएव भाष्यकृतायञश्चेत्यत्रकञ्क्वरपोऽयञश्चेति,गर्गादिभ्यो यञित्यत्रअयञिति अकारः प्राश्लिष्टः। एवं चयञञोश्चेति सूत्रेऽपियस्कारदिभ्यो गोत्रे&mdash;अयञञोश्चेत्यकारः प्रश्लिष्टः। एतच्च मनोरमाग्रन्थानुरोधोनोक्तम्। नव्यास्तु---अधिकारग्रहणमिहऽपार्थकं, यथाश्रुतवार्तिकेनैव द्वीपे भवा द्वेप्येति रूपसिद्धेः। न च देवस्यापत्यं स्त्री दैव्येति रुपाऽसिद्धि शङ्क्या,अयञश्चेति भाष्यकारीयमिष्कर्षात्तत्सिद्धेः। नहिदेवाद्यञञौइत्यत्राऽयञित्यकारः प्रश्लेष्टं शक्यते। किंचाधिकारग्रहणे अभिजितोऽपत्यं स्त्रीत्यणन्तात्स्वार्थेअभिजिद्विदभृदित्यादिना यञिआभिजितीति रूपं न सिध्येत्।श्रुमदणोऽयञ`इत्यकारप्रश्लेषेण भाष्यकाररीतियाऽपीह ङीपः संभवादित्याहुः। स्यादेतत्&mdash;अकारं प्रश्लिष्य गर्गादिभ्योऽयञि कृते गाग्र्य इति रूपं न सिध्येत्। मैवम्। वार्तिकप्रत्याख्यानाय भाष्यविरुद्ध इति स्पष्टमेव।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-6.4/6.4.150.md">Edit 6.4.150!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.4.150";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.4.151\",\"Previous\":\"6.4.149\",\"अकारादिक्रमसङ्ख्या\":3920,\"कौमुदीक्रमसङ्ख्या\":472,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"यलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"हलस्तद्धितस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

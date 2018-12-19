@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="विशिष्तलिङ्गानां भिन्नलिङ्गानां नदीवाचिनां शब्दानां देशवचिनां च ग्रामवर्जितानं द्वन्द्व एकवद् भवति। नद्यवयवो द्वन्द्वो नदी इत्युच्यते। देशावयवश्च देशः। नदी देशः इत्यसमासनिर्देश एव अयम्। उद्ध्यश्च इरावती च उद्ध्येरावति। गङ्गाशोणम्। देशः खल्वपि कुरवश्च कुरुक्षेत्रं च कुरुकुरुक्षेत्रम्। कुरुकुरुजाङ्गलम्। विशिष्टलिङ्गः इति किम्? गङ्गायमुने। मद्रकेकयाः। नदी देशः इति किम्? कुक्कुटमयूर्यौ। अग्रामाः इति किम्? जाम्बवश्च शालूकिनी च जाम्बवशालूकिन्यौ। नदीग्रहणमदेशत्वात्। जनपदो हि देशः। तथा च पर्वतानां ग्रहणं न भवति, कैलासश्च गन्धमादनं च कैलासगन्धमादने। अग्रामा इत्यत्र नगरानां प्रतिषेधो वक्तव्यः। इह मा भूत्, मथुरा च पाटलिपुत्रं च मथुरापाटलिपुत्रम्। उभयतश्च ग्रामाणां प्रतिषेधो वक्तव्यः। सौर्यं च नगरं, केतवतं च ग्रामः सौर्यकेतवते।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-2.4/2.4.7.md">Edit 2.4.7!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.7";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.8\",\"Previous\":\"2.4.6\",\"अकारादिक्रमसङ्ख्या\":3264,\"कौमुदीक्रमसङ्ख्या\":911,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकवद्भावः\",\"विषयः २\":\"द्विगुद्वन्द्वयोः वचननिर्णयः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"विशिष्टलिङ्गो नदी देशोऽग्रामाः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

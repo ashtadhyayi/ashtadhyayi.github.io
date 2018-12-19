@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="कालमर्यादाविभागे सति इति मर्यादाविभागशब्दयोः सयाहारे द्वन्द्वः। तेन कालशब्दस्य षष्ठीसमासः। तेषाञ्च इति। तैस्तेषाञ्चेति युक्तं यत् तेषां विभागे प्रतिषेधो भवति; तत्सम्बन्धित्वाद्विभागस्य। यदा तैरन्यस्य विभागस्तदा न युक्तम्, न हि तदा तत्सम्बन्धी विभागः। किं तर्हि? विभज्यमानसम्बन्धी। तथाप्यहोरात्रकृतत्वाद्विभागस्य सम्बन्धित्वमस्त्येव; निमित्तस्य नैमित्तिकसम्बन्धादित्यदोषः। यदि वचनमहोरात्रप्रतिषेधार्थम्, एवं च सामथ्र्यात् कालविभागस्यैव प्रतिषेधो विज्ञास्यते, न देशविभागस्य, न हि देशविभागस्याहौरात्रैः सह सम्बन्धोस्तीत्यत आह&ndash; योगाविभाग उत्तरार्थःइति। उत्तरसूत्रे कालविभाग एव यथा स्यादित्येवमर्थम्, देशविभागे मा भूदिति। अभुञ्ज्महि इति। श्नसोरल्लोपः (6.4.111) इत्यकारलोपः। त्रिविधिमुदाहरणम् इति। तत्र प्रथमे शब्दान्तरवाच्यस्य कालस्याहोरात्रैर्विभागः, द्वितीयेऽहोरात्रवाच्यस्य शब्दान्तरवाच्ययेन कालेन विभागः, तृतीयेऽहोरात्रवाच्यस्य कालस्योरात्रवाच्येन कालेन। सर्वथा इति। सर्वेण प्रकारेण। यद्यहोरात्रैरन्यस्य विभागोऽथधाप्यन्येन तेषां यद्यहोरात्रैरेव तेषामेवमपि प्रतिषेध इति सर्वथाशब्दस्यार्थः। अहोरात्रसंस्पर्शः इति। अहोत्राणां विभागेन सम्बन्ध = अहोरात्रसंस्पर्श इति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.3/3.3.137.md">Edit 3.3.137!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.3.137";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.3.138\",\"Previous\":\"3.3.136\",\"अकारादिक्रमसङ्ख्या\":1060,\"कौमुदीक्रमसङ्ख्या\":2795,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लिङ्\",\"विषयः २\":\"लकारार्थाः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कालविभागे चानहोरात्राणाम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

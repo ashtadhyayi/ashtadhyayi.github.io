@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अत्र दिशाशब्दस्यापि उपसर्जनत्वमाह-एकविभक्ति। प्रथमानिर्दिष्टं समास उपसर्जनमित्यतः समास इति, उपसर्जनमिति चानुवर्तते। समास इत्यनेन विग्रहवाक्यं लक्ष्यते। एकैव विभक्तिर्यस्य तदेकंविभक्ति। नियतविभक्तिकमिति यावत्। एवंच विग्रहे यन्नियतविभक्तिकं तत्पूर्वनिपातभिन्नकार्ये कर्तव्ये उपसर्जनं स्यादित्यर्थः। फलितमाह-विग्रहे यन्नियतेति। निष्कौशाम्बिशब्द उदाहरणम्। तत्र कौशाम्ब्या निष्क्रान्तः। निष्क्रातं निष्क्रान्तेन निष्क्रान्ताय निष्क्रान्तात् निष्क्रान्तस्य निष्क्रान्ते इति विग्रहेषु निरादयः क्रान्ताद्यर्थे पञ्चम्या इति समासे निष्कौशाम्बिः निष्कौशा�म्ब निष्कौशाम्बिना इत्यादीति स्थितिः। अत्र कौशाम्बीशब्द एव विग्रहे नियतविभक्तिक इति तस्योपसर्जनत्वमनेन भवति। समासशास्त्रे कौशाम्बीशब्दस्य पञ्चमीनिर्दिष्टत्वमेव, न तु प्रथमानिर्दिष्टत्वमिति प्रथमानिर्दिष्टमित्यनेनोपसर्जनत्वाऽप्राप्तौ वचनम्। तत्र कौशाम्बीशब्दस्याऽनेन उपसर्जनत्वेऽपिन पूर्वनिपातः तत्तद्विभक्त्यन्तैरेव समास इत्यत्र इदमेव सूत्रं प्रमाणम्।तुल्यार्थैरिति सूत्रे भाष्ये स्पष्टमिदम्। प्रथमान्तपदेनैव समास इत#इअनेक`मिति सूत्रे भाष्ये स्थितम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.2/1.2.44.md">Edit 1.2.44!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.44";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.45\",\"Previous\":\"1.2.43\",\"अकारादिक्रमसङ्ख्या\":883,\"कौमुदीक्रमसङ्ख्या\":655,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उपसर्जनम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एकविभक्ति चापूर्वनिपाते\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

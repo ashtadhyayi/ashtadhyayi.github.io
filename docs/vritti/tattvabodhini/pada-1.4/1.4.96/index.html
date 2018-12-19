@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अपिः पदार्थ। सर्पिषोऽपि स्यादिति। सर्पिर्बिन्दुः स्यादित्यर्थः। अपेः कर्मप्रवचनीयत्वे फलमाह&ndash;अनुपसर्गत्वान्न ष इति। उपसर्गसंज्ञाऽभावात् उपसर्गप्रदुर्भ्यामस्तिरितीह न प्रवर्तत इति भावः। संभावनायामिति। संभावनाया एवेत्यर्थः। कर्तृदौर्लभ्येत्यादि। कर्तृदौर्लभ्याद्भवनक्रियाया दौर्लभ्यं द्योतयन्नपिशब्दो भवनक्रियावाचिना स्यादित्यनेन सम्बध्यत इत्यर्थः। अवयवावयविभावेति। सर्पिरवयवी. बिन्दुरवयवः। इयमेवेति। बिन्दुदौर्भ्यप्रयुक्तदौर्लभ्यद्योतकतैवेत्यर्थः। द्वितीयेति। कर्मप्रवचनीययुक्ते---इत्यनेन विहिता। नत्वपिनेति। न च बिन्दुना योगे तद्दयोतकाऽपिशब्देनाऽपि योगो जात एव, अर्थद्वारा शब्दानां योगस्याब्युपगमादिति शङ्क्यम्। अपिशब्दस्य बिन्दुद्योतकत्वाऽभावात्। कथं तर्हि बिन्दुप्रतीतिरिति चेत्। श्रृणु&mdash;अपिना द्योत्यं भवनदौर्लभ्यमेव कर्तृदौर्लभ्यमाक्षिपति। कर्ता त्विह विन्दुरेवेति स प्रतीयते। अत एव अपिशब्दबलेन गम्यमानस्येत्यक्तुं, न त्वपिना गम्यमानस्येति। उक्तत्वादिति। उक्तप्रयात्वादित्यर्थः। अपिशब्दः स्यादित्यनेन संबध्यतइत्युक्तेस्यादित्यस्याऽपिना योगो न तु सर्पिषा इत्यर्थपर्यवसानात्। अप#इ स्तुयादिति। अवाङ्भनसगोचरं विष्णुमपि स्तुयादित्यधिकोक्तिः। एतादृशस्याऽन्यदीयस्तवने सामथ्र्यमस्तीत्यत्र किं वक्तव्यमिति भावः। इह संभावनाद्योतकोऽपिशब्दः, पूर्वत्र तु संभावनाविषयेदौर्लभ्यद्योतक इति महान्भेदः। उपसर्गात्सुमनोति इत्यादिना षत्वं न भवति, कर्मप्रवचनीयसंज्ञया उपसर्गसंज्ञाया बाधात्। एवमुत्तरत्रापि बोध्यम्। अपि सिञ्च। अपि स्तुहीति। सिञ्च च स्तुहि चेत्यर्थः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.4/1.4.96.md">Edit 1.4.96!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.96";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.97\",\"Previous\":\"1.4.95\",\"अकारादिक्रमसङ्ख्या\":293,\"कौमुदीक्रमसङ्ख्या\":557,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मप्रवचनीया\",\"विषयः २\":\"निपातः\",\"विषयः ३\":\"प्राङ्\",\"सूत्रम्‌\":\"अपिः पदार्थसम्भावनान्ववसर्गगर्हासमुच्चयेषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

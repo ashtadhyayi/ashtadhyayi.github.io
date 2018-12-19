@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="मन्क्तिन्निति प्रत्ययग्रहणम्()। तत्र प्रत्ययग्रहणपरिभाषया (पु।प।वृ।४४) तदवतस्य ग्रहणं विज्ञायते, इत्याह&ndash;मन्नन्तं क्तिन्नन्तञ्च इति। रथवत्र्मेत्यादयः षष्ठीसमासाः। रथशब्दः क्थन्प्रत्ययान्त आद्युदात्त इत्युक्तम्()। वृतु वर्तने (धा।पा।७४८) इत्यस्मान्मनिन्()। तेन वत्र्मशब्द आद्युदात्तः। शकटशब्दः पयःशब्दश्च नित्त्वादाद्युदात्तः। पाणिन्यापिशलिशब्दाविञन्तत्वात्()। कृतिशब्दोऽपि क्तिन्नन्तत्वात्()। करणसाधनश्चायं व्याख्यानशब्दो ल्युङन्तः। कृत्स्वरेण मध्योदात्तः। छन्दःशब्दः सर्वधातुब्योऽसुन्() (पं।उ।४।१८८) [असन्() इत्येव सूत्रम्()&ndash;द।उ।] इति प्रत्ययग्रहणम्()। तत्र कृते चन्देरादेश्च च्छः (पं उ।४।२१८) इत्यसुन्प्रत्ययान्तत्वादाद्युदात्तः। अयन्त्यनेनेत्ययनम्(), ऋचामयनम्()। ऋचामिति कर्णि षष्ठी। ऋगयनशब्दः कृत्स्वरेण मद्योदात्तः। राजशयनम्() इत्यादि। सेरतेऽस्मिन्निति शयनम्(), आसतेऽस्मिन्नित्यासनम्? ताभ्यां राजब्राआहृणशब्दयोः षष्ठीसमासः। राजब्राआहृणशब्दाबुक्तस्वरौ। शयनासनशब्दौ लित्स्वरेणाद्युदात्तौ। अत्र कृद्योगलक्षणा पूर्ववदेव कत्र्तरि षष्ठी। एवं गोस्थानम()आस्थानम्() इत्यत्रापि। गवा()आशब्दावुक्तस्वरौ। तिष्ठत्यस्मिन्निति स्थानम्(), लित्स्वरेणाद्युदात्तम्()। ब्राआहृणयाज्यः इत्यादौ कृद्योगलक्षणा कर्मणि षष्ठी। याजकादिषु ये ण्वुलन्ताः पठ()न्ते, तेषु येऽनुपसर्गाः&ndash;याजकपूजकस्नापका इति, त आद्युदात्तः। ये तु सोपसर्गाः&ndash;परिवेषकाध्यापकोद्वत्र्तकोत्सादका इति, ते कृत्स्वरेण मध्योदात्ताः। होतभर्तृशब्दो तृन्नन्तौ प्रयोजयतः। यौ तु तृजन्तौ तयोः कृत्स्वरेणान्तोदात्त्वं सिद्धम्()। गोक्रीतः, अ()आक्रीतः इत्यादि। कर्तृकरणे कृता (2."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.150.md">Edit 6.2.150!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.2.150";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.2.151\",\"Previous\":\"6.2.149\",\"अकारादिक्रमसङ्ख्या\":229,\"कौमुदीक्रमसङ्ख्या\":3884,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अनो भावकर्मवचनः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

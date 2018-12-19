@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="उभयत्रापि प्रथमयकारस्य लोपविधिमाह&ndash;हलो यमां यमि लोपः। झयो होऽन्यतरस्यामित्यतोऽन्यतरस्यामित्यनुवर्तते। तच्च विभक्तिप्रतिरूपकमव्ययं वार्थे वर्तते। यमामिति बहुत्वं प्रयोगबहुत्वापेक्षम्। एकैकस्मिन् प्रयोगे बहूनां यमामसम्भवात्। हल इति दिग्योगे पञ्चमी। परस्येति शेषः। तदाह-हलः परस्य यम इत्यादिना। अनेन सूत्रेण उदाहरणद्वयेऽपि प्रथमयकारस्य लोपे सति एकयकाररूपे संपद्यते। लोपाऽभावपक्षे तु द्वियकाररूपं संपद्यते। ननु हलो यमामिति सूत्रमेतदर्थं नारम्भणीयम्, अचो रहाभ्यामिति यकारद्वित्वस्य वैकल्पिकतया द्वित्वे सति द्वियकाररूपस्य, द्वित्वाऽभावे एकयकाररूपस्य च सिद्धेरित्याशङ्क्य नास्य सूत्रस्यात्र प्रयोजनमित्याह&ndash;इति लोपेति। तर्हि किमस्य सूत्रस्य फलमित्यत आह&ndash;लोपारम्भेति। दित्यदित्यादित्यपत्युत्तरपदाण्ण्यः इत्यादित्यशब्दाच्छेषार्थण्यान्ताद्देवतार्थेण्यः। आदित्य&ndash;य इति स्थिते यस्येति चेति यकारादकारस्य लोपे तकाराद्यकारस्याऽनेन सूत्रेण लोपः। तस्मिन् सत्येव आदित्यमित्येकयकारं रूपं सिध्यति, नान्यथा। अतः सूत्रारम्भो न विफल इति भावः। अत्र आपत्यस्य च तद्धितेऽनातीति लोपस्तु न, जाताद्यर्थकत्वेन आपत्यत्वाऽभावात्। अत्र त्वतत्सूत्रं न्याय्यत्वादुपन्यस्तमिति भावः। नन्वेवमपि महात्मनो भाव इत्यर्थे गुणवचनब्राआहृणादिभ्यः इति ष्यञि टिलोपे आदिवृद्धौ माहात्म्यमित्यत्रापि तकारान्मकारस्य लोपः स्यात्, तस्य यम्त्वात्, यकाररूपयम्परकत्वाच्चेत्यत आह&ndash;यमामिति। यथासंख्यविज्ञानादिति। विज्ञायते अनेनेति विज्ञानं=सूत्रम्। विज्ञानं शिल्पशास्त्रयोः इत्यमरः। यथासंख्यसूत्रादित्यर्थः। तथाच मकारस्य मकारे परत एव लोपलाभाद्यकारे परे न लोप इत्यर्थः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.4/8.4.64.md">Edit 8.4.64!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.4.64";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.4.65\",\"Previous\":\"8.4.63\",\"अकारादिक्रमसङ्ख्या\":3925,\"कौमुदीक्रमसङ्ख्या\":60,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"हलो यमां यमि लोपः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

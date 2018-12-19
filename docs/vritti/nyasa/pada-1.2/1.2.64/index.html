@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सरूपाणाम् इति बहुव्रीहौ कृते ज्योतिर्जनपद (6.3.84) इत्यादिना समानस्यसभावः। रूपशब्दोऽत्र स्वभावे वत्र्तते। सरूपाणां शब्दानाम् इति निर्धारणे षष्ठी। तेन स्वरूपाणां मध्ये समानजातीयो यः सरूपः, स एक एव शिष्यते, न विरूपः। समानजातीयस्यैव हि निर्धारणं भवति, न विजातीयस्य। अथ वा&ndash; समुदायलक्षणैषा षष्ठी, सरूपसमुदायान्तः पाती च सरूप एव भवति, न विरूपः। तेन सरूप एव शिष्यते। एक विभक्तौ इति। एकशब्दः समानार्थः, एकधनाविति यथा। एका चासौ विभक्तिश्चेति पूर्वकालैक (2.1.48) इत्यादिना समासः। एकमेकशेष इत्यत्रापि। अत्र त्वेकशब्दः संख्यावचनः, शेषशब्दोऽयं निवृत्त्या विशिष्टवस्थानमाह, नावस्थानमात्रम्। अत एवाह&ndash; एकः शिष्यते, अपरे निवत्र्तन्ते इति। वृक्षश्च वृक्षश्च वृक्षौ इत्यादि। अविभक्तिकानामयमेकशेषः; अनैमित्तकत्वाद्विभक्तेः। न ह्रयं परां विभक्तिमाश्रित्य विधीयते। एकविभक्तावितीहसारूप्योपलक्षणमेतत्, न निमित्तनिर्देशः। एकस्यां विभक्तौ परतो यानि रूपाणि दृष्टानि, तेषामनुत्पन्नायामेव विभक्तौ प्रातिपदिकानामेकशेषो भवति। ततः कृत एकशेषे विभक्तिरुपपद्यते। अथ वा &ndash; सविभक्तिकानामेवैकशेषः, कथम्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.64.md">Edit 1.2.64!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.64";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.65\",\"Previous\":\"1.2.63\",\"अकारादिक्रमसङ्ख्या\":3671,\"कौमुदीक्रमसङ्ख्या\":188,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":145,\"विषयः १\":\"एकशेषः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सरूपाणामेकशेष एकविभक्तौ\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

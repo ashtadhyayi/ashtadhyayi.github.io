@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अथ समासाश्रयविधिर्निरूप्यते&ndash;घरूप। उत्तरपदे इत्यधिकृतं चेलडादिष्वन्वेति, नतु घरूपकल्पेषु , घशब्दवाच्यतरप्तमपोः रूपप्कल्पपोश्च प्रत्ययत्वात्। नच तदन्तग्रहणे सति तेषूत्तरपदत्वं संभवतीति वाच्यं, ह्मदयस्य ह?ल्लेखेत्यत्र उत्तरपदाधिकारे प्रत्ययग्रहणे तदन्तग्रहणाऽभाव इति भाष्ये उक्तत्वात्। स्त्रियाः पुंवदित्यतो भाषित पुंस्कादित्यनुत्तम्। ङ्य इतितदन्तग्रहणं, केवस्यानेकाच्त्वाऽभावात्। तदाह&mdash;भाषितपुंस्काद्यो ङीति। एतदर्तमेव स्त्रियाः पुंवदित्यत्र बाशितपुंस्कादिति पञ्चम्यन्तमुपात्तं ष तत्र भाषितपुंस्काद्यो ङीति। एतदर्थमेवस्त्रियाः पुंवदित्यत्र भाषितपुंस्कादिति पञ्चम्यन्तमुपात्तं। तत्रभाषितपुंस्काद्यो ङीति। एतदर्थमेव स्त्रियाः पुंवदित्यत्र भाषितपुंस्कादिति पञ्चम्यन्तमुपात्तं। तत्र भाषितपुंस्काया इति षष्ठ�न्तोपादाने तु इह तदनुव?त्तिर्न स्यात्, असंभवात्। नहि ङीप्प्रत्ययस्य तदन्तस्य भाषितपुंस्कत्वमस्ति। नच तत्रापि नार्थवत्स्यात्, अनूङिति पर्युदासात्स्त्रीप्रत्ययलाभेन तदन्तस्य भाषितपुंस्कत्वाऽभावादिति वाच्यम्, तत्र स्त्रियाइत्यस्वरितत्वात्स्त्रीप्रत्ययग्रहणं नेत्य#उक्तत्वात्। ब्राआहृणितरा ब्राआहृणितमेति। अतिशायने तरप्तमपौ। नचतसिलादिष्विति पुंवत्त्वेन ङीफो निवृत्तिः सङ्ख्याः,जातेश्चेति निषेधात्। ब्राआहृणिरूपेतिप्रशंसायां रूपप्। ब्राआहृणिकल्पेति।ईषदसमाप्तौइति कल्पप्। ब्राआहृणिचेलीति।चिल वसनेतस्मादचि चेलडिति पचादौ पठितम्। टित्त्वान्ङीप्। इत्यादीति। ब्राआहृणिमता। ब्राआहृणिहता। ब्राऊञ इति। ब्राऊञ्धातोरचि कृतेब्राउवो वचिरिति वच्यादेशस्य लघूपधगुणस्य च अभावो निपात्यत इत्यर्थः। चेलडादीनीति। समासवृत्तिविषये चेलङ् ब्राउवगोत्रहता इत्युत्तरपदानि कुत्सनवाचीनीति कृत्वाकुत्सितानि कुत्सनैरिति कर्मधारय इत्यर्थः। आमलकोतरेति। आमलकीशब्दस्य वृक्षवाचित्वे नित्यस्त्रीलिङ्गत्वाद्भाशितपुंस्कत्वाऽभावेन न ह्रस्व इति भावः। ननुन पदान्तेति सूत्रे भाष्ये बिम्बबदर्यामलकशब्दानां भाषितपुंस्कत्वावगमात्कथमामलकीशब्दस्य वृक्षविशेषे नित्यस्त्रीलिङ्गत्वमित्यरुचेराह--कुवलीतरेति। बृक्षनिषेशे नित्यस्त्रीलिङ्गोऽयमिति भावः। अमरस्तुकर्कन्धूर्बदरी कोली घोण्टा कुबलफनिले इति नपुंसकत्वमाह।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.43.md">Edit 6.3.43!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.3.43";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.3.44\",\"Previous\":\"6.3.42\",\"अकारादिक्रमसङ्ख्या\":1360,\"कौमुदीक्रमसङ्ख्या\":985,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ह्रस्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"घरूपकल्पचेलड्ब्रुवगोत्रमतहतेषु ङ्योऽनेकाचो ह्रस्वः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

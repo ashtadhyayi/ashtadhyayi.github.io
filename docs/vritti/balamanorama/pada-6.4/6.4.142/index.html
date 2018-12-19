@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="आसन्नशब्दस्य विंशतिशब्देन षष्ठ�न्तेन समासे डचि कृते टेरितीकारमात्रस्य लोपे प्राप्ते आह&ndash;ति विंशतेर्डिति। तीति लुप्तषष्ठीकम्। भस्येत्यधिकृतम्। अल्लोपोऽनः इत्यनुवर्तते। तदाह&ndash;विंशतेर्भस्येति। अलोऽन्त्यस्येति न भवति,नानर्थकेऽलोऽन्त्यविधिरित्युक्तेः। आसन्नविंशा इति। विंशतिसङ्क्याऽऽसन्नसङ्क्यावन्त इत्यर्थः। डचि कृते आसन्नविंशति-अ-इति स्थिते, तिलोपे सवर्णदीर्घ बाधित्वाअतो गुणेइति पररूपे, आसन्नविंशशब्दोऽदन्तः।उत्तरपदत्वे चापदादिविधौ प्रतिषेधःइति प्रत्ययलक्षणाऽभावेनाऽपदत्वात्। अथाऽदूरशब्दस्योदाहरति--अदूरतिं?रशा इति। तिं?रशतोऽदूरा इति विग्रहः। तिं?रशत्सङ्ख्याया अदूरसङ्ख्यावन्त इत्यर्थः। डचि टिलोपः। अधिकस्योदाहरति--अदिकचत्वारिंशा इति। चत्वारिंशतोऽधिका इति विग्रहः। चत्वारिंशत्सङ्ख्याया अधिकसङ्ख्यावन्त #इत्यर्थः। डचि टिलोपः। सङ्ख्यावाचकशब्दस्य सङ्ख्यावाचकशब्देन समासमुदाहरति--द्वित्रा इति।वाऽर्थे बहुव्रीहिः। द्वित्यन्यतरा इत्यर्थः। डचि टिलोपः। ननु द्वित्रा आनीयन्तामित्युक्ते कदाचिद्द्वावानयति, तदा कथं बहुवचनमिति चेत्, अत्र भाष्ये अनिश्चये बहुवचनं प्रयोक्तव्यमिति वचनात् समाहितम्। तथा कार्यान्वये विकल्पः शब्दात्तु नियमेन कोटिद्वयोपस्थिति। तदुपस्थित्यनन्तरमन्यतरानयनमिच्छया। अतः शब्दान्नियमेन पञ्चानामुपस्थितिरित्यपि समाहितम्। नच वाऽर्थप्राधान्यात् अनेकमन्यपदार्थे इत्येवाऽत्र सिद्धमिति वाच्यं, शेषाद्विभाषेति कबभावार्थकत्वात्। स हि कप् अनेकमन्यपदार्थे इति विहितबहुव्रीहावेव प्रवर्तत इति भाष्ये स्पष्टम्। अथ सङ्ख्यायाः सङ्ख्यया समासे उदाहरणान्तरमाह&ndash;द्विदशा इति। शब्दशक्तिस्वाभाव्यात्सुजर्थान्तर्भावेण पूर्वपदस्य वृत्त्याश्रयणात् समासे सुचो न श्रवणमिति भाष्ये स्पष्टम्। द्वित्वसङ्ख्याकदशत्ववन्त इत्यर्थः। फलितमाह&ndash;विंशतिरित्यर्थ इति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.142.md">Edit 6.4.142!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.4.142";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.4.143\",\"Previous\":\"6.4.141\",\"अकारादिक्रमसङ्ख्या\":1720,\"कौमुदीक्रमसङ्ख्या\":844,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अङ्गलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"ति विंशतेर्डिति\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

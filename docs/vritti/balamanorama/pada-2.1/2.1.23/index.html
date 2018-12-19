@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="द्विगुश्च। द्विगुरपीति। तद्धितार्थोत्तरपदसमाहारे च इति वक्ष्यमाणसमासस्य संख्यापूर्वो द्विगुरिति द्विगुसंज्ञा विधास्यते। स द्विगुसमासोऽपि तत्पुरुषसंज्ञक इति यावत्। एतत्सूत्राऽभावे एकसंज्ञाधिकाराद्द्विगुसंज्ञया तत्पुरुषसंज्ञा बाध्येतेति भावः। इदमिति। द्विगुश्चेत्येतदित्यर्थः। तर्हि द्विगुसंज्ञया तत्पुरुषसंज्ञा बाध्येतेत्यत आह&ndash;संख्येति। संख्यापूर्वोद्विगुरिति द्विगुसंज्ञाविधायकं सूत्रम्। तत्र चकारः पठनीयः। ततश्च संख्यापूर्वसमासो द्विगुसंज्ञकस्तत्पुरुषसंज्ञकश्च स्यादिति लभ्यते। एवञ्च चकारेण लघुना तत्पुरुषसंज्ञासमुच्चयलाभाद्द्विगुश्चेति गुरुभूतं सूत्रं न कर्तव्यमित्यर्थः। ननु मास्तु द्विगोस्तत्पुरुषत्वमित्यत आह&ndash;समासान्तः प्रयोजनमिति। तदुदाह्मत्य दर्शयति - पञ्चराजमिति। पञ्चानां राज्ञां समाहार इति विग्रहे तद्धितार्थेति द्विगुः। तस्य तत्पुरुषत्वाद्राजाहःसखिभ्यष्टजिति टच्।स नपुंसकमिति नपुंसकत्वम्।अकारान्तोत्तरपदो द्विगुः स्त्रियामिति तु न भवति, समासान्तस्य टचः समुदायावयवत्वेन उत्तरपदावयवत्वाऽभावात्। न चसंख्यापूर्वोद्विगुश्चेति पाठे द्विगुतत्पुरुषसंज्ञयोः पर्यायेण प्रवृत्तिः स्यात्, अतः समुच्चयार्थंद्विगुश्चेति पृथक्सूत्रमस्त्विति वाच्यम्,सङ्ख्यापूर्वइति,द्विगु`रिति च योगौ विभज्य पूर्वेण सङ्ख्यापूर्वस्य तत्पुरुषसंज्ञाविधिः, द्विगुरित्यनेन द्विगुसंज्ञाविदिरित्याश्रयणे सति, चकारमन्तरेणापि पर्यायेण प्रवृत्तिसिद्ध्या चकारस्य समुच्चयार्थत्वोपपत्तेः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.1/2.1.23.md">Edit 2.1.23!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.23";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.24\",\"Previous\":\"2.1.22\",\"अकारादिक्रमसङ्ख्या\":1944,\"कौमुदीक्रमसङ्ख्या\":685,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्विगुः समासः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"द्विगुश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

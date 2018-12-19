@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="गत्यर्थ। गत्यर्थ, अकर्मक, श्लिष, शीङ्, स्था, आस , वस, जन, रुह, जीर्यति एषां दशानां द्वन्द्वः। लः कर्मणि च भावे चेत्यतो भावे कर्मणीति आदिकर्मणि क्तः कर्तरि चेत्यतः कर्तरि इति चानुवर्तते। तदाह&ndash; एभ्य इत्यादिना। कर्तरीत्येवानुवृत्तौ भावकर्मणोर्न स्यादिति तयोरप्यनुवृत्तिः। गङ्गां गत इति। कर्तरि क्तः। गङ्गां प्राप्त इति। आप्लृ व्याप्तौ उपसर्गवशाद्गतौ वर्तते। अकर्मकादुदाहरति&ndash;म्लान इति। क्षीण इत्यर्थः। संयोगादेः इति निष्ठानत्वम्। आश्लिष्ट इति। आलिङ्गितवानित्यर्थः। नन्वकर्मकत्वादेव सिद्धे शीङादीनां पुनर्ग्रहणं व्यर्थमित्यत आह&ndash; शेषमधिशयित इति। शेषे शयितवानित्यर्थः। अधीशीङ्?स्थासाटमिति शेषः कर्म, अतो नाऽकर्मकत्वादिह प्राप्तिरिति भावः। वैकुण्ठमधिष्ठित इति। वैकुण्ठे स्थिवानित्यर्थः।अधिशीङ्स्थासामिति वैकुण्ठः कर्म। अतो नाऽकर्मकत्वादिह प्राप्तिः। शिवमुपासित इति। शिवं परिचरितवानित्यर्थ-। उपवेशनार्थकत्वे अकर्मकत्वेऽपि इह उपसर्गवशेनाऽर्थान्तरे सकर्मकत्वादकर्मकेत्यनेन न प्राप्तिरिति भावः। हरिदिनमुपोषित इति।वसतिक्षुधोरिति इट्। यजादित्वात्संप्रसारणम्।शासीति षः। हरिदिने न भुक्तवानित्यर्थः।उपान्वध्याङ्वसःइति हरिदिनं कर्म। ततश्चाऽकर्मकत्वाऽभावादप्राप्तिः। राममनुजात इति। अनुकृतवानित्यर्थः। अनुसृत्य जातवानिति वा।ततश्चाऽकर्मकत्वाऽभावादप्राप्तिः। गरुडमारूढ इति। उपर्याक्रान्तवानित्यर्थः। वि�आमनुजीर्ण इति। हतवानित्यर्थः। व्याप्तवानिति वा। अकर्मकत्वाऽभावादप्राप्तिः। जृ?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.4/3.4.72.md">Edit 3.4.72!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.4.72";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.4.73\",\"Previous\":\"3.4.71\",\"अकारादिक्रमसङ्ख्या\":1266,\"कौमुदीक्रमसङ्ख्या\":3086,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लकार-कृत्-अर्थाः\",\"विषयः २\":\"कर्तरि क्तः\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"गत्यर्थाकर्मकश्लिषशीङ्स्थाऽऽसवसजनरुहजीर्यतिभ्यश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

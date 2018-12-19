@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="मोऽनुस्वारः (8.3.23) इत्यनुस्वारे प्राप्ते वचनम्()। सँस्कर्ता[संस्कर्तेति&ndash;न्यासे, पदमञ्जर्यां च मुद्रितः पाठः] इत्यादि। करोतेः सम्पूर्वात्? तृजादयः, सम्पर्युपेभ्यः करोतौ भूषणे (6.1.132) (इति) सुट्(), समो मकारस्य अलोऽन्तस्य (1.1.51) इत्यनेन रुत्वे ततः पूर्वस्यानुनासिकः, रोर्विसर्जनीयः। तस्य वा शरि (8.3.36) इति विकल्पेन सकारे प्राप्ते विसर्जनीये च यथा नित्यं सकारो भवति, तथा वृत्तौ दर्शितम्()। कथं पुनरस्मिन्? सूत्रे सकारो निर्द्दिश्यते? इत्याह&ndash;समः स्सुटि इत्यादि। यस्मिन्? पक्षे विभक्तिसकारस्य विसर्जनीये कृते वा शरि (८।३।३६) इति सकारो न क्रियते, सं पक्षमाश्रित्येदमुक्तम्(); अन्यथा हि त्रिसकारकोऽयं निर्देश इति वक्तव्यं स्यात्(); त्रयाणां सकाराणां सन्निपातात्()। एको हि विभक्तिसम्बन्धी सकारः, द्वितीयस्त्वादेशसम्बन्धी, तृतीयः सुटसम्बन्धी। यदा तु त्रिसकारं कृत्वा सूत्रं पठ()ते, तदा द्विशब्दोऽधिकसकारोपलणार्थो द्रष्टव्यः। यदि तर्हि सकार आदेशो विधीयते, संस्कत्र्ता इत्यत्रानुनासिको न प्राप्नोति; यस्मादत्रात्रग्रहणं रुणैव सह सन्नियोगप्रतिपत्त्यर्थमुक्तम्()। रुग्रहणस्यास्मिन्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.5.md">Edit 8.3.5!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.5";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.6\",\"Previous\":\"8.3.4\",\"अकारादिक्रमसङ्ख्या\":3622,\"कौमुदीक्रमसङ्ख्या\":135,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":105,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"रु, पूर्वस्य अनुनासिकः\",\"सूत्रम्‌\":\"समः सुटि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

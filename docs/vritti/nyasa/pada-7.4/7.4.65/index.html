@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="चकारश्छन्दसीत्यनुकर्षणार्थः। धारयतेः इति। धृञ्? धारणे (धा।पा।९००) धृङ्? अवस्थाने (धा।पा।१४१२) धृङ्? अवध्वंसने (धा।पा।९६०)&ndash;इत्येताषां ण्यन्तानां ग्रहणम्(), धृङो वा इति। अनन्तरोक्तयोरण्यन्तयोः। श्लौ यङ्लुकि वा इति। तत्र तावत्? दाधर्त्ति इति--यदा धारयतेः श्लौ निपात्यते, तदा णिलोपोऽभ्यासस्य दीर्घत्वं निपात्यते। यदा तु यङ्लुकि, तदाऽनेकाच्त्वाद्यङ्? न प्राप्नोति, सोऽपि निपात्यते, उपधाह्यस्वत्वञ्च। णिलोपस्त्वार्धधातुकत्वादेव यङःणेरनिटि(6.4.51) इत्येवं सिद्धः। भ्यासस्य दीर्घत्वमपिदीर्घोऽकितः(7.4.83) इत्येवं सिद्धम्()।दर्धर्ति, दर्धर्षिइति। अत्रापि यदा धारयतेः श्लौ तदाऽभ्यासस्य रुगागमो णिलोपश्च। श्लुस्तु सर्वत्रबहुलं छन्दसि(2.4.76) इत्यनेनैव वेदितव्यः। यदा तु यङ्लुकि, तदादीर्घोऽकितः(7.4.83) इत्यनेन दीर्घत्वे प्राप्ते तदभावश्च निपात्यते। यदा धृङः--दाधर्तीति श्लौ निपात्यते, तदा द्विर्वचने कृतेऽभ्यासस्य दीर्घत्वं निपात्यते। यदा तु तस्यैव धृङो यङ्लुकि तदाऽस्यासस्यऋतश्च(7."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.4/7.4.65.md">Edit 7.4.65!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.4.65";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.4.66\",\"Previous\":\"7.4.64\",\"अकारादिक्रमसङ्ख्या\":1844,\"कौमुदीक्रमसङ्ख्या\":3596,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"सामान्यम्\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"दाधर्तिदर्धर्तिदर्धर्षिबोभूतुतेतिक्तेऽलर्ष्यापनीफणत्संसनिष्यदत्करिक्रत्कनिक्रदद्भरिभ्रद्दविध्वतोदविद्युतत्तरित्रतःसरीसृपतंवरीवृजन्मर्मृज्यागनीगन्तीति च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

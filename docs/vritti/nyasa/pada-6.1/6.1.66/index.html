@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="यदि लोप इति इहानुवत्र्तमानं शास्त्रीयेणार्थेनैवार्थवत्? स्यात् तदा तेन हलित्यस्य प्रथमान्तस्य सामानाधिकरण्येन सम्बन्धो नोपपद्यते। शास्त्रीयस्य हि लोपशब्दस्यार्थः&mdash;दर्शनाभावः=आदर्शनम्(), न च हलदर्शनं भवति। न च हल्ङ्याब्भ्यः इति पञ्चमी हलिति प्रथमायाः षष्ठीत्वं प्रकल्पयिष्यति। सामथ्र्याद्वा हलित्यस्य षष्ठ()न्ततया विपरिणामो भविष्यति, अतः षष्ठ()न्तस्य लोपशब्देन सम्बन्धो भवष्यतीति शक्यं प्रकल्पयितुम्(); अकृतार्थत्वात्? प्रथमायाः षष्ठीभावस्यानुपपत्तेरित्येतदालोच्याह&ndash;तदिह इत्यादि। लुप्यत इति लोपः। कर्मणि घञ्()। एतेन लौकिकार्थेनार्थवत्त्वं लोपशब्दस्य दर्शयति। लुप्यत इति निरुध्यत इत्यर्थः। लौकिकेनार्थेनार्थवता कर्मसाधनेन लोपशब्देन हलित्येतस्य विशेषणविशेष्यबाव उपपद्यते। लोपशब्देन हि लुप्यमानं वर्णमात्रमुच्यते। सुतिस्यपृक्तं हल्() इति। अनेन च तदेव विशिष्यते। दीर्घात्() इति। एतच्च ङ्यापोरेव विशेषणम्(); सम्भवाव्यभिचारात्(), न तु हलन्तस्य; असम्भवात्()। उखारुआत्(); पर्णध्वत्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.66.md">Edit 6.1.66!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.1.66";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.1.67\",\"Previous\":\"6.1.65\",\"अकारादिक्रमसङ्ख्या\":3033,\"कौमुदीक्रमसङ्ख्या\":873,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लोपो व्योर्वलि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

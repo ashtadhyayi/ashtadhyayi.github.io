@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="मयूरव्यंसकः इति। मयूरश्चासौ व्यंसकश्चेति मयूरव्यंसकः। व्यंसकशब्दस्य पूर्वनिपाते प्राप्ते परनिपातार्थः पाठः। एवं चात्र मयूरव्यंसकादीनां यवनमुण्डपर्यन्तानाम्। छन्दसि ह्स्तेगृह्र इत्यादि। समासेऽनञ्पूर्वे क्त्वो ल्यप्(7.1.37)। भाषायान्तु -- हस्तेगृहीत्वा, पुनर्दत्त्वेत्येवं भवति।एहीडादयोऽन्यपदार्थेइति। एहि ईड यत्र कर्मणि वत्र्तते तदुच्यते--एहीडम्इति। एवम्--एहियवम्इति। एहिवाणिजेति यस्यां क्रियायां साएहिवाणिजा। एवम्--अपेहिवाणिजा, प्रेहिवाणिजा। एहि सवागतमिति यस्यां क्रियायां साएहिस्वागता। एवम्--अपेहिस्वागता। प्रौह कटमिति यस्यां साप्रोहकटा। एं प्रोहकर्दमादय आहरवसनान्ताः। कृन्धि विचक्षणेति यस्यां क्रियायां साकृन्धिविचक्षणा।उद्धरोत्सृजइति। तिङन्तयोः समासः।आख्यातमाख्यातेन क्रियासात्ये(ग।सू।२०) इत्येवं सिद्धेऽसातत्यार्थं वचनम्। उद्धरोत्सृजति यस्यां क्रियायां सा उद्धरोत्सृजा। क्रियाप्रधानश्चायं समासः।उत्पतनिपता।उत्तमविधमा। एवमुद्धरोत्सृजेत्यादिकमसातत्यविषयमेव।उच्चावचनम्इति निपात्यते। उदक् चावाक् चिति विगृह्र। उच्चैश्च नीचैश्चेति विगृह्रोच्चनीचमिति निपात्यते। आचितञ्चोपचितञ्चेति विगृह्रआचोपचम्। आचितञ्च पराचितञ्चेतिआचपराचम्। निश्चितञ्च प्रचितञ्चेतिनिश्चप्रचम्। न किञ्चनअकिञ्चनम्।स्नत्वाकालकः।पीत्वास्थिरकः।भुक्त्वासुहितःइत्येषामन्तोदात्तार्थः पाठः। ल्यब्भावश्च निपात्यते।प्रोष्यपापीयान्इति। ऐकपद्यमैकस्वर्यञ्च समासाद्भवति। एवम्-- उत्पत्यपाकलादीनाम्।नित्यरोहिणी। निषण्णश्यामा। अपेहिप्रसवा। इहपञ्चमी। इहद्वितीयाइति। ऐकपद्यमैकस्वर्यञ्च समासे भवति। जहि कर्मणा बहुलमाभीक्ष्ण्ये कत्र्तारञ्चाधिदधातिइति। जहीति लोण्मध्यमपुरुषैकवचनम्। तदन्तं कर्मणा च बहुलं समस्यत आभीक्ष्ण्ये गम्यमाने समासेन चेत्कत्र्ता चाभिधीयते। जहिजोडमित्याभीक्ष्ण्यं य आह स उच्यतेजहिजोडःइति। जहिस्तम्ब इति, लोट्; सिप्,हन्तेर्जः(6."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.71.md">Edit 2.1.71!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.71";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.72\",\"Previous\":\"2.1.70\",\"अकारादिक्रमसङ्ख्या\":1393,\"कौमुदीक्रमसङ्ख्या\":753,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"चतुष्पादो गर्भिण्या\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

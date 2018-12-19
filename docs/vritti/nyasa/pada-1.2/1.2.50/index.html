@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पञ्गोणिः इति। तद्धितार्थ (2.1.50) इति समासे कृत आर्हीयष्ठक्। तस्य पूर्ववल्लुक्। इदिति योगविभागः इति। एतस्येद्ग्रहणमेव लिङगम्। तथा हि गोणी इत्येतावति सूत्रे ह्यस्वग्रहणानुवृत्तौ ह्यस्वत्वे कृते पञ्चगोणिरिति सिद्ध्यत्येव;किमिद्ग्रहणेन? तदेतदिद्ग्रहणं क्रियमाणं योगविभागर्थं विज्ञायते। ननु चानन्तरसूत्राल्लुक एवानुवृत्तिः स्यात्, न ह्यस्वस्य, नैतदस्ति; लुगनुवृत्तौ हि सूत्रमिदमनर्थकं स्यात्; लुकोऽनन्तरसूत्रेणैव सिद्धत्वात्। तस्माद्ध्रस्वग्रहणमेवानुवत्र्तते, न लुग्ग्रहणम्। पञ्चसूचिः इति। पञ्चगोणिरित्यनेन तुल्यम्। यदि योगविभागः क्रियते, तदातिप्रसङ्गः स्यात्। अन्येषामपि प्रसज्यत इत्यत आह&ndash; स च इत्यादि। यदि सर्वत्रेत्त्वं पूर्वयोगेणैव स्यात्, तदा गोण्याः इति वचनमनर्थकम्। तस्मादगोणीग्रहणादस्यासर्वविषयत्वम्। तेन योगविभागः सूचीविषय एव, नान्यविषय इति। तपरकरणं दीर्घानिवृत्त्यर्थम्। दीर्घस्य दीर्घकरणमनर्थकं स्यात्। अतो विना तपरकरणेन दीर्घो न भविष्यीति चेत्, न; लुघ्यस्वबाधनार्थत्वाद्दीर्घकरणस्य। भाव्यमानोऽण् सवर्णान् न गृह्णातीति, तस्माददीर्घनिवृत्त्यर्थं तपरत्वं नोपपद्यत इति चेत्, न; तस्याभाव्यमानत्वात्। अपूर्वस्य हि विधानं भाव्यमानत्वम्। न चात्रापूर्वस्य विधानम्। तथा हि&ndash; लुग्घ्रस्वयोः प्राप्तयोः पुनः स एव ईकारः प्रतिप्रसूयते। तस्मात् तपरकरणं कत्र्तव्यम्॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.50.md">Edit 1.2.50!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.50";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.51\",\"Previous\":\"1.2.49\",\"अकारादिक्रमसङ्ख्या\":650,\"कौमुदीक्रमसङ्ख्या\":1703,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"गोण्या इकारादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"इद्गोण्याः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

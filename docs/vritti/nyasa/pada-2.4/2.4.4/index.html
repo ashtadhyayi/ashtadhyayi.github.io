@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अध्वर्युवेदे इति। ऐतेनाध्वर्युशब्दनात्र यजुर्वेदो लक्ष्यत इति दर्शयति। अथाष्वर्योरृत्विग्विशेषस्य यः क्रतुरिति क्रतुविशेषणमेवाध्वर्युग्रहणं कस्मान्न विज्ञायते? असम्भवात्; को हि तस्य क्रतुर्भवति ! अपि तु घनव्ययशीलस्य। यद्यपि तस्य क्रतौ कर्त्तृत्वमस्ति तदपि ऋत्विगन्तरेण साधारणमित्यध्वर्युणैकेन तस्य विशेषणमयुक्तम्। ननु चाथर्ववेदविहितो यः क्रतुस्तन्निवृत्त्यर्थमध्वर्युणैकेन कथं विशेषणं न स्यात्; न हि त्तराध्वर्यवः सन्ति? नैतदस्ति; यदि ह्रेतावत् प्रयोजनमभिहितं स्यात् तदाऽनथर्वण इति प्रतिषेधमेव कुर्यात्। लघीयसी हि साक्षात् प्रतिषेधे प्रतीतिर्भवति। त्रयीग्रहणं वा कुर्यात्। यदि चाध्वर्युणा क्रतुर्विशेष्येत तदेषुवज्रावित्यत्रापि स्यात्? इषुवज्रावपि ह्रध्वर्योः क्रतू भवतः; तयोरपि तत्कर्तृकत्वात्। तस्मादध्वर्यूणां यजुर्वेदविदां यो वेदः सोऽध्वर्युशब्देनोपलक्ष्यते। स पुनर्यजुर्वेदः। तत्राध्वर्युवेदे यस्य क्रतोर्विधानं सोऽध्वर्युक्रतुरिति। इतिकत्र्तव्यतोपदेशः प्रयोगश्चानुष्ठानात्मको विधानशब्देनोक्तः। यदि तह्र्रध्वर्युक्रतुवाचिनामनपुंसकलिङ्गानां द्वन्द्व एकवद्भवतीति सूत्रार्थस्तदा सूत्रेऽध्वर्युक्रतुशब्दस्यानपुंसकमित्यस्य च द्वन्द्व इ()तयनेन प्रकृतेन सामानाधिकरण्येन निर्देशो नोपपद्यते। अतोऽध्वर्युक्रतुवाचिनामनपुंसकलिङ्गानामिति वक्तव्यं स्यादित्यत आह&ndash; अध्वर्युक्रतुरनपुंसकम् इति। गौणोऽयं निर्देशः इति। गौण इत्यमुख्य औपचारिक इत्यर्थः। अध्वर्युक्रत्ववयवो द्वन्द्व उपचारेणाध्वर्युक्रतुरित्युक्तः। स एवानपुंसकलिङ्गावयवोऽनपुंलकमिति। गौणन्र्दिएशस्तु लाघवार्थो वेदितव्यः। यदि पुनरनपुंसकमित्यनेन मुख्यया वृत्त्या द्वन्द्व एवोच्येत तदा स नपुसंकम् (2."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.4/2.4.4.md">Edit 2.4.4!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.4";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.5\",\"Previous\":\"2.4.3\",\"अकारादिक्रमसङ्ख्या\":166,\"कौमुदीक्रमसङ्ख्या\":908,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकवद्भावः\",\"विषयः २\":\"द्विगुद्वन्द्वयोः वचननिर्णयः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अध्वर्युक्रतुरनपुंसकम्.\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

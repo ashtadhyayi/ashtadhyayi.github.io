@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="{नास्ति--काशिका}एकशब्दाः इति। एतेन समानशब्दोऽयमेकवाचीति दर्शयति। प्रत्ययः प्रकृतिश्च इति। सर्वशब्देन योऽर्थ उपात्तस्तमाचष्टे। तद्वत् अङ्गा क्षत्त्रिया भक्तिरस्य इति। अङ्गादिभ्यः क्षत्त्रियेभ्यो बहुष्वपत्येषु द्व्यञ्मगध (4.1.168) इत्यादिना विहितस्याणः तद्राजस्य (2.4.62) इत्यादिना लुक् क्रियते। बहुवचनेऽङ्गदयो जनपदिनो जनपदेन समानशब्दा भवन्ति। अत्र जनपदवृत्तिभ्योऽङ्गादिभ्यो यथा सोऽस्य भक्तिः (4.3.95) इत्येतस्मिन् विषये जनपदतदवध्योश्च (4.2.123) इति वुञ् भवति, तथा जनपदवृत्तिभ्योऽपि &ndash;पञ्चाला ब्राआहृणाःइति। यदा पञ्चालनिवासिषु साहचर्यात् पञ्चालादिशब्दो वत्र्तते, तदा भवन्ति ब्राआहृणा जनपदेन बहुवचने समानशब्दाः, न तु ते जनपदिनः। तेनातिदेशाभावादणेव भवति&ndash; पाञ्चालः। सर्वग्रहणम् इत्यादि। यदि सर्वग्रहणं न क्रियते, तदा प्रत्ययस्य विधीयमानतया प्राधान्यात् प्रधाने कार्यसम्प्रत्ययात् तस्यैवातिदेशः स्यात्, न प्रकृतेः। तस्माद्यथा प्रकृतेरप्यतिदेशो भवति तदर्थं सर्वग्रहणं क्रियते। स च इत्यादि। स च प्रकृत्यतिदेशः सर्वगर्हणं द्व्येकयोरेव प्रयोजयति, न बहुषु। जनपदशब्दो नात्र वृद्धः, तस्मादवृद्धो जनपदशब्दो दृश्यते। बहुवचने तु तद्राजस्य बहुषु तेनैवास्त्रियाम् (2."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.3/4.3.100.md">Edit 4.3.100!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.3.100";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.3.101\",\"Previous\":\"4.3.99\",\"अकारादिक्रमसङ्ख्या\":1480,\"कौमुदीक्रमसङ्ख्या\":1480,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"भक्तिः\",\"विषयः २\":\"प्राग्दीव्यतोऽण्। शेषे\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"जनपदिनां जनपदवत्‌ सर्वं जनपदेन समानशब्दानां बहुवचने\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

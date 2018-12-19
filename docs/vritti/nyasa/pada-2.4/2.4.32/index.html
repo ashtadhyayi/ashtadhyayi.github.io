@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="आदेशः कथनम् इति। प्रथमतः प्रतिपादनम्, शब्देन। अनवादेशोऽनुकथम् इति। पश्चात्प्रतिपादनम्। तच्च यादृशमिहाभिप्रेतं तादृशं पश्चाद्वक्ष्यति। आभ्यां छात्राभ्याम् इत्यादि। आदेश एषः। अथो आभ्याम् इत्याद्यन्वादेशः एषः। अथोशब्देनात्रान्वादेश उच्यते। ननु च त्यादाद्यत्वे कृते हलि लोपे (7.2.113) चाथो आभ्यामित्यादिरूपं सिध्यत्येव, तस्मादनुदात्तमेव केवलं विधेयम्, आदेशवचनं त्वनर्थकमित्यत आह&ndash; आदेशवचनम् इत्यादि। अव्ययसर्वनाम्नामकच् प्राक् टेः (5.3.71) इत्यकरच्प्रत्यये कृते सत्यपि अनाप्यकः (7.2.112) इत्यधिकारादिद्रूपस्य लोपो नास्तीत्यस्तयादेशवचने रूपं न सिध्यति। ननु च हलि लोपः (७।२।११३) इत्यनेन हलादाविद्रूपस्य लोपेऽनेनाजादौ यथा स्यादित्यवेवमर्थं कस्मान्न भवति? नैतदस्ति; सामथ्र्याद्धि हलादावेव भवितव्यम्, तत्र स्मैभावादिषु कृतेषु। तस्मात् साकच्कार्थमादेशवचनम्। साकच्कार्थे चास्मिन्नारब्धे शित्करणं सर्वादशार्थम्; अन्यथा ह्रलोऽन्त्स्य स्यात्। प्रयोजनाभावान्न भविष्यतीति चेत्, न; अकारस्य त्वकारवचनं दीर्घादेशनिवृत्त्य्रथं विज्ञायते। अथानुदात्तवचनं किमर्थम्, यावता ऊडिदम्पदाद्यप्पुम्रैद्युभ्यः (6."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.4/2.4.32.md">Edit 2.4.32!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.32";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.33\",\"Previous\":\"2.4.31\",\"अकारादिक्रमसङ्ख्या\":645,\"कौमुदीक्रमसङ्ख्या\":350,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अन्वादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"इदमोऽन्वादेशेऽशनुदात्तस्तृतीयाऽऽदौ\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

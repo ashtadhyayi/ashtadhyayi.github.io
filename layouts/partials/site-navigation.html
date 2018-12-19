@@ -3,6 +3,7 @@
     <a  href="{{ "about/" | relURL }}" class="f3 fw2 hover-white no-underline white-90 dib">
       {{ .Site.Title }}
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       {{ if .Site.Menus.main }}
         <ul class="pl0 mr3">
@@ -15,9 +16,51 @@
           {{ end }}
         </ul>
       {{ end }}
-      {{ if .IsPage }}
-      {{$dataRepoPath := replace .File.Path "vritti/" "" }}
-      <a class="hover-white no-underline white-90" href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">Edit!</a>
+      {{ if isset .Params "vritti"}}
+        <div id="prevSutraDiv"></div>
+        {{$dataRepoPath := replace .File.Path "vritti/" "" }}
+        <a class="ma1 white-90 hover-white " href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">Edit {{.Params.index}}!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "{{.Params.index}}";
+          let sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            // console.log(nextSutraPaada);
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "{{ "data/sutrANi.tsv" | relURL }}",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              // console.log(sutraAutocompleteMap.keys());
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       {{ end }}
       {{ partialCached "social-follow.html" . }}
     </div>

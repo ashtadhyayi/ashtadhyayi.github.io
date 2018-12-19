@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पृष्टप्रतिवचने इति। प्रश्नः = पृष्टम्, भावे निष्ठा। पृष्टपूर्वकप्रतिवचनं पृष्टप्रतिवचनम्, शाकपार्थिवादित्वन्मध्यमपदलोपी समासः। अनद्यतने परोक्ष इति निवृत्तम् इति। अस्वरितत्वात्। अकार्षीः कटं देवदत्त इत्येष प्रश्नः। ननु करोमि भोःइत्येतत् प्रश्नपूर्वकं प्रतिवचनम्। अवोचस्तत्र किञ्चिद्देवदत्तइत्येष प्रश्नः। ननु करोमि भोःइत्येतत् प्रश्नपूर्वकं प्रतिवचनम्। नन्वकार्षीत् इति। प्रश्नपूर्वकं प्रतिवचनं न भवतीति लुङेव भवति। ननु च प्रतिवचनं सर्वं प्रश्नपूर्वकमेवु, तदनर्थकं पृष्टग्रहणम्, व्यवच्छेद्याभावात्? नैतदिष्टम् ;प्रतिवचनशब्दोऽयमस्त्येव पृष्टान्वाख्याने&ndash; यः प्रश्नमन्तरेण न भवति; अस्त्यव्ययीभावे&ndash; वचनं वचनं प्रतिवचनम्, यथार्थे अव्ययम् (2.1.6) इति वीप्सायामव्ययीभावः;अस्ति समाधिवचनः&ndash; प्रतिपूर्वस्य वचेः समाधाविति दर्शनात्, तथा हि वक्तारो वदन्ति&ndash; यदननाभिहितं तन्मया प्रयुक्तमिति, परिष्कृतमित्यर्थः; तदेवमनेकार्थे प्रतिवचनशब्द-, यदि पृष्टग्रहणं न क्रियते सर्वेष्वर्थेषु स्यात्। अ()स्मस्तु क्रियमाणे प्रश्नपूर्वो यः प्रतिवचनशब्दः, स एव गृह्रते, नान्य इति न भव्तयानर्थक्यम्॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.120.md">Edit 3.2.120!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.2.120";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.2.121\",\"Previous\":\"3.2.119\",\"अकारादिक्रमसङ्ख्या\":2109,\"कौमुदीक्रमसङ्ख्या\":2780,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लट्\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"ननौ पृष्टप्रतिवचने\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

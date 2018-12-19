@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="तथा च भावित्&ndash; आ इति स्थिते&ndash;पुगन्तलघु। मिदेर्गुण इत्यतो गुण इत्यनुवर्तते। अङ्गस्येत्यधिकृतमवयवषष्ठ�न्तमाश्रीयते। पुगन्तलघूपधस्येति तद्विशेषणम्। पुक् अन्तो यस्य तत् पुगन्तं। लघ्वी उपधा यस्य तल्लघूपधं। पुगन्तं च लघूपधं चेति समाहारद्वन्द्वात् षष्ठी। इको गुणवृद्धी इति परिभाषया इक इत्युपस्थितं स्थानषष्ठ�न्तमाश्रीयते। तदाह&ndash;पुगन्तस्येत्यादिना। अङ्गस्येक इति। अङ्गावयवस्येत्यर्थः। द्वेष्टि द्वेष्टत्याद्युदाहरणम्। नन्वत्राऽङ्गावयवस्येकस्तदुपरितनहला व्यवधानात्सार्वधातुकपरत्वाऽभावात्कथमिह इको गुण इत्यत आह&ndash;येन नेति। येन = स्थान्युत्तरवर्णेन परनिमित्तस्य , नाऽव्यवधानं = व्यवधानमवर्जनीयमिति यावत्, तेन = वर्णेन व्यवहितेऽपि परनिमित्तं कार्यं भवतीत्यर्थः। कुत इत्यत आह&ndash; वचनप्रामाण्यादिति। तथाविधवर्णव्यवधानेऽपि कार्यप्रवृत्तौ वचनारम्भस्यैव प्रमाणत्वादित्यर्थः। लघूपधस्य हीको गुणो विधियते, उपधात्वं चाऽन्त्यादलः पूर्वस्यैव भवति। ततश्चेक उपर्यन्त्यस्य वर्णस्याऽभावे इक उपधात्वाऽभावाल्लघूपधस्याऽङ्गस्य गुणविधानं निर्विषयमेव स्यादतस्तद्व्यवधानं सोढव्यमिति भावः। ननु व्यवहितस्यापीको गुणप्रवृत्त्यभ्युपगमे भिनत्ति छिनत्तीत्यादौ इकारस्यापि गुणः स्यादित्यत आह&mdash;तेनेति। अवर्जनीयव्यवधनास्यैवाश्रयमेनेत्यर्थः। उपधात्वस्यैकमेव वर्णमुपरितनमादाय सम्भवादनेकवर्णव्यवधानं नादर्तव्यमिति भावः। गुणे प्राप्त इति। भवित् - आ इति स्थिते डाभावसंपन्नस्याऽऽकारस्य स्थानिवत्त्वेन सार्वधातुकतया तस्मिन् परे भविदित्यङ्गावयवस्योपधाभूतस्येकारस्य गुणे प्राप्ते सतीत्यर्थः। न च भूधातोर्विहितं सार्वधातुकं प्रति भूधातुरेवाऽङ्गं, न तु भवित् इति विकरणविशिष्टमिति वाच्यम्, अङ्गसंज्ञासूत्रे तदादिग्रहणेन विकरणविशिष्टस्याऽप्यङ्गत्वात्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.86.md">Edit 7.3.86!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.3.86";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.3.87\",\"Previous\":\"7.3.85\",\"अकारादिक्रमसङ्ख्या\":2382,\"कौमुदीक्रमसङ्ख्या\":2181,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सार्वधातुके आर्धधातुके च अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"गुणः\",\"सूत्रम्‌\":\"पुगन्तलघूपधस्य च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

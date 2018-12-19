@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="प्रकृत्यर्थविशेषं चैतत्िति। एतेनोपपपदत्वं निरस्यति। उपपदत्वे हि केवलाद्धातोर्न स्यादित्यादित्यभिप्रायः। अत्र तिङादेशौ वा हिस्वौ स्याताम्, लोडादेशौ वेति द्वौ पक्षौ। ननु च प्रथमपक्षाशङ्कायाः प्रसङ्ग एव नास्ति; लोट इति वचनात्,तत् कथमसावाशङिकतः? लोट्स्थानिकत्वादादेशोऽपि लोड्()व्यपदेशमासादयीति युक्तमाशङ्कितुम्। तत्र हि यदि पूर्वकः पक्ष आश्रीयते तदाभुङ्क्ष्व भुङ्क्ष्वेत्येवाहं भुञ्जैइतिआडुत्तमस्य पिच्च(3.4.92) इति, पित्त्वान्ङित्त्वं नास्ति, ततश्चश्नषोरल्लोपः(6.4.111) इत्याकारलोपो न स्यात्। उभावपि च परस्मैपदानामात्मनेपदानामनियमेन स्याताम्;नियमहेतोरभावात्। सामान्येन तिङां स्थाने विधीयमानयोः कृत एतल्लभ्यते ! यतः परस्मैपदानां ह्रादेशेन भविव्यम्, इतरेषां स्वादेशेनेति। तस्माद्दुष्टोऽयं पक्ष इति मत्वा द्वितीयपक्षमाश्रित्याह--तस्य च लोटःइत्यादि। यस्मिन् पक्षे दोषः प्रसजति तं प्रतिविधास्यति।तध्वंभाविनस्तु वा भवतःइति। लोट इत्यपेक्ष्यते। तश्च ध्वञ्च तध्वमौ, तौ भाविनौ यस्य लोटः स तष्वम्भावी। एतेन तादशार्थो लोडेव स्थानी; तादथ्र्यात्, सूत्रे तशब्देन व्यपदिष्टो ध्वमादेशार्थश्च ध्व#ंशब्देनेति दर्शयति। अथ तध्वमावेवस्थानिनौ कस्मान्न विज्ञायेते?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.4/3.4.2.md">Edit 3.4.2!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.4.2";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.4.3\",\"Previous\":\"3.4.1\",\"अकारादिक्रमसङ्ख्या\":1208,\"कौमुदीक्रमसङ्ख्या\":2825,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययार्थाः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रियासमभिहारे लोट्; लोटो हिस्वौ; वा च तध्वमोः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

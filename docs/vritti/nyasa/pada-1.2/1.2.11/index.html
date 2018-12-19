@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="लिङसिचावात्मनेपदेषु परतःइति। कथं पुनर्लिङात्मनेपदेषु परतो भवति, यावता सिच एवात्मनेपदेषु परत्वं सम्भवति, न लिङः? एवं मन्यते&ndash; लिङेकदेशेऽत्र सीयुटि लिङशब्दो वर्तते, यथा&ndash; न धातुलोप आर्धधातुके (1.1.4) इत्यत्र धात्वेकदेशे धातुशब्दो वर्तते। तस्मात् सीयुट एवानेन प्रकारेण कित्त्वं विधीयते। अथ वा&ndash; यथा हल्ङ्यादिसूत्रे (6.1.66) ययोरेव दीर्घत्वं सम्भवति तयोरेव ङ्यापो दीर्घादित्येतद्विशेषणम्, तथेहापि यस्मादात्मनेपदं परं सम्भवति सिचः, तस्यैवैतद्विशेषणम्। आत्मनेपदग्रहणं भवति परस्मैपदव्यवच्छेदार्थम्। भिस्तीष्टइति। आशिषि लिङलोटौ (3.3.173) इति लिङ्; स्वरितत्वादात्मनेपदम्। एवमुत्तरत्रापि स्वरितञितः कत्र्रयात्मनेपदमनेनैव वेतितव्यम्। सुट तिथोः (3.4.107) इति सुट्। कर्तरि श्नम्, लिङ सलोपोऽनन्त्यस्य (7."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.11.md">Edit 1.2.11!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.11";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.12\",\"Previous\":\"1.2.10\",\"अकारादिक्रमसङ्ख्या\":2988,\"कौमुदीक्रमसङ्ख्या\":2300,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"कित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लिङ्सिचावात्मनेपदेषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

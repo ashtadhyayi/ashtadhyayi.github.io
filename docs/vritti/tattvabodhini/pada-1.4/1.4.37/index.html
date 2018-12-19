@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="क्रुधद्रुह। क्रुधे क्रोधे, द्रुह जिघांसायाम्&rsquo;, ईर्ष्य ईर्ष्यायाम्, असूयतिः कण्ड्वादियगन्तः, एषामर्थ इवार्थे येषां धातूनामित्यर्थः। द्रोहोऽपकार इति। द्रुह द्रोहे&rsquo;इति पाठाभिप्रायेणोक्तं, जिघांसाद्रोह एवेत्यर्थतोऽनुभाषणं वा। अक्षमेति। परसंपत्त्यसहनमित्यर्थः। क्रुधद्रुहोरकर्मकत्वात्तद्योगे षष्ठी प्राप्ता, अन्ययोस्तु सकर्मकत्वाद्द्वितीया प्राप्ता। ननु चित्तदोषार्थानामित्येवास्तु, किं क्रोधादीनां विशिष्योपादानेनेति चेत्?अत्राहुः&ndash;द्विषादावतिप्रसङ्गवारणाय विशिष्योपादानम्। तेन योऽस्मान्द्वेष्टि यं च वयं द्वि ष्मः इत्यत्र चतुर्थी न भवति। तत्र ह्यनभनन्दनं द्विषेरर्थः। अत एवाऽचेतनेषु न प्रयुज्यते --औषधं द्वेष्टि देवदत्तमिति। कोपप्रभवा एवेति। कथं तर्हि कुप्यसि कस्मैचित्इति। न हि कोपः कोपप्रभवः। अत्र व्याचख्युः&ndash;कुपिरत्र द्रोहार्थ इति। पत्ये शेते इतिवत् क्रिययायम्--- इत्येव सिद्धे क्रुधद्रुहोग्र्रहणं चिन्त्यप्रयोजनमित्याहुः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.4/1.4.37.md">Edit 1.4.37!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.37";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.38\",\"Previous\":\"1.4.36\",\"अकारादिक्रमसङ्ख्या\":1213,\"कौमुदीक्रमसङ्ख्या\":575,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रदानम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रुधद्रुहेर्ष्याऽसूयार्थानां यं प्रति कोपः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

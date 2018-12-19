@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सुप् सुपा इति च वर्तते। विभक्त्यादिश्वर्थेषु यदव्ययं वर्तते तत् समर्थेन सुबन्तेन सह समस्यते, अव्ययीभावश्च समासो भवति। वचनग्रहणं प्रत्येकं सम्बध्यते। विभक्तिवचने तावत् स्त्रीष्वधिकृत्य कथा प्रवर्तते अधिस्त्रि। अधिकुमारि। सप्तम्यर्थे यदव्ययं तद् बिभक्तिवचनम्। समीपवचने कुम्भस्य समीपम् उपकुम्भम्। उपमणिकम्। समृद्धिरृद्धेराधिक्यम् समृद्धिर् मद्राणां सुमद्रम्। सुमगधं वर्तते। व्यृद्धिरृद्धेरभावः गवदिकानाम् ऋद्धेरभावः दुर्गवदिकम्। दुर्यबनं वर्तते। अर्थाभावः वस्तुनो ऽभावः अभावो मक्षिकाणां निर्मक्षिकम्। निर्मशकम् वर्तते। अत्ययः अभूतत्वम्, अतिक्रमः अतीतानि हिमानि अतिहिमम्। निर्हिमम्। निःशीतं वर्तते। असम्प्रति उपभोगस्य वर्तमानकालप्रतिषेधः अतितसृकम्। तैसृकमाच्छादनम्, तस्य अयम् उपभोगकालो न भवति इत्यर्थः। शब्दप्रादुर्भावः प्रकाशता शब्दस्य इति पाणिनि। तत्पाणिनि। पाणिनिशब्दो लोके प्रकाशते इत्यर्थः। पश्चात् अनुरथं पादातम्। रथानां पश्चातित्यर्थः। यथा। यथाऽर्थे यदव्ययं वर्तते तत् समस्यते। योग्यता विप्सा पदार्थानतिवृत्तिः सादृश्यं च इति यथार्थाः। योग्यतायाम् अनुरूपम्। रूपयोग्यम् भवति इत्यर्थः। वीप्सायाम् अर्थमर्थं प्रति प्रत्यर्थम्। पदार्थनतिवृत्तौ यथाशक्ति। आनुपूर्व्यमनुक्रमः अनुज्येष्ठं प्रविशन्तु भवन्तिअः। ज्येष्ठानुपूर्व्या भवन्तः प्रविशन्तु इत्यर्थः। यौगपद्यम् एककालता सचक्रम् धेहि। युगपच्चक्रं धेहि इत्यर्थः। सादृश्यम् तुल्यता। किमर्थम् इदम् उच्यते, यथार्थ इत्येव सिद्धम्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-2.1/2.1.6.md">Edit 2.1.6!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.6";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.7\",\"Previous\":\"2.1.5\",\"अकारादिक्रमसङ्ख्या\":400,\"कौमुदीक्रमसङ्ख्या\":652,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययीभावः समासः\",\"विषयः २\":\"समासः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अव्ययं विभक्तिसमीपसमृद्धिव्यृद्ध्यर्थाभावात्ययासम्प्रतिशब्दप्रादुर्भावपश्चाद्यथाऽऽनुपूर्व्ययौगपद्यसादृश्यसम्पत्तिसाकल्यान्तवचनेषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

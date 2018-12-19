@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="धातोः कर्मणः। गुप्तिज्किद्भ्यः इत्यतः सन्नित्यनुवर्तते। इच्छायाः श्रुतत्वात्तां प्रत्येव कर्मत्वं विवक्षितम्। तथा समानकर्तृकत्वमपि इच्छानिरूपितमेव विवक्षितम्। कर्मेति स्ववाचकशब्दद्वारा धातौ सा मानाधिकरण्येनान्वेति। एवं च इच्छासमानकर्तृकत्वे सति इच्छाकर्मीभूतो यो व्यापारस्तद्वाचकाद्धातोरिच्छायां सन् वा स्यादिति फलति। तदाह &ndash; इषिकर्मण इत्यादि। इषिरिच्छा। इषिणा एककर्तृकतत्वादिषैकर्मीभूतव्यापारवाचकाद्धातोरित्यर्थः। ननु समानकर्तृकादित्युक्त्यैव धातोरिति लब्धम्, धात्वर्थव्यापाराश्रयस्यैव कर्तृत्वादित्यत आह&ndash; धातोरिति। धातोरिति विहितस्यैव प्रत्ययस्यार्द्धधातुकत्वं, नतु धातोः परस्य। अन्यथा जुगुप्सते इत्यत्र आर्द्धधातुकत्वे फलमाह &ndash; इडिति। द्वित्वमिति। सन्यङोरित्यनेनेति भावः। अभ्यासस्य इत्त्वविधिं स्मारयति&ndash; सन्यत इति। पठितुमिच्छतीति। भावस्तुमुनर्थः। अव्ययकृतो भावे इत्युक्तेः। धात्वर्थ एव भाव इत्युच्यते। तथा च पठितुमित्यस्य पठनक्रियैऽवार्थः। तस्मिन् पठने #इच्छाकर्मत्वम्, इच्छासमानकर्तृकत्वं च सना गम्यते। तथा च स्वकर्तृकं फटनमिच्छतीत्यर्थे पिपठिषतीति शब्दो वर्तत इत्युक्तं भवति। अथ अद भक्षणे इति धातोः सनि घस्लृभावं स्मारयति&ndash; लुङ्सनोर्घस्लृ इति। घस् स इति स्थिते इटमाशङ्क्य आह&ndash; एकाच इति नेडिति। घस् स इति स्थिते आह&ndash; सस्य तत्वमिति। सः स्यार्द्धधातुके इत्यनेनेति भावः। जिघत्सतीति। द्वित्वे अभ्यासजश्त्वचुत्वे इति भावः। य्सनोर्द्वित्वमिति। तृतीयस्य व्यञ्जनस्ये ति पक्षे ईर्ष्य् इस इत्यत्र यकारमात्रस्य द्वित्वे, सनः षत्वेसं युक्तद्वियकारं रूपमिति भावः। तदाह &ndash; ईर्ष्ययिषतीति। तथा च सन्नन्ते ईकाररेफषकारयकारद्वित्वेकारषकाराः। तृतीयस्यैकाच इति पक्षे ईर्ष्य इ स इत्यत्र स इत्यस्य द्वित्वे अभ्यासेत्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.1/3.1.7.md">Edit 3.1.7!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "3.1.7";
+          let sutraBasics = JSON.parse("{\"Next\":\"3.1.8\",\"Previous\":\"3.1.6\",\"अकारादिक्रमसङ्ख्या\":1998,\"कौमुदीक्रमसङ्ख्या\":2608,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सनादयः\",\"विषयः २\":\"सन्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धातोः कर्मणः समानकर्तृकादिच्छायां वा\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

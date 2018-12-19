@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="क्षुब्धः इति। क्षुभ सञ्चलने (धा।पा।१२३९) इत्यस्येडभावो निपात्यते। मन्थाभिधानं चेत्() इति। समुदायेन चेन्मन्थोऽभिधीयते। मन्थ इति द्रवद्रव्यसम्पृक्ताः सक्तव उच्यन्ते। क्षुग्धो मन्थः इति। चलितो मन्थ इत्यर्थः। क्षुभितं मन्तेन इति। नात्र मन्थोऽभीधीयते, किं तर्हि? तत्साधनं चलनम्()। अथ मन्थाभिधाने क्षुब्धशब्दो निपात्यते, क्षुब्धा गिरिनटी, क्षुब्धा सेना, क्षुब्धः समुद्रः&ndash;इत्यादि। नोपपद्यते? इत्यत आह&ndash;क्षुब्धा गिरिनदी इत्तयादि। चलितमन्थसाधम्र्याद्()गिरिनद्यादिषु तथा व्यवपेश इति दर्शयति। यथा क्षुब्धत्वं मन्थस्य चलनं प्रति साधनभावः, तथा गिरिनद्यादेरर्थस्य चलनं प्रति साधनभावः क्षुब्धमन्थसाधम्र्यात्? क्षुब्धशब्देन व्यपदिश्यते, यथा गोसाधम्र्याद्गोशब्देन वाहीक उच्यते। स्वान्तम्(), ध्वान्तम् इति। स्वन ध्वन शब्दे (धा।पा।८२७,८२८)। इडभावो निपात्यते। एवमुत्तरेष्वप्युदाहरणेषु वेदितव्यम्()। बाह्रेषु विषयेष्वविक्षिप्तमनाकुलं मनः=स्वःन्तमुच्यते। अनुनासिकस्य क्विझलोः क्ङिति (6."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.2/7.2.18.md">Edit 7.2.18!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.2.18";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.2.19\",\"Previous\":\"7.2.17\",\"अकारादिक्रमसङ्ख्या\":1236,\"कौमुदीक्रमसङ्ख्या\":3058,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"निषेधः\",\"विषयः ३\":\"निष्ठा\",\"सूत्रम्‌\":\"क्षुब्धस्वान्तध्वान्तलग्नम्लिष्टविरिब्धफाण्टबाढानि मन्थमनस्तमःसक्ताविस्पष्टस्वरानायासभृशेषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

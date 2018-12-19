@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="लुङि च। हनो वधादेशः स्याल्लुङीत्यर्थः स्पष्टः। वधादेशोऽदन्त इति। धकारादकारो न सुखोच्चारमार्थ इति भावः। तत्प्रयोजनं तु अनुपदमेव अवधीदित्यत्र वक्ष्यते। ननु आशीर्लिङि हन्यादिति स्थिते आर्द्धधातुके परे कृतस्य वधादेशस्य आर्द्धधातुकोपदेशे अकारान्तत्वाऽभावात्कथं वध्यादित्यत्र अल्लोप इत्यत आह&ndash; विषयसप्तमीति। तथा च आर्द्धधातुके विवक्षिते तत्प्रवृत्तेः प्रागेव वधादेशे कृते आर्द्धधातुकप्रवृत्तिरिति फलितम्। ततश्च आर्द्धधातुकोपदेशे वधादेशस्य अकारान्तत्वादल्लोपो निर्बाधः। तदाह&ndash;तेनेति। अवधीदिति। सिचि अल्लोपे कृते वधादेशस्य धकारान्ततया एकाच्त्वेऽप्यादेशोपदेशेऽनेकाच्त्वेन एकाच उपदेशे इति निषेधाऽभावात्सिच् इट्। अतो हलादेरिति वृद्धिस्तु न भवति, अचः परिस्मिन्नि त्यल्लोपस्य स्थानिवत्त्वात्। एतदर्थमेव हि वधादेशस्य अदन्तत्वमाश्रितम्। स्वरितेत इति। उभयपदिन इति फलितम्। द्विष अप्रीताविति। अनिट्। द्वेष्टीति। पित्त्वेन ङित्त्वाऽभावाल्लघूपधगुण इति भावः। द्विष्टः द्विषन्ति। द्वेक्षि द्विष्ठः द्विष्ठ। द्वेष्मि द्विष्वः द्विष्मः। तङि उदाहरति&ndash; द्विष्टे इति। ङित्त्वान्न गुणः। द्विषाते द्विषते। द्विक्षे द्विषाथे द्विड्ढ्वे। द्विषे द्विष्वहे द्विष्महे। षढोरिति षस्य कत्वं मत्वा आह&ndash; द्वेक्ष्यतीति। द्विड्ढीति। हेर्धिः, षस्य जश्त्वेन डः, ष्टुत्वेन ढः। द्विष्टात्,द्विष्टम्, द्विष्ट। द्वेषाणीति। आटः पित्त्वेन ङित्त्वाऽभावाद्गुणः, षात्परत्वाण्णत्वम्। द्वेषाव द्वेषाम। द्विष्टाम् द्विषाताम् द्विषताम्। द्विक्ष्व द्विषाथाम् द्विड्ढ्वम्। द्वैषे इति। आटः पित्त्वेन ङित्त्वाऽभावाद्गुण इति भावः। अद्वेडिति। लङस्तिप्। गुणः। इकारलोपः। हल्ङ्यादिलोपः। वाऽवसाने इति झलां ज शिति च चर्त्वजश्त्वे इति भावः। अद्विष्टाम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.4/2.4.43.md">Edit 2.4.43!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.43";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.44\",\"Previous\":\"2.4.42\",\"अकारादिक्रमसङ्ख्या\":3006,\"कौमुदीक्रमसङ्ख्या\":2434,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"धात्वादेशः\",\"विषयः २\":\"आर्धधातुके\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लुङि च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

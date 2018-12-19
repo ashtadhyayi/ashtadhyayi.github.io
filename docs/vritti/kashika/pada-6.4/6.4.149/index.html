@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सूर्य तिस्य अगस्त्य मत्स्य इत्येतेषां यकारस्य उपधायाः भस्य लोपो भवति ईति परतस्तद्धिते च। सूर्येणैकदिक् सौरी बलाका। अणि यो यस्य इति लोपः तस्य असिद्धत्वं न अस्ति, व्याश्रयत्वात्। ईकारे तु यस्तस्या सिद्धत्वादुपधायकारो भस्याणन्तस्य सूर्यस्य सम्बन्धी इति लुप्यते। तिष्य तैष्महः। तैषी रात्रिः। अगस्त्य अगस्त्यस्य अपत्यं स्त्री, ऋषित्वादणि कृते आगस्ती। आगस्तीयः। मत्स्य गौरादित्वात् ङीष्, मत्सी। उपधायाः इति किम्? मत्स्यचरी। यग्रहणम् उत्तरार्थम्। विषयपरिगणनम् अत्र कर्तव्यम्। मत्स्यस्य ङ्याम् इति वक्तव्यम्। इह मा भूत्, मत्स्यस्य इदं मांसं मात्स्यम्। सूर्यागस्त्ययोश्छे च ग्यां च। सौरीयः। सौरी। आगस्तीयः। आगस्ती। इह मा भूत्, सौर्यम् चरुं निर्वपेत्। आगस्त्यः। तिष्यपुष्ययोर् नक्षत्राणि। तिष्येण नक्षत्रेण युक्तः कालः तैषः। पौषः। अन्तिकस्य तसि कादिलोप आद्युदात्तं च। अन्तिकशब्दस्य तसिप्रत्यये परतः ककारदेः शब्दस्य लोपः, आद्युदात्तत्वम् च। अन्तितो न दूरात्। तमे तादेश्च। तमप्रत्यये अन्तिकशब्दस्य तकारादेः ककारादेश्च लोपो वक्तव्यः। तत्र तादिलोपे अन्तमः। कादिलोपे अन्तितमः। कादिलोपे बहुलम् इति वक्तव्यम्। अन्यत्र अपि हि वृश्यते, अन्तिके सीदति इति अन्तिषत्। पूर्वपदात् (*8,3."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-6.4/6.4.149.md">Edit 6.4.149!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.4.149";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.4.150\",\"Previous\":\"6.4.148\",\"अकारादिक्रमसङ्ख्या\":3778,\"कौमुदीक्रमसङ्ख्या\":499,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"यलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"सूर्यतिष्यागस्त्यमत्स्यानां य उपधायाः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

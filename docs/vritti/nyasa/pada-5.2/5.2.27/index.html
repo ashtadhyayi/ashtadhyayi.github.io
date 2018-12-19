@@ -53,6 +53,11 @@
 बाल-मनोरमा
 विनञ्भ्यां नानाञौ नसह १८०५, ५।२।२७ विनञ्भ्यां। नसहेति सङ्घातः पृथक्त्वे वर्तते। प्रकृतिविशेषणमिदम्। तदाह&ndash;असहार्थे इति। तस्य विवरणं&ndash;पृथग्भावे इति। वर्तमानाभ्यामित्यनन्तरं विनञ्भ्यामिति शेषः। स्वार्थ इति। प्रत्ययार्थस्य अनिर्देशादिति भावः। प्रत्ययाविति। यथासङ्ख्यं नानाञाविति शेषः। विनेति। वेर्नाप्रत्यये रूपम्। पृथगित्यर्थः। नानेति। नञो नाञि आदिवृद्धौ रूपम्। पृथगित्यर्थः। नसहेत्यस्य प्रत्ययार्थत्वे तु नेत्यनेन न सहेति गम्येत। एवं सति नाना न न सह, किंतु सहैवेत्यर्थः स्यात्, द्वौ नञौ प्रकृतमर्थं गमयतः` इति न्यायादिति भाष्ये स्पष्टम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -66,11 +71,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.2/5.2.27.md">Edit 5.2.27!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "5.2.27";
+          let sutraBasics = JSON.parse("{\"Next\":\"5.2.28\",\"Previous\":\"5.2.26\",\"अकारादिक्रमसङ्ख्या\":3171,\"कौमुदीक्रमसङ्ख्या\":1828,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तेन वित्तश्चुञ्चुप्चणपौ\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"विनञ्भ्यां नानाञौ नसह\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

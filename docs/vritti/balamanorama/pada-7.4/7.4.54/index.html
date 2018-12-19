@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सनि मीमा। सादौ सनीति। सः सि इत्यतः सीत्यनिवृत्तेरिति भावः। अभ्यासलोप इति। अत्र लोपः इत्यनेनेति भावः। पिस्त् स इति स्थिते आह&ndash; स्कोरिति। दरिद्रातेः सनि तनिपतीति इड्विकल्पमुदाहरति&ndash; दिदरिद्रिषति। दिदरिद्रासतीति। डु मिञिति। डु मिञ् प्रक्षेपणे स्वादिः, मीञ् हिंसायाम् क्र्यादिः, आभ्यां सन्नित्यर्थः। सनि मीमेत्यतर् मीग्रहणेन एतयोरुभयोर्ग्रहणमिति भावः। ननु मीति दीर्घश्रवणात् डु मिञ् इत्यस्य ह्रस्वान्तस्य कथं ग्रहणमित्यत आह&ndash; कृतदीर्घस्येति। डु मिञ्?धातोः सनि अज्झनेति कृतदीर्घस्य, तथा मीञ् हिंसायामिति स्वतः सिद्धदीर्घस्य च मीरूपाऽविशेषादुभयोरपि ग्रहणमित्यर्थः। सः सीति। उभयोरपि धात्वोः मी स इति स्थिते सनि मीमेति इसादेशे द्वित्वे अत्र लोपः इत्यभ्यासलोपे सः सीति सस्य तकार इत्यर्थः। मित्सति मित्सते इति। प्रकृतेर्ञित्त्वात् पूर्ववत्सनःर इति उभयपदित्वम्। माङ्मेङोरिति। मेङः सनि आदेचः सनि आत्त्वे कृते मारूपत्वाऽविशेषात् सनि मीमेत्यत्र उभयोरपि ग्रहणमिति भावः। दोदोणोरिति। दो अवखण्डने इतिधातोः सनि आत्त्वे कृते दारूपाऽविशेषाद्धुत्वादुभयोर्ग्रहणमिति भावः। दित्सतीति। हलन्ताच्चेति कित्तवान्नोपधागुणः। देङिति। तस्यापि कृतात्त्वस्य घुत्वात् सनि मीमेत्यत्र ग्रहणमिति भावः। रिप्सते इति। रभधातोः रूपम्। लिप्सते इति। लभधातो रूपम्। पित्सतीति। पत्लृधातो रूपम्। पदधातोः पित्सते इति रूपम्। सनि इस् वाच्य इति। आकारस्येति शेषः।ष रित्सतीति। सनि इसादेशः। अत्र लोपः इत्यभ्यासलोपः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.4/7.4.54.md">Edit 7.4.54!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.4.54";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.4.55\",\"Previous\":\"7.4.53\",\"अकारादिक्रमसङ्ख्या\":3593,\"कौमुदीक्रमसङ्ख्या\":2623,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सनि अङ्गकार्याणि अभ्यासस्य लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"सनि मीमाघुरभलभशकपतपदामच इस्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

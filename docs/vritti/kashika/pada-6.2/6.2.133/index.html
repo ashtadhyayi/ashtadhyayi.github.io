@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="आचर्यः उपाद्यायः। राजा ईश्वरः। ऋत्विजो याजकाः। संयुक्ताः स्त्रीसम्बन्धिनः श्यालादयः। ज्ञातयो मातृपितृसम्बन्धिनो बान्धवाः। आचार्याद्याख्येभ्यः परः पुत्रशब्दो नद्युदात्तो भवति आख्याग्रहणात् स्वरूपस्य पर्यायाणां विशेषाणां च ग्रहणं भवति। आचार्यपुत्रः। उपाध्यायपुत्रः। शाकटायनपुत्रः। राजपुत्रः। ईश्वरपुत्रः। नन्दपुत्रः। ऋत्विक्पुत्रः। याजकपुत्रः। होतुःपुत्रः। संयुक्तपुत्रः। सम्बन्धिपुत्रः। श्यालपुत्रः। जञातिपुत्रः। भ्रातुष्पुत्रः। ऋतो विद्यायोनिसम्बधेभ्यः (*6,3.23)। इति षष्ठ्या अलुक्। पुत्रस्वरे प्रतिषिद्धे समासान्तोदात्तत्वम् एव भवति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-6.2/6.2.133.md">Edit 6.2.133!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.2.133";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.2.134\",\"Previous\":\"6.2.132\",\"अकारादिक्रमसङ्ख्या\":2140,\"कौमुदीक्रमसङ्ख्या\":3867,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नाचार्यराजर्त्विक्संयुक्तज्ञात्याख्येभ्यः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

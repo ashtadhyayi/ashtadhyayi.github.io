@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पदार्थे इति। अन्यस्य पदस्यार्थो लक्ष्यते। न स्वार्थः, नापि स्वसम्बन्धिनः; पदस्यार्थः पदार्थः। स्वपदार्थग्रहणं, स्वसम्बन्धिपदार्थग्रहणं वा पदार्थग्रहणमनर्थकं स्यात्। अपिशब्दस्य हि योऽर्थः यश्चापिशब्दसम्बन्धिनः स्यादित्यादेः पदस्य , स पदार्थ एवेति किं पदार्थग्रहणेन? तस्मात् पदार्थग्रहणसामथ्र्याद्विशिष्टपदस्यार्थो विज्ञायत इत्याह&ndash; पदान्तरस्य इत्यादि। सर्पिषोऽपि स्यात् इति। कर्मप्रवचनीयसंज्ञयोपसर्गसंज्ञाया निवर्तितत्वात् उपसर्गप्रादुभ्र्यामस्तिर्यच्परः (८।३।क८७) इति षत्वं न भवति। अथ सर्पिःशब्दाद्()द्वितीया कथं न भवति? अपिशब्देन तस्य योगासम्भवात्। सर्पिषो हि या मात्रा साऽपिशब्देन युक्ता, न सर्पिः। मात्राशब्दात् तर्हि कस्मान्न भवति? तस्य प्रयोगाभावात्। यदा तु प्रयुज्यते, तदा कर्मप्रवचनीयसंज्ञैव नास्ति; अप्रयुज्यमानस्य पदान्तरस्यार्थे तद्विधानात्। अधिकार्थवचनेन इति। अधिकर्थो मूलकसहरुआसेकादिः, तस्य वचनेन सेकादावर्थे क्रियायां यच्छक्तेरप्रतिघातस्याविष्करणम् = प्रकाशनं तत्सम्भावनम्। अपि सिञ्चेन्मूलकसहरुआम्। अपि स्तुयाद्राजानम् इति। तस्य सेके स्तुतौ च सामथ्र्यं न विहन्यत इत्यर्थः। सम्भावनेऽलमिति चेत् सिद्धाप्योगे (3."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.4/1.4.95.md">Edit 1.4.95!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.95";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.96\",\"Previous\":\"1.4.94\",\"अकारादिक्रमसङ्ख्या\":105,\"कौमुदीक्रमसङ्ख्या\":556,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मप्रवचनीया\",\"विषयः २\":\"निपातः\",\"विषयः ३\":\"प्राङ्\",\"सूत्रम्‌\":\"अतिरतिक्रमणे च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

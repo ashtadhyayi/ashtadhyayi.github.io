@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पूर्वापर। एकदेशशब्दोऽवयवे रूढः। अतएव तस्य कर्मधारायत्वेऽपि ततो मत्वर्थीयः। कृष्णसर्पवानित्यत्रेव न कर्मधारयान्मत्वर्थीयःइति निषेधस्य रूढेष्वप्रवृत्तेः। यद्यपीह एकगोपूर्वादिति ठञ् प्राप्तः, तथाप्यत एव निर्देशादिनिः। तदेतदाह&ndash;अवयविनेति। नन्विदं सूत्रं व्यर्थं, पूर्वकायइत्यादिप्रयोगाणां कर्मधारयेणैव सिद्धेः, ऊर्ध्वकायइतिवत्, समुदाये हि वृत्ताः शब्दा अवयवेष्वपि प्रवर्तन्तेइति न्यायादत आह&ndash;षषाठछीसमासापवाद इति। तथा च कायपूर्वंइत्याद्यनिष्टप्रयोगनिवृत्तये सूत्रमिति भावः। पूर्वं कायस्येति। यद्यपि अन्यारादिति सूत्रे दिशि दृष्टः शब्दो दिक्शब्दइति व्याख्यानेन संप्रत्यदिग्वृत्तिनापि योगे पञ्चमी स्वीकृतेति षष्ठीह दुर्लभा, तथापि तस्य परमाम्रेडितमिति लिङ्गात् अवयववाचिदिक्शब्दयोगे पञ्चमी नेत्युक्तत्वात्षष्ठ�एव भवतीति भावः। पूर्व नाभेरिति। नाभेर्यः पूर्वो भागः स कायस्यावयव इत्यर्थः। नामेरिति दिग्योगलक्षणा पञ्चमी। तेनाऽत्र पूर्वस्य भागस्य नाभिरवधिः, न त्वेकदेशिनीति नाभ्या सह समासो नेत्यर्थः। कायेन तु स्यादेव पूर्वकायो नाभेःइति। पूर्वशब्दस्य नित्यसापेक्षत्वात्प्रधानत्वाच्च। पूर्वश्छात्राणामिति। नासौ निर्धारणे षष्ठी, किं तु समुदायसमुदायिसंबन्धे। बहुवचनं तद्भूतावयवभेदसमुदायविवक्षया। ततश्छात्राणामेकदेशित्वे सत्यप्येकत्ववैशिष्ट�आऽभावान्न समासः। सर्वोऽपीति। पूर्वादिभिन्नोऽपीत्यर्थः। ज्ञापकादिति। अन्यथा अह्नस्य सायपूर्वत्वं न स्यादिति भावः। मध्याह्न इति। राजाहःसखिभ्याःइति टच्। अह्नोह्नइत्यह्ना देशःष। अयं चादेशो मध्याह्नसायाह्नशब्दयोरूर्ध्वकायवत्कर्मधारयेण न निर्वहति, तस्यैकदेशिसमासप्रयुक्तत्वात्, अतोऽत्र ज्ञापकाश्रयणं युक्तमेवेति बोध्यम्। इत्याहुरुतु। न चैवं दिनमध्यो रात्रिमध्यइत्यादि न सिध्येदिति वाच्यम्। ज्ञापकसिद्धस्याऽसार्वत्रिकत्वात्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.2/2.2.1.md">Edit 2.2.1!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.2.1";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.2.2\",\"Previous\":\"2.1.72\",\"अकारादिक्रमसङ्ख्या\":2429,\"कौमुदीक्रमसङ्ख्या\":712,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकदेशि तत्पुरुषः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"पूर्वापराधरोत्तरमेकदेशिनैकाधिकरणे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="वर्णानां तणितनितान्तानाम् (फि।सू।२।२३) इत्यस्यायमर्थः&ndash; वर्णवाचिनां तशब्दान्तानां णकारान्तानां तिशब्दान्तानां निशब्दान्तानां चादिरुदात्तो भवतीति, आदिग्रहणमुदात्तग्रहणं च प्रकृतं तत्रानुवत्र्तते। प्रकृता इति। प्रकर्षेण कृतेति, कुगतिप्रादयः (2.2.12) इति समासः। प्रशब्दोऽयं निपातः, निपाता आद्युदात्ताः (फि।सू।४।८०) उपसर्गाश्चाभिवर्जम् (फि।सू।४।८१) इत्युदात्तः। समासेऽपि कृते गितरनन्तरः (6.2.49) इति पूर्वपदप्रकृतिस्वरेणाद्युदात्त एव भवतीति। सेषमनुदात्तम्। घृतादित्वादन्तोदात्तः इति। घृतादीनाञ्च (फि। सू।१।२१।) इत्यन्तोदात्तत्वविधानात्। एतच्च फिट्सूत्रे पठ()ते। शिति इति वर्णानाम् (फि।सू।२।३३) इत्यादिना शितिशब्द आद्युदात्तः। पिशङ्गात् इत्यादि। पिशङ्गशब्दः लघावन्ते (फि।सू।२।४२) इत्यादिना मध्योदात्तः, ततः अन्यतो ङीष् (४१।३६) इत्यतश्चकारोऽनुक्तसमुच्चयार्थोऽनुवत्र्तते। तेन पिशङ्गादपि ङीब्भवतीति। वक्तव्यम् इति। व्याख्येयमित्यर्थः। तत्रेदं व्याख्यानम्&ndash; मनोरौ वा (4."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.39.md">Edit 4.1.39!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.1.39";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.1.40\",\"Previous\":\"4.1.38\",\"अकारादिक्रमसङ्ख्या\":3072,\"कौमुदीक्रमसङ्ख्या\":496,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वर्णादनुदात्तात्तोपधात्तो नः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

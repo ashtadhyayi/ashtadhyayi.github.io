@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="बर्हिर्योगे इति। बहिरित्यनेनानावृतदेश उच्यते। तेन योगो बर्हिर्योगः। स चानावृतस्य बाह्रस्य वस्तुनो भवति। उपसंव्याने च इति। उपसंवीयते परिधीयते यत् तदुपसंव्यानम्- कृत्यल्युटो बहुलम् (3.3.113) इति कर्मणै ल्युट्। अथ वा, संवीयते पिधीयतेऽनेनेति संव्यानम्- करणाधिकरणयोश्च (3.3.117) इति ल्युट्। संव्यानस्य समीपमुपसंख्यानम्। अबहिर्योगे सामथ्र्यात् तदेव वेदितव्यम्। नगरबाह्राः इति। अनेन बहिर्योगं दर्शयति- परिधानीयमुच्यते इति। उपसंव्यान्सयेदमुदाहरणमुपन्यस्तम्। वस्त्रान्तरावृतवस्तु वस्त्वन्तरेणापिहितमुच्यते। अविशेषाभिधानऽपि यद्वस्त्रान्तरेणावृतम्, सामथ्र्यात् तदेवोपसंव्यानमुच्यते, नेतरत्। न प्रावरणीयम् इति। प्राव्रियतेऽपिधीयते-नेनेति प्रावरणीयम्, तन्नभिधीयते। तदभिधाने तस्य बहिर्योगत्वात् बहिर्योग एवेदमुदाहरणं स्यादित्याभिप्रायः। अन्तरे तापसः प्रतिवसति इति। अत्र संज्ञाया अभावात् सप्तम्याः स्मिन्नादेशो न भवति। ननु च जसीत्यनुवत्र्ते, तत् कस्मात् सप्तम्यन्तं प्रत्युदाह्मतमित्यत आह-गुणसूत्रस्य च इत्यादि। अपुरीति वक्तव्यम् इति। अनन्तरं गणसूत्रस्य च इत्यभिधानाद् गणसूत्रमेवैतद् वक्तव्यमिति गम्यते। यद्यपि गणसूत्रेऽन्तरशब्द पठ()ते,तथापि प्रतिपदिकग्रहणे लिङ्गविशिष्टस्यापि ग्रहणम् (व्या।प।२९) इति प्राकाराद्ब-हिर्वर्त्तिनी या पूस्तस्या अपि बहिर्योगोऽस्तीति तत्र वत्र्तमानस्य टाबन्तस्याप्यन्तराशब्दस्य सर्वनामसंज्ञा प्राप्नोति, तेनापुरीति वक्तव्यम्। तेनान्तरायामित्यत्र स्याण् न भवति। विभाषाप्रकरणे इत्यादि। उपसंख्यानशब्दस्येह प्रतिपादनमर्थः। अस्मिन् विभाषाप्रकरणे तीयप्रत्ययान्तस्य सर्वनामसंज्ञायाः प्रतिपादनं कत्र्तव्यमि- त्यर्थः। तत्रेदं प्रतिपादनम् विभाषा जसि (1."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.1/1.1.35.md">Edit 1.1.35!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.1.35";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.1.36\",\"Previous\":\"1.1.34\",\"अकारादिक्रमसङ्ख्या\":3871,\"कौमुदीक्रमसङ्ख्या\":219,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":176,\"विषयः १\":\"सर्वनाम\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"स्वमज्ञातिधनाख्यायाम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="कर्मणि द्वितीया। अनभिहिते इत्यनुवृत्तं व्याचष्टे&ndash;अनुक्ते इति। हरिं भजतीति। तुष्ट�नुकूलपरिचरणात्मकव्यापारो भजेरर्थः। पूजादिव्यापारेण हरि #ं तोषयतीत्यर्थः। कर्तृनिष्ठपूजनादिव्यापारप्रयोज्यतुष्टिरूपफलाश्रयत्वाद्धरिः कर्म। हरिनिष्ठतुष्ट�नुकूल एकदेवदत्तनिष्ठो वर्तमानो व्यापार इति बोधः। बावप्रधानमाख्यातमिति निरुक्तकारयास्कवचनात्। क्रियाप्रधानं तिङन्तमिति तदर्थः। एवं च हरिनिष्ठतुष्ट�नुकूलव्यापाराश्रयो देवदत्त इति प्रथमान्तविशेष्यकबोधस्तार्किकसंमतो नादर्तव्य इति मञ्जूषादौ प्रपञ्चितम्। अबिहिते त्विति। हरिः सेवय्ते इत्यादाविति शेषः। प्रथमैवेति। तद्विधावनभिहिताधिकाराऽभावात्अबिहिते प्रथमेति वार्तिकाच्चाति भावः। अत्र भाष्येकटं करोति भीष्ममुदारं दर्शनीयं शोभनमित्यत्र कटशब्दादुत्पाद्यमानया द्वितीयया कर्मणोऽभिहितत्वाद्भीष्मादिभ्यो द्वितीया न प्राप्नोतीत्याशङ्क्यतिङ्कृत्तद्धितसमासैरबिधानमिति परिगणितम्। तत्रप्रायेणेत्यध्याह्मत्याह--अभिधानं चेति।समासैरित्यनन्तरंविवक्षितमिति शेषः। तिङिति। अविभक्तिकनिर्देशोऽयं तिङभिधानप्रधर्शनाय। हरिः सेव्यत इति।लः कर्मणीति कर्मणि लकारः। भावकर्मणोः इत्यात्मनेपदम्। तिङन्तेनाऽभिहितत्वाद्धरेः कर्मणो न द्वितीयेति भावः। हरिं भजतीति वाक्यार्थः। कर्तृकर्मलकारयोरेकरूप एव वाक्यार्थबोध इति वैयाकरणसमयः। कृदिति। तिङितिवदयमप्यविभक्तिकनिर्देशस्तदुदाहरणसूचनाय। लक्ष्म्या सेवित इति। हरिरिति शेषः। भूते कर्मणि क्तः , कर्तरि तृतीया। लक्ष्मीनिष्ठपरिचरणजनिततुष्ट�आश्रयो हरिरिति बोधः। सत्त्वप्रधानानि नामानीति यास्कस्मृतिमनुरुध्य प्रातिपदिकेषु प्रथमान्तोपात्तविशेष्यक बोधस्यैव सर्वसंमतत्वात्। अत्र सेवितहरेः कर्मणः कृता अभिहितत्वान्न द्वितीया। तद्धितेति। अयमप्यविभक्तिकनिर्देशस्तदुदाहरणसूचनाय। शत्य #इति। पटादिरिति शेषः। शताच्च ठन्यतावशते इति यत्प्रत्ययस्तद्धितः। अत्र कर्मणस्तद्धितेनोक्तत्वान्न द्वितीया। समासेति। अयमप्यविभक्तिकनिर्देशस्तदुदाहरणसूचनाय। प्राप्तानन्द इति। देवदत्तादिरिति शेषः। गत्यर्थाकर्मकेत्यादिना प्राप्तेति कर्तरि क्तः। अन्यपदार्थस्य कर्मणो बहुव्रीहिसमासेनाभिहितत्वान्न द्वितीयेति भावः। आनन्दकर्तृकप्राप्तिकर्मीभूत इति बोधः। प्रायेणेत्यस्य फलं दर्शयति-क्वचिदिति। विषवृक्षो।?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.3/2.3.2.md">Edit 2.3.2!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.3.2";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.3.3\",\"Previous\":\"2.3.1\",\"अकारादिक्रमसङ्ख्या\":1013,\"कौमुदीक्रमसङ्ख्या\":537,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्वितीया\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्मणि द्वितीया\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="नासिकोदरोष्ठ। अस्वाङ्गपूर्वपदाद्वा&rsquo; इत्यतो वेति, अन्यतो ङीष् इत्यतो ङीषिति चानुवर्तते। तदाह&ndash;एभ्य इति। उपसर्जनभूतनासिकादिशब्दान्तेभ्य इत्यर्थः , पूर्वसूत्रादुपसर्जानादित्यनुवृत्तेः। ननु स्वाङ्गाच्चेति पूर्वसूत्रेणैव सिद्धे किमर्थमिदमित्यत आह&ndash;आद्ययोरिति। नासिकोदरशब्दयोर्विषये न क्रोडादिबह्वचः इति निषेधः प्राप्तः सोऽनेन ङीष्विकल्पविधिना वाध्यत इत्यर्थः। बह्वज्लक्षणनिषेधस्तु सुजघनेत्यादौ सावकाश इति भावः। ननु सहनासिका, अनासिका, सहोदरा, अनुदरा #इत्यत्र सहनञ्विद्यमानपूर्वाच्चेति निषेधोऽप्यनेन वाध्यतां, सहनञ् इत्यस्य सकेशा अकेशा इत्यादौ सावकाशत्वादित्य आह&ndash;पुरस्तादिति। पुरस्तादपवादा अनन्तरान्विधीन्बाधन्ते नोत्तरान् इति न्यायादित्यर्थः। ततश्च सहनञिति निषेधो न क्रोडादिसूत्रे व्यवहितत्वात् नासिकोदर; इत्यनेन बाधं नार्हतीत्यर्थः। ओष्ठादिपञ्चकस्य प्रयोजनमाह--ओष्ठादीनामिति। सुगुल्फोत्यादावसंयोगापधादित्यस्य सावकाशत्वादिति भावः। ननु सहोष्ठा, अनोष्ठा इत्यादौसहनञिति निषेधोऽप्यनेन बाध्यतामित्यत आह--मध्येऽपवादेति।मध्येऽपवादाः पूर्वान् विधीन् बाधन्ते नोत्तरान्इत#इ न्यायादित्यर्थः। ननुनासिकोदरइति ङीष्विकल्पस्तुङ्गनासिकीत्यादौ सावकाशः,सहनञिति निषेधस्तु सहकेशेत्यादौ सावकाशः, सहनासिकेत्यादौ तूभयप्राप्तौ कतरस्या बाध इत्यत आह--सहनञ्लक्षणस्त्विति। अस्येति।नासिकोदरइति हीष्विकल्पविधेरित्यर्थः। तुङ्गनासिकी तुङ्गनासिकेति।न क्रोडादिबह्वचःइति बह्वज्लक्षणङीष्निषेधं बाधित्वानासिकोदरइति विकल्पः। इत्यादीति। कुम्भोदरी-कुम्भोदरा। अत्र बह्वज्लक्षणङीष्निषेधं बाधित्वा ङीष्विकल्पः। बिम्बोष्ठी-विम्बोष्ठा। सुजङ्घी-सुजङ्घा। शुभ्रदन्ती-शुब्रादन्ता।सुकर्णी-सुकर्णा। सुश्रह्गी-सुश्रृङ्दा। ओष्ठादिषु संयोगोपधत्वेऽपि ङीष्विकल्पः। सहनासिकेति। सहशब्दोविद्यमानवचनः, सह नासिका यस्या इति विग्रहः। अविद्यमाना नासिका यस्या इति च विग्रहः। इह उभयत्रापिसहनञ्विद्यमानेति ङीष्निषेधो नतुनासिकोदरइति ङीष्विकल्प इत्यर्थः। वक्तव्यमिति।वा ङी`षिति इति शेषः संयोगापधत्वाद्ववचनम्। स्वङ्गीतचि। सु=शोभनानि अङ्गानि यस्या इति विग्रहः। सुगात्री-सुगात्रा। सुकण्ठी-सुकण्ठा। वृत्तिग्रन्थस्य मूलं दर्शयति&ndash;एतच्चेति। प्रामाणिका इति। एवं च तन्वङ्गी, सुगात्री, कलकण्ठी त्यपभ्रंशा एवेति भावः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-4.1/4.1.55.md">Edit 4.1.55!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "4.1.55";
+          let sutraBasics = JSON.parse("{\"Next\":\"4.1.56\",\"Previous\":\"4.1.54\",\"अकारादिक्रमसङ्ख्या\":2164,\"कौमुदीक्रमसङ्ख्या\":511,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नासिकोदरौष्ठजङ्घादन्तकर्णशृङ्गाच्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

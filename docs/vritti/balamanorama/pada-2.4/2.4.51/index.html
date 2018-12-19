@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="णौ च संश्चङोः। विषयसप्तमीयमित्याकरे स्पष्टम्। णौ विवक्षिते इति लभ्यते। इङश्चेत्यत इङ इति, गाङ् लिटीत्यतो गाङिति, विभाषा लुङ्लृङोरित्यतो विभाषेति चानुवर्तते। तदाह &ndash; सन्परे चङ्परे चेत्यादि। सन्परे चङ्परे च णौ विवक्षिते इत्यर्थः। अध्यजीगपदिति। णौ इङो गाङादेशे पुकि उपधाह्रस्वे अधि गप् इ अ त् स्थिते गप् इत्यस्य द्वित्वे हलादिशेषे अभ्यासह्रस्वे सन्वत्त्वादित्त्वे दीर्घे अभ्यासचुत्वे रूपम्। नच द्वित्वे कार्ये णावजादेशो नेति द्वित्वात् प्राग्गाङादेशनिषेधः शङ्क्यः, अभ्यासोत्तरखण्डे अवर्णसत्त्व एव तन्निषेधप्रवृत्तेरुक्तत्वात्। द्वित्वे कार्ये गाङादेशस्य निषेधे सति गाङः पूर्वम् अजादेर्द्वितीयस्येति णिच एव द्वित्व सति प्रक्रियायां परिनिष्ठिते वा धातोरुत्तरखण्डेऽवर्णाऽभावादिति रूपमिति भावः। अध्यापिपदिति। गाङभावे क्रीङ्जीनां णौ इत्यात्त्वे पुकि अधि आ प् इ अ त् इति स्थिते पीत्यस्य द्वित्वे रूपमिति भावः। सिध्येतरपारलौकिके। आदेच उपदेशे इत्यस्मादादेच इति, `क्रीङ्जीनामित्यस्माण्णाविति चानुवर्तते। तदाह &ndash; ऐहलौकिके इत्यादि। अन्नमिति। तन्निष्पादनं तृत्प्यर्थत्वादैहलौकिकमिति भावः। तत्त्वमिति। आत्मस्वरूपमित्यर्थः। सेधयति तापसं तप इति। तत्त्वं निश्चाययतीत्यर्थः। आत्मतत्त्वनिश्चय आमुष्मिकफलक इति भावः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.4/2.4.51.md">Edit 2.4.51!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.4.51";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.4.52\",\"Previous\":\"2.4.50\",\"अकारादिक्रमसङ्ख्या\":1590,\"कौमुदीक्रमसङ्ख्या\":2571,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"धात्वादेशः\",\"विषयः २\":\"आर्धधातुके\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"णौ च सँश्चङोः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

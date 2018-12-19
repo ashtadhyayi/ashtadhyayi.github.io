@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="एकादिश्च। नलोपो नञः इत्यतो नञ इति षष्ठ�न्तमनुवर्तते। तच्चप्रथमया विपरिणम्यते। नभ्राण्नपात् इत्यतः प्रकृत्येत्यनुवर्तते। तदाह&ndash;एकादिर्नञ्प्रकृत्येति। एक आदिर्यस्येति विग्रहः। एकस्य चादुगागमश्चेति। आदुगितिअदुगिति वा च्छेदः। नञो विंशत्येति। न विंशतिरिति विग्रहे नञ्समासे सतिनवंशतिशब्दस्यैकशब्देन तृतीयान्तेन सह एकेन नवंशितिरिति विग्रहे समास इत्यन्वयः। ननु तत्कृतत्वाद्यभावात्कथमिह तृतीयासमास इत्यत आह--योगविभागादिति। अनुनासिकविकल्प इति। तृतीयासमासे कृते सुब्लुकि एक नविंशतिरिति स्थितेन लोपो नञःइति प्राप्तस्य नकारलोपस्य प्रकृतिभान्निवृत्तौ एकशब्दस्याऽऽदुगागमः, तत्र ककार इत्, उकार उच्चारणार्थः। कित्त्वादन्तावयवः, सवर्णदीर्घः, एकाद्-नविंशतिरिति स्थितेयरोऽनुनासिकेइति दकारस्य पक्षेऽनुनासिकनकार इत्यर्थः। अदुगागमपक्षेऽपि पररूपं तु अकारोच्चारमसामर्थ्यान्न भवति। एकेन न विंशतिरिति। विग्रहवाक्यम्। एकेन हेतुना विंशतिर्न भवतीत्यर्थः। एकान्नविंशतिः, एकाद्नविंशतिरिति। अनुनासिकत्वे तदभावे च रूपम्। एकोनविंशतिरित्यर्थ इति।पर्यवस्यतीति शेषः। एकेन ऊनेति विग्रहः।पूर्वसदृशे`ति समासः। सा चासौ विंशतिश्च।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.76.md">Edit 6.3.76!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.3.76";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.3.77\",\"Previous\":\"6.3.75\",\"अकारादिक्रमसङ्ख्या\":894,\"कौमुदीक्रमसङ्ख्या\":811,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे नञ्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एकादिश्चैकस्य चादुक्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

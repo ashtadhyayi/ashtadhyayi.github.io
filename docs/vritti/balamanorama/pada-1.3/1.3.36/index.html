@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="संमननोत्सञ्जना। एषु गम्येषु णीञ्धातोरात् मनेपदमित्यर्थः। परगामिन्यपि फले आत्मनेपदार्थमिदम्. इतरे इति। संमाननाऽऽचार्यकरणप्रभृतय इत्यर्थः। प्रयोगोपाधय इति। वाच्यत्वाऽभावेऽपि आर्थिकाः सत्तामात्रेण शब्दप्रयोगे निमित्तभूता इत्यर्थः। आत्मनेपदद्योत्या इति यावत्। तदेवोपपादयितुं प्रतिजानीते&ndash; तथा हीति। संमानने उदाहरति&ndash; शास्त्रे नयते इति। अत्र णीञ् प्रापणार्थकः। सिद्धान्तप्रापणेनेत्यर्थः। फलितमिति। अर्थादिति भावः। उत्सञ्जने इति।उदाह्रियतेइति शेषः। उत्सञ्जनमुत्क्षेपः। उत्क्षिपतीत्यर्थ इति। धातूनामनेकार्थत्वादिति सत्त्या प्रापयित्रपेक्षमेव। तच्च माणवकीयमात्मसमीपप्रापणं वैधमेव विवक्षितम्, पूर्वोत्तराऽङ्गकलापाम्नासामर्थ्यात्। तदाह--- विधिना आत्मसमीपं प्रापयतीति। तत्राऽऽचार्यकरणस्यार्थिकत्वमुपपादयति-- उपनयनपूर्वकेणेति।माणवकमुपनयीत,तमध्यापयीतेत्यध्यापनार्थत्वमुपनयनस्याऽवगतम्, अध्यापनादाचार्यत्वं संपद्यते,उपनीय तु यः शिष्यं वेदमध्यापयेद्द्विजः। सकल्पं सरहस्यं च तमाचार्यं प्रचक्षते।इतिस्मरणात्. तथा च आचार्यकरणमुपनयनसाध्यत्वादार्थिकहरति-- कर्मकरानुपनयते इति। भृतिः = वेतनं। तदर्थ#ं कर्म करोतीति कर्मकरः।कर्मणि भृतौ` इति टप्रत्ययः। कर्मण्युपपदे कृञष्टः स्यात्कर्तरीति तदर्थः। उपपूर्वको णीञ् समीपप्रापणार्थकः। तदाह&ndash; राज्ञे देयं भागंपरिशोधयतीति। परिगणयति दातुमित्यर्थः। व्यये उदाहरति&ndash; शतं विनयते धर्मार्थमिति। अत्र विपूर्वो णीञ् व्ययार्थकः। तदाह&ndash; विनियुङ्क्ते इत्यर्थ इति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.3/1.3.36.md">Edit 1.3.36!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.3.36";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.3.37\",\"Previous\":\"1.3.35\",\"अकारादिक्रमसङ्ख्या\":3670,\"कौमुदीक्रमसङ्ख्या\":2709,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सम्माननोत्सञ्जनाचार्यकरणज्ञानभृतिविगणनव्ययेषु नियः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

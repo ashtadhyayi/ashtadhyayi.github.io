@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="ग्रहणकसूत्रेऽण्सवर्णानां ग्राहक इति स्थितम्। एवं सति अत् इत् उत् इत्यादितपराणामप्यणां स्वस्वसर्वसवर्णग्राहकत्वे प्राप्ते इदमारभ्यते&ndash;तपरस्तत्कालस्य। तपर इत्यावर्तते। प्रथमस्तावत्तपरशब्दः-तः परो यस्मादिति बहुव्रीहिः। द्वितीयस्तु तात् पर इति पञ्चमीसमासः। ग्रहणकसूत्रादणित्यनुवर्तते। तस्य तपरत्वेन उच्चार्यमाणवर्णस्य काल इव कालो यस्येति बहुव्रीहिः। ऊकालः उष्ट्रमुख इत्यादिवत् समासः। एवं च अत्इत् इत्याद्यात्मकोऽण् तपरत्वेन उच्चार्यमाणः स्वीयकालसदृशकालस्य संज्ञा स्यादित्यर्थः। तत्र अत् इत् उत् ऋत् इत्येतेषां तपराणां ह्रस्वाकारादीनामणां तत्तत्कालास्तत्तद्ध्रस्वप्रपञ्चाः। एत्, ऐत्, ओत्,औत् इत्येतेषां तु तपराणामेकारादीनां तत्तत्कालास्तत्तद्दीर्घप्रपञ्चाः। तत्र ह्रस्वाकारादीनां तपराणां तत्तद्ध्रस्वप्रपञ्चावाचकत्वस्य एकारादीनां च दीर्घाणां तपराणां स्वस्वदीर्घप्रपञ्चवाचकत्वस्य लोकसिद्धत्वात् सिद्धे सत्यारम्भो नियमार्थः इति न्यायेन सूत्रमिदं नियमार्थं सम्पद्यते&ndash;अण् तपरश्चेत्तत्कालस्यैव सवर्णस्य ग्राहको न त्वतत्कालस्येति। एवं च अतत्कालनिवृत्त्यात्मकपरिसंख्यार्थंमिदं सूत्रम्। वैयाकरणस्तु परिसंख्याविधिमेव नियमविधिरिति व्यवहरन्ति। तदिदं सर्वमभिप्रेत्य व्याचष्टे&ndash;तः परोयस्मादित्यादिना। नियमविधानस्य फलमाह&ndash;तेनेत्यादिना। तेन=नियमविधानेन। आदिना लृदित्यादिसंग्रहः। अत्, इत्, उत्, लृत्, एत, ऐत्, ओत्, औत्&ndash;इत्येते अष्टौ तपरा अणः स्वस्वसमानकालानां षण्णां षण्णामेव संज्ञाः , न त्वतत्कालानामित्यर्थः। ऋदिति द्वादशानामिति। ऋलृवर्णयोरिति सावर्ण्यविधानादिति भावः। नन्वेवम्लृदित्यपि द्वादशानां ग्रहणं स्यात्, तथा च पुषादिद्युताद्य्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.1/1.1.70.md">Edit 1.1.70!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.1.70";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.1.71\",\"Previous\":\"1.1.69\",\"अकारादिक्रमसङ्ख्या\":1665,\"कौमुदीक्रमसङ्ख्या\":15,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":34,\"विषयः १\":\"सवर्णग्राहकसूत्रम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तपरस्तत्कालस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

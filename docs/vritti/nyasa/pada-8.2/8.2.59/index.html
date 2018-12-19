@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="भित्तमिति निपात्यते इति। किं निपात्यते? रदाभ्यामिति (8.2.42) नत्वे प्राप्ते तदभाव इति। शकलं चेत्तद्भवति इति। शकलशब्दस्य योऽर्थः, खमण्ड इति यस्यापरमभिधानम्(), भित्तशब्दस्यापि यदि स एवार्थो भवतीत्यर्थः। कथं पुनर्भित्तशब्दस्य शकलमर्थो भवति? इत्याह&ndash;शकलपर्यायोऽयम्() इति। भित्तशब्दः शकलस्यैव पर्यायः। तस्माद्यथा शकलशब्दस्य शकलमभिधेयं भवति, एवं भित्तशब्दस्यापि। ननु च शकलशब्दोऽयं जातिशब्दः; जातिप्रव-त्तिनिमित्तमुपादाय स्वाभिदेये प्रवृत्तत्वात्(); भित्तशब्दस्तु क्रियाशब्दः, क्रियाप्रवृत्तिनिमित्तत्वात्(); तथा हि&ndash;भिदेर्विदारणार्थात्? क्ते विहिते भित्तमिति निपात्यते, न च क्रियाशब्दो जातिशब्दपर्याय उपपद्यते? इत्याह&ndash;अत्र इत्यादि। शब्दव्युत्पत्तिः=शब्दसंस्कारः, तस्या एवात्र भित्तशब्दे भिदिक्रियानिमित्तत्वाम्(); न तु तत्प्रवृत्तेः; असत्त्वात्()। जातिरेव तु तत्प्रवृत्ति प्रति निमित्तम्(); तस्या विद्यमानत्वात्()। तस्माच्छकलशब्दवद्भित्तशब्दोऽपि जातिशब्द एव; न क्रियाशब्द इति युक्ता तस्य तत्पर्यायता। यदि तह्र्रसत्येवात्र भिदिक्रिया, शब्दसंस्कारत्वस्यापि सा निमित्तं नोपपद्यते?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.59.md">Edit 8.2.59!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.2.59";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.2.60\",\"Previous\":\"8.2.58\",\"अकारादिक्रमसङ्ख्या\":2670,\"कौमुदीक्रमसङ्ख्या\":3042,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निष्ठा-तकारादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"भित्तं शकलम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

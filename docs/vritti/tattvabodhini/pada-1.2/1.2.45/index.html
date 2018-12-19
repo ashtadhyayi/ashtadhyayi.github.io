@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अथाजन्तपुंलिङ्गप्रकरणम्। अर्थवदधातु। प्रत्ययं प्रत्ययान्तं चेति। सूत्रे तन्त्रादिनोभयं विवक्षितमिति भावः। अर्थव&rsquo;दिति नपुंसकनिर्देशस्याऽनुगुणं विशेष्यमध्याहरति&ndash;शब्दस्वरूपमिति। अधातुरप्रत्यय इति पुंलिङ्गनिर्देशस्तु परवल्लिङ्गं द्वन्द्वतत्पुरुषयोः इत्युत्तरपदलिङ्गवत्त्वाद्बोध्य इत्याहुः। यदि तु धातुभिन्नमित्यर्थं परित्यज्यारोपितो धातुरधातुरिति व्याख्यायते, तदा नपुंसकत्वप्राप्तेराशङ्कैव नास्तीति ज्ञेयम्। अर्थवदिति किम् ?। धनं वनमित्यादौ प्रतिवर्णं संज्ञा मा भूत्। तस्यां च सत्यां स्वादयः स्युः। ननु सङ्ख्याकर्मादेरभावान्न भविष्यतीति चेन्न; एकवचनमुत्सर्गतः करिष्यते इति सिद्धान्ताद्धुंफडादिभ्य इव सोर्दुर्वारत्वात्। न चार्थवद्ग्रहणपरिभाषया अनर्थके न स्यादिति वाच्यं, तस्या विशिष्टरूपोपादानविषयत्वात्। प्रादूहोढइत्यत्र तु ऊढ इति विशिष्टरूपमुपात्तमितिक्तवत्वन्तैकदेशस्यानर्थकस्योढशब्दस्य ग्रहणं नेत्युक्तम्। न ह्यत्र तथा विशेषरूपस्योपादानमस्ति। यद्यप्यधातुरित्यादिपर्युदासेनार्थवत्त्वं लभ्यते, तथाप्युत्तरार्थमर्थवह्ग्रहणं स्पष्टप्रतिपत्तये इहैव कृतम्। न चैकाज्द्विर्वचनन्यायेन समुदायस्यैव संज्ञा स्यान्नावयवानामित्यर्थवद्ग्रहणमिह व्यर्थमिति शङ्क्यं ; समुदाये द्विरुक्ते अवयवा अपि द्विरुक्ता भवन्ति। वृक्षः प्रचलन्सहावयवैः प्रचलतीति न्यायात्। इह तु समुदाये प्रवृत्तया प्रातिपदिकसंज्ञया नावयवानां तत्कार्यसिद्धिरिति वैषम्यात्। अतएव यत्र बहवो हलः संश्लिष्टास्तत्र द्वयोर्बाहूनां चाऽविशेषेण संयोगसंज्ञेति सिद्धान्तः सङ्गच्छते। अन्यथा त्वदुपन्यस्तन्यायेन समुदाय एव संयोगसंज्ञा प्रवर्तेत। अत्र केचित्-धनं वनमित्यादौ प्रतिवर्णं सत्यामपि संज्ञायां सत्स्वपि स्वादिषु न क्षतिः। हल्ङ्याबित्यादिना सुलोपात्। न च नलोपो धस्य जश्त्वं च स्यादिति शङ्क्यम्, धातुपाठे धन वनेत्युच्चारणसामर्थ्यात्तदप्रवृत्तेरित्याहुः। तदसत्। ?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.2/1.2.45.md">Edit 1.2.45!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.45";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.46\",\"Previous\":\"1.2.44\",\"अकारादिक्रमसङ्ख्या\":350,\"कौमुदीक्रमसङ्ख्या\":178,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":135,\"विषयः १\":\"प्रातिपदिकम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अर्थवदधातुरप्रत्ययः प्रातिपदिकम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

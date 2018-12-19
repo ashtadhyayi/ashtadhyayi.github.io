@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अनेकाल्शित्सर्वस्य। न एकोऽनेकः, अनेकोऽल् यस्य सोऽनेकाल्, शकार इत् यस्य स शित्, अनेकाल्व शिच्चेति समाहारद्वन्द्वः। स्पष्टमिति। अनुवर्तनीयपदान्तराऽभावादिति भावः। अस्तेर्भूरित्याद्युदाहरणम्। नन्वस्धातोर्भूर्भवतीत्युक्ते कृत्स्नस्यैवादेशः प्राप्त इति किमर्थमिदं सूत्रमारभ्यत इत्यत आह-अलोऽन्त्यसूत्रापवाद इति। अलोन्त्येतिति सूत्रैकदेशानुकरणम्। अनुकरणत्वादेव नापशब्दः, अधिरी�आर इति सूत्रैकदेशस्य प्राग्री�आरान्निपाता इति ग्रहणाल्लिङ्गात्। स्यादेतत्। अष्टन्?शब्दाज्जसि शसि च अष्टन आ विभक्ताविति आत्वे अष्टा अस् इति स्थिते अष्टाभ्य औशिति कृताकारादष्टनः परयोर्जश्शसोर्विधीयमान औशादेशोऽलोऽन्त्यस्येति बाधित्वा आदेः परस्येत्यादेरकारस्य प्राप्तः। अनेकाल्त्वाच्च सर्वादेशः प्राप्तः। एवम् अतो भिस ऐसित्यादावपि। तत्र कतरच्छास्त्रं बाध्यं कतरच्च प्रवर्तत इत्यत्र किं विनिगमकम्रित्यत आह-अष्टाभ्य औशित्यादाविति। आदिना अतो भिस ऐसित्यादिसंग्रहः। अष्टाभ्य औशित्यादावादेः परस्येत्येतदपि परत्वादनेन बाध्यत इत्यन्वयः। अस्तेर्भूरित्यादौ अनेकाल्शिदित्यनेन यथाऽलोऽन्त्यस्येति बाध्यते तथ#आऽष्टाभ्या औशित्यादावादेः परस्येत्येतदपि बाध्यत इत्यर्थः। नन्वस्तेर्भूरित्यादावलोऽन्त्यस्येति प्राप्ते सत्येवानेकाल्शित्सर्वस्येति नापवादः। अस्तेर्भूरित्यादावादेः परस्येत्यप्राप्तावपि तत्प्रवृत्तेरित्यत आह-परत्वादिति।विप्रतिषेधे परं कार्यमिति तुल्यबलविरोधे परप्राबल्यस्य वक्ष्यमाणत्वादिति भावः।आदेः परस्येत्यस्यावकाशोद्व्यन्तरुपसर्गेभ्योऽप ईदित्यादिः।अनेकाल्शित्सर्वस्येत्यस्यावकाशः-अस्तेर्भूः`इदम इशित्यादिः। अतस्तुल्यबलत्वमुभयोः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.1/1.1.55.md">Edit 1.1.55!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.1.55";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.1.56\",\"Previous\":\"1.1.54\",\"अकारादिक्रमसङ्ख्या\":226,\"कौमुदीक्रमसङ्ख्या\":45,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":58,\"विषयः १\":\"परिभाषा\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अनेकाल्शित्सर्वस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

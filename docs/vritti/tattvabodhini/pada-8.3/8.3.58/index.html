@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="नुम्बिसर्जनीय। इण्कोरिति पञ्चमीनिर्देशाव्द्यवबितस्याऽप्राप्तौ वचनम्। ष्टुत्वेन पूर्वस्येति। सनः सस्य रुत्वविसर्गयोः कतयोः वा शरीति विकल्पात्प7#ए सकारस्तेन शरा व्यवाये सुपः सस्य षत्वं। पूर्वस्य ष्टुत्वम्, न तु आदेशप्रत्यययोरिति षः, अपदन्तस्येति निषेधादिति भावः। एवं स्थिते शर्ग्रहणे विसर्जनीयस्य लाभादित्यन्ये। निस्स्वेति। आद्यसकारारस्य प्रत्येकं व्यवधानेऽपि आदेशप्रत्ययावयवत्वनाऽभावात्षत्वं न भवति। न चाऽत्र आदेशप्रत्यययोरित्यनुवृत्त्यभावात् नुम्बिसर्जनीयेत्यनेन धातुकारस्य षत्वं स्यादिति वाच्यम्, तस्य स्वातन्त्र्येण विधायकत्वाऽनङ्गीकारात्। अपदान्तस्य मूर्धन्यःइण्कोरितिवत् नुम्बिसर्जनीयेत्यस्याप्यधिकारसूत्रत्वात्। विधाकत्वाऽनङ्गीकारात्। अपदान्तस्य मूर्धन्यः इण्कोरितिवत् नुम्वि#इ#इ#इसर्जनीयेत्यस्याप्यधिकारसूत्रत्वात्। कर्तुमिच्छति चिकीर्षतिष चिकीर्षतेः क्विप्प्र त्ययः&ndash;चिकीः। एकाच उपदेशेइति सनिग्रहगुहोश्चेति वासन इडभावे इको झलिति कित्वाद्गुणाऽभावे अज्झनगमां सनीति दीर्घे ऋत इदीतीत्वे रपरत्वं, ततो द्वित्वं, हलादिः शेषःकुहोश्चुःअल्लोपः। सर्हल्ङ्यादिलोपे पदान्तत्वात् र्वोरुपधायाःइति दीर्घः। दोरिति। दाम्यतीति दोः। संयोगान्तलोप इति। न चाऽस्मिन्कर्तव्ये बहिरङ्गत्वेनाऽतोलोपस्याऽसिद्धत्वं शङ्क्यं, बहिर्निमित्तापेक्षपदसंज्ञासापेक्षत्वेन संयोगान्कलोपस्यैव बहिरङ्गत्वादिति दिक्। विविडिति। विशेः सन्। एकाचइतीण्निषेधे हलन्ताच्चेति कित्त्वाद्गुणीऽभावः। द्वित्वाऽभ्यासकार्ये। तडिति। तक्षू त्वक्षू तनूकरणेइत्यस्मात् क्विप्। गां रक्षतीति&mdash;गोरट्। कर्मण्युपपदे वा सरूपन्यायेन क्विप्। कुत्वस्यासिद्धत्वादिति। इतरथा स्कोरिति कलोपः स्यादिति भावः। पिपागति। पक्तुमिच्छति पिपक्। वक्तुमिच्छति विवक्। दादेरिति घः। एकाचो बशइति भाष्भावः। दग्धुमिच्छतीति दिधक्। इति षान्ताः। सुतूरिति। सुष्ठु तोसतीति सुतूः। वेत्तीति विद्वन्। विदेः शतु र्वसुः। अदादित्वाच्छपो लुक्। सार्वधातुकमिपित्इति ङित्त्वान्नोपधागुणः। उगित्त्वान्नुम्। सान्तमहतःइति दीर्घः। संयोगान्तलोपस्याऽसिद्धत्वान्नलोपो न।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-8.3/8.3.58.md">Edit 8.3.58!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.58";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.59\",\"Previous\":\"8.3.57\",\"अकारादिक्रमसङ्ख्या\":2221,\"कौमुदीक्रमसङ्ख्या\":434,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नुम्विसर्जनीयशर्व्यवायेऽपि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

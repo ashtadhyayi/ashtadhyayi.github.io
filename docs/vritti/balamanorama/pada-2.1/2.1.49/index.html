@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="पूर्वकालैक। सुबित्यनुवृत्तं बहुवचनेन विपरिणम्यते। सुपेति चानुवर्तते। पूर्वः कालो यस्य स पूर्वकालः। पूर्वकालवृत्तिरित्यर्थः। ततश्च पूर्वकालेत्यनेन पूर्वकालवृत्त्यर्थकशब्दस्य ग्रहणम्। एकादिशब्दास्तु षट् स्वरूपपरा एव। तथाच पूर्वकालादयः सप्तसुबन्ताः समानाधिकरणेन सुबन्तेन समस्यन्ते, स तत्पुरुष इत्यर्थः। समानम्-एकम् अधिकरणं=वाच्यं यस्येति विग्रहः। एकार्थवृत्तित्वं सामानाधिकरण्यमिति फलितम्। पूर्वनिपातेति। पश्चादनुलिप्तः पूर्वं स्नातत्वेन, पूर्वं स्नातो वा पश्चादनुलिप्तत्वेन विशेष्टुं शक्यते, अतो विशेषणं विशेष्येणेति समासे सति अन्यतरस्य पूर्वनिपाते प्राप्ते पूर्वकालवृत्तिशब्दस्यैव पूर्वनिपातार्थमिदं वचनम्। एवमेकादीनामपीत्यर्थः। एकशब्दविषये प्रयोजनान्तरमप्याह&ndash;एकशब्दस्येति। दिक्संख्ये संज्ञायां समस्येते इति नियमस्य वक्ष्यमाणतया एकनाथ इत्यत्र विशेषणसमासस्य बाधे प्राप्ते तत्प्रतिप्रसवार्थमप्येकग्रहणमित्यर्थः। स्नातानुलिप्त इति। विग्रहवाक्यवदिह पूर्वपश्चाच्छब्दाऽभावेऽपि स्नानानुलेपनयोः पौर्वापर्यं समासगम्यमेव। पूर्वकालः समस्यते इत्युक्ते परकालेनेत्यर्थात्प्रतीतेः। एकनाथ इति। एकश्चासौ नाथश्चेति विग्रहः। सर्वयाज्ञिका इति। यज्ञमधीयते विदन्ति वा याज्ञिकाः। क्रतूक्थादिसूत्रान्ताट्ठक्। सर्वे च ते याज्ञिकाश्चेति विग्रहः। जरन्नैयायिका इति। मीमांसामधीयते मीमांसकाः। क्रमादिभ्यो वुन्। पुराणश्च ते मीमांसकाश्चेति विग्रहः। नवपाठका इति। नवाश्च ते पाठकाश्चेति विग्रहः। अत्र पुराणसाहचर्यान्नवशब्दो नूतनवाच्येव गृह्यते, न तु सङ्ख्याविशेषवाची। केवलवैयकरणा इति। व्याकरणमधीयते विदन्ति वा वैयाकरणाः। तदधीते तद्वेदेत्यण्। न य्वाभ्या`मिति वृद्धिनिषेध ऐजागमश्च। केवलाश्च ते वैयाकरणाश्चेति विग्रहः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.1/2.1.49.md">Edit 2.1.49!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.49";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.50\",\"Previous\":\"2.1.48\",\"अकारादिक्रमसङ्ख्या\":2417,\"कौमुदीक्रमसङ्ख्या\":726,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"पूर्वकालैकसर्वजरत्पुराणनवकेवलाः समानाधिकरणेन\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

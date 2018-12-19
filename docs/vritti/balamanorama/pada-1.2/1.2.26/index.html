@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="रलो। क्त्वासनाविति। चकारेण पूङः क्त्वा चे&rsquo;त्यतः क्त्वाया अनुकर्षादिति भावः। सेटाविति। न क्त्वा सेडित्यतस्तदनुवृत्तेरिति भावः। वा किताविति। नोपधात्थफान्ताद्वेत्यतः असंयोगाल्लिट्किदित्यतश्च तनदुवृत्तेरिति भावः। दिद्युतिषते इति। द्युत दीप्तौ अनुदात्तेत्। सनि द्वित्वे कित्त्वात् द्युतिस्वाप्योरित्यभ्यासस्य संप्रसारणे पूर्वरूपे सनः कित्त्वान्न लघूपधगुण इति भावः। सनः कित्त्वाऽभावे आह&ndash; दिद्योतषते इति। पूर्ववत्सनः इत्यात्मनेपदम्। एषिषिषतीति। इष्?धातोः सन्। इट्। हलादित्वाऽभावेन कित्तवाऽभावाद्गुणे एष् इस ति इति स्थिते अजादेर्द्वितीयस्येति षिस् इत्यस्य द्वित्वे हलादिशेषे सनः षत्वे रूपम्। नन्विह सत्यपि कित्त्वे नित्यत्वात्परमपि गुणं बाधित्वा षिसित्यस्य द्वित्वे धात्ववयवस्य इकारस्य उपधात्वाऽभावादेव गुणाऽप्रसक्तेर्हलादेरिति व्यर्थमित्यत आह &ndash; इह नित्यमपि द्वित्वं गुणेन बाध्यते इति। कुत इत्यत आह&ndash; उपधाकार्यं हि द्वितवात्प्रबलमिति। तच्च कुत इत्यत आह&ndash; ओणेरिति। ओणेः ऋदित्करणस्य ज्ञापकत्वादित्यन्वयः। तथाहि &ndash; ओणृधातोर्ण्यन्ताल्लुङि चङि णौ चङ्युपधायाः ह्रस्वस्य नाग्लोपिशास्वृदित#आ मिति निषेधे सति ओणि अ त् इति स्थिते णि इत्यस्य द्वित्वे मा भवानोणिणदिति रूपम्। अत्र उपधाह्रस्वनिषेधार्थमोणेरृदित्करणम्। उपधाह्रस्वे कृते तु उण् इ अ त् इति स्थिते णीत्यस्य द्वित्वे मा भवानुणिणदिति स्यात्, ओकारो न श्रूयेयेति स्थितिः। यदि तु नित्यत्वादुपधाह्रस्वत्प्रागेव ओण् इ अ त् इत्यस्यां दशायां द्वित्वं स्यात्तदा ओकारस्य उपधात्वाऽभावादेव ह्रस्वाऽप्रसक्तेस्तन्निषेदार्थमृदित्करणमनर्थकं स्यात्."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.2/1.2.26.md">Edit 1.2.26!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.26";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.27\",\"Previous\":\"1.2.25\",\"अकारादिक्रमसङ्ख्या\":2911,\"कौमुदीक्रमसङ्ख्या\":2617,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"अक्तित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रलो व्युपधाद्धलादेः संश्च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

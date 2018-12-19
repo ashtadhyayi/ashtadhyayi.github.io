@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="शेषो बहुव्रीहिः। त्रिकस्येति। विभक्तेरित्यर्थः। ननु द्वितीया श्रितेति तृतीया तत्कृतेति चतुर्थी तदर्थेति पञ्चमी भयेनेति, षष्ठीति, सप्तमी शौण्डैरिति च द्वितीयादिविभक्तीनां षण्णां समासो विहितः। विशेषणं विशेष्येणेत्यादिना तु प्रथमाया अपि समासो विहितः, अतः शेषविभक्तिर्दुर्लभेत्यत आह&ndash;विशिष्येति। विशेषणसमासस्य वस्तुतः प्रथमाविभक्तौ प्रवृत्तावपि प्रतमाविभकिं?त विशिष्य उच्चार्य विधानाऽभावात्समासविधिषु विसिष्यनिर्दिष्टद्वितीयादिविभक्तिषट्कापेक्षया शेषः प्रथमाविभक्तिरित भावः। तदाह&ndash;प्रथमान्त इत्यर्थ इति। एतच्च भाष्ये स्पष्टम्।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.2/2.2.23.md">Edit 2.2.23!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.2.23";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.2.24\",\"Previous\":\"2.2.22\",\"अकारादिक्रमसङ्ख्या\":3438,\"कौमुदीक्रमसङ्ख्या\":829,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिः समासः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"बहुव्रीहिः समासः\",\"सूत्रम्‌\":\"शेषो बहुव्रीहिः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

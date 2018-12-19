@@ -50,6 +50,11 @@
 <meta name="twitter:description" content="जीनः इति। ज्या वयोहानौ (धा।पा।१४९९), ग्रहिज्या (6.1.16) इत्यादिसूत्रेण सम्प्रसारणम्(), हलः (6.4.2) इति दीर्घः। ऋकारल्पादिभ्यः इत्यादि। ऋकारान्तेभ्यो ल्वादिभ्यश्च परो यः क्तिन्? स निष्ठा भवतीत्येतदर्थरूपं व्याख्येयमित्यर्थः। व्याख्यानं नु ओदितश्च (8.2.45) इत्यत्र चकारस्यानुक्तसमुच्चयार्थत्वात्()। यथा ऋकारल्पादिभ्यो निष्ठातकारस्य नत्वं भवति, तथा क्तिनोऽपि तकारस्य नत्वं भवतीति। दुग्वोः इति। दु उपतापे टु टु उपतापे&ndash;धातुपाठः, पदमञ्जर्यां तु-दु गतौ(९४४)इत्ययं धातुरुपात्तः, नटु टु उपतापे` इति। गु पुरीषोत्सर्गे (धा।पा।१३९९)। पूनाः इति विनष्टा इत्यर्थः। पूतं धान्यम्() इति। विधूतमित्यर्थः।
 सिनोतेः इति। विञ्? बन्धने (धा।पा।१२४८) इत्येतस्य। ग्रासकर्मकर्त्तृकस्य इति। ग्रासः कर्मकर्ता यस्य स तथोक्तः। अर्थद्वारकञ्चेदम्()। तस्य ग्रासकर्मकर्त्तृकत्वं विशेषणं वेदितव्यम्()। यथा सिनो ग्रासो बन्धनक्रियायां व्यञ्जनविशेषयोगादानुकूल्यं प्रतिपद्यते, तथा कर्मणोऽपि सतस्तस्य कर्त्तृत्वं विवक्षितमिति कर्मकत्र्तासौ भवति। सिनो ग्रासः ति। स्वयमेव बद्ध इत्यर्थः। सिता पाशेन सूकरी इति। समुदायप्रत्युदाहरणमेतत्()। अवयवप्रत्युदाहरणं दर्शयितुमाह&ndash;ग्रासोऽपि इत्यादि। ग्रासोऽपि यदि कर्मैव भवति न कर्मकर्ता, तदापि न भवति; ग्रासकर्मकर्त्तृकत्वमस्य तदाभावात्()। ग्रासकर्मतो हि स तदानीं भवति ग्रासकर्मकर्त्तृकः॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -63,11 +68,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.44.md">Edit 8.2.44!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.2.44";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.2.45\",\"Previous\":\"8.2.43\",\"अकारादिक्रमसङ्ख्या\":3040,\"कौमुदीक्रमसङ्ख्या\":3018,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निष्ठा-तकारादेशः\",\"विषयः २\":\"नकारादेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ल्वादिभ्यः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

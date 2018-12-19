@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="द्वन्द्वम् इति द्विशब्दस्य द्विर्वचनम्, पूर्व पदस्याम्भावः, अत्त्वं च उत्तरपदस्य निपात्यते रहस्य मर्यादावचन व्युत्क्रमण यज्ञपात्रप्रयोग अभिव्यक्ति इत्येतेषु अर्थेषु। तत्र रहस्यं द्वन्द्वशब्दवाच्यम्, इतरे विषयभूताः। द्वन्द्वं मन्त्रयते। मर्यादावचने मर्यादा स्थीत्यनतिक्रमः। आचतुरं हीमे पशवो द्वन्द्वं मिथुनीयन्ति। माता पुत्रेण मिथुनं गच्छति, पौत्रेण, तत्पुत्रेण अपि इति मर्यादार्थः। व्युत्क्रमणे द्वन्द्वं व्युत्क्रान्ताः। व्युत्क्रमणं भेदः, पृथगवस्थानम्। द्विवर्गसम्बन्धनेन पृथगवस्थिता द्वन्व्द्वं व्युत्क्रान्ता इत्युच्यन्ते। यज्ञपात्रप्रयोगे द्वन्द्वं न्यञ्चि यज्ञपात्राणि प्रयुनक्ति धीरः। अभिव्यक्तौ द्वन्द्वं नारदपर्वतौ। द्वन्द्वं सङ्कर्षणवासुदेवौ। द्वावप्यभिव्यक्तौ साहचर्येण इत्यर्थः। अन्यत्र अपि द्वन्द्वम् इत्येतद् दृश्यते, तदर्थं योगविभागः कर्तव्यः, द्वन्द्वं युद्धं वर्तते, द्वन्द्वानि सहते धीरः, चार्थे द्वन्द्वः (*2,2."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.1/8.1.15.md">Edit 8.1.15!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.1.15";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.1.16\",\"Previous\":\"8.1.14\",\"अकारादिक्रमसङ्ख्या\":1940,\"कौमुदीक्रमसङ्ख्या\":2150,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"सर्वस्य द्वे\",\"सूत्रम्‌\":\"द्वन्द्वं रहस्यमर्यादावचनव्युत्क्रमणयज्ञपात्रप्रयोगाभिव्यक्तिषु\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

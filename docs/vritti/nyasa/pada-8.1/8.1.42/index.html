@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="चकारो विभाषेत्यनुकर्षणार्थः। परीप्सायामर्थे इति। गम्यमान इति शेषः। परीप्सा त्वरा इति। सम्भ्रमः=अशुप्रवृत्तिरित्यर्थः। अधीष्व माणवक इत्यादि। त्वरितमधीष्वेत्येधोऽर्थो गम्यते। तथा ह्रत्र पुरा विद्योतते विद्युत्(), पुरा स्तनयति स्तनियुरितत्येतदुभयमप्यध्ययनदिषययोस्त्वरायाः कारणत्वेनोपातम्()। विद्युद्द्योतनादौ हि न पठितव्यं पर्वदिवसेष्विव। एतदुक्तं भवति&ndash;यस्मादचिरकालभावि विद्युद्द्योतनं स्तनयित्नुस्तननं वाऽध्ययनन्तरायोऽतोऽधीष्येति। पुरा विधीयते इति। यावत्पुरानिपातयोर्लट्(), (3.3.4), अनुदात्तेत्त्वादात्मनेपदम्()। अदुपदेशाल्लसार्वधातुकानुदात्तत्वे (6.1.180) कृते धातुस्वरेणाद्युदात्तमेतत्()।पुरा स्तनयतिइति।स्तन गदी देवशब्दे(धा।पा।१८५९,१८६०) चुरादिणिच्()। अदन्तत्वाद्बृद्ध्यभावुः। एतदपि पूर्ववन्मध्योदात्तम्()।पुराशब्दोऽत्र भविष्यदासतिं()त द्योतयति` इति। भविष्यद्विद्युद्द्योतनादिरध्ययनान्तरायो यस्तस्य प्रत्यासतिं()त सामीप्यर्माचरकालभादित्वं द्योतयति। तेन त्वरा गम्यत इत्यभिप्रायः॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.1/8.1.42.md">Edit 8.1.42!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.1.42";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.1.43\",\"Previous\":\"8.1.41\",\"अकारादिक्रमसङ्ख्या\":2390,\"कौमुदीक्रमसङ्ख्या\":3949,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"पदात् पदस्य\",\"सूत्रम्‌\":\"पुरा च परीप्सायाम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

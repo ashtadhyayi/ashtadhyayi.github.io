@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="आशीर्लिङि विशेषमाह&ndash; अकृत्सार्व। अङ्गस्येत्यधिकृतम्। अयडि� क्ङितीत्यतो यीतिसप्तम्यन्तमनुवृत्तमङ्गाक्षिप्तप्रत्ययविशेषणं, तदादिविधिः। दीर्घश्रुत्या अच इत्युपस्थितमङ्गविशेषणं। तदन्तविधिः।तदाह&ndash;अजन्तस्येत्यादिना। अकृत्सार्वधातुकयोरिति किम् ?। प्रकृत्य। तुकं बाधित्वा परत्वाद्दीर्घो न। चिनुयात्। सार्वधातुकत्वान्न दीर्घः। क्षीजेति। ईदुपधः। कूजिनेति। कूज अव्यक्ते शब्दे इत्यनुपदमेव पठितं, तत्रैव कुज क्षीज अव्यक्ते शब्दे इति पठितुं युक्तमित्यर्थः, अर्थैक्यादिति भावः। लज लजि। भर्त्सन इति क्वचित्पाठः। भर्त्सनं त्वपवादगीरित्यमरः। द्वितीय इदित्। आशीर्लिङि&ndash;लञ्ज्यात्। लाज लाजि। भर्जन इति क्वचित्पाठः। आदुपधौ। द्वितीय इदित्। जज जजीत्यादि। स्पष्टम्। वज व्रजेति। आद्यस्य असंयुक्तहल्मद्यस्थाऽकारवत्त्वेऽपि न शसददवादिगुणानामित्येत्त्वाभ्यासलोपौ नेत्याह&ndash; ववजतुरिति। अवाजीत्। अवजीत्। द्वितीयस्य तु संयुक्तहल्मध्यस्थाऽकारवत्त्वादेवैत्त्वाऽभ्यासलोपयोर्न प्रसक्तिः। अव्राजीदित्यत्र अतो हलादेरिति वृद्धिविकल्पमाशङ्क्याह&mdash; वदव्रजेति वृद्धिरिति। हलन्तत्वादेव सिद्धे व्रजग्रहणस्य अतो हलादेरिति विकल्पनिरासार्थत्वनादिति भावः। शुचादयो द्विसप्ततिर्वृत्ताः। शाड्रन्ता इति। शाडृ श्याघायामित्यन्ता इत्यर्थः। शाड�न्ता इति क्वचित्पाठः। अट्टेति। तवर्गतृतीयोपधोऽयम्। चत्र्वष्टुत्वाभ्यां टोपधनिर्देशः। तदाह&ndash;दोपधोऽयमिति। तथा च अट्टधातोः सनि इटि अट्टिस् इति स्थिते ष्टुत्वचत्र्वयोरसिद्धत्वादजादेर्द्वितीयस्येति प्रवर्तमानं द्वित्वं न न्द्राः संयोगादय इति दकारं विहाय टिस् इत्यस्य भवति। ततो हलादिशेषे दकारस्य ष्टुत्वचत्र्वयोः अट्टिटिषते इतीष्टं सिध्यति। स्वाभावकमूर्धन्योपधत्वे न न्द्रा इति निषेधाऽभावाट्टकारद्वयसहितस्यैव द्वित्वे हलादिशेषेण द्वितीयटकारस्य निवृत्तौ अटिट्टिषते इत्यनिष्टं प्रसज्येतेति भावः। तोपध इत्यन्य इति। ष्टुत्वेन टोपधनिर्देश इति भावः। अस्मिन्पक्षे सनि द्वित्वे कर्तव्ये ष्टुत्वस्याऽसिद्धत्वेऽपि न न्द्रा इति निषेधाऽभावात्तकारविशिष्टस्य त्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.4/7.4.25.md">Edit 7.4.25!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.4.25";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.4.26\",\"Previous\":\"7.4.24\",\"अकारादिक्रमसङ्ख्या\":15,\"कौमुदीक्रमसङ्ख्या\":2298,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"यकारादिषु प्रत्ययेषु च्वौ अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"अकृत्सार्वधातुकयोर्दीर्घः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

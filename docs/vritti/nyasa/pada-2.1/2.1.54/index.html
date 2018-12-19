@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="उपमीयतेऽनेनेत्युपमानम् इति। सादृश्येन येन परिच्छिद्यते तदुपमानमित्यर्थः। यथा गौरिव गवय इत्यत्र गौरुपमानम्,तेन हि सादृश्येन गवयः परिच्छिद्यते। यादृशो गौस्तादृशो गवयः इत्यर्थः प्रतीयते। सामान्यमनेकसाधारणं भवति; इह चोपमानस्य श्रुतत्वात् तस्य चोपमेयापेक्षत्वादुपमानोपमेयोरेव साधारणो धर्मः सामान्यं विज्ञायत इत्याह&ndash;उपमानोपमेययोः इत्यादि। तद्विशिष्टोपमेयवचनैरयं समासः इति। तेन सामान्येन धर्मेण विशष्टं यदुपमेयं तद्वचनैरयं समासो भवति। कृतः पुनः सामान्यवचनैरित्युक्ते सत्येष विशेषो लभ्यते? न्यायात्। तथा हि&ndash; सामान्यमुक्तवन्तः सामान्यवचनाः, यथा- गुणमुक्तवन्तो गुणवचना इति। कदा च ते सामान्यवचना भवन्ति? यदा सामान्यमभिधाय सामान्यविशिष्टे तद्वति द्रव्ये वत्र्तन्ते। तच्च सामान्यवदुपमानस्य सम्बन्धिशब्दत्वादुपमेयमेव विज्ञायत इति न्यायप्राप्त एवार्थो वृत्तिकृता दर्शितः। शस्त्रीश्यामा देवदत्ता इति। अत्रोपमानं शस्त्री, उपमेया देवदत्ता। प्रसिद्धं ह्रुपमानं भवति, नाप्रसिद्धम्। शस्त्र्येव श्यामगुणत्वेन प्रसिद्धा, न देवदत्ता। तयोः सामान्यं साधारणो धर्()मः श्यामत्वम्। तत् श्यामत्वमुक्त्वा श्यामशब्दो द#एवदत्तयामभेदोपचारान्मतुब्लोद्वा वत्र्तत इति सामान्यवचनो भवति। ननु च समानाधिकरणेनेत्यनुवत्र्तते, इह च शस्त्रीशब्दस्य शस्त्र्यां वृत्तिः, श्यामाशब्दस्य देवदत्तायाम्, अतो वैयधिकरण्यात् समासेन न भवितव्यम्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.54.md">Edit 2.1.54!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.54";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.55\",\"Previous\":\"2.1.53\",\"अकारादिक्रमसङ्ख्या\":2363,\"कौमुदीक्रमसङ्ख्या\":732,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः द्विगुः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"पापाणके कुत्सितैः\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

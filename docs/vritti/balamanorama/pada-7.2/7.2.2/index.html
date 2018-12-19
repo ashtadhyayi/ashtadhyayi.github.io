@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अतो ल्रान्तस्य। सिचि वृद्धिः परस्मैपदेषु इत्यनुवृत्तम्। अङ्गस्येत्यधिकृतम्। तद्विशेषणत्वात्तदन्तविधिनैव सिद्धेऽन्तग्रहणं व्यर्थम्। तत्राह&mdash; ल्रेति लुप्तषष्ठीकमिति। ल्र अन्तस्य इति छेदः। ल् च रश्चेति समाहारद्वन्द्वात्षष्ठ�एकवचनं लुप्तम्। ल्रस्यान्तस्येति सामानाधिकरण्येनान्वयः। अत इति व्यधिकरणषष्ठ�न्तम्&ndash; अन्तस्येत्यत्रान्वेति। अन्तशब्दः समीपवर्तिवाची। तथा च अतः समीपवर्तिनो ल्रस्येति लभ्यते। ल्रस्येत्यङ्गविशेषणत्वात्तदन्तविधिः। ततश्च अत्समीपवर्तिरेफलकारान्तस्य अङ्गस्य सिचि वृद्धिरिति लभ्यते। अत इत्यावृत्तं वृद्धौ स्थानित्वेनान्वेति तदाह&ndash;अतः समीपावित्यादिना। अतः समीप इति किम् ?। अखोरीत्। अमीलीत्। ल्रान्तस्येति किम् ?। मा भवनातीति। अतो वृद्धिरुत्युक्ता अतः समीपावित्यनुक्तौ तु अवभ्रीत् अ�आल्लीदित्यत्रातिपव्याप्तिः। अत्र अङ्गस्यान्तौ रेफलकारौ नातः समीपाविति न वृद्धिः। न चात्र अतो भकारेण लकारेण च व्यवहितत्वादेव न वृद्धिः, आलीदित्यादौ एकव्यवधाने चरितार्थत्वादिति वाच्यं, सिचि परे यदङ्गं तदकारस्य वृद्धिरित्यर्थाश्रयणेऽतिव्याप्तवारणार्थत्वात्। ञि फलेति। विशरणं&ndash;शिथिलीभावः। आदिर्ञिटुडवःर इति ञिरित्। ञीतः क्तः इति प्रयोजनम्। आदितश्चेति तीण्निषेधार्थमादित्त्वम्। लिण्निमित्तादेशादित्वादप्राप्ते आह&mdash;तृफलेति। मील श्मीलेति। निमेषणं&ndash; नेत्रसंकोचः। संकोच इति पाठेऽप्ययमेवार्थः। णील वर्ण इति। वर्णक्रियायामित्यर्थः। फल निष्पत्ताविति। ञि फलेति पूर्वं पठितम्। अनुबन्धभेदात्पुनः पाठः। खोलृ खोरृ इति। द्वितीयो रेफान्त ऋदित्। इत आरभ्यष्ठिवेः प्राग्रेफान्ताः। धोरृगतिचातुर्य इति। अ�आगतिविशेष इत्यर्थः। रेपान्तोऽयम्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.2/7.2.2.md">Edit 7.2.2!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.2.2";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.2.3\",\"Previous\":\"7.2.1\",\"अकारादिक्रमसङ्ख्या\":114,\"कौमुदीक्रमसङ्ख्या\":2330,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सिचि वृद्धिः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अतो र्लान्तस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

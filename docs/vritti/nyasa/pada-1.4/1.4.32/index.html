@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="कर्मणा करणभूतेन इति। ननु च कथं कर्म करणं भवति? क्रियाभेदसम्बन्धात्। तथा हि ददातिक्रिययाऽ‌ऽस्तुमिष्टतमत्वात् तस्याः कर्मत्वम्, अभिप्रयाणक्रियां प्रतितस्य साधकतमत्वात् करणत्वम्। अभिप्रैति इति। अभिसम्बध्नातीत्यर्थः। यदि कर्मणा यमभिप्रैति स सम्प्रदानसंज्ञो भवति, एवमजां नयति ग्राममित्यजादिभिर्नयनक्रियाकर्मभिः सम्बध्यमानस्य ग्रामस्य सम्प्रदानसंज्ञा प्रसज्येतेत्यत आह&ndash; अन्यर्थसंज्ञाविज्ञानात् इत्यादि। सम्प्रदानमिति। तेन ददातेः कर्मणा यमभिप्रैति तत् सम्प्रदानमिति विज्ञायते। नन्वेवमपि रजकस्य वस्त्रं ददाति, घ्नतः पृष्ठं ददातीत्यतत्र प्राप्नोति, नैतदस्ति; दानं हि नाम पूजानुग्रहकाम्यया स्वकीयद्रव्यपरित्यागः परस्वत्वापत्तिः, तच्चेह नास्ति, अतो न भविष्यति। कर्मणेति किमर्थम्? &ldquo; यमभिप्रैति स सम्प्रदानम्&rdquo; इत्युच्यमाने यमभिप्रैति तस्य कर्मण एव सम्प्रदानसंज्ञत्रा स्यात्। कर्मसंज्ञायास्तु ददातिकर्मणोऽन्यत्रावकाशः स्यात्&ndash; ओदनं पचतीति। यं स ग्रहणं किमर्थम्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.4/1.4.32.md">Edit 1.4.32!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.32";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.33\",\"Previous\":\"1.4.31\",\"अकारादिक्रमसङ्ख्या\":1009,\"कौमुदीक्रमसङ्ख्या\":569,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रदानम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्मणा यमभिप्रैति स सम्प्रदानम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

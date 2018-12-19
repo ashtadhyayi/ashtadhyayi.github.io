@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="धर्मादनिच्। अनिचोऽकारश्चिन्त्यप्रयोजन इत्येके। अन्ये तु धर्मं करोत्याचष्टे वा, तत्करोतीति ण्यन्तात्क्विपि धर्म्, परमो धर्म् यस्य सः परमधर्म्। एकदेशविकृतस्यानन्यत्वाद्धर्मशब्दोऽयमित्यकारोच्चारणमिह सप्रयोजनमेवेत्याहुः। बहुव्राहिणात्र पूर्वपदमाक्षिप्यत इत्यनुपदमेव वक्ष्यति। तच्च केवलादित्यनेन विशेष्यत इत्याह&mdash;केवलात्पूर्वपदादिति। प्राचा तूत्तरपदमपि विशेषितम्। प्रसादकृतापि केवलादिति धर्मशब्दस्य पूर्वपदस्य च विशेषणमिति व्याख्यातम्, तदुभयमपि चिन्त्यम्। आवृत्तौ मानाऽभावात्, धर्मपदविशेषणे प्रयोजनाऽभावाच्च। न च धर्मशब्दान्तं यत्रोत्तरपदं तव्द्यवृत्तिः फलमिति वाच्यं , तत्र बहुव्रीह्यवयवीभूतपूर्वपदात्परस्य धर्मपदेऽसम्भवादेवाऽदोषत्वात्। मध्यमत्वादिति। न च सर्वनामसङ्ख्ययोरिति स्वशब्दस्य पूर्वनिपातः शङ्क्यः, आहिताग्न्यादेराकृतिगणत्वादिति हरदत्तदिभिः समाहितत्वात्। आपेक्षिकमिति। नन्वत एव केवलग्रहणं व्यर्थं, पूर्वशब्दस्य समासप्रथमावयवे रूढत्वेनैव मध्यमपदव्यावृत्तिसम्भवादिति चेत्। अत्राहुः&ndash;पूर्वपदाक्षेपे तात्पर्यग्राहकत्वेन केवलपदस्य सार्थकत्वादिति। कर्मधारयपूर्वपद इति। नन्वत्राऽनिच् द#उर्लभः, केवलादित्यस्य समासानातच्मकत्वादित्यर्थादिति चेत्, मैवम्। केवलग्रहणस्य समासानात्मकपूर्वपदपरत्वे मानाऽभावात्। निवृत्तिधर्मा हि स्थानी भवतीत्यादिप्रयोगविरोधाच्च। अस्मदुक्तार्थस्तु धृञ् धारणेइति धातौ माधवग्रन्थे स्पष्टः। एतेन साध्योः धर्मोऽस्येति साध्यधर्मा, संदिग्धश्चासौ साध्यधर्मा चेति विग्रहः। स च सन्देहः साध्यधर्मद्वारक एव पर्यवस्यतीति केषाञ्चिव्द्याख्यानं परास्तम्। उक्तिरीत्यैव साध्यस्य साक्षात्सन्दिग्धत्वलाभे तत्समर्थनप्रयासस्य व्यर्थत्वात्। साध्वेवेति। परमश्चासौ स्वश्च परमस्वः, स धर्मो यस्येति यदा विगृह्यते तदेत्यर्थः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-5.4/5.4.124.md">Edit 5.4.124!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "5.4.124";
+          let sutraBasics = JSON.parse("{\"Next\":\"5.4.125\",\"Previous\":\"5.4.123\",\"अकारादिक्रमसङ्ख्या\":1994,\"कौमुदीक्रमसङ्ख्या\":863,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"धर्मादनिच् केवलात्‌\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

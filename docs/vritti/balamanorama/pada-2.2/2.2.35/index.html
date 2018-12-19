@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="सप्तमीविशेषणे। उपसर्जनं पूर्वमित्यतः पूर्वमित्यनुवर्तते। प्रत्ययग्रहणपरिभाषया सप्तमीति तदन्तग्रहणं। तदाह&ndash;सप्तम्यन्तमिति। कण्ठेकाल इति। कण्ठे तिष्ठतीति कण्ठेस्थः, स कालो यस्येति विग्रहः।सुपीति योगविभागात्कः।सप्तम्युपमानपूर्वपदस्येति बहुव्रीहि समासः, स्थशब्दलोपश्चेति अनेकमन्यपदार्थे इति सूत्रे भाष्ये स्पष्टम्। अमूर्धमस्तकादिति सप्तम्या अलुक्। अत एवेति। यद्यपि कण्ठेस्थशब्दः प्रथमान्त एवात्र बहुव्रीहौ पूर्वपदं, तस्य कालशब्देन सामानाधिकरण्यमस्त्येवेति कथं सप्तमीग्रहणं व्यधिंकरणपदबहुव्रीहिज्ञापकम्। किंच विशेषणत्वादेव सिद्धे किं वा सप्तमीग्रहणेन ?। तथापि यदा स्थपदमनादृत्य कण्ठे इत्यस्याधिकरणत्वं, तस्य च कालरूपे उत्तरपदार्थे उपसङ्क्रमस्तदा कण्ठे इत्यस्याऽप्रथमान्तत्वाद्बहुव्रीहेरप्रसक्तेस्तत्र सप्तम्यन्तस्य पूर्वनिपातविधिरभित्तिचित्रायितः स्यात्। ततश्च सप्तमीग्रहणादप्रथमान्तोऽपि बहुव्रीहिः क्वचिदस्तीति विज्ञायते इति योज्यम्। तेन सच्चास्त्रजन्मा हि विवेकलाभः इत्यादि सिद्धम्। चित्रगुरिति। उभयोरपि प्रथमानिर्दिष्टत्वेन विग्रहे नियतविभक्तिकत्वेन चान्यतरस्य प#ऊर्वनिपाते प्राप्ते उत्तरपदविशेषणस्यैव पूर्वनिपातार्थं विशेषग्रहणमिति भावः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.2/2.2.35.md">Edit 2.2.35!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.2.35";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.2.36\",\"Previous\":\"2.2.34\",\"अकारादिक्रमसङ्ख्या\":3609,\"कौमुदीक्रमसङ्ख्या\":898,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पूर्वनिपातः /परनिपातः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तमीविशेषणे बहुव्रीहौ\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अभिधेयवचनोऽयमर्थशब्दः इति। एतेन प्रयोजनादिवचनाद्वयवच्छिनत्ति। अर्थशब्दो हि प्रयोजनवचनोऽप्यस्ति, यथा&ndash; अनेनार्थनागतः, अनेन प्रयोजनेनेति गम्यते। निवृत्तिवचनोऽप्यस्सि, यथा&ndash; मशकारर्थो धूम इति, मशकनिवृत्त्यर्थ इति गम्यते। धनवचनोऽप्यस्ति,यथा&ndash;अर्थवान् देवदत्त इति, धनवानिति गम्यते। अभिधेयवचनोऽप्यस्ति, यथा&ndash; अस्य वचनस्यायमर्थ इति, इदमस्याभिधेयमिति गम्यते। इह त्वभिधेयवचनस्यैव ग्रहणम्। तत् पुनरभिधेयं जातिगुणक्रियाद्रव्यभेदेन चतुर्विधम्।अत एव चतुष्टयी शब्दानां प्रवृत्तिर्भवति। तत्र जातिशब्दानां जातिरभिधेया&ndash; गौरिति। यद्यर्थवतः प्रातिपदिकसंज्ञा विधीयते तदाऽभाववचनशशविषाणादिशब्दानां प्रातिपदिकसंज्ञा नोपपद्यते, अर्थाभावात्, नैतदस्ति; अर्थशब्दोऽभिधेयवचनः (का।१।२।४५) इत्युक्तम्, अभावोऽप्यभिधेयो भवत्येव। अन्यथा ह्रर्थाभावादितीदं वचनमनुच्चारणीयं स्यात्, अनर्थकत्वात्, न ह्रनर्थकं वचनं प्रयोगर्हति। तस्मादबाववचनानामपि प्रातिपदिकसंज्ञा भवत्येव। नान्तस्याधेर्मा भूत् इति। ननु चाधातुरिति प्रतिषेधो भविष्यति, तथा हि वन सम्भ्कतौ (धा।पा।४६३), धन धान्ये (धा।पा।११०४) इत्येतयोः धरात्वोरेते रूपे, नैतदस्ति; अव्युत्पन्नावपि वनधनशब्दौ स्तः, तयोरेवायं प्रयोगः। अत्र यदि नान्तस्यावधेः प्रातिपदिकसंज्ञा स्यात् तदा सुबुत्पत्तिः स्यात्, ततश्च पदसंज्ञायां सत्यां नलोपः स्यात्। ननु च अधातुः अप्रत्ययः&ndash; नैतदस्ति; अनर्थकस्यापि धातोर्विद्यमानत्वात् यथा&ndash; इङ अध्ययने (धा।पा।१०४६), इक् स्मरणे (धा।पा।१०४७) इति&ndash; एतयोरधिपूर्वयोरेवार्थवत्त्वम्, न केवलयोः। यस्तु गणपाठेऽनयोरर्थनिर्देशः, स समुदायार्थमवयवेऽध्यारोप्य कृत इति वेदितव्यम्। अध्यारोपितार्थयोरपि तयोर्गणपाठसामथ्र्याद्धातुसंज्ञा भवत्येव। एवं प्रत्ययोऽप्यनर्थकोऽप्यस्ति। यथा&ndash; यावादिभ्यः कन् (5."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.45.md">Edit 1.2.45!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.2.45";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.2.46\",\"Previous\":\"1.2.44\",\"अकारादिक्रमसङ्ख्या\":350,\"कौमुदीक्रमसङ्ख्या\":178,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":135,\"विषयः १\":\"प्रातिपदिकम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अर्थवदधातुरप्रत्ययः प्रातिपदिकम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

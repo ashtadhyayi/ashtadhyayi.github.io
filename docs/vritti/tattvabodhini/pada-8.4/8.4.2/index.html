@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="अट्कुप्वाङ्। रषाभ्यामिति पञ्चमीनिर्देशाद्व्यवहितस्याऽप्राप्तौ वचनमिदम्। तत्र सर्वैर्व्यवायोऽसंभवी। एकैकमात्रव्यावय इत्यपि नार्थः, क्षुभ्नादिषु क्षु भ्नपाठसामर्थ्यात्, सरूपाणाम्-इत्यादिनिर्देशाच्चेत्यभिप्रेत्याह-व्यस्तैर्यथासंभवमिलितैश्चेत्यादि। नन्वेवं कृत्स्नं कार्त्स्न्यमित्यादावडादिव्यवधानाऽभावण्णत्वाऽभावेप्यादर्शेनेत्यादावड्वयवधानादतिप्रसङ्गः। न च अडादिभिरेव व्यवधान इति नियमः, अप्राप्ते विधिरयमित्युक्तत्वात्। सत्यम्। योगविभागोऽत्र बोध्यः। व्यवायेऽपि इत्येको योगो विध्यर्थः। अट्कुप्वाङ्नुम्--इत्यन्यो नियमार्थः। छान्दसो भिसो लुक्। अत्र योगविभागं विनापि निर्वाहः सुकर इति तु नव्याः। तथाहि&ndash;अट्कुप्वाङ्-&lsquo;इति सूत्रे रषाभ्याम् इत्यनुवर्तते। पञ्चमीश्रुत्या तस्मादित्युत्तरस्येति परिभाषोपतिष्ठते। उपस्थितापि सा वचनप्रामाण्यादडादिव्यावाये न प्रवर्तते। तदन्यव्यवाये तु प्रवर्तत एव। अतएव-येन नाव्यवधानं तेन व्यवहितेऽपि वचनप्रामाण्यादेकवर्णव्यवहितस्यैव इको गुणो न तु भिनत्तीत्यादावनेकव्यवहितस्येकः&ndash;इति पुगन्तलघूपधस्येति सूत्रे वक्ष्यति। एवं च यत्राडादिभ#इरेव व्यवधानं रामेणेत्यादौ तत्र भवत्येव णत्वम्। अत्र त्वडादिभिन्नेन व्यवधानमादर्शेनेत्यादौ, तत्र न भवति, तस्मादिति परिभाषाया जागरूकत्वात्। निषेधं बाधितुमिति। तेन पर्यणद्धमित्यत्र उपसर्गादसमासेऽपि- इति णत्वं सिध्यतीति भावः। उपलक्षणार्थमिति। नुम्स्थानिकस्य, स्वाभाविकस्य वाऽनुस्वारमात्रस्योपलक्षणार्थं नुम्ग्रहणमित्यर्थः। तेन बृहि वृद्धौ। इदित्त्वान्नुम्। तस्यानुस्वारः। तृंहू हिंसायां। स्वाभाविकोऽत्रानुसवारः। बृंहणम् तृंहणम्। उभयत्रापि णत्वं सिद्धम्। अयोगवाहानामिति। अविद्यमानो योगः=प्रत्याहारेषु संबन्धो येषां ते अयोगाः। अनुपदिष्टत्वादुपदिष्टैरगृहीतत्वाच्च प्रत्याहारसंबन्धशून्या इत्यर्थः। वाहयन्ति निर्वाहयन्ति प्रयोगमिति वाहाः। अयोगाश्च ते वाहाश्च अयोगवाहाः। अनुपदिष्टत्वे उपदिष्टैरगृहीतत्वे च सति श्रूयमाणा इत्यर्थः। अट्स्विति। निष्कर्षस्त्वकारोपरीति। तेन पयःस्वित्यादाविणः परस्येति षत्वं न भवति। अत एवोक्तं प्राक्-अनुस्वारविसर्गजिह्वामूलीयोपध्मानीययमानामकारोपरीति।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-8.4/8.4.2.md">Edit 8.4.2!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.4.2";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.4.3\",\"Previous\":\"8.4.1\",\"अकारादिक्रमसङ्ख्या\":79,\"कौमुदीक्रमसङ्ख्या\":197,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":157,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"अट्कुप्वाङ्नुम्व्यवायेऽपि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

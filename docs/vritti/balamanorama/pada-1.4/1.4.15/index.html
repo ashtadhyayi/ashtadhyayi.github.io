@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="नः क्ये। नकारादकार उच्चारणार्थः। सुप्तिङन्तमित्यतः सुबन्तं पदमित्यनुवर्तते। सुबन्तं नकारेण विशेष्यते। तदन्तविधिः। नकारान्तं सुबन्तं पदसंज्ञं स्यादिति लभ्यते। सुबन्तत्वादेव पदत्वे सिद्धे नियमार्थमिदम्। क्यग्रहणेन क्यच्क्यङोर्ग्रहणं न तु क्यषः, लोहितडाज्भ्यः क्यष्वचनमिति वक्ष्यमाणतया हलन्तात्क्यषोऽभावात्। तदाह क्यचि क्यङि चेत्यादिना। ननु गव्यांचकारेत्यत्र आम आर्द्धधातुकावादेशसंपन्नवकारस्य यकारलोपं प्रति निमित्तत्वाऽसंभवादिति भावः। गव्यितेति। इटि अतो लोपः। राजीयतीत्यत्र आह&ndash; नलोप इति। राजानमिच्छतीत्यर्थे क्यचि राजन् य ति इतिस्थिते नः क्ये इति पदत्वान्नकारस्य लोप इत्यर्थः। कृते नलोपे क्यचि चेत्यकारस्य ईत्त्वमिति मत्वाह&ndash; राजीयतीति। न च ईत्त्वे कर्तव्ये नलोपस्याऽसिद्धत्वं शङ्क्यं, नलोपः सुप्स्वरेति नियमादित्यलम्। ननु त्वामात्मन इच्छति, मामात्मन इच्छतीत्यत्र युष्मदस्मद्भ्यां क्यचि धात्ववयवत्वात्सुपो लुकि प्रत्ययलक्षणाऽभावात् त्वमावेकवचने इति कथं त्वमौ स्यातां, विभक्तौ परत एव तद्विधानादित्यत आह&ndash; प्रत्ययोत्तरपदयोश्चेति। सुपो लुका लुप्तत्वेऽपि क्यचमादाय मपर्यन्तस्य त्वमाविति भावः। ननु युष्मानात्मन इच्छति, अस्मानात्मन इच्छति- युष्मद्यति अस्मद्यतीत्यत्रापि क्यचमादाय त्वमौ स्यातामित्यत आह&ndash; एकार्थयोरित्येवेति। प्रत्ययोत्तरपदयोश्चेत्यत्रत्वमावेकवचनेइति सूत्रमनुवृत्तम्। एकवचनशब्दश्च न रूढः, किंतु एकत्वविशिष्टार्थवृत्तित्वमेकवचनशब्देन विवक्षितमिति युष्मदस्मत्प्रक्रियायां प्रपञ्चितं प्राक्। तथा च युष्मदस्मदोरेकत्वविशिष्टार्थवृत्तित्वाऽभावान्न त्वमाविति भावः। गिरमात्मन इच्छति, पुरमात्मन इच्छतीत्यत्र गिर्शब्दात्पुर्शब्दाच्च क्यचि विशेषमाह-- हलि चेति।उपधादीर्घइति शेषः। ननु दिवमिच्छति दिव्यतीत्यत्रापिहलि चेति दीर्घः स्यादित्यत आह-- धातोरित्येवेति।हलि चेति सूत्रेसिपि धातोरित्यस्तदनुवृत्तेरिति भावः। दिव्यतीति। दिव्शब्दोऽव्युत्पन्नं प्रातिपदिकमिति भावः। इहेति।हलि चेति सूत्रे धातोरित्यनुवृत्तेः पुर्यतीत्यत्र न दीर्घ इति माधवग्रन्थश्चिन्त्य इत्यर्थः। कुत इत्यत आह-- पुर्गिरोः साम्यादिति।गृ?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.4/1.4.15.md">Edit 1.4.15!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "1.4.15";
+          let sutraBasics = JSON.parse("{\"Next\":\"1.4.16\",\"Previous\":\"1.4.14\",\"अकारादिक्रमसङ्ख्या\":2082,\"कौमुदीक्रमसङ्ख्या\":2651,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पदम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नः क्ये\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

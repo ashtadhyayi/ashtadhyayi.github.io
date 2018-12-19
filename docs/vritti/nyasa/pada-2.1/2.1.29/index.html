@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="तत्कृत इति। एतदर्थशब्देनासमस्तमेव, अविभक्तिञ्च। तृतीयाविभक्तेः सुपां सुलुक् (7.1.39) इति लुप्तत्वात्। एतच्च गुणवचनेनेत्यस्य समानाधिकरणं विशेषणम्। अत एव कीदृशेनेति पृष्टः सन्नाह&ndash; तत्कृतेन इति। तदिति सर्वनाम्ना प्रकृतस्य तृतीयान्तस्य प्रत्यवमर्श इति तृतीयान्तकृतेनेति दर्शयति। तृतीयान्तेन गुणवचनस्य करणत्वं न सम्भवतीत्यतः सामथ्र्यात् तदर्थकृतेनेति विज्ञायत इत्यत आह&ndash; तृतीयान्तार्थकृतेनेति यावत् इति। अर्थद्वारेण चेदं गुणवचनस्य विशेषणं वेदितव्यम्- तृतीयान्तार्थकृतो गुणवचनार्थ इति। सोऽपि तथोच्यते। एतदुक्तं भवति&ndash; तृतीयान्तार्थकृतेन गुणवचनार्थेनेति। अर्थ एव हि तृतीयान्तार्थेन क्रियते, न च गुणवचनशब्दः। गुणमुक्तवान् = गुणवचनः। कृत्यल्युटो बहुलम् (3.3.13) इति कत्र्तरि ल्युट्। अथ वा&ndash; करणे, गुण उक्तोऽनेनेति गुणवचनः। यश्च पूर्व गुणे वर्तित्वा पश्चात् तद्वति द्रव्ये वत्र्तते स गुणवचनः। गुणेनेत्युच्यमाने घृतेन पाटवमित्यादौ प्रसङ्गः, अतस्तन्निवृत्त्यर्थं वचनग्रहणम्। त()स्मश्च सति गुणे वर्तित्वा तद्वति द्रव्ये यो वत्र्तते तेनैव समासो भवति, न तु गुण एव यो वत्र्तते तेन सह। न च पाटवादयः शब्दाः पूर्वं गुणे वर्तित्वा पश्चात् तद्वति द्रव्ये वत्र्तन्ते, अपि तु गुण एव। वचनग्रहणात् तैः सह समासो न भवति। शङ्कुलाखण्डः, गिरिकाणः इति। खण्डकाणशब्दावत्र खण्डनेन निमीलने च क्रियारूपापन्ने गुणे वर्तित्वा पश्चान्मतुब्लोपादभेदोपचाराद्वा तद्वति द्रव्ये वर्तते इति गुणवचनौ भवतः। धान्यार्थः इति। भवुत्ययमर्थशब्दस्तत्कृतः, तथा हि स गोभिर्वपावान् कृतः। न तु वपावानित्ययं शब्दो गुणमुक्तवामिति न गुणवचनः, ततस्तेन सह समासो न भवति॥"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.29.md">Edit 2.1.29!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "2.1.29";
+          let sutraBasics = JSON.parse("{\"Next\":\"2.1.30\",\"Previous\":\"2.1.28\",\"अकारादिक्रमसङ्ख्या\":120,\"कौमुदीक्रमसङ्ख्या\":691,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्वितीया\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"अत्यन्तसंयोगे च\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

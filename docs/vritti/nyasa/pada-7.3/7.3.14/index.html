@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="जनपदस्य (7.3.12) इत्यनुवत्र्तते, तेन प्राचामित्येतद्देशग्रहणं विज्ञायते न त्वाचार्यग्रहणमिति मात्वाऽ‌ऽह&ndash;प्राचां देशे ग्रामाणाम्() इत्यादि। पुर्वेषुकामशमः इति। पूर्वा चासाविषुकामशमी चेति दिक्संख्ये संज्ञायाम्() (2.1.49) इति समासः, ततो भवार्थे दिक्पूर्वपदादसंज्ञायां ञः (4.2.106) इति। पूर्वपाटलिपुत्रकः इति। पूर्वस्मिन्? पाटलिपुत्रे भव इति पूर्ववत्? तद्धितार्थे समासः। रोपधेतोः (4.2.122) इति वुञ्()। ननु चैकमेव पाटलिपुत्रम्(), तत्र पाटलिपुत्रान्तरस्य व्यवच्छेद्यस्याभावात्(), तत्कथं पूर्वशब्देन पाटलिपुत्रशब्दो विशिष्यते? पाटलिपुत्रैकदेशे पाटलिपुत्रशब्दो वत्र्तत इत्यदोषः। अथ नगरग्रहणं किमर्थम्(), न ग्रामाणाम्() इत्येवं सिद्धम्(), नगरमपि हि ग्रामो भवत्येव; जननिकायनिवासे ग्रामो रूढः, नगरञ्च जननिकायनिवास एव, अतश्च नगरमपि ग्रामः, यतो ये ग्रामे विधयो नेष्यन्ते, नगरेऽपि ते न क्रियन्ते। तथा हि&ndash;अभक्ष्यो ग्राम्यकुक्कुटः, अभक्ष्यो ग्राभ्यशूकरः&ndash;इत्युक्ते नागरोऽपि न भक्ष्यते; ग्रामे नाध्येतव्यम्() इत्युक्ते नगरेऽपि नाधीयते, तस्मान्नगरमपि ग्रामः। एवञ्च कृत्वा&ndash;उदीच्यग्रामाच्च बह्वचोऽन्तोदात्तात्(), (4."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.3/7.3.14.md">Edit 7.3.14!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "7.3.14";
+          let sutraBasics = JSON.parse("{\"Next\":\"7.3.15\",\"Previous\":\"7.3.13\",\"अकारादिक्रमसङ्ख्या\":2531,\"कौमुदीक्रमसङ्ख्या\":1400,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"उत्तरपदस्य वृद्धिः तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"प्राचां ग्रामनगराणाम्\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

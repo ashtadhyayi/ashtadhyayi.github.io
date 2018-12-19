@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="निधानमप्रकाशता इति। न निधानमनिधानम्()। निर्मूलम्(), न्यक्षम्() इति। मूल प्रतिष्ठायाम्() (धा।पा।५२९)-अस्मात्? पचाद्यच्()। तस्मान्मूलशब्दोऽन्तोदात्तः। वृ()तृ()वदिहनि कमिकषिभ्यः सः (द।उ।९।२१) [कमिकषियुमुचिभ्यः&ndash;द।उ।] इत्यधिकृत्य अशेर्देवने (द।उ।९।२४) इति सप्रत्ययान्तत्वादक्षशब्दोऽप्यन्तोदात्तः। नितृ()णम्() इति। नब्विषयस्य (फि।सू।२।२६) इति तृ()णमाद्युदात्तम्()। बहुव्रीहिरयम्() इत्यादि। यदा बहुव्रीहिस्तदा&ndash;निगतानि मूला न्यस्येति विग्रहः। यदा प्रादिसमासस्तदा निगतं मूलमिति। अव्ययीभावः कस्मादयं न भवति? इत्याह&ndash;अव्ययीभावे तु इत्यादि। बहुव्रीहौ तु समासान्तोदात्तत्वापवादः बहुव्रीहौ प्रकृत्या (6.2.1) इत्यादिना पूर्वपदस्य प्रकृतिस्वर उक्तः। तत्पुरुषेऽपि तत्पुरुषे तुल्यार्थ (6.2.2) इत्यादिना; तेन तयोर्विनाऽनेन वचनेनान्तोदात्तत्वं न सिध्यति। अव्ययीभावे तु समासान्तोदात्तत्वेनैव सिदधम्(), न हि तत्र तस्यापवादः उक्तः। निवाग्वृषलः; निदण्डः इति। अत्र पूर्वपदस्य प्रकृतिस्वर एव भवति। वाक्शब्दः क्विब्वचिप्रच्छि (द।उ।१०।२) इत्यादिना क्विबन्तो व्युत्पादित आद्युदात्तः। दमु उपशमे (धा।पा।१२०३)&ndash;अस्मात्?"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.191.md">Edit 6.2.191!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "6.2.191";
+          let sutraBasics = JSON.parse("{\"Next\":\"6.2.192\",\"Previous\":\"6.2.190\",\"अकारादिक्रमसङ्ख्या\":108,\"कौमुदीक्रमसङ्ख्या\":3925,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अतेरकृत्पदे\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="नादिन्याक्रोशे। द्वे इत्यनुवर्तते। यर इति च। आक्रोशो निन्दा। आदिनीति ङ्यन्तं लुप्तसप्तमीकम्। आदिनीशब्दे परे पुत्रशब्दस्यावयवो यो यर् तकारस्तस्य न द्वित्वम्, आक्रोशे गम्ये इत्यर्थः। तदाह-पूत्रशब्दस्येत्यादिना। पुत्रशब्दस्यावयवस्येत्यर्थः। पुत्रादिनी त्वमसि पाषे इति। पुत्रानत्तुं शीलमस्याः पुत्रादिनी। सुप्यजातौ इति णिनिः। ऋन्नेभ्य इति ङीष्। हे पापे। त्वं पुत्रादिनीत्यन्वयः। पुत्रघातिनीत्यर्थः। ईदृशाक्रोशस्य प्रायेण स्त्रीष्वेव सम्भवात् सूत्रे आदिनीति ङ्यन्तमेव विवक्षितमिति हरदत्तः। माधवोऽप्येवम्। अत्र उकारात्परस्य तकारस्याऽनचि चेति प्राप्तं द्वित्वं निषिध्यते। रेफस्य तु न क्वापि द्वित्वप्रसक्तिरित्यनुपदमेव वक्ष्यते। आक्रोशे किमिति। आक्रोशे इत्यस्य किं प्रयोजनमित्यर्थः। किं पृच्छायां जुगुप्सने इत्यव्ययवर्गेऽमरः। एवमुत्तरत्राप्येवञ्जातीयकेषु द्रष्टव्यम्। तत्त्वकथन इति। यस्याः पुत्राः स्वयमेव म्रियन्ते तां प्रति पुत्रादिनीति वस्तुस्थितिकथने तु न द्वित्वनिषेधः, तत्र निन्दाया अप्रतीतेरित्यर्थः। तत्परे च। वार्तिकमेतत्। स आदिनीशब्दः परो यस्मात्स तत्परः। आदिनीशब्दपरके पुत्रशब्दे च परे पुत्रशब्दावयवस्य यरो न द्वित्वमित्यर्थः। पुत्रपुत्रादिनी त्वमिति। पुत्रस्य पुत्रानत्तीति विग्रहः। अत्र पूर्वस्य पुत्रशब्दस्य आदिनीशब्दः परो न भवति, द्वितीयपुत्रशब्देन व्यवधानात्। अतः पूर्वसूत्रेणाऽप्राप्ते द्वित्वनिषेधे इदमारब्धम्। वा हतजग्धयोः। हतशब्दे जग्धशब्दे च परे पुत्रशब्दावयवस्य यरो द्वित्वं वा स्यादित्यर्थः। पुत्रहतीति। तकारद्वित्वे रूपम्। पुत्रो हतो ययेति विग्रहः। अस्वाङ्गपूर्वपदादिति ङीषिति केचित्। वस्तुतस्तु जातिपूर्वादित्यस्य तत्रानुवृत्तेर्गौरादित्वान्ङीषिति युक्तम्। पुत्रघातसाहसस्य स्त्रीष्वेव सम्भवात्स्त्रीलिङ्गमेवोदाह्मतम्। पुत्रहतीति। द्वित्वाऽभावे रूपम्। एवं पुत्रजग्धी पुत्रजग्धीति। अनचि चेति द्वित्वविकल्पे सिद्धे पुत्रशब्दस्य क्तान्ते चेद्धतजग्धयोरेव आक्रोश एवेति नियमार्थमिदं वार्तिकमित्याहुः।"/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.4/8.4.48.md">Edit 8.4.48!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.4.48";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.4.49\",\"Previous\":\"8.4.47\",\"अकारादिक्रमसङ्ख्या\":2147,\"कौमुदीक्रमसङ्ख्या\":55,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नादिन्याक्रोशे पुत्रस्य\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>

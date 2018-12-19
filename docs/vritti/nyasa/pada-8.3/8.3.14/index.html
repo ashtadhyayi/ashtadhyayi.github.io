@@ -47,6 +47,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="किं पुनरिदं सानुबन्धकारस्य रेफस्य ग्रहणम्()? उत्त निरनुबन्धकस्य? किञ्चात्र यदि सानुबन्धकस्य ग्रहणम्()? सिद्धम्()&ndash;अग्नीरथः, इन्दूरथ इति; नीरक्तं दूरक्तमिति तु न सिध्यति। अथ निरनुबन्धकरस्य ग्रहणम्()? तदा सिध्यति&ndash;नीरक्तम्(), दूरक्तमिति; अग्नीरथः, इन्दूरथ इति न सिध्यति? नैष दोषः; इह तन्तेणाचार्यः रो रि इति द्वे सूत्रे उच्चारितवान्(), तत्रैकत्र सानुबन्धकस्य ग्रहणम्(), अपरत्र निरनुबन्धकस्येति। नीरक्तमित्यादौ ढ्रलोपे पूर्वस्य दीर्घोऽणः (6.3.110) इति दीर्घत्वम्()। इह यदि पदस्येति स्थानषष्ठी स्यात्(), ततः अलोऽन्त्यस्य (1.1.51) इति पदान्तस्यैव [पदान्तस्य&ndash;कांउ।पाठः] रेफस्य [अयं भागः कांउ।पाठे नास्ति]लोपः स्यात्()&ndash;नीरक्तमित्यादौ। अजर्धा इत्यादौ त्वपदान्तस्य[अयं भागः कांउ।पाठे नास्ति] न स्यात्(); विशेषणषष्ठ()आं त्वस्यामिहापि भवतीत्येतच्चेतसि कृत्वाऽ‌ऽह&ndash;पद्स्य इत्यादि। विशेषणषष्ठ()आं हि पदस्येत्यस्यैवमभिसम्बन्धः क्रियते&ndash;पदस्यावयवो यो रेफस्तस्य रेफे परतो लोपो भवतीति। तेनापदान्तस्यापि भवति। अजर्धाः इति। एकाचो बशो भव्() (8."/>
 
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -60,11 +65,54 @@
     <a  href="/ui/about/" class="f3 fw2 hover-white no-underline white-90 dib">
       अष्टाध्यायी - मूलस्रोतः
     </a>
+    <input id="sutraSearchInputBox">
     <div class="flex-l items-center">
       
       
-      
-      <a class="hover-white no-underline white-90" href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit!</a>
+        <div id="prevSutraDiv"></div>
+        
+        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.14.md">Edit 8.3.14!</a>
+        <div id="nextSutraDiv"></div>
+        <script type="text/javascript">
+          let sutraId = "8.3.14";
+          let sutraBasics = JSON.parse("{\"Next\":\"8.3.15\",\"Previous\":\"8.3.13\",\"अकारादिक्रमसङ्ख्या\":2954,\"कौमुदीक्रमसङ्ख्या\":173,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":130,\"विषयः १\":\"रलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"रो रि\"}");
+          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+          function getSutraLinkRelative(sutraId) {
+            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+            return `../../pada-${sutraPaada}/${sutraId}/`;
+          }
+          function getSutraLinkTag(sutraId, style) {
+            let sutraLink = getSutraLinkRelative(sutraId);
+            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
+          }
+          if (sutraBasics.Previous) {
+            // console.log(nextSutraPaada);
+            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+          }
+          if (sutraBasics.Next) {
+            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+            
+          }
+          let sutraAutocompleteMap = new Map();
+          $.ajax({
+            type: "GET",
+            url: "\/ui\/data\/sutrANi.tsv",
+            dataType: "text",
+            success: function(response)
+            {
+              var options={"separator" : "\t"};
+              sutraList = $.csv.toObjects(response, options);
+              for (var sutraObject of sutraList) {
+                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+                sutraAutocompleteMap.set(autocompleteText, sutraObject);
+              }
+              
+              $("#sutraSearchInputBox").autocomplete({
+                source: Array.from(sutraAutocompleteMap.keys())
+              });
+            }
+          });
+        </script>
       
       
 <div hidden>
