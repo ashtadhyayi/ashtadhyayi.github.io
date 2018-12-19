@@ -1,0 +1,6 @@
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "content/vritti"]
+	path = content/vritti
+	url = https://github.com/sanskrit/ashtadhyayi.git
