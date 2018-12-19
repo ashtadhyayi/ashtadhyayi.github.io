@@ -19,7 +19,7 @@
       {{$dataRepoPath := replace .File.Path "vritti/" "" }}
       <a class="hover-white no-underline white-90" href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">Edit!</a>
       {{ end }}
-      {{ partial "social-follow.html" . }}
+      {{ partialCached "social-follow.html" . }}
     </div>
   </div>
 </nav>

@@ -5,7 +5,7 @@ title: About
 
 ## Intro
 
-Welcome! We are a few open source sanskrit programmers, and this is our centralized repository of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+Welcome! We are a few open source sanskrit programmers, and this is our centralized repository of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or [improvements to the UI](https://github.com/ashtadhyayi/ui).
 
 ### Motivation
 This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion. Hence this repository.
