@@ -40,10 +40,10 @@ function setSutraNavigationLinks(){
     let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
     if (sutraBasics.Previous) {
       // console.log(nextSutraPaada);
-      $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, "hover-white no-underline white-90 ma1", "", "\<"));
+      $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, "hover-white no-underline white-90 ma1", "", "<i class=\"glyphicon glyphicon-triangle-left\"></i>"));
     }
     if (sutraBasics.Next) {
-      $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, "hover-white no-underline white-90 ma1", preHtml="\>"));
+      $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, "hover-white no-underline white-90 ma1", preHtml="<i class=\"glyphicon glyphicon-triangle-right\"></i>"));
       // console.log(nextSutraPaada);
     }
   } catch(e) {

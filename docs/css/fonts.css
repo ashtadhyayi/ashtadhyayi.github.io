@@ -1,0 +1,28 @@
+/************************************************************/
+@font-face {
+    font-family: 'siddhanta-cakravat1';
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://raw.githubusercontent.com/sanskrit-coders/sanskrit-fonts/master/fonts/ttf-devanagari-fonts/siddhanta-variations/siddhanta-cakravat1.ttf) format('truetype');
+}
+
+/* Directly linking to the latest version of the font in the Github repo. */
+@font-face {
+    font-family: 'Noto Sans Devanagari From Github Hinted';
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://raw.githubusercontent.com/googlei18n/noto-fonts/master/hinted/NotoSansDevanagari-Regular.ttf) format('truetype');
+}
+/************************************************************/
+
+body, p {
+   font-family: 'Noto Sans Devanagari From Github Hinted', 'siddhanta-cakravat1', serif;
+   font-size: 20px;
+}
+
+code {
+  font-size: 100%;
+}
+
+
+/************************************************************/

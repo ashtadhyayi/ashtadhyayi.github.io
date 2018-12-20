@@ -33,8 +33,8 @@ function fillJsInclude(jsIncludeJqueryElement) {
                 var elementToInclude = $("<div class='included-post-content'/>")
                 var titleHtml = "";
                 titleHtml = "<h2 id='" + title + "'>" + title + "</h2>" +
-                "<a class='btn btn-default ma1' href='" + includedPageUrl + "'>See separately</a> " +
-                `<a class='btn btn-default ma2' href='${editMePath}'>Edit</a>`;
+                "<a class='btn btn-default ma1' href='" + includedPageUrl + "'>पृथगीक्षताम्।</a> " +
+                `<a class='btn btn-default ma2' href='${editMePath}'>सम्पाद्यताम्।</a>`;
                 elementToInclude.html(titleHtml + contentElements[0].innerHTML);
                 jsIncludeJqueryElement.html(elementToInclude);
             }
