@@ -15,7 +15,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
             }
             var editMePath = "";
             var editLinkElements = virtualJqPage.find("#currentSutraDiv");
-            console.debug(editLinkElements);
+            // console.debug(editLinkElements);
             if (editLinkElements.length == 0) {
                 console.warn("Could not get \"currentSutraDiv\" element.");
                 console.log(responseHtml);
