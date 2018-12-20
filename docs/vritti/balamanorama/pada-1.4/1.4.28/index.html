@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="अन्तर्धौ। अन्तर्धावित्येतद्व्याचष्टे&ndash;व्यवधाने सतीति। व्यवधानेनेति यावत्। यत्कर्तृकस्येति। येनेति कर्तृतृतीयेति भावः। आत्मनो दर्शनस्येति। आत्मन इति दर्शनशब्दयोगे कर्मणि षष्ठी। आत्मन इत्यध्याहारलभ्यम्। अत एव येनेति कर्तरि तृतीया सङ्गच्छते। अन्यथा कृद्योगषष्ठीप्रसङ्गात्। आत्मन इत्यध्याहारे तु उभयप्राप्तौ कर्मण्येवेति नियमान्न कृद्योग9षष्ठी। आत्मशब्देन इच्छतिकर्ता विवक्षितः। व्यवदानेन स्वविषये यत्कर्तृकदर्शनस्य अभावमिच्छतीति यावत्। मातुर्निलीयते कृष्म इति। लीङ्श्लेषणेश्यन्विकरणः। इह तूपसर्गवशाद्व्यवधानेन परकर्तृकस्वविषयकदर्शनविरहानुकूलव्यापारे वर्तते। ततश्च कृष्णो मातृकर्तृकस्वविषयकदर्शनविरहाय कुड�आदिना प्रच्छन्नो भवतीत्यर्थः। अत्र व्यवधानमाश्रित्य मातृकर्तृकस्वविषयकदर्शनविरहस्य कृष्णेनेष्यमाणतया मातुरपादानत्वात्पञ्चमी। कर्तृतृतीयापवादोऽयं , षष्ठ�पवादो वा। भाष्ये तु बुद्धिकृतमपादानत्वमाश्रित्य इदमपि प्रत्याख्यातम्।"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-1.4/1.4.28.md">सम्पाद्यताम् 1.4.28।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-1.4/1.4.28.md">सम्पाद्यताम् 1.4.28।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           BALAMANORAMA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           1.4.28 अन्तर्द्धौ येनाऽदर्शनमिच्छति
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>अन्तर्धौ। अन्तर्धावित्येतद्व्याचष्टे&ndash;व्यवधाने सतीति। व्यवधानेनेति यावत्। यत्कर्तृकस्येति। येनेति कर्तृतृतीयेति भावः। आत्मनो दर्शनस्येति। <code>आत्मन</code> इति दर्शनशब्दयोगे कर्मणि षष्ठी। <code>आत्मन</code> इत्यध्याहारलभ्यम्। अत एव येनेति कर्तरि तृतीया सङ्गच्छते। अन्यथा कृद्योगषष्ठीप्रसङ्गात्। <code>आत्मन</code> इत्यध्याहारे तु उभयप्राप्तौ कर्मण्येवेति नियमान्न कृद्योग9षष्ठी। आत्मशब्देन इच्छतिकर्ता विवक्षितः। व्यवदानेन स्वविषये यत्कर्तृकदर्शनस्य अभावमिच्छतीति यावत्। मातुर्निलीयते कृष्म इति। <code>लीङ्श्लेषणे</code>श्यन्विकरणः। इह तूपसर्गवशाद्व्यवधानेन परकर्तृकस्वविषयकदर्शनविरहानुकूलव्यापारे वर्तते। ततश्च कृष्णो मातृकर्तृकस्वविषयकदर्शनविरहाय कुड�आदिना प्रच्छन्नो भवतीत्यर्थः। अत्र व्यवधानमाश्रित्य मातृकर्तृकस्वविषयकदर्शनविरहस्य कृष्णेनेष्यमाणतया मातुरपादानत्वात्पञ्चमी। कर्तृतृतीयापवादोऽयं , षष्ठ�पवादो वा। भाष्ये तु बुद्धिकृतमपादानत्वमाश्रित्य इदमपि प्रत्याख्यातम्।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="कारक इति विशेषणमपादानादिसंज्ञाविषयम् इति। अपादानदयः संज्ञा विषयो यस्य तत्तथोक्तम्। आदिशब्देन सम्प्रदानादीनां ग्रहणम्। अथ वक्ष्यमाणानां ध्रुवादीनाभियं संज्ञा कस्मान्न भवति? एवं मन्यते&ndash; यदीयं संज्ञाशब्दा निर्दिश्यन्ते; अयं तु सप्तम्या निर्दिष्टः, तस्मान्नेयं ध्रुवादीनां संज्ञेति। कारके इति निर्धारणे सप्तमी, निर्धारणं तु बहुनां सम्भवति, तत्कथमेकवचनेन निर्देशः? सामान्यपेक्षया त्वेकवचनम्। अथ वा&ndash; छन्दोवत् सूत्राणि भवन्ति (म।भा।१।१।१) ततो व्यतयो बहुलम् (3.1.85) इति बहुवचने प्राप्त एकवचम् कारकेषु मध्ये यद् ध्रुवं कारकं तदपादानसंज्ञं भवति। एवमन्यत्रापि वेदितव्यमिति। कारकशब्दोऽयमस्त्येव व्युत्पन्नः&ndash; ण्वुलन्तः कर्तृपय्र्याय इति, अस्ति च संज्ञाशब्दः&ndash; अव्युत्पन्नो पय्र्याय इति। तत्रेह यदि पूर्वोक्तस्य ग्रहणं स्यात तदापादानादिषु कारकशब्दो न वत्र्तते, यथा&ndash; कर्तृशब्दः ण्वुल्तृचौ (3."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-1.4/1.4.23.md">सम्पाद्यताम् 1.4.23।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-1.4/1.4.23.md">सम्पाद्यताम् 1.4.23।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           1.4.23 कारके।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>कारक इति विशेषणमपादानादिसंज्ञाविषयम्</code> इति। अपादानदयः संज्ञा विषयो यस्य तत्तथोक्तम्। आदिशब्देन सम्प्रदानादीनां ग्रहणम्। अथ वक्ष्यमाणानां ध्रुवादीनाभियं संज्ञा कस्मान्न भवति? एवं मन्यते&ndash; यदीयं संज्ञाशब्दा निर्दिश्यन्ते; अयं तु सप्तम्या निर्दिष्टः, तस्मान्नेयं ध्रुवादीनां संज्ञेति। <code>कारके</code> इति निर्धारणे सप्तमी, निर्धारणं तु बहुनां सम्भवति, तत्कथमेकवचनेन निर्देशः? सामान्यपेक्षया त्वेकवचनम्। अथ वा&ndash; <code>छन्दोवत् सूत्राणि भवन्ति</code> (म।भा।१।१।१) ततो <code>व्यतयो बहुलम्</code> (3.1.85) इति बहुवचने प्राप्त एकवचम् कारकेषु मध्ये यद् ध्रुवं कारकं तदपादानसंज्ञं भवति। एवमन्यत्रापि वेदितव्यमिति।
 कारकशब्दोऽयमस्त्येव व्युत्पन्नः&ndash; ण्वुलन्तः कर्तृपय्र्याय इति, अस्ति च संज्ञाशब्दः&ndash; अव्युत्पन्नो पय्र्याय इति। तत्रेह यदि पूर्वोक्तस्य ग्रहणं स्यात तदापादानादिषु कारकशब्दो न वत्र्तते, यथा&ndash; कर्तृशब्दः <code>ण्वुल्तृचौ</code> (3.1.133) इति कर्तरि व्युत्पादितः, तथा कारकशब्दोऽपि; कत्र्ता च स्वतन्त्रः, अपादानादयश्चास्वतन्त्राः, तत्कथं तेषु कारकव्यपदेशः स्यात्? असति हि कारकव्यपदेशे कारकसंशब्देषु तेषां ग्रहणं न स्यात्। अथ तेषामपि कथञ्चित् स्वतन्त्रताभ्युपेयेत, एवञ्च तत्र कर्तृसंज्ञा प्रसज्येत, ततश्च ग्रामादागच्छति, उपाध्यायाय गां ददातीत्यादौ ग्रामादिभ्यस्तृतीया प्रसज्येत, इतरेतराश्रयश्चापि दोषः स्यात्। तथा हि&ndash; कर्तृसंज्ञोत्तरकालं कारकशब्दस्य व्युत्पत्तिः, तस्यां सत्यां कारकशब्दोपक्रमेण कर्त्तृसंज्ञा स्यात् बह्वेवं प्रतिविधेयं स्यात्, प्रतिविधाने च प्रतिपत्तिगौरवं स्यात्। निमित्तपर्यायस्य तु कारकशब्दस्य ग्रहणे न दोषः स्यात्, ततः स एव गृह्रत इति मत्वाह&ndash;<code>कारकशब्दोऽयं निमित्तपर्यायः</code> इति। <code>ग्रामादागच्छति</code> इति। ग्रामस्य ध्रुस्यागमनक्रियां प्रति निमित्तभावोऽस्ति। यदीह ग्रामोऽवधिभावेन नावतिष्ठेततत आगमनं न निष्पद्येत,तस्माद्()ग्रामः कारकम्।
 <code>वृक्षस्य पर्णं पतति</code> इति। वृक्षः सम्बन्धित्वेनात्र विवक्षितः न तु निमित्तत्वेन। अपायस्य कारकग्रहणान्निमित्तत्वेनाविवक्षितस्यापादानसंज्ञा न भवति। नैतत् कारकग्रहणस्य प्रत्युदाहरणं युक्तम्; ध्रुग्रहणेनैवात्रापादानसंज्ञाया निवर्तितत्वा#आत्, ध्रुवं हि तद्यदवधिभूतमपाये साध्ये। तथा हि वृत्तिकारो वक्ष्यति&ndash; <code>अपाये साध्ये यदवधिभूतम्</code> (का।१।४।२४) इति। न चेह वृक्षोऽवधित्वेन विवक्षितः, किं तर्हि? सम्बन्धत्वेन, नैतदस्ति; विवक्षितावधिभावस्यैव वृक्षस्य सम्बन्धिभावेन विवक्षित्वात्। अवधिभूतस्य वृक्षस्य सम्बन्धिनः पर्ण पततीत्यर्थः। न हि सम्बन्धित्वेन विवक्षाऽवधिभावविक्षाया विरुध्यते। तस्माद्विवक्षितावधिभावस्यैव वृक्ष्सय सम्बन्धित्वमात्रं विवक्षितम्, न तु विद्यमानमप्यपायं प्रति निमित्तत्वमिति काऽत्रायुक्तता !<br />
@@ -147,30 +148,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

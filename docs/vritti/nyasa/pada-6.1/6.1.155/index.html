@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="कुमारौ इति। वयसि प्रथमे (4.1.20) इति ङीप्(), यस्येति च (6.4.148) इत्यकारलोपः। कुमारशब्दोऽन्तोदात्तः इति। प्रातपदिकस्वरेण। एवमुत्तरत्राप्यन्तोदाततता वेदितव्या। ङीप्() इति। अनुदात्तः इति। पित्त्वात्()। प्रासङ्ग्यः इति। तद्वहति (4.4.76) इत्यादिना प्राग्घितीयो यत्()। प्रसङ्गशब्दः इत्यादि। षन्ज सङ्गे (धा।पा।९८७) इत्यस्माद्घञमुत्पाद्य प्रासङ्गशब्दो व्युत्पाद्यते, तस्य गतिकारकोपपदात्() (6.2.138) इति तत्पुरुषे (6.2.122) इति वरत्तमाने थाथघञ्क्ताजबित्रकाणाम्() (6.2.143) इत्यन्तोदात्तत्वं विहितम्(), अतो।सावन्तोदात्तः। नैतदस्ति इति। उदात्तो लुप्तते इति यदुक्तं तस्य प्रतिषेधः। कस्मान्नैतदस्तीत्याह&ndash;स्वरिते हि इत्यादि। स्वरविधिसमकालमेव शिष्टस्यानुदात्तत्त्वं भवतीति प्रातिपदिकमेतत्()। तस्मात्? स्वरिते विधीयमाने परिशिष्टस्यानुदात्तत्वेन भवितव्यम्()। तत्? कुत उदात्तलोपः?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.1/6.1.155.md">सम्पाद्यताम् 6.1.155।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.1/6.1.155.md">सम्पाद्यताम् 6.1.155।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.1.155 अनुदात्तस्य च यत्रोदात्तलोपः।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>कुमारौ</code> इति। <code>वयसि प्रथमे</code> (4.1.20) इति ङीप्(), <code>यस्येति च</code> (6.4.148) इत्यकारलोपः। <code>कुमारशब्दोऽन्तोदात्तः</code> इति। प्रातपदिकस्वरेण। एवमुत्तरत्राप्यन्तोदाततता वेदितव्या। <code>ङीप्()</code> इति। <code>अनुदात्तः</code> इति। पित्त्वात्()।
 <code>प्रासङ्ग्यः</code> इति। <code>तद्वहति</code> (4.4.76) इत्यादिना प्राग्घितीयो यत्()। <code>प्रसङ्गशब्दः</code> इत्यादि। <code>षन्ज सङ्गे</code> (धा।पा।९८७) इत्यस्माद्घञमुत्पाद्य प्रासङ्गशब्दो व्युत्पाद्यते, तस्य <code>गतिकारकोपपदात्()</code> (6.2.138) इति <code>तत्पुरुषे</code> (6.2.122) इति वरत्तमाने <code>थाथघञ्क्ताजबित्रकाणाम्()</code> (6.2.143) इत्यन्तोदात्तत्वं विहितम्(), अतो।सावन्तोदात्तः। <code>नैतदस्ति</code> इति। <code>उदात्तो लुप्तते</code> इति यदुक्तं तस्य प्रतिषेधः। कस्मान्नैतदस्तीत्याह&ndash;<code>स्वरिते हि</code> इत्यादि। स्वरविधिसमकालमेव शिष्टस्यानुदात्तत्त्वं भवतीति प्रातिपदिकमेतत्()। तस्मात्? स्वरिते विधीयमाने परिशिष्टस्यानुदात्तत्वेन भवितव्यम्()। तत्? कुत उदात्तलोपः? न कुतश्चिदित्यर्थः। <code>तदेतत्()</code> इत्यादि। यस्मादेवमनुदात्तग्रहणस्य प्रत्युदाहरणं न सम्भवति, तस्मादनुदात्तग्रहणमेतदादेरनुदात्तस्योदात्तत्वं यथा स्यादित्येवमर्थम्(); अन्यथा ह्रस्यानर्थक्यमेव स्यात्()।
 किं पुनः कारणमादेरनुदात्तस्योदात्तो न सिध्यति, यतस्तदर्थमनुदात्तग्रहणं क्रियते? इत्यत आह&ndash;<code>अन्त इति हि</code> इत्यादि। अवधारणमात्रं द्रष्टष्यम्()। अन्तस्यैव स्यात्, नादेरित्यर्थः। क्व पुनरादेरुदात्तार्थमनुदात्तग्रहणं क्रियते? इत्याह&ndash;<code>मा हि धुक्षाताम्()</code> इत्यादि। दुहेर्लुङ्(), आत्मनेपदमातामाथाम्(), ततश्च <code>शल इगुपधादनिटः क्सः</code> (3.1.45) इति च्लेः क्सादेशः, <code>तास्यानुदात्त</code> (6.1.180) इत्यादिना लसार्वधातुकस्यानुदात्तत्वम्(), <code>क्सस्याचि</code> (7.3.72) इत्यकारलोपः, क्सस्याकारः प्रत्ययस्वरेणोदात्तः, <code>दादेर्धातोर्घः</code> (8.2.32) <code>खरि च</code> (8.4.54) इति चत्र्वम्(), घकारस्य ककारः, षत्वम्()। अत्रासत्यनुदात्तग्रहण आतामाथामाकारस्यादिभूतस्यानुदात्तत्वं न स्यात्(), सति त्वस्मिन्नाकारस्यादिभूतस्योदात्तत्वं स्यात्()। हिशब्दस्य प्रयोगे <code>हि च</code> (8.1.34) इति निघातप्रतिषेधो न स्यात्()। निघाते हि तिङ्न्तस्यासत्युदात्तलोपो न स्यात्()। माङ्प्रयोगोऽप्यटः <code>न माङ्योगे</code> (6.4.74) इति प्रतिषेधो यथा स्यात्()। अटि हि तस्योदात्तत्वाच्छेषस्यानुदात्तत्वं स्यात्(), तथा च सत्यनुदात्तस्थाकारलोपः स्यात्(), नोदात्तस्य।
@@ -145,30 +146,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

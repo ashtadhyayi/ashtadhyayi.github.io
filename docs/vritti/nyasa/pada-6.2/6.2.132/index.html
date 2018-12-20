@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="पूर्वेणाचार्यादिभ्योऽपि परस्य पुत्रशब्दस्याद्युदात्तत्वे प्राप्ते प्रतिषेधोऽयमुच्यते। तथा च समासान्तोदात्तत्वमेव भवति। आख्याग्रहात्() इत्यादि। आख्याग्रहणमाचार्यादिभिः प्रत्येकमभिसम्बध्यते। तथा चाख्याग्रहणेऽनिरस्ते तस्याचार्यादेः पर्यायाणं विशेषणाञ्च ग्रहणं भवति। आचार्यपुत्रः इति स्वरूपस्योदाहरणम्()। उपाध्यायपुत्रः इति पर्यायस्य। शाकटायनपुत्रः इति विशेषस्य। राजपुत्रः इति स्वरूपस्य। ई()आरपुत्रः इति पर्यायस्य। नन्दपुत्रः इति विशेषस्य। ऋत्विक्पुत्रः इति स्वरूपस्य। याजकपुत्रः इति पर्यायस्य। होतुःपुत्रः इति विशेषस्य। संयुक्तपुत्रः इति स्वरूपस्य। सम्बन्धिपुत्रः इति पर्यायस्य। स्यालपुत्रः इति। विशेषस्य। ज्ञातिपुत्रः इति स्वरूपस्य। भ्रातुष्पुत्रः इति विशेषस्य। कस्यादिषु च (8.3.48) इति षत्वम्()। तत्राचार्यशब्दः कृत्स्वरेणान्तस्वरितः। स हि चरेराङ्पूर्वस्य ण्यति व्युत्पाद्यते। उपाध्यायशब्दोऽन्तोदात्तस्थाथादिस्वरेण (6."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.2/6.2.132.md">सम्पाद्यताम् 6.2.132।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.2/6.2.132.md">सम्पाद्यताम् 6.2.132।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.2.132 नाचार्यराज�त्वक्संयुक्तज्ञात्याख्येभ्यः।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>पूर्वेणाचार्यादिभ्योऽपि परस्य पुत्रशब्दस्याद्युदात्तत्वे प्राप्ते प्रतिषेधोऽयमुच्यते। तथा च समासान्तोदात्तत्वमेव भवति। <code>आख्याग्रहात्()</code> इत्यादि। आख्याग्रहणमाचार्यादिभिः प्रत्येकमभिसम्बध्यते। तथा चाख्याग्रहणेऽनिरस्ते तस्याचार्यादेः पर्यायाणं विशेषणाञ्च ग्रहणं भवति। <code>आचार्यपुत्रः</code> इति स्वरूपस्योदाहरणम्()। <code>उपाध्यायपुत्रः</code> इति पर्यायस्य। <code>शाकटायनपुत्रः</code> इति विशेषस्य। <code>राजपुत्रः</code> इति स्वरूपस्य। <code>ई()आरपुत्रः</code> इति पर्यायस्य। <code>नन्दपुत्रः</code> इति विशेषस्य। <code>ऋत्विक्पुत्रः</code> इति स्वरूपस्य। <code>याजकपुत्रः</code> इति पर्यायस्य। <code>होतुःपुत्रः</code> इति विशेषस्य। <code>संयुक्तपुत्रः</code> इति स्वरूपस्य। <code>सम्बन्धिपुत्रः</code> इति पर्यायस्य। <code>स्यालपुत्रः</code> इति। विशेषस्य। <code>ज्ञातिपुत्रः</code> इति स्वरूपस्य। <code>भ्रातुष्पुत्रः</code> इति विशेषस्य। <code>कस्यादिषु च</code> (8.3.48) इति षत्वम्()। तत्राचार्यशब्दः कृत्स्वरेणान्तस्वरितः। स हि चरेराङ्पूर्वस्य ण्यति व्युत्पाद्यते। उपाध्यायशब्दोऽन्तोदात्तस्थाथादिस्वरेण (6.2.143), स <code>इङश्च</code> (3.3.21) इति घञन्तो व्युत्पाद्यते। राजशब्द आद्युदत्तः, कनिन्प्रत्ययान्तत्वात्()। ई()आरशब्दोऽन्तोदात्तः; <code>स्थेशभास</code> (3.2.175) इत्यादिना वरच्प्रत्ययान्तत्वात्()। नन्दशब्दोऽप्यन्तोदात्तः; अजन्तत्वात्()। ऋत्विक्शब्दः <code>ऋत्विग्दधृक्()</code> (३।२।५९) इत्यादिना क्विन्? प्रत्ययान्तः। कृत्स्वरेणान्तोदात्तः। याजकशब्दो ण्वुलन्तः, तेन लित्स्वरेणाद्युदात्तः। होतृशब्दस्तृन्नन्तत्वादाद्युदात्तः। संयुक्तशब्दः <code>गतिरन्तरः</code> (6.2.49) इत्याद्युदात्तः। <code>स्यल वितर्कगे</code> (()) अस्माच्चुरादिणिजन्तात्त्? पचाद्यचि स्यालशब्दोऽन्तोदात्तः। <code>ज्ञा</code> इत्यस्मात्? <code>क्तिच्क्तौ च संज्ञायाम्()</code> (3.3.174) इति ज्ञातिशब्दोऽन्तोदात्तः। <code>तृन्स्तृचौ शंसिक्षदादिभ्यः</code> (द।उ।२।१) इति प्रकृत्य भातृशब्दस्तृन्न्नन्तो व्युत्पाद्यते, तेनाद्युदात्तः। संयुक्तशब्दोऽयमस्त्येव रूढिशब्दो यो विवाहकृतेन सम्बन्धेन स्याल()आशुरादिषु वर्तते, अस्ति क्रियाशब्दो यः सर्वत्र केनचित्? सम्बन्धेन वर्तते; तत्रेह रूढिशब्दस्य ग्रहणम्()। कुत एतत्()? आचार्यानीनां पृथग्ग्रहणात्()। यदि हि क्रियाशब्दस्य ग्रहणं स्यात्(), तदा संयुक्तग्रहणेनैव निषिद्धत्त्वादाचार्यादीनां पृथग्ग्रहणं न कुर्यात्()। तेऽपि हि विद्यादिकृतेन सम्बन्धेन संयुक्ता भवन्त्येव। तस्माद्रूढिशब्दस्य ग्रहणम्()। तेन क्रियाशब्दो यः संयुक्तशब्दस्तस्मात्? प्रतिषेदो न भवति॥</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उतश्च।हेर्लुक्स्यादिति। चिणो लुगित्यतोऽतो हेतित्यतश्च तदनुवृत्तेरिति भावः। लोटो मिपि उप्रत्यये वकारस्य अकारे अतो लोपे धिनु मि इति स्थिते मेर्निभावमाडुत्तमस्येत्याडागमं च बाधित्वा परत्वादुकारस्य लोपश्चास्यान्यतस्यामिति लोपमाशङ्क्याह&ndash; नित्यत्वादित्यादि। निभावस्याप्युपलक्षणम्। उकारलोपे कृते अकृते च निभावस्य आडागमस्य च प्रवृत्त्या नित्यत्वादुकारलोपात्पूर्वमेव निभावाडागमयोः कृतयोरुकारलोपस्याऽप्रसक्तौ आटः पित्त्वेन ङित्त्वाऽभावादुकारस्य गुणेऽवादेशे च धिनवानीति रूपमिति भावः। अधिनोत्। धिनुयात्। धिन्व्यात्। अधिन्वीत्। अधिन्विष्यत्। कृणोतीत्यादीति। धिविव्दरूपाणीति भावः। अयं स्वादौ चेति। कृविरित्यर्थः। अव रक्षणेति। स्वाम्यर्थः- ऐ�आर्यम्। मा भवानवीदिति। नेटीति न वृद्धिः। मव्यादयोऽवत्यन्ताः पर्समैपदिनो गताः। धावु गतीति। उदिदयम्। स्वरितेदिति। ततश्च कर्तृगामिनि फले आत्मनेपदम्, अन्यथा परस्मैपदमित भावः। अथोष्मान्ता इति। तत्र धुक्षे त्यारभ्य कासृधातोः प्राक् षकारान्ताः। तत्र क्लेशधातुरेकः शकारान्तः। दीक्षमौण्ड�एति। णेषृधातुर्णोपदेशः। कासृधातुमारभ्य ईहधातोः सकारान्ताः। कासांचक्र इति। कास्प्रत्ययादित्याम्। णासृधातुर्णसधातुश्च णोपदेशः। आङ शसीति। आङः परः शसिधातुरिच्छायामित्यर्थः। ईहेत्यारभ्य काशृधातुवर्जं घुषि कान्तीत्यतः प्राक्&ndash;हकारान्ताः। काशृधातुस्तु शकारान्तः। प्लिहहधातुरदुपधः। ऊह वितर्के इति। युक्त्या अर्थनिर्णयो वितर्कः। अनुक्तमप्यूहति पण्डितो जनः इत्यत्र तु अनुदात्तेत्त्वलक्षणात्मनेपदमनित्यमिति बोध्यम्। गाह्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-6.4/6.4.106.md">सम्पाद्यताम् 6.4.106।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-6.4/6.4.106.md">सम्पाद्यताम् 6.4.106।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           BALAMANORAMA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.106 उतश्च प्रत्ययादसंयोगपूर्वात्
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>उतश्च।हेर्लुक्स्यादिति। <code>चिणो लु</code>गित्यतो<code>ऽतो हे</code>तित्यतश्च तदनुवृत्तेरिति भावः। लोटो मिपि उप्रत्यये वकारस्य अकारे अतो लोपे धिनु मि इति स्थिते मेर्निभावमाडुत्तमस्येत्याडागमं च बाधित्वा परत्वादुकारस्य <code>लोपश्चास्यान्यतस्या</code>मिति लोपमाशङ्क्याह&ndash; नित्यत्वादित्यादि। निभावस्याप्युपलक्षणम्। उकारलोपे कृते अकृते च निभावस्य आडागमस्य च प्रवृत्त्या नित्यत्वादुकारलोपात्पूर्वमेव निभावाडागमयोः कृतयोरुकारलोपस्याऽप्रसक्तौ आटः पित्त्वेन ङित्त्वाऽभावादुकारस्य गुणेऽवादेशे च धिनवानीति रूपमिति भावः। अधिनोत्। धिनुयात्। धिन्व्यात्। अधिन्वीत्। अधिन्विष्यत्। कृणोतीत्यादीति। धिविव्दरूपाणीति भावः। अयं स्वादौ चेति। कृविरित्यर्थः। अव रक्षणेति। स्वाम्यर्थः- ऐ�आर्यम्। मा भवानवीदिति। <code>नेटी</code>ति न वृद्धिः। मव्यादयोऽवत्यन्ताः पर्समैपदिनो गताः। धावु गतीति। उदिदयम्। स्वरितेदिति। ततश्च कर्तृगामिनि फले आत्मनेपदम्, अन्यथा परस्मैपदमित भावः। अथोष्मान्ता इति। तत्र <code>धुक्षे</code> त्यारभ्य कासृधातोः प्राक् षकारान्ताः। तत्र क्लेशधातुरेकः शकारान्तः। दीक्षमौण्ड�एति। णेषृधातुर्णोपदेशः। कासृधातुमारभ्य ईहधातोः सकारान्ताः। कासांचक्र इति। कास्प्रत्ययादित्याम्। णासृधातुर्णसधातुश्च णोपदेशः। आङ शसीति। आङः परः शसिधातुरिच्छायामित्यर्थः। ईहेत्यारभ्य काशृधातुवर्जं घुषि कान्तीत्यतः प्राक्&ndash;हकारान्ताः। काशृधातुस्तु शकारान्तः। प्लिहहधातुरदुपधः। ऊह वितर्के इति। युक्त्या अर्थनिर्णयो वितर्कः। <code>अनुक्तमप्यूहति पण्डितो जनः</code> इत्यत्र तु अनुदात्तेत्त्वलक्षणात्मनेपदमनित्यमिति बोध्यम्। गाह्?धातुरूदित्त्वाद्वेट्। तदाह&ndash;जगाहिषे जघाक्षे इति। इडभावे जगाह् से इति स्थिते <code>हो ढः</code>, <code>एकाच</code> इति भष्भावेन गस्य घः, <code>ष?ढो</code>रिति ढस्य कः, सस्य षः। जगाहिढ्वे जगाहिध्वे इति। इट्पक्षे <code>विभाषेटः</code> इति ढत्वविकल्पः। इडभावे त्वाह&ndash; जघाढ्व इति। जगाह्?ध्वे इति स्थिते हस्य ढः, धस्य ष्टुत्वेन ढः, गस्य भष् घकारः। पूर्वस्य ढस्य <code>ढो ढे लोपः</code> इति वक्ष्यमाणो लोपः। ढलोपसूत्रं त्विहैव पठितुं युक्तम्। गाहितेति। इट्पक्षे रूपम्।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

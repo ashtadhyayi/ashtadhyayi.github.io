@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उपसर्गस्याऽयतौ। अयताविति श्तिपा निर्देशः। कृपो रो ल इत्यतो रो ल इत्यनुवर्तते। तदाह&ndash;अयतिपरस्येत्यादिना। प्लायत इति। प्र इत्युपसर्गः। प्लायत इति। परा इत्याकारान्त उपसर्गः। ननु निरयते दुरयत इत्यत्रापि लत्वं स्यादित्यत आह&mdash;निस्दुसोरिति। तर्हि निलयते दुलयत इति कथमित्यत आह&ndash;निर्दुरोस्त्विति। एतदर्थमेव प्रादिषु रेफान्तयोश्च निर्देश इति भावः। तर्हि प्रत्यय इत्यत्रापि प्रतेरयतिपरत्वाद्रस्य लत्वं स्यादित्यत आह&mdash; प्रत्यय इति त्विति। प्रतिपूर्वकादिण्धातोरतच्प्रत्यये प्रत्यय इति रूपम्। अयतिपरत्वाऽभावान्न लत्वमित्यर्थः। अयधातुमादय प्लत्यय इति न, अनभिधानादिति कैयटः। कथमुदयतीति। उत्पूर्वकादयधातोः शत्रन्तात्सप्तम्यन्तमिति मत्वा आक्षेपः। अनुदात्तेत्त्वेन लटः शानच्प्रसङ्गादिति भावः। प्रश्लिष्टस्येति। इधातोरिति शेषः। तस्य अनुदात्तेत्त्वाऽबावाच्छतृप्रत्ययो निर्बाध इति भावः। ज्ञापकादिति। चक्षिङ् धातोरिकारस्याऽनुदात्ततया अनुदात्तेत्त्वादेवात्मनेपदसिद्धौ ङित्करणमनुदात्तेत्त्वप्रयुक्तात्मनेपदस्याऽनित्यतां ज्ञापयति। तस्याऽनित्यत्वे तु नित्यात्मनेपदार्थं ङित्करणमर्थवदिति भावः। इदं तु भाष्ये न दृश्यते। वादित्वादिति वयधातोर्लिटि वादित्वादेत्वाभ्यासलोपयोरभावे सतिववयेइति रूपमित्यर्थः। णयधातुर्णोपदेश इति मत्वा आह--प्रणयत इति।उपसर्गादसमासेऽपीति णत्वमिति भावः। दयांचक्र इति।दयायासश्चेत्याम्। ऊयांचक्र इति। इजादित्वादाम्। उन्दने चेति। क्लेदने चेत्यर्थः। स्फायी ओप्यायीति। ओदित्त्वम्ओदितश्चेति निष्ठानत्वार्थम्। ईदित्त्वं तु�आईदितो निष्ठाया`मितीण्निषेधार्थम्।"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-8.2/8.2.19.md">सम्पाद्यताम् 8.2.19।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-8.2/8.2.19.md">सम्पाद्यताम् 8.2.19।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           BALAMANORAMA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           8.2.19 उपसर्गस्यायतौ
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>उपसर्गस्याऽयतौ। अयताविति श्तिपा निर्देशः। <code>कृपो रो ल</code> इत्यतो रो ल इत्यनुवर्तते। तदाह&ndash;अयतिपरस्येत्यादिना। प्लायत इति। प्र इत्युपसर्गः। प्लायत इति। परा इत्याकारान्त उपसर्गः। ननु निरयते दुरयत इत्यत्रापि लत्वं स्यादित्यत आह&mdash;निस्दुसोरिति। तर्हि निलयते दुलयत इति कथमित्यत आह&ndash;निर्दुरोस्त्विति। एतदर्थमेव प्रादिषु रेफान्तयोश्च निर्देश इति भावः। तर्हि <code>प्रत्यय</code> इत्यत्रापि प्रतेरयतिपरत्वाद्रस्य लत्वं स्यादित्यत आह&mdash; प्रत्यय इति त्विति। प्रतिपूर्वकादिण्धातोरतच्प्रत्यये <code>प्रत्यय</code> इति रूपम्। अयतिपरत्वाऽभावान्न लत्वमित्यर्थः। अयधातुमादय <code>प्लत्यय</code> इति न, अनभिधानादिति कैयटः। कथमुदयतीति। उत्पूर्वकादयधातोः शत्रन्तात्सप्तम्यन्तमिति मत्वा आक्षेपः। अनुदात्तेत्त्वेन लटः शानच्प्रसङ्गादिति भावः। प्रश्लिष्टस्येति। <code>इधातो</code>रिति शेषः। तस्य अनुदात्तेत्त्वाऽबावाच्छतृप्रत्ययो निर्बाध इति भावः। ज्ञापकादिति। <code>चक्षिङ् धातोरिकारस्याऽनुदात्ततया अनुदात्तेत्त्वादेवात्मनेपदसिद्धौ ङित्करणमनुदात्तेत्त्वप्रयुक्तात्मनेपदस्याऽनित्यतां ज्ञापयति। तस्याऽनित्यत्वे तु नित्यात्मनेपदार्थं ङित्करणमर्थवदिति भावः। इदं तु भाष्ये न दृश्यते। वादित्वादिति वयधातोर्लिटि वादित्वादेत्वाभ्यासलोपयोरभावे सति</code>ववये<code>इति रूपमित्यर्थः। णयधातुर्णोपदेश इति मत्वा आह--प्रणयत इति।</code>उपसर्गादसमासेऽपी<code>ति णत्वमिति भावः। दयांचक्र इति।</code>दयायासश्चे<code>त्याम्। ऊयांचक्र इति। इजादित्वादाम्। उन्दने चेति। क्लेदने चेत्यर्थः। स्फायी ओप्यायीति। ओदित्त्वम्</code>ओदितश्चे<code>ति निष्ठानत्वार्थम्। ईदित्त्वं तु</code>�आईदितो निष्ठाया`मितीण्निषेधार्थम्।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

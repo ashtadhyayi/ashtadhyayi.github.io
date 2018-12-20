@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="ठञोऽपवादः इति। येन नाप्राप्तित्यायेन (व्या।प।४९)। निष्कादिभ्यो द्रोणपर्यन्तेभ्यः परिमाणशब्दत्वात्? षष्ठिशब्दस्य संख्याशब्दत्वाट्ठकि पर्युदस्ते ठञेव प्राप्नोति, अतस्तस्यैवायमपवादः। तेदन्ताप्रतिषेधस्य इति तदन्तविधेरप्रतिषेधस्येत्यर्थः। यदि तर्हि तदन्तात्? प्रत्ययो विज्ञायते, एवं तर्हि व्यपदेशिवद्भावोऽप्रातिपदिकेन (शा।प।६५) इति केवलेभ्य- प्रत्ययो नोपपद्यते? नैष दोषः; असमासगरहणेन हि ग्रहणवत्परिभाषाया (व्या।प।८९) निवृत्तिराख्याता, निवृत्तायाञ्च ये नविधिस्तदन्तस्य (1.1.71) इति तदन्ताद्भवति। तत्र च स्वस्य च रूपस्य (काशिका।१।१।७२) इति प्रकृतत्वात्? केवलादपि भवति। यत्तु मन्यते-अपूर्वोपादानसामथ्र्यात्? केवलादिति लाघवार्थं केवलानां पाठः स्यात्() इति, यत्किञ्चदेतत्()। इत उत्तरञ्च इत्यादि। कथं पुनरिष्यमाणोऽपि तदन्तविधिर्लभ्यते, यावता ग्रहणवता प्रातिपदिकेन तदन्तविधिर्न (व्या।प।८९) इति प्रतिषिध्यते?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-5.1/5.1.20.md">सम्पाद्यताम् 5.1.20।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-5.1/5.1.20.md">सम्पाद्यताम् 5.1.20।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           5.1.20 असमासे निष्कादिभ्यः।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>ठञोऽपवादः</code> इति। येन नाप्राप्तित्यायेन (व्या।प।४९)। निष्कादिभ्यो द्रोणपर्यन्तेभ्यः परिमाणशब्दत्वात्? षष्ठिशब्दस्य संख्याशब्दत्वाट्ठकि पर्युदस्ते ठञेव प्राप्नोति, अतस्तस्यैवायमपवादः। <code>तेदन्ताप्रतिषेधस्य</code> इति तदन्तविधेरप्रतिषेधस्येत्यर्थः। यदि तर्हि तदन्तात्? प्रत्ययो विज्ञायते, एवं तर्हि <code>व्यपदेशिवद्भावोऽप्रातिपदिकेन</code> (शा।प।६५) इति केवलेभ्य- प्रत्ययो नोपपद्यते? नैष दोषः; असमासगरहणेन हि ग्रहणवत्परिभाषाया (व्या।प।८९) निवृत्तिराख्याता, निवृत्तायाञ्च <code>ये नविधिस्तदन्तस्य</code> (1.1.71) इति तदन्ताद्भवति। तत्र च <code>स्वस्य च रूपस्य</code> (काशिका।१।१।७२) इति प्रकृतत्वात्? केवलादपि भवति। यत्तु मन्यते-<code>अपूर्वोपादानसामथ्र्यात्? केवलादिति लाघवार्थं केवलानां पाठः स्यात्()</code> इति, यत्किञ्चदेतत्()।
 <code>इत उत्तरञ्च</code> इत्यादि। कथं पुनरिष्यमाणोऽपि तदन्तविधिर्लभ्यते, यावता <code>ग्रहणवता प्रातिपदिकेन तदन्तविधिर्न</code> (व्या।प।८९) इति प्रतिषिध्यते? अस्याः परिभाषाया अनित्यत्वात्()। अनित्यत्वं तु तस्या गर्गादिषु <code>वाजासे</code> इति समासे प्रत्ययप्रतिषेधाद्गम्यते। नित्यत्वे हि वाजशब्दादुत्पद्यमानस्य प्रत्ययस्य समासे प्राप्तिरेव नास्तीति प्रतिषेधं कुर्यात्()। <code>द्विशूर्पम्()</code> इति। द्वाभ्यां शूर्पाभ्यां क्रीतमिति तद्धितार्थे द्विगुं कृत्वा। न तावदेषा लुगन्ता प्रकृतिरिति संख्यापूर्वपदादपि <code>शूर्पादञन्यतरस्याम्()</code> (5.1.26) इत्यञेव क्रियते, तस्य <code>अव्यद्र्धपूर्वद्विगोर्लुगसंज्ञायाम्()</code> (5.1.28) इति लुक्()। <code>द्विशौर्पिकम्()</code> इति। <code>परिमाणान्तस्यासंज्ञाशाणयोः</code> (7.3.17) इत्युत्तरपदवृद्धिः। यदुक्तम्()&ndash;<code>संख्यापूर्वपदानां तदन्तविधिरितीष्यते</code> इति, यच्चोक्तम्()&ndash;<code>लुगन्तायास्तु प्रकृतेर्नेष्यते</code> इति, तदुभयमाप्तागमेन स्थिरीकर्त्तुमाह&ndash;<code>तथा चोक्तम्()</code> इत्यादि॥</p>
 
@@ -147,30 +148,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

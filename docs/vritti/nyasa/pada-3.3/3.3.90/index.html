@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="यज देवपूजादौ (धा।पा।१००२), टुयाच् याच्ञायाम् (धा।पा।८६३), {यती प्रयत्ने-धा।पा} यत प्रयत्ने(धा।पा।३०), विच्छ गतौ (धा।पा।१४२३), प्रच्छ ज्ञीप्सायाम् (धा।पा।१४१३), रक्ष {पालने-- धा।पा।}रक्षणे (धा।पा।६५८)&ndash;अत्र स्वाभाविकत्वाद्याचेरन्येषां नङ्प्रत्ययान्तानां पुंसि वृत्तिरिति तेभ्यो नङ् न घञपवादो भवति। यथादर्शनञ्च वासरूपविधना घञपि भवति- याग इति। याचेस्तु नङन्तसय स्वभावात् स्त्रियां वृत्तिरिति ततो नङ् गुरोश्च हलः (3.3.103) इति प्राप्तस्याकारप्रत्ययस्यापवादः। कृत्यल्युटो बहुलम् (3.3.113) इति वचनाद्वासरूपविधिर्न भवति। ङकारो गुणप्रतिषेधः इति। विच्छेर्लघूपधगुणो मा भूदित्येवमर्थः। ननु चान्तरङ्गत्वात् छे च (6.1.71) इति तुकैव विच्छेस्तावद्भवितव्यम्, तत्रालघूपधत्वादेव गुणो न भविष्यति, त()त्क तत्प्रतिषेधार्थो ङकारः कत्र्तव्यः। अनित्यमागमशासनम्(व्या।प।९९) इत्यस्य चैदेव नङो ङिकरणं ज्ञापकम्। यदा तह्र्रनित्यत्वात्, तुङ्()न, तदा च्छ्वोः शूडनुनासिके च (६।४।१९) इति सतुक्कस्य च्छकारस्य शादेशो विधीयमानः केवलस्य न प्राप्नोति?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-3.3/3.3.90.md">सम्पाद्यताम् 3.3.90।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-3.3/3.3.90.md">सम्पाद्यताम् 3.3.90।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           3.3.90 यजयाचयतविच्छप्रच्छरक्षो नङ्।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>यज देवपूजादौ</code> (धा।पा।१००२), <code>टुयाच् याच्ञायाम्</code> (धा।पा।८६३), <code>{यती प्रयत्ने-धा।पा} यत प्रयत्ने</code>(धा।पा।३०), <code>विच्छ गतौ</code> (धा।पा।१४२३), <code>प्रच्छ ज्ञीप्सायाम्</code> (धा।पा।१४१३), <code>रक्ष {पालने-- धा।पा।}रक्षणे</code> (धा।पा।६५८)&ndash;अत्र स्वाभाविकत्वाद्याचेरन्येषां नङ्प्रत्ययान्तानां पुंसि वृत्तिरिति तेभ्यो नङ् न घञपवादो भवति। यथादर्शनञ्च वासरूपविधना घञपि भवति- याग इति। याचेस्तु नङन्तसय स्वभावात् स्त्रियां वृत्तिरिति ततो नङ् <code>गुरोश्च हलः</code> (3.3.103) इति प्राप्तस्याकारप्रत्ययस्यापवादः। <code>कृत्यल्युटो बहुलम्</code> (3.3.113) इति वचनाद्वासरूपविधिर्न भवति। <code>ङकारो गुणप्रतिषेधः</code> इति। विच्छेर्लघूपधगुणो मा भूदित्येवमर्थः। ननु चान्तरङ्गत्वात् <code>छे च</code> (6.1.71) इति तुकैव विच्छेस्तावद्भवितव्यम्, तत्रालघूपधत्वादेव गुणो न भविष्यति, त()त्क तत्प्रतिषेधार्थो ङकारः कत्र्तव्यः। <code>अनित्यमागमशासनम्</code>(व्या।प।९९) इत्यस्य चैदेव नङो ङिकरणं ज्ञापकम्। यदा तह्र्रनित्यत्वात्, तुङ्()न, तदा <code>च्छ्वोः शूडनुनासिके च</code> (६।४।१९) इति सतुक्कस्य च्छकारस्य शादेशो विधीयमानः केवलस्य न प्राप्नोति? नैष दोषः; यस्मात् <code>च्छ्वोः</code>इति द्विच्छकारो निर्देशः। तत्रैकः सतुक्कः, द्वितीयः केवल एव, तेन केवलस्यापि शादेशो भविष्यति। यदि तु द्विच्छकारो निर्देशः <code>च्छ्वोः</code> इति द्विवचनं न प्राप्नोति,बहुत्वात् स्थानिनाम्? सौत्रत्वनान्निर्देशस्य बहुवचनस्य व्यत्ययेन द्विवचनं भविष्यतीत्यदोषः। अवश्यं द्विच्छकारो निर्देशः कत्र्तव्यः; अन्यथा <code>राल्लोपः</code> (6.4.21) इत्यत्र केवलस्य लोपो न स्यात्, केवलस्य च्छकारस्याप्रकृत्वात्। वचनं तु वकारलोपार्थमेव स्यात्। <code>यज्ञः, याच्ञा</code> इति। <code>स्तोः श्चुना श्चुः</code> (8.4.39) इति श्चुत्वेन नकारस्य ञकारः। <code>यत्नः</code> इति। <code>नेड् वशि कृति</code> (7.2.8) इतीट्()प्रतिषेधः। <code>विश्नः, प्रश्नः</code> इति। <code>च्छ्वोः</code>(6.4.19) इत्यादिना च्छकारस्य शकारादेशः। <code>रक्ष्णः</code>इति। <code>ष्टुना ष्टुः</code> (8.4.40) इति नकारस्य णकारः। अथ प्रच्छेः ग्रहिज्यादिसूत्रेण (6.1.16) सम्प्रसारणं <code>प्रश्नः</code> इत्यत्र कस्मान्न भवतीत्यत आह&ndash; <code>प्रच्छेः</code> इत्यादि। किं ज्ञापकमित्याह&ndash; <code>प्रश्ने च</code> इत्यादि॥</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

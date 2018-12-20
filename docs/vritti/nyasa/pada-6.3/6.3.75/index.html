@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="एकादिरिति बहुव्रीहिः। एकान्नविंशतिः इति। पूर्वं नञो विंशतिशब्देन समासं कृत्वा ततस्तृतीयसमासः कत्र्तव्यः। किमर्थं पुनरयं पूर्वान्त आदुक्? क्रियते, न परादिरेवादुट्? क्रियेत? तत्राण्यमर्थः&ndash;एकस्य चेत्येष आगमिनो दिर्देशो न कत्र्तव्यो भवति। परादौ हि क्रियमाणे नञेवागमो भवति, स च प्रकृतत्वादेव लक्ष्यते; तत्रायं वक्यार्थो भवति&ndash;एकादिश्च नञ्? प्रकृत्या भवति, आदुट्? च तस्यागमो भवति इति सिद्धमिष्टम्()? इत्याह&ndash;पूर्वान्तोऽयम्() इत्यादि। यरोऽनुनासिकेऽनुनासिको वा (8.4.44) इत्यत्र हि न पदान्ताट्टोरनाम्() (8.4.41) इत्यतः पदन्तादित्यनुवत्र्तते। तत्र यदि परदिः क्रियते पदान्तताऽस्य न स्यात्(), ततश्च पदान्तलक्षणोऽनुनासिकविकल्पो न स्यात्(), इष्यते च। तस्माद्विकल्पेन यथा स्यादित्येवमर्थं पूर्वान्त आदुक्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.3/6.3.75.md">सम्पाद्यताम् 6.3.75।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.3/6.3.75.md">सम्पाद्यताम् 6.3.75।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.3.75 एकादिश्चैकस्य चादुक्?।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>एकादिरिति बहुव्रीहिः। <code>एकान्नविंशतिः</code> इति। पूर्वं नञो विंशतिशब्देन समासं कृत्वा ततस्तृतीयसमासः कत्र्तव्यः।
 किमर्थं पुनरयं पूर्वान्त आदुक्? क्रियते, न परादिरेवादुट्? क्रियेत? तत्राण्यमर्थः&ndash;एकस्य चेत्येष आगमिनो दिर्देशो न कत्र्तव्यो भवति। परादौ हि क्रियमाणे नञेवागमो भवति, स च प्रकृतत्वादेव लक्ष्यते; तत्रायं वक्यार्थो भवति&ndash;<code>एकादिश्च नञ्? प्रकृत्या भवति, आदुट्? च तस्यागमो भवति</code> इति सिद्धमिष्टम्()? इत्याह&ndash;<code>पूर्वान्तोऽयम्()</code> इत्यादि। <code>यरोऽनुनासिकेऽनुनासिको वा</code> (8.4.44) इत्यत्र हि <code>न पदान्ताट्टोरनाम्()</code> (8.4.41) इत्यतः पदन्तादित्यनुवत्र्तते। तत्र यदि परदिः क्रियते पदान्तताऽस्य न स्यात्(), ततश्च पदान्तलक्षणोऽनुनासिकविकल्पो न स्यात्(), इष्यते च। तस्माद्विकल्पेन यथा स्यादित्येवमर्थं पूर्वान्त आदुक्? क्रियते।
 अथ किमर्थमादुक् क्रियते? आदुगेव नोच्येत, अदुक्यपि क्रियमाणेऽकः सवर्णो दीर्घत्वेन (६।१।१०१) सिध्यति? न सिध्यति; <code>अतो गुणे</code> (6.1.94) पररूपत्वं प्राप्नोति, तदपयकारोच्चारणसामथ्र्यान्न भविष्यति, यदि ह्रत्र पररूपत्वं स्याद्दुकमेव विदध्यात्(), तर्हि सवर्णदीर्घत्वमप्यकारोच्चारणसामथ्र्यान्न स्यात्()? नैतदस्ति; तथा हि&ndash;यं विधिं प्रत्युपदेशोऽनर्थकः स्यात्? स विधिर्बाध्यते (व्या।प।५६) यस्य तु विधेस्तदेव निमित्तं नासौ विधिर्बाध्यते। पररूपत्वं च प्रत्यकारोच्चारणमनर्थकम्(), सवर्मदीर्घत्वं तु प्रति निमित्तमेव। एवं तह्र्रदुगेवायम्()। तुल्या हि संहिता॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

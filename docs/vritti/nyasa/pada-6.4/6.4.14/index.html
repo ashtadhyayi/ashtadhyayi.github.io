@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="अत्र कृते दीर्घत्वे नुमागमः इति। कथं पुनरेतल्लभ्यते, यावता कृताकृतप्रसङ्गित्वात्? परत्वाच्च नुमैव भवितव्यं पूर्वमित्याह&ndash;यदि हि इत्यादि। इह दीर्घग्रहणेन अचश्च (1.2.28) इत्युपस्थापिते सत्यज्लक्षणाया उपधाया दीर्गो विधीयते। यदि च परत्वान्नित्यत्वान्नुम्? प्राग्विधीयते, अच उपधात्वं विहन्येत। तस्माद्वचनसामथ्र्याद्दीर्घः प्राग्भवति, ततो नुमागमः। सुपयाः, सुयक्षाः,सुरुआओताः[सुश्रोताः&ndash;काशिका] इति। असुन्() (द।उ।९।४९) इति वत्र्तमाने पिबतेरिच्च (द।उ।९।५०) [पिबतेरि च&ndash;द।उ।] इति, अशेर्देवने युट्? च (द।उ।९।५१) [अशेर्धने&ndash;द।उ।] रुआउरिभ्यां तुट्? च (द।उ।९।६२) [रुआरीभ्यां&ndash;द।उ।] इति&ndash;एते यथाक्रममसुन्परत्ययान्ता पयोयशःरुआओतःशब्दा व्युत्पद्यन्ते। पिण्डग्रः, चर्मवः इति। ग्रसु ग्लसु अदने (धा।पा।६३०,६३१), वस आच्छादने (धा।पा।१०२३), अन्येम्योऽपि दृश्यते (3."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.14.md">सम्पाद्यताम् 6.4.14।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.14.md">सम्पाद्यताम् 6.4.14।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.14 अत्वसन्तस्य चाधातोः।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>अत्र कृते दीर्घत्वे नुमागमः</code> इति। कथं पुनरेतल्लभ्यते, यावता कृताकृतप्रसङ्गित्वात्? परत्वाच्च नुमैव भवितव्यं पूर्वमित्याह&ndash;<code>यदि हि</code> इत्यादि। इह दीर्घग्रहणेन <code>अचश्च</code> (1.2.28) इत्युपस्थापिते सत्यज्लक्षणाया उपधाया दीर्गो विधीयते। यदि च परत्वान्नित्यत्वान्नुम्? प्राग्विधीयते, अच उपधात्वं विहन्येत। तस्माद्वचनसामथ्र्याद्दीर्घः प्राग्भवति, ततो नुमागमः। <code>सुपयाः, सुयक्षाः,</code>सुरुआओताः<code>[</code>सुश्रोताः&ndash;काशिका] इति। <code>असुन्()</code> (द।उ।९।४९) इति वत्र्तमाने <code>पिबतेरिच्च</code> (द।उ।९।५०) [<code>पिबतेरि च</code>&ndash;द।उ।] इति, <code>अशेर्देवने युट्? च</code> (द।उ।९।५१) [<code>अशेर्धने</code>&ndash;द।उ।] <code>रुआउरिभ्यां तुट्? च</code> (द।उ।९।६२) [रुआरीभ्यां&ndash;द।उ।] इति&ndash;एते यथाक्रममसुन्परत्ययान्ता पयोयशःरुआओतःशब्दा व्युत्पद्यन्ते।
 <code>पिण्डग्रः, चर्मवः</code> इति। <code>ग्रसु ग्लसु अदने</code> (धा।पा।६३०,६३१), <code>वस आच्छादने</code> (धा।पा।१०२३), <code>अन्येम्योऽपि दृश्यते</code> (3.2.178) इति क्विप्()। ननु चार्थवद्ग्रहणपरिभाषया(व्या।प।१)ऽर्थवानेवासित्ययं गृह्रते, यथा मूलोदाहरणेषु, पयःप्रभृतीनामसुन्प्रतययान्तत्वात्? प्रत्ययार्थेनार्थवानसौ, न तथा प्रत्युदाहरणयोः, धात्ववयवस्तत्र दोर्घत्वस्यापरसङ्गादपार्थकोऽदातोरिति प्रतिषेधः? इत्यत आह&ndash;<code>अनर्थकोऽपि</code> इत्यादि। कथमेतल्लभ्यते? इत्याह&ndash;<code>अनिनस्मन्ग्रहणानि</code> इत्यादि। अथेह कथं दीर्घत्वम्()&ndash;गोमन्तमिच्छति गोमत्यति, <code>सुपाअत्मनः क्यच्()</code> (3.1.8) गोमत्यतेरप्रत्ययो गोमानिति, कथञ्च न स्यात्()? अधातोरिति प्रतिषेधात्? अस्य <code>सनाद्यन्ता धातवः</code> (३।१।३२) इति धातुत्वात्()? नैतदस्ति; <code>अधातोः</code> इति प्रतिषेध आनन्तय्र्यादनन्तरस्यैव, नान्तरस्य।
 अथ वा चकारोऽत्र क्रियते, स चानुक्तसमुच्चयार्थः, तेनेह धातोरपि भविष्यते। अथान्तग्रहणं किमर्थम्(), यावता <code>अङ्गस्य</code> (6.4.1) इत्यनुवत्र्तते, तत्र गृह्रमाणेनातुशब्देनासशब्देन च प्रकृतेऽङ्गे विशिष्यमाणे विशेषणेन च तदन्तविधिर्भवतीत्यन्तरे#आप्यन्तग्रहणं तदन्तस्यैव दीर्घत्वं भविष्यति? इत्यत आह&ndash;<code>अन्तग्रहणम्()</code> इत्यादि। उपेशः=लक्षमदाक्यानि, गणपाठः, प्रातिपदिकपाठ। प्रयुज्यत इति प्रयोगः, कर्मणि घञ्()। उपदेशे प्रयोग उपदेशप्रयोग इति। <code>सप्तमो</code> (२।१।४०) इति योगविभागात्? समासः। तदयमस्य वाक्यस्यार्थः&ndash;उपदेशे प्रयुज्यते यच्छब्दरूपं तदेकदेशस्याप्यत्वन्तस्य परिग्रहो यथास्या दित्येवमर्थमन्तग्रहणमिति। कस्य पुनरसत्यन्तग्रहण उपदेशे प्रयोगैकदेशस्य ग्रहणं न स्यात्(), यतस्तत्परिग्रहार्थमन्तग्रहणं क्रियते? इत्याह&ndash;<code>अन्यथा हि</code> इत्यादि। किं कारणं न स्यात्()? इत्याह&ndash;<code>उपदेशे रूपनिग्र्रहहेतौ</code> इत्यादि। निग्र्रहणं निग्रहः=निश्चय इत्यर्थः। रूपस्य स्वरूपस्य शब्दस्य निग्र्रहो निश्चयनो रूपनिग्र्रहः, तस्य हेतू रूपनिग्र्रहहेतुः। उपदेशग्रहणमुपलक्षममात्रम्()। लौकिकोऽपि हि प्रयोगो गृह्रते। उपदेशाद्धि शब्दरूपं निश्चीयते, लौकिकाद्वा प्रयोगात्()। मतुप्चायं लौकिके प्रयोगे नात्वन्तः श्रयते, नाप्युपदेशे, अतोऽत्वन्ततया नावधार्यते। ततश्चानवधार्यमाणत्वान्न गृह्रते। अन्तग्रहणे च सत्यन्तग्रहण सामथ्र्यादत्वन्तमात्रग्रहणे विज्ञायमाने यो ह्रुपदेशे प्रयोगैकदेशभूतस्तस्यापि ग्रहणं भवतीत्युपपद्यते मतुपो ग्रहणम्()॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

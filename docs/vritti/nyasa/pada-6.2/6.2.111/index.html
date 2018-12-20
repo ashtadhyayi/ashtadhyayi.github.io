@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="वर्णम्()=शुकलादि, लक्ष्यतेऽनेनेति लक्षणम्()=चिह्नम्(), वर्णञ्च लक्षणञ्च वर्णलक्षणम्। द्वन्द्व एकवद्भावः। अर्थग्रहणं चेह वर्णलक्षणयोः; अर्थप्रधानत्वान्निर्देशस्य। ()ओतकर्णः कृष्णकर्णः इति। ()ओतकृष्णशब्दावन्तोदात्तौ। तथा हि&ndash;शिता वर्णे (धा।पा।७४२) इत्यस्मात्? पचाद्यचि ()ओतशब्दो व्युत्पाद्यते। कृष्मशब्दोऽपि इण्सिञ्चिदीङ्युष्यविभ्यो नक्() (द।उ।५।३५) [इण्सिञ्दीङुष्वविभ्यो नक्()&ndash;द।उ।] इत्यनुवर्तमाने कृषेर्वर्णे (द।उ।५।३७) इति नक्प्रत्यये। दात्राकर्णः इति। धः कर्मणि ष्ट्रन्() (3.2.181) इति वर्तमाने दाम्नीशस्() (3.2.182) इत्यादिना ष्ट्रन्प्रत्ययः, तेन दात्रशब्द आद्युदात्तः। शङ्कूकर्णः इति।कृग्रोरुच्च(द।उ।१।१०९) [कृग्रोरुच्च--द।उ।] इत्यनुवर्तमानेखरुशङ्कुपीयुनीलङ्गुलिगु (द।उ।१।१२०) इति कुप्रत्ययान्तः शङ्कुशब्दोऽन्तोदात्तो निपात्यते। धापृवस्यज्यतिभ्यो नः (द।उ।५।३९) इत्यधिकृत्य कृ()वृ()च्छसिद्रूपन्यनिस्वपिभ्यो नित्() (द।उ।५।४२) [कृ()वृ()जृ()सिद्रुपन्यनिस्वपिभ्यो नित्()&ndash;द।उ] इति कर्णशब्दो व्युत्पाद्यते, भिन्नच्छिन्नद्ररुआउवस्वस्तिकस्य(6."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.2/6.2.111.md">सम्पाद्यताम् 6.2.111।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.2/6.2.111.md">सम्पाद्यताम् 6.2.111।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.2.111 कर्णौ वर्णलक्षणात्?।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>वर्णम्()=शुकलादि, लक्ष्यतेऽनेनेति लक्षणम्()=चिह्नम्(), वर्णञ्च लक्षणञ्च वर्णलक्षणम्। द्वन्द्व एकवद्भावः। अर्थग्रहणं चेह वर्णलक्षणयोः; अर्थप्रधानत्वान्निर्देशस्य। <code>()ओतकर्णः कृष्णकर्णः</code> इति। ()ओतकृष्णशब्दावन्तोदात्तौ। तथा हि&ndash;<code>शिता वर्णे</code> (धा।पा।७४२) इत्यस्मात्? पचाद्यचि ()ओतशब्दो व्युत्पाद्यते। कृष्मशब्दोऽपि <code>इण्सिञ्चिदीङ्युष्यविभ्यो नक्()</code> (द।उ।५।३५) [इण्सिञ्दीङुष्वविभ्यो नक्()&ndash;द।उ।] इत्यनुवर्तमाने <code>कृषेर्वर्णे</code> (द।उ।५।३७) इति नक्प्रत्यये। <code>दात्राकर्णः</code> इति। <code>धः कर्मणि ष्ट्रन्()</code> (3.2.181) इति वर्तमाने <code>दाम्नीशस्()</code> (3.2.182) इत्यादिना ष्ट्रन्प्रत्ययः, तेन दात्रशब्द आद्युदात्तः। <code>शङ्कूकर्णः इति।</code>कृग्रोरुच्च<code>(द।उ।१।१०९) [कृग्रोरुच्च--द।उ।] इत्यनुवर्तमाने</code>खरुशङ्कुपीयुनीलङ्गुलिगु (द।उ।१।१२०) इति कुप्रत्ययान्तः शङ्कुशब्दोऽन्तोदात्तो निपात्यते। <code>धापृवस्यज्यतिभ्यो नः</code> (द।उ।५।३९) इत्यधिकृत्य <code>कृ()वृ()च्छसिद्रूपन्यनिस्वपिभ्यो नित्()</code> (द।उ।५।४२) [कृ()वृ()जृ()सिद्रुपन्यनिस्वपिभ्यो नित्()&ndash;द।उ] इति कर्णशब्दो व्युत्पाद्यते, भिन्नच्छिन्नद्ररुआउवस्वस्तिकस्य<code>(6.3.114) इति सूत्रमुपलक्षयति।
 </code>()ओतपादः<code>इत्यादि। पूर्वपदस्य प्रकृतिस्वर एव भवति। 
 अथेह कस्मान्न भवति--स्थूलकर्ण इति, स्थूलेनापि हि कर्णेन लक्ष्यत एव ततश्च लक्षणादित्येव सिद्धम्()? इत्यत आह--</code>पशूनां विभागज्ञापनार्थम्()<code>इत्यादि। तेन स्थूलकर्ण इत्यत्र न भवतीति भावः। कथं पुनः सामान्येनोक्तौ विशेषसय ग्रहणं लभ्यते? वर्णग्रहणाज्ज्ञापकात्()। यदि लक्षणमात्रस्येह ग्रहणभिमतं स्याद्वर्णग्रहणं न क्रियेत, वर्णो हि लक्षणं भवत्येव। तेनापि लक्ष्यत इति कृत्वा, कृतश्च। तस्मात्? तदेव ज्ञापयति--विशिष्टमिह लक्षणं गुह्रत इति। यत्? पुनर्विशिष्टं व्याख्यानात्? तद्विज्ञेयम्()। 
@@ -145,30 +146,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

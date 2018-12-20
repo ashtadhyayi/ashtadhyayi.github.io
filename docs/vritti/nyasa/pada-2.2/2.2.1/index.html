@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="सामथ्र्यादेकदेशवचनाः इति। यदि हि पूर्वादयः शब्दा एकदेशवचना न स्युसतदोत्तरपदस्यैकदेशित्वं न गम्येत;एकदेशिन एकदेशापेक्षत्वात्। तस्मात् सामान्योक्ता अपि पूर्वादयः शब्दा सामथ्र्यादेकदेशवचनाः समस्यन्त इति विज्ञायते। एकाधिकरणग्रहणमेकदेशिनो विशेषणमित्यस्यार्थं विस्पष्टीकर्तुमाह&ndash; एकं च इत्यादि। एकमित्येकसंख्याविशिष्टं द्रव्यमित्यर्थः। एकद्रव्यम् इत्यनेनाधिकरमशब्दोऽत्र द्रव्ये वत्र्तमान उपात्त ति दर्शयति। ननु एकदेशिना इति तृतीयान्तमेतत्, एकाधिकरणे इत्येतत् सप्तम्यन्तम्, तत् कथं तयोर्भिन्नविभक्तिकयोः सामानाधिकरण्येन विशेषणविशेष्यभाव उपपद्यते, कथञ्च न स्यात्; भिन्नार्थत्वात्? नैतदस्ति;छन्दोवत् सूत्राणि भवन्ति(म।भा।१।१।१) इत्यतोव्यत्ययो बहुलम्(3.1.85) इति बहुलवचनात्।एकाधिकरणेइत्यत्र तृतीयार्थ एवैषा सप्तमी। नसप्तम्यधिकरणे च(2.3.36) इत्यनेन। अतो नास्ति भिन्नार्थत्वमित्यदोषः।षष्ठीसमासापवादोऽयं योगःइति।एकदेशिनाइति वचनात् पूर्वादयः शब्दा एकदेशवचना आश्रीयन्ते। सम्बन्धिशब्दा हि नियतमेव प्रतियोगिनमुपस्थापयन्ति। तत्रावयवावयविसम्बन्धे स्तेयकदेशिनः षष्ठ()आमुपजनितायांषष्ठी(2."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.2/2.2.1.md">सम्पाद्यताम् 2.2.1।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.2/2.2.1.md">सम्पाद्यताम् 2.2.1।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           2.2.1 पूर्वापराधरोत्तरमेकदेशिनैकाधिकरणे।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>सामथ्र्यादेकदेशवचनाः</code> इति। यदि हि पूर्वादयः शब्दा एकदेशवचना न स्युसतदोत्तरपदस्यैकदेशित्वं न गम्येत;एकदेशिन एकदेशापेक्षत्वात्। तस्मात् सामान्योक्ता अपि पूर्वादयः शब्दा सामथ्र्यादेकदेशवचनाः समस्यन्त इति विज्ञायते। एकाधिकरणग्रहणमेकदेशिनो विशेषणमित्यस्यार्थं विस्पष्टीकर्तुमाह&ndash; <code>एकं च</code> इत्यादि। एकमित्येकसंख्याविशिष्टं द्रव्यमित्यर्थः। <code>एकद्रव्यम्</code> इत्यनेनाधिकरमशब्दोऽत्र द्रव्ये वत्र्तमान उपात्त ति दर्शयति। ननु <code>एकदेशिना</code> इति तृतीयान्तमेतत्, <code>एकाधिकरणे इत्येतत् सप्तम्यन्तम्, तत् कथं तयोर्भिन्नविभक्तिकयोः सामानाधिकरण्येन विशेषणविशेष्यभाव उपपद्यते, कथञ्च न स्यात्; भिन्नार्थत्वात्? नैतदस्ति;</code>छन्दोवत् सूत्राणि भवन्ति<code>(म।भा।१।१।१) इत्यतो</code>व्यत्ययो बहुलम्<code>(3.1.85) इति बहुलवचनात्।</code>एकाधिकरणे<code>इत्यत्र तृतीयार्थ एवैषा सप्तमी। न</code>सप्तम्यधिकरणे च<code>(2.3.36) इत्यनेन। अतो नास्ति भिन्नार्थत्वमित्यदोषः।</code>षष्ठीसमासापवादोऽयं योगः<code>इति।</code>एकदेशिना<code>इति वचनात् पूर्वादयः शब्दा एकदेशवचना आश्रीयन्ते। सम्बन्धिशब्दा हि नियतमेव प्रतियोगिनमुपस्थापयन्ति। तत्रावयवावयविसम्बन्धे स्तेयकदेशिनः षष्ठ()आमुपजनितायां</code>षष्ठी<code>(2.2.8) इति समासः प्राप्नोति, अतस्तदपवादोऽयं योग इति।</code>पूर्वकायः<code>इत्यत्र काय एकदेशी, एकद्रव्यञ्च; एकसंख्यायुक्तत्वात्।
 </code>पूर्वं नाभेः कायस्य<code>इति। नाभेरिति दिग्योगलक्षणा पञ्चमी। नाभेरुपरिष्टात् यत् पूर्वं तत् कायस्येत्येषोऽर्थो विवक्षितः। तेनात्र नाभिरेकदेशिनी न भवति। किं तर्हि? अवधिभूता, तद्वाची नाभिशब्दः पञ्चम्यन्तो न समस्यन्ते। यस्त्वेकदेशी कायस्तद्वाचिनः कायशब्दस्य भवत्येव समासः। सत्यपि पूर्वशब्दस्य सापेक्षत्वे कायस्य प्राधान्यात् प्रधानस्यच सापेक्षस्यापि समासो भवतीति ज्ञापितमेतत्</code>उपमितं व्याघ्रादिभिः सामान्याप्रयोगे<code>(2.1.55) इत्यत्र।</code>पूर्वं {छात्राणामामन्त्रय इत मूलपाठः, पदमञ्जरीसम्मतश्च।} छात्राणामामन्त्रयस्व<code>इति। अत्र बहुत्वसंख्याविशिष्टैकदेशिनश्छात्रा इति न भवति समासः। ननु चात्र परत्वात्</code>न निद्र्धारणे<code>(2.2.10) इति षष्ठीसमासनिषेधो भविष्यति। तत् {किमेवाधिकरणे- इति मुद्रित पाठः।} किमेकाधिकरणग्रहणेन? नैतदस्ति; यदि तह्र्रामन्त्रयस्वेत्येतन्नापेक्ष्यते तदा पूर्वं छात्राणामित्येतावद्वाक्यं परिसमाप्यते,तदा निद्र्धारणाभावान्नायं तस्य प्रतिषेधस्य विषय इत्यसत्येकाधिकरणेऽनेकसंख्येनाप्येकदेशिना समासः स्यात्। अथ सर्वं हि वाक्यं क्रियया परिसमाप्यत इति पूर्वं छात्राणामित्यत्र यां काञ्चित् क्रियामध्याह्मत्य निद्र्धारणं परिकल्प्येत, एवं</code>पूर्वं कायस्य<code>इत्यत्रापि निद्र्धारणं स्यात्। अस्ति ह्रत्राप्यकर्षणक्रिया निद्र्धारणहेतुः। तथा च तस्यैव योगस्य विषये किलारभ्यमाणोऽयं योगस्तदपवादः स्यात्। न चोत्सर्गापवादयोर्विप्रतिषेध उपपद्यते, तत्कथं परत्वात्</code>न निद्र्धारणे<code>(२।२।१०) इति प्रतिषेधः प्रवत्र्तते-- संख्याविसायपूर्वस्येत्यादि? यदयं</code>संख्याविसायपूर्वस्याह्नस्य` (6.3.109) इत्याह, ततो ज्ञापकादवसीयते&ndash; सर्वेणैकदेशिनाऽह्नः समासो भवतीति। अन्यथा हि सायपूर्वत्वमह्नशब्दस्य नोपपद्यत इत्ययुक्तमेतद्वचनं स्यात्॥</p>
 
@@ -143,30 +144,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

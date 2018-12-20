@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उगिति प्रत्याहारग्रहणं वा स्यात्? उवर्णग्रहणं वा? तत्राद्ये पक्षेऽयं वाक्यार्थो जायते-उगन्तेभ्यः प्रातिपदिकेभ्योऽवादिभ्योऽवकारादिभ्योऽवसुप्रभृतिभ्य इति। वकारादीन्? वर्जयित्वेत्यर्थः। ननु चैवं सति पञ्चम्या निर्देशः स्यात्()? नैष दोषः; सुपां सुलुक्() (7.1.39) इति लुका निर्दष्टत्वात्()। एवं तर्हि प्रातिपदिकेषु गवादिपाठसामथ्र्यात्? प्रत्याहारग्रहणं न भवति; अन्यथा हि गवादीनां पाठोऽनर्थकः स्यात्()। एतत्? सर्वं मनसि कृत्वाऽ‌ऽह-उवर्णान्तात्() इति। सर्वत्रग्रहणे तदन्तविधेरभ्युपगमादित्यभिप्रायः। शङ्कव्यम्() इति। ओर्गुणः (6.4.146) वान्तो यि प्रत्यये (6.1.76) इत्यवादेशः। सनङगुः इत्यादि। चर्मविकारलक्षणस्याञोऽव काशाः&ndash;वाध्र्रम्(), वारत्रम्(), उवर्णान्तलक्षणस्य यतोऽवकाशः&ndash;शङ्कव्यम्? पिचव्यमिति; सनङगुर्नाम चर्मविकारः, तत्रोभयप्राप्तौ परत्वात्? चर्मणोऽञ्() (५।१।१५) इत्यञ्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-5.1/5.1.2.md">सम्पाद्यताम् 5.1.2।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-5.1/5.1.2.md">सम्पाद्यताम् 5.1.2।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           5.1.2 उगवादिभ्यो यत्?।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>उगिति प्रत्याहारग्रहणं वा स्यात्? उवर्णग्रहणं वा? तत्राद्ये पक्षेऽयं वाक्यार्थो जायते-उगन्तेभ्यः प्रातिपदिकेभ्योऽवादिभ्योऽवकारादिभ्योऽवसुप्रभृतिभ्य इति। वकारादीन्? वर्जयित्वेत्यर्थः। ननु चैवं सति पञ्चम्या निर्देशः स्यात्()? नैष दोषः; <code>सुपां सुलुक्()</code> (7.1.39) इति लुका निर्दष्टत्वात्()। एवं तर्हि प्रातिपदिकेषु गवादिपाठसामथ्र्यात्? प्रत्याहारग्रहणं न भवति; अन्यथा हि गवादीनां पाठोऽनर्थकः स्यात्()। एतत्? सर्वं मनसि कृत्वाऽ‌ऽह-<code>उवर्णान्तात्()</code> इति। सर्वत्रग्रहणे तदन्तविधेरभ्युपगमादित्यभिप्रायः। <code>शङ्कव्यम्()</code> इति। <code>ओर्गुणः</code> (6.4.146) <code>वान्तो यि प्रत्यये</code> (6.1.76) इत्यवादेशः। <code>सनङगुः</code> इत्यादि। चर्मविकारलक्षणस्याञोऽव काशाः&ndash;वाध्र्रम्(), वारत्रम्(), उवर्णान्तलक्षणस्य यतोऽवकाशः&ndash;शङ्कव्यम्? पिचव्यमिति; सनङगुर्नाम चर्मविकारः, तत्रोभयप्राप्तौ परत्वात्? <code>चर्मणोऽञ्()</code> (५।१।१५) इत्यञ्? प्राप्नोति <code>तथा</code> इत्यादि।
 <code>अन्नविकारेभ्यश्च</code> इति। अपूपादिलक्षणास्य प्क्षीकस्य यतोऽवकाशः&ndash;अपूप्यास्तण्डुलाः, अपूपीया इति, उवर्णान्तलक्षणस्य स एव; चरुर्नाम हविर्विशेषः; सक्तुश्चान्नविकारः, तत उभयप्रसङ्गे परत्वात्? <code>विभाषा हविरपूपादिभ्यः</code> (5.1.4) इति हविर्लक्षणोऽन्नविकारलक्षणश्च विधिः प्राप्नोति। तदेवं सनङ्गुशब्दादञ्? प्राप्तः, चरुसक्तुशब्दाभ्यां विकल्पेन यत्(), नित्यश्चेष्यते, तदर्थं पूर्वविप्रतिषेधो भाषितव्य इति। <code>ओर्गुणः</code> (6.4.146), <code>वान्तो यि प्रत्यये</code> (6.4.79) इत्यवादेशः। <code>सनङ्गव्यम्()</code> इत्यादि। एतच्चेष्टवाचित्वात्? परशब्दस्य लभ्यत इत्यवगन्तव्यम्()।
 <code>गवादिषु नाबि नभञ्चेति पठ()ते</code> इति। अत्र कस्यचिदियमाशङ्का स्यात्()&ndash;भसंज्ञाप्रतिषेदो विधियत ति, ततश्च यस्येति लोपेन भवितव्यमित्यत आह&ndash;<code>नाभिशब्दो यत्प्रत्ययम्()</code> इति। शरीरावयवो यो नाभिशब्दस्तत्र कथं भवितव्यमित्याह&ndash;<code>यस्तु</code> इत्यादि। ततः शरीरावयवाद्यति कृते परत्वात्? <code>नाभ्यं तैलम्()</code> इति। ननु च शरीरावयवलक्षणे यति सति नभभावः कस्मान्न भवतीतियाह-<code>गवादिषु यता</code> इत्यादि। स हि गवादियता सह विहितः। तेन <code>सन्नियोगशिष्टानामन्यतराबाव उभयोरप्यभावः</code> (व्य।प।४८) इति नभभावो न भवति।
@@ -146,30 +147,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

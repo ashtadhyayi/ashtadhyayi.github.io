@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="दुह प्रपूरणे (धा।पा।१०१४), दिह उपचये (धा।पा।१०१५), लिह आस्वादने (धा।पा।१०१६), गुहू संवरणे (धा।पा।८९६)&ndash;सर्वं एते स्वरितेतः। स्वरितेत्त्वात्? स्वरितिञितः कत्र्रभिप्राये क्रियाफके (1.3.72) इत्यामनेपदिनः। अदुग्ध इति। पूववद्धकरः, झषस्तथोर्धोऽयः (8.2.40) इति तकारस्य धकारः, झलां जश्? झशि (8.4.52) इति धकारस्य गकारः। अदुग्धाम्() इति। थास्(), पूर्ववद्? धत्वादि। अदुग्ध्वम्() इति। ध्वम्()। अदुह्वहि इति। वहिः। अदिग्ध इति। पूर्ववद्? घत्वादि। अलीढ इति। हकारसय हो ढः (8.2.31) इति ढकारः पूर्ववत्(), तकारस्य धत्वं ष्टुत्वञ्च, ढो ढे लोपः (8.3.13), ढ्रलोपः पूरवस्य (6.3.110) इत्यादिना दीर्घः।न्यगूढइति। एतदपि पूर्वेण तुल्यम्()। व्यत्यपुक्षतइति।पुष पुष्टौ(धा।पा।११८२) व्यतिपूर्वः।कत्र्तरि कर्मण्यतिहारे(1."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-7.3/7.3.73.md">सम्पाद्यताम् 7.3.73।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-7.3/7.3.73.md">सम्पाद्यताम् 7.3.73।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           7.3.73 लुग्वा दुहदिहलिहगुहामात्मनेपदे दन्त्ये।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>दुह प्रपूरणे</code> (धा।पा।१०१४), <code>दिह उपचये</code> (धा।पा।१०१५), <code>लिह आस्वादने</code> (धा।पा।१०१६), <code>गुहू संवरणे</code> (धा।पा।८९६)&ndash;सर्वं एते स्वरितेतः। स्वरितेत्त्वात्? <code>स्वरितिञितः कत्र्रभिप्राये क्रियाफके</code> (1.3.72) इत्यामनेपदिनः। <code>अदुग्ध</code> इति। पूववद्धकरः, <code>झषस्तथोर्धोऽयः</code> (8.2.40) इति तकारस्य धकारः, <code>झलां जश्? झशि</code> (8.4.52) इति धकारस्य गकारः। <code>अदुग्धाम्()</code> इति। थास्(), पूर्ववद्? धत्वादि। <code>अदुग्ध्वम्()</code> इति। ध्वम्()। <code>अदुह्वहि</code> इति। वहिः। <code>अदिग्ध</code> इति। पूर्ववद्? घत्वादि। <code>अलीढ</code> इति। हकारसय <code>हो ढः</code> (8.2.31) इति ढकारः पूर्ववत्(), तकारस्य धत्वं ष्टुत्वञ्च, <code>ढो ढे लोपः</code> (8.3.13), <code>ढ्रलोपः पूरवस्य (6.3.110) इत्यादिना दीर्घः।</code>न्यगूढ<code>इति। एतदपि पूर्वेण तुल्यम्()। 
 </code>व्यत्यपुक्षत<code>इति।</code>पुष पुष्टौ<code>(धा।पा।११८२) व्यतिपूर्वः।</code>कत्र्तरि कर्मण्यतिहारे<code>(1.3.14) इत्यातमनेपदम्(),</code>षढोः कः सि<code>(8.2.41) इति षकारस्य ककारः। 
 </code>अजुक्षामाहि<code>इति। महिङ। 
@@ -146,30 +147,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

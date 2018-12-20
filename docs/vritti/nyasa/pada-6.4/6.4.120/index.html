@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="एकहल्मध्ये इति। एकशब्दोऽयमसहायवाची। एकश्च एकश्च एकौ, एकौ च तौ हलौ चेत्येकहलौ, एकहलोर्मध्य इति द्विवचनान्तस्य षष्ठीसमासः। द्व्योरेव हि हलोर्मध्यं सम्भवति, नैकस्य। अत्र यदि लिट()आदशो न विशिष्यते ततो नेमतुः, नेमु; सेहे सेहाते, सेहिर इत्यत्र न स्यात्()। अस्तिह्रत्राप्यङ्गस्यादेश आदिरित्येतच्चेतसि कृत्वा लिट()आदेशं विशेषयितुमाह&ndash;लिटि परतः इत्यादि। लिटि परभूते य आदेशो विधीयते स आदियंस्याङ्गस्य नास्तीत्यर्थः। तस्य इति। तस्यैवंविधस्याङ्गस्येत्यर्थः। तस्येति चाङ्गस्य योऽकार इत्यनेन सम्बन्धः। अवयवषष्ठी चेयम्(), तस्यैवंविधस्याङ्गस्य योऽकारोऽवयवस्तस्येत्यर्थः। एक हल्मध्ये इत्यस्येदं विवरणम्()&ndash;असहाययो र्हलोर्मध्ये इति। तत्येत्यनन्तरोक्तोऽकारः सम्बध्यते। तस्याङ्गस्यावयवस्याकारस्येत्यर्थः। स्थानषष्ठी चेम्()&ndash;तस्य स्थान एकार आदेशो भवति। रेणतुः, रेणुः इति। अण रण (धा।पा।४४४,४४५) इति रणिः शब्दार्थः पठ()ते। येमतुः, येमुः इति। यम उपरमे (धा।पा।९८४)। देमतुः, देमुः इति। दमु उपशमे (धा।पा।१२०३)। रराशे[ररासे&ndash;काशिका।] इति। राशृ शब्दे राशृ शब्दे&ndash;धा।पा। आत्मनेपदी। शश्रमतुः शश्रमुः इति। श्रमु तपसि खेदे च (धा।पा।१२०४)। केचित्तु ततक्षतुः, ततक्षुरित्येतदेकहल्यध्यस्य प्रत्युदाहरणं पठन्ति; एतच्चायुक्तम्(); क्ङितीत्यनुवत्र्तते, न च पक्षेः परस्य लिटः कित्त्वमस्ति। असंयोगात्() इति प्रतिषेधात्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.120.md">सम्पाद्यताम् 6.4.120।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.120.md">सम्पाद्यताम् 6.4.120।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.120 अत एकहल्?मद्येऽनादेशादेर्लिटि।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>एकहल्मध्ये</code> इति। एकशब्दोऽयमसहायवाची। एकश्च एकश्च एकौ, एकौ च तौ हलौ चेत्येकहलौ, एकहलोर्मध्य इति द्विवचनान्तस्य षष्ठीसमासः। द्व्योरेव हि हलोर्मध्यं सम्भवति, नैकस्य। अत्र यदि लिट()आदशो न विशिष्यते ततो नेमतुः, नेमु; सेहे सेहाते, सेहिर इत्यत्र न स्यात्()। अस्तिह्रत्राप्यङ्गस्यादेश आदिरित्येतच्चेतसि कृत्वा लिट()आदेशं विशेषयितुमाह&ndash;<code>लिटि परतः</code> इत्यादि। लिटि परभूते य आदेशो विधीयते स आदियंस्याङ्गस्य नास्तीत्यर्थः। <code>तस्य</code> इति। तस्यैवंविधस्याङ्गस्येत्यर्थः। तस्येति चाङ्गस्य योऽकार इत्यनेन सम्बन्धः। अवयवषष्ठी चेयम्(), तस्यैवंविधस्याङ्गस्य योऽकारोऽवयवस्तस्येत्यर्थः। <code>एक हल्मध्ये</code> इत्यस्येदं विवरणम्()&ndash;<code>असहाययो र्हलोर्मध्ये</code> इति। तत्येत्यनन्तरोक्तोऽकारः सम्बध्यते। तस्याङ्गस्यावयवस्याकारस्येत्यर्थः। स्थानषष्ठी चेम्()&ndash;तस्य स्थान एकार आदेशो भवति। <code>रेणतुः, रेणुः</code> इति। <code>अण रण</code> (धा।पा।४४४,४४५) इति <code>रणिः शब्दार्थः</code> पठ()ते। <code>येमतुः, येमुः</code> इति। <code>यम उपरमे</code> (धा।पा।९८४)। <code>देमतुः, देमुः</code> इति। <code>दमु उपशमे</code> (धा।पा।१२०३)।
 <code>रराशे</code>[ररासे&ndash;काशिका।] इति। <code>राशृ शब्दे</code> <a href="धा।पा।६२६">राशृ शब्दे&ndash;धा।पा।</a> आत्मनेपदी। <code>शश्रमतुः शश्रमुः</code> इति। <code>श्रमु तपसि खेदे च</code> (धा।पा।१२०४)।
 केचित्तु ततक्षतुः, ततक्षुरित्येतदेकहल्यध्यस्य प्रत्युदाहरणं पठन्ति; एतच्चायुक्तम्(); क्ङितीत्यनुवत्र्तते, न च पक्षेः परस्य लिटः कित्त्वमस्ति। <code>असंयोगात्()</code> इति प्रतिषेधात्?। <code>तत्सरतुः, तत्सरुः</code> इति। <code>त्सर छद्मगतौ</code> (धा।पा।५५४)। <code>चकणतुः, चकणुः</code> इति। <code>अण रण वण भण क्वण कण शब्दार्थाः</code> (धा।पा।४४४,४४५,४४६,४४७,४५०४४९)। तत्र कणतिर्भ्वादौ पठ()ते। <code>जगणतुः, जगणुः</code> इति। <code>गण संख्याने</code> (धा।प।१८५३) चुरादौ पठ()ते। ननु च चौरादिकत्वाण्णिचि कृते <code>कास्प्रत्ययादाममन्त्रे लिटि</code> (३।१।३५) इत्यामा भवितव्यम्()? <code>अनित्यण्यन्ताश्चुरादयः</code> (है।प।पा।९७) इत्यदोषः। अनित्यण्यन्तत्वन्तु तेषां सप्तमे ज्ञापयिष्यते। <code>बभणतुः</code> इति। भणतिर्भ्वादौ पठ()ते शब्दार्थ एव।
@@ -149,30 +150,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

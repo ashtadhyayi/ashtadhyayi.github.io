@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="लृट् शेषे च। तुमुन्ण्वुलौ क्रियायां क्रियार्थायामिति प्रागुक्तं,ततोऽन्यः शेष इत्याह&mdash;असत्यामिति। चार्थमाह&ndash;सत्यमिति। हरदत्तस्त्वाह&ndash; अस्वरितत्वादेव क्रियार्थायां क्रियायामिति नानुवर्तते। एवं च शेषे चेति सुत्यजमिति। तच्चिन्त्यम्। शयिष्यत इति स्थीयते इत्यादौ तुमुना लृटो बाधापत्तेः, क्तल्युट्?तुमुन्खलर्थेषु वासरूपविधेरभावात्। अत्र च ज्ञापकं प्रैषातिसर्गप्राप्तकालेषु कृत्याश्चेत्यत्र लोटा बाधा मा भूदिति पुनः कृत्यविधिरित्यादि कृदन्ते वक्ष्यति। इदमपि ज्ञापकमित्यन्यदेतत्। यत्तु प्राचा--भविष्यतीति व्रजतीत्युदाह्मतं, तदापाततः,तुमुन्विषयेऽपि लृड्भवति तुमुना लृण्न बाध्यतेइत्येतत्प्रतिपादनाय तस्याऽनुपयोगात्,न हि भविष्यतीत्यत्र कर्तरि तुमुनः प्राप्तिरस्ति,भावे हि सः। समानकर्तृकेष्वेवेति च वक्ष्यते। लृडित्येतावत्सूत्रकरणेऽपिभविष्यतीति व्रजतीत्ययं सिध्यत्येवेत्यास्तां तावत्। स्य इडिति। लृटस्तिपिस्यतासी लृलुटोरिति स्यप्रत्ययः। तस्य वलाद्याद्र्धधातुकत्वादिडागम इत्यर्थः। भविष्यतीति। स्यप्रत्ययस्य इटि ऊकारस्य गुणे अवादेशे प्रत्ययावयवत्वत्सकारस्य षत्वे भविष्यतीति रूपमित्यर्थः। तसादौ भविष्यत इत्याद्यप्येवं योज्यम्। भविष्यामीत्यादौअतो दीर्घो यञी`ति दीर्घः। इति लृट्प्रक्रिया।"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-3.3/3.3.13.md">सम्पाद्यताम् 3.3.13।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-3.3/3.3.13.md">सम्पाद्यताम् 3.3.13।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           BALAMANORAMA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           3.3.13 लृट् शेषे च
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>लृट् शेषे च। <code>तुमुन्ण्वुलौ क्रियायां क्रियार्थाया</code>मिति प्रागुक्तं,ततोऽन्यः शेष इत्याह&mdash;असत्यामिति। चार्थमाह&ndash;सत्यमिति। हरदत्तस्त्वाह&ndash; अस्वरितत्वादेव क्रियार्थायां क्रियायामिति नानुवर्तते। एवं च <code>शेषे चे</code>ति सुत्यजमिति। तच्चिन्त्यम्। <code>शयिष्यत इति स्थीयते</code> इत्यादौ तुमुना लृटो बाधापत्तेः, क्तल्युट्?तुमुन्खलर्थेषु वासरूपविधेरभावात्। अत्र च ज्ञापकं <code>प्रैषातिसर्गप्राप्तकालेषु कृत्याश्चे</code>त्यत्र लोटा बाधा मा भूदिति पुनः कृत्यविधि<code>रित्यादि कृदन्ते वक्ष्यति। इदमपि ज्ञापकमित्यन्यदेतत्। यत्तु प्राचा--</code>भविष्यतीति व्रजती<code>त्युदाह्मतं, तदापाततः,</code>तुमुन्विषयेऽपि लृड्भवति तुमुना लृण्न बाध्यते<code>इत्येतत्प्रतिपादनाय तस्याऽनुपयोगात्,न हि भविष्यतीत्यत्र कर्तरि तुमुनः प्राप्तिरस्ति,भावे हि सः। समानकर्तृकेष्वेवेति च वक्ष्यते। लृडित्येतावत्सूत्रकरणेऽपि</code>भविष्यतीति व्रजती<code>त्ययं सिध्यत्येवेत्यास्तां तावत्। स्य इडिति। लृटस्तिपि</code>स्यतासी लृलुटो<code>रिति स्यप्रत्ययः। तस्य वलाद्याद्र्धधातुकत्वादिडागम इत्यर्थः। भविष्यतीति। स्यप्रत्ययस्य इटि ऊकारस्य गुणे अवादेशे प्रत्ययावयवत्वत्सकारस्य षत्वे भविष्यतीति रूपमित्यर्थः। तसादौ भविष्यत इत्याद्यप्येवं योज्यम्। भविष्यामीत्यादौ</code>अतो दीर्घो यञी`ति दीर्घः। इति लृट्प्रक्रिया।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

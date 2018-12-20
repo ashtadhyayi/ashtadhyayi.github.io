@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="आर्धधातुके इति निवृत्तम्()। कुतः? समः क्ष्णुवः (1.3.65), क्षियः (6.4.59) इति निर्देशात्()। ह्यस्वयोरिवर्णोयोरिदं ग्रहणम्()। कु एतत्()? तत एव निर्देशात्()। अत्राण्? गृह्रमाणः सवर्णान्? ग्राहयतीति ह्यस्वौ गृहयमाणौ दीर्घावपि ग्राहयतः, तेन तदन्तस्यापि भवतः।अचिइति वर्णग्रहणम्? तत्रयस्मिन्विधिस्तदादावलगरहणे(व्या।प।१२७) इत्यजादौ विज्ञायत इत्याह--अजादौ प्रत्ययेइति। प्रत्यय इत्येतत्? कृतो लभ्यते, अङ्गधिकारात्()। अङ्गाधिकारो ह्रस्ति, प्रत्यसन्निधापितत्वात्()। प्रत्यये हि परतोऽङ्गसंज्ञा विधीयते। यद्यजदौ प्रत्यय इयङुवङौ भवतः, नियौ, लुवौ--इत्यतर न प्राप्नुतः। अत्र ह्रजेव प्रत्ययः, न त्वजादिः? अत्रापि व्यपदेशिवद्भावे, नाजादित्वमस्तीत्यदोषः।इवर्णोवर्णान्तस्यइति। धातोरेवेदं विशेषणम्(), नेतरयोः; व्यभिचाराभावात्(), असम्भवाच्च। इवर्णोवर्णान्तता चाङ्गस्य ताभ्यां विशेषणाल्लभ्यते। इयङुवङोङकारोऽन्तादेशार्()थः। असति त्वस्मिन्ननेकाल्वात्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.77.md">सम्पाद्यताम् 6.4.77।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.77.md">सम्पाद्यताम् 6.4.77।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.77 अचि श्नुधातुभ्रुवां व्योरियङुवङौ।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>आर्धधातुके</code> इति निवृत्तम्()। कुतः? <code>समः क्ष्णुवः</code> (1.3.65), <code>क्षियः (6.4.59) इति निर्देशात्()। ह्यस्वयोरिवर्णोयोरिदं ग्रहणम्()। कु एतत्()? तत एव निर्देशात्()। अत्राण्? गृह्रमाणः सवर्णान्? ग्राहयतीति ह्यस्वौ गृहयमाणौ दीर्घावपि ग्राहयतः, तेन तदन्तस्यापि भवतः।</code>अचि<code>इति वर्णग्रहणम्? तत्र</code>यस्मिन्विधिस्तदादावलगरहणे<code>(व्या।प।१२७) इत्यजादौ विज्ञायत इत्याह--</code>अजादौ प्रत्यये<code>इति। प्रत्यय इत्येतत्? कृतो लभ्यते, अङ्गधिकारात्()। अङ्गाधिकारो ह्रस्ति, प्रत्यसन्निधापितत्वात्()। प्रत्यये हि परतोऽङ्गसंज्ञा विधीयते। यद्यजदौ प्रत्यय इयङुवङौ भवतः, नियौ, लुवौ--इत्यतर न प्राप्नुतः। अत्र ह्रजेव प्रत्ययः, न त्वजादिः? अत्रापि व्यपदेशिवद्भावे, नाजादित्वमस्तीत्यदोषः।</code>इवर्णोवर्णान्तस्य<code>इति। धातोरेवेदं विशेषणम्(), नेतरयोः; व्यभिचाराभावात्(), असम्भवाच्च। इवर्णोवर्णान्तता चाङ्गस्य ताभ्यां विशेषणाल्लभ्यते। इयङुवङोङकारोऽन्तादेशार्()थः। असति त्वस्मिन्ननेकाल्वात्? सर्वस्याङ्गस्य स्याताम्()। ननु च</code>निर्दिश्यमानस्यादेशा भवन्ति<code>(व्या।प।१०६) इत्यन्तरेणापि ङ्कारमन्तवस्यैव भवतः? एवं तर्हि विस्पष्टार्थम्()।</code>आप्नुवन्ति, राध्नुवन्ति<code>इति।</code>आप्लु व्याप्तौ<code>(धा।पा।१२६०),</code>राध साध संसिदौ<code>(धा।पा।१२६२,१२६३) स्वादित्वाच्श्नुः। शकारवतो ग्रहणं किमर्थम्()?</code>दभाभ्यां नुः<code>(द।उ।य१।१४३) दानुः, भानुरित्यत्र मा भूत्()।</code>चिक्षियतुः, चिक्षियुः<code>इति। त्रयाणामपि क्षिधातूनामन्यतमस्य रूपम्()।</code>नियौ, नियः, <code>लुवौ, लुवः</code> इति। अत्र <code>क्विदन्ता धातूत्वं न जहति</code> (व्या।प।१३२) इति धातुत्वं वेदितव्यम्()। तत्र नयतेः <code>सत्यूद्विष</code> (3.2.61) इत्यादिना क्विप्()। लुनातेस्तु <code>अन्येभ्योऽपि दृश्यते</code> (3.2.178) इत्यनेन।
 <code>इयङुवङ्भ्याम्()</code> इत्यादि। गुणस्यावकाशः&ndash;चेतव्यम्(), स्तोतव्यमित्यादि, इयङ्वङोः&ndash;चिक्षियतुः, चिक्षियुः, लुलुवतुः, लुलुवुरिति; इहोभयं प्राप्नोति&ndash;चयनम्(), लवनमिति। विप्रतिषेधेन गुण एव भवति। वृद्धेरवकाशः&ndash;सखायौ, सखायः, गावौ, गाव इति; इयङुवङोः स एव; इहोभयं प्राप्नोति&ndash;चायकः, लावक इति। वृद्धिरेव भवति विप्रतिषेधेन।
 <code>इयङुवङ्प्रकरणे</code> इत्यादि। उपसंख्यानशब्दस्य प्रतिपादनमर्थः। तत्रेदं प्रतिपादनम्()&ndash;<code>बहुलं छन्दसि</code> (6.4.75) इत्यादेः सूत्राद्बहुलग्रहणमनुवर्तते। तेन तन्वदीनां छन्दसि विकल्पेनेयङुवङौ भविष्यतः। <code>तन्वम्()</code> इति। यत्रोवङ् नास्ति, तत्रामि परपूर्वत्वमपि नास्ति; बहुलवचनादेव। <code>विध्वम्(), विषुवम्()</code> इति। सूधातोः क्विप्(); <code>उपसर्गा सुनोति</code> (8.3.65) इत्यादिना षत्वम्()। <code>स्वर्गः, सुवर्गः</code> इति। <code>सु</code> इत्येतस्मादर्गशब्दे परत उवङादेशः। योगश्चायं यणादेशापवादः॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

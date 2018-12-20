@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="णौ इति वत्र्तते, चिण्णमुलौ च तद्विशेषणे। अशमि इति। शमेण्र्यन्ताल्लुङ, चिण्? भावकर्मणोः (3.1.66) इति च्लेश्चिण्(), चिणो लुक्() (६।४।१०४) इति तशब्दस्य लुक्? णेरनिटि(6.4.51) इति णिलोपः।शर्मशममम्(), शामंशामम्()इति। पूर्ववण्णमुल्दिविर्वचने। दीर्घग्रहणं किम्()इति। एवं मन्यते--ह्यस्वस्यैवानन्तरसय प्रकृतस्य विकल्पमात्रं विषेयम्(), एवमप्यभीष्टं सिद्ध्यत्येव। तथा हि--यस्मिन्? पक्षे ह्यस्वो विधीयते, तस्मिन्नशमीत्यादि सिद्ध्यति। य()स्मस्तु ह्यस्वो न विधीयते, तत्रअत उपधायाः(७।२।११६) इति दीर्घे वृद्धिसंज्ञके विहिते तेनैव रूपेणावस्थानात्?अशामिइत्यादि सिद्ध्यतीत्यभिप्रायः। इतरस्तु दीर्घग्रहणमन्तरेण यन्न सिद्ध्यति, तद्दर्शयति--शमयन्तं प्रयुङक्तेइत्यादिना। शमेण्र्यन्तात्? पुनः प्रयोजकविवक्षायां द्वितीयो णिच्(), तत्र पूर्वस्य णेर्लोपः, लुङ, चिण्()। पक्षे दीर्घत्वम्()। अशमि, अशामि, शमंशमम्(), शामंशामम्()इति। द्वितीयणिजन्तण्णमुलि कृते पक्षे दीर्घत्वम्()।शंशमयतेःइत्यादि। अत्यर्थं शाम्यतीति यङ्(), द्विर्वचनम्(),नुगतोऽनुनासिकान्तस्य(7."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.93.md">सम्पाद्यताम् 6.4.93।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.93.md">सम्पाद्यताम् 6.4.93।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.93 चिण्णमुलोर्दीर्घोऽन्यतरस्याम्?।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>णौ</code> इति वत्र्तते, चिण्णमुलौ च तद्विशेषणे। <code>अशमि</code> इति। शमेण्र्यन्ताल्लुङ, <code>चिण्? भावकर्मणोः</code> (3.1.66) इति च्लेश्चिण्(), <code>चिणो लुक्()</code> (६।४।१०४) इति तशब्दस्य लुक्? णेरनिटि<code>(6.4.51) इति णिलोपः।</code>शर्मशममम्(), शामंशामम्()<code>इति। पूर्ववण्णमुल्दिविर्वचने। 
 </code>दीर्घग्रहणं किम्()<code>इति। एवं मन्यते--ह्यस्वस्यैवानन्तरसय प्रकृतस्य विकल्पमात्रं विषेयम्(), एवमप्यभीष्टं सिद्ध्यत्येव। तथा हि--यस्मिन्? पक्षे ह्यस्वो विधीयते, तस्मिन्नशमीत्यादि सिद्ध्यति। य()स्मस्तु ह्यस्वो न विधीयते, तत्र</code>अत उपधायाः<code>(७।२।११६) इति दीर्घे वृद्धिसंज्ञके विहिते तेनैव रूपेणावस्थानात्?</code>अशामि<code>इत्यादि सिद्ध्यतीत्यभिप्रायः। इतरस्तु दीर्घग्रहणमन्तरेण यन्न सिद्ध्यति, तद्दर्शयति--</code>शमयन्तं प्रयुङक्ते<code>इत्यादिना। शमेण्र्यन्तात्? पुनः प्रयोजकविवक्षायां द्वितीयो णिच्(), तत्र पूर्वस्य णेर्लोपः, लुङ, चिण्()। पक्षे दीर्घत्वम्()। 
 </code>अशमि, अशामि, शमंशमम्(), शामंशामम्()<code>इति। द्वितीयणिजन्तण्णमुलि कृते पक्षे दीर्घत्वम्()।</code>शंशमयतेः<code>इत्यादि। अत्यर्थं शाम्यतीति यङ्(), द्विर्वचनम्(),</code>नुगतोऽनुनासिकान्तस्य<code>(7.4.85) इति नुक्()--</code>शंशम्य<code>इति। स्थिते हेतुमण्णिच्(),</code>अतो लोपः<code>(6.4.48) इत्यकारस्य लोपः,</code>यस्य हलः<code>(6.4.49) इति यकारस्य, शंशमीति स्थिते यदा ततः परश्चिण्भवति, तदा पक्षे दीर्घत्वे कृतेऽशंशम्यशंशामीति भवति। यद तु णमुल्? तदा शंशमंशंमम्? शंशामंशंशाममिति, तत्र योऽसो णौ णिर्लुप्यते, यश्च यङोऽकारस्तयोर्दीर्धग्रहणे सति</code>अचः परस्मिन्? पूर्वविधौ<code>(1.1.56) इति स्थानिवद्भावो न भवति;</code>न पदान्त<code>(1.1.57) इत्यादिना प्रतिषेधात्()। तेनासति व्यवधाने दीर्घः सिद्धो भवति। स्यादेतत्()--ह्यस्वविकल्पे विधीयमाने यस्मिन्? पक्षे ह्यस्वो नास्ति तस्मिन्पक्षे स्वरूपेणैवावस्थितो दीर्घः स्यात्()? इत्यत आह--</code>ह्यस्वविकल्पे तु<code>इत्यादि। न हि ह्यस्वे विधातव्ये केनचित्? स्थानिवद्भावः प्रतिषिध्यते। तत्र ह्यस्वविकल्पे विधीयमाने णेर्लोपस्य यङ्कारस्य च स्थानिवद्भावः स्यादेव। ततश्च स्थानिवद्भावाद्विकल्पेन ह्यस्वत्वं न स्यात्()। चिण्णमृल्परे हि णौ परतो मितामङ्गानां ह्यस्वत्वं विधेयम्()। यश्चात्र णिश्चिण्णमुल्परो न तत्र मिदङ्गम्; पूर्वेम णिचा व्यवधानात्()। य()स्मश्च णौ मिदङ्गं नासौ चिण्णमुल्परः; परेण चिणा व्यवधानात्()। तस्मान्नायमस्य योगस्य विषय इति पाक्षिकं ह्यस्वत्वमनेन न स्यात्()। पूर्वेणैव योगेन नित्यं स्यात्(), ततश्च दीर्घो न स्यात्()।
@@ -146,30 +147,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

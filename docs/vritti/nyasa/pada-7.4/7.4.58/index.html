@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="अत्रेत्यनेन यन्निर्दिश्यते तद्दर्शयितुमाह&ndash;यदेतत्() इत्यादि। अथात्रग्रहणं किमर्थम्()? सनि मीमा (7.4.54) इत्यादौ प्रकरणे यथा स्यात्(); ददौ, ददतुरित्यादौ मा भूदिति चेत्()? न; यदि ह्रेतत्? प्रयोजनमभिमतं स्यात्? सनि मीमाधुरभलभशकपतपदामच इसभ्यासलोपश्च इत्येवमुद्दिश्येत, एवमिहैव प्रकरणे भदिष्यति, नान्यत्र, ततो निष्प्रयोजनमत्रग्रहणमित्यत आह&ndash;सनि मीमाधुरभलभ इत्यादि। विषयावधारणार्थम्() इति। अभ्यासलोपविषयस्य नियमार्थमित्यर्थः। तामेव तस्य विषयनियमार्थतां दर्शयितुमाह&ndash;अत्रैव इत्यादि। अत्रेत्यनेनेसादिविषयो निर्दिश्यते। इसादिविषय एवाभ्यासलोपो यथा स्यादिति नियमेन यद्व्यवच्छिन्नं तद्दर्शयितुमाह&ndash;सन्वद्भावविषये न भवति इति। अमीमपत्() इति। भीञ्? हिंसायाम्() (धा।पा।१४७६) मीनातिमिनोतिदीङां ल्यपि च (6.1.49) इत्यात्त्वम्(), णिच्(), पूर्ववत्? पुक्(), लुङः, च्लेश्चङ्(), णिलोपः, उपधाह्यस्वत्वम्(), द्विर्वचनम्(), अट्(), सन्वल्लघुनि चङ्परे (7."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-7.4/7.4.58.md">सम्पाद्यताम् 7.4.58।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-7.4/7.4.58.md">सम्पाद्यताम् 7.4.58।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           7.4.58 अत्र लोपोऽभ्यासस्य।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>अत्रेत्यनेन यन्निर्दिश्यते तद्दर्शयितुमाह&ndash;<code>यदेतत्()</code> इत्यादि। अथात्रग्रहणं किमर्थम्()? <code>सनि मीमा</code> (7.4.54) इत्यादौ प्रकरणे यथा स्यात्(); ददौ, ददतुरित्यादौ मा भूदिति चेत्()? न; यदि ह्रेतत्? प्रयोजनमभिमतं स्यात्? <code>सनि मीमाधुरभलभशकपतपदामच इसभ्यासलोपश्च</code> इत्येवमुद्दिश्येत, एवमिहैव प्रकरणे भदिष्यति, नान्यत्र, ततो निष्प्रयोजनमत्रग्रहणमित्यत आह&ndash;<code>सनि मीमाधुरभलभ</code> इत्यादि। <code>विषयावधारणार्थम्()</code> इति। अभ्यासलोपविषयस्य नियमार्थमित्यर्थः। तामेव तस्य विषयनियमार्थतां दर्शयितुमाह&ndash;<code>अत्रैव</code> इत्यादि। अत्रेत्यनेनेसादिविषयो निर्दिश्यते। इसादिविषय एवाभ्यासलोपो यथा स्यादिति नियमेन यद्व्यवच्छिन्नं तद्दर्शयितुमाह&ndash;<code>सन्वद्भावविषये न भवति</code> इति। <code>अमीमपत्()</code> इति। <code>भीञ्? हिंसायाम्()</code> (धा।पा।१४७६) <code>मीनातिमिनोतिदीङां ल्यपि च</code> (6.1.49) इत्यात्त्वम्(), णिच्(), पूर्ववत्? पुक्(), लुङः, च्लेश्चङ्(), णिलोपः, उपधाह्यस्वत्वम्(), द्विर्वचनम्(), अट्(), <code>सन्वल्लघुनि चङ्परे</code> (7.4.93) इत्यादिना सन्वद्भावे <code>सन्यतः</code> (7.4.79) इतीत्त्वम्(), <code>दीर्घो लघोः</code> (7.4.94) इति दीर्घः। <code>अदीदपत्()</code> इति। <code>डुदाञ्? दाने</code> (धा।पा।१०९१) पूर्ववण्णिजादिः। अत्रग्रहणादिहाभ्यासलोपो न भवति।
 कथं पुनः सन्यभ्यासलोप उच्यमान इह प्राप्नोति, यन्निवृत्त्यर्थमत्रग्रहणं क्रियते? इत्याह&ndash;<code>सन्वल्लघुनि</code> इत्यादि। यथैव हि सन्वद्भावातिदेशादित्त्वं भवति, एवमभ्यासलोपः स्यात्()। इहालोन्त्यपरिभाषया <code>अलोऽन्त्यस्य</code> (1.1.51) लोपेन भवितव्यमिति कस्यचिद्भ्रान्तिः स्यात्(), अतस्तां निराकर्तुंमाह&ndash;<code>सर्वस्य</code> इत्यादि। कथं पुनः सर्वस्य लभ्यते? इत्यत आह&ndash;<code>तदर्थमेव</code> इत्यादि। एतेनैवकारेण विषयावधारणार्थतां निरस्यति। यद्येवम्(), सन्वद्भावविषयेऽपि प्राप्नोति? एवं मन्यते&ndash;सन्वद्भावविषयेऽप्यभ्यासलोपप्रसङ्गः परिहर्तु शक्यते। तत्र सन्वदिति सनाश्रयकार्यमतिदिश्यते। न चाभ्यासलोपः सनमेवापेक्षते, किं तर्हि? इस्भावादिकमपि। तदभावादसत्यप्यत्रग्रहणेऽमीमपदित्यादिष्वभ्यासलोपो न भविष्यति। तस्मादतिरिच्यत एवात्रग्रहणमिति न कत्र्तव्यमेव। तत्? क्रियते&ndash;सर्वस्याभ्यासलोपो यथा स्यादिति।
 कथं पुनः क्रियमाणेऽप्यत्रग्रहणे सर्वस्य लोपो लभ्यते? ग्रन्थाधिक्यादर्थाधिक्यमित्येके। अत्रग्रहणेन महत्? सूत्रं प्रयणतैतत्? सूचितम्()&ndash;महतः स्थानिनोऽयं लोपः कत्र्तव्यः। एवञ्चायं महतः स्थानिनः कृतो भवति यदि सर्वस्याभ्यासलोपः क्रियते, नान्यथेत्यन्ये।
@@ -145,30 +146,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

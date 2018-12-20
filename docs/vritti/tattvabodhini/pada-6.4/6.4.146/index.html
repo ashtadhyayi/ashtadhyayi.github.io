@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="ओर्गुणः। तद्धिते किम्?। पठ्वी। वाय्वोः। गुणोक्तिरिति। यद्यपि ओरोदिति सूत्रितेऽपि भस्यतद्धितेइत्येवंरूपसंज्ञापूर्वकत्वामस्त्येव, तथापि विधेयसमर्पकं पदं यत्र संज्ञारूपं स एव संज्ञापूर्वको विधिरिति। भावः। यद्यपि ओदिति तपरस्तत्कालस्य संज्ञैव, तथापि इह तकार उच्चारणार्थः, तपरत्वे फलाऽभावात्। सओरोइत्येव वाऽस्तु। स्वं रूपं शब्दस्ये ति तु प्रत्याख्यातमिति भावः। स्यादेतत्--तपरस्तत्कालस्य संज्ञा भवतीतिगुरोरनृतःइति प्लुतनिषेधस्यापि संज्ञापूर्वकत्वेनाऽनित्यत्वात्क्लृ3प्तशिखेत्यत्र प्लुतसिद्धयेऋलृक् सूत्रे ऋकारात्पृथक् लृकारोपदेशो व्यर्थः। सावर्ण्ये सत्यप्युक्तरीत्या लृकारस्य प्लुतसिद्धेरनित्यत्वज्ञापनस्य निष्फलत्वात्। न चैवमपि ऋदिताम्लृदित्कार्यम्लृदितामृदित्कार्यं च वारयितुमनित्य्त्वज्ञापनमावश्यकमिति वाच्यं, राजृभ्राजृग्म्लृशक्लृ इति पृथगनुबन्धकरणसाम्थ्र्यात्, नाग्लोपिशास्वृदिताम् लृदितः परस्मापदेषु इति पृथगनुवादसामर्थ्याच्च तत्कार्याणामसार्ङ्क्यसिद्धेरिति चेदत्राहुः&mdash;गुरोरनृतःइत्यनेन ऋद्भिन्नस्य गुरोः प्लुतविधानात् अनृतःइत्यतदनूद्यमानगुरुविशेषणत्वेनानुवादरूपमेव, न तु विधेयसमर्पकसंज्ञारूपं पदमिति ऋस्थानिकप्लुतनिषेधस्याऽनित्यत्वाऽसिद्द्यक्लृ3प्तशिखेत्यत्र प्लुतो न सिध्यति, ततश्च तत्सि तत्सिद्द्यथमुक्तज्ञापनायोभयोपदेश आवश्यक इति। अन्ये तु&mdash;ऋकारात्पृथग्लृकार उपदेष्टव्य एव, ऋकारोपदेशेन लृकारस्याऽलाभात्। न च ऋलृवर्णयोर्भिथः सावप्र्यमिति वचनात्तल्लाभः शङ्क्यः। वार्तिकं दृष्ट्वा सूत्रकृतोऽप्रवृत्तेरित्याहुः।"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-6.4/6.4.146.md">सम्पाद्यताम् 6.4.146।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-6.4/6.4.146.md">सम्पाद्यताम् 6.4.146।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           TATTVABODHINI
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.146 ओर्गुणः
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>ओर्गुणः। तद्धिते किम्?। पठ्वी। वाय्वोः। गुणोक्तिरिति। यद्यपि <code>ओरो</code>दिति सूत्रितेऽपि <code>भस्य</code><code>तद्धिते</code>इत्येवंरूपसंज्ञापूर्वकत्वामस्त्येव, तथापि विधेयसमर्पकं पदं यत्र संज्ञारूपं स एव संज्ञापूर्वको विधिरिति। भावः। यद्यपि <code>ओ</code>दिति तपरस्तत्कालस्य संज्ञैव, तथापि इह तकार उच्चारणार्थः, तपरत्वे फलाऽभावात्। स<code>ओरो</code>इत्येव वाऽस्तु। <code>स्वं रूपं शब्दस्ये ति तु प्रत्याख्यातमिति भावः। स्यादेतत्--तपरस्तत्कालस्य संज्ञा भवतीति</code>गुरोरनृतः<code>इति प्लुतनिषेधस्यापि संज्ञापूर्वकत्वेनाऽनित्यत्वात्क्लृ3प्तशिखेत्यत्र प्लुतसिद्धये</code>ऋलृक् सूत्रे ऋकारात्पृथक् लृकारोपदेशो व्यर्थः। सावर्ण्ये सत्यप्युक्तरीत्या लृकारस्य प्लुतसिद्धेरनित्यत्वज्ञापनस्य निष्फलत्वात्। न चैवमपि ऋदिताम्लृदित्कार्यम्लृदितामृदित्कार्यं च वारयितुमनित्य्त्वज्ञापनमावश्यकमिति वाच्यं, राजृभ्राजृग्म्लृशक्लृ इति पृथगनुबन्धकरणसाम्थ्र्यात्, <code>नाग्लोपिशास्वृदिताम्</code> <code>लृदितः परस्मापदेषु</code> इति पृथगनुवादसामर्थ्याच्च तत्कार्याणामसार्ङ्क्यसिद्धेरिति चेदत्राहुः&mdash;<code>गुरोरनृतः</code>इत्यनेन ऋद्भिन्नस्य गुरोः प्लुतविधानात् <code>अनृतः</code>इत्यतदनूद्यमानगुरुविशेषणत्वेनानुवादरूपमेव, न तु विधेयसमर्पकसंज्ञारूपं पदमिति ऋस्थानिकप्लुतनिषेधस्याऽनित्यत्वाऽसिद्द्यक्लृ3प्तशिखेत्यत्र प्लुतो न सिध्यति, ततश्च तत्सि तत्सिद्द्यथमुक्तज्ञापनायोभयोपदेश आवश्यक इति। अन्ये तु&mdash;ऋकारात्पृथग्लृकार उपदेष्टव्य एव, ऋकारोपदेशेन लृकारस्याऽलाभात्। न च <code>ऋलृवर्णयोर्भिथः सावप्र्य</code>मिति वचनात्तल्लाभः शङ्क्यः। वार्तिकं दृष्ट्वा सूत्रकृतोऽप्रवृत्तेरित्याहुः।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

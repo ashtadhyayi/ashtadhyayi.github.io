@@ -57,12 +57,16 @@ index: 2.4.34 sutra: द्विदीयाटौस्स्वेन।
 vritti: nyasa इदमोऽन्वादेशे। अन्वादेशे अश इतिच्छेदः। अन्वादेशे इदमोऽश् स्यात्तृतीयादिविभक्तौ, स चानुदात्त इति स्पष्टोऽर्थः। आशास्ते यं यजमानोऽसौ। आयुराशास्ते इति प्रस्तुत्य तदस्मै देवा राधन्तामित्युदाहरणम्। तत् आयुरादि अस्मे यजमानाय देवाः साधयन्त्वित्यर्थः। अत्र अस्मै इत्यादहरणम्। इद-स्मै इति स्थिते प्रकृतेरशादेशे अनुदात्ते सति अनुदात्तौ सुप्पितौ इति स्मै इत्यैकारोऽनुदात्तः। तथाच अस्मै इति सर्वानुदात्तः। एवमाभ्यामित्यादावपि हलादावुदाहरणम्। द्वितीयादावचि टौसोरेनादेशस्य विशिष्ट विधानात्। ननु अनुदात्तत्वमेवात्र विधीयतां न त्वशादेशोऽपि। त्यदाद्यत्वे हलि लोपे च अस्मै, आभ्यामित्यादिरूपस्या।ञन्वादेशेऽपि सिद्धेरत आह-अ()आचनं साकच्कार्थमिति। इमकाभ्यां रात्रावधीतमाभ्यामहरप्यधीत मित्यत्रान्वादेशे इमकाभ्यामिति न भवति। अत्र अ अ इति प्रश्लिष्टनिर्देशादनेकाल्त्वात्सर्वादेशत्वसिद्धेः शित्करणं न कर्तव्यमिति भाष्ये स्पष्टम्।"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -87,24 +91,23 @@ vritti: nyasa इदमोऽन्वादेशे। अन्वादे�
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.4/2.4.34.md">सम्पाद्यताम् 2.4.34।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.4/2.4.34.md">सम्पाद्यताम् 2.4.34।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -121,29 +124,27 @@ vritti: nyasa इदमोऽन्वादेशे। अन्वादे�
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           2.4.34 द्विदीयाटौस्स्वेन।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         
 
 <p><code>इदमेतदोः</code> इत्यादि। ननु चानन्तरत्वादेतद एवात्रानुवृत्तिः प्राप्नोति, नेदमः; व्यवहितत्वादित्यत आह&ndash; <code>मण्()डूकप्लुतिन्यायेन</code> इत्यादि। <code>एकमेवेदं विधानम्</code> इति। अयं दण्ड इत्यनेन दण्डस्य सत्तोपलक्षणमात्रं कृत्वा <code>हरानेन</code> इत्यनेनैव हरणक्रियां प्रति दण्डस्य करणभावो निर्दिश्यत इत्येकं विधानम्। <code>एतमातं ङितं विद्यात्</code> इत्यत्रापि <code>ईषदर्थे क्रियायोगे मर्यादाभिविधौ च यः</code> (म।भा।१।७१) इतीषदाद्यर्थस्याकारस्य निर्देशामात्रं कृत्वा <code>एतमातं ङितं विद्यात्</code> इत्यनेन वेदनक्रियां प्रत्याकारमात्रस्य कर्मभाव एव विधीयत इत्येकमेव विधानम्॥</p>
@@ -175,30 +176,15 @@ sutra:  द्विदीयाटौस्स्वेन।</p>
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उपदिदीये इति। दीङ क्षये (धा।पा।११३४), असंयोगाल्लिट्? कित्() (1.2.5) इति कित्त्वम्(), लिटस्तझयोरेशिरेचौ। दीङः इति षष्टीयं वा स्यात्(), पञ्चमी वेति द्वौ पक्षौ। तत्र यद्याद्यः पक्ष आश्रीयेत, तदा आद्यन्तौ टिकितौ (1.1.45) इत्यादौ युटि कृते धातोरनिष्टं रूपमापद्यते; अत इदं षष्ठीपक्षे दूषणमालक्ष्य पञ्चमीपक्षं पुरस्कृत्याह&ndash;दीङ इति पञ्चमीनिर्देशात्() इत्यादि। पञ्चमीनिर्देशे हि सति उभयनिर्देश पञ्चमनिर्देशो बलीयान्() (शाक।प।९७) इति दीङः इति पञ्चम्याः अचि इति सम्पम्याः षष्ठीत्वे प्रकल्पते तस्मादित्युत्तरस्य (1.1.66) इत्यजादेरादिर्युडागमो भवति। अचि इति सप्तमीनिर्देशस्तूत्तरार्थः। ननु चात्र एरनेकाचः (6.4.82) इति यणादेशे कर्तव्ये युडसिद्ध इति यणादेशेन भवितव्यम्(), ततश्चोपदिदीय इति न सिद्ध्येत्(), उपदिद्ये इत्यनिष्टं रूपं प्राप्नोति, अत आह&ndash;विधानसामथ्र्यात्() इत्यादि। यदि यणादेशे कत्र्तव्ये युटोऽसिद्धत्वं स्यात्(), तदा युटो विधानमनर्थकं स्यात्(); विशेषाभावात्()। कथं पुनर्विशेषाभावः, यावताऽसति हि युट()एकस्य यकारस्य श्रवणं भवति, सति तु द्वयोः?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.63.md">सम्पाद्यताम् 6.4.63।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.63.md">सम्पाद्यताम् 6.4.63।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.63 दीङो युडचि क्ङिति।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>उपदिदीये</code> इति। <code>दीङ क्षये</code> (धा।पा।११३४), <code>असंयोगाल्लिट्? कित्()</code> (1.2.5) इति कित्त्वम्(), लिटस्तझयोरेशिरेचौ।
 <code>दीङः</code> इति षष्टीयं वा स्यात्(), पञ्चमी वेति द्वौ पक्षौ। तत्र यद्याद्यः पक्ष आश्रीयेत, तदा <code>आद्यन्तौ टिकितौ</code> (1.1.45) इत्यादौ युटि कृते धातोरनिष्टं रूपमापद्यते; अत इदं षष्ठीपक्षे दूषणमालक्ष्य पञ्चमीपक्षं पुरस्कृत्याह&ndash;<code>दीङ इति पञ्चमीनिर्देशात्()</code> इत्यादि। पञ्चमीनिर्देशे हि सति <code>उभयनिर्देश पञ्चमनिर्देशो बलीयान्()</code> (शाक।प।९७) इति <code>दीङः</code> इति पञ्चम्याः <code>अचि</code> इति सम्पम्याः षष्ठीत्वे प्रकल्पते <code>तस्मादित्युत्तरस्य</code> (1.1.66) इत्यजादेरादिर्युडागमो भवति। <code>अचि</code> इति सप्तमीनिर्देशस्तूत्तरार्थः। ननु चात्र <code>एरनेकाचः</code> (6.4.82) इति यणादेशे कर्तव्ये युडसिद्ध इति यणादेशेन भवितव्यम्(), ततश्चोपदिदीय इति न सिद्ध्येत्(), <code>उपदिद्ये</code> इत्यनिष्टं रूपं प्राप्नोति, अत आह&ndash;<code>विधानसामथ्र्यात्()</code> इत्यादि। यदि यणादेशे कत्र्तव्ये युटोऽसिद्धत्वं स्यात्(), तदा युटो विधानमनर्थकं स्यात्(); विशेषाभावात्()। कथं पुनर्विशेषाभावः, यावताऽसति हि युट()एकस्य यकारस्य श्रवणं भवति, सति तु द्वयोः? नैषोऽस्ति विशेषः; न हि व्यञ्जनपरस्यैकस्यानेकस्य वा हलः श्रवणं प्रति विशेषोऽस्ति। ये तु विशेषमिच्छन्ति, तन्मतेनास्माभिः पूर्वमेव यणादेशे युटः सिद्धत्वमन्यथा प्रतिपादितम्()।
 <code>उपदेदीयते</code> इति। <code>दीङ क्षये</code> (धा।पा।११३४), <code>असंयोगाल्लिट्? कित्()</code> (1.2.5) इति कित्त्वम्(), लिटस्तझयोरेशिरेचो।
@@ -146,30 +147,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

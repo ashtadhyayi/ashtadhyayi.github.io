@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="आपः इति। अप्शब्दस्य बहुत्वादेकवचनद्विवचने न सम्भवत इति बहुवचनमुपन्यस्तम्()। बह्वाम्पि इति। बहव आप एष्विति बहुव्रीहिः। तदन्तविधेरिष्टत्वात्? तदन्तस्यापि दीर्घत्वं भवति। तथा हि येन विधिस्तदन्तस्य (1.1.71) इत्यत्र सूत्रे कानि पुनरत्र प्रयोजनानि इति प्रश्ने इदमुक्तं प्रयोजनम्()&ndash;महदपस्वसृनप्तृनेष्टृत्वष्टृ इति। कथं पुनरिष्यमाणोऽपि तदन्तविधिर्लभ्यते यावता ग्रहणवता प्रातिपदिकेन तदन्तविधिः प्रतिषिध्यते (व्या।पा।८९)? नैष दोषः; सर्वनामस्थाने चासम्बृद्धौ (6.4.8) इत्यतश्चकारोऽनुवत्र्तते, स चानुक्तसमुच्चयार्थः। तेन तदन्तस्यापि दीर्घत्वं भविष्यति। केचित् इति वचनात्? केचिन्नेच्छन्तीत्युक्तम्()। तन्मतेन बह्वम्पीत्येवं भवति। कस्मात्? पुनरत्र ऋक्पूरब्धूःपथामानक्षे (५।४।७४) इत्यनेनाकारः समासान्तो न क्रियते? इत्याह&ndash;तत्र समासान्तो विधिरनित्यः इत्यादि। इयञ्च परिभाषा स्फिगपूतवीणाञ्जोऽध्वकुक्षिसीरनाम नाम च (6."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.11.md">सम्पाद्यताम् 6.4.11।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.11.md">सम्पाद्यताम् 6.4.11।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.11 अप्तृन्तृच्स्वसृनप्तृनेष्ट्टक्षत्तृहोतृपोतृप्रशास्तृ?णाम्?।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>आपः</code> इति। अप्शब्दस्य बहुत्वादेकवचनद्विवचने न सम्भवत इति बहुवचनमुपन्यस्तम्()। <code>बह्वाम्पि</code> इति। बहव आप एष्विति बहुव्रीहिः। तदन्तविधेरिष्टत्वात्? तदन्तस्यापि दीर्घत्वं भवति। तथा हि <code>येन विधिस्तदन्तस्य</code> (1.1.71) इत्यत्र सूत्रे <code>कानि पुनरत्र प्रयोजनानि</code> इति प्रश्ने इदमुक्तं प्रयोजनम्()&ndash;महदपस्वसृनप्तृनेष्टृत्वष्टृ इति। कथं पुनरिष्यमाणोऽपि तदन्तविधिर्लभ्यते यावता <code>ग्रहणवता प्रातिपदिकेन तदन्तविधिः प्रतिषिध्यते</code> (व्या।पा।८९)? नैष दोषः; <code>सर्वनामस्थाने चासम्बृद्धौ</code> (6.4.8) इत्यतश्चकारोऽनुवत्र्तते, स चानुक्तसमुच्चयार्थः। तेन तदन्तस्यापि दीर्घत्वं भविष्यति। <code>केचित्</code> इति वचनात्? केचिन्नेच्छन्तीत्युक्तम्()। तन्मतेन बह्वम्पीत्येवं भवति। कस्मात्? पुनरत्र <code>ऋक्पूरब्धूःपथामानक्षे</code> (५।४।७४) इत्यनेनाकारः समासान्तो न क्रियते? इत्याह&ndash;<code>तत्र समासान्तो विधिरनित्यः</code> इत्यादि। इयञ्च परिभाषा <code>स्फिगपूतवीणाञ्जोऽध्वकुक्षिसीरनाम नाम च</code> (6.2.186) इत्यत्राध्वग्रहणेन ज्ञापिता। यथाध्वग्रहणं ज्ञापकं तथा तत्रैदोक्तम्()। नन्वेवमपि बह्वाम्पीति नैव सम्भवति, तथा हि&ndash;बह्वप्()+शि इति स्थितेऽनेन दीर्घत्वं प्राप्नोति, <code>नपुसकस्य झलचः</code> (७।१।७२) इति नुम्? च, तत्र कृतकृतप्रङ्गित्वेन नित्यत्वात्? परत्वाच्च नुम्? कत्र्तव्यः, तस्मिन्? कृत उपधाया अदीर्घभाविनीत्वाद्दीर्घत्वं न प्राप्नोति? इत्यत आह&ndash;<code>नित्यमपि च</code> इत्यादि। नित्यमपीत्यपिशब्दात्? परमपि। कथं पुनरिष्यमाणं नुममकृत्वा दीर्घत्वं लक्ष्यते? <code>वा षपूर्वस्य निगमे</code> (6.4.9) इत्यतः पूर्वग्रहणानुवृत्तेः। तस्यैतदेव प्रयोजनम्()&ndash;यदन्यत्? कार्यं प्राप्नोति तदकृत्वा दीर्घत्वमेव पूर्व कत्र्तव्यमिति।
 अन्यस्त्वाह&ndash;<code>नपुंसकस्य झलचः</code> (७।१।७२) इति नुम्? विधीयते, नपुंसकञ्चार्थधर्मः, अर्थे च शब्दानुशासनेऽस्मिन्? कार्याभावान्नपुंसकामिधायी शब्दो नुम्विधावाश्रयणीयः। तञ्च शब्दं ग्रहीतुं प्रयोगोऽनुगमनीय इति नुमो बहिरङ्गत्वम्()। अयं तु दीर्घः साक्षादप्शब्दमुच्चार्य विधीयमानो यथोच्चारितस्यैव क्रियमाणोऽल्पाश्रयत्वादन्तरङ्ग इति पूर्वं दीर्घः प्रवत्र्तते, पश्चान्नुमिति। एतच्चायुक्तम्(), अनेन हि न्यायेन बह्वाम्पीति न सिध्येत्()। एवदपि कैश्चिदिष्यते&ndash;अस्य च न्यायस्य साधारणत्वादिहापि पर्वमेव दीर्घत्वेन भवितव्यम्(), पश्चान्नुमा। पूर्व()स्मस्तु परिहारे न दोषः। ये हि बह्वम्पीतीच्छन्ति ते पूर्वग्रहणमिह नानुवत्र्तयन्ति।
 <code>कत्र्तारः</code> इति। तच्छीलादावर्थे तृन्निति <code>ऋतो ङिसर्वनामस्थानयोः</code> (7.3.110) इति गुणः। <code>जनापवादान्()</code> इति। द्वितीयान्तस्यानुप्रयोगस्तृन्नन्ततां दर्शयितुम्()। तृनो हि प्रयोगे <code>न लोकाव्ययनिष्ठा</code> (2.3.69) इत्यादिना षष्ठ()आं प्रतिषिद्धायाम्(), द्वितीयैव भवति। एकवचनं नोदाह्मतम्()। तत्र <code>ऋदुशनस्पुरुदंशोऽनेहसाञ्च</code> (7.1.94) इत्यनङादेशे कृते <code>नोपधायाः</code> (6.4.7) <code>सर्वनामस्थाने च</code> (6.4.8) इत्यादिना दीर्घस्य सिद्धत्वात्()। <code>कटस्य</code> इति षष्ठ()न्तस्यानुप्रयोगस्तृचोऽभिव्यक्तये। तस्य प्रयोगे कर्मणि षष्ठी भवति <code>कर्त्तृ कर्मणोः कृति</code> (2.3.65) इत्यनेन। अथ यथा <code>तुरिष्ठेमेयस्सु</code> (६।४।१५४) इत्यत्र तुरिति तृंस्तृचोर्यत्? समानं रूपं तस्यैव ग्रहणं कृतम्(), न तु तयोर्भेदेन, ततेहापि किमर्थं न कृताम्()? <code>अर्वणस्त्रसावनञः</code> (6.4.127) इत्यर्वादेशस्य तृशब्दस्य ग्रहणं मा भूदित्येवमर्थमिति चेत्(), नैतत्? प्रयोजनम्(); अर्थवद्ग्रहणपरिभाषयैव (व्या।प।१) हि तस्य ग्रहणं न भविष्यति। एवं तृंस्तृचोर्भेदेनोपादानमस्याः परिभाषाया अनित्यत्वज्ञापनार्थम्()। तेन <code>अनिनस्मन्ग्रहणान्यर्थवता चानर्थकेन च प्रयोजयन्ति</code> (व्या।प।१२९) इत्युपपन्नं भवति। अथ वा&ndash;<code>सामान्यनिर्देशे क्वचिद्विशेष एव गृह्रते</code> इति ज्ञापनार्थम्()। तेन <code>न कोपधायाः</code> (6.3.36) इत्यत्र सामान्योक्तावपि तद्धितवुसम्बन्ध्येव ककारो गृह्रते, न ककारमात्रम्()।
@@ -145,30 +146,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

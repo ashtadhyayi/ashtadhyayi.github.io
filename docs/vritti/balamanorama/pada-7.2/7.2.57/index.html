@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="सेऽसिचि। से- असिचीति छेदः। सप्तमी षष्ठ�र्थे। कृत चृत छृत तृद नृत् एषां समाहारद्वन्द्वात्पञ्चमी। उदितो वेत्यतो वेति, आर्द्धधातुकस्येडिति चानुवर्तते। तदाह&ndash;एभ्य इत्यादिना। नित्यमिटि प्राप्ते विकल्पार्थमिदं वचनम्। अनर्तीदिति। सेऽसिचीत्युक्तेर्नित्यमिडिति भावः। त्रसी उद्वेगे। वा जृ?भ्रमुत्रसामित्येत्त्वाभ्यासविकल्पौ मत्वाह&ndash; त्रेसतुः तत्रसतुरिति। कुथ पूतीभावे इति। पवित्रीभवने इत्यर्थः, दुर्गन्धकरणे इति वा। पूतिगन्धस्तु दुर्गन्धः इत्यमरः। तिम ष्टिम ष्टीमेति। द्वितीयतृतीयौ षोपदेशौ। द्वितीय इदुपधः। तृतीयस्तु ईदुपधः। षह षुहेति। षोपदेशौ। चकार्थस्तृप्तिरिति। यद्पि चक तृप्तौ प्रतिघाते चेत्युक्तं तथापि तृप्तिरेवेह विवक्षिता, व्याख्यानात्। षुहेः नपुंसके भावे क्तः इति क्तप्रत्यये सुहितशब्दः। सुहितस्तृप्तिरिति पूरणगुणेति सूत्रे कैयटः। जृ?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-7.2/7.2.57.md">सम्पाद्यताम् 7.2.57।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-7.2/7.2.57.md">सम्पाद्यताम् 7.2.57।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           BALAMANORAMA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           7.2.57 सेऽसिचि कृतचृतछृदतृदनृतः
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>सेऽसिचि। से- असिचीति छेदः। सप्तमी षष्ठ�र्थे। कृत चृत छृत तृद नृत् एषां समाहारद्वन्द्वात्पञ्चमी। <code>उदितो वे</code>त्यतो वेति, आर्द्धधातुकस्येडिति चानुवर्तते। तदाह&ndash;एभ्य इत्यादिना। नित्यमिटि प्राप्ते विकल्पार्थमिदं वचनम्। अनर्तीदिति। <code>सेऽसिची</code>त्युक्तेर्नित्यमिडिति भावः। त्रसी उद्वेगे। <code>वा जृ?भ्रमुत्रसा</code>मित्येत्त्वाभ्यासविकल्पौ मत्वाह&ndash; त्रेसतुः तत्रसतुरिति। कुथ पूतीभावे इति। पवित्रीभवने इत्यर्थः, दुर्गन्धकरणे इति वा। <code>पूतिगन्धस्तु दुर्गन्धः</code> इत्यमरः। तिम ष्टिम ष्टीमेति। द्वितीयतृतीयौ षोपदेशौ। द्वितीय इदुपधः। तृतीयस्तु ईदुपधः। षह षुहेति। षोपदेशौ। चकार्थस्तृप्तिरिति। यद्पि <code>चक तृप्तौ प्रतिघाते चे</code>त्युक्तं तथापि तृप्तिरेवेह विवक्षिता, व्याख्यानात्। षुहेः <code>नपुंसके भावे क्तः</code> इति क्तप्रत्यये सुहितशब्दः। सुहितस्तृप्तिरिति <code>पूरणगुणे</code>ति सूत्रे कैयटः। जृ?ष् झृ?ष्।सेट्कौ। जीर्यतीति। <code>ऋत इद्धातो</code>रिति इत्त्वे <code>हलि चे</code>ति दीर्घ इति भावः। अतुसादौ <code>ऋच्छत्यृ?ता</code>मिति गुणे रपरत्वे <code>वा जृ?भ्रमुत्रसा</code>मित्येत्त्वाभ्यासलोपविकल्प इति भावः। जजरिथ। `<code>वृ?तो वे</code>ति मत्वाह&ndash; जरिता जरीतेति। षूङ्। प्रसवः&ndash; उत्पादनम्। षोपदेशोऽयम्। विकल्पमिति। <code>परमपी</code>ति शेषः। निषेधे प्राप्ते इति। पुरस्तात्प्रतिषेधकाण्डारम्भसामर्थ्यादिति भावः। दूङ् परितापे इति। पीडने, पीडितीभवने वेत्यर्थः। आद्ये सकर्मकः। द्वितीये अकर्मकः। दीङ् क्षये इति। क्षयो&ndash;ह्रस्वो, नाशो वा।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

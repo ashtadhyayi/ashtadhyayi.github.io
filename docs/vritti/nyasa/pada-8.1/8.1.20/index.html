@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="षष्ठीचतुर्थीद्वितीयास्ययोः इति। षष्ठ()आदिषु यौ तिष्ठतस्तौ तथोक्तौ। सुपि स्था (3.2.4) इति कः। कि पुनः कारणं द्विवचनान्तयोरेवोदाहरण पन्यस्तम्()? इत्याह&ndash;एकवचनान्तबहुवचनान्तयोः इत्यादि। अथ स्थग्रहणं किमर्थम्(), न युष्मदस्मदोः षष्ठीचतुर्थीद्वितौयासु इत्येवोच्येत, षष्ठ()आदिषु विधीयमानेध्ववश्यं युष्मदस्मदोस्तात्स्थ्यं भविष्यति? इत्यत आह&ndash;स्थग्रहणम्() इत्यादि। श्रूयमाणा विभक्तिरर्थः प्रयोजनं निमित्तं यस्य तत्? तथोक्तम्()। [तथोक्तं भवति--कांउ।पाठः] एतदुक्तं भवति--श्रूयमाणाअ षष्ठ()आदिका विभक्तिरादेशस्य निमित्तं कथं नाम लभ्येतेत्येवमर्थं स्थग्रहणमिति? तेन विभक्तिर्यत्रन श्रूयते तत्र न भवतीति--अयं युष्मत्पुत्रोऽयमस्मत्पुत्र इति। असति तु स्थग्रहणे लुप्तायामपि विभक्तौ प्रत्ययलक्षणेन (1.1.61) स्यातामेवादेशौ। अश्रूयमाणरणं पुनरत्र विभक्तेः षष्ठीसमासे कृतेसुपो धातुप्रातिपदिकयोः(2."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.1/8.1.20.md">सम्पाद्यताम् 8.1.20।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.1/8.1.20.md">सम्पाद्यताम् 8.1.20।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           8.1.20 युष्मदस्मदोः षष्ठीचतुर्थीद्वितीयास्थयोर्वान्नावौ।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>षष्ठीचतुर्थीद्वितीयास्ययोः</code> इति। षष्ठ()आदिषु यौ तिष्ठतस्तौ तथोक्तौ। <code>सुपि स्था</code> (3.2.4) इति कः।
 कि पुनः कारणं द्विवचनान्तयोरेवोदाहरण पन्यस्तम्()? इत्याह&ndash;<code>एकवचनान्तबहुवचनान्तयोः</code> इत्यादि।
 अथ स्थग्रहणं किमर्थम्(), न <code>युष्मदस्मदोः षष्ठीचतुर्थीद्वितौयासु</code> इत्येवोच्येत, षष्ठ()आदिषु विधीयमानेध्ववश्यं युष्मदस्मदोस्तात्स्थ्यं भविष्यति? इत्यत आह&ndash;<code>स्थग्रहणम्()</code> इत्यादि। श्रूयमाणा विभक्तिरर्थः प्रयोजनं निमित्तं यस्य तत्? तथोक्तम्()। [<code>तथोक्तं भवति--कांउ।पाठः] एतदुक्तं भवति--श्रूयमाणाअ षष्ठ()आदिका विभक्तिरादेशस्य निमित्तं कथं नाम लभ्येतेत्येवमर्थं स्थग्रहणमिति? तेन विभक्तिर्यत्रन श्रूयते तत्र न भवतीति--अयं युष्मत्पुत्रोऽयमस्मत्पुत्र इति। असति तु स्थग्रहणे लुप्तायामपि विभक्तौ प्रत्ययलक्षणेन (1.1.61) स्यातामेवादेशौ। अश्रूयमाणरणं पुनरत्र विभक्तेः षष्ठीसमासे कृते</code>सुपो धातुप्रातिपदिकयोः<code>(2.4.71) इति लुप्तत्वात्()। कथम्()? पुनः स्थग्रहणे श्रूयमाणा [एष पंक्तिभागः का। मुद्रितेनोपलभ्यते] विभक्तिरादेशस्य निमित्तत्वेन लभ्यते? श्रूयमाणायामेव तस्यां तात्स्थ्यस्य सम्भवात्()। अथ वा--तिष्ठतिरयमपरिहाणावर्थे वत्र्तते, यथा--</code>समये तिष्ठ सुग्रीव<code>[</code>न च सङ्कुचितः पन्थाः येन वाली हतो गतः। समये तिष्ठ सुग्रीव मा वालिपथमन्वगाः॥`] (वा।रा।किं।स।३०।श्लो।८१) इति। समयं न परिजहिहीत्यर्थः। तेनैवं विज्ञायते&ndash;षष्ठ#ईचतुर्थीद्वितीयामपरिजहतोर्युष्मदस्मदोरादेधाविति। एवं च विज्ञायमाने श्रूयमाणैव विभक्तिरादेशस्य निमित्तत्वेनोपात्ता भवतीति॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

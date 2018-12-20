@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उकारानुबन्धकस्य इति। यदि रुशब्दः समुदायः स्थानो स्यात्(), तदा महातरुवनमित्यत्रापि हशि च (6.1.110) इत्युत्वं प्रसज्येत। किञ्च ससजुषो रुः (8.2.66) इत्युकारानुबन्धकरणमनर्थकं स्यात्()। तत्र ह्रु कारोऽस्य सूत्रसय विशेषणार्थः क्रियते, स इह समुदाये स्थानिन्यनर्थको जायते। तस्मादुकारानुबन्धवत इदं ग्रहणम्()। ननु चोत्त्वे कत्र्तव्ये पूर्वत्रासिद्धम्() (8.2.1) इति रुत्त्वमसिद्धम्(), तदसतो रोः कथमुत्त्वं शक्यते विधातुम्()? इत्यत आह&ndash;रुत्वमप्याश्रयात्? सिद्धम्() इति। यदि रुत्वमसिद्धं स्यात्(), तदा स्थानित्वेन रोराश्रयणमनर्थकं स्यात्(); कस्यचिदुकारानुबन्धविशिष्टस्य रोरसम्भवात्()। तस्मादाश्रयादेव रोरसिद्धत्वं नास्तीति। तस्यापि इति। यत्रापि परतो रोरुत्त्वमुच्यते तस्य सुरुआओता ३ अत्र इति दूराद्धूते च (8."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.1/6.1.109.md">सम्पाद्यताम् 6.1.109।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.1/6.1.109.md">सम्पाद्यताम् 6.1.109।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.1.109 अतो रोरप्लुतादपलुते।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>उकारानुबन्धकस्य</code> इति। यदि रुशब्दः समुदायः स्थानो स्यात्(), तदा महातरुवनमित्यत्रापि <code>हशि च</code> (6.1.110) इत्युत्वं प्रसज्येत। किञ्च <code>ससजुषो रुः</code> (8.2.66) इत्युकारानुबन्धकरणमनर्थकं स्यात्()। तत्र ह्रु कारोऽस्य सूत्रसय विशेषणार्थः क्रियते, स इह समुदाये स्थानिन्यनर्थको जायते। तस्मादुकारानुबन्धवत इदं ग्रहणम्()। ननु चोत्त्वे कत्र्तव्ये <code>पूर्वत्रासिद्धम्()</code> (8.2.1) इति रुत्त्वमसिद्धम्(), तदसतो रोः कथमुत्त्वं शक्यते विधातुम्()? इत्यत आह&ndash;<code>रुत्वमप्याश्रयात्? सिद्धम्()</code> इति। यदि रुत्वमसिद्धं स्यात्(), तदा स्थानित्वेन रोराश्रयणमनर्थकं स्यात्(); कस्यचिदुकारानुबन्धविशिष्टस्य रोरसम्भवात्()। तस्मादाश्रयादेव रोरसिद्धत्वं नास्तीति।
 <code>तस्यापि</code> इति। यत्रापि परतो रोरुत्त्वमुच्यते तस्य <code>सुरुआओता ३ अत्र</code> इति <code>दूराद्धूते च</code> (8.2.84) इति प्लुतः। <code>देवदत्ता ३ अत्र</code> इति। अत्रापि <code>गुरोऽनृतोऽनन्तस्याप्येकैकसय प्राचाम्()</code> (8.2.86) इत्यनेन।
 अथ किमर्थं <code>अप्लुतादप्लुते</code> इत्युच्यते? न ह्रतोऽतीति च तपरकरणस्य वर्णस्य निर्देशे क्रियमाणे प्लुतात्परस्य प्लुते वा परतः प्राप्नोति? इत्यत आह&ndash;<code>प्लुतस्य</code> इत्यादि। ननु च सिद्धः प्लुतः स्वरसन्धिषु, यदयम्? <code>प्लुतप्रगृह्रा आचि</code> (६।१।१२५) इति प्रकृतिभावं शास्ति? एवं मन्यते&ndash;प्रकृतिभाव एवैतज्ज्ञापकं स्यात्()। अथापि कथञ्चित्? स्वरसन्धिविषयं ज्ञापकं स्यात्(), तथा रोदत्त्वं स्वरसन्धिर्न भवति। अथापि संहिता काय्र्यविषयं ज्ञापकं स्यात्(), तथापि रोरुत्त्वं मंहिताकार्य्यं न भवति। येन हि वर्णाः सन्धीयन्ते तत्? संहिताकार्यम्(), न चोत्त्वेन वर्णाः संहिता भवन्ति; पुनरप्याद्गुणाद्यपेक्षणादिति॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

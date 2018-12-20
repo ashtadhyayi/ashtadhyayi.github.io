@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="विसर्जनीयश्च इति। अनेन विसर्जनीयानुकर्षणार्थश्चकार इति दर्शयति। अथ वाग्रहणमनुवच्यं जिह्वामूलीयोपध्मानीयौ कस्मान्न विकल्प्येते, एवञ्च विसर्जनीयानुकर्षणार्थश्चकारो न कत्र्तव्यो भवति; आभ्यां हि मुक्ते पक्षे विसर्जनीय एव भविष्यति? नैवम्(); शपंरयोरेव हि कुप्वोरेवं स्यात्। अशर्परयोस्तु पक्षे विसर्जनीयस्य सः (8.3.34) इति सकारः प्रतज्येत। तस्माच्चकारः कत्र्तव्यः। इह ककारपकारयोर्जिह्वामूलोयोपष्मानोययोः सूत्र उच्चारणात्? तथाभूतावादेशो विसर्जैनीयस्य विज्ञायेते? इति कस्याचिवाशङ्का स्यात्(), अतस्तां निराकर्त्तुमाह&ndash;ककारपकारावुच्चारणार्थो इति। आभ्यां विना तयोरुच्चारयितुमशक्यत्वादिति भावः। कीदृशौ तावादेशौ? इत्यत आह&ndash;जिह्वामूलीयोपध्मानीयावेव त्वादेशौ इति। तुशब्द आशङ्किताभ्यां समुदायरूपाभ्यामादेशाभ्यां विशेषं द्योतयति। एवकारोऽवधारणार्थः। जिह्वामूलीयोपध्मानीयावेव केवलौ। न तु समुदायरूपावित्यर्थः। इह सर्वस्य विषयस्य विध्यन्तरेणावष्टब्धत्वात्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.3/8.3.37.md">सम्पाद्यताम् 8.3.37।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.3/8.3.37.md">सम्पाद्यताम् 8.3.37।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           8.3.37 कुष्वोः क पौ च।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>विसर्जनीयश्च</code> इति। अनेन विसर्जनीयानुकर्षणार्थश्चकार इति दर्शयति। अथ वाग्रहणमनुवच्यं जिह्वामूलीयोपध्मानीयौ कस्मान्न विकल्प्येते, एवञ्च विसर्जनीयानुकर्षणार्थश्चकारो न कत्र्तव्यो भवति; आभ्यां हि मुक्ते पक्षे विसर्जनीय एव भविष्यति? नैवम्(); शपंरयोरेव हि कुप्वोरेवं स्यात्। अशर्परयोस्तु पक्षे <code>विसर्जनीयस्य सः</code> (8.3.34) इति सकारः प्रतज्येत। तस्माच्चकारः कत्र्तव्यः। इह ककारपकारयोर्जिह्वामूलोयोपष्मानोययोः सूत्र उच्चारणात्? तथाभूतावादेशो विसर्जैनीयस्य विज्ञायेते? इति कस्याचिवाशङ्का स्यात्(), अतस्तां निराकर्त्तुमाह&ndash;<code>ककारपकारावुच्चारणार्थो</code> इति। आभ्यां विना तयोरुच्चारयितुमशक्यत्वादिति भावः। कीदृशौ तावादेशौ? इत्यत आह&ndash;<code>जिह्वामूलीयोपध्मानीयावेव त्वादेशौ</code> इति। तुशब्द आशङ्किताभ्यां समुदायरूपाभ्यामादेशाभ्यां विशेषं द्योतयति। एवकारोऽवधारणार्थः। जिह्वामूलीयोपध्मानीयावेव केवलौ। न तु समुदायरूपावित्यर्थः।
 इह सर्वस्य विषयस्य विध्यन्तरेणावष्टब्धत्वात्? <code>कुप्वोः क पौ च</code> (8.4.36) इत्यस्यानवकाशत्वम्(), अतो यथा वृक्षः करोतीत्यादौ <code>विसर्जनीयस्य सः</code> (8.3.34) इतीमं विधिं बाधित्वः <code>कुप्वोः क पौ च</code> इति प्रवत्र्तते, तथा वासः क्षौमम्(), अद्भिः प्सातमित्यादौ <code>शर्परे</code> (८।३।३५) इतीममपि विधिं कस्मान्न बाधते? इति यो देशयेत्? तं प्रत्याह&ndash;<code>विसर्जनीयस्य</code> इत्यादि। <code>शर्परे विसर्जनीयः</code> (८।३।३५) इत्येतस्मिन्? प्राप्ते चाप्राप्ते चेदमारभ्यते। वाशः क्षौमम्(), अद्भिः प्सातमित्यादौ प्राप्ते; वृक्ष करोति वृक्ष पचतीत्यत्राप्राप्ते। <code>विसर्जनीयस्य सः</code> (8.3.34) इत्येत()स्मस्तु सर्वत्र प्राप्ते। एवं तस्य विशेषणं खर्मात्रे विधानात्? स्यात्(), तस्यैवेदं बाधकम्(); नेतरस्य विधेः; तं प्रति बाधकलक्षणस्यायोगात्()। स्यादेतत्()&ndash;शर्परे विसर्जनीयस्य कवर्गपवर्गाभ्यामन्यः शर्परः खरवकाशः, <code>कुप्वोः क पौ च</code> (8.3.37) इत्यस्याशर्परौ कवर्गपवर्गौ&ndash;वासः क्षौमम्(), अद्भिः प्सतमित्यत्रोभयं प्राप्नोति, तत्र <code>विप्रतिषेधे परं कायम्()</code> (१।४।२) इति विसर्जनीयं बाधित्वा जिह्वामूलीयोपध्मानीयाभ्यां भवितुं युक्तम्()? इत्याह&ndash;<code>पूर्वत्रासिद्धे</code> इत्यादि। अत्रैवोपपत्तिमाह&ndash;<code>अभावादुत्तरस्य</code> इति। द्वयोस्तुल्यबलयोर्युगपदेकत्र प्राप्तौ विरोधो भवति, नचात्र युगयत्? प्राप्तिरस्ति; पूर्वस्मिन्? कत्र्तव्ये सत्यसिद्धत्वादुत्तरस्याविद्यमानत्वात्()। इतिकरणो हेतौ। यस्मात्? पूर्वत्रासिद्धीये नास्ति विप्रतिषेधः, तस्माद्वासः क्षौमम्(), अद्भिः प्सातमित्यत्र <code>शर्परे विसर्जनीयः</code> (8.3.35) इत्येतदेव भवति, न जिह्वामूलीयोपध्मानीयाविति।
 <code>केचित्()</code> इत्यादि। वासः क्षौमम्(); अद्भिः प्सातमित्यत्र विसर्जनीयो यथा स्यादित्येवमर्थ <code>कुप्वोः क पौ च</code> इत्यत्र योगविभाघं कुर्वन्ति&ndash;<code>कुप्वोः</code> योगः, <code>क पौ</code> इति द्वितीयः। तत्र पूर्वस्मिन्? योगे <code>शर्परे विसर्जनीयः</code> (8.3.35) इत्येतदनुवत्र्तते। तेन शर्परयोः कुप्वोर्विसर्जनीय एव भवति, न जिह्वामूलीयोपध्मानीयाविति॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

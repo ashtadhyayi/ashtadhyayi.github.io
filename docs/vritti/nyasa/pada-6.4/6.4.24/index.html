@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="इद्? इद्? येषां त इदितः, न इदितोऽनिदित इति षष्ठीबहुवचनस्य स्थाने सुब्व्यत्येनैकवचनम्(), तच्चानिदितां विशेषणम्(), विशेषणेन च तदन्तविधिर्भवतीत्यत आह&ndash;हलान्तानाम्() इत्यादि। उपधाया नकारस्य इति। उपधाया इत्येतन्नकारस्य विशेषणम्()। रुआस्तः, ध्वलस्तः इति। रुआन्सु ध्वन्सु अधः [अवन्नंसने--धा।पा] पतने (धा।प।७५४,७५५) निष्ठा।रुआस्यते, ध्वस्यतेइति। भावे कर्मणि वा लकार।सनीरुआस्यते दनीध्वस्यतेइति। यङन्ते एते।नीग्वञ्चु(7.4.84) इत्यादिनाभ्यासस्य नीगागमः। नन्द्यतेइति।टु णदि समृद्धौ(धा।पा।६७) [टु नदि--धा।पा।]नानन्द्यतेइति। यङन्तम्()।दीर्घोऽकितः(7.4.83) इत्यभ्यासस्य दीर्घः।नेनीयतेइति। नयतेःगणो यङ्लुकोः(7.4.82) इति गुणोऽभ्यासस्य।नह्रतेइति।णह बन्धने(धा।पा।११६६)। लङ्गिकम्प्योःइत्यादि। लङ्गिकम्प्योरिदित्त्वान्नलोपो न प्राप्नोति, अतस्तयोरुपतापशरीरविकारयोरुपसंख्यानं कर्तव्यम्()। उपसंख्यानाम्()=प्रतिपादनम्()। उत्तरत्राप्युपसंख्यानशब्दस्य प्रतिपादनमर्थः। प्रतिपादनन्तु कृतमेव। उपतापः=व्याधिः। शरीरविकारः=शरीरस्यान्यथात्वम्()। स पुनरिहोपतापादनयो गृह्रते, अन्यथाउपतापइत्येवं सिद्धे शरीरविकारग्रहणमनर्थकं स्यात्()।विलगितःइति।अगि वगि लगिगत्यार्थाः। (धा।पा।१४६,१४७,१४५)।उपतापे विलङ्गितःइत्येव प्रयोगो मा भूदित्येवमर्थं लङ्गर्ल्लोपो विधीयते, न तु रूपसिद्ध्यर्थम्();लगे सङ्गे(धा।पा।७८६) इत्यस्य प्रकृत्यन्तरस्य तस्य सिद्धत्वात्()। रञ्जेर्णौइत्यादि। अक्ङिदर्थं वचनम्()। मृगरमणम्()=मृगक्रीडा।रजयतिः मृगान्()इति। रममाणान्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.24.md">सम्पाद्यताम् 6.4.24।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.24.md">सम्पाद्यताम् 6.4.24।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.24 अनिदितां हल उपधायाः क्ङिति।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>इद्? इद्? येषां त इदितः, न इदितोऽनिदित इति षष्ठीबहुवचनस्य स्थाने सुब्व्यत्येनैकवचनम्(), तच्चानिदितां विशेषणम्(), विशेषणेन च तदन्तविधिर्भवतीत्यत आह&ndash;<code>हलान्तानाम्()</code> इत्यादि। <code>उपधाया नकारस्य</code> इति। उपधाया इत्येतन्नकारस्य विशेषणम्()। <code>रुआस्तः, ध्वलस्तः</code> इति। <code>रुआन्सु ध्वन्सु अधः [</code>अवन्नंसने<code>--धा।पा] पतने (धा।प।७५४,७५५) निष्ठा।</code>रुआस्यते, ध्वस्यते<code>इति। भावे कर्मणि वा लकार।</code>सनीरुआस्यते दनीध्वस्यते<code>इति। यङन्ते एते।</code>नीग्वञ्चु<code>(7.4.84) इत्यादिनाभ्यासस्य नीगागमः। 
 </code>नन्द्यते<code>इति।</code>टु णदि समृद्धौ<code>(धा।पा।६७) [</code>टु नदि<code>--धा।पा।]</code>नानन्द्यते<code>इति। यङन्तम्()।</code>दीर्घोऽकितः<code>(7.4.83) इत्यभ्यासस्य दीर्घः।</code>नेनीयते<code>इति। नयतेः</code>गणो यङ्लुकोः<code>(7.4.82) इति गुणोऽभ्यासस्य।</code>नह्रते<code>इति।</code>णह बन्धने<code>(धा।पा।११६६)। 
 </code>लङ्गिकम्प्योः<code>इत्यादि। लङ्गिकम्प्योरिदित्त्वान्नलोपो न प्राप्नोति, अतस्तयोरुपतापशरीरविकारयोरुपसंख्यानं कर्तव्यम्()। उपसंख्यानाम्()=प्रतिपादनम्()। उत्तरत्राप्युपसंख्यानशब्दस्य प्रतिपादनमर्थः। प्रतिपादनन्तु कृतमेव। उपतापः=व्याधिः। शरीरविकारः=शरीरस्यान्यथात्वम्()। स पुनरिहोपतापादनयो गृह्रते, अन्यथा</code>उपताप<code>इत्येवं सिद्धे शरीरविकारग्रहणमनर्थकं स्यात्()।</code>विलगितः<code>इति।</code>अगि वगि लगि<code>गत्यार्थाः। (धा।पा।१४६,१४७,१४५)।</code>उपतापे विलङ्गितः<code>इत्येव प्रयोगो मा भूदित्येवमर्थं लङ्गर्ल्लोपो विधीयते, न तु रूपसिद्ध्यर्थम्();</code>लगे सङ्गे<code>(धा।पा।७८६) इत्यस्य प्रकृत्यन्तरस्य तस्य सिद्धत्वात्()। 
@@ -147,30 +148,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

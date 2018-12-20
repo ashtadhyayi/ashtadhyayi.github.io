@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="अस्थिदधि। इकोऽचीति नुमि प्राप्ते विधिरयम्, नकारादकार उच्चारणार्थः। ङकारस्त्वन्तादेशार्थः। नब्विषयस्याऽनिसन्तस्येति फिट्सूत्रेणाऽस्थ्यादय एते आद्युदात्ताः। तत्राऽन्तस्यानुदत्तेकारस्य विधीयमानोऽनङ् स्थानेऽनन्तरतमःइत्यनुदात्तः स्यादित्युदात्त उच्यते। तच्चोदात्तत्वमस्थनिदधनिइत्यादावल्लोपाभावपक्षे स्फुटम्, दध्नादध्नेइत्यादावनङोऽकारलोपे अनुदात्तस्य च यत्रोदात्त लोपःइत्युदात्तनिवृत्तिस्वरेण विभक्त्युदात्तत्वं प्रयोजनमिति बोध्यम्। तृतीयाष्वित्यनुवर्त्तते, अचीति च, तदाह&ndash;टादावचीति। टादौ किम्?। दधिनी, दधीनि। अचि किं? दधिभ्याम्। तदन्तस्यापीति। आङ्गत्वादिति भावः। अतिदध्नेति। दधि अतिक्रान्तेनेत्यर्थः। स्त्रकियामप्यतिदध्नेत्येव। संनिपातपरिभाषया बहिरङ्गपरिभाषया बहिरङ्गपरिभाषया च ङीपोऽप्रवृत्तेः। प्राचा तु प्रियदध्ना ब्राआहृणेनेत्युक्तम्। स्त्रियां प्रियदध्न्याप्रियदध्न्यैइत्यद्यपि कैश्चिदुक्तम्। तदसत्। उरःप्रभृतिषु दधिशब्दस्य पाठाद्बहुव्रीहौ नित्यं कप्यनडः प्रसक्त्यभावात्। उक्तपरिभाषाभ्यां ङीपः प्रवृत्तेर्दूरापास्तत्वाच्चेति दिक्। सुधिनी इति। परत्वान्नुमा इयङ्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-7.1/7.1.75.md">सम्पाद्यताम् 7.1.75।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-7.1/7.1.75.md">सम्पाद्यताम् 7.1.75।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           TATTVABODHINI
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           7.1.75 अस्थिदधिस्क्थ्यक्ष्णामनङुदात्तः
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>अस्थिदधि। <code>इकोऽची</code>ति नुमि प्राप्ते विधिरयम्, नकारादकार उच्चारणार्थः। ङकारस्त्वन्तादेशार्थः। <code>नब्विषयस्याऽनिसन्तस्ये</code>ति फिट्सूत्रेणाऽस्थ्यादय एते आद्युदात्ताः। तत्राऽन्तस्यानुदत्तेकारस्य विधीयमानोऽनङ् <code>स्थानेऽनन्तरतमः</code>इत्यनुदात्तः स्यादित्युदात्त उच्यते। तच्चोदात्तत्व<code>मस्थनि</code><code>दधनि</code>इत्यादावल्लोपाभावपक्षे स्फुटम्, <code>दध्ना</code><code>दध्ने</code>इत्यादावनङोऽकारलोपे <code>अनुदात्तस्य च यत्रोदात्त लोपः</code>इत्युदात्तनिवृत्तिस्वरेण विभक्त्युदात्तत्वं प्रयोजनमिति बोध्यम्। तृतीयाष्वित्यनुवर्त्तते, अचीति च, तदाह&ndash;टादावचीति। टादौ किम्?। दधिनी, दधीनि। अचि किं? दधिभ्याम्। तदन्तस्यापीति। आङ्गत्वादिति भावः। अतिदध्नेति। दधि अतिक्रान्तेनेत्यर्थः। स्त्रकियामप्यतिदध्नेत्येव। संनिपातपरिभाषया बहिरङ्गपरिभाषया बहिरङ्गपरिभाषया च ङीपोऽप्रवृत्तेः। प्राचा तु <code>प्रियदध्ना ब्राआहृणेने</code>त्युक्तम्। स्त्रियां <code>प्रियदध्न्या</code><code>प्रियदध्न्यै</code>इत्यद्यपि कैश्चिदुक्तम्। तदसत्। उरःप्रभृतिषु दधिशब्दस्य पाठाद्बहुव्रीहौ नित्यं कप्यनडः प्रसक्त्यभावात्। उक्तपरिभाषाभ्यां ङीपः प्रवृत्तेर्दूरापास्तत्वाच्चेति दिक्। सुधिनी इति। परत्वान्नुमा इयङ्?बाध्यते। सुधियेति। शोभनज्ञानवत्त्वं प्रवृत्तिनिमित्तं पुंनपुंसकयोरेकमेवेति भाषितपुंस्कत्वात् <code>तृतीयादिष्वि</code>ति पुंवत्पक्षे#ऐ नुमभावात् <code>न भूसुधियो</code>रिति यण्निषेधाच्चेयङ्। प्रध्येति। अत्रापि प्रकृष्टज्ञानवत्त्वं पुंनपुंसकयोरेकमेवेति भाषितपुंस्कत्वात्तृतीयादिष्विति पुंवत्पक्षे यण्। नपुंसकपक्षे तु नुमिति बोध्यम्। <code>बह्वयः श्रेयोस्यो यस्य तद्बहुश्रेयसी कुल मित्यत्र नपुंसकह्रस्ततिवमं न,</code>ईयसो बहुव्रीहेर्ने<code>ति ह्रस्वामात्रस्य प्रतिषेधादित्येके। अन्ये तूपसर्जनह्यस्व एव निषिध्यते, नपुंसकह्रस्वत्वं तु स्यादेव।</code>बहुश्रेयसि<code>बहुश्रेयसिनी'इतयाहुः। मध्विति।</code>मधु मद्ये पुष्परसे<code>मधुर्वसन्ते चैत्रे च`। इह पुंनपुंसकयोरेकं प्रवृत्तिनिमित्तं नास्ति, किंतु मद्यत्ववसन्तत्वादिरूपं भिन्नं भिन्नमेव। तथा च भाषितपुंस्कत्वाऽभावा `न्मधुने</code>मधुनः<code>मधुनो`रित्येव भवति, न तु `मधवे</code>मधो<code>रित्यादीति दिक्। स्नुर्वेति।</code>मांसपृतनासानूना<code>मिति वार्तिककीरेक्त्येति भावः।</code>स्त्रुः प्रस्थः सानुरस्त्रिया<code>मित्युभयलिङ्गः सानुशब्दः, तस्य नपुंसकत्वे रूपमाह---स्नूनि सानूनीति। पुंसि तु स्नून्। सानून्---इत्यादि। सुल्वेति।शोभनलवनकर्तृत्वं पुंनपु#ंसकयोरेकमेवेति भाषितपुंस्कत्वात्पुंवत्पक्षे नुमभावात्</code>ओः सुपी`ति यण्। सुलुनेति। यणं बाधित्वा परत्वान्नुम्। धात्रेति। धारणपोषणकर्तृत्वं पुंनपुंसकयोरेकमेवेति पुंवत्पक्षे यण्।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

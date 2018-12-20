@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उदात्तयणः, स्वरितयणश्च इति। उदात्तस्थाने यो यण स उदात्तयण; स्वरितस्थाने यो यण्? स स्वरितयणित्यर्थः। कुमार्यौ, कुमार्यः इति। अत्र अनुदात्तौ सुप्तितौ (3.1.4) इत्यौजसावनुदात्तौ, तयोरुदात्तयणोः परयोः स्वरितो भवति। उदात्तनिवृत्तिस्वरेण इति। उदात्तलोपनिमित्तस्वरः पूर्वमुदात्तस्य लोपो यस्मात्(), स पुनरुदात्तनिवृत्तिस्वरः अनुदात्तस्य च यत्रोदात्तलोपः (6.1.155) इत्यत्र यो विहिसः स [नास्ति&ndash;कांउ। पाठे] वेदितव्यः। कृत्स्वरेणान्तोदात्तौ इति। ल्व्या प्व्या इति। लूपूभ्यां धातुस्वरेणान्तोदात्ताभ्यां क्विप्(), उपपदमतिङ्() (2.2.19) इति समासः। गतिकारकोपपदात्? कृत्() (6.2.138) इति कृदन्तस्योत्तरपदस्य प्रकृतिभावदिधानादेतौ कृत्स्वरेणान्तोदात्तौ भवतः। उदात्तयणाअदेशश्च इति। इहनेन सूत्रेणानुदात्तयोदात्तयणः परस्य स्वरितो विधीयते, स्वरितयणश्च परसय सप्तम्येकवचनस्य पूर्वेण प्रकारेण स्वरितो विधीयत इति दर्शयति। तस्य यो यण्() इति। तस्येत्यनेन सप्तम्येकवचनस्य परामर्शः। आशाशब्दाकारस्यानुदात्तस्य इति। आशाया अदिगारव्या चेत्() (फि।सू।१।१८) इत्याशाशब्द आद्युदात्तः, तेन अनुदात्तं पदमेकवर्जम्() (6."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.2/8.2.4.md">सम्पाद्यताम् 8.2.4।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.2/8.2.4.md">सम्पाद्यताम् 8.2.4।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           8.2.4 उदात्तस्वरितयोर्यणः स्वरितोऽनुदात्तस्य।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>उदात्तयणः, स्वरितयणश्च</code> इति। उदात्तस्थाने यो यण स उदात्तयण; स्वरितस्थाने यो यण्? स स्वरितयणित्यर्थः। <code>कुमार्यौ, कुमार्यः</code> इति। अत्र <code>अनुदात्तौ सुप्तितौ</code> (3.1.4) इत्यौजसावनुदात्तौ, तयोरुदात्तयणोः परयोः स्वरितो भवति। <code>उदात्तनिवृत्तिस्वरेण</code> इति। उदात्तलोपनिमित्तस्वरः पूर्वमुदात्तस्य लोपो यस्मात्(), स पुनरुदात्तनिवृत्तिस्वरः <code>अनुदात्तस्य च यत्रोदात्तलोपः</code> (6.1.155) इत्यत्र यो विहिसः स [नास्ति&ndash;कांउ। पाठे] वेदितव्यः। <code>कृत्स्वरेणान्तोदात्तौ</code> इति। <code>ल्व्या प्व्या</code> इति। लूपूभ्यां धातुस्वरेणान्तोदात्ताभ्यां क्विप्(), <code>उपपदमतिङ्()</code> (2.2.19) इति समासः। <code>गतिकारकोपपदात्? कृत्()</code> (6.2.138) इति कृदन्तस्योत्तरपदस्य प्रकृतिभावदिधानादेतौ कृत्स्वरेणान्तोदात्तौ भवतः। <code>उदात्तयणाअदेशश्च</code> इति। इहनेन सूत्रेणानुदात्तयोदात्तयणः परस्य स्वरितो विधीयते, स्वरितयणश्च परसय सप्तम्येकवचनस्य पूर्वेण प्रकारेण स्वरितो विधीयत इति दर्शयति। <code>तस्य यो यण्()</code> इति। तस्येत्यनेन सप्तम्येकवचनस्य परामर्शः। <code>आशाशब्दाकारस्यानुदात्तस्य</code> इति। <code>आशाया अदिगारव्या चेत्()</code> (फि।सू।१।१८) इत्याशाशब्द आद्युदात्तः, तेन <code>अनुदात्तं पदमेकवर्जम्()</code> (6.1.152) इत्याकारस्यानुदात्तत्वम्()।
 <code>ननु च</code> इत्यादि। सप्तम्येकवचनस्य <code>उदात्तयणः</code> इत्येवमनेन सुत्रेण यत्? स्वरितत्वं विहितं तत्? षाष्ठिकयणादेशे कत्र्तव्येऽसिद्धम्(), ततश्च नैवायं स्वरितस्य स्थाने यणादेश इति सकृल्ल्व्याशा खलप्व्यशेत्यत्र स्वरितत्वं न भवतीत्यभिप्रायः। <code>आश्रयात्()</code> इत्यादि। आहायम्()&ndash;स्वरितयण इति; न क्वचित्? सिद्धः स्वरितः। तत्राश्रयात्? सिद्धत्वं भविष्यति, यथा <code>अतो रोरप्लुतादप्लुते</code>  इत्यत्र रुत्वस्य।
 <code>यद्येवम्()</code> इत्यादि। एतेनाश्रयात्? सिद्धत्वे समाश्रोयमाणेऽतिप्रसङ्गमुद्भावयति। <code>दध्याशा</code> इति। दधिशब्दः <code>नब्विषयस्यानिसन्तस्य</code> (फि।सू।२।२६) इत्याद्युदात्तः, शेष स्यानुदात्तत्वम्(), <code>उदात्तादनुदात्तस्य स्वरितः</code> (8.4.65) इति धकारात्परस्येकारस्य स्वरितत्वम्()। तस्याश्रयात्? सिद्धत्वे तत्स्थानिकाद्यण उत्तरस्याशाशब्दाकारस्य स्वरितत्वं स्यात्()। <code>तस्मात्()</code> इत्यादि। यत एवमाश्रयात्? सिद्धत्व आश्रीयमाणेऽयमतिप्रसङ्गो भवति; तस्मादयमेव यण्स्वरो योऽनेन सूत्रेण (8.2.4) विधीयते, तस्य यणादेशे कत्र्तव्ये सिद्धत्वं वक्त्व्यम्()। वक्तव्य मित्यस्य व्याख्यानमर्थः। तत्तु पूर्ववदेव योगादिभागमाश्रित्य कत्र्तव्यम्()।
@@ -148,30 +149,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

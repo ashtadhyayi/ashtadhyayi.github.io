@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="{यजादेः इति मुद्रितः पाठः।} इजादेः इति। आदिर्यस्येति बहुव्रीहिः। इच् इति प्रत्याहारग्रहणम्। गुरुरस्यास्तीति गुरुमान्। ऋच्छतिवर्जितः ऋच्छिना त्यक्तः। तद्रूपरहित इत्यर्थः। ईहाचञ्क्रे इति। ईह चेष्टायाम् (धा।पा।६३२) ऊहाञ्चक्रे इति। ऊह वितर्के (धा।पा।६४८)। ततक्ष, ररक्ष इति। तक्षू त्वक्षू तनूकरणे (धा।पा।६५५, ६५६), रक्ष पालने (धा।पा।६५८)। इयज; उवप इति। यजिवप्योरुत्तमे णलि णलुत्तमो वा (7.1.91) इति णित्त्वाभावपक्षे वृद्ध्यभावाद्गुरुमत्ताभावः। केचित् इयेष, उवोषेति प्रत्युदाहरन्ति। {इष धा।पा।} इषु इच्छायाम् (धा।पा।१३५१) उष दाहे (धा।पा।६९६), णलि लघूपधगुणःष द्विर्वचनम्, अभ्यासस्यासवर्णे (6.4.78) इतीयङुवङौ। ननु च गुणे कृत एतावपि गुरुमन्तो भवत इति भवितव्यमेवामात्र?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-3.1/3.1.36.md">सम्पाद्यताम् 3.1.36।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-3.1/3.1.36.md">सम्पाद्यताम् 3.1.36।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           3.1.36 इजादेश्च गुरुमतोऽनृच्छः।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>{यजादेः इति मुद्रितः पाठः।} इजादेः</code> इति। आदिर्यस्येति बहुव्रीहिः। <code>इच्</code> इति प्रत्याहारग्रहणम्। गुरुरस्यास्तीति गुरुमान्। <code>ऋच्छतिवर्जितः</code> ऋच्छिना त्यक्तः। तद्रूपरहित इत्यर्थः। <code>ईहाचञ्क्रे</code> इति। <code>ईह चेष्टायाम्</code> (धा।पा।६३२) <code>ऊहाञ्चक्रे</code> इति। <code>ऊह वितर्के</code> (धा।पा।६४८)।
 <code>ततक्ष, ररक्ष</code> इति। <code>तक्षू त्वक्षू तनूकरणे</code> (धा।पा।६५५, ६५६), <code>रक्ष पालने</code> (धा।पा।६५८)। <code>इयज; उवप</code> इति। यजिवप्योरुत्तमे णलि <code>णलुत्तमो वा</code> (7.1.91) इति णित्त्वाभावपक्षे वृद्ध्यभावाद्गुरुमत्ताभावः। केचित् इयेष, उवोषेति प्रत्युदाहरन्ति। <code>{इष धा।पा।} इषु इच्छायाम्</code> (धा।पा।१३५१) <code>उष दाहे</code> (धा।पा।६९६), णलि लघूपधगुणःष द्विर्वचनम्, <code>अभ्यासस्यासवर्णे</code> (6.4.78) इतीयङुवङौ। ननु च गुणे कृत एतावपि गुरुमन्तो भवत इति भवितव्यमेवामात्र? न भवितव्यम्; <code>सन्निपातलक्षणो विधिरनिमित्तं तद्विघातस्य</code> (व्या।प।१२) इति लिट्सन्निपातो गुरुमत्ताया हेतुः। गुरुमत्ता च <code>आमः</code> (2.4.81) इति लिटमेव विहन्ति। अथ वा&ndash; गुरुमत इति नित्ययोगे मतुप्, तेन नित्यं यस्य गुरुमा योगस्ततो भवितव्यम्, न चेषेरुषेश्च नित्यं गुरुणा सह योगः। यद्येवम्, <code>उछी विवासे</code> (धा।पा।२१६) &ndash; उच्छाञ्चकारेत्यत्र तुकि कृते न प्राप्नोति? नैष दोषः; ऋच्छिप्रतिषेधो हि ज्ञापयति&ndash; आगमनिमित्ता गुरुमत्ता यस्य ततोऽपि भवतीति।
 <code>आनच्र्छ</code> इति। <code>ऋच्छ गतीन्द्रियप्रलयमूर्तिभावेषु</code> (धा।पा।१२९६), <code>छे च</code> (6.1.71) इति तुक्, <code>ऋच्छत्यृ()ताम्</code> (7.4.11) इतिगुणः, द्विर्वचनम्, हलादिशेषः, <code>अत आदेः</code> (7.4.70) इति दीर्घः, <code>तस्मान्नुड् द्विहलः</code> (7.4.71) इति नुट्। ननु च <code>ऋच्छत्यृ()ताम्</code>(7.4.11) इति ऋच्छतेरनन्तरे लिटि गुणवचनं ज्ञापकम्&ndash; ऋच्छेराम् न भवति। सति हि तस्मिन्नागमनिमित्ता गुरुमत्ता यस्य ततोऽपि भवतीत्येतज्ज्ञापितं न स्यात्। तस्मादनृच्छ इति प्रतिषेधः कत्र्तव्यः।
@@ -147,30 +148,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

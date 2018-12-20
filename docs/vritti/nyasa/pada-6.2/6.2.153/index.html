@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="गुडमिश्राः इति। पूर्ववत्? पूर्वसदृश (2.1.30) इत्यादिना समासः। गुडशब्दः इगुपध (3.1.135) इति गुड रक्षायाम्() (दा।पा।१३७०) इत्यस्मात्? कः, तेनान्तोदात्तः। स्फायितञ्चि (द।उ।८।३१) इत्यादिना रग्विधीयमानो बहुलवचनान्? मिशेरपि रग्भवति, तेन मित्रशब्दोऽन्तोदात्तः। तिलशब्दः तृणधान्यानाञ्च द्व्यषाम्() (फि।सू।२।२७) इत्याद्युदात्तः। प्रमिश्रम्(), सन्मिश्रमित्यस्य प्राप्नोति, अतस्तन्निवृत्तयेऽनुपसर्गग्रहणं क्रियते? इत्याह&ndash;इह इत्यादि। अथ वा&ndash;मिश्रशब्देन तृतीयासमास उच्यमानः कथं सोपसर्गे लभ्यते? इत्याह&ndash;इह इत्यादि। यदि तदिहानुपसर्गग्रहणं क्रियते, तह्र्रन्यत्र मिश्रशब्दग्रहणे सोपसर्गस्य ग्रहणं नास्तीतीहानुपसर्गग्रहणमनर्थकं स्यात्()। तेन इत्यादि। ज्ञापनस्य प्रयोजनं दर्शयति। ब्राआहृणमिश्रो राजा इति। पूर्वसदृश(2.1.30) इत्यादिनैव समासः। ब्राआहृणैः सह संहितः इत्यनेन प्रत्युदाहरणे सन्धिं दर्शयति। ऐकार्थमापन्नः इति। अनन्तरोक्तमेवार्थं विस्पष्टीकरोति। एकः=अभिन्नोऽर्थो यस्य स एकार्थः, तद्भाव ऐकाथ्र्यम्()। तदापन्नः प्राप्त इत्यर्थः। कथं पुनज्र्ञायते&ndash;सन्धिशब्दस्यायमर्थः?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.2/6.2.153.md">सम्पाद्यताम् 6.2.153।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.2/6.2.153.md">सम्पाद्यताम् 6.2.153।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.2.153 मिश्रं चानुपसर्गमसन्धौ।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>गुडमिश्राः</code> इति। पूर्ववत्? <code>पूर्वसदृश</code> (2.1.30) इत्यादिना समासः। गुडशब्दः <code>इगुपध</code> (3.1.135) इति <code>गुड रक्षायाम्()</code> (दा।पा।१३७०) इत्यस्मात्? कः, तेनान्तोदात्तः। <code>स्फायितञ्चि</code> (द।उ।८।३१) इत्यादिना रग्विधीयमानो बहुलवचनान्? मिशेरपि रग्भवति, तेन मित्रशब्दोऽन्तोदात्तः। तिलशब्दः <code>तृणधान्यानाञ्च द्व्यषाम्()</code> (फि।सू।२।२७) इत्याद्युदात्तः।
 प्रमिश्रम्(), सन्मिश्रमित्यस्य प्राप्नोति, अतस्तन्निवृत्तयेऽनुपसर्गग्रहणं क्रियते? इत्याह&ndash;<code>इह</code> इत्यादि। अथ वा&ndash;मिश्रशब्देन तृतीयासमास उच्यमानः कथं सोपसर्गे लभ्यते? इत्याह&ndash;<code>इह</code> इत्यादि। यदि तदिहानुपसर्गग्रहणं क्रियते, तह्र्रन्यत्र मिश्रशब्दग्रहणे सोपसर्गस्य ग्रहणं नास्तीतीहानुपसर्गग्रहणमनर्थकं स्यात्()। <code>तेन</code> इत्यादि। ज्ञापनस्य प्रयोजनं दर्शयति।
 <code>ब्राआहृणमिश्रो राजा</code> इति। <code>पूर्वसदृश</code>(2.1.30) इत्यादिनैव समासः। <code>ब्राआहृणैः सह संहितः</code> इत्यनेन प्रत्युदाहरणे सन्धिं दर्शयति। <code>ऐकार्थमापन्नः</code> इति। अनन्तरोक्तमेवार्थं विस्पष्टीकरोति। एकः=अभिन्नोऽर्थो यस्य स एकार्थः, तद्भाव ऐकाथ्र्यम्()। तदापन्नः प्राप्त इत्यर्थः।
@@ -146,30 +147,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

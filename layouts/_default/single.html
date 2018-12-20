@@ -1,18 +1,18 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           {{ humanize .Params.vritti | upper  }}
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           {{ .Params.type }}
           {{ $sutraTitle := (print .Params.index " " .Params.sutra) }}
           {{ .Title | default $sutraTitle}}
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         {{ .Content }}
       </div>
     </article>

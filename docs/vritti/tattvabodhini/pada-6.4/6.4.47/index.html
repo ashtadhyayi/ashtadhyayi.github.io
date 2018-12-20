@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="भ्रस्जो रोपधयोः। रम्यकार उच्चारणार्थः। रमित्यस्याऽन्त्यादचः परत्वे रोपधयोरिति षष्ठीनिर्देशस्य वैयर्थ्यमाशङ्क्याह&ndash; निवृत्तिरिति। अयं भावः&ndash; स्थानिविशेषलाभाय मित्त्वस्य करणान्न रोपधयोः स्थाने रम् भवति। यत्र ह्यनिर्धारितः स्थानषष्ठ�आ निर्दिश्य विधीयते स तत्स्थाने भवति। यथा इको यणचीत्यादौ यणादिः। प्रकृते तु रमो निर्दिष्टस्तानिकत्वादोपधयोः स्थाने न भवति। एं चास्य आदेशागमत्वे भवति, यथा श्नमः प्रत्ययागमत्वे&rsquo; इति। अन्ये त्वेतादृग् व्याख्यानमयुक्तमिति मत्वा सनः क्तिचीत्यतो लोपमनुवर्त्य भ्रस्जो रोपधयोर्लोपः,रम् तु आगम एवेत्याहुः। परे तु&ndash; भ्रस्जो रसरन्यतरस्यामित्येव सूत्रमस्तु। रसः-- ऋइति च्छेदः। रस इति रेफाऽकारसकाराणां यः सङ्घातस्तस्य ऋ इत्यादेशः स्यादित्यर्थः। ततश्च अक्ङिति भर्जको भर्जनं बभर्जेत्यादि सिध्यति। ऋकाराऽभावपक्षे तु भ्रज्जको भ्रज्जनं बभ्रज्जेत्यादि। क्ङिति तु ऋकारपक्षे भृष्टिः भृज्यादित्यादि। तदभावे संप्रसारणे सति तदेव रूपम्। एवंच बरीभृज्यत इत्यादौ रीको रेफस्य निवृतिं?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-6.4/6.4.47.md">सम्पाद्यताम् 6.4.47।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-6.4/6.4.47.md">सम्पाद्यताम् 6.4.47।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           TATTVABODHINI
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.47 भ्रस्जो रोपधयो रमन्यतरस्याम्
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>भ्रस्जो रोपधयोः। रम्यकार उच्चारणार्थः। <code>र</code>मित्यस्याऽन्त्यादचः परत्वे <code>रोपधयो</code>रिति षष्ठीनिर्देशस्य वैयर्थ्यमाशङ्क्याह&ndash; निवृत्तिरिति। अयं भावः&ndash; स्थानिविशेषलाभाय मित्त्वस्य करणान्न रोपधयोः स्थाने रम् भवति। यत्र ह्यनिर्धारितः स्थानषष्ठ�आ निर्दिश्य विधीयते स तत्स्थाने भवति। यथा <code>इको यणची</code>त्यादौ यणादिः। प्रकृते तु रमो निर्दिष्टस्तानिकत्वादोपधयोः स्थाने न भवति। एं चास्य आदेशागमत्वे भवति, यथा श्नमः प्रत्ययागमत्वे&rsquo; इति। अन्ये त्वेतादृग् व्याख्यानमयुक्तमिति मत्वा <code>सनः क्तिची</code>त्यतो लोपमनुवर्त्य भ्रस्जो रोपधयोर्लोपः,रम् तु आगम एवेत्याहुः। परे तु&ndash; <code>भ्रस्जो रसरन्यतरस्या</code>मित्येव सूत्रमस्तु। <code>रसः-- ऋ</code>इति च्छेदः। <code>रस</code> इति रेफाऽकारसकाराणां यः सङ्घातस्तस्य <code>ऋ</code> इत्यादेशः स्यादित्यर्थः। ततश्च अक्ङिति भर्जको भर्जनं बभर्जेत्यादि सिध्यति। ऋकाराऽभावपक्षे तु भ्रज्जको भ्रज्जनं बभ्रज्जेत्यादि। क्ङिति तु ऋकारपक्षे भृष्टिः भृज्यादित्यादि। तदभावे संप्रसारणे सति तदेव रूपम्। एवंच बरीभृज्यत इत्यादौ रीको रेफस्य निवृतिं?त वारयितुम् <code>अनुदात्तोपदेशे</code> त्यत उपदेशग्रहणमनुवर्त्त्यम्, इदानीं तु नानुवर्त्त्यं, <code>क्ङिति रमागमं बाधित्वा संप्रसारण</code>मति पूर्वविप्रतिषेधश्च न कर्तव्य इति महदेव लाघवमित्याहुः। इदं च <code>रसोर्वचनात्सिद्ध</code>मिति वार्तिकाशयवर्णनमेव न त्वपूर्वम्। <code>र्वचना</code>दित्यस् वा ऋवचनादिति छेदः। भाष्यकारैस्तु <code>सूत्रं भिद्यते यतान्यासमेवास्तु</code> इति वदद्भिरस्यां कल्पनायां दुष्टत्वं सूचितं। तच्च मनोरयामां स्पष्टमेव। तथा हि रेफाऽकारसकारसमुदायस्य ऋभावे पञ्च दोषाः। अपिल्लिटि बभर्जुतः बभर्जुरित्यादीष्यते, बभृजतुः बभृजुरित्यादि स्यात्। न चाऽत्र गुणेन निर्वाहः, ऋभावे सति <code>असंयोगाल्लिट् कि</code>दिति कित्त्वप्रवृत्त्या तन्निषेधात्। <code>सनीवन्ते</code>ति इड्विकल्पाद्विभर्क्षतीत्यादि इष्यते, बिभृक्षतीत्यादि स्यात्। ऋभावे <code>हलन्ताच्चे</code>ति सनः कित्त्वप्रवृत्तेः। लिङसिचोस्तङिभर्क्षीष्ट अभर्ष्टेत्यादीष्यते, भृक्षीष्ट अभृष्टेत्यादि स्यात्। <code>लिङ् सिचावात्मनेपदेषु</code> इति कित्त्वात्। णिजन्ताच्चङि अबभर्जदितीष्यते। अबीभृजदित्यपि स्यात्। इररारामपवादत्वेन <code>उरृदिति ऋत्वप्रवृत्तौ</code>सन्वल्लघुनी<code>ति सन्वद्भावात्</code>सन्यतः इतीत्वे <code>दीर्घो लघो</code>रिति प्रवृत्तेः। यद्यपि <code>उरृ</code>दित्यस्य वैकल्पिकत्वादबभर्जदिति सिध्यत्येव तथापि पक्षे अबीभृजदित्यनिष्टं स्य#आदिति बोध्यम्। <code>ऋजिभृजी भर्जने</code> इति भ्वादेस्तादृशं रूपमिष्टमिति चेत्। मैवम्। भर्जनार्थे हि तादृग्रूपमिष्टं न तु पाकसामान्ये। उभयोरेकार्थत्वाभ्युपगमेऽपि प्राचीनाश्चत्वारो दोषास्तु दृढा एव। हि तेऽपि धात्वन्तरेण सुपरिहराः। अपिल्लिटि भृजेरपि धातोर्गुणाऽभावादनुदात्तत्वेन आत्मनेपदित्वाच्च बभर्जतुरित्यादिरूपस्य तेनाऽप्यसिद्धेः। तथा भृजेरुदात्तत्वेन ततः परेषां सन्लिङ्सिचामिडागमध्रौव्यात्&ndash; बिभर्क्षति भर्क्षीष्ट अभर्ष्टेत्यादिरपि तेन न सिध्यति। एतेन <code>भ्रस्जेर्भृजिरादेश</code> इति पक्षोऽपि निरस्तः, पूर्वोक्तदूषणगणप्रसङ्गात्। किं च अस्मिन्पक्षे यङ्लुकि अधिको दोषः। वधादेशवत्साभ्यासस्य भृज्ज्यादेशे पुनर्द्विर्वचनस्य दुर्लभत्वात्, स्थानिवत्त्वेनाऽनभ्यासस्येति निषेधात्। स्वीकृतेऽपि द्विर्वचने रुग्रिग्रीकोऽभ्यासस्य स्युरेवेति रुगादिरहितं बाभर्जिता बाभर्जिष्यतीत्यादि रूपं नैव सिध्येत्। यदितु लाघवे पक्षपातेन स्वातन्त्र्यं चिकीर्ष्यते तर्हि <code>भ्रस्जेरसो</code>रिति पठित्वा रसिति समुदायस्य अरेव विधीयतां, तथा च न कोऽपि दोष इति। अयमत्र सङ्ग्रहः&mdash; <code>रस ऋञ्चेदपिल्लिट्सन्लिङ्सिच्चङ्परणिक्षु ते। दोषो भ्रस्जेर्भृजौ चैवं, दोषो यङ्लुकि चाधिकः। साभ्यासस्य हि भृज्भावो भवेद्धन्तेर्वधिर्यथा। द्वित्वं पुनर्न लभ्येत स्थानिवत्त्वाद्वधेरिव। तस्मादस्तु यथान्यासं, स्वातन्त्र्येऽस्तु रसोरिति</code>।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

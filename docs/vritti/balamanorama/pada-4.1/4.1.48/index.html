@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="पुंयोगात्। पुंयोगादिति हेतौ पञ्चमी। आख्यायामिति पञ्चम्याः सप्तम्यादेशः, सुपां स्थाने सुपो भवन्तीति वक्तव्यमित्युक्तेः। आख्येत्यनेन वाचकः शब्दो विवक्षितः, कस्य वाचक इत्यपेक्षायां पुंयोगादित्युपस्थितत्वात्पुंस इति लभ्यते। तथाच आख्यायामित्यनेन पुंसि प्रसिद्धाच्छब्दादिति लभ्यते। पुंयोगादिति स्त्रियामित्यत्रान्वेति। तथाच पुंयोगमाश्रित्य लक्षणया स्त्रियां वर्तमानादिति लभ्यते। तदा&ndash;या पुमाख्येत्यादिना। ङीषिति। अन्यतो ङीष् इत्यतस्त दनुवृत्तेरिति भावः। वोतो गुणवचनादिति पूर्वसूत्रे तु गुणवचनान्ङीबाद्युदात्तार्थः इति वार्तिकान्ङीप् लब्ध इति न तत्राऽस्यानुवृत्तिः। गोपस्य स्त्रीति। गाः पातीति गोपः, आतोऽनुपसर्गे कः। तज्जायायां तु गोरक्षणाऽभावेऽपि तद्भार्यात्वात्तद्व्यपदेशः। ततश्च पुंयोगमाश्रित्य लक्षणया स्त्रियां वर्तमानत्वान्ङीषि यस्येति चेत्यकारलोप इति भावः। हरेः स्त्री, शम्भोः स्त्रीत्यादौ न ङीष्, स्त्रीप्रत्ययविधिप्रकरणेऽत इत्यनुवृत्तेः। या तु स्वयमेव गाः पाति, नतु गोपस्य स्त्री, सा तु गोपा। तत्र गोपशब्दस्य स्वत एव स्त्रियां वृत्त्या पुंयोगादवृत्तेः। नच गोपस्य माता �आश्रूः मातुलानी वा गौपीति स्यादिति वाच्यम्, अकुर्वती पापं भर्तृकृतान् वधबन्धादीन् यथा लभते एवं तच्छब्दमपीति बाष्यस्वारस्येन जायापत्यात्मकस्यैव पुंयोगस्य विवक्षितत्वात्। दुहितरि कैकयी देवकीत्यादयस्तु गौरादौ पाठ�आ इति शब्देन्दुशेखरे स्थितम्। आख्याग्रहणं किम् ?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-4.1/4.1.48.md">सम्पाद्यताम् 4.1.48।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-4.1/4.1.48.md">सम्पाद्यताम् 4.1.48।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           BALAMANORAMA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           4.1.48 पुंयोगादाख्यायाम्
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>पुंयोगात्। पुंयोगादिति हेतौ पञ्चमी। आख्यायामिति पञ्चम्याः सप्तम्यादेशः, <code>सुपां स्थाने सुपो भवन्तीति वक्तव्य</code>मित्युक्तेः। आख्येत्यनेन वाचकः शब्दो विवक्षितः, कस्य वाचक इत्यपेक्षायां पुंयोगादित्युपस्थितत्वात्पुंस इति लभ्यते। तथाच आख्यायामित्यनेन पुंसि प्रसिद्धाच्छब्दादिति लभ्यते। पुंयोगादिति स्त्रियामित्यत्रान्वेति। तथाच पुंयोगमाश्रित्य लक्षणया स्त्रियां वर्तमानादिति लभ्यते। तदा&ndash;या पुमाख्येत्यादिना। ङीषिति। <code>अन्यतो ङीष्</code> इत्यतस्त दनुवृत्तेरिति भावः। <code>वोतो गुणवचना</code>दिति पूर्वसूत्रे तु <code>गुणवचनान्ङीबाद्युदात्तार्थः</code> इति वार्तिकान्ङीप् लब्ध इति न तत्राऽस्यानुवृत्तिः। गोपस्य स्त्रीति। गाः पातीति गोपः, <code>आतोऽनुपसर्गे कः</code>। तज्जायायां तु गोरक्षणाऽभावेऽपि तद्भार्यात्वात्तद्व्यपदेशः। ततश्च पुंयोगमाश्रित्य लक्षणया स्त्रियां वर्तमानत्वान्ङीषि <code>यस्येति चे</code>त्यकारलोप इति भावः। हरेः स्त्री, शम्भोः स्त्रीत्यादौ न ङीष्, स्त्रीप्रत्ययविधिप्रकरणेऽत इत्यनुवृत्तेः। या तु स्वयमेव गाः पाति, नतु गोपस्य स्त्री, सा तु गोपा। तत्र गोपशब्दस्य स्वत एव स्त्रियां वृत्त्या पुंयोगादवृत्तेः। नच गोपस्य माता �आश्रूः मातुलानी वा गौपीति स्यादिति वाच्यम्, <code>अकुर्वती पापं भर्तृकृतान् वधबन्धादीन् यथा लभते एवं तच्छब्दमपी</code>ति बाष्यस्वारस्येन जायापत्यात्मकस्यैव पुंयोगस्य विवक्षितत्वात्। दुहितरि कैकयी देवकीत्यादयस्तु गौरादौ पाठ�आ इति शब्देन्दुशेखरे स्थितम्। आख्याग्रहणं किम् ?। प्रसूता। अयं हि शब्दो जातप्रसवामाहा। स च प्रसवः पुंयोगनिमित्तकः, तन्निमित्ता चास्य स्त्रियां वृत्तिः, न त्वयं पुंसि प्रसिद्धः, अतो न ङीष्। अत्र <code>गोपालकादीनां प्रतिषेधः</code> इति वार्तिकम्। अत्र आदिपदेन अ�आपालिकेत्यादयः पालकान्ता एव गृह्यन्ते, भाष्ये तेषामेवोदाहरणात्। तदाह&ndash;पालकान्तान्नेति। <code>पुंयोगलक्षण ङी</code>षिति शेषः। गोपालिकेति। गोपालकस्य स्त्रीत्यर्थः। ननु पालयतीति पालकः, कर्तरि ण्वुल्, <code>युवोरनाकौ</code> इत्यकादेशः। <code>णेरनिटि</code> इति णिलोपः। गवां पालक इति विग्रहे षष्ठीसमासे सुपो लुकि गोपालकशब्दः। तत्र किं शेषे षष्ठी, उत <code>कर्तृकर्मणोः कृति</code> इति कर्मणि षष्ठी ?। न तावदाद्यः, प्रत्ययलक्षणमाश्रित्य टापः समासावयवात् पालकशब्दादुत्पन्नसुपः परत्वेन असुप इति निषेधात् <code>प्रत्ययस्था</code>दिति इत्त्वानुपपत्तेः। नचाऽस्तु कर्मणि षष्ठीत#इ द्वितीयः पक्षः, <code>गतिकारकोपपदानां कृद्भिः सह समासवचनं प्राक्सुबुत्वपत्तेः</code> इति वचनेन सुबुत्पत्तेः प्रागेव पालकशब्देन प्रातिपदिकेन गवामिति षष्ठ्याः समासे सति समासदुत्पन्नस्य टापः सुपः परत्वाऽभावेन इत्त्वस्य निर्बाधत्वादिति वाच्यं, <code>तृजकाभ्यां कर्तरी</code>ति कारकषष्ठ्याः समासनिषेधादिति चेत्, मैवम्&ndash;गाः पालयतीति गोपालः। कर्मण्यण्। उपपदसमासः। गोपाल एव गोपालकः, स्वार्थिकः कः। तद्धितावयवत्त्वात्सुब्लुक्। गोपालकस्य स्त्री गोपालिकेति व्युत्पत्त्याश्रयणात्। नह्यत्र टाप् सुपः परः, केन व्यवधानात्। अस्तु वा शेषषष्ठ�आ समासः, एवमपि न टाप् सुपः परः, शेषत्वविवक्षायामपि वस्तुतः कारकतया सुबुत्पत्तेः प्रागेव शेषषष्ठ�आ समासप्रवृत्तेः। अत एव प्रकृतसूत्रे <code>उपपदमतिङि</code>ति सूत्रे च भाष्ये कुम्भकारपदे सुबुत्पत्तेः प्रागेव कुम्भस्येति शेषषष्ठ�आ समास उपन्यस्तः सङ्गच्छत इति शब्देन्दुशेखरे प्रपञ्चितम्।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

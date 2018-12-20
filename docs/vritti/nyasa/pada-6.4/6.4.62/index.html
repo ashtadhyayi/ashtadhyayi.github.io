@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="स्यसिच्सीयुट्तासिषु इति सप्तम्या प्रतियोगिनो निर्देशाच्चिणीव चिण्वदिति सप्तमीसमर्थाद्वतिर्विज्ञायते, यथा&ndash;मथुरावत्? पाटलिपुत्रे प्रकार इति। भावकर्मविषयेषु इति। अनेन भावकर्मणोः इत्यस्य विषयसप्तमीत्वं दर्शयति। भावकर्मणी विषयौ येषान्ते तथोक्ताः के पुनः स्यादयो भावकर्मविषयाः? ये स्यादयो लादेशेन भावकर्मणोर्विवक्षितयोर्भवतन्ति। चकारोऽत्र सन्नियोगार्थः क्रियते। तेन यदा चिण्वद्भावो इत्यादि।कस्यइति। षष्ठीनिर्दिष्टस्य ह्रागमा भवन्ति, स्यादयश्चेह सप्तम्या निर्दिष्टाः; न चान्य आगमीश्रूयत इति प्रश्नः। यद्यपि ते सप्तम्या निर्दिष्टाः, न चान्य आगमी श्रूयत इति प्रश्नः। यद्यपि ते सप्तम्या निर्दिष्टाः, तथापि यथाहनश्च वधः(३।३।७६) इति पञ्चमी निर्दिष्टोऽपि हन्तिः प्रत्ययमुत्पाद्यदेशेन सम्बन्धमनुभवन्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.62.md">सम्पाद्यताम् 6.4.62।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.62.md">सम्पाद्यताम् 6.4.62।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.62 स्यसिच्सीयुद्तासिषु भावकर्मणोरुपदेशेऽज्झनग्रहदृशां वा चिण्वदिट्? च।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>स्यसिच्सीयुट्तासिषु</code> इति सप्तम्या प्रतियोगिनो निर्देशाच्चिणीव चिण्वदिति सप्तमीसमर्थाद्वतिर्विज्ञायते, यथा&ndash;मथुरावत्? पाटलिपुत्रे प्रकार इति। <code>भावकर्मविषयेषु</code> इति। अनेन <code>भावकर्मणोः इत्यस्य विषयसप्तमीत्वं दर्शयति। भावकर्मणी विषयौ येषान्ते तथोक्ताः के पुनः स्यादयो भावकर्मविषयाः? ये स्यादयो लादेशेन भावकर्मणोर्विवक्षितयोर्भवतन्ति। चकारोऽत्र सन्नियोगार्थः क्रियते। तेन यदा चिण्वद्भावो इत्यादि।</code>कस्य<code>इति। षष्ठीनिर्दिष्टस्य ह्रागमा भवन्ति, स्यादयश्चेह सप्तम्या निर्दिष्टाः; न चान्य आगमीश्रूयत इति प्रश्नः। यद्यपि ते सप्तम्या निर्दिष्टाः, न चान्य आगमी श्रूयत इति प्रश्नः। यद्यपि ते सप्तम्या निर्दिष्टाः, तथापि यथा</code>हनश्च वधः<code>(३।३।७६) इति पञ्चमी निर्दिष्टोऽपि हन्तिः प्रत्ययमुत्पाद्यदेशेन सम्बन्धमनुभवन्? षष्ठ()न्ततां प्रतिपद्यते तथा स्यादयोऽपि यदागमेन सम्बन्धमनुभवन्ति तदा षष्ठ()न्ततां प्रतिपद्यन्त इत्यभिप्रायेणाह--</code>स्यसिच्()<code>इत्यादि। अत्रैव हेतमाह--</code>ते हि प्रकृताः<code>इत्यादि। इडयमागमलिङ्गः, तस्यावश्यमागमिना भवितव्यम्(), तत्? किमश्रुतानामागमित्वं परिकल्प्य, तस्यैव विधीयतामुत प्रकृतानामेव स्यादीनाम#इति? युक्तं यत्? प्रकृतानामेव विधीयते; अश्रुतप्रकल्पनाया गरीयस्त्वात्()। ननु चाङ्गमपि प्रकृतम्(), तस्य कस्मान्न क्रियते? इत्यत आह--</code>अङ्गस्य<code>इत्यादि। अङ्गस्य न क्रियते, लक्ष्यविरोधात्()। यद्यङ्गस्य स्यात्(), तदेटि कृते लक्ष्यावरधादनिष्टं स्यात्()। न ह्रनण्टार्था शास्त्रे प्रक्लृप्तिरयुक्ता। तस्मान्मा भूल्लक्ष्यविरोध इति यद्यप्यङ्गमपि प्रकृतम्(), तथापि स्यादीनामेव क्रियते, नाङ्गस्य। 
 इह द्वौ पक्षौ सम्भवतः--चिण्निमित्तं यत्कार्यं, यदाहत्य चिणि विधीयते तद्वातिदिश्यते। यद्वा चिणियद्दृष्टं चिण्णिमत्तमचिण्णिमित्त्ञ्च तत्? सामान्येन। तत्र यदि पर्वकः पक्ष आश्रीयेत, तदा</code>आतो युक्? चिण्कृतोः<code>(7.3.33) इति युगागमः।</code>विण्णमुलोर्दोर्घोऽन्यतरस्याम्()<code>(6.4.93) इति दीर्घत्वञ्च--एते द्वे एवाङ्गकार्येऽतिविश्ये स्याताम्()। नान्यात्? वृद्ध्यादिकम्(), न हि तदाहत्य चिणि विधीयते। आहत्य=उच्चार्येत्यर्थः। यद्धि साक्षाच्चिणं निमित्तमुपादाय विधीयते तच्चिण्याहत्य विधीयते, न चैवं वृद्ध्यादिकं विधीयते। अथ द्वितीयस्ततो न भवत्येष दोषप्रसङ्गः; वृद्ध्यादीनामपि चिणि दृष्टत्वात्()। 
 यदि चिणि यद्दृष्टं तदतिदिश्यते, तर्हि हनिणिङामादेशा अपि प्राप्नुवन्ति, तेषामपि तत्र दृष्टत्वादिति? अनेनाभिप्रायेणाह--</code>कानि पुनः<code>इत्यादि। 
@@ -152,30 +153,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

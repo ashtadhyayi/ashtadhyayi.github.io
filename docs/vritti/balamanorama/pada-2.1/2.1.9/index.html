@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="सुप्प्रतिना मात्रार्थे। सुबिति छेदः। मात्रा-लेशः। तस्मिन्नर्थे विद्यमानेन प्रतिना सुबन्तं समस्यत इत्यर्थः। सुबित्यनुवर्तमाने पुनः सुब्ग्रहणं संनिहितस्याऽव्ययमित्यस्याननुवृत्त्यर्थं, तद्ध्वनयन्नुदाहरति-शाकस्य लेश इति। अत्र प्रतीत्यव्ययं मात्रार्थकम्। अतस्तेन शाकस्येति सुबन्तस्य समासः। समासविधौ सुबन्तस्य प्रथमानिर्दिष्टत्वेन उपसर्जनत्वात्पूर्वनिपातः, न तु प्रतेः, तस्य समासविधौ तृतीयानिर्दिष्टत्वात्। वृक्षं प्रतीति। अत्र प्रतेर्मात्रार्थकत्वाऽभावान्न तेन समासः। न च लक्षणेत्थमिति कर्मप्रवचनीयत्वविधानसामर्थ्यादेवाऽत्र समासो न भविष्यति, सति समासे द्वितीयायाः षष्ठ�आ वा लुकि अविशेषात्, सकृत्प्रवृत्ततया समासात्तद्विभक्त्यनुत्पत्तेरिति वाच्यम्, वृक्षं प्रति सिञ्चतीत्यादौ उपसर्गात्सुनोतीति षत्वनिवृत्त्या कर्मप्रवचनीयत्वस्य चरितार्थत्वादित्यन्यत्र विस्तरः।"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-2.1/2.1.9.md">सम्पाद्यताम् 2.1.9।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/balamanorama/pada-2.1/2.1.9.md">सम्पाद्यताम् 2.1.9।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           BALAMANORAMA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           2.1.9 सुप्प्रतिना मात्रार्थे
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>सुप्प्रतिना मात्रार्थे। सुबिति छेदः। मात्रा-लेशः। तस्मिन्नर्थे विद्यमानेन प्रतिना सुबन्तं समस्यत इत्यर्थः। सुबित्यनुवर्तमाने पुनः सुब्ग्रहणं संनिहितस्याऽव्ययमित्यस्याननुवृत्त्यर्थं, तद्ध्वनयन्नुदाहरति-शाकस्य लेश इति। अत्र <code>प्रती</code>त्यव्ययं मात्रार्थकम्। अतस्तेन शाकस्येति सुबन्तस्य समासः। समासविधौ सुबन्तस्य प्रथमानिर्दिष्टत्वेन उपसर्जनत्वात्पूर्वनिपातः, न तु प्रतेः, तस्य समासविधौ तृतीयानिर्दिष्टत्वात्। वृक्षं प्रतीति। अत्र प्रतेर्मात्रार्थकत्वाऽभावान्न तेन समासः। न च <code>लक्षणेत्थ</code>मिति कर्मप्रवचनीयत्वविधानसामर्थ्यादेवाऽत्र समासो न भविष्यति, सति समासे द्वितीयायाः षष्ठ�आ वा लुकि अविशेषात्, सकृत्प्रवृत्ततया समासात्तद्विभक्त्यनुत्पत्तेरिति वाच्यम्, <code>वृक्षं प्रति सिञ्चती</code>त्यादौ <code>उपसर्गात्सुनोती</code>ति षत्वनिवृत्त्या कर्मप्रवचनीयत्वस्य चरितार्थत्वादित्यन्यत्र विस्तरः।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

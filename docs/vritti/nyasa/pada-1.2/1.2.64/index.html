@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="सरूपाणाम् इति बहुव्रीहौ कृते ज्योतिर्जनपद (6.3.84) इत्यादिना समानस्यसभावः। रूपशब्दोऽत्र स्वभावे वत्र्तते। सरूपाणां शब्दानाम् इति निर्धारणे षष्ठी। तेन स्वरूपाणां मध्ये समानजातीयो यः सरूपः, स एक एव शिष्यते, न विरूपः। समानजातीयस्यैव हि निर्धारणं भवति, न विजातीयस्य। अथ वा&ndash; समुदायलक्षणैषा षष्ठी, सरूपसमुदायान्तः पाती च सरूप एव भवति, न विरूपः। तेन सरूप एव शिष्यते। एक विभक्तौ इति। एकशब्दः समानार्थः, एकधनाविति यथा। एका चासौ विभक्तिश्चेति पूर्वकालैक (2.1.48) इत्यादिना समासः। एकमेकशेष इत्यत्रापि। अत्र त्वेकशब्दः संख्यावचनः, शेषशब्दोऽयं निवृत्त्या विशिष्टवस्थानमाह, नावस्थानमात्रम्। अत एवाह&ndash; एकः शिष्यते, अपरे निवत्र्तन्ते इति। वृक्षश्च वृक्षश्च वृक्षौ इत्यादि। अविभक्तिकानामयमेकशेषः; अनैमित्तकत्वाद्विभक्तेः। न ह्रयं परां विभक्तिमाश्रित्य विधीयते। एकविभक्तावितीहसारूप्योपलक्षणमेतत्, न निमित्तनिर्देशः। एकस्यां विभक्तौ परतो यानि रूपाणि दृष्टानि, तेषामनुत्पन्नायामेव विभक्तौ प्रातिपदिकानामेकशेषो भवति। ततः कृत एकशेषे विभक्तिरुपपद्यते। अथ वा &ndash; सविभक्तिकानामेवैकशेषः, कथम्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-1.2/1.2.64.md">सम्पाद्यताम् 1.2.64।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-1.2/1.2.64.md">सम्पाद्यताम् 1.2.64।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           1.2.64 सरूपाणामेकशेष एकविभक्तौ।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>सरूपाणाम्</code> इति बहुव्रीहौ कृते <code>ज्योतिर्जनपद</code> (6.3.84) इत्यादिना समानस्यसभावः। रूपशब्दोऽत्र स्वभावे वत्र्तते। <code>सरूपाणां शब्दानाम्</code> इति निर्धारणे षष्ठी। तेन स्वरूपाणां मध्ये समानजातीयो यः सरूपः, स एक एव शिष्यते, न विरूपः। समानजातीयस्यैव हि निर्धारणं भवति, न विजातीयस्य। अथ वा&ndash; समुदायलक्षणैषा षष्ठी, सरूपसमुदायान्तः पाती च सरूप एव भवति, न विरूपः। तेन सरूप एव शिष्यते। <code>एक विभक्तौ</code> इति। एकशब्दः समानार्थः, एकधनाविति यथा। एका चासौ विभक्तिश्चेति <code>पूर्वकालैक</code> (2.1.48) इत्यादिना समासः। एकमेकशेष इत्यत्रापि। अत्र त्वेकशब्दः संख्यावचनः, शेषशब्दोऽयं निवृत्त्या विशिष्टवस्थानमाह, नावस्थानमात्रम्। अत एवाह&ndash; <code>एकः शिष्यते, अपरे निवत्र्तन्ते</code> इति। <code>वृक्षश्च वृक्षश्च वृक्षौ</code> इत्यादि। अविभक्तिकानामयमेकशेषः; अनैमित्तकत्वाद्विभक्तेः। न ह्रयं परां विभक्तिमाश्रित्य विधीयते। एकविभक्तावितीहसारूप्योपलक्षणमेतत्, न निमित्तनिर्देशः। एकस्यां विभक्तौ परतो यानि रूपाणि दृष्टानि, तेषामनुत्पन्नायामेव विभक्तौ प्रातिपदिकानामेकशेषो भवति। ततः कृत एकशेषे विभक्तिरुपपद्यते। अथ वा &ndash; सविभक्तिकानामेवैकशेषः, कथम्? विभक्तिशब्देन हि कारकमभिधीयते, विभज्यते प्रातिपदिकार्थोऽनयेति कृत्वा। तदेतदुक्तं भवति&ndash; एकस्मिन् समानेऽभिन्ने कारके यानि सरूपाणि तेषामेवैककारकाणामेकशषो भवतीति। यद्येवम्, <code>परतः</code> इति वृत्तिग्रन्थो नोपपद्यते, कारकं ह्रर्थसमवायिनी शक्तिः, न च तया शब्दानां पौर्वापर्यं सम्भवति, कथञ्च विभक्तिशब्देन कारकेऽभिधीयमाने सविभक्तिकानामेकशेषो लभ्यते? उच्यते; वृत्तिग्रन्थस्तावदुपपद्यते&ndash; परशब्दो ह्रयमिष्टवाची, एकविभक्तौ परतः = एकस्यां विभक्ताविष्टायामित्यर्थः। विषयसप्तमी चेयम्, सति सप्तमी वा। एकस्मिन् कारके विषयभूत इष्टे सति सप्तमी वा। एकस्मिन् कारके विषयभूत इष्टे सति चेत्यर्थः। किञ्चेष्टं कारकं भवति? यद्विवक्षितम्। अत ए विवक्षितत्वात् कारकं स्वनिमित्तां विभक्तिकानामेकशेषो लभ्यते।
 सहभावविवक्षायाञ्चायमेकशेषो भवति। यद्येकेन युगपत् सर्वेषामर्थोऽभिधातुमिष्यत एवं सति भवति; नान्यथा। ननु च जातिः पदार्थः, जातिश्चैकैव; तत्रैकत्वाज्जातेर्बहूनां शब्दानां प्रसङ्ग एव नास्ति,तत्किमेकशेषारम्भेण? इति चोद्यावसरे <code>द्रव्यं पदार्थः</code> इत्येतद्दर्शनमाश्रित्याह&ndash; <code>प्रत्यर्थम्</code> इत्यादि। प्रत्यर्थम् = एकैकस्मिन्नर्थे यस्माच्छब्दानां निवेशप्रवृत्तिस्ततोऽकेन शब्देनानेकार्थ्सयाभिधानम्। तत्रैतद्दर्शनेऽकेषामर्थाभिधाने प्रत्येकेनैव कर्तव्येऽनेकशब्दत्वं प्रसज्यत इति यावन्तस्तेऽर्थास्तावतां शब्दानां प्रयोगः प्राप्नोति, इष्यते चैकशब्दता। तस्मादेकशेष आरभ्यते।
 <code>रूपग्रहणं किम्</code> इति। एवं मन्यते&ndash; रूपग्रहणे क्रियमाणे पदद्वयसमनुगम्योऽर्थेः प्रतिपत्तव्य इति प्रतिपत्तिगौरवं भवति। समानानामित्युच्यमाने सत्येकपदसमनुहम्योऽर्थः प्रतीयत इति प्रतिपत्तिलाघवं भवति; तस्मात् समानग्रहणमेव कत्र्तव्यमिति? भिन्नेऽप्यर्थे यथा स्यादिति रूपग्रहणम्। यदि रूपग्रहणं न क्रियेत तदा विशेषानभिधानाद्यत्र सर्व समानं शब्दोऽर्थश्च तत्रैव स्याद्()वृक्षा इत्यादौ, अक्षा इत्यादौ तु न स्यात्; अर्थभेदात्। तथा ह्रक्षशब्द इन्द्रियाख्ये, शकटाङ्गे, बिभीतकादावर्थे च वर्ततेष पादशब्दोऽपि कार्षापण&ndash; श्लोकपाद&ndash; पाणिपदादावर्थे वर्तते, माषशब्दोऽपि व्रीह्रादौ। <code>द्विबह्वोः शेषे मा भूत्</code> इति। ननु च <code>शेष</code> इत्येकत्वसंख्याविवक्षायां द्वयोर्बहूनाञ्च शेषो न भविष्यति,नैतदेवम्; इह विधीयमानत्वाच्छेष एव प्रधानम्, न च प्रधाने संख्या विवक्ष्यते। तथा हि&ndash; <code>कर्त्तुरीप्सिततमं कर्म</code> (1.4.49) इति
@@ -149,30 +150,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

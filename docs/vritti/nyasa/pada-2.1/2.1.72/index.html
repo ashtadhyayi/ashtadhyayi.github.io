@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="मयूरव्यंसकः इति। मयूरश्चासौ व्यंसकश्चेति मयूरव्यंसकः। व्यंसकशब्दस्य पूर्वनिपाते प्राप्ते परनिपातार्थः पाठः। एवं चात्र मयूरव्यंसकादीनां यवनमुण्डपर्यन्तानाम्। छन्दसि ह्स्तेगृह्य इत्यादि। समासेऽनञ्पूर्वे क्त्वो ल्यप्&rsquo; (7.1.37)। भाषायान्तु &ndash; हस्तेगृहीत्वा, पुनर्दत्त्वेत्येवं भवति। एहीडादयोऽन्यपदार्थे इति। एहि ईड यत्र कर्मणि वर्त्तते तदुच्यते&ndash; एहीडम् इति। एवम्&ndash; एहियवम् इति। एहिवाणिजेति यस्यां क्रियायां सा एहिवाणिजा। एवम्&ndash; अपेहिवाणिजा, प्रेहिवाणिजा। एहि सवागतमिति यस्यां क्रियायां सा एहिस्वागता। एवम्&ndash; अपेहिस्वागता। प्रौह कटमिति यस्यां सा प्रोहकटा। एं प्रोहकर्दमादय आहरवसनान्ताः। कृन्धि विचक्षणेति यस्यां क्रियायां सा कृन्धिविचक्षणा । उद्धरोत्सृज इति। तिङन्तयोः समासः। आख्यातमाख्यातेन क्रियासात्ये (ग."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.1/2.1.72.md">सम्पाद्यताम् 2.1.72।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.1/2.1.72.md">सम्पाद्यताम् 2.1.72।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           2.1.72 मयूरव्यंसकादयश्च।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>मयूरव्यंसकः</code> इति। मयूरश्चासौ व्यंसकश्चेति मयूरव्यंसकः। व्यंसकशब्दस्य पूर्वनिपाते प्राप्ते परनिपातार्थः पाठः। एवं चात्र मयूरव्यंसकादीनां यवनमुण्डपर्यन्तानाम्। <code>छन्दसि ह्स्तेगृह्य</code> इत्यादि। समासेऽनञ्पूर्वे क्त्वो ल्यप्&rsquo; (7.1.37)। भाषायान्तु &ndash; हस्तेगृहीत्वा, पुनर्दत्त्वेत्येवं भवति। <code>एहीडादयोऽन्यपदार्थे</code> इति। एहि ईड यत्र कर्मणि वर्त्तते तदुच्यते&ndash; <code>एहीडम्</code> इति। एवम्&ndash; <code>एहियवम्</code> इति। एहिवाणिजेति यस्यां क्रियायां सा <code>एहिवाणिजा</code>। एवम्&ndash; <code>अपेहिवाणिजा, प्रेहिवाणिजा</code>। एहि सवागतमिति यस्यां क्रियायां सा <code>एहिस्वागता</code>। एवम्&ndash; <code>अपेहिस्वागता</code>। प्रौह कटमिति यस्यां सा <code>प्रोहकटा</code>। एं प्रोहकर्दमादय आहरवसनान्ताः। कृन्धि विचक्षणेति यस्यां क्रियायां सा <code>कृन्धिविचक्षणा</code> । <code>उद्धरोत्सृज</code> इति। तिङन्तयोः समासः। <code>आख्यातमाख्यातेन क्रियासात्ये</code> (ग.सू.20) इत्येवं सिद्धेऽसातत्यार्थं वचनम्। उद्धरोत्सृजति यस्यां क्रियायां सा उद्धरोत्सृजा। क्रियाप्रधानश्चायं समासः। <code>उत्पतनिपता</code>। <code>उत्तमविधमा</code>। एवमुद्धरोत्सृजेत्यादिकमसातत्यविषयमेव। <code>उच्चावचनम्</code> इति निपात्यते। उदक् चावाक् चिति विगृह्य। उच्चैश्च नीचैश्चेति विगृह्योच्चनीचमिति निपात्यते। आचितञ्चोपचितञ्चेति विगृह्य <code>आचोपचम्</code>। आचितञ्च पराचितञ्चेति <code>आचपराचम्</code>। निश्चितञ्च प्रचितञ्चेति <code>निश्चप्रचम्</code>। न किञ्चन <code>अकिञ्चनम्</code>। <code>स्नत्वाकालकः</code>। <code>पीत्वास्थिरकः</code>। <code>भुक्त्वासुहितः</code> इत्येषामन्तोदात्तार्थः पाठः। ल्यब्भावश्च निपात्यते। <code>प्रोष्यपापीयान्</code> इति। ऐकपद्यमैकस्वर्यञ्च समासाद्भवति। एवम्&ndash; उत्पत्यपाकलादीनाम्। <code>नित्यरोहिणी। निषण्णश्यामा। अपेहिप्रसवा। इहपञ्चमी। इहद्वितीया</code> इति। ऐकपद्यमैकस्वर्यञ्च समासे भवति।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

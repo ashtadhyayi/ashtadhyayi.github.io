@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="स्वार्थिकप्रत्ययवधिश्चायमधिकारःइति। स्वार्थे प्रकृत्यर्थे भवाः स्वार्थिकाः , अध्यात्मादित्वाट्(वा।४५६) ठञ्। स्वार्थिकाः प्रत्यया अवधिर्मर्यादा यस्य स तथोक्तः। प्राग्दिशो विभक्तिरिति यावत् इति। अनेन यतः परेण स्वार्थिकाः प्रत्यया अवधिभूताः प्रवत्र्तन्ते तत्सूत्रं दर्शयन् प्राग्दिशो विभक्तिः (5.3.1) इत्येतत्सूत्रात् प्रागयमधिकार इच्याचष्टे। किं पुनः कारणं स्वार्थिकेष्वयमप्यधिकारो न प्रवत्र्तते? इत्याह&ndash; स्वार्थिकेषु इत्यादि। समर्थानाम् इति। सम्बद्धार्थानमामित्येषोऽर्थः। सम्बद्धार्थता च द्विष्ठत्वात् प्रतियोगिनि सति भवति, स्वार्थिकानाञ्()च प्रकृत्यर्थादर्थान्तरं न सम्भवति यत्प्रत्ययायनाय शब्दान्तरं प्रयुज्येत,यदपेक्षया च समर्थता स्यात्। तस्मात् समर्थतावा अभावात् स्वार्थिकेषु समर्थानामित्येतत् तावन्नोपयुज्यते। अत एव प्रतियोगिनोऽभावात् प्रथमादित्येतदपि नोपयुज्यत एव। यदि हि प्रतियोगिशब्दान्तरं स्यात्, तत आशङ्का स्यात्&ndash; किं प्रथमात् प्रत्ययः?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-4.1/4.1.82.md">सम्पाद्यताम् 4.1.82।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-4.1/4.1.82.md">सम्पाद्यताम् 4.1.82।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           4.1.82 समर्थानां प्रथमाद्वा।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>स्वार्थिकप्रत्ययवधिश्चायमधिकारः</code>इति। स्वार्थे प्रकृत्यर्थे भवाः स्वार्थिकाः , अध्यात्मादित्वाट्(वा।४५६) ठञ्। स्वार्थिकाः प्रत्यया अवधिर्मर्यादा यस्य स तथोक्तः। <code>प्राग्दिशो विभक्तिरिति यावत्</code> इति। अनेन यतः परेण स्वार्थिकाः प्रत्यया अवधिभूताः प्रवत्र्तन्ते तत्सूत्रं दर्शयन् <code>प्राग्दिशो विभक्तिः</code> (5.3.1) इत्येतत्सूत्रात् प्रागयमधिकार इच्याचष्टे। किं पुनः कारणं स्वार्थिकेष्वयमप्यधिकारो न प्रवत्र्तते? इत्याह&ndash; <code>स्वार्थिकेषु</code> इत्यादि। <code>समर्थानाम्</code> इति। सम्बद्धार्थानमामित्येषोऽर्थः। सम्बद्धार्थता च द्विष्ठत्वात् प्रतियोगिनि सति भवति, स्वार्थिकानाञ्()च प्रकृत्यर्थादर्थान्तरं न सम्भवति यत्प्रत्ययायनाय शब्दान्तरं प्रयुज्येत,यदपेक्षया च समर्थता स्यात्। तस्मात् समर्थतावा अभावात् स्वार्थिकेषु समर्थानामित्येतत् तावन्नोपयुज्यते। अत एव प्रतियोगिनोऽभावात् प्रथमादित्येतदपि नोपयुज्यत एव। यदि हि प्रतियोगिशब्दान्तरं स्यात्, तत आशङ्का स्यात्&ndash; किं प्रथमात् प्रत्ययः? उत द्वितीयादिति? ततश्च तन्निवृत्तये प्रथमादिति वचनमनुवत्र्तमानमर्थवत् स्यात्। असति तु द्वि#ईतीये प्रतियोगिनि तदनुवृत्तिर्नोपयुज्यते। <code>विकल्पोऽपि तत्रानवस्थितः</code>इति। अनियत इत्यर्थः। यतः केचित् स्वार्थिका नित्यमेव भवन्ति। तथा च <code>अषडक्षाशितङ्ग्वलंकर्मालम्</code> (५।४।७) इत्यादौ सूत्रे भाष्यकारः परिगणनं करिष्यति&ndash; <code>के पुनर्नित्याः प्रत्ययाः? तमबादयः प्राक् कात्, ञ्यादयः प्राग्वुनः, आमादयः प्राङमयटः, बृहत्या जात्यन्तात् समासान्ताश्च</code> इति। तत्र <code>अतिशायने तमबिष्ठनौ</code> (5.3.55) इति तमप्प्रभृतयो ये प्रत्ययाः <code>प्रागिवात् कः</code> (5.3.70) इत्येतस्मात् प्राक् ते नित्याः। तथा <code>पूगाञ्ञ्योऽग्रामणीपूर्वात्</code> (5.2.111) इत्यतो ञ्यप्रत्ययात् प्रभृति <code>पादशतस्य संख्यादेर्वीप्सायां वुन्म लोपश्च</code> (5.4.1) इत्यतो वुनः प्राग्ये ते नित्याः। तथा <code>किमेत्तिङव्ययघादाम्वद्रव्यप्रकर्षे</code> (5.4.11) इत्यत आम्प्रभृति प्राक् तत्प्रकृतवचने मयटो ये प्रत्ययास्ते नित्याः। तथा <code>बृहत्या आच्छादने</code> (5.4.6) इति यो विहितः कप्रत्ययः<code>जात्यन्ताच्छोबन्धुनि</code> (5.4.9) इति च यश्चप्रत्ययो ये समासान्ता डजादयस्ते सर्वे नित्याः। तस्माद्विकल्पः स्वार्थिकेष्वनवस्थितः। ततश्च वाग्रहणमपि तत्रानवस्थितमेव क्वचिदनुवत्र्तते, क्वचिन्नेत्युक्तं भवति।
 इह प्रथमादिति विशेषणं प्रयोगवाक्यस्य? लक्षमवाक्यस्य वा? यदि प्रथमः ,ततो लौकिके वाक्ये पदानां प्रयोगे नियमो नास्तीति; पात्रमाहर, आहर पात्रमिति प्रयोगात्। ततश्च यदापत्यमुपगोरिति प्रयुज्यते तदापत्यशब्दात् प्रथमासामथ्र्यात् प्रत्ययः स्यात्। ननु च तस्येतनेन सूत्रोपात्तेनानुकरणपदेन षष्ठ()न्तेन प्रथमेनालौकिकवाक्यसमवायि पश्चान्निर्दिष्टमपि पदमनुकृतम्, तत् प्रथमत्वात् प्रथमव्यपदेशमासादयति। तेन यदाप्यपत्यमुपगोरिति लौकिकं वाक्यं प्रयुज्यते, तदोपगुशब्दादेव यथोक्तेनैव प्रकारेण लब्धप्रथमव्यपदेशात् प्रत्ययो भविष्यति; नापत्यशब्दात्। तदाद्येऽपि पक्षे समाश्रीयमाणे न दोष इति चेत्? वात्र्तमेतत्; न हि मुख्ये प्रथमे सम्भवपिसति गौणस्य ग्रहणं युक्तम्। अतः सत्यप्युपगुशब्दस्य गौणेन प्रथमत्वे मुख्यात् प्रथमादपत्यशब्दादेव प्रत्ययः स्यात्, नोपगुशब्दात्। प्रतिपत्तिगौरवञ्च। द्वितीये तु पक्ष एव दोषो नावतरति; लक्षमवाक्येषु पदानां प्रयोगस्य नियत्वात्। अतस्तमाश्रित्याह&ndash; <code>लक्षणवाक्यानि</code> इत्यादि। समर्थानां मध्ये प्रथमः प्रत्ययप्रकृतित्वेन निर्धारित इति, यथा&ndash; कृष्णा गवां सम्पन्नक्षीरतमेति, गवां मध्ये कृष्णा गौः सम्पन्नक्षीरतमात्वेन। यदि तर्हि समर्थानां प्रथमात् प्रत्ययो भवति, एवं सति <code>तस्यापत्यम्</code> (4.1.92) इत्यत्र तस्येत्येतत्सर्वनाम। सामान्यवाचि प्रथमं निर्दिष्टमिति सामान्यवाचिन एव प्रत्ययः स्यात्, न विशेषवाचिनः; प्रातिपदिकादुपग्वित्यादेः, न हि तल्लक्षमवाक्ये प्रथमं निर्दिष्टम्? इत्यत आह&ndash;<code>तस्य</code> इत्यादि। <code>विशेषलक्षणार्थम्</code> इति। विशेषोपलक्षणार्थमित्यर्थः। यदि हि तस्येत्येद्विशेषोपलक्षणार्थं न स्यात् तदा समर्थता तस्य न स्यात्। न हि तस्येत्येतत् प्रकरणाद्यनपेक्षं विशेषेष्वतिष्ठछते। न च विशेषेष्वनवस्थितेनानेनापत्यस्य कश्चिदुपकारः कृतो भवति; सम्बन्धिसामान्यस्य सम्बन्धिशब्दत्वात्, अपत्यशब्देनैव गमितत्वात्। ततश्चोपाकारभावात् समर्थता न स्यात्। उच्यतेचेदम्&ndash; तस्येति। तस्मात् सामथ्र्याद्विशेषोपलक्षणार्थत्वं तस्येत्यस्य। तेन ये विशेषा उपलक्षिताः = प्रतिपदितान्ते सम्बन्ध्यन्तरव्यवच्छेदेन विशिष्टं सम्बन्धिनं प्रतिपादयन्त उपकारिणो भवन्तीत्युपपद्यते तैः सह सामथ्र्यम्। तस्मात् तस्येतत् सामान्यं विशेषोपलक्षणार्थं द्रष्टव्यम्। तेन तस्य यत् प्राथम्यं तद्विशेषाणामुपगुशब्दादीनां विज्ञायते। ततश्च तत एव प्रत्ययो भवति, न च सामान्यवाचिनः।
 <code>कम्बल उपगोरपत्यं देवदत्तस्य</code> इति। अत्रोपगुशब्दः कम्बलेन सह सम्बद्धः, नापत्येन। अपत्यशब्दस्यापि देवदत्तशब्देन, नोपगुशब्देन। तस्मादपत्यशब्देन, सहोपगुशब्दस्य सम्बन्धो नास्तीति न ततः प्रत्ययो भवति।
@@ -145,30 +146,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

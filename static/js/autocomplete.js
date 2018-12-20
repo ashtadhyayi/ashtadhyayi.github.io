@@ -1,3 +1,15 @@
+
+function loadSutra() {
+  let sutraSelected = $("#sutraSearchInputBox").val();
+  let sutraDetails = sutraAutocompleteMap.get(sutraSelected)
+  // console.debug(sutraDetails);
+  if (sutraDetails) {
+    console.debug(getContextSensitiveSutraLink(sutraDetails.index));
+    // return;
+    window.location = getContextSensitiveSutraLink(sutraDetails.index);
+  }
+}
+
 $(document).ready(function(){
   let sutraAutocompleteMap = new Map();
   $.ajax({
@@ -17,14 +29,7 @@ $(document).ready(function(){
       });
     }
   });
-  $("#sutraSearchInputBox").change(function() {
-    let sutraSelected = $(this).val();
-    let sutraDetails = sutraAutocompleteMap.get(sutraSelected)
-    console.debug(sutraDetails);
-    if (sutraDetails) {
-      console.debug(getContextSensitiveSutraLink(sutraDetails.index));
-      // return;
-      window.location = getContextSensitiveSutraLink(sutraDetails.index);
-    }
-  });
+  $("#sutraSearchInputBox").change(loadSutra());
+  $("#sutraSearchInputBox").keyup(loadSutra());
+  $("#sutraSearchInputBox").mouseup(loadSutra());
 });

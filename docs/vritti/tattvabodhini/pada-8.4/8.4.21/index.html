@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उभौ सा। रषाभ्याटमिति सूत्रेनइति षष्ठ�न्तं प्रथमाद्विवनान्ततया विपरिणम्यत इत्याह-- उभौ नकाराविति। ननुसाऽभ्यास्येत्युक्त्या उभयोरपि भविष्यतीत्युभौग्रहणं व्यर्थमिति चेत्, अत्राहुः-- साहित्यमात्रं विवक्षितं न तुल्ययोग इत्यभ्युपगमे द्वयोर्युगपन्न सिध्येदित्युभौग्रहणम्। न च तुल्ययोगविवक्षायांतेन सहेति तुल्योगेइति समासोऽत्र न स्यादिति शङ्क्यं,तुल्ययोगग्रहणं प्रायिकं, सकर्मकः सलोमकइत्युक्तत्वादिति। कैयटे तु--उभावित्यस्मिन्नसति साभ्यासस्याऽनितेर्णो भवतीत्युच्यमाने वचनसामर्थ्याच्च पूर्वत्रासिद्धीयमद्विर्वचने इत्यनाश्रीयमामे ?कृतणत्वस्य द्विर्वचने कृते अनन्तरस्याऽनितेरिति पूर्वेणैव णत्वस्य सिद्धत्वाद्व्यवहितनकारार्थमिदं णत्वं स्यात्, अनन्तरस्य तु तक्रकौण्डिन्यन्यायेन न स्यादिति उभावित्युच्यते&rsquo; इति स्थितम्। साभ्यासस्येति किम् ?। प्राण् नमति। असत्यस्मिन् अनितेरिति षष्ठी संबन्धसामान्ये स्यात्।ततश्चानन्तर्यादिसंबन्धोऽपि गृह्येत। सति त्वस्मिन्नवयवावयविभावसंबन्धो लभ्यते। अतोऽर्थवत्साभ्यासग्रहणम्। यदि त्विष्टानुरोधेनाऽनितेरिति षष्ठीजनम्। इह पूर्वं णत्वं कृत्वा द्वित्वे क#ऋते प्राणिणदित्यादिसिद्धावयमारम्भः पूर्वत्रासिद्धीयमद्विर्वचनेइत्स्याऽनित्यत्वज्ञापनार्थः। तेन ऊर्णुनावेत्यत्र णत्वात्पूर्वमेव नुशब्दस्य द्वित्वादभ्यासोत्तरखण्डे णत्वाऽभावः सिद्धः।"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-8.4/8.4.21.md">सम्पाद्यताम् 8.4.21।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/tattvabodhini/pada-8.4/8.4.21.md">सम्पाद्यताम् 8.4.21।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           TATTVABODHINI
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           8.4.21 उभौ साभ्यासस्य
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>उभौ सा। <code>रषाभ्याटमिति सूत्रे</code>न<code>इति षष्ठ�न्तं प्रथमाद्विवनान्ततया विपरिणम्यत इत्याह-- उभौ नकाराविति। ननु</code>साऽभ्यास्ये<code>त्युक्त्या उभयोरपि भविष्यतीत्युभौग्रहणं व्यर्थमिति चेत्, अत्राहुः-- साहित्यमात्रं विवक्षितं न तुल्ययोग इत्यभ्युपगमे द्वयोर्युगपन्न सिध्येदित्युभौग्रहणम्। न च तुल्ययोगविवक्षायां</code>तेन सहेति तुल्योगे<code>इति समासोऽत्र न स्यादिति शङ्क्यं,</code>तुल्ययोगग्रहणं प्रायिकं, सकर्मकः सलोमक<code>इत्युक्तत्वादिति। कैयटे तु--</code>उभावित्यस्मिन्नसति साभ्यासस्याऽनितेर्णो भवतीत्युच्यमाने वचनसामर्थ्याच्च <code>पूर्वत्रासिद्धीयमद्विर्वचने</code> इत्यनाश्रीयमामे ?कृतणत्वस्य द्विर्वचने कृते अनन्तरस्याऽनितेरिति पूर्वेणैव णत्वस्य सिद्धत्वाद्व्यवहितनकारार्थमिदं णत्वं स्यात्, अनन्तरस्य तु तक्रकौण्डिन्यन्यायेन न स्यादिति उभावित्युच्यते&rsquo; इति स्थितम्। साभ्यासस्येति किम् ?। प्राण् नमति। असत्यस्मिन् <code>अनिते</code>रिति षष्ठी संबन्धसामान्ये स्यात्।ततश्चानन्तर्यादिसंबन्धोऽपि गृह्येत। सति त्वस्मिन्नवयवावयविभावसंबन्धो लभ्यते। अतोऽर्थवत्साभ्यासग्रहणम्। यदि त्विष्टानुरोधेनाऽनितेरिति षष्ठीजनम्। इह पूर्वं णत्वं कृत्वा द्वित्वे क#ऋते प्राणिणदित्यादिसिद्धावयमारम्भः <code>पूर्वत्रासिद्धीयमद्विर्वचने</code>इत्स्याऽनित्यत्वज्ञापनार्थः। तेन ऊर्णुनावेत्यत्र णत्वात्पूर्वमेव नुशब्दस्य द्वित्वादभ्यासोत्तरखण्डे णत्वाऽभावः सिद्धः।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

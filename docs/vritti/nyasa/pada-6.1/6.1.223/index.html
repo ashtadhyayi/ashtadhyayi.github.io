@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="राजपुरुषः इत्यादिषूदहरणेषु समासपदानां त�स्मस्तस्मिन्? स्वरे प्राप्ते सतीदमारभ्यते, स आख्यायते। राजशब्दे तावत्? कनिन्? युवृषितक्षिराजि (द.उ.6.51) इति कनिन्प्रत्ययान्तत्वात्? नित्स्वरेणाद्युदात्तत्वम्?। एवं पुरुषेऽपि, स हि पुरः कुषन्? (द.उ.6.51) इति कुषन्प्रत्ययान्तो व्युत्पाद्यते। ब्राहृण इदमिति तस्येदम्? (4.3.120) इति ब्राआहृणशब्दोऽणन्तः प्रत्ययस्वरेणान्तोदात्तः। कलस्तृपश्च (दा.उ.8.107) इति बृषादिभ्यश्चित्? (द.उ.8.109) बहुलवचनात्? कमेर्बुक्? (द.उ.8.114?) इति कम्बलशब्दो व्युत्पाद्यते, तेनायं चित्स्वरेणान्तोदात्तः। कन्यशब्दोऽन्तस्वरित; अध्न्यादयश्च (द.उ.8.14) इति निपात्यते। अथ वा&ndash;कनी [कन--धा.पा.] दीप्तिकान्तिगतिषु&#39; (धा.पा.460) इत्यस्मात्?ऋहलोर्ण्यत्?(3.1.124) इति ण्यत्?,कन्यायाः कनीन च(4.1.116) इति निपातनात्? वृद्ध्यभावः। तित्स्वरेणायमन्तस्वरितः सम्पद्यते। स्वनशब्दःस्वनहसोर्वा(3.3.62) इत्यबन्तत्वात्? धातुस्वरेणाद्युदात्तः। पटत्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.1/6.1.223.md">सम्पाद्यताम् 6.1.223।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.1/6.1.223.md">सम्पाद्यताम् 6.1.223।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.1.223 समासस्य।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>राजपुरुषः</code> इत्यादिषूदहरणेषु समासपदानां त�स्मस्तस्मिन्? स्वरे प्राप्ते सतीदमारभ्यते, स आख्यायते। राजशब्दे तावत्? <code>कनिन्? युवृषितक्षिराजि</code> (द.उ.6.51) इति कनिन्प्रत्ययान्तत्वात्? नित्स्वरेणाद्युदात्तत्वम्?। एवं पुरुषेऽपि, स हि <code>पुरः कुषन्?</code> (द.उ.6.51) इति कुषन्प्रत्ययान्तो व्युत्पाद्यते। ब्राहृण इदमिति <code>तस्येदम्?</code> (4.3.120) इति ब्राआहृणशब्दोऽणन्तः प्रत्ययस्वरेणान्तोदात्तः। <code>कलस्तृपश्च</code> (दा.उ.8.107) इति <code>बृषादिभ्यश्चित्?</code> (द.उ.8.109) बहुलवचनात्? <code>कमेर्बुक्?</code> (द.उ.8.114?) इति कम्बलशब्दो व्युत्पाद्यते, तेनायं चित्स्वरेणान्तोदात्तः। कन्यशब्दोऽन्तस्वरित; <code>अध्न्यादयश्च</code> (द.उ.8.14) इति निपात्यते। अथ वा&ndash;<code>कनी [</code>कन<code>--धा.पा.] दीप्तिकान्तिगतिषु' (धा.पा.460) इत्यस्मात्?</code>ऋहलोर्ण्यत्?<code>(3.1.124) इति ण्यत्?,</code>कन्यायाः कनीन च<code>(4.1.116) इति निपातनात्? वृद्ध्यभावः। तित्स्वरेणायमन्तस्वरितः सम्पद्यते। स्वनशब्दः</code>स्वनहसोर्वा<code>(3.3.62) इत्यबन्तत्वात्? धातुस्वरेणाद्युदात्तः। पटत्? पटद्? ष्यन्यत इति पटहशब्दः पृषोदरादित्वादन्तोदात्तः। शब्दशब्दः</code>शाशपिभ्यां ददनौ<code>(द.उ6.48) इति दन्प्रत्ययान्तत्वान्नित्स्वर#एणाद्युदात्तः। पचादिषु</code>नदट्?<code>इति पठ�ते, तेन</code>टिड्ढाणञ्?<code>(4.1.15) इति ङीपि कृते तत्र च</code>यस्येति च` (6.4.148) इत्यकारलोपे कृत उदात्तनिवृत्तिस्वरेणान्तोदात्तो नदीशब्दो भवति। घोशब्दो घञन्तत्वान्? ञित्स्वरेणाद्युदात्तः। पृषत्समिच्छब्दौ प्रातिपदिकस्दरेणान्तोदात्तौ।</p>
 
       </div>
@@ -142,30 +143,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

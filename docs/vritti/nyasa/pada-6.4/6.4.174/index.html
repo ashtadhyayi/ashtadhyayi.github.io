@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="उपचाराद्? ग्रन्थोऽप्यथर्वन्नित्युच्यते इति। उपचारस्य तु तत्प्रोक्तत्वमेव निबन्धनम्()। आथर्वणिकः इति। वसन्तादिभ्यष्ठक्() (4.2.65)। भ्रौणहत्यम्() इति। भ्रणं हतवानिति ब्राहृभ्रूणवृत्रेषु क्विप्() (3.2.87), तदन्तात्? ष्यञ्()। हरस्तोऽचिण्णलोः (7.3.32) इत्यनेनैव तकारः सिद्धः, त()त्क निपात्यते? इत्याह&ndash;इनस्तोऽचिण्णलोः इत्यादि। धातोः स्वरूपग्रहणे तत्प्रत्यये कार्यसम्प्रत्यय एव (जै।वृ।३१)। धातोः (6.1.156) इत्येवं यो विहितः प्रत्ययः, तत्र कार्यं विज्ञायत इत्यर्थः। न च ष्यञ्प्रत्ययो धातुप्रत्ययः, किं तर्हि? प्रातिपदिकप्रत्ययः तेन तत्र हनस्तोऽचिण्णलोः (7.3.32) इति तकारो न प्राप्नोति, अतो निपात्यते। कथं पुनर्विज्ञापते&ndash;धातोः स्वरूपग्रहणे तत्प्रत्यये कार्यं भवतीति? नैतदस्ति; न क्वादेः (7."/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.174.md">सम्पाद्यताम् 6.4.174।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-6.4/6.4.174.md">सम्पाद्यताम् 6.4.174।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           6.4.174 दाण्डिनायनहास्तिनायनाथर्वणिकजैहृआशिनेयवासिनायनिभ्रौण्हत्येधैवत्यसारवैक्ष्वाकमैत्रेयहिरण्मयानि।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>उपचाराद्? ग्रन्थोऽप्यथर्वन्नित्युच्यते</code> इति। उपचारस्य तु तत्प्रोक्तत्वमेव निबन्धनम्()। <code>आथर्वणिकः</code> इति। <code>वसन्तादिभ्यष्ठक्()</code> (4.2.65)।
 <code>भ्रौणहत्यम्()</code> इति। भ्रणं हतवानिति <code>ब्राहृभ्रूणवृत्रेषु क्विप्()</code> (3.2.87), तदन्तात्? ष्यञ्()। <code>हरस्तोऽचिण्णलोः</code> (7.3.32) इत्यनेनैव तकारः सिद्धः, त()त्क निपात्यते? इत्याह&ndash;<code>इनस्तोऽचिण्णलोः</code> इत्यादि। <code>धातोः स्वरूपग्रहणे तत्प्रत्यये कार्यसम्प्रत्यय एव</code> (जै।वृ।३१)। <code>धातोः</code> (6.1.156) इत्येवं यो विहितः प्रत्ययः, तत्र कार्यं विज्ञायत इत्यर्थः। न च ष्यञ्प्रत्ययो धातुप्रत्ययः, किं तर्हि? प्रातिपदिकप्रत्ययः तेन तत्र <code>हनस्तोऽचिण्णलोः</code> (7.3.32) इति तकारो न प्राप्नोति, अतो निपात्यते। कथं पुनर्विज्ञापते&ndash;धातोः स्वरूपग्रहणे तत्प्रत्यये कार्यं भवतीति? नैतदस्ति; <code>न क्वादेः</code> (7.3.59) इत्यत्र हि नेति योगदिभागादपि शक्यते कुत्वनिवृत्तिः कर्त्तुम्()। <code>भ्रौणध्नः वत्र्रध्नः</code> इति। अपत्यार्थेऽण्()। इक्ष्वाकुशब्दाद्यदा <code>जनपदशब्दात्()</code> (४।१।१३८) इत्यादिनाञ्? भवति, तदैक्ष्वाकशब्दो ञित्स्वरेणाद्युदात्तः। यदा तु <code>कोपधात्()</code> (4.2.131) इति शैषिकोऽण्(), तदान्तोदात्तः।
 ननु चैवंविधसूत्र एकस्योपादानेऽपरस्य ग्रहणं न सिद्ध्यति, तस्मादुभयोरपि स्वरभिन्नयोरुपादानं कत्र्तव्यम्()&ndash;<code>ए()आकः, ऐक्ष्वकः</code> इति। एतच्चोद्यमपाकर्त्तुमाह&ndash;<code>स्वरसर्वनाम्ना</code> इत्यादि। उदात्तादीनां स्वराणा मविभागेनोच्चारणम्(), एकश्रुतिः। सा च स्वराणां सर्वनामेव सर्वनाम यथैव हि <code>तस्यापत्यम्()</code> (4.1.92) इत्यादौ निर्देश उपगुप्रभृतीन्विशेषान्विभागेन प्रतिपदयति, ततैकश्रुतिरप्युदात्तादीन्स्वरविशेषान्()। तथात्रायमैक्ष्वाकशब्दः पठ()ते&ndash;नाप्याद्युदात्तो नाप्यन्तोदात्तः, तस्य त्वेवं पठितस्य प्रत्ययविशेषात्स्वरविशेषो भवति&ndash;यदाञ्? तदान्तादोत्तः।
@@ -146,30 +147,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

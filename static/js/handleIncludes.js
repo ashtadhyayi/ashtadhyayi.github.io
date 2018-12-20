@@ -11,7 +11,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
             var title = "";
             if (titleElements.length > 0) {
                 // console.debug(titleElements[0]);
-                title = titleElements[0].textContent;
+                title = titleElements[0].textContent.trim();
             }
             var editMePath = "";
             var editLinkElements = virtualJqPage.find("#currentSutraDiv");
@@ -30,21 +30,23 @@ function fillJsInclude(jsIncludeJqueryElement) {
                 console.log(responseHtml);
             } else {
                 // We don't want multiple post-content divs, hence we replace with an included-post-content div.
-                var elementToInclude = $("<div class='included-post-content'/>")
+                var elementToInclude = $("<div class='included-post-content card'/>")
                 var titleHtml = "";
-                titleHtml = "<h2 id='" + title + "'>" + title + "</h2>" +
-                "<a class='btn btn-default ma1' href='" + includedPageUrl + "'>पृथगीक्षताम्।</a> " +
-                `<a class='btn btn-default ma2' href='${editMePath}'>सम्पाद्यताम्।</a>`;
-                elementToInclude.html(titleHtml + contentElements[0].innerHTML);
+                titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
+                `<div id='${title}' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
+                `<i class="fas fa-caret-down"></i></a> </div>` +
+                "<div><a class='btn btn-secondary' href='" + includedPageUrl + "'>पृथगीक्षताम्।</a> " +
+                `<a class='btn btn-secondary' href='${editMePath}'>सम्पाद्यताम्।</a></div>` +
+                "</div>";
+                var contentHtml = `<div id='${title}_body' class="card-body collapse show">${contentElements[0].innerHTML}</div>`;
+                elementToInclude.html(titleHtml + contentHtml);
                 jsIncludeJqueryElement.html(elementToInclude);
             }
         },
         error: function(xhr, error){
             var titleHtml = "";
             var title = "Missing page.";
-            if (jsIncludeJqueryElement.attr("includeTitle")) {
-                titleHtml = "<h1 id='" + title + "'>" + title + "</h1>";
-            }
+            titleHtml = "<div id='" + title + "'>" + title + "</div>";
             jsIncludeJqueryElement.html(titleHtml + "Could not get: " + includedPageUrl + " See debug messages in console for details.");
             console.debug(xhr); console.debug(error);
         }

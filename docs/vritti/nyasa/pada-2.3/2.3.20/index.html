@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="अयमङ्गशब्दोऽवयवे प्रसिद्धः। स यदि तत्रैव वत्र्तमान इह गृह्रते तदाऽत्रैव स्यात्&ndash; अक्षि काणमस्येति; अत्र ह्रक्ष्णः शरीरावयवस्य विकारः काणेन गुणेन द्योत्यत इति। इह तु न स्यात्&ndash; अक्ष्णा काण इति। न ह्रत्रावयवस्याक्ष्णो विकारो लक्ष्यते, किं तर्हि? अङ्गनः समुदायस्येत्यत आह&ndash; अङ्गशब्दोऽत्रइत्यादि। अङ्गमस्यास्तीत्यङ्गः, अर्श आदित्वादच्प्रत्ययान्तोऽङ्गशब्द उपात्त इति दर्शयति; अङ्गिनोऽङ्गापेक्षत्वात्। यदपेक्षयाऽङ्गिनोऽङ्गित्वं तदेव येनेत्यनेन निर्दिश्यत इति दर्शयितुमाह&ndash; येन इत्यादि। विकृतेनेति सामथ्र्याल्लब्धमर्थं दर्शयति। न ह्रविकृतेनाङ्गनिनोऽङ्गेन विकारो लक्ष्यते। लक्ष्यते इति। द्योत्यत इत्यर्थः। अक्ष्णा काणः इति। अत्राक्ष्णाऽवयवेन विकृतेनाङ्गिनो देवदत्तस्य विकारो लक्ष्यत इति तत्सतृतीया। विभक्तिर्भवति। कथं पुनरवयवेन विकृतेन समुदायस्तथा व्यपदिश्यत इत्याह&ndash; अवयवधर्मेण इत्यादि। याथाऽढ()मिदं नगरमित्यवयवधर्मेणाढ()त्वेनात्र समुदायो व्यपदिश्यते, तथेहाप्यवयवेन विकृतन समुदायो व्यपदिश्यत इति। कथं पुनरत्राक्षिशब्दस्य प्रयोगः क्रियते, यावता विनाऽपि तेन काणत्वं गुणः समुदायस्य प्रत#ईयत एव?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.3/2.3.20.md">सम्पाद्यताम् 2.3.20।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-2.3/2.3.20.md">सम्पाद्यताम् 2.3.20।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           2.3.20 येनाङ्गविकारः।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>अयमङ्गशब्दोऽवयवे प्रसिद्धः। स यदि तत्रैव वत्र्तमान इह गृह्रते तदाऽत्रैव स्यात्&ndash; अक्षि काणमस्येति; अत्र ह्रक्ष्णः शरीरावयवस्य विकारः काणेन गुणेन द्योत्यत इति। इह तु न स्यात्&ndash; अक्ष्णा काण इति। न ह्रत्रावयवस्याक्ष्णो विकारो लक्ष्यते, किं तर्हि? अङ्गनः समुदायस्येत्यत आह&ndash; <code>अङ्गशब्दोऽत्र</code>इत्यादि। अङ्गमस्यास्तीत्यङ्गः, अर्श आदित्वादच्प्रत्ययान्तोऽङ्गशब्द उपात्त इति दर्शयति; अङ्गिनोऽङ्गापेक्षत्वात्। यदपेक्षयाऽङ्गिनोऽङ्गित्वं तदेव येनेत्यनेन निर्दिश्यत इति दर्शयितुमाह&ndash; <code>येन</code> इत्यादि। विकृतेनेति सामथ्र्याल्लब्धमर्थं दर्शयति। न ह्रविकृतेनाङ्गनिनोऽङ्गेन विकारो लक्ष्यते। <code>लक्ष्यते</code> इति। द्योत्यत इत्यर्थः। <code>अक्ष्णा काणः</code> इति। अत्राक्ष्णाऽवयवेन विकृतेनाङ्गिनो देवदत्तस्य विकारो लक्ष्यत इति तत्सतृतीया। विभक्तिर्भवति। कथं पुनरवयवेन विकृतेन समुदायस्तथा व्यपदिश्यत इत्याह&ndash; <code>अवयवधर्मेण</code> इत्यादि। याथाऽढ()मिदं नगरमित्यवयवधर्मेणाढ()त्वेनात्र समुदायो व्यपदिश्यते, तथेहाप्यवयवेन विकृतन समुदायो व्यपदिश्यत इति। कथं पुनरत्राक्षिशब्दस्य प्रयोगः क्रियते, यावता विनाऽपि तेन काणत्वं गुणः समुदायस्य प्रत#ईयत एव? सत्यमेतत्; लौकिके शब्दप्रयोगे गुरुलाघनं प्रत्यनादरात्। यस्तु तदाद्रियते सोऽक्षिशब्दं न प्रयुङ्क्त एव।
 <code>अक्षि काणमस्य</code> इति। अत्रासत्यङ्गग्रहणे काणशब्दात् तृतीया स्यात्। लक्ष्यते हि काणत्वेन गुणेनाक्ष्णो विकारः समुदायस्यावयवस्य॥</p>
 
@@ -143,30 +144,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="प्रत्ययार्थेन च इत्यादि। यथाजातीयः प्रत्ययार्थस्तथाजातीय एव यदि प्रकृत्यर्थो वति एवं प्रत्यय इत्यते, नान्यथा। प्रत्ययार्थेन प्रकृत्यर्थस्य तुल्यजातीयत्वं दर्शयितुमुदाहरणमुपन्यस्यति&ndash;एकादश कार्षापणाः इति। प्रकृत्यर्थोऽप्येकादश कार्षापणा एवेति प्रकृत्यर्थः प्रत्ययार्थेन समानजातीयः। इह तु न इत्यादि। अत्र हि कार्षापणशतं प्रत्ययार्थः। प्रकृत्यर्थस्त्वेकादश माषाः। ते च कार्षापणेभ्यो विजातीया इति न भवति प्रत्ययः। शतसहरुआयोश्चैवेष्यते इति। यत्? तदस्मिन्() त()स्मश्च शते सहरुओ वा प्रत्यय इष्यते; नान्यतर तिं()रशत्यादौ। कथं पुनरनुपात्तमेव सूत्रे लभ्यते? इत्याह&ndash;इति करणो विवक्षार्थः इत्यादि। कथम्() इत्यादि। यदि शते सहरुओ वाधिकिनि प्रत्ययेन भवितव्यम्(), इह प्रत्ययो न प्राप्नोति&ndash;एकादशं शतसहरुआमिति। अत्र हि शतसहरुआं संख्यान्तरञ्चाधिकम्(), न शतं नापि सहरुआमित्यभिप्रायः। शतानाम्() इत्यादि। अनेन शतसहरुआस्य संख्यान्तरं निरस्याति। यदा शतशब्दः षष्ठ()न्तः सहरुआशब्देन समस्यते तदा शतानां सहरुआं शतसहरुआशब्देनोच्यते। यदा तु सहरुआशब्दः षष्ठ()न्तशब्देन समस्यते, तदा सहरुआआणाअं शतं शतसहरुआशब्देनोच्यते। ननु च सहरुआशब्दस्य पष्ठ()न्तस्य समासे सहरुआशतमिति भवितव्यम्()?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-5.2/5.2.45.md">सम्पाद्यताम् 5.2.45।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-5.2/5.2.45.md">सम्पाद्यताम् 5.2.45।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           5.2.45 तदस्मिन्नधिकमिति दशान्ताड्डः।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p><code>प्रत्ययार्थेन च</code> इत्यादि। यथाजातीयः प्रत्ययार्थस्तथाजातीय एव यदि प्रकृत्यर्थो वति एवं प्रत्यय इत्यते, नान्यथा। प्रत्ययार्थेन प्रकृत्यर्थस्य तुल्यजातीयत्वं दर्शयितुमुदाहरणमुपन्यस्यति&ndash;<code>एकादश कार्षापणाः</code> इति। प्रकृत्यर्थोऽप्येकादश कार्षापणा एवेति प्रकृत्यर्थः प्रत्ययार्थेन समानजातीयः। <code>इह तु न</code> इत्यादि। अत्र हि कार्षापणशतं प्रत्ययार्थः। प्रकृत्यर्थस्त्वेकादश माषाः। ते च कार्षापणेभ्यो विजातीया इति न भवति प्रत्ययः। <code>शतसहरुआयोश्चैवेष्यते</code> इति। यत्? <code>तदस्मिन्()</code> त()स्मश्च शते सहरुओ वा प्रत्यय इष्यते; नान्यतर तिं()रशत्यादौ।
 कथं पुनरनुपात्तमेव सूत्रे लभ्यते? इत्याह&ndash;<code>इति करणो विवक्षार्थः</code> इत्यादि। <code>कथम्()</code> इत्यादि। यदि शते सहरुओ वाधिकिनि प्रत्ययेन भवितव्यम्(), इह प्रत्ययो न प्राप्नोति&ndash;एकादशं शतसहरुआमिति। अत्र हि शतसहरुआं संख्यान्तरञ्चाधिकम्(), न शतं नापि सहरुआमित्यभिप्रायः। <code>शतानाम्()</code> इत्यादि। अनेन शतसहरुआस्य संख्यान्तरं निरस्याति। यदा शतशब्दः षष्ठ()न्तः सहरुआशब्देन समस्यते तदा शतानां सहरुआं शतसहरुआशब्देनोच्यते। यदा तु सहरुआशब्दः षष्ठ()न्तशब्देन समस्यते, तदा सहरुआआणाअं शतं शतसहरुआशब्देनोच्यते। ननु च सहरुआशब्दस्य पष्ठ()न्तस्य समासे सहरुआशतमिति भवितव्यम्()? राजदन्तादिषु दर्शनात्? तस्य परनिपातो भविष्यतीत्यदोषः। <code>तत्र शतसहरुआयोरित्येव सिद्धम्()</code> इति। शतसहरुआवाच्यस्यार्थस्य शतसहरुआयोरेवान्तर्भावात्()।
 <code>अधिके</code> इत्यादि। लोके प्रत्ययार्थेन समानजातावधिके शतसहरुआयोरेव प्रत्ययाख्यं कार्यमिष्टम्()। यदा त्वसमानजात्यधिकं भवति, न च शतं सहरुआं वा प्रत्ययार्थेन विवक्षितम्(), तदा नेष्यते। अथैकादशं शतसहरुआमित्यत्र कस्याधिक्ये सति डः कत्र्तव्यः? इत्याह&ndash;<code>यस्य</code> इत्यादि। संख्या संख्यानम्(), गणनमित्यर्थः। यस्य संख्या, तस्याधिक्ये डः कत्र्तव्यः। कस्य च संख्या भवति? अधिकत्वं संख्यायते यस्य। यदा शतानि संक्यायते तदा&ndash;शतानां सहरुआमिति शतसहरुआम्(), तदा शताधिक्ये डः कत्र्तव्यः। एकादशाधिकान्स्मिन्? सहरुआ एकादशं शतसहरुआमिति। यदा तु सहरुआआणि संख्यायते&ndash;सहरुआआणां शतं सहरुआशत्मिति, तदा सहरुआआधिक्ये डः कत्र्तव्यः। एकादशसहरुआआण्यधिकान्यस्मिन्नेकादशं शतसहरुआमिति। अथ किमर्थं तदिति प्रथमासमर्थविभक्तिरुपादीयते? यावता <code>तदस्य सञ्जातम्()</code> (5.2.36) इत्यनुवत्र्तत एव, तत्र प्रत्ययार्थ एवास्मिन्निति निर्देष्टव्यः? नैवं शक्यम्(); तदनुवृत्तौ हि तत्सम्बन्धस्यास्येति प्रत्यार्थस्याप्यनुवृत्तिः प्रसज्येत। न च षष्ठीसप्तम्यर्थयोर्विरोधः; ततोऽस्मिन्निति निर्देशात्? पूर्वः प्रत्ययार्थो न निवत्र्तते, तस्यां त्वनुवृत्तौ षष्ठ()र्थेऽपि प्रत्ययः स्यात्()। तस्मादस्येति निवृत्त्यर्थं पुनस्तदिति प्रथमासमर्थविभक्तिरुपादीयते। यद्येवम्(), अस्येति प्रत्ययार्थस्य निवृत्तत्वात्? <code>संख्याया गुणस्य निमाने मयट्()</code> (5.2.47) इत्यत्र षष्ठ()र्थे प्रत्ययो न प्राप्नोति। इह निवृत्तस्यापि मण्डूकप्लुतिन्यायेनानुवृत्तिर्भविष्यतीत्यदोषः। अन्ये तु ज्ञापकं तदित्यस्य वर्णयन्ति। तदिति प्रकृते यत्? तदित्याह, तज्ज्ञापयति&ndash;<code>तदस्य सञ्जातम्()</code> (5.2.36) इत्यादौ सूत्रे यन्निर्दिष्टं तदिहानुवत्र्तमानमप्यङ्गभावं न यातीति षष्ठ()र्थे प्रत्ययो न भवति॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 

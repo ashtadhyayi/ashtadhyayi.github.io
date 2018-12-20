@@ -48,12 +48,16 @@
 <meta name="twitter:description" content="प्रत्यभिवादादिषु वाक्यस्य टेः प्लुत उदात्तः। स एव तु ऋकारवर्जितस्य गुरोरनन्त्यस्य प्लुत उच्यते। अव्त्यस्यापि टेः इति। अनेनापिशब्दष्टेः तमुच्चयं करोतीति दर्शयति। यदि ह्रपिशब्देन गुरोः समुच्चयः क्रियते, अनन्त्यस्यापि,गुरोरन्त्यस्यापीति, तदानेन गुरावनन्त्ये प्लुतः। लघुरन्त्यः पूर्वेण प्लुत एव। ततश्च द्वयोः प्लुतयोः श्रवणं युगपत्? प्रसज्येत। न च अनुदात्तं पदमेकवर्जम्() (6.1.152) इति वचनान्न भविष्यतीति शक्यं वक्तुम्(); तस्मिन्? कत्र्तव्ये प्लुतस्यासिद्धत्वात्()। यदा टिसंज्ञकोऽपिशब्देन समुच्चीयते तदानेनैव सूत्रेणान्त्यस्य[सूत्रेणानन्त्यस्य&ndash;प्रांउ।पाठः] गुरोरनन्त्यस्य च टेः प्लुतो विधीयते। तत्रैकैकस्येति वचनाद्यथानन्त्यस्य पर्यायो न भवति, तथान्त्यस्यापीति न भवति यौगपद्यप्रसङ्गः। एकैकग्रहणम्() इत्यादि। यद्येकैकग्रहणं न क्रियत, तदा पक्षे युगपदेव सर्वेषां प्रसज्येत। तस्मात्?"/>
 
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/ui/css/fonts.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <script src="/ui/js/sutraNavigation.js"></script>
     <script src="/ui/js/handleIncludes.js"></script>
@@ -78,24 +82,23 @@
 
   <body class="ma0 avenir bg-near-white">
 
-    
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a  href="/ui/about/" class="display-1">
-      <i class="glyphicon glyphicon-home"></i>
+    <header>
+  <div class="bg-orange">
+    <nav role="navigation">
+  <div class="container-fluid d-flex justify-content-between">
+    <a  href="/ui/about/" class="btn btn-default">
+      <i class="fas fa-home "></i>
     </a>
-    <input id="sutraSearchInputBox">
-    <div class="flex-l items-center">
-      
+    <div id="sutraNavigationDiv" class="row">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       
         <div id="prevSutraDiv"></div>
         
-        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.2/8.2.86.md">सम्पाद्यताम् 8.2.86।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/nyasa/pada-8.2/8.2.86.md">सम्पाद्यताम् 8.2.86।</a>
         <div id="nextSutraDiv"></div>
       
+      
+    </div >
       
       
 <div hidden>
@@ -112,29 +115,27 @@
 
 
 
-    </div>
   </div>
 </nav>
 
-    </div>
-  </header>
-
+  </div>
+</header>
 
     <main class="container" role="main">
       
   <div>
-    <article class="col-xs-12">
+    <article class="col-xs-12 card">
       <header>
-        <p id="vrittiIdElement" class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
           NYASA
-        </p>
-        <h1 class="f1">
+        </div>
+        <h2 class="card-title">
           
           
           8.2.86 गुरोरनृतोऽनन्त्यस्याप्यैकैकस्य प्राचाम्?।
-        </h1>
+        </h2>
       </header>
-      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         <p>प्रत्यभिवादादिषु वाक्यस्य टेः प्लुत उदात्तः। स एव तु ऋकारवर्जितस्य गुरोरनन्त्यस्य प्लुत उच्यते। <code>अव्त्यस्यापि टेः</code> इति। अनेनापिशब्दष्टेः तमुच्चयं करोतीति दर्शयति। यदि ह्रपिशब्देन गुरोः समुच्चयः क्रियते, अनन्त्यस्यापि,गुरोरन्त्यस्यापीति, तदानेन गुरावनन्त्ये प्लुतः। लघुरन्त्यः पूर्वेण प्लुत एव। ततश्च द्वयोः प्लुतयोः श्रवणं युगपत्? प्रसज्येत। न च <code>अनुदात्तं पदमेकवर्जम्()</code> (6.1.152) इति वचनान्न भविष्यतीति शक्यं वक्तुम्(); तस्मिन्? कत्र्तव्ये प्लुतस्यासिद्धत्वात्()। यदा टिसंज्ञकोऽपिशब्देन समुच्चीयते तदानेनैव सूत्रेणान्त्यस्य[सूत्रेणानन्त्यस्य&ndash;प्रांउ।पाठः] गुरोरनन्त्यस्य च टेः प्लुतो विधीयते। तत्रैकैकस्येति वचनाद्यथानन्त्यस्य पर्यायो न भवति, तथान्त्यस्यापीति न भवति यौगपद्यप्रसङ्गः।
 <code>एकैकग्रहणम्()</code> इत्यादि। यद्येकैकग्रहणं न क्रियत, तदा पक्षे युगपदेव सर्वेषां प्रसज्येत। तस्मात्? पर्यायेण यथा स्यादित्येनमर्थमेकैकग्रहणम्()। एतच्च <code>यथोद्देशं संज्ञापरिभाषम्()</code> (व्या।प।५९) इत्याश्रित्य कृतमिति वेदितव्यम्()। दर्शनान्तरे <code>अनुदात्तं पदमेकवर्जम्()</code> (6.1.152) इत्यस्योपस्थाने सति न प्लुतयोद्र्वयोर्यौगपद्यप्रसङ्गः।
 अथ प्राचामिति किम; यावतैकैकग्रहणादेव विभाषा सिध्येत्()? इत्यत आह&ndash;<code>प्राचाम्()</code> इति। सर्वस्य प्लुतस्येत्यभिप्रायः। अत एवाह&ndash;<code>तदनेन</code> इत्यादि। अपायहेतुमविमृश्य प्रवृत्तिः=साहसम्()॥</p>
@@ -144,30 +145,15 @@
   </div>
 
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="btn btn-default" href="/ui/about/" >
+    <footer class="bg-orange " role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/ui/about/" >
     परिचयः
   </a>
-  <a class="btn btn-default" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
     प्रतिस्पन्दः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
-    <div>
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-</div>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   </div>
 </footer>
 
