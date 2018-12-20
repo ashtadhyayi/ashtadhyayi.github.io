@@ -52,6 +52,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/autocomplete.js"></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -76,49 +78,7 @@
         <script type="text/javascript">
           let sutraId = "6.2.151";
           let sutraBasics = JSON.parse("{\"Next\":\"6.2.152\",\"Previous\":\"6.2.150\",\"अकारादिक्रमसङ्ख्या\":2739,\"कौमुदीक्रमसङ्ख्या\":3885,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"मन्क्तिन्व्याख्यानशयनासनस्थानयाजकादिक्रीताः\"}");
-          let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
-          function getSutraLinkRelative(sutraId) {
-            let sutraPaada = sutraId.split(".").slice(0,2).join(".");
-            return `../../pada-${sutraPaada}/${sutraId}/`;
-          }
-          function getSutraLinkTag(sutraId, style) {
-            let sutraLink = getSutraLinkRelative(sutraId);
-            return `<a href="${sutraLink}"  class="${style}"> ${sutraId} </a>`;
-          }
-          if (sutraBasics.Previous) {
-            // console.log(nextSutraPaada);
-            $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
-          }
-          if (sutraBasics.Next) {
-            $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
-            
-          }
-          let sutraAutocompleteMap = new Map();
-          $.ajax({
-            type: "GET",
-            url: "\/ui\/data\/sutrANi.tsv",
-            dataType: "text",
-            success: function(response) {
-              var options={"separator" : "\t"};
-              sutraList = $.csv.toObjects(response, options);
-              for (var sutraObject of sutraList) {
-                let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
-                sutraAutocompleteMap.set(autocompleteText, sutraObject);
-              }
-              
-              $("#sutraSearchInputBox").autocomplete({
-                source: Array.from(sutraAutocompleteMap.keys())
-              });
-            }
-          });
-          $("#sutraSearchInputBox").change(function() {
-            let sutraSelected = $(this).val();
-            let sutraDetails = sutraAutocompleteMap.get(sutraSelected)
-            console.log(sutraDetails);
-            if (sutraDetails) {
-              window.location = getSutraLinkRelative(sutraDetails.index);
-            }
-          });
+          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
         </script>
       
       
