@@ -1,6 +1,7 @@
 function fillJsInclude(jsIncludeJqueryElement) {
     var includedPageUrl = jsIncludeJqueryElement.attr("relativeUrlBase") + getSutraLinkRelative(sutraId);
-    console.debug(includedPageUrl);
+    var isCollapsed =  jsIncludeJqueryElement.hasClass("collapsed");
+    // console.debug(includedPageUrl);
     $.ajax(includedPageUrl,{
         success: function(responseHtml) {
             // We want to use jquery to parse html, but without loading images. Hence this.
@@ -38,7 +39,12 @@ function fillJsInclude(jsIncludeJqueryElement) {
                 "<div><a class='btn btn-secondary' href='" + includedPageUrl + "'>पृथगीक्षताम्।</a> " +
                 `<a class='btn btn-secondary' href='${editMePath}'>सम्पाद्यताम्।</a></div>` +
                 "</div>";
-                var contentHtml = `<div id='${title}_body' class="card-body collapse show">${contentElements[0].innerHTML}</div>`;
+                var collapseStyle = "collapse show";
+                console.debug(isCollapsed);
+                if (isCollapsed) {
+                  collapseStyle = "collapse";
+                }
+                var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${contentElements[0].innerHTML}</div>`;
                 elementToInclude.html(titleHtml + contentHtml);
                 jsIncludeJqueryElement.html(elementToInclude);
             }
