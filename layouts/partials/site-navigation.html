@@ -21,11 +21,6 @@
         {{$dataRepoPath := replace .File.Path "vritti/" "" }}
         <a class="ma1 white-90 hover-white " href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">Edit {{.Params.index}}!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "{{.Params.index}}";
-          let sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
-          let autocompletePageUrl = "{{ "data/sutrANi.tsv" | relURL }}";
-        </script>
       {{ end }}
       {{ partialCached "social-follow.html" . }}
     </div>

@@ -8,13 +8,17 @@ function getSutraLinkTag(sutraId, style) {
 }
 
 $(document).ready(function(){
-  let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
-  if (sutraBasics.Previous) {
-    // console.log(nextSutraPaada);
-    $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
-  }
-  if (sutraBasics.Next) {
-    $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
-    // console.log(nextSutraPaada);
+  try{
+    let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
+    if (sutraBasics.Previous) {
+      // console.log(nextSutraPaada);
+      $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, style="hover-white no-underline white-90 ma1"));
+    }
+    if (sutraBasics.Next) {
+      $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, style="hover-white no-underline white-90 ma1"));
+      // console.log(nextSutraPaada);
+    }
+  } catch(e) {
+    console.log("Not a sutra page, probably.");
   }
 });
