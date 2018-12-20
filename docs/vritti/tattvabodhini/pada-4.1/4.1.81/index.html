@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-4.1\/4.1.81.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.81";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.82\",\"Previous\":\"4.1.80\",\"अकारादिक्रमसङ्ख्या\":1920,\"कौमुदीक्रमसङ्ख्या\":1201,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ष्यङ्\",\"विषयः २\":\"तद्धितः स्त्र्याम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दैवयज्ञिशौचिवृक्षिसात्यमुग्रिकाण्ठेविद्धिभ्योऽन्यतरस्याम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-4.1/4.1.81.md">Edit 4.1.81!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.81";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.82\",\"Previous\":\"4.1.80\",\"अकारादिक्रमसङ्ख्या\":1920,\"कौमुदीक्रमसङ्ख्या\":1201,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ष्यङ्\",\"विषयः २\":\"तद्धितः स्त्र्याम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दैवयज्ञिशौचिवृक्षिसात्यमुग्रिकाण्ठेविद्धिभ्योऽन्यतरस्याम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.81 दैवयज्ञिशौचिवृक्षिसात्यमुग्रिकाण्डेविद्धिभ्योऽन्यतरस्याम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>दौवयज्ञि। चतुर्भ्य इति। <code>इञन्तेभ्य</code>इति शेषः। देवा यज्ञा यष्टव्या यस्य स देवयज्ञः। शुचिर्वृक्षो यस्य शुचिवृक्षः। सत्यमुग्रं यस्य सत्यमुग्रः। निपातनाद्विशेष्यस्य पूर्वनिपातः, मुमागमश्च। काण्डेन विद्धः कण्ठेविद्धः। <code>कर्तृकरणे कृते</code>ति समासः। निपातनात्काण्डशब्दस्यैकारः। पाठान्तरे कण्ठे विद्धमस्य, कण्ठे वा विद्धः कण्ठेविद्धः। <code>अमूर्धमस्तकादि</code>त्यलुक्। एभ्यः सर्वेभ्योऽपत्ये <code>अत इञ्</code>। गोत्रेऽपि परत्वादिति। तथा चोभयत्र विभाषेति भावः। अत्रेदमवधेयम्&ndash;<code>अणिञो</code>रिति सूत्रे यदि शास्त्रीयं गोत्रं गृह्यते तदा <code>अगोत्रार्थमिद</code>मित्यादिग्रन्थः स्वरसतः सङ्गच्छते। यदि तु लौकिकं गोत्रमेव तत्र गृह्यते तदा <code>अणिञोरि</code>ति नित्ये प्राप्ते विकल्पार्थमिदमित्येव व्याख्यातुनुचितमिति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.4\/4.4.20.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.4.20";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.4.21\",\"Previous\":\"4.4.19\",\"अकारादिक्रमसङ्ख्या\":1187,\"कौमुदीक्रमसङ्ख्या\":1570,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निर्वृत्तेऽक्षद्यूतादिभ्यः\",\"विषयः २\":\"प्राग्वहते ष्ठक्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"क्त्रेर्मम् नित्यं\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.4/4.4.20.md">Edit 4.4.20!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.4.20";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.4.21\",\"Previous\":\"4.4.19\",\"अकारादिक्रमसङ्ख्या\":1187,\"कौमुदीक्रमसङ्ख्या\":1570,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निर्वृत्तेऽक्षद्यूतादिभ्यः\",\"विषयः २\":\"प्राग्वहते ष्ठक्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"क्त्रेर्मम् नित्यं\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.4.20 त्रेर्मम्नित्यम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>डिवतः क्त्रिरित्ययं त्रिशब्दो गृह्रते</code> इति। संख्याशब्दः कस्मान्न गृह्रते??नभिधानात्। न हि त्रिरित्युच्यते विवक्षितार्थस्य प्रतीतिर्भवति। <code>उप्त्रिमम्</code> इति। <code>वचिस्वपियजादीनां किति</code> (6.1.15) इति सम्प्रसारणम्।
 <code>नित्यग्रहणं स्वातन्त्र्यनिवृत्त्यर्थम्</code> इति। केवलस्य त्रिप्रत्ययान्तस्य मप्प्रत्ययरहितस्य प्रयोगः स्वातन्त्र्यम्, तन्निवृत्त्यर्थं नित्यग्रहणम्। स्वातन्त्रनिवृत्त्यर्थे नित्यग्रहणे सति योऽर्थः सम्पद्यते तं <code>{त्र्यन्तः----मु।पाठः} त्र्यन्तम्</code> इत्यादिना दर्शयति। <code>विषयान्तरे</code> इत्यादिना यदेवकारस्य व्यवच्छेद्यं तदाचष्टे। मप्प्रत्ययविषयार्थादन्यविषये यत्र प्रत्ययो न भवति तद्वि यान्तरम्। नित्यग्रहणं तन्निवृत्तिर्यथा स्यादित्येवमर्थं वेदितव्यम्।।</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

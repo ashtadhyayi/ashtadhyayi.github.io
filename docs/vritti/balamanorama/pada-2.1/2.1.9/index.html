@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-2.1\/2.1.9.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.1.9";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.1.10\",\"Previous\":\"2.1.8\",\"अकारादिक्रमसङ्ख्या\":3764,\"कौमुदीक्रमसङ्ख्या\":663,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययीभावः समासः\",\"विषयः २\":\"समासः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सुप्प्रतिना मात्राऽर्थे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.1/2.1.9.md">Edit 2.1.9!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.1.9";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.1.10\",\"Previous\":\"2.1.8\",\"अकारादिक्रमसङ्ख्या\":3764,\"कौमुदीक्रमसङ्ख्या\":663,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययीभावः समासः\",\"विषयः २\":\"समासः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सुप्प्रतिना मात्राऽर्थे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.1.9 सुप्प्रतिना मात्रार्थे
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सुप्प्रतिना मात्रार्थे। सुबिति छेदः। मात्रा-लेशः। तस्मिन्नर्थे विद्यमानेन प्रतिना सुबन्तं समस्यत इत्यर्थः। सुबित्यनुवर्तमाने पुनः सुब्ग्रहणं संनिहितस्याऽव्ययमित्यस्याननुवृत्त्यर्थं, तद्ध्वनयन्नुदाहरति-शाकस्य लेश इति। अत्र <code>प्रती</code>त्यव्ययं मात्रार्थकम्। अतस्तेन शाकस्येति सुबन्तस्य समासः। समासविधौ सुबन्तस्य प्रथमानिर्दिष्टत्वेन उपसर्जनत्वात्पूर्वनिपातः, न तु प्रतेः, तस्य समासविधौ तृतीयानिर्दिष्टत्वात्। वृक्षं प्रतीति। अत्र प्रतेर्मात्रार्थकत्वाऽभावान्न तेन समासः। न च <code>लक्षणेत्थ</code>मिति कर्मप्रवचनीयत्वविधानसामर्थ्यादेवाऽत्र समासो न भविष्यति, सति समासे द्वितीयायाः षष्ठ�आ वा लुकि अविशेषात्, सकृत्प्रवृत्ततया समासात्तद्विभक्त्यनुत्पत्तेरिति वाच्यम्, <code>वृक्षं प्रति सिञ्चती</code>त्यादौ <code>उपसर्गात्सुनोती</code>ति षत्वनिवृत्त्या कर्मप्रवचनीयत्वस्य चरितार्थत्वादित्यन्यत्र विस्तरः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

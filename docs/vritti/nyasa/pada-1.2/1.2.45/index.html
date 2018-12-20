@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.2\/1.2.45.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.2.45";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.2.46\",\"Previous\":\"1.2.44\",\"अकारादिक्रमसङ्ख्या\":350,\"कौमुदीक्रमसङ्ख्या\":178,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":135,\"विषयः १\":\"प्रातिपदिकम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अर्थवदधातुरप्रत्ययः प्रातिपदिकम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.45.md">Edit 1.2.45!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.2.45";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.2.46\",\"Previous\":\"1.2.44\",\"अकारादिक्रमसङ्ख्या\":350,\"कौमुदीक्रमसङ्ख्या\":178,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":135,\"विषयः १\":\"प्रातिपदिकम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अर्थवदधातुरप्रत्ययः प्रातिपदिकम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.2.45 अर्थवदगधातुरप्रत्ययः प्रातिपदिकम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अभिधेयवचनोऽयमर्थशब्दः</code> इति। एतेन प्रयोजनादिवचनाद्वयवच्छिनत्ति। अर्थशब्दो हि प्रयोजनवचनोऽप्यस्ति, यथा&ndash; अनेनार्थनागतः, अनेन प्रयोजनेनेति गम्यते। निवृत्तिवचनोऽप्यस्सि, यथा&ndash; मशकारर्थो धूम इति, मशकनिवृत्त्यर्थ इति गम्यते। धनवचनोऽप्यस्ति,यथा&ndash;अर्थवान् देवदत्त इति, धनवानिति गम्यते। अभिधेयवचनोऽप्यस्ति, यथा&ndash; अस्य वचनस्यायमर्थ इति, इदमस्याभिधेयमिति गम्यते। इह त्वभिधेयवचनस्यैव ग्रहणम्। तत् पुनरभिधेयं जातिगुणक्रियाद्रव्यभेदेन चतुर्विधम्।अत एव चतुष्टयी शब्दानां प्रवृत्तिर्भवति। तत्र जातिशब्दानां जातिरभिधेया&ndash; गौरिति। यद्यर्थवतः प्रातिपदिकसंज्ञा विधीयते तदाऽभाववचनशशविषाणादिशब्दानां प्रातिपदिकसंज्ञा नोपपद्यते, अर्थाभावात्, नैतदस्ति; <code>अर्थशब्दोऽभिधेयवचनः</code> (का।१।२।४५) इत्युक्तम्, अभावोऽप्यभिधेयो भवत्येव। अन्यथा ह्रर्थाभावादितीदं वचनमनुच्चारणीयं स्यात्, अनर्थकत्वात्, न ह्रनर्थकं वचनं प्रयोगर्हति। तस्मादबाववचनानामपि प्रातिपदिकसंज्ञा भवत्येव।
 <code>नान्तस्याधेर्मा भूत्</code> इति। ननु चाधातुरिति प्रतिषेधो भविष्यति, तथा हि <code>वन सम्भ्कतौ</code> (धा।पा।४६३), <code>धन धान्ये</code> (धा।पा।११०४) इत्येतयोः धरात्वोरेते रूपे, नैतदस्ति; अव्युत्पन्नावपि वनधनशब्दौ स्तः, तयोरेवायं प्रयोगः। अत्र यदि नान्तस्यावधेः प्रातिपदिकसंज्ञा स्यात् तदा सुबुत्पत्तिः स्यात्, ततश्च पदसंज्ञायां सत्यां नलोपः स्यात्। ननु च <code>अधातुः</code> <code>अप्रत्ययः</code>&ndash; नैतदस्ति; अनर्थकस्यापि धातोर्विद्यमानत्वात् यथा&ndash; <code>इङ अध्ययने</code> (धा।पा।१०४६), <code>इक् स्मरणे</code> (धा।पा।१०४७) इति&ndash; एतयोरधिपूर्वयोरेवार्थवत्त्वम्, न केवलयोः। यस्तु गणपाठेऽनयोरर्थनिर्देशः, स समुदायार्थमवयवेऽध्यारोप्य कृत इति वेदितव्यम्। अध्यारोपितार्थयोरपि तयोर्गणपाठसामथ्र्याद्धातुसंज्ञा भवत्येव। एवं प्रत्ययोऽप्यनर्थकोऽप्यस्ति। यथा&ndash; <code>यावादिभ्यः कन्</code> (5.4.29), याव एव यावक इति। न ह्रत्र प्रत्ययस्यान्वयव्यतिरेकाभ्यां शक्यतेऽर्थवत्त्वं प्रत्येतुम्। विनापि तेन कन्प्रत्ययेन यावशब्दादेव तदर्थः प्रतीययते। तस्मादर्थवदिति युक्तमुक्तम्।
 <code>अहन्</code> इति। अदादित्वाच्छपो लुक्, तिपो हल्ङ्यादिना (6.1.66) लोपः, अट्। स च हन्तिग्रहणेन गृह्रत इति कृतेऽपि तस्मिन् हन्तिर्दातुरेव। अत्र विना धातुग्रहणेन प्रागेव प्रत्ययोत्पत्तेः प्रातिपदिकसंज्ञा स्यात्। नलोपस्तु प्रत्ययोत्पत्तौ पदत्वे सत्युत्तरकालम्। अथ वा&ndash; प्रातिपदिकसंज्ञाऽपि प्रत्ययोत्पत्तेरुत्तरकालमेव स्यात्, तस्माद्धातुग्रहणं कर्तव्यम्। ननु चात्र प्रत्ययलक्षणेन <code>अप्रत्ययः</code> इति प्रतिषेधेन भवितव्यम्,तत् किमधातुग्रहणेन? नैतदस्ति; प्रातिपदिकसंज्ञायां नलोपः कार्यः, नलोपे च <code>न ङिसम्बुद्धयोः</code> (8.2.8) इति प्रतिषेधो ज्ञापकः- प्रत्ययलक्षणेन <code>अप्रत्ययः</code> इति प्रतिषेधो न प्रवर्तत इति। यदि ह्रप्रत्यय इति प्रत्ययलक्षणेन हे राजन्नित्येवमादिषु प्रातिपदिकसंज्ञायाः प्रतिषेधः स्यात्, <code>न ङिसम्बुद्धयोः</code> (8.2.8) इति प्रतिषेधो अनर्थकः स्यात्; प्राप्त्यभावात्। अथ भिद्-छिद्-लूः- पूरित्येवमादीनां कथं प्रातिपदिकसंज्ञा, यावता क्विबन्ता धातुत्वं न जहतीति धातव एवैत इति, अत्राधातुरिति प्रतिषेधेन भवितव्यम्? नैष दोषः; मा भूदनेन, कृदन्तत्वादुत्तर सूत्रेण भविष्यति। न चोत्तरस्याः प्राप्तेरयं बाधकः; वाक्यान्तरस्थत्वात्। <code>मध्येऽपवादाः पूर्वान् विधीन् बाधन्ते नोत्तरान्</code> (व्या।प।१०) इति वा।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

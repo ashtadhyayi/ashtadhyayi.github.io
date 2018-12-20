@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-5.3\/5.3.68.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.68";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.69\",\"Previous\":\"5.3.67\",\"अकारादिक्रमसङ्ख्या\":3234,\"कौमुदीक्रमसङ्ख्या\":2023,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वार्थिकः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"विभाषा सुपो बहुच् पुरस्तात्तु\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-5.3/5.3.68.md">Edit 5.3.68!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.68";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.69\",\"Previous\":\"5.3.67\",\"अकारादिक्रमसङ्ख्या\":3234,\"कौमुदीक्रमसङ्ख्या\":2023,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वार्थिकः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"विभाषा सुपो बहुच् पुरस्तात्तु\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.68 विभाषा सुपो बहुच् पुरस्तात्तु
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>विभाषा। ईषदसमाप्तावित्यनुवर्तते। तदाह&ndash;ईषदसमाप्तिविशिष्ट इति। प्रागेवेति। सूत्रे तुशब्दोऽवधारणे इति भावः। बहुपटुरिति। पटुशब्दात्सुबन्तात्प्राग्बहुचि कृते प्रातिपदिकावयवत्वात्सुपो लुकि समुदायात्पुनः सुबुत्पत्तिः। नच तद्धितान्तत्वाऽभावात्समासत्वाऽभावाच्च पूर्वोत्पन्नसुब्विशिष्टस्य प्रातिपदिकत्वाऽभावात्कथमिह लुगिति वाच्यम्, <code>अर्थव</code>दित्यनेन तस्य प्रातिपदित्वसत्त्वात्। पटुरित्यस्य पूर्वोत्पन्नसुप्प्रत्ययान्तत्वेऽपि <code>बहुपटु</code>रिति समुदायस्य प्रत्ययान्तत्वाऽभावात्, प्रत्ययग्रहणे यस्मात्स विहितस्तदादेरेव ग्रहणात्। नचैवं सति <code>कृत्तद्धिते</code>त्यत्र समासग्रहणं व्यर्थमिति वाच्यं, <code>पदघटितसङ्घातस्य चेत्प्रातिपदिकसंज्ञा तर्हि समासस्यैवे</code>ति नियमार्थत्वात्। नचैवं सति प्रकृते <code>बहुपटु</code>रिति समुदायस्य पूर्वोत्पन्नसुब्विशिष्टस्य कथं प्रातिपदिकत्वम्, असमासत्वादिति वाच्यं, <code>यत्र सङ्घाते पूर्वो भागः पदं तस्य चेत्प्रातिपदिकसंज्ञातर्हि समासस्यैवे</code>ति नियमशरीराभ्युपगमादिति प्रागुक्तं न विस्मर्तव्यम्। न च <code>समर्थाना</code>मिति सूत्रे वाग्रहणादेव सिद्धे विभाषाग्रहणं व्यर्थमिति वाच्यं, बहुजभावपक्षे पूर्वसूत्रविहितकल्पबाद्यर्थत्वात्। अन्यथा <code>महाविभाषया अपवादेन मुक्ते उत्सर्गस्य न प्रवृत्ति</code>रिति सिद्धान्ताद्बहुजभावे वाक्यमेव स्यात्। नच कल्पबादीनां बहुचा समानविषयकत्वान्निरवकाशत्वं शङ्क्यं, तेषां तिङन्ते सावकाशत्वादिति भाष्ये स्पष्टम्। एतदभिप्रेत्याह&ndash;पटुकल्प इति। ननु लुबन्तात्तद्धितोत्पत्तिरिति सिद्धान्तादिह सुब्ग्रहणं व्यर्थमिति पृच्छति&ndash;सुपः किमिति। <code>तिङ्श्चे</code>त्यनुवृत्तिनिवृत्त्यर्थं सुब्ग्रहणम्। नच अस्वरितत्वादेव तदनुवृत्तिर्न भविष्यति इति वाच्यम्, <code>अव्ययसर्वनाम्ना</code>मित्याद्युत्तरसूत्रे <code>तिङ्श्चे</code>त्यनुवृत्तेरावश्यकतया तस्य स्वरितत्वावश्यकत्वादिति भाष्ये स्पष्टम्। एतदभिप्रेत्याह&ndash;यजतिकल्पमिति। तुग्रहणं तु <code>स्वार्थिकाः प्रकृतितो लिङ्गवचनान्यनुवर्तते, क्वचिदतिवर्तन्ते</code> इति ज्ञापनार्थमिति भाष्ये प्रपञ्चितम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

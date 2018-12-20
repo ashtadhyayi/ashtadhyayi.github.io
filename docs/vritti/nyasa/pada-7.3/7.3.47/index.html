@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.3\/7.3.47.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.47";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.48\",\"Previous\":\"7.3.46\",\"अकारादिक्रमसङ्ख्या\":2656,\"कौमुदीक्रमसङ्ख्या\":466,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कात्पूर्वस्य अत इत्-त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"भस्त्रैषाऽजाज्ञाद्वास्वानञ्पूर्वाणामपि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.3/7.3.47.md">Edit 7.3.47!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.47";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.48\",\"Previous\":\"7.3.46\",\"अकारादिक्रमसङ्ख्या\":2656,\"कौमुदीक्रमसङ्ख्या\":466,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कात्पूर्वस्य अत इत्-त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"भस्त्रैषाऽजाज्ञाद्वास्वानञ्पूर्वाणामपि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.47 भस्त्रैषाजाज्ञाद्वास्वा नञ्पूर्वाणामपि।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>भस्त्रका, भस्त्रिका</code> इति। पूर्ववत्? कः। <code>अभस्त्रका, अभस्त्रिका</code> इति। पूर्ववत्? कप्रत्ययः, बहुव्रीहिः, ततपुरुषो वा।
 अथ कस्मादेषा&ndash;द्वे नञ्पूर्वे नोदाह्यियेते? इत्याह&ndash;<code>एषाद्वे नञ्पूर्वे न प्रयोजयतः</code> इति। प्रकृतत्वादित्त्वप्रतिषेधविकल्प इति विज्ञेयम्()। <code>किं कारणम्()</code> इति। अनेन नञ्पूर्वयोरप्रयोजकत्वे कारणं पृच्छति। <code>अत्र हि</code> इत्यादिना तत्करं दर्शयति। <code>सोऽन्तर्वर्तिन्या विभक्त्या</code> इति। याऽसौ समासार्था विभक्तिस्तया लुप्तयाऽपि प्रत्ययलक्षणेन स आप्सुबन्तादेवैतच्छब्दाद्? द्विशब्दाच्च परः सम्पद्यते, तेनेत्त्वस्य प्राप्तिरेव नास्ति; <code>असुपः</code> (7.3.44) इति प्रतिषेधात्(), त()त्क प्रतिषेधविकल्पेन? तस्मादेषाद्वे नञ्पूर्वे न प्रयोजयतः।
 यद्येवम्(), अनयैव युक्त्या स्वशपब्दोऽपि न प्रयोजयेत्()? इत्यत आह&ndash;<code>स्वशब्दस्तु</code> इत्यादि। युक्तं यदेषाद्व नञ्पूर्वे न प्रयोजयतः, अत्र व्यवधानाभावात्? सुबन्तात्? पर आब् भवतीति कृत्वा, न हि प्राक्? टेर्भवन्नकज्? व्यवधायको भवितुमर्हति; स्वशब्दस्तु <code>स्वमज्ञाति धनाख्यायाम्()</code> (1.1.34) इति वचनाज्ज्ञातिधनयोरसर्वनामसंज्ञकः, तेन तस्मात्? कप्रत्ययेनैव भवितव्यम्(), नाकचा, तत्र यदि नञ्समासं कृत्वा कप्रत्ययः क्रियते, तदन्ताच्च टाप्(), तदासौ सुबन्तात्? परो न भवति; कप्रत्ययेन व्यवधानादिति असर्वनामंज्ञकः स्वशब्दो नञ्पूर्वोऽपि विकल्पं प्रयोजयति।<br />
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

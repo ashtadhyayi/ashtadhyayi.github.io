@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-5.4\/5.4.135.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.135";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.136\",\"Previous\":\"5.4.134\",\"अकारादिक्रमसङ्ख्या\":1271,\"कौमुदीक्रमसङ्ख्या\":874,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"गन्धस्येदुत्पूतिसुसुरभिभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-5.4/5.4.135.md">Edit 5.4.135!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.135";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.136\",\"Previous\":\"5.4.134\",\"अकारादिक्रमसङ्ख्या\":1271,\"कौमुदीक्रमसङ्ख्या\":874,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"गन्धस्येदुत्पूतिसुसुरभिभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.135 गन्धस्येदुत्पूतिसुसुरभिभ्यः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>गन्धस्येदुत्। <code>गन्धस्य-इत्</code> इति च्छेदः। एभ्य इति। उत्-पूति-सु-सुरभि-एतेभ्यः इत्यर्थः। इकारोऽन्तादेश इति। पूर्वोत्तरसाहचर्यादिकार आदेश एवेति भावः। समासान्ताधिकारात् <code>आदेः परस्ये</code>ति न भवति। उद्नन्धिरिति। उद्गतो गन्धो यस्येति विग्रहः। पूतिगन्धिरिति। पूतिशब्दोऽसुरबौ। पूर्तिर्गन्धो यस्येति विग्रहः। सुगन्धिरिति। शोभनो गन्धो यस्येति विग्रहः। पूतिगन्धिरिति। पूतिशब्दोऽसुरभौ। पूर्तिर्गन्धो यस्येति विग्रहः। सर्वत्र <code>वायु</code>रिति विशेष्यम्। तदेकान्तेति। तस्य =विशेष्यभूतद्रव्यस्य, एकान्तः=एकदेश इव प्रतीयमान इत्यर्थः। अत्र गन्धस्य गुणस्य द्रव्यैकदेशत्वं न युज्यत इत्याशङ्क्य एकान्तशब्द एकदेशवदविभक्ते लाक्षणिक इत्याह&ndash;एकान्त एकदेश इवेति। सुगन्धि पुष्पं सलिलं चेति। अत्र गन्धस्य पुष्पात्सलिलाच्च द्रव्यात्पृथगलक्ष्यमाणत्वादिति भावः। सु शोभना इति। <code>सु</code> इत्यस्य व्याख्यानं-शोभना इति। गन्धा इति। गन्धवन्त इत्यर्थः। <code>गुणवचनेभ्यो मतुपो लुगिष्टः</code> इति लुक्। द्रव्याणीति। चन्दनादीनीत्यर्थः। <code>गन्धा</code> इत्यस्य विशेष्यमेतत्। गन्धशब्दस्य नपुंसकद्रव्यविशेषणत्वेऽपि नियतलिङ्गत्वात्पुंस्त्व#ं युज्यते। <code>गन्धस्तु सौरभे नृत्ये गन्धके गर्वलेशयोः। स एव द्रव्यवचनो बहुत्वे पुंसि च स्मृतः</code> इति कोशात्। गन्ध आपण इति। अत्र गन्धशब्दवाच्यानां चन्दनादिद्रव्याणां विशेष्यभूतापणापेक्षया पृथग् लक्ष्यमाणत्वादित्त्वं नेति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

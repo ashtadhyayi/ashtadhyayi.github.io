@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.3\/2.3.46.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.3.46";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.3.47\",\"Previous\":\"2.3.45\",\"अकारादिक्रमसङ्ख्या\":2540,\"कौमुदीक्रमसङ्ख्या\":532,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रथमा\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रातिपदिकार्थलिङ्गपरिमाणवचनमात्रे प्रथमा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.3/2.3.46.md">Edit 2.3.46!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.3.46";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.3.47\",\"Previous\":\"2.3.45\",\"अकारादिक्रमसङ्ख्या\":2540,\"कौमुदीक्रमसङ्ख्या\":532,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रथमा\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रातिपदिकार्थलिङ्गपरिमाणवचनमात्रे प्रथमा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.3.46 प्रातिपदिकार्थलिङ्गपरिमाणवचनमात्रे प्रथमा।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>प्रातिपदिकार्थः सत्ता</code>इति। यदि जातिस्तदा देवदत्तादौ न स्यात्। अथ सतो भावः सत्ता, तदाकाशकुसुमादौ न स्यादित्याह&ndash; प्रादिपदिकार्थः सत्तेति। यत्रार्थान्तरनिरपेक्षा शब्दस्य प्रवृत्तिः स सर्वः प्रातिपदिकार्थः। सत्ताग्रहणन्तूपलक्षणार्थम्। उच्चैर्नीचैः<code>इति। अत्रोच्चैः शब्दस्य स्वार्थे जात्याद्यर्थान्तनिरपेक्षः वृत्तिः। अत्र च प्रथमायाः प्रयोजनम्--</code>सपूर्वायाः प्रथमाया विभाषा<code>(8.1.26) इति विकल्पेन तेमयादिविधिर्यथा स्यात्-- ग्राम उच्चैस्ते स्वम्, ग्राम उच्चैस्तव स्वमिति। पदसंज्ञा तु षष्ठ()आऽपि स्यादेव। 
 </code>कुमारी, वृक्षः, कुण्डम्<code>इति। ननु चात्रापि प्रातिपदिकार्थ इत्येवंसिद्धा प्रथमा; लिङ्गमपि प्रातिपदिकार्थ एव भवति। तथा च वक्ष्यत</code>स्त्रियाम्<code>(4.1.3) इत्यत्र</code>सिद्धास्तु स्त्रियाः प्रातिपदिकविशेषणत्वात् स्वार्थे टाबादयः<code>(वा।४।१३) इति? नैतदस्ति; इदमपि हि तत्र वक्ष्यति--</code>अथ वा पुनरिदमस्तु। स्त्रियामभिधेयायाम्<code>(म।भा।४।१।३) इति। किञ्च-- स्त्रीतवं प्रत्येषा गतिः स्यात्, पुंनपुंसके तु नियोगतो विभक्तिवाच्ये एव। तथा हि-- विना विभक्त्या तटशब्दाः प्रत्युज्यमानः किं पुंस्त्वमाचष्टे? उत नपुंसकत्वम्? इति सन्देहः स्यात्। तत्र यथा राज्ञः पुरुषः इत्यत्र प्रातिपदिकार्थेनानुपात्ते स्वस्वामिकसम्बन्धे तस्य चाभिधाने विभक्त्यपक्षया षष्ठी भवति, तथा पुंनपुंसकयोरपि षष्ठी स्यात्। तस्माल्लिङ्गग्रहणं कत्र्तव्यम्।
 </code>द्रोणः, खारी, आढकम्<code>इति। ननु चात्रापि प्रातिपदिकार्थत्वादेव सिध्यति प्रथमा, तथा हि -- द्रोणादयः शब्दाः परिमाणे लौहे दारुमये वा अर्थान्तरनिपेक्षा एव वत्र्तन्ते? सत्यम्; सिध्यति तदा यदा परिमाण एव वत्र्तन्ते, यदा तु पुनः परिमेये वर्तन्ते तदा न सिध्यति। तथा हि-- द्रोणादयः शब्दा द्रोणादिकं परिमाणमर्थान्तरं प्रवृत्तिनिमित्तमुपादाय व्रीह्रादौ परिमेयं वत्र्तन्ते। कथं पुनस्ते तत्र वत्र्तन्ते? सोऽयमित्यबेदसम्बन्धात्- द्रोणपरिमितो व्रीहिद्र्रोण इति। यद्येवम्, निमित्तरूपेण निमित्तनोऽभिधानादव्यतिरिक्त एव प्रातिपदिकार्थ इति प्रातिपदिकार्थ इत्येव सिद्धा प्रथमा? न सिध्यति, न हि मुख्ये सति गौणस्याश्रयणं युक्तम्। नन्वेवमपि लिङ्गग्रहणादेवात्र प्रथमा भविष्यति, त()त्क परिमाणग्रहणेन? नैतदस्ति; तस्य हि यत्र परिमाणं नास्ति सोऽवकाश इति। अत्र परिमाणाधिक्ये षष्ठ()एव स्यात्। तस्मात् परिमाणग्रहणं कत्र्तव्यम्।
@@ -135,9 +147,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

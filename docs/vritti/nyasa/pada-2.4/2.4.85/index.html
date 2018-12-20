@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.4\/2.4.85.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.4.85";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.1.1\",\"Previous\":\"2.4.84\",\"अकारादिक्रमसङ्ख्या\":3010,\"कौमुदीक्रमसङ्ख्या\":2188,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लादेशाः\",\"विषयः २\":\"(लाधिकारे स्यात्)\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लुटः प्रथमस्य डारौरसः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.4/2.4.85.md">Edit 2.4.85!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.4.85";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.1.1\",\"Previous\":\"2.4.84\",\"अकारादिक्रमसङ्ख्या\":3010,\"कौमुदीक्रमसङ्ख्या\":2188,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लादेशाः\",\"विषयः २\":\"(लाधिकारे स्यात्)\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लुटः प्रथमस्य डारौरसः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.4.85 लुटः प्रथमस्य डारौरसः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         
 
 <p>परस्मैपदस्यात्मनेपदस्य च यथाक्रमं डारौरस्&ndash; इत्येत आदेशा भवन्ति<code>इति। यद्ेयवम्, परस्मैपदेषु तिप् तस् झीत्येतत् प्रत्येकं प्रथमपुरुषसंज्ञा, आत्मनेपदेष्वपि त आतां झ इति; तत्र स्थानिनः षट्, त्रय आदेशा इति वैषम्यात् संख्यायानुदेशाभावादेकैकस्य पर्यायेण सर्व आदेशाः स्युः? नैष दोषः; आनन्तर्यतो हि व्ययस्था भविष्यति। तच्चार्थकृतमानन्तर्यम्---</code> एकार्थस्यैकार्थः, द्वयर्थस्य द्व्यर्थः, बह्वर्थस्य बह्वर्थ इति। <code>कत्र्ता</code> इति। <code>अनद्यतने लुट्</code> (3.3.15), तिप्, तस्यानेकाल्त्वात् डा इत्ययं सर्वादेशः। ननु च नानुबन्धकृतमनेकाल्त्वम् (व्या।प।१४), डकारश्चानुबन्धः,तत् कुतोऽनेकाल्त्वं यतः सर्वादेशः स्यात्? नैष दोषः; न ह्रकृते सर्वादेशे <code>चुटू</code> (1.3.7) इतीत्संज्ञा भवति। इत्संज्ञाया अभावे चानुबन्धो न भवतीत्यनेकाल्त्वात् सर्वादेशो भवति। डित्यभस्यापि <code>टेः</code> (6.4.143) इति टिलोपः। <code>कत्र्तारौ, कात्र्तारः</code> इति। <code>रिच</code> (7.4.51) इति सकारलोपः। एवमध्येतेत्येवमादीनि रूपाणि <code>इङ अध्ययने</code> (धा।पा।१०४६) इत्येतस्य। अत्र परमपि टेरेत्वं बाधित्वाऽन्तरङ्गत्वात् डादय आदेशा भवन्ति। अन्तरङ्गत्वं पुनस्तेषां स्थानिमात्रापेक्षत्वात्। टेरेत्वन्तु बहिरङ्गम्; तद्धि धातुमप्यपेक्षते, न केवलं स्थानिनम्; आ तृतीयाध्यायपरिसमाप्तेः <code>धातोः</code> (3.1.7) इत्यस्याधिकृतत्वात्। <code>थासः से</code> (3.4.80) इति ज्ञापकम्&ndash; तिङादेशस्य टेरेत्वं न भवतीति। तेन कृतेष्वपि डारौरस्स्वेत्त्वं न भवति। <code>कत्र्तासि</code> इति। <code>तासस्त्योर्लोपः</code>(7.4.50) इति सकारलोपः॥
@@ -144,9 +156,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

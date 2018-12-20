@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.3\/3.3.76.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.3.76";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.3.77\",\"Previous\":\"3.3.75\",\"अकारादिक्रमसङ्ख्या\":3898,\"कौमुदीक्रमसङ्ख्या\":3253,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"भावे अकर्तरि\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"हनश्च वधः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.3/3.3.76.md">Edit 3.3.76!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.3.76";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.3.77\",\"Previous\":\"3.3.75\",\"अकारादिक्रमसङ्ख्या\":3898,\"कौमुदीक्रमसङ्ख्या\":3253,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"भावे अकर्तरि\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"हनश्च वधः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.3.76 हनश्च वधः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>स चान्तोदात्तः</code> इति। सूत्रे वधशब्दस्यान्तोदात्तस्योच्चारणात्। <code>तत्र</code>इत्यादिनाऽन्तोदात्ते वधादेशे यदिष्टं सिध्यति तद्दर्शयति। अपि कृते <code>अतो लोपः</code> (6.4.48) इत्यकारलोपे च <code>अनुदात्तस्य च यत्रोदात्तलोपः</code>(6.1.155) इत्यप उदात्तत्वं भवति। <code>धातः</code> इति। कर्मादौ कारके घञ्,<code>हनस्तोऽटिण्णलोः</code> (7.3.32) इति तत्वम्; <code>हो हन्तेः</code> (7.3.54) इत्यादिना कुत्वम्। <code>चकारो भिन्नक्रमत्वात्</code> इत्यादि। चकारो नादेशेन सम्बध्यत इति सम्बन्धः।कस्मान्न सम्बध्यते? भिन्नक्रमत्वात्। यदि <code>हनो वधश्च</code> इत्येष चकारस्य क्रमः; आदेशानन्तरमनुच्चारणात्।तस्मात् भिन्नक्रमत्वात् क्रमभेदान्नादेशेन सम्बध्यते।अपि तु प्रकृतेन प्रत्ययेन। एवञ्च प्रकृतेन सम्बन्धं दर्शयितुमाह&ndash; <code>अप् च</code> इत्यादि। अप् प्रत्ययो भवति, चकारावृत्तेर्यः प्राप्नोति स च। तेन घञपि भवति॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

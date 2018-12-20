@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.2\/1.2.18.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.2.18";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.2.19\",\"Previous\":\"1.2.17\",\"अकारादिक्रमसङ्ख्या\":2017,\"कौमुदीक्रमसङ्ख्या\":3322,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"अक्तित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न क्त्वा सेट्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.18.md">Edit 1.2.18!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.2.18";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.2.19\",\"Previous\":\"1.2.17\",\"अकारादिक्रमसङ्ख्या\":2017,\"कौमुदीक्रमसङ्ख्या\":3322,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"अक्तित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न क्त्वा सेट्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.2.18 न क्त्वा सेट्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>क्त्वाप्रत्ययस्यौपवेशिकं कित्त्वमस्त्येवेति तदिटः क्त्वाप्रत्ययेन ग्रहणात् सेटोऽपि प्राप्नोतीत्यतः प्रतिषेधऽयमारभ्यते। <code>क्त्वाप्रत्ययः सेट् किन्न भवति</code> इति। अथ किं ककारस्येत्संज्ञाप्रतिषेधात् कित्त्वन्न भवति? कित्कार्यस्य प्रतिषेधाद्वा? यदि ह्रत्र ककारस्येत्संज्ञाप्रतिषेधादकित्त्वं विधित्सितं स्यादित्संज्ञाप्रकरणे <code>लशक्वसेट्क्त्वातद्धितयोः</code> इति सूत्रं कुर्यात्। एवं हि द्विष्प्रतिषेधो न कत्र्तव्यो भवति। तस्मात् कित्त्वप्रतिबद्धं यत् कार्यं तत्प्रतिषेधादकित्त्वं सेटः क्त्वाप्रत्यस्यानेन क्रियते, न तु ककारस्येत्संज्ञाप्रतिषेधात्।
 अथ सानुबन्धकस्य ग्रहणं किमर्थम् <code>न त्वा</code> इत्येवोच्येत,एवं हि लघु सूत्रं भवति? नैतदस्ति; ककारानुच्चारणे हि कश्चिद्द्वेष्यमपि विजानीयात्। सेटः क्त्वाप्रत्ययस्य ककारानुबन्ध एव नास्ति, निरनुबन्धकस्योच्चारणादिति। तदेवं मा विज्ञायीति सानुबन्धकस्योच्चारणम्।कः पुनः सेटो निरनुबन्धकत्वे विधौ निरनुबन्धक उच्चार्यते? एवमपि सेट एव ग्रहणं स्यात्, नानिटः;सानुबन्धकत्वात्।
 <code>निगृहीतिः</code>इति। <code>स्त्रियां क्तिन्</code> (3.3.94) <code>तितुत्रतथ</code> (७।२।९) इति <code>ग्रहादीनां प्रतिषेधो वक्तव्यः (वा।८३१।?) इति तितुत्रतथेत्यादिनेट्प्रतिषेधो न भवति।</code>उपस्निहितिः<code>इति।</code>स्निह प्रीतौ<code>(धा।पा।१२००),</code>निकुचितिः<code>इति।</code>कुन्चु क्रुन्चु कौटिल्याल्पीभावयोः<code>(धा।प।१८५,१८६) एषु त्रिषूदाहरणेषु यथाक्रमं संप्रसारणगुणप्रतिषेधौ।</code>अनिदितां हल उपधायाः क्ङिति<code>(6.4.24) इत्यनुनासिकलोपश्च कित्त्वाद्भवति।
@@ -137,9 +149,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

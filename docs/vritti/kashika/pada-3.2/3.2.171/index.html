@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-3.2\/3.2.171.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.171";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.172\",\"Previous\":\"3.2.170\",\"अकारादिक्रमसङ्ख्या\":527,\"कौमुदीक्रमसङ्ख्या\":3151,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"वर्तमाने ताच्छील्य-अर्थ-अधिकारः\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"आदृगमहनजनः किकिनौ लिट् च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-3.2/3.2.171.md">Edit 3.2.171!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.171";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.172\",\"Previous\":\"3.2.170\",\"अकारादिक्रमसङ्ख्या\":527,\"कौमुदीक्रमसङ्ख्या\":3151,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"वर्तमाने ताच्छील्य-अर्थ-अधिकारः\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"आदृगमहनजनः किकिनौ लिट् च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.171 आदृगमहनजनः किकिनौ लिट् च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आकारान्तेभ्यः ऋवर्णान्तेभ्यः गम हन जन इत्येतेभ्यश्च छन्दसि विषये तच्छीलादिषु किकिनौ प्रतयौ भवतः। लिङ्वच् च तौ भवतः। आतिति तकारो मुखसुखार्थः, न त्वयं अपरः, मा भूत्तादपि परः तपरः इति ऋकारे तत्कालग्रहणम्। पपिः सोमं ददिर्गाः। ददथुः मित्रावरुणा ततुरिम् मित्रावरुणौ ततुरिः। दूरे ह्रध्वा जगुरिः। जग्मिर्युवा। जघ्निर्वृत्र। जज्ञि बिजम्। अथ किमर्थं कित्त्वम्, यावता असंयोगाल् लिट् कित् (*1,2.5) इति कित्त्वं सिद्धम् एव? ऋच्छत्यृऋताम् (*7,4.11) इति लिटि गुणः प्रतिषेधविषय आरभ्यते, तस्य अपि बाधनार्थं कित्त्वम्। किकिनावुत्सर्गश् छन्दसि सदादिभ्यो दर्शनात्। सेदिः। नेमिः। भाषायां धञ्कृञ्सृजनिगमिनमिभ्यः किकिनौ वक्तव्यौ। दिधिः। चक्रिः। सस्त्रिः। जज्ञिः। जग्मिः। नेमिः। सहिवहिचलिपतिभ्यो यङन्तेभ्यः किकिनौ वक्तव्यौ। दीर्घो ऽकितः (*7,4.83) सासहिः। वावहिः। चाचलिः। पापतिः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

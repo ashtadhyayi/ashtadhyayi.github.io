@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-8.2\/8.2.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.2\",\"Previous\":\"8.1.74\",\"अकारादिक्रमसङ्ख्या\":2418,\"कौमुदीक्रमसङ्ख्या\":12,\"प्रकारः\":\"अतिदेशः; अधिकारः\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":39,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूर्वत्रासिद्धम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-8.2/8.2.1.md">Edit 8.2.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.2\",\"Previous\":\"8.1.74\",\"अकारादिक्रमसङ्ख्या\":2418,\"कौमुदीक्रमसङ्ख्या\":12,\"प्रकारः\":\"अतिदेशः; अधिकारः\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":39,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूर्वत्रासिद्धम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.1 पूर्वत्रासिद्धम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>पूर्वत्रासिद्धम्। यद्ययं स्वतन्त्रो विधिः स्यात्तर्हि त्रिपादी पूर्वं प्रत्यसिद्धेत्येव लभ्येत, त्रैपादिकं तु पूर्वं प्रति परं नासिद्धं स्यात्, तथाच प्रशानित्यत्र <code>मो नो धातोः</code> इति नत्वस्य सिद्धत्वान्नलोपः स्यात्, नत्वविधेः संबुद्धौ चरितार्थत्वात्। तथाऽनङ्वानित्यत्र संयोगान्तलोपस्य सिद्धत्वान्नलोपः स्यात् , नुम्बनिधेस्तु संबुद्धौ चरितार्थत्वात्। तथाऽनङ्वानित्यत्र संयोगान्तलोपस्य सिद्धत्वान्नलोपः स्यात्, नुम्बिधेस्तु संबुद्धौ चरितार्थत्वाद्त आह-अदिकारोऽयमिति। त्रिपाद्यां विहितं कार्यमिति कार्याऽसिद्धिपक्षे अमू अमूमित्यादि न सिद्ध्येदिति भावः। यथा चैतन्न सिध्यति तथाऽदःशब्दव्याख्यावसरेऽस्माभिरुपपादयिष्यते। एकादशधेति। यद्यपि भाष्येऽष्टावुक्ताः, उदात्तादयस्तु नोक्ताः, तथापि कैयटोक्तिमनुसृत्यैकादशोक्ता इति बोध्यम्। खयां यमा इति। बालबोधनाय बाह्यप्रयत्नाः कैश्चित्सुगमोपायेनोपनिबद्धाः। तद्यथा-<code>खरो विवाराः �आआसा अघोषाश्च, हशः संवारा नादा घोषाश्च, वर्गाणां प्रथमतृतीयपञ्चमा यणश्चाल्पप्राणाः, वर्गाणां द्वितीयचतुर्थौ शलश्च महाप्राणाः</code> इति। �आआसानुप्रदाना इति। �आआसप्रयत्नका इत्यर्थः। विवृण्वते कण्ठमिति। विवार एषा प्रयत्न इति भावः। अन्येत्विति। हशो, हशां यमाः, अनुस्वारश्च। नादेति। नादभागिनः। नाश्प्रयत्नवन्त इत्यर्थः। अयुग्मा इति। प्रथमतृतीयपञ्चमा वर्गेष्वयुग्माः। वर्गयमगा इति। वर्गगा-यमगाश्चेत्यर्थः। अल्पेति। अल्पासवः=अल्पप्राणाः। <code>पुंसि भूम्न्यसवः प्राणाः</code> इत्यमरः। अनुपयुक्ता इति। अन्यथा कखगघादीनां परस्परं सावर्ण्यं न स्यादिति भावः। आन्तरतम्यपरीक्षायामिति। परीक्षा च-<code>अघोषस्य महाप्राणस्य सस्य तादृश एव थकारः</code>, <code>घोषवतो नादवतो महाप्राणस्य हस्य तादृशो वर्गचतुर्थ</code> इत्यादिना मूले एव स्फुटीभविष्यति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

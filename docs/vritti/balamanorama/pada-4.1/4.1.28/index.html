@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-4.1\/4.1.28.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.28";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.29\",\"Previous\":\"4.1.27\",\"अकारादिक्रमसङ्ख्या\":167,\"कौमुदीक्रमसङ्ख्या\":462,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अन उपधालोपिनोन्यतरस्याम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-4.1/4.1.28.md">Edit 4.1.28!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.28";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.29\",\"Previous\":\"4.1.27\",\"अकारादिक्रमसङ्ख्या\":167,\"कौमुदीक्रमसङ्ख्या\":462,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अन उपधालोपिनोन्यतरस्याम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.28 अन उपधालोपिनोऽन्यतरस्याम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अथ बहवो राजानो यस्या इति बहुव्रीहौ बहुराजन्शब्दात् <code>अनो बहुव्रीहे</code>रिति ङीब्निषेधे <code>डाबुभाभ्या</code>मिति डापि च नान्तत्वमाकारान्तत्वं च प्राप्तम्, ङीबन्तत्वमपीष्यते, तदर्थमिदमारभ्यते-अन उपधा। इदं सूत्रं नात्र प्रकरणे पठितम्, किंतु <code>दामहायनान्ताच्चे</code>त्युत्तरं पठितं, प्रसङ्गादत्रोपन्यस्तम्। <code>बहुव्रीहेरूधसो ङी</code>षित्यतो बहुव्रीहेरित्यनुवर्तते, किंतु <code>दामहायनान्ताच्चे</code>त्युत्तरं पठितं, प्रसङ्गादत्रोपन्यस्तम्। <code>बहुव्रीहेरूधसो ङी</code>षित्यतो बहुव्रीहेरित्यनुवर्तते, <code>संख्याव्ययादेर्ङी वित्यतो ङीबिति च। प्रातिपदिकादित्यदिकृतमन इत्यनेन विशेष्यते, तदन्तविधिः। तदाह--अन्नन्तादित्यादिना। पक्षे डाब्ङीब्निषेधाविति। कदाचिन्ङीब्निषेधः, कदाचिड्डाप्येत्यर्थः। अन्यतरस्याङ्ग्रहणस्य प्रयोजनमिदम्। अकृतेऽत्वन्यतरस्याङ्ग्रहणे बहुयज्वादिशब्दे अनुपधालोपिनि सावकाशस्य</code>अनो बहुव्रीहे<code>रिति ङीप्प्रतिषेधस्य</code>डाबुभाभ्या`मिति डापश्च बहुराजन्शब्दादावुपधालोपिन्यनवकाशेन ङीपा बाधः स्यात्। बहुराज्ञीति। ङीपि अल्लोपे सोर्हल्ङ्यादिलोप इति भावः। बहुराजेति। डापि ङीब्निषेधे च सौ रूपम्। बहुराज्ञ्याविति। ङीप्पक्षे औङि यण्। बह#उराजे इति। डाप्पक्षे औङि रूपम्। बहुराजानाविति ष। ङीब्निषेधे औङि रूपम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

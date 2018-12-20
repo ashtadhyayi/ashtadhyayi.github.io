@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.4\/8.4.14.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.4.14";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.4.15\",\"Previous\":\"8.4.13\",\"अकारादिक्रमसङ्ख्या\":787,\"कौमुदीक्रमसङ्ख्या\":287,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"उपसर्गादसमासेऽपि णोपदेशस्य\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.4/8.4.14.md">Edit 8.4.14!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.4.14";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.4.15\",\"Previous\":\"8.4.13\",\"अकारादिक्रमसङ्ख्या\":787,\"कौमुदीक्रमसङ्ख्या\":287,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"उपसर्गादसमासेऽपि णोपदेशस्य\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.4.14 उपसर्गादसमासेऽपि णोपदेशस्य।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>णोपदेशस्य</code> इति। ण उपदेशे यस्य स णोपदेशः&ndash;गमकत्वादैयधिकरण्ये बहुव्रीहिः। अथ वा&ndash;उपविश्यते प्रथमत उच्चार्यत इत्युपदेशः, ण उपदेशो यस्येति समानाधिकरण एव बहुव्रीहिः। <code>प्रणमति</code> इति। <code>णम प्रह्वत्वे शब्दे च</code> (धा।पा। ९८१)। <code>प्राणायकः</code> इति। <code>णोञ्? प्रापणे</code> (धा।पा। ९०१), ण्वुल्(), प्रादिसमासः।
 <code>प्रनायको देशः</code> इति। अत्र गर्मि प्रति क्रियायुक्तत्वात्? प्रशब्दस्य गमिमेव प्रत्युपसर्गत्वम्(), न नयतिं प्रति, यं प्रति प्रयुक्ताः प्रादयस्तं प्रति गत्युपसर्गसंज्ञाविधानात्()। <code>असमासेऽपीति किम्()</code> इति। विनाऽप्यनेन विशेषानुपादानात्? समासेऽसमासेऽपि भविष्यतीति भावः। <code>पूर्वपदाधिकारात्()</code> इत्यादि। पूर्वपदात्? (8.4.3) इति वत्र्तते। असमासे भवति पूर्वपदत्वम्()। रूढिशब्दो हि पूर्वपदशब्दः पूर्वमाश्रितः, स एव चेहानुवत्र्तते, स च समास एव संभवति, ततश्च समासेऽपीत्युच्यमाने <code>समास एव स्यात्()</code> इति। इतिकरणो हेतौ। यस्मादसति तस्मिन्नेष दोषस्तस्मात्? तस्य पूर्वपदस्य निवृतिं()त द्योतयितुम्? <code>असमासेऽपि</code> इत्युच्यते। द्योतनग्रहणेनैतदाचष्टे&ndash;नानेन तस्य निवृत्तिः क्रियते, किं तर्हि? अस्वरितत्वादविद्यमानतैव केवलं प्रकाश्यत इति। तदेतदुक्तं भवति&ndash;मन्दबुद्धिर्य एवं प्रतिपत्तुमसमर्थस्तं प्रति विस्पष्टीकरणार्थमसमासेऽपीत्युच्यत इति। <code>प्रनर्दति</code> इति। <code>नर्द गर्द शब्दे</code> (धा।पा।५६,५७)। सत्यप्यच्परत्वेऽच्परोऽयं णोपदेशो न भवति; <code>नृतिनर्दिनन्दिनक्किनाथृनवर्जम्()</code> (म।भा।) इत्यपवादविधानात्()॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

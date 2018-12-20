@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-2.1\/2.1.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.1.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.1.2\",\"Previous\":\"1.4.110\",\"अकारादिक्रमसङ्ख्या\":3625,\"कौमुदीक्रमसङ्ख्या\":647,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"समर्थः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"समर्थः पदविधिः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-2.1/2.1.1.md">Edit 2.1.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.1.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.1.2\",\"Previous\":\"1.4.110\",\"अकारादिक्रमसङ्ख्या\":3625,\"कौमुदीक्रमसङ्ख्या\":647,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"समर्थः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"समर्थः पदविधिः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.1.1 समर्थः पदविधिः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>परिभाषेयम्। यः कश्चिदिह शास्त्रे पदविधिः श्रूयते स समर्थो विदितव्यः। विधीयते इति विधिः। पदानां विधिः पदविधिः। स पुनः समासादिः। समर्थः शक्तः। विग्रहवाक्यार्थभिधाने यः शक्तः स समर्थो विधितव्यः। अथ वा समर्थपदाश्रयत्वात् समर्थः। समर्थनां पदानां सम्बद्धार्थानां संसृष्टार्थानां विधिर्वेदितव्यः। वक्ष्यति, द्वितीया श्रितातीतपतितगतात्यस्तप्राप्ताऽपन्नैः (*2,1.24) कष्टं श्रितः कष्टश्रितः। समर्थग्रहणं किम्? पश्य देवदत्त कष्टं, श्रितो विष्णुमित्रो गुरुकुलम्। तृतीया तत्कृतार्थेन गुणवचनेन (*2,1.30) शङ्कुलया खण्डः शङ्कुलाखण्डः। समर्थग्रहणं किम्? किं त्वं करिष्यसि शङ्कुलया, खण्डो देवदत्त उपलेन। चतुर्थी तदर्थार्थवलिहितसुखरक्षितैः (*2,1.36) यूपाय दारु यूपदारु। समर्थग्रहणं किम्? गच्छ त्वं यूपाय, दारु देवदत्तस्य ग्रेहे। पञ्चमी भयेन (*2,1.37) वृकेभ्यो भयं वृकभयम्। समर्थग्रहणं किम्? गच्छ त्वं मा वृकेभ्यो, भयं देवदत्तस्य यज्ञदत्तात्। षष्ठी (*2,2.8) राज्ञः पुरुषः राजपुरुषः। समर्थग्रहणं किम्? भार्या राज्ञः, पुरुषो देवदत्तस्य। सप्तमी शौण्डैः (*2,1.40) अक्षेषु शौण्डः अक्षशौण्डः। समर्थग्रहणं किम्? शक्तस्त्वं अक्षेषु, शौण्डः पिबति पानागारे। पदग्रहणं किम्? वर्णविधौ समर्थपरिभाशा मा भूत्। तिष्ठतु दध्यशान त्वं शाकेन। तिष्ठतु कुमारी च्छत्रं हरदेवदत्तात्। यणादेशो, नित्यश्च तुग् भवति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

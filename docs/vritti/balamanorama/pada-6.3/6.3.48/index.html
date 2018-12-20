@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.3\/6.3.48.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.48";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.49\",\"Previous\":\"6.3.47\",\"अकारादिक्रमसङ्ख्या\":1809,\"कौमुदीक्रमसङ्ख्या\":809,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे प्रकृत्यादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"त्रेस्त्रयः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.48.md">Edit 6.3.48!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.48";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.49\",\"Previous\":\"6.3.47\",\"अकारादिक्रमसङ्ख्या\":1809,\"कौमुदीक्रमसङ्ख्या\":809,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे प्रकृत्यादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"त्रेस्त्रयः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.48 त्रेस्त्रयः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>त्रेस्त्रयः। सन्धिवेलादिषु त्रयोदशीति पाठात्सकारान्तोऽयमादेश इत्याह&ndash;त्रयस्स्यादिति। पूर्व विषये इति। प्राक्?शतात्सङ्ख्याशब्दे उत्तरपदे परतो, न तु बहुव्रीह्यशीत्योरित्यर्थः। त्रयोदशेति। त्रयश्च दश चेति, त्र्यधिका दशेति वा विग्रहः। सुब्लुकि त्रिशब्दस्य त्रयस्, रुत्वम्, उत्वम्, आद्गुणः। एवं त्रयोविंशतिरित्यपि। त्रिदशा इति। त्रिरावृत्ता दशेत्यर्थः। <code>बहुव्रीहौ सह्ख्येये डच्</code> इति डच्। नन्वत्र त्रिरित्यस्य <code>सङ्ख्यायाः क्रियाभ्यावृत्तिगणने कुत्वसुच्</code> <code>द्वित्रिचतुर्भ्यः सुच्</code> इति सुजन्तत्वात्समासेऽपि सुचः श्रवणापत्तिरित्यत आह&ndash;सुजर्थे बहुव्रीहिरिति। सुजर्थे क्रियाभ्यावृत्तौ लक्षणया विद्यमानस्य त्रिशब्दस्यैवात्र <code>सङ्ख्ययाव्यये</code>ति बहुव्रीहिर्न तु सुजन्तस्येत्यर्थः। त्र्यशीतिरिति। त्रयश्चाऽशीतिश्चेति समाहारद्वन्द्वः। स्त्रीत्वं लोकात्। त्र्यधिकाऽशीतिरिति वा। त्रिशतमिति। त्र्यश्च शतं चेति समाहारद्वन्द्वः। स्त्रीत्वं लोकात्। त्र्यधिकाऽसीतिरिति वा। त्रिशतमिति। त्रयश्च शतं चेति समाहारद्वन्द्वः, त्र्यधिकं शतिमिति वा। एवं त्रिसहरुआमित्यपि।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

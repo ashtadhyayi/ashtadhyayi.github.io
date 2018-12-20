@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.2\/7.2.49.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.49";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.50\",\"Previous\":\"7.2.48\",\"अकारादिक्रमसङ्ख्या\":3595,\"कौमुदीक्रमसङ्ख्या\":2618,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्त्वा-निष्ठयोः सनि तासि च\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सनीवन्तर्धभ्रस्जदम्भुश्रिस्वृयूर्णुभरज्ञपिसनाम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.2/7.2.49.md">Edit 7.2.49!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.49";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.50\",\"Previous\":\"7.2.48\",\"अकारादिक्रमसङ्ख्या\":3595,\"कौमुदीक्रमसङ्ख्या\":2618,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्त्वा-निष्ठयोः सनि तासि च\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सनीवन्तर्धभ्रस्जदम्भुश्रिस्वृयूर्णुभरज्ञपिसनाम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.49 सनीवन्तर्धभ्रस्जदम्भुश्रिस्वृयूर्णुभरज्ञपिसनाम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>इवन्तानामिति। <code>दिवु</code> (धा।पा।११०७), <code>सिवु</code> (धा।पा।११०८) इत्येवमादीनाम्()। <code>ऋधु वृद्धौ</code> (धा।पा।१२४५ <code>भ्रस्ज पाके</code> (धा।पा।१२८४), <code>दम्भे</code> <a href="धा।पा।१२७०"><code>दम्भने</code>&ndash;धा।पा।</a>, <code>श्रिञ्()सेवायाम्()</code> (धा।पा।८९७), <code>स्वृ शब्दोपतापयोः</code> (धा।पा।९३२), <code>यू मिश्रणे</code> <a href="धा।पा।१०३३"><code>मिश्रणेऽमिश्रणे च</code>&ndash;धा।पा।</a>, <code>ऊर्णु आच्छादने</code> (धा।पा।१०३९), <code>श्रिञ्? भरणे</code> (()), मारणतीषणनिशामनेषु ज्ञपिण्र्यन्तः। <code>षणु दाने</code> (धा।पा।१४६४), <code>वन षण सम्भक्तौ</code> (धा।पा।४६३,४४४)&ndash;द्वयोरपि ग्रहणम्(); विशेषानुपादानात्()। अत्र भ्रस्जेरनुदात्तत्वात्(), ल्वुयुर्णुभृञां चोगन्तत्वात्? <code>सनि ग्रहगुहीश्च</code> (7.2.12) इति प्रतिषेधे प्राप्ते, शेषाणामुदात्तत्वान्नित्यमिटि प्राप्ते विकल्पोऽयमारभ्यते। <code>दुद्यूषति</code> इति। दिवेः सन्(), <code>हलान्तच्च</code> (1.2.10) इति सनः कित्त्वम्(), <code>च्छ्वो शूडनुनासिके</code> (6.4.19) इत्यूठि यणादेशः, द्विर्वचनम्()&ndash;<code>द्यूष</code> इत्येतस्य, <code>हलादिः शेषः</code> (7.4.60) इति चत्र्वम्()&ndash;धकारस्य दकारः।
 <code>विभ्रज्जिषति</code> इति। <code>झलां जश्? झशि</code> (8.4.52) इति सकारस्य दकारः, <code>स्तोः श्चुना श्चुः</code> (8.4.39) इति श्चुत्वम्()&ndash;दकारस्य जकारः। <code>बिभक्र्षति</code> इति। भ्रस्जो रोपधाया रमन्यतरस्याम्()<code>(६।४।४७) इत्यकारात्? परो रमागमः</code>रोपधयोः<code>इति षष्ठीनिर्देशाद्रेफस्योपधायाश्च सकारस्य निवत्र्तकः,</code>चोः कुः<code>(8.2.30) इति कुत्वम्(),</code>इण्कोः<code>(8.3.57) इति</code>आदेशप्रत्यययोः<code>(8.3.59) इति षत्वम्()। 
 </code>घिप्सति, घीप्सति<code>इति।</code>दम्भ इच्च<code>(7.4.56) इतीत्त्वमीत्त्वञ्च,</code>खरि च<code>(8.4.54) इति चत्र्वम्(), भकारस्य पकारः, पूर्ववदभ्यासलोपः,</code>हलान्ताच्च<code>(1.2.10) इति कित्त्वादनुनासिकलोपः। 
@@ -139,9 +151,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-4.1\/4.1.10.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.10";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.11\",\"Previous\":\"4.1.9\",\"अकारादिक्रमसङ्ख्या\":2073,\"कौमुदीक्रमसङ्ख्या\":308,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न षट्स्वस्रादिभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-4.1/4.1.10.md">Edit 4.1.10!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.10";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.11\",\"Previous\":\"4.1.9\",\"अकारादिक्रमसङ्ख्या\":2073,\"कौमुदीक्रमसङ्ख्या\":308,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न षट्स्वस्रादिभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.10 न षट्स्वस्त्रादिभ्यः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>न षट्स्वस्त्रादिभ्यः। <code>स्त्रियां यदुक्तं तन्न भवती</code>ति व्याख्यानादनन्तरो ङीबिव व्यवहितष्टबपि निषिध्यत इत्याशयेनाह&mdash;-ङीष्टापौ नेति। स्वस्त्रादीनां ङीप्प्राप्तः। षट्संज्ञकानां तूभौ। स्वसा तिरुआ इति। <code>न तिसृचतसृ</code>इति नामि दीर्घत्वप्रतिषेधाज्ज्ञापकादेव ङीबभावे सिद्धे स्वस्त्रादिषु तिसृचतसृशब्दपाठो न कर्तव्य इति <code>कृन्मेजन्तः</code>इति सूत्रे कैयटः। स्वसेति। <code>सावसेरृन्</code>। <code>ऋदुशन</code>इत्यनङ्। <code>ननान्दा तु स्वसा पतच्युः</code>। <code>भार्यास्तु भ्रातृवर्गस्य यातरः स्युः परस्परम्</code>। द्यौर्गोवदिति। <code>गमेर्डोः</code>बाहुलकाद्दयुतेरपि। डित्त्वाट्टिलोपः। <code>ओतो णि</code>दिति णिद्व द्भावाद्वृद्धिः। राः पुंवदिति। यद्यपि पुंलिङ्गः एवायम्, अर्थरैविभवा अपि<code>इत्यमरोक्तेः। भिन्नलिङ्गानां न द्व</code>न्द्व इति तेन परिभाषितत्वात्, तथापि <code>रात्येनं राः। स्त्रीत्येके</code>इति क्षीरस्वामिनास्त्रीलिङ्गताया अप्यभ्युपगमादेवमुक्तम्। नौर्ग्लौवदिति। <code>ग्लानुदिभ्यां ङौः</code>। डित्वाट्टिलोपः। <code>स्त्रियां नौस्तरणिस्तरि</code>रित्यमरः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

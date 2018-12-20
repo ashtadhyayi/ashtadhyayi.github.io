@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.4\/6.4.20.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.20";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.21\",\"Previous\":\"6.4.19\",\"अकारादिक्रमसङ्ख्या\":1538,\"कौमुदीक्रमसङ्ख्या\":2654,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"शूठ्\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"ज्वरत्वरश्रिव्यविमवामुपधायाश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.4/6.4.20.md">Edit 6.4.20!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.20";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.21\",\"Previous\":\"6.4.19\",\"अकारादिक्रमसङ्ख्या\":1538,\"कौमुदीक्रमसङ्ख्या\":2654,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"शूठ्\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"ज्वरत्वरश्रिव्यविमवामुपधायाश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.20 ज्वरत्वररिउआव्यविमवामुपधायाश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>रिउआव्यविमवां वकारसय पूर्णेणैव सिद्धम्()। उपधायास्तु न सिध्यतीति तदर्थमेषां ग्रहणम्()। ज्वरत्वरयोस्तु वकारस्यापि पूर्वेण न सिध्यति; अनयोरकाररेफाभ्यां झलादेः क्विपश्च व्यवधानात्()। तस्मात्? तयोर्वकारार्थमुपधार्थञ्च ग्रहणम्()। <code>जूः, जुरौ, जुरः</code> इति। <code>ज्वर रोगे</code> (धा।पा।७७६) वकारस्योपधायाश्चोठि कृते <code>सम्प्रसारणाच्च</code> (6.1.104) इति पूर्वरूपत्वम्()। <code>जर्त्तिः</code> इति। क्तिन्()। <code>तूः</code> इति। <code>ञि त्वरा सम्भ्रमे</code> (धा।पा।७७५) <code>तूर्णः</code>[<code>तूर्त्तिः--काशिका-</code>तूर्णः<code>इति नास्ति] इति।</code>रदाब्यां निष्ठातो नः<code>(8.2.42) इति नत्वम्()।</code>स्रूः इति। <code>रिउआवुगतिशोषणयोः</code> (धा।पा।११०९)। सवरणदीर्घः। <code>रुआउवौ, रुआउवः</code> इति। <code>अचि श्नुधातु</code> (6.4.77) इत्यादिनोवङ। <code>ऊः</code> इति। <code>अव रक्षणे</code> <a href="धा।पा।६००">रक्षण कान्तिप्रीतितृपत्यवगमप्रवेशश्रवणस्वणस्वम्यर्थयाचनक्रियेच्छादीप्त्यवापत्यालिङ्गनहिंसादानभागवृद्धिषु&ndash;धा।पा</a>। <code>मूः</code> इति। <code>मव बन्धने</code> (धा।पा।५९९)।
 इह ज्वरादिसम्बन्धिन्या उपदाया ऊङ्()विधीयते, उपधा चालोऽन्त्यात्पूर्वो वर्णः, अन्त्यत्वञ्चापेक्षितम्(); तत्र यथा&ndash;श्रेयान्, श्रेयांसावित्यत्र सकारात्? पूर्वे ये वर्णास्तेषामन्त्यो यो नकारस्तस्मात्? पूर्वो वर्ण उपदा, तथा ज्वरादीनामपि यो पूर्वौ वर्णौ तयोर्योऽन्त्यो वर्णस्तस्मात्? पूर्व उपधा, सा च ज्वरादीनां सम्बन्धिनी; तदवयवत्वात्(), ततश्च तस्या अप्युपदाया ऊठा भवितव्यमिति कस्याचित्? भ्रान्तिः स्यात्()। अतस्तां निराकर्तुं यस्या उपदाया ऊठा भवितव्यं तां दर्शयितुमाह&ndash;<code>ज्वरत्वरयोरुपधा वकारात्परा</code> इत्यादि। यस्या उपधाया ऊठा भवितव्यम्(), सोहोपधाशब्देन विवक्षिता। किं पुनः कारणस्या वृत्तिकारोपदर्शिताया उपधाया ऊङ्भवति, नान्यस्याः? क्वझल्भ्यां क्ङिता चोपधाविसेषणात्()। अत्र क्विप्प्रत्ययेन झलादिना क्ङिता चोपधा विशिष्यते&ndash;ज्वरादीनां योपधा क्वौ झलादौ च परतस्तस्या उपधाया ऊङ्भवतीति। अत्र <code>येन नाव्यवधानं तेन व्यवहितेऽपि</code> (व्या।प।४६) इत्यादिना यत्रैकेन वर्णेन व्यवधानं वृत्तिकारेणोक्ताया उपदायाः सम्भवति, तस्या एवोङ्भवति,</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

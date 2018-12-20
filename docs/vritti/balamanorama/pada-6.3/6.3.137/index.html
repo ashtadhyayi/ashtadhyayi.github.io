@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.3\/6.3.137.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.137";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.138\",\"Previous\":\"6.3.136\",\"अकारादिक्रमसङ्ख्या\":265,\"कौमुदीक्रमसङ्ख्या\":3539,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"अन्येषामपि दृश्यते\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.137.md">Edit 6.3.137!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.137";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.138\",\"Previous\":\"6.3.136\",\"अकारादिक्रमसङ्ख्या\":265,\"कौमुदीक्रमसङ्ख्या\":3539,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"अन्येषामपि दृश्यते\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.137 अन्येषामपि दृश्यते
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अन्येषामपि दृश्यते। अनुवर्तते इति। ढ्रलोपे इत्यत&rsquo; इति शेषः। <code>नहिवृतिवृषी</code>त्यादिपूर्वसूत्रोक्तादन्येषामपि दीर्घो दृश्यत इत्यर्थः। अतिप्रसङ्गमाशङ्क्याह&ndash;कर्मव्यतिहारे बहुव्रीहौ पूर्वपदान्तस्य दीर्घ इति। <code>बहुव्रीहौ चेत् कर्मव्यतिहारे एव पूर्वपदान्तस्यैव दीर्घ</code> इत्यर्थः। तेन <code>तुराषा</code>डित्यादौ दीर्गो निर्बाधः। दृशिग्रहणादयमर्थो लभ्यते। वक्ष्यत इति। <code>इच्कर्मव्यतिहारे इति सूत्रेणे</code>ति शेषः। तिष्ठधुप्रभृतिष्विति। वृत्तिग्रन्थ एवात्र प्रमाणम्। अव्ययीभावत्वमिति। तत्र <code>अव्ययीभावः</code> इत्यनुवृत्तेरिति भावः। अव्ययत्वमिति। <code>अव्ययीभावश्चे इत्यनेने</code>ति शेषः। <code>अव्ययादाप्सुपः</code> इति सुब्लुक् तत्फलमिति भावः। गृहीत्वेति। <code>परस्पर</code>मिति शेषः। न च केशग्रहणस्य पुरुषकर्तृकत्वात् प्रवृत्तेश्च युद्धकर्तृकत्वात्समानकर्तृकत्वाऽभावात्कथमिह क्त्वाप्रत्यय इति वाच्यं, गृहीत्वेत्यनन्तरं <code>स्थितयो</code>रित्यद्याहारात्। ततश्च अस्य केशेषु केशेष्वित्यनयोर्ग्रहणाद्यन्तर्भावेन वृत्तिघटकयोः समासे सति सुब्लुक्। पूर्वपदस्य दीर्घः। इच्समासान्तः। <code>यस्येति चे</code>त्यकारलोपः। अव्ययत्वात्सुब्लुगिति भावः। अन्यपदार्थवृत्तित्वेऽपि एकसेषापवादोऽयं बहुव्रीहिसमासः, अप्रथमान्तार्थश्च, दण्डैश्चेति। अस्य डण्डैः सः, तस्य दण्डैरयमित्येव परस्परं प्रह्मत्य स्तितयोरिदं युद्धं प्रवृत्तमिति विग्रहार्थः। दण्डादण्डीति। दण्डैर्दण्डैरित्यनयोः प्रहरणाद्यन्तर्भावेन समासघटकयोः समासे सति सुब्लुक्, पूर्वपदस्य दीर्घः, इच्, <code>यस्येति च</code> इति अकारलोपः। अव्ययत्वात्सुब्लुक्। भुष्टीमुष्टीति। अस्य मुष्टिभिः सः, तस्य मुष्टिभिश्चायमित्येवं परस्परं प्रह्मत्य स्थितयोरिदं युद्धं प्रवृत्तमिति विग्रहः। मुष्ट�आ मुष्ट�आ इत्यनयोः समासे सति सुब्लुगादि पूर्ववत्। <code>मुष्टामुष्टी</code>ति पूर्वपदान्तस्य आत्वमपाणिनीयमेव।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

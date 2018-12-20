@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.3\/1.3.61.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.3.61";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.3.62\",\"Previous\":\"1.3.60\",\"अकारादिक्रमसङ्ख्या\":2803,\"कौमुदीक्रमसङ्ख्या\":2538,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"म्रियतेर्लुङ्‌लिङोश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.3/1.3.61.md">Edit 1.3.61!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.3.61";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.3.62\",\"Previous\":\"1.3.60\",\"अकारादिक्रमसङ्ख्या\":2803,\"कौमुदीक्रमसङ्ख्या\":2538,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"म्रियतेर्लुङ्‌लिङोश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.3.61 म्रियतेर्लुङलिङोश्च ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>नियमार्थमिदं वचनम्िति। म्रियतेर्लुङलिङोः शित एव यथा स्यात्। यद्येवम्, ङिद्()ग्रहणं किमर्थम्? यावताऽन्यत्रात्मनेपदेन न भवितव्यमिति? उच्यते; स्वरार्थमुपदिश्यते-- मा हि मृतेति लुङि</code>तास्यनुदात्तेन्ङिदुपदेशाल्ल सार्वधातुकस्य<code>(6.1.180) इति अनुदात्तत्वे कृते धातोरन्तोदात्तत्वं भवति।</code>तिङङतिङः<code>(8.1.28) इति निघातोऽत्र</code>हि च<code>(8.1.34) इति प्रतिषिध्यते। अडागमोऽपि</code>न माङयोगे<code>(6.4.74) इति।</code>अमृत<code>इति।</code>ह्यस्वाद्ङात्<code>(8.2.27) इति सिचो लोपः।</code>मृषीष्ट<code>इति। आशिषि लिङ, तस्य</code>लिङाशिषि<code>(3.4.116) इत्याद्र्धधातुकत्वाद्विकरणाभावः;</code>सुट् तिथोः<code>(6.4.107) इति सुट्; वलि (6.1.64) यलोपः।</code>म्रियते<code>इति। तुदादित्वाच्छः;</code>रिङ शयग्लिङक्षु<code>(7.4.28) इति रिङादेशः,</code>अचि श्नुधातु<code>(6.4.77) इत्यादिनेयङ।</code>मरिष्यति<code>इति।</code>ऋद्धनोः स्ये` (7.2.70) इतीट्॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

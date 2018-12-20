@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.2\/4.2.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.2.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.2.5\",\"Previous\":\"4.2.3\",\"अकारादिक्रमसङ्ख्या\":3015,\"कौमुदीक्रमसङ्ख्या\":1205,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"नक्षत्रेण युक्तः कालः\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"लुबविशेषे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.2/4.2.4.md">Edit 4.2.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.2.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.2.5\",\"Previous\":\"4.2.3\",\"अकारादिक्रमसङ्ख्या\":3015,\"कौमुदीक्रमसङ्ख्या\":1205,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"नक्षत्रेण युक्तः कालः\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"लुबविशेषे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.2.4 लुबविशेषे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>यद्यविशेषे लुग्भवति, इहापि प्राप्नोति&ndash; पौषी रात्रिः,पौषमहरिति, अत्राप्यविशेषी गम्यत एव। तथा हि&ndash; पौषीरात्रिरित्युक्ते, अद्य ()आओ वेति विशेषो न गम्यत इत्यत आह&ndash; <code>न चेत् नक्षत्रयुक्तस्य</code> इत्यादि। एवं मन्यते&ndash; <code>नक्षत्रेण युक्तः कालः</code> (4.2.3) इत्यनुवत्र्तते, तेन तद्विशेष एव न भवतीति। <code>रात्र्यादिविशेषः</code> इति।आदिशब्देनाह, मुहूर्त्तः, लवः&ndash; इत्येते विशेषा गृह्रन्ते। <code>यावान्</code> इत्यादि। अनन्तरोक्तमेवार्थं विस्पष्टीकरोति। कियांश्च कालो नक्षत्रेण युज्यते? अहोरात्रः। तदेवं यावान् कालो नक्षत्रेण युक्तस्तस्याविशेषे न गम्यते, अपि तु तदेकदेशस्य रात्रेः, अह्नो वेति नायं लुपो विषयः। यद्येवम्, प्रत्ययस्यापि कथमेकदेशो विषयः?समुदायद्वारेण तदन्तःपातिनो गृह्रन्ते। एकदेशानामपि योगात् पूर्वेण प्रत्ययोत्पत्तिः सिद्धा बवति। पुनरिहावयवस्यैकदेशो लुपो विषय इति। इह तर्हि प्राप्नोति&ndash; पौषोऽहोरात्र इति, अत् यावान् कालो नक्षत्रेण युक्तः, तस्याविशेषो गम्यते, तथा ह्रहोरात्र इत्युक्ते न ज्ञायते&ndash; किमतीतः, अथानागतः,अथ वत्र्तमान इति? नैष दोषः; अविशेष इति प्रसज्यप्रतिषेधोऽयम्। तेन नक्षत्रयुक्तस्य कालस्य यत्र विशेषो रात्र्यादिस्तत्र न लुग्भवतीति ज्ञायते, न तु यत्राविशेषस्तत्र तु लुब्भवतीति॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

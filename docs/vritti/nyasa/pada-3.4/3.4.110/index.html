@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.4\/3.4.110.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.110";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.111\",\"Previous\":\"3.4.109\",\"अकारादिक्रमसङ्ख्या\":498,\"कौमुदीक्रमसङ्ख्या\":2227,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आतः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.4/3.4.110.md">Edit 3.4.110!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.110";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.111\",\"Previous\":\"3.4.109\",\"अकारादिक्रमसङ्ख्या\":498,\"कौमुदीक्रमसङ्ख्या\":2227,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आतः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.110 आतः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सिचः परस्याकारान्तादुत्तरस्य झेरिति ब्राउवता द्वाभ्यमप्यनन्तरसय् झेरित्युक्तं भवति। उभाभ्याञ्चानन्तर्यं न सम्भवति, आतः सिचा व्यवधानादिति मन्यमानः पृच्छति&ndash; <code>कथम्</code> इत्यादि। <code>सिचो लुकि</code> इति। <code>गातिस्था</code> (2.4.77) इत्यादिना यदा सिचो लुक् क्रियते तदा प्रत्ययलक्षणेन सिचोऽनन्तरः सम्भवति। <code>श्रुत्या चाकारान्तात्</code> इति। तदनन्तरश्रूयमाणत्वात्। श्रुत्येति श्रोत्रेन्द्रियसाध्योपलब्ध्येत्यर्थः। तदेवं द्वाभ्यामप्यानन्तर्यस्याश्रयणात् सामथ्र्यादातः सिज्लुगन्ताद् झेर्जुस् भवतीत्युक्तं भवति। न हि श्रूयमाणे सिचि द्वाभ्यामानन्तर्यं सम्भवति। <code>तकारो मुखसुखार्थः</code> इति। व्यावर्त्त्याभावात्। न हि ह्यस्वात् प्लुताद्वा वर्णात् परः सिच् सम्भवति।
 <code>पूर्वेणैव सिद्धे</code> इति। लुप्तेऽपि सिचि प्रत्ययलक्षणेन झेः सिजनन्तरत्वादभूविन्निति नियमस्य व्यावत्र्यं दर्शयति। <code>भुवो वुग् लुङलिटोः</code> (6.4.88) इति वुक्। ननु च नैवेह पूर्वसूत्रेण प्राप्नोति, न हीह सिजपेक्षयानन्तर्यं झेर्विद्यते, तत् किं प्रतिषिध्यत इत्याह&ndash; <code>प्रत्ययलक्षणेन</code> इत्यादि। लुप्ते हि प्रत्ययलक्षणेनानन्तर्यमस्ति, अतः पूर्वेण प्राप्नोति। जुस् नियमेन प्रतिषिध्यते। यदि तर्हि नियमार्थमिदम्, <code>अकार्षुः</code> इत्यत्रापि न स्यात्, न ह्रत्रातः सिज्लुगन्तात्परो झिर्भवतीति? इत्यत आह&ndash;<code>तुल्यजातीय</code> इत्यादि। आतः सिज्लुगन्तान्नियमार्थमयं जुस् विधीयते। स च नियमस्तुल्यजातीयापेक्षः, तेन समानजातीयमेव व्यवच्छिनत्ति। कश्च समानजातीयः? अन्यः {सिजलुगन्तः इति मु।पाठः।} सिज्लुगन्तः। न चाकार्षुरित्यत्र झेः पूर्वः सिज्लुगन्तः इति नायं नियमस्य विषयः, तेन भवत्येव जुस्॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

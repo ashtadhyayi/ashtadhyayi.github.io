@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.4\/3.4.19.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.19";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.20\",\"Previous\":\"3.4.18\",\"अकारादिक्रमसङ्ख्या\":741,\"कौमुदीक्रमसङ्ख्या\":3317,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्त्वा\",\"विषयः २\":\"क्त्वा\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"उदीचां माङो व्यतीहारे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.4/3.4.19.md">Edit 3.4.19!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.19";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.20\",\"Previous\":\"3.4.18\",\"अकारादिक्रमसङ्ख्या\":741,\"कौमुदीक्रमसङ्ख्या\":3317,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्त्वा\",\"विषयः २\":\"क्त्वा\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"उदीचां माङो व्यतीहारे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.19 उदीचां माङो व्यतीहारे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अपमित्य</code> इति। <code>आदेच उपदेशेऽशिति</code> (6.1.44) इत्यात्वम्, <code>कुगतिप्रादयः</code> (2.2.18) इति समासः, <code>समासेऽनञ्पूर्वे क्त्वो ल्यप्</code> (7.1.37) इति ल्यप्, <code>मयतेरिदन्यतरस्याम्</code> (6.4.70) इतीत्त्वम्, <code>ह्यस्वस्य पिति कृति तुक्</code> (6.1.69)। ननु च <code>समानकर्त्तृकयोः पूर्वकाले</code> (3.4.21) इत्यनेनैवात्र क्त्वाप्रत्ययो भवति, अस्ति ह्रत्रापि समानकर्त्तृकत्वम्। तथा हि&ndash; य एवापमयतेः कत्र्ता स एव याचतेः,तत्किमर्थं विधीयते? इत्याह&ndash; <code>अपूर्वकालत्वात्</code> इत्यादि। पूर्वं ह्रसौ याचते पश्चादपमयत इति नास्ति पूर्वकालत्वम्, तस्मादप्राप्त एव क्त्वा विधीयते। विधीयतान्नमाम; अयन्तु दोषः&ndash; यदैवास्माद्वचनान्मयतेः क्त्वा भवति, तदैव समानकर्त्तृकयोरित्यस्माद्वचनाद्याचतेरपि स्यात्? नैष दोष-; यस्मात् <code>समानकर्त्तृकयोः</code> (3.4.21) इत्यत्र <code>उदीचाम्</code> (3.4.19) इति वत्र्तते, सा च व्यवस्थितविभाषा,तेन यदा मयतेः क्त्वा भवति तदा याचतेः क्तवा न भविष्यति। <code>उदीचांग्रहणात्</code> इत्यादि। उदीचांग्रहणमिह विकल्पार्थम्। तेन यथाप्राप्तमपि पक्षे भवति। याचतेः क्त्वा। मयतेर्लडादिः।
 माङिति <code>माङ माने</code> (धा।पा।११४२) इत्यस्यायं निर्देश इति कस्यचिदाशङ्का स्यात्तस्तां निराकर्त्तुमाह&ndash; <code>मेङ कृतात्त्वस्यायं निर्दशः</code> इति। कुतः पुनरेतदवगतम्? व्यतीहारग्रहणात्। मेङेव व्यतीहारे वत्र्तते, न माङ, तस्मान्मेङ एवायं निर्देश इति विज्ञायते। किमर्थं पुनरेवं निर्देशः कृतः,कृते यत्र सति सन्देहः स्यात्, न मेङ इत्येवासन्दिग्धः कत्र्तव्य स्यादित्यत आह&ndash; <code>ज्ञापनार्थः</code>इति। मेङ इत्येवं निर्देशे कत्र्तव्ये यः सानुबन्धकस्य कृतात्त्वस्य निर्देशः कृतः स ज्ञापनार्थः। तेनैतज्ज्ञापयते&ndash; <code>नानुबन्धकृतमनेजन्तत्वम्</code> इति। <code>तेन</code> इत्यादिना ज्ञापनप्रयोजनं दर्शयति। यद्यमर्थो न ज्ञाप्येत ततो हलन्तत्वाद् दैप एजन्तत्वं न स्यात्। तत्र को दोषः? दाब्ग्रहणेन दैब्ग्रहणं न स्यात्; भिन्नेरूपत्वात्। ततश्च <code>दाधा घ्वदाप्</code> (1.1.19) इत्यत्र दैपः प्रतिषेधो न स्यात्। अ()स्मस्त्वर्थे ज्ञापिते सति भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.4\/6.4.144.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.144";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.145\",\"Previous\":\"6.4.143\",\"अकारादिक्रमसङ्ख्या\":2135,\"कौमुदीक्रमसङ्ख्या\":679,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"टेर् लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"नस्तद्धिते\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.4/6.4.144.md">Edit 6.4.144!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.144";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.145\",\"Previous\":\"6.4.143\",\"अकारादिक्रमसङ्ख्या\":2135,\"कौमुदीक्रमसङ्ख्या\":679,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"टेर् लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"नस्तद्धिते\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.144 नस्तद्धिते।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>सात्वतः</code> इति। सत्वतोऽपत्यमित्यण्()। <code>नान्तस्य टिलोपः</code> इत्यादि। किं पुनः कारणं न सिद्ध्यति यत उपसंख्यानं कत्र्तव्यम्()? इत्याह&ndash;<code>अत्र य इन्नन्ताः</code> इत्यादि। ये त्वन्नन्तास्तेषाम् अन्()<code>(6.4.167) इति प्रकृतिभावः प्राप्त इति प्रकृतेन सम्बन्धः।</code>साब्राहृचारः<code>इति।</code>तस्येदम्()<code>(4.3.120) इत्यण्()।</code>पीठसर्पिणः<code>इति। इम इति प्रकृतेन सम्बन्धः।</code>पैठसर्पाः<code>इति।</code>तस्येदम्()<code>(4.3.120) इत्यण्()।</code>पीठसर्पिणः<code>इति। इम इति प्रकृतेन सम्बन्धः।</code>पैठसर्पाः<code>इति। पूर्ववदण्()।</code>कालापाः<code>इति। पूर्ववत्प्रोक्तार्थे</code>कलापिवैशम्यायनान्तेवासिभ्यश्च<code>(4.3.104) इति वैशम्पायनान्तेवासित्वाण्णिनिप्रत्यये प्राप्ते तदपवादः</code>कलापिनोऽण्()<code>(4.3.108), ततः</code>तदधीते तद्वेव<code>(4.2.58) इत्यण्(), तस्य</code>प्रोक्ताल्लुक्()<code>(4.2.63) इति लुक्(),</code>छन्दोब्राआहृणानि च तद्विषयाणि<code>(4.2.65) इत्यध्येतृवेदितृविषयता।</code>कोथुमाः<code>इति।</code>तस्येदम्()<code>(4.3.120) इत्यण्()।</code>तत्कृतो ग्रन्थ उपचारात्()<code>इत्यादि। उपचारस्य तु तत्कृतत्वात्र निबन्धनम्()। भवति हि तत्कृतत्वे तदुपचारः, यथा सर्वमिदं पुराणं कर्म शुभाशुभं भुज्यत इति। अथ कस्मादुपचार आश्रीयते, न</code>अधिकृत्य कृते ग्रन्थे<code>(४।३।८७) इत्येवमादिशैषिकार्थविवक्षायां तद्धित एव क्रियेत? इत्यत आह--</code>शैषिकेष्वर्थेषु<code>इत्यादि। तैतिलिजाजलिशब्दौ वृद्धसंज्ञकौ, तयोर्वृद्धत्वात्? शैषिकेष्वथषु विधीयमानोऽसौ तद्धितः</code>वृद्धाच्छः<code>(4.2.113) इति छः प्रसज्येत। त()स्मश्च सति</code>तैतिलाः, जाजलाः<code>इति न सिद्ध्येत्(), तस्मान्मा भूदेष दोष इत्युपचार आश्रितः।</code>एवम्()<code>इत्यनेनान्तरोक्तां व्युत्पतिं()त दर्शयति छप्रत्ययनिवृत्तये। लाङ्गलिशब्दस्याप्येवं व्युत्पत्तिः कत्र्तव्या। लाङ्गलिः आचार्यः, तत्कृती ग्रन्थ उपचारात्? लाङ्गलशब्देनाभिधीयते।</code>लाङ्गलाः<code>इति।</code>शिखण्डाः<code>इत्याद्युदाहरणत्रयेऽपि</code>तस्येदम्()<code>(4.3.120) इत्यण्()। 
 </code>आश्मः<code>इति। अत्रापि</code>तस्य विकारः<code>(4.3.132) इत्यण्()।</code>आश्मनोऽन्यत्र<code>इति। अत्रापि</code>तस्येदम्()<code>(4.3.120) इत्यत्रार्थाभिधाने।</code>चार्मः<code>इत्यत्रापि</code>तस्येदम्()<code>(4.3.120) इत्यणेव।
 </code>चर्मणोऽन्यः<code>इति। चर्मणो विकार इति।</code>शौवः<code>इति।</code>द्वारादीनाञ्च<code>(7.3.4) इत्यैजागमः। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

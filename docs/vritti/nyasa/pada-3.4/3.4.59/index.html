@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.4\/3.4.59.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.59";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.60\",\"Previous\":\"3.4.58\",\"अकारादिक्रमसङ्ख्या\":410,\"कौमुदीक्रमसङ्ख्या\":3381,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्त्वा-णमुल्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"अव्ययेऽयथाभिप्रेताख्याने कृञः क्त्वाणमुलौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.4/3.4.59.md">Edit 3.4.59!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.59";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.60\",\"Previous\":\"3.4.58\",\"अकारादिक्रमसङ्ख्या\":410,\"कौमुदीक्रमसङ्ख्या\":3381,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्त्वा-णमुल्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"अव्ययेऽयथाभिप्रेताख्याने कृञः क्त्वाणमुलौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.59 अव्ययेऽयथाभिप्रेताख्याने कृञः क्त्वाणमुलौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अयथाभिप्रेताख्याने</code> इति। यद्यदभिप्रेतमिष्टं यथाभिप्रेतम्, <code>यथाऽसादृश्ये</code>(2.1.7) इति वीप्सायामव्ययीभावसमासः, न यथाभिप्रेतमयथाभिप्रेतम्। अप्रियमित्यर्थः। <code>आचक्षे</code>इति। आङपूर्वाच्चक्षिङो लट्; <code>थासः से</code>(3.4.80), <code>स्कोः संयोगाद्योरन्तेच</code>(8.2.29) इति ककारलोपः, <code>षढोः कः सि</code> (8.2.41) इति कत्वम्,िण्कोःट (8.1.57) इति षत्वम्।
 <code>उक्तम्</code> इति। क्वोक्तम्? <code>उपदंशस्तृतीयायाम्</code> (3.4.47) इत्यत्र। उपपदसमासार्थं वचनमिति च। <code>क्त्वा च</code> (2.2.22) इत्यनेनोपपदसमासः पक्षे यथा स्यात्। कस्मात् पुनरनेन यः क्त्वा विहितस्तेन समासो भवति? यस्तु <code>समानकर्त्तृकयोः</code> (३।४।२१) इत्यादिना विहितस्तेन न भवति? इत्याह&ndash; <code>तथा हि</code> इत्यादि। <code>क्त्वा च</code>(2.2.22) इत्यत्र <code>तृतीयाप्रभृतीनि</code> (2.2.21) इत्यनुवत्र्तते। तस्मादनेन यः क्त्वा विहितस्तेनैव पक्षे समासो भवति, न तु तेन, तृतीयाप्रभृतिषूपपदेषु क्त्वा विधीयते। अथ णमुल्ग्रहणं किमर्थम्; यावता णमुलनुवत्र्तत एव,ततः क्तवा चेति वक्तव्यम्? इत्याह&ndash; <code>णमुलधिकारे</code> इत्यादि। तुल्यकक्षत्वं तद्वत् तुल्यबलत्वम्। <code>तेन</code> इत्यादि। ज्ञापकस्य प्रयोजनं दर्शयति। यदि <code>क्त्वा च</code> इत्युच्येत। चकारेण यत्नादनुकृष्टो णमुलुत्तरत्र नानुवत्र्तेत; यत्नाभावात्। यथा तेन क्त्वाप्रत्ययस्यान्वाचीयमानता विज्ञायेत ततश्चोत्तरत्र तस्याप्रधान्यादनुवृत्तिर्न स्यात्। पुनर्णमुल्ग्रहणे सति सहनिर्देशात् क्त्वाणमुलोर्गुणप्रधानभावो न भवतीति द्वयोरप्यनुवृत्तिर्भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

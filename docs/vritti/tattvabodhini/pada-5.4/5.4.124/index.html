@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-5.4\/5.4.124.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.124";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.125\",\"Previous\":\"5.4.123\",\"अकारादिक्रमसङ्ख्या\":1994,\"कौमुदीक्रमसङ्ख्या\":863,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"धर्मादनिच् केवलात्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-5.4/5.4.124.md">Edit 5.4.124!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.124";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.125\",\"Previous\":\"5.4.123\",\"अकारादिक्रमसङ्ख्या\":1994,\"कौमुदीक्रमसङ्ख्या\":863,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"धर्मादनिच् केवलात्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.124 धर्मादनिच्केवलात्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>धर्मादनिच्। अनिचोऽकारश्चिन्त्यप्रयोजन इत्येके। अन्ये तु धर्मं करोत्याचष्टे वा, <code>तत्करोती</code>ति ण्यन्तात्क्विपि धर्म्, परमो धर्म् यस्य सः परमधर्म्। एकदेशविकृतस्यानन्यत्वाद्धर्मशब्दोऽयमित्यकारोच्चारणमिह सप्रयोजनमेवेत्याहुः। बहुव्राहिणात्र पूर्वपदमाक्षिप्यत इत्यनुपदमेव वक्ष्यति। तच्च <code>केवला</code>दित्यनेन विशेष्यत इत्याह&mdash;केवलात्पूर्वपदादिति। प्राचा तूत्तरपदमपि विशेषितम्। प्रसादकृतापि केवलादिति धर्मशब्दस्य पूर्वपदस्य च विशेषणमिति व्याख्यातम्, तदुभयमपि चिन्त्यम्। आवृत्तौ मानाऽभावात्, धर्मपदविशेषणे प्रयोजनाऽभावाच्च। न च धर्मशब्दान्तं यत्रोत्तरपदं तव्द्यवृत्तिः फलमिति वाच्यं , तत्र बहुव्रीह्यवयवीभूतपूर्वपदात्परस्य धर्मपदेऽसम्भवादेवाऽदोषत्वात्। मध्यमत्वादिति। न च <code>सर्वनामसङ्ख्ययो</code>रिति स्वशब्दस्य पूर्वनिपातः शङ्क्यः, आहिताग्न्यादेराकृतिगणत्वादिति हरदत्तदिभिः समाहितत्वात्। आपेक्षिकमिति। नन्वत एव केवलग्रहणं व्यर्थं, पूर्वशब्दस्य समासप्रथमावयवे रूढत्वेनैव मध्यमपदव्यावृत्तिसम्भवादिति चेत्। अत्राहुः&ndash;पूर्वपदाक्षेपे तात्पर्यग्राहकत्वेन केवलपदस्य सार्थकत्वादिति। कर्मधारयपूर्वपद इति। नन्वत्राऽनिच् द#उर्लभः, <code>केवला</code>दित्यस्य समासानातच्मकत्वादित्यर्थादिति चेत्, मैवम्। केवलग्रहणस्य समासानात्मकपूर्वपदपरत्वे मानाऽभावात्। <code>निवृत्तिधर्मा हि स्थानी भवती</code>त्यादिप्रयोगविरोधाच्च। अस्मदुक्तार्थस्तु <code>धृञ् धारणे</code>इति धातौ माधवग्रन्थे स्पष्टः। एतेन साध्योः धर्मोऽस्येति साध्यधर्मा, संदिग्धश्चासौ साध्यधर्मा चेति विग्रहः। स च सन्देहः साध्यधर्मद्वारक एव पर्यवस्यतीति केषाञ्चिव्द्याख्यानं परास्तम्। उक्तिरीत्यैव साध्यस्य साक्षात्सन्दिग्धत्वलाभे तत्समर्थनप्रयासस्य व्यर्थत्वात्। साध्वेवेति। परमश्चासौ स्वश्च परमस्वः, स धर्मो यस्येति यदा विगृह्यते तदेत्यर्थः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-5.2\/5.2.97.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.2.97";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.2.98\",\"Previous\":\"5.2.96\",\"अकारादिक्रमसङ्ख्या\":3736,\"कौमुदीक्रमसङ्ख्या\":1904,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तदस्यास्मिन्\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"सिध्मादिभ्यश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-5.2/5.2.97.md">Edit 5.2.97!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.2.97";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.2.98\",\"Previous\":\"5.2.96\",\"अकारादिक्रमसङ्ख्या\":3736,\"कौमुदीक्रमसङ्ख्या\":1904,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तदस्यास्मिन्\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"सिध्मादिभ्यश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.2.97 सिध्माऽदिभ्यश् च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>लजन्यतरस्याम् इति वर्तते। सिध्मादिभ्यः प्रातिपदिकेभ्यो लच् प्रत्ययो भवत्यन्यतरस्यां मत्वर्थे। सिध्मलः, सिध्मवान्। गडुलः, गडुमान्। अन्यतरस्यां ग्रहणेन मतुप् समुच्चीयते, न तु प्रत्ययो विकल्प्यते। तस्मातकारान्तेभ्यः इनिठनौ प्रत्ययौ न भवतः। सिध्म। गडु। मणि। नाभि। जीव। निष्पाव। पांसु। सक्तु। हनु। मांस। परशु। पार्ष्णिधमन्योर् दीर्घश्च। पार्ष्णीलः। धमनीलः। पर्ण। उदक। प्रज्ञा। मण्ड। पार्श्व। गण्ड। ग्रन्थि। वातदन्तबलललाटानामूङ् च। वातूलः। दन्तूलः। बलूलः। ललाटूलः। जटाघटाकलाः क्षेपे। जटालः। घटालः। कलालः। सक्थि। कर्ण। स्नेह। शीत। श्याम। पिङ्ग। पित्त। शुष्क। पृथु। मृदु। मञ्जु। पत्र। चटु। कपि। कण्डु। संज्ञा। क्षुद्रजन्तूपतापाच् च इष्यते। क्षुद्रजन्तु यूकालः। मक्षिकालः। उपताप विचर्चिकालः। विपादिकालः। मूर्च्छालः। सिध्मादिः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

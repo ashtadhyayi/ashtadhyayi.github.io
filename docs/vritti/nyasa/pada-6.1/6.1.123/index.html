@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.123.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.123";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.124\",\"Previous\":\"6.1.122\",\"अकारादिक्रमसङ्ख्या\":377,\"कौमुदीक्रमसङ्ख्या\":88,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":60,\"विषयः १\":\"प्रकृतिभावः\",\"विषयः २\":\"\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"अवङ् स्फोटायनस्य\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.123.md">Edit 6.1.123!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.123";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.124\",\"Previous\":\"6.1.122\",\"अकारादिक्रमसङ्ख्या\":377,\"कौमुदीक्रमसङ्ख्या\":88,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":60,\"विषयः १\":\"प्रकृतिभावः\",\"विषयः २\":\"\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"अवङ् स्फोटायनस्य\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.123 इकोऽसवर्णे शाकलयस्य ह्वस्वश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>ह्यस्वश्च तस्येकः स्थाने भवति</code> इति। यद्येवम्(), <code>प्रकृत्या</code> (6.1.111) इत्यस्यानुकर्षणार्थश्चकारो न कत्र्तव्यः, ह्यस्वविधानसामथ्र्यादेव हि स्वरसन्धिर्न भविष्यति? अत्रैतत्? स्यात्()&ndash;दीर्घाणामेव ह्यस्वविधानसामथ्र्यात्? स्वरसन्धिर्न स्यात्()। ह्यस्वानां तु स्यादेव, न हि तेषां ह्यस्वा भवन्ति। प्रयोजनाभावादित्येतच्च नास्ति; ह्यस्वानामपि हि स्वरसन्धिबाधनार्थं ह्यस्वो भवत्येव। कृतकारि खल्विदं शास्त्रम्(), पर्जन्यवत्(); नाकृतकारि दहनवत्()। एवं तर्हि चकारेणैतदाख्यायते&ndash;क्वचिद्? ईषा+अक्षादौ प्रकृतिभाव एव भवति, न ह्यस्वत्वमिति। तेन यदुक्तामीषा अक्षादौ प्रकृतभावमात्रमिति, तन्न वक्तव्यं भवति।
 यणादेशेन सह विकल्पार्थं शाकल्यग्रहणं कस्मान्न भवति? इत्याह&ndash;<code>आरम्भसामथ्र्यादेव हि</code> इत्यादि। यणादेशस्य ह्रसवर्ण एवाज्विषयः; सवर्णे तु <code>अकः सवर्णे दीर्घः</code> (6.1.97) इति दीर्घविधानात्()। अयमपि च शाकलो ह्यस्वो विधीयते। अत एवास्मिन्? विषय आरम्भसामथ्र्यादेवास्य विधेर्यणादेशेन सह विकल्पः सिद्ध इति न तदर्थमाचार्यग्रहणम्()।
 <code>सिन्नित्यसमासयोः</code> इत्यादि। एकापि सप्तमी द्विधा भिद्यते; अपेक्षाभेदात्()। सिदपेक्षया परसप्तमी, नित्ससमासापेक्षया विषयसप्तमी। सिच्च नित्यसमासश्चेति द्वन्द्वः&ndash;स इद्यस्य स सित्()। नित्याधिकारे विहितः समासो नित्यसमासः। शाकल्यस्यायं विधिः शाकलः&ndash;<code>कण्वादिभ्यो गोत्रे</code> (४।२।१११) इत्यण्? <code>यस्येति च</code> (6.4.148) इत्यकारलोपः, <code>आपत्यस्य च तद्धितेऽनाति</code> (6.4.151) इति यकारलोपः। शाकलस्य प्रतिषेधः शाकलप्रतिषेधः। <code>वक्तव्य</code> इति। व्याख्येय इत्यर्थः। तत्रेदं व्याख्यानम्(), <code>सर्वत्र विभाषा गोः</code> (6.1.118) इत्यतो विभाषाग्रहणमनुवत्र्तते, सा च व्यवस्थितविभाषा विज्ञायते। तेन सिन्नित्यसमासयोः शाकलप्रतिषेधो भविष्यति। <code>ऋत्वियः</code> इति। ऋतुः प्राप्तोऽस्येति <code>ऋतोरण्()</code> (5.1.104) <code>छन्दसि घस्()</code> (5.1.105) इति घस्()। <code>व्याकरणम्()</code> इति। <code>कुगतिप्रादयः</code> (2.2.18) इति समासः। अत्र हि <code>नित्यं क्रीडाजीविकयोः</code> (2.2.17) इत्यतो नित्यग्रहणानुवृत्तेर्नितयसमासोऽयम्()। <code>कुमार्यर्थम</code> इति। कुमार्या इदं कुमार्यर्थमिति। <code>अर्थशब्देन सह</code> समासवचनं सर्वलिङ्गता च` (वा।७८) इत्ययमपि नित्यसमास एव। सर्वत्र शाकलविधौ प्रतिषिद्धे यणादेशो भवत्येव॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

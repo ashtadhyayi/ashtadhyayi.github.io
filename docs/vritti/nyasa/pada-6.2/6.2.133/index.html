@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.133.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.133";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.134\",\"Previous\":\"6.2.132\",\"अकारादिक्रमसङ्ख्या\":2140,\"कौमुदीक्रमसङ्ख्या\":3867,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नाचार्यराजर्त्विक्संयुक्तज्ञात्याख्येभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.133.md">Edit 6.2.133!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.133";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.134\",\"Previous\":\"6.2.132\",\"अकारादिक्रमसङ्ख्या\":2140,\"कौमुदीक्रमसङ्ख्या\":3867,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नाचार्यराजर्त्विक्संयुक्तज्ञात्याख्येभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.133 चूर्णादीन्यप्राणिषष्ठ्याः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>चूरी दाहे</code> (धा।पा।११५८), अस्मान्निष्ठा, ते चूर्णमन्तोदात्तम्()। करिणः पातीति <code>आतोऽनुपसर्गे कः</code> (3.2.3) पकारस्य पक्षे वकारो निपात्यते&ndash;करिपः, करिवः। कृत्स्वरेण थाथादिस्वरेण वान्तोदात्तः। <code>महेरितण्? च</code> (द।उ।५।१९) बहुलवचनाच्छकेरपि भवति, शाकिनम्(), प्रत्ययस्वरेण मद्योदात्तम्()। <code>शकादिभ्योऽटच्()</code> (द।उ।५।२;पं।उ।४।८१) [शकादिभ्योऽटन्()&ndash;।दौ;पं।उ।] शकटम्()। तद्वहतीति शकटवण्? शाकटम्()। प्रत्ययस्वरेणान्तोदात्तः। द्राग्द्रूतं क्षीयत इति द्राक्षा, पृषोदरादित्वात्()। अन्तोदात्तोऽयं शब्दः। <code>तुस ह्यस ह्लस रसशब्दे</code> (धा।पा।७१०, ७११,७१२,७१३), ततो बहुलवचनात्? <code>हसिमृग्रिणवामिदमिलूपूधुर्वीभ्यस्तन्()</code> (द।उ।६।७,पं।उ।३।८६) [हसिमृग्रिण्वमिदमितमिलूपूधूर्विभ्यस्तन्()&ndash;द।उ; हसिमृगरण्वामिदमूलपूर्विभ्यस्तन्()&ndash;पं।उ।] इति तन्(), निपातनाद्दीर्घश्च। तूस्तमाद्युदात्तम्()। <code>कुत्सितं दुनोतीति</code>क्विबवचिप्रच्छि<code>इत्यादौ सूत्रे (वा।२८८) क्विबिति योगविभागः।</code>दुदु उपतापे<code>(दा।पा।१२५६) इत्यस्मादपि क्विप्(),</code>बहुलवचनात्? अनित्यत्वाद्वागमशासनस्य<code>(व्या।प।९९) तुगभावः, पूर्वपदस्य च बहुलवचनादेव मुम्()--कुन्दु, तन्मिमीत इति</code>माङ्माने<code>(दा।पा।१०८८) इत्यस्मात्? कः, कुन्दुमोऽन्तोदात्तः।</code>उषिकुटिदलिकचिखजिभ्यः कपन्()<code>(द।उ।७।९) तेन दलप आद्युदात्तः।</code>अत्यविचमितमिनमि<code>(द।उ।९।४४) इत्यादिनाऽसच्()--चमसः, ततो जातिलक्षणो ङीष्? (4.1.63) चमसी।</code>चक तृप्तौ<code>(धा।पा।७८३) इत्यस्मात्? कविप्(), चक्()।</code>कनी दीप्तिकान्तिगतिषु<code>(धा।पा।४६०) [कन दीप्तिकान्तिगतिषु--धा।पा।] तस्मादच्(), कनः। चककनः। चोलस्यापत्यं चौलः,</code>द्व्यञ्मगध<code>(4.1.168) इत्यादिनाऽण्()। एते चूर्णादयः।</code>मुद्गचूर्णम्()<code>इति।</code>मुदि ग्रोर्गग्गौ<code>(द।उ।३।६६) इति मुद्गोऽन्तोदात्तः।</code>मसूरचूर्णम्()<code>इति।</code>मसेरूरन्()<code>(द।उ।८।९५) मसूर आद्युदात्तः।</code>मत्स्यचूर्णम्()<code>इति। मत्स्यः प्रातिपदिकस्वरेणान्तोदात्तः। 
 </code>तत्रोयग्रह इति षष्ठ()न्तमेव<code>इति। अनेन तुल्यार्थतां सूत्रयोर्दर्शयति। कथं पुनरुपग्रहः षष्ठ()न्तमेव गृह्रते? इत्याह--</code>पूर्वाचार्योपचारेण` इति। पूर्वाचार्या हि षष्ठ()न्तमुपग्रह इत्येवमुपचरन्ति स्म। तेनेह पूर्वा चार्योपचारेण हेतुना षष्ठ()न्तमेवोपग्रह इति गृह्रते। समासस्वरापवादो योगः एवमुत्तरेऽपि त्रयः॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

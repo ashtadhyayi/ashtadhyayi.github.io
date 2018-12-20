@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.3\/4.3.154.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.3.154";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.3.155\",\"Previous\":\"4.3.153\",\"अकारादिक्रमसङ्ख्या\":2537,\"कौमुदीक्रमसङ्ख्या\":1532,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"२ अर्थौ\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"प्राणिरजतादिभ्योऽञ्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.3/4.3.154.md">Edit 4.3.154!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.3.154";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.3.155\",\"Previous\":\"4.3.153\",\"अकारादिक्रमसङ्ख्या\":2537,\"कौमुदीक्रमसङ्ख्या\":1532,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"२ अर्थौ\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"प्राणिरजतादिभ्योऽञ्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.3.154 क्रीतत्परिमाणात्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अणादीनामपवादः</code> इति। आदिशब्देनाञादीनां ग्रहणम्। <code>संख्यापि परिमाणग्रहणेन गृह्रते</code> इति। कथं पुनरेतल्लभ्यते, यावता परिमाणशब्दः प्रस्थादिषु रूढः, न संख्यायाम्? नैष दोषः; यथैव हि प्रस्थादिपरिच्छेदहेतुस्तथा संख्यापि। अत उपमानात् संख्यायामपि परिमाणशब्दो वर्तिष्यते परिमाणमिव परिमाणमिति। नन्वेवं मुख्ये सति गौणग्रहणमयुक्तम्? अयमत्र दोषः &ndash; इह हि तन्त्रेण द्वौ परिमाणशब्दावुच्चारितौ, तत्र द्वितीयं पदमुदात्तम्, तेन संख्यापि गृह्रते। <code>नैष्किकम्</code> इति। प्राग्वतेष्ठञ्<code>(5.1.18)।</code>शत्यः, शतिकः<code>इति।</code>शताच्च ठन्यतावशते<code>(5.1.21)।</code>सहरुआम्<code>इति।</code>शतमानविंशतिकसहरुआवतनादण्<code>(5.1.27)।
 </code>अध्यर्धपूर्व<code>(5.1.28) इत्यादिना सादृशष्यार्थे वतौ सति यदिष्टं सम्पद्यते तद्दर्शयति। आदिशब्देन प्रकृत्यादिपरिग्रहः।</code>द्विसहरुआम्<code>इति। द्वयोः सहरुआयोर्विकार इति तद्धितार्थे द्विगुः।</code>प्राग्वतेः संख्यापूर्वपदात् तदन्तविधिरलुकि<code>(५।१।२० वा।) इति तदन्तविधिरभ्यनुज्ञानाद्यथा क्रीतार्थे</code>शतमानविंशतिसहरुआवसनात्<code>(5.1.29) इति पक्षे लुग्भवति, ततेहापि।</code>द्विसाहरुआम्<code>इति।</code>संख्यायाः संवत्सरपूर्वस्य<code>(7.3.15) इत्युत्तरपदवृद्धिः।</code>दविनिष्कः<code>इति। यथा क्रीतार्थे निष्कशब्दात् प्राग्वतेष्ठञ् (5.1.18) भवति तस्य</code>द्वित्रिपूर्वान्निष्कात्<code>(5.1.30) इति पक्षे लुक्, तथेहापि।</code>द्विनैष्किकम्<code>इति।</code>परिमाणान्तस्यासंज्ञान्नाणयोः` (7.3.17) इत्युत्तरपदवृद्धिर्भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

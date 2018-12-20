@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.1\/2.1.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.1.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.1.2\",\"Previous\":\"1.4.110\",\"अकारादिक्रमसङ्ख्या\":3625,\"कौमुदीक्रमसङ्ख्या\":647,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"समर्थः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"समर्थः पदविधिः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.1.md">Edit 2.1.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.1.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.1.2\",\"Previous\":\"1.4.110\",\"अकारादिक्रमसङ्ख्या\":3625,\"कौमुदीक्रमसङ्ख्या\":647,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"समर्थः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"समर्थः पदविधिः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.1.1 समर्थः पदविधिः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>परिभाषेयम्</code> इति। परितो व्यापृता भाषा = परिभाषा। तथा चोक्तम्&ndash; <code>परिभाषा पुनरेकस्था सर्व शास्त्रमभिज्वलयति, यथा-- वश्मप्रदीपः</code>। कुतः पुनरेतद्विज्ञायते&ndash; परिभाषेयम्, नाधिकार इति? पदविधिग्रणाल्लिङ्गात्। उत्तरत्र हि सर्वः पराङ्गवद्भावादिरनुकरस्यमानः पदविधिरेव। तत्र यद्यमधिकारः स्यात्, पदविधिग्रहणमनर्थकं स्यात्; वयावत्र्याभावात्। परिभाषायां त्वस्याम्, परिभाषा ह्रेकदेशस्यापि सर्वत्र शास्त्रे व्याप्रियत इत्यसति पदविधिग्रहणे वर्णविधायवप्युपतिष्ठेत। ततो वर्णविधिनिरासार्थ क्रियमाणं पदविधिग्रहणमर्थवद्भवति। तस्मात् पदिविधग्रहणाल्लिङ्गात् परिभाषेयं नाधिकार इत्यवसीयते। यद्यवम्, <code>इसुसोः सामर्थ्ये</code> (8.3.44) , <code>न चवाहाहैवयुक्ते</code> (8.1.24) इत्येवमादिषु योगेषु सामथ्र्यग्रहणं युक्तग्रहणञ्च किमर्थं क्रियते, यावता <code>पदस्य</code> इति तत्रानुवत्र्तते, तत्र पदविधित्वादेवासामर्थ्ये न भविष्यति? सत्यमेतत्; यदर्थं तु क्रियते तत् तत्रैव प्रतिपादयिष्यामः।
 विधिशब्दोऽयमस्त्येव भावसाधनः&ndash; विधानं विधिरिति। अस्ति च कर्मसाधनः&ndash; विधीयत इति विधिः। तत्र भावसाधने विधिशब्द आश्रीयमाणे पदानामपरिनिष्पन्नानां परिनिष्पादनं पदविधिरिति पदेषु कर्मणि कृद्योगलक्षणा षष्ठी; तेषां विधिना सम्बन्धात्। कर्मसाधने तु परिनिष्पन्नानां व्यवस्थितानामेव पदानां यत्समासादि कार्यं विधीयते स पदिविधिः। तत्र पदेषु च शेषलक्षणा षष्ठी भवति; विधीयमानस्य कार्यस्य पदसम्बन्धित्वेनोपादानात्। तत्र यदीह भावसाधनो विधिशब्द आश्रीयेत तदा विभक्तिविधानमेव सङ्गृहीतं स्यात्,समास&ndash; पराङ्गवद्भाव&ndash;तद्धितवृत्त्यादिकं न सङ्गृह्रेतच न हि तत्र पदानामसतां विधानम्; किं तर्हि? व्यवस्थितानामेव पदानां समासादि कार्यं विधीयते। इतरत्र तु विधिशब्द आश्रीयमाणे तेऽपि सङ्गृहीता भवन्तीति मन्यमानः कर्मसाधनं विधिशब्दमाश्रित्याह&ndash; <code>विधीयत इति विधिः</code> इति। ननु चात्रापि पक्षे विभक्तिविधानं न सङ्गृह्रेत, न हि <code>कर्मणि द्वितीया</code> (2.3.2) इत्येवमादिशास्त्रेण व्यवस्थितानां पदानां किञ्चित् कार्यं विधीयते, अपि तु पदान्येव विधीयन्ते? यदि न सङ्गृहीतं स्यान्न नाम। न च तदसङ्ग्रहे किञ्चिदनिष्टमापद्यत इत्युत्तरत्र प्रतिपादयिष्य#आमः। <code>समासादिः</code> इति। आदिशब्देन तद्धितवृत्यादीनां ग्रहणम्।
 <code>समर्थः शक्तः</code> इति। स्वकार्यनिर्वर्तनक्षम इत्यर्थः। स हि लोके समर्थ इत्युच्यते। स्वार्थप्रतिपादनमेव शब्दानां स्वकार्यम्। ये चेह लौकिका वैदिकाश्च शब्दा अधिकृतास्ते सर्वे एव स्वकार्यप्रतिपादनं प्रति समर्थाः। तस्मात् <code>समर्थः</code> इत विशेषणोपादानसामथ्र्याद्विशेषः कश्चिदाश्रीयते। स च विशेषः&ndash; वृत्त्यर्थं यद्वाक्यमुपादीयते, प्रत्यासत्तेस्तदर्थप्रतिपादने या शक्तता तल्लक्षमो विज्ञायत इत्याह&ndash; <code>विग्रहवाक्यर्थाभिधाने</code> इत्यादि। विशेषेण गृह्रते विज्ञायतेऽनेनेति विग्रहः, विग्रहश्च तद्वाक्यम्। अथ वा&ndash; विशेषेण ग्रहणं विग्रहः, विग्रहार्थं यद्वाक्यं तद्विग्रहवाक्यम्। शाकपार्थिवादित्वान्मध्यमपदलोपी समासः। विग्रहवाक्यस्यार्थो विग्रहवाक्यार्थः, तदभिधाने तत्प्रत्यायने यः शक्तः स समर्थो वेदितव्यः, यथा&ndash; राजपुरुष इत्ययं समसाः, एतदर्थं यद्वाक्यं राज्ञः पुरुष इति तस्य योऽर्थस्तदभिधाने राजपुरुष इत्ययं शब्दं शक्तः; ततोऽपि तदर्थस्य प्रतीतेः। स पुनरर्थः&ndash; संसर्गः, भेदश्च;भेदसंसर्गौ वा।तत्र स्वविशेषस्य स्वामिविशेस्य स्वामिविशेषेण यः सम्बन्धः स <code>संसर्गः</code> आख्यायते। स्वान्तरस्य स्वाम्यन्तरेभ्यः, स्वाम्यतरस्य स्वातन्तरेभ्यश्च व्यावृत्तिः <code>भेदः</code> आख्यायते।</p>
@@ -134,9 +146,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

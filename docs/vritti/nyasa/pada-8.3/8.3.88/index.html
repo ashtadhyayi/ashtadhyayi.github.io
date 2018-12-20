@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.3\/8.3.88.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.88";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.89\",\"Previous\":\"8.3.87\",\"अकारादिक्रमसङ्ख्या\":3770,\"कौमुदीक्रमसङ्ख्या\":2477,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सुविनिर्दुर्भ्यः सुपिसूतिसमाः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.88.md">Edit 8.3.88!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.88";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.89\",\"Previous\":\"8.3.87\",\"अकारादिक्रमसङ्ख्या\":3770,\"कौमुदीक्रमसङ्ख्या\":2477,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सुविनिर्दुर्भ्यः सुपिसूतिसमाः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.88 सुविनिर्दुभ्र्यः सुपिसूतिसमाः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सुपिसूत्योः <code>सत्पदाद्योः</code> (8.3.113) इति निषेधे प्राप्ते। सम इत्येतदन्युत्पुन्नं प्रातिपदिकं सर्वादिषु षठ()ते; तेनास्यादित एवाप्राप्ति षत्वमुच्यते। अथ तु<code>षम ष्टम अवैकल्पे</code> (धा।पा।८२९,८३०) इत्यस्य पचाद्यचि समशब्दो व्युत्पाद्यते, तथा च सनि तस्यापि प्रतिषेधे प्राप्त इदं वचनम्()। <code>सुषुप्तः</code> इति। <code>ञिष्वप्? शये</code> <a href="धा।पा।१०६८"><code>ष्वप</code>&ndash;धा।पा।</a>, निष्ठा, वच्यादिसूत्रेण (6.1.15) सम्प्रसारणम्(), <code>एकाचः</code> (7.2.10) इतीट्()प्रतिषेधः।
 <code>सुषूतिः</code> इति। सूतेः सूयतेर्वा <code>स्त्रियां क्तित्()</code> (3.3.94)। सूतीति स्वरूपग्रहणम्()। यत्रास्यैतद्रूपं नास्ति, तत्र न भवति&ndash;सुसूनम्(), विसूतमिति। कथं पुनज्र्ञायते&ndash;स्वरूपग्रहणमेतत्(), न पुनः सूत्र्लुग्विकरणसय ग्रहणमिति? भवति तस्यापि <code>इविश्तपौ धातुनिर्देशे</code> (वा ३१९) इति श्तिपि कृते सूतिरित्येष निर्दसः? समशब्देन साहचर्यात्? त य हीह स्यरूपं गृह्रत इति। यद्यपि सु पना धातुना साहचर्याद्धातोरपि ग्रहणं युक्तम्(), तथापि शब्दपरविप्रतिषेधेन शब्दपरं यत्साहचर्यं तद्बलीय इति समशब्देनैव माहचर्यात स्वरूपमेव गृह्रते, न सुपिना धातुना साहचर्याद्धातुः।
 अथ किमर्थं सुपेः कृतसम्प्रसारणस्य षत्वमुच्यते? इत्यत आह&ndash;<code>सुपेः षत्वं स्वपेर्मा भूत्()</code> इत्यादि। सुस्वापः, विस्वपनम्(), निस्विपनम्(), दुःखपनमित्यत्राकृतसम्प्रसारणस्य स्वपेः षत्वं मा भूदित्येवमर्थ स्वपेः कृतसम्प्रसारणस्य षत्वमुच्यते। यद्येवम्(), विसुष्वापेति केन न<code>इति? स्वपेर्लिट्(), तिप्(), णल्(), द्विर्वचनम्(),</code>लिट()भ्यासस्योभयेषाम्()<code>(6.1.16) इति सम्प्रसारणम्()। कृतसम्प्रसारणस्य स्वपेरभ्यासस्येति केन हेतुना षत्वं न भवति? नास्त्येव स हेतुयेन हेतुना विसुष्वापेत्यत्र न भविष्यतीत्यभिप्रायः। परस्य तु सकारस्य</code>आदेशप्रत्यययोः<code>(8.3.59) इत्यनेन षत्वं भवत्येव, न तद्धिषयेयं चिन्ता।</code>हलादिशेषान्न सुपिः<code>इति। एतेन येन हेतुना षत्वमत्र न भवति तं दर्शयति।</code>लिट()भ्यासस्योभयेषाम्()<code>(३।१।१७) इत्येतस्माद्धि सम्प्रसारणात्परत्वाद्धलादिशेषे कृते यद्यपि पश्चात्? सम्प्रसारणं क्रियते, तथापि सुप इति रूपं न भवति; पकारस्यारणात्परत्वाद्धलादशेषे कृते यद्यपि पश्चात्? सम्प्रसारणं क्रियते, तथापि सुप्? इति रूपंनि भवति; पकारस्याभावात्()। तस्मात्? षत्वं न भविष्यतीत्यभिप्रायः। तेन सुप सुप इत्यस्य रूपत्याभावः षत्वाभावे हेतुरुक्तः। पूर्वपक्षवादिना तु प्राक्? सम्प्रसारणे कृते पश्चाद्धलादिशेषेण पकारो निवृत्त इति मन्यमानेन देशितम्()। ननु पश्चादपि पकारस्य निवृत्तिः, नैवायं सुपिर्भवति, पकाराभावात्(), तत्? किमिति देशितम्()?</code>एकदेशविकृतस्यानन्य<code>त्वात्? (व्या।प।१६) सुपिरेवायमित्यभिप्रायः। यदा तु परत्वाद्धलादिशेषे कृते सम्प्रसारणं भवति, तदैकदेशविकृतस्यानन्यत्वे सुपिरयं न भवति; न हि तदा सुपेरेव विकारः, किं तर्हि? स्वपेः। अत आह--</code>इष्ट पूर्वं सम्प्रसारणम्()<code>इति। हलादिशेषादिं पूर्वं सम्प्रसारणमेवेष्यते। तथा ह्रुभयेषां ग्रहणं तत्रैवमर्थं कृतम्()--परमपि हलादिशेषं बाधित्वा पूर्वं सम्प्रसारणमेव यथा स्यादिति। तस्मद्धलादिशेषात्पूर्वमभ्यासस्य सम्प्रसारणेणैव भवितव्यमित्युक्तम्()--हलादिशेषान्न सुपिरिति। ततश्च</code>विसुष्वापेति केन न<code>इत्येतद्देश्यं तदवस्थमेव। 
@@ -134,9 +146,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

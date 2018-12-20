@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.2\/7.2.5.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.5";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.6\",\"Previous\":\"7.2.4\",\"अकारादिक्रमसङ्ख्या\":3966,\"कौमुदीक्रमसङ्ख्या\":2299,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सिचि वृद्धिः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ह्म्यन्तक्षणश्वसजागृणिश्व्येदिताम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.2/7.2.5.md">Edit 7.2.5!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.5";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.6\",\"Previous\":\"7.2.4\",\"अकारादिक्रमसङ्ख्या\":3966,\"कौमुदीक्रमसङ्ख्या\":2299,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सिचि वृद्धिः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ह्म्यन्तक्षणश्वसजागृणिश्व्येदिताम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.5 ह्य्यन्तक्षण�आसजागृणिश्व्येदिताम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अग्रहीत्()</code> इति। ग्रह उपादाने<code>(धा।पा। १५३३)।</code>अस्यमीत्()<code>इति।</code>स्थमु स्वन ध्वन शब्दे<code>(धा।पा।८२६)-८२८)</code>अवमीत्()<code>इति।</code>टु वम उद्गिरणे<code>(धा।पा।८४९)।</code>अद्यतीत्()<code>इति।</code>व्ययवित्तसमुत्सर्गे<code>(धा।पा।१९३२)</code>अक्षणीत्()<code>इति।</code>क्षणु हिंसायाम्()<code>(धा।पा।१४६५) अ()आसीदिति।</code>()आसप्राणने<code>(दा।पा।१०६९)।</code>अजागरीत्()<code>इति।</code>जागृ निद्राक्षये<code>(धा।पा।१०७२)।</code>औनयीत्? ऐलयीत्()ऊन परिहाणे<code>(धा।पा।१८८८), [परिहरणे--धा।पा।]</code>ईल प्रेरणे<code>(धा।पा।१६६०), [</code>इल<code>--धा।पा।] चुरादिणिच्()।</code>नोनयति<code>(3.1.51) इत्यादिना चङि प्रतिषिद्धे सिजेव भवति,</code>आडजादीनाम्()<code>(6.4.72) इत्याट्(),</code>आटश्च<code>(6.1.87) इति वृद्धिः।</code>अ()आयीत्()<code>इति।</code>टु ओश्यि गतिवृद्द्योः<code>(धा।पा।१०१०)।</code>अरगीत्(), अलगीत्? इति। <code>रगे लगे सङ्गे [रगे शंकायाम्()--धा।पा।] (धा।पा।७८५,७८६)।</code>अस्थागीत्()<code>इति।</code>स्थगे संवरणे<code>(धा।पा।७९०) [</code>ष्टगे<code>--धा।पा।]</code>अकखीत्()<code>इति।</code>कखे हसने<code>(धा।पा।७८४)। 
 </code>सा च नेटीति न प्रतिषिध्यते<code>इति। अनन्तराया हलन्तक्षणाया वृद्धेः प्रतिषेधः, न पूर्वस्याः। अथ किमर्थं णि()इआग्रहणम्(), यावतान्तरङ्गत्वादेवात्र गुणेन भवितव्यम्(), कृते गुणेऽयादेशेन, ततश्च यकारान्तत्वादेव तथोः प्रतिषेधो भविष्यति? इत्याह--</code>न च<code>इत्यादि। इदमन्तरङ्गत्वं सिच्यभ्युपेत्योक्तम्()। इदानीमन्तरङ्गत्वमेव सिचि नास्तीति दर्शयितमाह--</code>यदि<code>इत्यादि। किं कारणं णि()इआग्रहणमनर्थकं स्यात्()? इत्यात आह--</code>गुणायादेशयोः<code>इति। यदि तर्हि सिच्यन्तरङ्गत्वं नास्ति, यदुक्तं</code>अन्तरङ्गमपि गुणमेषा वृद्धिर्वचनाद्वाधते<code>इति तद्विरुध्यते? नास्ति विरोधः, अध्यारोप्यो तथाभिधानात्()। 
 </code>अथ<code>इत्यादि। अत्र वक्ष्यमाणोऽभिप्रायः। अथ जागृग्रहणं किमर्थमिति पृष्टस्य किं कारणं जागृग्रहणं न कत्र्तव्यमिति प्रश्नावसरे येनाभिप्रायेण पृष्टवांस्तमाविष्कर्त्तुमाह--</code>जाग्रोऽविचिण्()<code>इत्यादि। यथा जागरयतीत्यादौ</code>अचो ञ्णिति<code>(7.2.115) इति प्राप्तां वृदिं()ध जागत्र्तर्गुणो बाधते तथा सिचिवृद्धिमपि बाधिध्यते, वृद्ध्यपवादत्वाद्गुणशास्त्रसय।</code>गृणे कत<code>इत्यादि। अकृते हि गणे या सिचि वृद्धिः प्राप्नोति सापवादत्वाद्गुणेन बाध्यते; अकृतार्थत्वाद्गुणशास्त्रस्य। न च साऽनेन वचनेन बाधिष्यते; किं तर्हि? गुणे कृते रपरत्वे च</code>अतो ल्रान्तस्य<code>(7.2.2) इत्युत्तरकालं या वृद्धि प्राप्नोति तस्याः प्रतिषेधो विधीयते, न च शक्या गुणेन बाधितुं सा। न हि</code>जाग्रोऽविचिण्णल्ङित्सु<code>(7.3.85) इति शास्त्रं पुनः प्रवर्त्तितुमुत्सहते; कृतार्थत्वात्()। न चान्यद्()गुणलक्षणमस्त्युत्तरकालवृद्धेर्बाधकम्()। तत्र यदि जागग्रहणं न क्रियते,</code>अतो ल्रान्तस्य<code>(7.2.2) इति वृद्धि स्यात्()। 
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-2.1\/2.1.50.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.1.50";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.1.51\",\"Previous\":\"2.1.49\",\"अकारादिक्रमसङ्ख्या\":1859,\"कौमुदीक्रमसङ्ख्या\":727,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"दिक्संख्ये संज्ञायाम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.1/2.1.50.md">Edit 2.1.50!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.1.50";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.1.51\",\"Previous\":\"2.1.49\",\"अकारादिक्रमसङ्ख्या\":1859,\"कौमुदीक्रमसङ्ख्या\":727,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"दिक्संख्ये संज्ञायाम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.1.50 दिक्संङ्ख्ये संज्ञायाम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>दिक्संख्ये। अधिकार इति। <code>पूर्वकालैके</code>ति सूत्रस्थं <code>समानाधिकरणेने</code>त्येतदा पादसमाप्तेरनुवर्तत इत्यर्थः। ततश्च दिक्सङ्ख्ये समानाधिकरणेन सुबन्तेन समस्येते, स तत्पुरुष इत्यर्थः। ननु <code>विशेषणं विशेष्येणे</code>ति यदि दिक्सङ्ख्ययोस्समासः स्यात्तर्हि संज्ञायामेवे<code>ति नियमशरीराभ्युपगमात्।</code>पूर्वसूत्रंपूर्वमासःपूर्वसमुद्रः<code>इत्यादौ तु संज्ञात्वाऽभावेऽपि कालदेशवाचकत्वात् समासो भवत्येव। ननु</code>त्रिलोकनाथः पितृसद्मगोचरः<code>इति कथं कालिदासप्रयोगः, त्रिलोकशब्दस्य असंज्ञात्वात्। त्रयाणां लोकानां समाहार इति विग्रहे</code>तद्धितार्थ<code>इति द्विगुसमासे तु</code>द्विगोः<code>इति ङीप्प्रसङ्गः।</code>अकारान्तोत्तरपदो द्विगुः स्त्रियामिष्टः<code>इति स्त्रीलिङ्गत्वात्। पात्रादित्वान्न स्त्रीत्वमित्यभ्युपगमे</code>यदि त्रिलोकी गणनापरा स्या<code>दित्यादिप्रयोगा न युज्येरन्निति चेत्सत्यम्। लोकशब्दोऽत्र लोकसमुदायपरः। त्त्यवयवो लोकस्त्रिलोक इति मध्यमपदलोपी समासः। एतच्च</code>द्विगोर्लुगनपत्ये<code>इति सूत्रे भाष्ये स्पष्टम्।</code>षोडशपदार्थाना`मित्यत्र तु षोडशसंख्याकाः पदार्था इति मध्यमपदलोपी समास इत्यलम्। पूर्वेषुकामशमीति। पूर्वशब्दस्य इषुकामशमीशब्देन समासः। देशविशेषस्य संज्ञेयम्। सप्तर्षय इति। मरीच्यत्रिप्रभृतीनां सप्तानामृषीणां संज्ञेयम्। नेहेति। असंज्ञात्वादिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

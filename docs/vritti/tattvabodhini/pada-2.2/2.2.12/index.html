@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-2.2\/2.2.12.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.2.12";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.2.13\",\"Previous\":\"2.2.11\",\"अकारादिक्रमसङ्ख्या\":1183,\"कौमुदीक्रमसङ्ख्या\":706,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"क्तेन च पूजायाम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.2/2.2.12.md">Edit 2.2.12!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.2.12";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.2.13\",\"Previous\":\"2.2.11\",\"अकारादिक्रमसङ्ख्या\":1183,\"कौमुदीक्रमसङ्ख्या\":706,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"क्तेन च पूजायाम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.2.12 क्तेन च पूजायाम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>क्तेन पूजायाम्। सूत्रे उपलक्षणं पूजाग्रहणं, व्याख्यानादित्याह&ndash;मतिबुद्धीति। राज्ञामिति। <code>क्तस्य च वर्तमाने</code>इति कर्तरि षष्ठी। भूत इति। न च तक्रकौण्डिन्यायेन मत्यादिब्यः क्तस्य वर्तमानकालो भूतकालतां बाधत इति वाच्यं, <code>तेनैकदि</code>दित्यतः <code>तेन</code> इत्याधिकारे <code>उपज्ञाते</code>इति निर्देशेन भूतकालस्याऽबाधज्ञापनात्। <code>उपज्ञाते</code>इत्यत्र हि भूते क्तो, न तु वर्तमाने। अन्यथा <code>क्तस्य च वर्तमाने</code>इति षष्ठीविधानादुपज्ञतशब्दस्य तेनेति। तृतीयायोगो न स्यात्। न चैवमपि ज्ञानार्थेष्वेव ज्ञापकत्वमस्त्विति वाच्यं, <code>पूजितोः यः सुरासुरैः</code>इति प्रयोगानुरोधेन सामान्यविषयज्ञापकत्वस्यैव न्याय्यत्वात्। अन्ये तु कारकषष्ठ�आ एव समासनिषेधोऽयम्, शेषषष्ठ�आ तु समासः स्यादेवेत्याहुः। एतेन <code>कलहं स राममहितः कृतवा</code>निति सभट्टिप्रयोगो व्याख्यातः। <code>राममहितः स, कलहं कृतवा</code>नित्यन्वयः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

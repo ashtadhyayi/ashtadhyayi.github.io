@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.3\/6.3.41.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.41";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.42\",\"Previous\":\"6.3.40\",\"अकारादिक्रमसङ्ख्या\":1506,\"कौमुदीक्रमसङ्ख्या\":842,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"जातेश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.41.md">Edit 6.3.41!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.41";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.42\",\"Previous\":\"6.3.40\",\"अकारादिक्रमसङ्ख्या\":1506,\"कौमुदीक्रमसङ्ख्या\":842,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"जातेश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.41 जातेश्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>जातेश्च। <code>ईत</code> इति अस्वरितत्वान्नानुवर्तत इत्यभिप्रेत्याह&ndash;जातेः परोः यः स्त्रीप्रत्यय इति। शूद्राभार्य इति। <code>शूद्रा चामहत्पूर्वे</code>ति जातिलक्षणङीषोऽपवादष्टाप्। पुंवत्त्वनिषेधान्न टापो निवृत्तिः। ब्राआहृणीभार्य इति। पुंवत्त्वनिषेदान्न शार्ङ्गरवादिङीनो निवृत्तिः। ननु हस्तिनीनां समूहो हास्तिकमित्यत्र <code>अचित्तहस्ती</code>ति ठकि हस्तिनीशब्दस्य <code>भस्याऽढे</code> इति कथं पुंवत्त्वं <code>जातेश्चे</code>ति निषेधादित्यत आह&ndash;सौत्रस्यैवायं निषेध इति। सूत्रविहितस्येत्यर्थः। <code>भस्याऽढे</code> इति तु वार्तिकमिति भावः। एतच्च <code>न कोपधायाः</code> इति सूत्रे भाष्ये स्पष्टम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

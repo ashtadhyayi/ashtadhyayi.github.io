@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-7.2\/7.2.57.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.57";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.58\",\"Previous\":\"7.2.56\",\"अकारादिक्रमसङ्ख्या\":3783,\"कौमुदीक्रमसङ्ख्या\":2506,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्त्वा-निष्ठयोः सनि तासि च\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सेऽसिचि कृतचृतच्छृदतृदनृतः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-7.2/7.2.57.md">Edit 7.2.57!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.57";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.58\",\"Previous\":\"7.2.56\",\"अकारादिक्रमसङ्ख्या\":3783,\"कौमुदीक्रमसङ्ख्या\":2506,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्त्वा-निष्ठयोः सनि तासि च\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सेऽसिचि कृतचृतच्छृदतृदनृतः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.57 सेऽसिचि कृतचृतछृदतृदनृतः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सेऽसिचि। नातष्यति। नत्स्र्यतीति। निनर्तिषति। निनृत्सति। कर्तिष्यति। कत्स्र्यति।चिकर्तिषति। चिकृत्सति। इत्यादि ज्ञेयम्। अनर्तीदिति। <code>असिची</code>त्युक्तत्वादिह नित्यमिट्। त्रेसतुरिति। वा जृ?भ्रमुत्रसा<code>मीत्येत्त्वाभ्यासलोपौ। कुथ। पूतीभावः-- पवित्रीभवनम्। कुथ्यति भूमिः। पवित्रीभवतीत्यर्थः। पुष्प विकसने।</code>कालात्साधुपुष्यत्पच्यमानेष्वि<code>त्यत्र पुष्यतिः शत्रन्तः। पचाद्यचि पुष्पम्। संज्ञायां कन्।</code>पुष्पकम्। व्रीड। <code>गुरोश्च हलः</code> इत्यप्रत्यये टाप्। व्रीडा। घञि तु व्रीडः। <code>अत एव व्रीडमावहति मे स संप्रती</code>ति कालिदासः। <code>व्रीडादिवाभ्यासगतैर्विलिल्ये</code> इति माघश्च। षह षुह। <code>परिनिविभ्यः</code> इत्यत्र सहेत्यकार उच्चारणार्थ इति षत्वमिह भवति। परिषह्यति। <code>तीषसहे</code>तीड्विकल्पस्तु नाऽस्य भवति, <code>सहे</code>ति शबन्तनिर्देशात्, किं तु <code>षह मर्षणे</code> इत्यस्यैव स इत्यात्रेयादयः। सहेति निर्देशस्योभयत्र तुल्यत्वे <code>तीषसहे</code>त्यत्र शपा निर्देशः, <code>परिनिविभ्यः</code> इत्यत्र तु नेत्यर्द्धजरतीयमिदं हेयमेव। तत्त्वं तु प्रयोगमनुसृत्य महद्भिरेव निर्धार्यम्। नपुंसके भावे क्तः। सुहतंतृप्तिः। अत एव <code>पूरणगुणे</code>ति सूत्रे सुहितार्थास्तृप्त्यर्था इति व्याख्य#आतम्। जेरतुरिति। <code>ऋच्छत्यृ?ता</code>मिति गुणे कृते <code>न शसददे</code>ति गुणशब्देन भावितस्य निषेधात् <code>अत एकहल्मध्ये</code> इत्यपर्वृत्तौ <code>वा जृ?भ्रमुत्रसा</code>मित्येत्वाभ्यासलोपविकल्पः। षूङ्। प्रसव उत्पत्तिः। <code>मृत्पिण्डो घटं सूयते</code> इत्यादिप्रयोगाऽभावात्प्राणीत्युक्तम्। <code>स्वादय ओदितः</code> इति वक्ष्यमाणत्वात् <code>ओदितश्चे</code>ति निष्ठातस्य नत्वम्। प्रसूनम्। विकल्पमिति। <code>परमपी</code>ति शेषः। निषेधे प्राप्ते इति। पुरस्तात्प्रतिषेधकाण्डारम्भसामर्थ्यादिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.3\/6.3.30.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.30";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.31\",\"Previous\":\"6.3.29\",\"अकारादिक्रमसङ्ख्या\":1866,\"कौमुदीक्रमसङ्ख्या\":927,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपद अनङ्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दिवसश्च पृथिव्याम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.30.md">Edit 6.3.30!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.30";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.31\",\"Previous\":\"6.3.29\",\"अकारादिक्रमसङ्ख्या\":1866,\"कौमुदीक्रमसङ्ख्या\":927,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपद अनङ्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दिवसश्च पृथिव्याम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.30 दिवसश्च पृथिव्याम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>दिवसश्च पृथिव्यां। दिव इत्येवेति। दिव इत्यनुवर्तत एवेत्यर्थः, स्वरितत्वादिति भावः। तर्हि चकारो व्यर्थ इत्यत आह&ndash;चादिति। तथा च दिव्शब्दस्य दिवसादेशो, द्यावादेशश्च स्यात्पृथिवीशब्दे उत्तरपदे परे देवताद्वन्द्वे इत्यर्थः। <code>दिवस्पृथिव्याः</code> इत्यत्र सकारादकारस्याऽश्रवणाद्दिवसादेशस्य सकारान्तत्वावश्यंभावादादेश सकारादकारोच्चारणस्य किं प्रयोजनमित्यत आह&ndash;आदेशेऽकारोच्चारणमिति। सामर्थ्यात् <code>ससजुषो रु</code>रिति रुत्वं नेति भावः। ननु <code>द्यावा चिदस्मै पृथिवी सन्नमेते</code> इत्यत्र दिव्शब्दपृथिवीशब्दयोः कथं द्वन्द्वः ?, कथं वा दिवो द्यावा देशः?, उत्तरपदस्य <code>चिदस्मै</code> इत्यनेन व्यवहितत्वादित्यत आह&ndash;छन्दसि दृष्टानुविधिरिति॥ भाष्यवाक्यमेतत्। वेदे दृष्टानुसरणमित्यर्थः। यतादृष्टं तथा प्रक्रिया कल्पनीयेति भावः। पदकारा इति। <code>दिवस्पृथिव्यो</code>रित्यवग्रहे विसर्गं पठन्तीत्यर्थः। <code>पदकारा</code> इत्यनेन पदपाठस्याधुनिकत्वं सूचितम्। तथाच विसर्गपाठः प्रामादिक इति सूचितम्, अकारोच्चारणेन रुत्वनिवृत्तेरुक्तत्वात्। उषासोषसः। उषासासूर्यमिति। उषाश्च सूर्यश्चेति समाहारद्वन्द्वः। मातरपितरावुदीचाम्। उदीचां मते मातरपितराविति भवतीत्यर्थः। अत्र मातृशब्दस्याऽरङादेशो निपात्यते। मातापितराविति। अरङभावे <code>आनङृतः</code> इत्यानङ्। द्वन्द्वाच्चुदष। समासान्ताधिकारस्थं तद्धिताधिकारस्थं चेदं सूत्रम्। टच्स्यादिति। <code>राजाहःसखिभ्यः</code> इत्यतस्तदनुवृत्तेरिति भावः। वाक्त्वचमिति। वाक्य त्वक्चेति समाहारद्वन्द्वः। कुत्वस्याऽसिद्धत्वाच्चवर्गान्तत्वाट्टच्।एवं त्वक्रुआजमित्यत्रापि। त्वक्च रुआक्चेति विग्रहः। शमीदृषदमिति। शमी च दृषच्चेति विग्रहः। दकारान्तत्वाट्टच्। वाक्त्विषमिति। वाक्च त्विट्। चेति विग्रहः। षान्तत्वाट्टच्, जश्त्वस्याऽसिद्धत्वादिति भावः। छत्रोपानहमिति। छत्रं च उपानच्चेति विग्रहः। हान्तत्वाट्टच्। प्रावृट्शरदाविति। प्रावृट् च शरच्चेति विग्रहः। इतरेतरयोगद्वन्द्वत्वान्न टजिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.4\/7.4.41.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.4.41";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.4.42\",\"Previous\":\"7.4.40\",\"अकारादिक्रमसङ्ख्या\":3384,\"कौमुदीक्रमसङ्ख्या\":3075,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तकारादौ किति अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"शाछोरन्यतरस्याम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.4/7.4.41.md">Edit 7.4.41!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.4.41";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.4.42\",\"Previous\":\"7.4.40\",\"अकारादिक्रमसङ्ख्या\":3384,\"कौमुदीक्रमसङ्ख्या\":3075,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तकारादौ किति अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"शाछोरन्यतरस्याम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.4.41 शाच्छोरन्यतरस्याम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>शो तनूकरणे</code> (धा।पा।११४५), <code>छो छेदने</code> (धा।पा।११४६)।
 <code>श्यतेरित्त्वं व्रते नित्यम्()</code> इति। ब्रात इति नोत्तरपदं गृह्रते, किं तर्हि? विषयः। व्रतविषये श्यतेर्नित्यमित्त्वं भवति। <code>संशितो ब्राआहृणः</code> इति। आचारविशेषे व्रताख्ये यत्नवानेवोच्यते संशितव्रत इति। संशितं यत्नेन सम्यक्? प्रतिपादितं व्रतं यस्य येन वा स एवमुच्यते। ननु च व्रतविषये विधौयमानेनेत्त्वेनैव व्रतस्य द्योतितत्वाद्()व्रतशब्दस्य प्रयोगो न प्राप्नोति? नैष दोषः; अन्यत्र हीत्वं भवत्येव, व्रते तु नित्यमाख्यायते, सोऽयं सामान्यशब्दो भवति। अत्र विशेषार्थो व्रतश्ब्दः प्रयुज्यते। परनिपातस्त्वाहितग्न्यादित्वाद्द्रष्टव्यः। <code>व्यवस्थितविभाषाविज्ञानात्? सिद्धम्? इति। 
 एतदागमवाक्येन द्रढयितुमाह--</code>देवत्रातः<code>इत्यादि।</code>त्रैङ्? पालने<code>(धा।पा।९६५), क्तः।</code>नुदविदोन्दत्राघ्रह्यीभ्योऽन्यतरस्याम्()<code>(8.2.56) इति संज्ञाविषये नत्वं न भवत्येव--देवैस्त्रातो देवत्रातः, देवशब्दोऽत्र संज्ञोपलक्षणार्थः। केवलस्यापि त्रातशब्दस्य संज्ञायां न नत्वं प्रतिपद्यते। एवं सज्ञाया अन्यत्रोभयं भवति--त्राणः, प्रात इति।</code>गलः<code>इति। गिरतेः पचाद्यच्()।</code>ग्रो यङि<code>(8.3.20),</code>अचि विभाषा<code>(8.2.21) इति प्राण्यङ्गे नित्यं लत्वम्()--गल इति। विषे तु भवत्येव--गर इति।</code>ग्राहः<code>इति। ग्राहेः</code>विभाषा ग्रहः<code>(3.1.143) इति णप्रत्ययः। जलचरे नक्रे नित्यं णप्रत्ययो भवति--ग्राह इति। आदित्यसोमादिषु पचाद्यज्भवत्येव--ग्रह इति।</code>इतियोगे च सद्विधिर्न भवति<code>इति। वर्षतीति धावति, हन्तीति पलायते इति--</code>लक्षमहेत्वोः क्रियायाः<code>(3.2.123) इति सत्संज्ञकौ शतृशानचावितियोगे न भवत एव, व्यवस्थितविभाषया। तत्र</code>नन्वोर्विभाषा<code>(३।२।१२१) इत्यतो विभाषाग्रहणमनुवत्र्तते--अर्जयन्? वसति, अधीयानो वसति। तत्रासतीति योगे नित्यावेव तौ भवतः। ननु चेतिशब्देनैव हेत्वर्थस्य द्योतितत्वाद्वर्षतीति, हन्तीत्येवमादौ सद्विधिर्न भविष्यति, यत्र त्वितिशब्दो न प्रयुज्यते तत्र भवत्येव--अर्जयन्? वसतीत्यादौ, तदत्र विभाषाधिकारनन्तरेणापि विभाषा लभ्यत एव; अतो विभाषाग्रहणं नानुवर्त्त्यमेव, तस्मादनुदाहरणमेतद्()व्यवस्थितविभाषायाः? इदं तर्ह्रुदाहरणम्()--करिष्यामीति व्रजतीति। अत्र</code>लृट्? शेषे च<code>(३।३।१३) इति चकारात्? क्रियायामुपपदे क्रियार्थायां लृट्(), तस्य लृटः सद्विधिर्न भविष्यतीति; व्यवस्थितविभाषया। अप्रथमासमानाधिकरणेनेतियोगादन्यत्र नित्यं भवति--करिष्यन्तं पश्येति, प्रथमासमानाधिकरणे तु विकल्पः--ब्राआहृणः करिष्यन्? ब्राआहृणः करिष्यतीति।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

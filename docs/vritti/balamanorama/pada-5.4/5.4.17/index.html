@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-5.4\/5.4.17.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.17";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.18\",\"Previous\":\"5.4.16\",\"अकारादिक्रमसङ्ख्या\":3515,\"कौमुदीक्रमसङ्ख्या\":2085,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"अव्ययम्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"संख्यायाः क्रियाऽभ्यावृत्तिगणने कृत्वसुच्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-5.4/5.4.17.md">Edit 5.4.17!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.17";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.18\",\"Previous\":\"5.4.16\",\"अकारादिक्रमसङ्ख्या\":3515,\"कौमुदीक्रमसङ्ख्या\":2085,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"अव्ययम्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"संख्यायाः क्रियाऽभ्यावृत्तिगणने कृत्वसुच्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.17 संख्यायाः क्रियाभ्यावृत्तिगणने कुत्वसुच्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>संङ्ख्यायाः। अभ्यावृत्तिशब्देन यदि द्वितीयादिप्रवृत्तिर्गृह्येत, तदा चतुर्वारं पाकप्रवृत्तौ त्रिः पचतीति स्यादित्यत आह&ndash;अभ्यावृत्तिर्जन्मेति। उपसर्गवशात् <code>वृतु वर्तने</code> इति धातोरुत्पत्तौ वृत्तिरिति भावः। कुत्वसुचि चकार इत्। उकार उच्चारणार्थः। <code>तद्धितश्चाऽसर्वविभक्ति</code>रित्यत्र तसिलादिषु परिगणनात्कृत्वोऽर्थानामव्ययत्वम्। पञ्चकृत् वो भुङ्क्त इति। पञ्चत्त्वसङ्ख्याकोत्पत्तिविशिष्टा भोजनक्रियेत्यर्थः। सङ्ख्यायाः किमिति। गणने वृत्तिः सङ्ख्याशब्दानामेवेति प्रश्नः। भूरिवारान्भुङ्क्ते इति। भूरिशब्दो बहुशब्दपर्यायः। वारशब्दस्तु समभिव्याह्मतक्रियापर्याप्ते काले वर्तते। <code>कालाध्वनोरत्यन्तसंयोगे</code> इति द्वितीया। बहुकालेषु कात्स्न्येन व्याप्ता भोजनक्रियेत्यर्थः। भोजनबहुत्वं त्वर्थाद्गम्यते। तथा च वारशब्दोऽयं न गणनवाची। भूरिशब्दोऽपि न सङ्ख्याशब्देन गृह्यते, <code>बहुगणवतुडति सङ्ख्ये</code>त्यत्र बहुग्रहणेन तत्पर्यायस्य असङ्ख्यात्वबोधनात्, अतोऽत्र न कृत्वसुच्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

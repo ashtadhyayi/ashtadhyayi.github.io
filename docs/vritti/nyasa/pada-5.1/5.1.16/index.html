@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.1\/5.1.16.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.1.16";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.1.17\",\"Previous\":\"5.1.15\",\"अकारादिक्रमसङ्ख्या\":1635,\"कौमुदीक्रमसङ्ख्या\":1678,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तदस्य तदस्मिन् स्यादिति\",\"विषयः २\":\"प्राक् क्रीताच्छः।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"तदस्य तदस्मिन् स्यादिति\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.1/5.1.16.md">Edit 5.1.16!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.1.16";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.1.17\",\"Previous\":\"5.1.15\",\"अकारादिक्रमसङ्ख्या\":1635,\"कौमुदीक्रमसङ्ख्या\":1678,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तदस्य तदस्मिन् स्यादिति\",\"विषयः २\":\"प्राक् क्रीताच्छः।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"तदस्य तदस्मिन् स्यादिति\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.1.16 तदस्य तदस्मिन्? स्यादिति।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>द्वितीयाशङ्कामपनिनीषुराह&ndash;<code>तत्()</code> इत्यादि। अस्तेरकर्मकत्वादित्यभिप्रायः। अवयवार्थपूर्वत्वादवयव्यर्थस्येत्याह&ndash;<code>अस्य</code> इत्यादि। करोतीति करणः। कत्र्तरि बहुलवचनाल्लयुट्()। इतिश्चासौ करणश्चेति कर्मधारयः। <code>सम्भावनेऽलमिति चेत्सिद्धाप्रयोगे</code> (3.3.154)।
 ननु च प्राकारीया इष्टकाः, प्रासादीयं दार्विति च पूर्वेणैव सिद्धम्(), तथा हि&ndash;यासामिष्टकानां यस्य च दारुणो बहुत्वेन प्राकारः प्रासादश्च सम्भाव्यते, तासामिष्टकानां तस्य च दारुणो यथासंख्येन प्राकारप्रासादौ विकारौ भवतः, तादथ्र्याच्चेष्टकानां दारूणाञ्चास्तीवेत्यत आह&ndash;<code>प्रकृतिविकार</code> इत्यादि। गतार्थम्()।
 <code>द्विस्तद्ग्रहणम्()</code> इत्यादि। इत्येष न्यायोऽनेन प्रदश्र्यते। <code>तदस्यास्त्यस्मिन्निति मतुप्()</code> (5.2.93) इत्यादौ नैकः प्रत्ययार्थः। तत्र तत्समुदायेन समर्थविभक्तेः सम्बन्धो विज्ञायते। ततश्च यत्र द्वाभ्यां प्रत्ययार्थाभ्यां समर्थविभक्तेः सम्बन्धः सम्भवति&ndash;शाखावान्? वृक्ष इत्यादौ, तत्रैव तत्? स्यात्()। यत्र त्वन्यतरेणैव सम्बन्धः&ndash;गोमान् देवदत्तः, वृक्षवान्? पर्वत इत्यादौ, तत्र न स्यात्()। अ()स्मस्तु न्याये प्रदर्शिशते सर्वत्र भवति॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

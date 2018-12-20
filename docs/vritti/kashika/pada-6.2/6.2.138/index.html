@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-6.2\/6.2.138.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.138";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.139\",\"Previous\":\"6.2.137\",\"अकारादिक्रमसङ्ख्या\":3395,\"कौमुदीक्रमसङ्ख्या\":3872,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"शितेर्नित्याबह्वज्बहुव्रीहावभसत्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-6.2/6.2.138.md">Edit 6.2.138!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.138";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.139\",\"Previous\":\"6.2.137\",\"अकारादिक्रमसङ्ख्या\":3395,\"कौमुदीक्रमसङ्ख्या\":3872,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"शितेर्नित्याबह्वज्बहुव्रीहावभसत्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.138 शितेर् नित्याबह्वज्बहुव्रीहावभसत्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>शितेः उत्तरपदं नित्यं यदबह्वज् भसच्छब्दवर्जितं बहुव्रीहौ समासे तत् प्रकृतिस्वरम् भवति। शितिपादः। शित्यंसः। शित्योष्ठः। पादशब्दो वृषादित्वादद्युदात्तः। अंसौष्ठशब्दौ च प्रत्ययस्य नित्त्वात्। शितेः इति किम्? दर्शनीयपादः। नित्यग्रहणम् किम्? शितिककुत् ककुदस्य वस्थायां लोपो विधीयते। तत्र अवस्थाया अन्यत्र शितिककुद इति बह्वजुत्तरपदं भवति इति तेन न नित्याबह्वच्। अबह्वचिति किम्? शितिललाटः। बहुव्रीहौ इति किम्? शितेः पादः शितिपादः। अभसतिति किम्? शितिभसद्। शितिशब्द आद्युदात्तः। पूर्वपदप्रकृतिस्वरापवादो योगः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

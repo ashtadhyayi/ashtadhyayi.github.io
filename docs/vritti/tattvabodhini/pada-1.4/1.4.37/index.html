@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-1.4\/1.4.37.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.37";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.38\",\"Previous\":\"1.4.36\",\"अकारादिक्रमसङ्ख्या\":1213,\"कौमुदीक्रमसङ्ख्या\":575,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रदानम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रुधद्रुहेर्ष्याऽसूयार्थानां यं प्रति कोपः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.4/1.4.37.md">Edit 1.4.37!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.37";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.38\",\"Previous\":\"1.4.36\",\"अकारादिक्रमसङ्ख्या\":1213,\"कौमुदीक्रमसङ्ख्या\":575,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रदानम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रुधद्रुहेर्ष्याऽसूयार्थानां यं प्रति कोपः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.37 क्रुधद्रुहेष्र्याऽसूयार्थानां यं प्रति कोपः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>क्रुधद्रुह। <code>क्रुधे क्रोधे</code>, द्रुह जिघांसायाम्&rsquo;, <code>ईर्ष्य ईर्ष्यायाम्</code>, असूयतिः कण्ड्वादियगन्तः, एषामर्थ इवार्थे येषां धातूनामित्यर्थः। द्रोहोऽपकार इति। द्रुह द्रोहे&rsquo;इति पाठाभिप्रायेणोक्तं, जिघांसाद्रोह एवेत्यर्थतोऽनुभाषणं वा। अक्षमेति। परसंपत्त्यसहनमित्यर्थः। क्रुधद्रुहोरकर्मकत्वात्तद्योगे षष्ठी प्राप्ता, अन्ययोस्तु सकर्मकत्वाद्द्वितीया प्राप्ता। ननु चित्तदोषार्थानामित्येवास्तु, किं क्रोधादीनां विशिष्योपादानेनेति चेत्?अत्राहुः&ndash;द्विषादावतिप्रसङ्गवारणाय विशिष्योपादानम्। तेन <code>योऽस्मान्द्वेष्टि यं च वयं द्वि ष्मः</code> इत्यत्र चतुर्थी न भवति। तत्र ह्यनभनन्दनं द्विषेरर्थः। अत एवाऽचेतनेषु न प्रयुज्यते <code>--औषधं द्वेष्टि देवदत्त</code>मिति। कोपप्रभवा एवेति। कथं तर्हि <code>कुप्यसि कस्मैचित्</code>इति। न हि कोपः कोपप्रभवः। अत्र व्याचख्युः&ndash;कुपिरत्र द्रोहार्थ इति। पत्ये शेते इतिवत् <code>क्रिययायम्---</code> इत्येव सिद्धे क्रुधद्रुहोग्र्रहणं चिन्त्यप्रयोजनमित्याहुः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-8.2\/8.2.62.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.62";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.63\",\"Previous\":\"8.2.61\",\"अकारादिक्रमसङ्ख्या\":1222,\"कौमुदीक्रमसङ्ख्या\":377,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कुत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्विन्प्रत्ययस्य कुः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.2/8.2.62.md">Edit 8.2.62!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.62";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.63\",\"Previous\":\"8.2.61\",\"अकारादिक्रमसङ्ख्या\":1222,\"कौमुदीक्रमसङ्ख्या\":377,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कुत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्विन्प्रत्ययस्य कुः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.62 क्विन्प्रत्ययस्य कुः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>क्विन्प्रत्ययस्य कुः। <code>पदस्ये</code>त्यधिकृतम्। <code>झलाञ्जशोऽन्ते</code> इत्यतेऽन्त इत्यनुवर्तते। क्विन् प्रत्ययो यस्मात् स क्विन्प्रत्ययः, तस्येति बहुव्रीहिः। क्विन्नन्तस्येति तु नार्थः, तथासति <code>क्विनः कु</code>रित्येव ब्राऊयात्, प्रत्ययग्रहणपरिभाषाया क्विन्नन्तस्येत्यर्थलाभात्। तदाह&ndash;क्विन्प्रत्ययो यस्मादित्यादिना। बहुव्रीहेः प्रयोजनं तु घृतस्पृश्शब्दानिरूपणे मूल एव वक्ष्यते। कुरिति कवर्गो गृह्यते, उदित्त्वात्। अणिदित्सूत्रे <code>अप्रत्यय</code> इत्येतदणैव संबध्यते, नतूदिता, उदित्करणसामर्थ्यात्। तेन कुरिति विधायमानोपि सवर्णग्राहकः। ननु नकारस्य कुत्वे कखगघङा पञ्चापि पर्यायेण प्राप्नुयुः, स्थानत आन्तर्यस्य पञ्चस्वप्यभावात्, स्पृष्टप्रयत्नत आन्तर्यस्य पञ्चस्वप्यविशिष्टत्वात्, घोषसंवारनादवता अल्पप्राणवता च नकारेण गकारस्यापि आन्तर्यसत्त्वात्। अत आह&ndash;नस्येति। नासिकास्थानत आन्तर्यादिति भावः। युङिति। <code>युजिर् योगे।</code> रूधादिः। युनक्तीति युङ्। नुमि कृते तदीयनकारस्य <code>चोः कुः</code> इति कुत्वं न प्रानोतीति <code>क्वन्प्रत्ययस्ये</code>त्यारम्भः। अथ औजसादिषु विशेषमाह&ndash;नश्चेति। नुम इति। <code>युजेरसमासे</code> इति विहितस्ये<code>ति शेषः। परसवर्ण इति।</code>अनुस्वारस्य ययी<code>ति परसवर्णो ञकारो, नासिकास्तथानत आन्तर्यादिति भावः। तेन युञ्जावित्यादि सिद्धम्। नन्विह ञकारस्य झलि जकारे परे</code>चोः कु<code>रिति कुत्वं कुतो न स्यादित्यात आह--तस्येति। परसवर्णस्येत्यर्थः। युग्भ्यामिति।</code>स्वादिषु` इति पदत्वाज्जकारस्य गकार इति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

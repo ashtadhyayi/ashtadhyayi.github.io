@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.3\/1.3.10.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.3.10";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.3.11\",\"Previous\":\"1.3.9\",\"अकारादिक्रमसङ्ख्या\":2832,\"कौमुदीक्रमसङ्ख्या\":128,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":30,\"विषयः १\":\"परिभाषा\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"यथासंख्यमनुदेशः समानाम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.3/1.3.10.md">Edit 1.3.10!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.3.10";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.3.11\",\"Previous\":\"1.3.9\",\"अकारादिक्रमसङ्ख्या\":2832,\"कौमुदीक्रमसङ्ख्या\":128,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":30,\"विषयः १\":\"परिभाषा\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"यथासंख्यमनुदेशः समानाम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.3.10 यथासंख्यमनुदेशः समानम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>संख्याशब्देनात्र क्रमो लक्ष्यते</code> इति। यत्रानेके उद्देशिनोऽनुदेशिनश्च, तत्रानियमेन सम्बन्धे प्राप्ते नियमार्थंमिदमारभ्यते। यत्रोद्देशिनोऽनुदेशिनोऽनेकसंख्याः; तत्रावश्यं संख्याभेदेन भवितव्यम्। यत्र च संख्याभेदः, तत्र नियतभावी क्रमः ; संख्याभेदवतां युगपदुच्चारयितुमशक्यत्वात्। अतः साहचर्यात् संख्याशब्देन क्रमो लक्ष्यते। अर्थधर्मत्वं तु शब्दे समारोप्य संख्याशब्देन क्रमो लक्ष्यत इत्युक्तम्। यथाक्रमग्रहणं कथं न कृतम्? वैचित्र्यार्थम्।
 <code>यथासंख्यम्</code> इति। <code>यथाऽसादृश्ये</code> (2.1.7) इति वीप्सायामव्ययीभावः। <code>अनुदिश्यत इत्यनुदेशः</code> इति। <code>अकर्तरि च कारके संज्ञायाम्</code> (3.3.19) इति घञ्। <code>पश्चादुच्चार्यते</code> इति। अनुशब्दस्य पश्चादर्थवृत्तित्वाद्दिश्चोच्चारणक्रियत्वात्। <code>समसंख्यानम्</code> इति। समसंख्यतया समानत्वं दर्शयति। <code>{समं परिपठितानाम्िति मूल (काशिका) पाठः। }समगणनपरिपठितानाम</code> इति। तमेवार्थं शब्दान्तरेण व्यक्तीकरोति। <code>उद्देशिनामनुदेशिनाञ्च्</code> इति। यथाक्रममित्येतदपेक्षया षष्ठी। उद्देशिनो यद्यपि सूत्रे न श्रूयन्ते, तथापि सम्बन्धित्वात् पश्चाद्भावस्यानुदेशग्रहणाल्लभ्यन्ते। <code>यथाक्रमम्</code> इति। पूर्ववद्वीपसायामव्ययीभावः, तृतीयान्तञ्चैतत्; तदयमत्रार्थः- उद्देशिनामनुदेशिनाञ्च योऽयं क्रमस्तेन क्रमेणानुदेशिनः सम्बध्यन्त उद्देशिभिः सहेति। यद्यप्युद्देशिनामिति षष्ठ()न्तं प्रकृतम्, तथाप्यर्थाद्विभक्तेर्विपरिणामो भविष्यतीति तृतीयान्तं सम्पद्यते। <code>प्रथमात् प्रथमः</code> इत्यादिना यथाक्रमसम्बन्धं दर्शयति। आदिशब्दस्तृतीयात् तृतीयः, चतुर्थाच्चतुर्थ इत्यादिपरिग्रहाय। तौदेय इत्यादौ <code>सोऽस्याभिजनः</code> (4.3.90) इत्यत्रार्थे तद्धितः।
 <code>इह</code> इत्यादि। <code>वेशोयशाअदेर्भगात्</code> ९४।४।१३१) इति द्वे प्रकृती, <code>यल्खौ</code> इति प्रत्ययावपि द्वावेव; अतो यथासंख्येन भवितव्यमित्यभिप्रायः। इह केनचिनदाचार्येण शिष्याः प्रतिग्राहिताः&ndash; <code>वेशो यश आदेर्भगाद्यल् ख च</code> इत्येको योगः। अन्ये तु द्वावेतौ योगविति- <code>वेशोयश आदेर्भगात्</code> इत्येको योगः, <code>यल् ख च</code> इति द्वितीयः। तत्र य एक एवायं योग इत्येवं शिष्या ग्राहितास्तान्प्रत्ययं प्रश्नः। वृत्तिकारेणापि तन्मतमेवाश्रित्य<code>स्वरितेन</code> इत्यादिना परीहार उक्तः। ये तु द्वावेतौ योगावित्येवं ग्राहितास्तान् प्रत्येष प्रश्नो नास्ति; योगविभागेनैव यथासंख्यस्य स्यात्, योगविभागकरणमनर्थकं स्यादित्यभिप्रायः। कथं पुनः स्वरितेन लिङ्गेन यथासंख्यं लभ्यते, यावता नेह स्वरितग्रहणमस्तीत्याह&ndash; <code>स्वरितेनाधिकारः</code> इत्यादि। <code>स्वरितेनाधिकारः</code> (1.3.11) इति योगं विभज्य <code>स्वरितेन</code> इत्येको योगः, <code>अधिकारः</code> इति द्वितीयः। तत्र प्रथमो योगः पूर्वेणापि <code>यथासंख्यम्</code> इत्यादिना सम्बध्यते। अपिशब्दात् परेणापि <code>अधिकारः</code> इत्यनेन। यदि तर्हि स्वरितेन लिङ्गेन यथासंख्यं भवति, एवं हि सति सन्देहः स्यात्। तथा हि&ndash; यथासंख्यमिति स्वरितेनाधिकारोऽपि तत्र न ज्ञायते &ndash; किमधिकारार्थः स्वरितानुषङ्गः? अथ वा यथासंख्यार्थ इति? सन्देहमात्रमेतत्। सर्वनसन्देहेष्विदमुच्यते&ndash; <code>भवति व्याख्यानतो विशेषप्रतिपत्तिर्न हि सन्देहादलक्षणम्</code> (व्या।प।७५) इति॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

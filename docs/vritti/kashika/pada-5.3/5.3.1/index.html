@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-5.3\/5.3.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.2\",\"Previous\":\"5.2.140\",\"अकारादिक्रमसङ्ख्या\":2524,\"कौमुदीक्रमसङ्ख्या\":1947,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विभक्तिः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"प्राग्दिशो विभक्तिः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-5.3/5.3.1.md">Edit 5.3.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.2\",\"Previous\":\"5.2.140\",\"अकारादिक्रमसङ्ख्या\":2524,\"कौमुदीक्रमसङ्ख्या\":1947,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विभक्तिः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"प्राग्दिशो विभक्तिः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.1 प्राग्दिशो विभक्तिः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>दिक्शब्देभ्यः सप्तमीपञ्चमीप्रथमाभ्यो दिग्देशकालेष्वस्तातिः (*5,3.27) इति वक्ष्यति। प्रागेतस्माद् दिक्षं शब्दनाद् यानित ऊर्ध्वम् अनुक्रमिष्यामो विभक्तिसंज्ञास् ते वेदितव्याः। वक्ष्यति पञ्चम्यास् तसिल् (*5,3.7)। ततः। यतः। कुतः। तसिलादीनां विभक्तित्वे प्रयोजनं त्यदादिविधयः इदमो विभक्तिस्वरश्च। इह। ऊडिदम् इति विभक्त्युदात्तत्वं सिद्धं भवति। अतः परं स्वार्थिकाः प्रत्ययाः, तेषु समर्थाधिकारः प्रथमग्रहणं च प्रतियोग्यपेक्षत्वान् न उपयुज्यते इति निवृत्तम्। वावचनं तु वर्तत एव। तेन विकल्पेन तसिलादयो भवन्ति, कुतः , कस्मात्, कुत्र, कस्मिनिति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-8.2\/8.2.25.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.25";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.26\",\"Previous\":\"8.2.24\",\"अकारादिक्रमसङ्ख्या\":2004,\"कौमुदीक्रमसङ्ख्या\":2249,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धि च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.2/8.2.25.md">Edit 8.2.25!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.25";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.26\",\"Previous\":\"8.2.24\",\"अकारादिक्रमसङ्ख्या\":2004,\"कौमुदीक्रमसङ्ख्या\":2249,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धि च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.25 धि च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>धकारादौ प्रत्यये परतः सकारस्य लोपो भवति। अलविध्वम्, अलविढ्वम्। अपविध्वम्, अपविढ्वम्। यद्यत्र सकारलोपो न स्यात्, सिचः षत्वे जश्त्वे च विभाषेटः (*8,3.79) इति मूर्धन्याभावपक्षे ऽपि न धकारः श्रूयेत। इतः प्रभृति सिचः सकारस्य लोप इष्यते। इह न भवति, चकाद्धि पलितं शिरः इति। तथा पयो धावति इत्येवम् आदावपि न भवति। सग्धिः, बब्धाम् इति छान्दसो वर्ण लोपः। भाष्यकारस्त्वाह, चकाधि इत्येव भवितव्यम् इति। तेन पयो धावति इत्येवम् आदौ यत्नानतरमास्थेयम्। धि सकारे सिचो लोपश्चकाद्धीति प्रयोजनम्। आशाध्वं तु कथं जश्त्वं सकारस्य भविष्यति। सर्वम् एवं प्रसिद्धं स्याच् छ्रु तिश्चापि न भिद्यते। लुङश्चापि न मुर्धन्ये ग्रहणं सेटि दुष्यति। घसिभसोर् न सिध्येत तस्मात् सिज्ग्रहणं न तत्। छान्दसो वर्णलोपो वा यथेष्कर्तारमध्वरे। निष्कर्तारमध्वरस्य इत्येवं प्राप्ते।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

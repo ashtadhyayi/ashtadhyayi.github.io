@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.4\/3.4.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.2\",\"Previous\":\"3.3.176\",\"अकारादिक्रमसङ्ख्या\":1995,\"कौमुदीक्रमसङ्ख्या\":2824,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययार्थाः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धातुसम्बन्धे प्रत्ययाः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.4/3.4.1.md">Edit 3.4.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.2\",\"Previous\":\"3.3.176\",\"अकारादिक्रमसङ्ख्या\":1995,\"कौमुदीक्रमसङ्ख्या\":2824,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययार्थाः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धातुसम्बन्धे प्रत्ययाः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.1 धातुसम्बन्धे प्रत्ययाः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>धातुसम्बन्धे। धातुशब्देन धात्वर्थो लक्ष्यते। धात्वोः संबन्ध इति विग्रहः, संबन्धस्य द्विनिष्ठत्वात्। तथा च धात्वर्थयोः संबन्धे सति परत्ययाः स्युरिति लब्धम्। कस्मिन्नर्थे इत्याकाङ्क्षायां काले इति गम्यते, <code>वर्तमाने ल</code> डित्यारभ्य तत्तत्कालविशेषेष्वेव प्रत्ययविधिदर्शनात्। तत्र तत्तद्विधिभिरेव तत्तत्कालविशेषे प्रत्ययसिद्धेस्ततोऽन्यस्मिन्काले इति गम्यते। तदाह&ndash; धात्वर्थानामित्यादिना। धात्वर्थयोरित्यर्थः। उदाहरणबहुत्वाभिप्रायं बहुवचनम्। <code>वर्तमानसामीप्ये वर्तमानवद्वे</code>त्यादिसूत्रे यत्र काले ये प्रत्यया उक्तास्ते धात्वर्थयोः सम्बन्धे गम्ये ततोऽन्यमिन्नपि काले स्युरिति यावत्। तथा च <code>वसन् ददर्शे</code> इत्यत्र लडादेशः शतृप्रत्ययो भूतकाले इतिसिद्धं भवति। ननु <code>वसन् ददर्शे</code>त्यत्र भूते लडिव वर्तमाने लिडितय्पि स्यादित्यत आह&ndash; तिङन्तेति। <code>वसन् ददर्शे</code> त्यादौ तङन्तवाच्या दर्शनादिक्रिया प्रधानम्। वासादिक्रिया तु दर्शनादिक्रियार्थत्वाद्गुणभूता। अतः प्रधानभूतदर्शनादिक्रियानुसारेण गुणभूतवासादिक्रियावाचिभ्य एव इह प्रत्ययाः कालान्तरेषु विधीयन्त इत्यर्थः। भूते लडिति। एवं च उषित्वा ददर्शेत्यर्थ-। तदाह&ndash; अतीतेति। अत#ईति वासे कर्ता यस्येति विग्रहः। <code>सप्तमीविशेषणे बहुव्रीहौ</code> इति ज्ञापकाद्व्यधिकणपदो बहुव्रीहिः। उदाहरणान्तरमाह&ndash; सोमयाजीति। सोमेन इष्टवान्यः स सोमयाजी। करणे यजः<code>इति भूते विहितो णिनिः, इह भवितेत्यनद्यतनभविष्यल्लहन्तप्रधानक्रियानुसारेण अनद्यतनभविष्यति बोध्यः। तदाह-- सोमेन यक्ष्यमाण इति। भवनमिति। उत्पत्तरित्यर्थः।</code>गोमानासी<code>दित्यप्युदाहार्यम्। अत्र गौरस्यास्तीति अस्तिक्रियायां वर्तमानायां वर्तमानायां</code>तदस्यास्ती`ति विहितो मतुप् गौरस्यासीदिति भूतायामस्तिक्रियायां भवति, धात्वर्थद्वयसंबन्धस्य सत्त्वात्। एतेन अर्थद्वारके धात्वोः संबन्धे इत्यपि व्याख्यानं परास्तम्। तथा सति परस्परसंबन्धार्थबोधकधातुद्वयप्रोगे प्रत्यया इत्यर्थलाभाद्गोमानासीदित्यत्र मतुबनापत्तेः। नहि धात्वोरिह प्रयोगोऽस्ति। धात्वर्थयोः सम्बन्धे इत्यर्थाभ्युपगमे तु गोमानासीदित्यत्र धातुद्वयप्रयोगाभावेऽपि धात्वर्थद्व्यस्य सत्त्वादासीदित्यर्थे मतुब्निर्बाध इत्यन्यत्र विस्तरः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.37.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.37";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.38\",\"Previous\":\"8.2.36\",\"अकारादिक्रमसङ्ख्या\":890,\"कौमुदीक्रमसङ्ख्या\":326,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"भष्-भावः\",\"विषयः २\":\"\",\"विषयः ३\":\"झलि पदान्ते\",\"सूत्रम्‌\":\"एकाचो बशो भष् झषन्तस्य स्ध्वोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.37.md">Edit 8.2.37!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.37";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.38\",\"Previous\":\"8.2.36\",\"अकारादिक्रमसङ्ख्या\":890,\"कौमुदीक्रमसङ्ख्या\":326,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"भष्-भावः\",\"विषयः २\":\"\",\"विषयः ३\":\"झलि पदान्ते\",\"सूत्रम्‌\":\"एकाचो बशो भष् झषन्तस्य स्ध्वोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.37 एकाचो बशो भष्? झषन्तस्य स्ध्वोः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>धातोः</code> (8.2.32) इति यदीहानुवत्र्तते तदवयवषष्ठ()न्तमेकाचो विशेषणम्()। <code>झषन्तस्य</code> इत्येतदपि समानाधिकरणं तस्यैव विशेषणम्()। <code>एकाचः</code> इत्येतदवयवषष्ठ()न्तं बशः। <code>तदवयवस्य</code> इति। तस्यावयवस्तदवयवः। योऽसौ धातोरवयव एकाज्? झषन्तस्तस्य, तदित्यनेनाभिसम्बध्यते। <code>झलि परतः</code> इत्यनेन झलीत्यनुवत्र्तते (8.2.26), तस्य सकारो विशेषणमिति दर्शयति। किमर्थं पनर्झलीत्यनुवत्र्तते? पदान्तस्येत्यनुवृत्तिर्यथा स्यात्(); अन्यथा झलीत्यस्मिन्? निवत्र्तमाने तत्सम्बद्धं पदान्तग्रहणमपि निवत्र्तत, ततश्च पदान्ते न सिध्येत्()। ननु च स्वरितत्वात्? पदान्तस्येस्यानुवृत्तिर्भविष्यति? तह्र्रनेनापि प्रकारेणाख्यायते मन्दधियां सुखप्रतिपत्त्ये। <code>ध्वशब्दे च</code> इति। अत्र झलीत्येतन्नापेक्षते, असम्भवात्()। न हि कश्चित्? झल्? ध्वशब्दोऽस्ति; तस्य प्रत्याहारेष्वसन्निवेशात्()। <code>भोत्स्यते</code> [<code>भोत्स्यन्ते</code>&ndash;काशिका, पदमञ्जरी च] इति। <code>बुध अवगमने</code> (धा।पा।८५८), लृट्(), स्यः, <code>खरि च</code> (8.4.54) इति चत्त्र्वम्()&ndash;तकारः, अनुदात्तेत्त्वादात्मनेपदम्()। अत्र बुधेर्धातोव्र्यपदेशिवद्भावेन स्वरूपमेवैकाजवयवो झषन्तः, तदवयवो बकारो बश, अस्यान्तरतम्यादोष्ठ()स्य स्थान ओष्ठ्य एव भकारो भविष्यति। एवमन्यत्रापि विज्ञेयम्()। <code>अभुध्वम्()</code> [<code>अबुद्ध</code> इति प्रांउ।पाठः] <code>षढोः कः सि</code> (8.2.41) इति कत्वम्(), <code>आदेशप्रत्यययोः</code> (8.3.59) इति षत्वम्()। <code>न्यघूढ्वम्()</code> इति। <code>ढ्रलोपे पूर्वस्य दोर्घोऽणः</code> (6.3.110)। <code>धोक्ष्यते</code> इति। दुहो लृट्(), <code>दादेर्धातोर्धः</code> (8.2.32), तस्य <code>खलि च</code> (8.4.54) इति चत्र्वम्()&ndash;ककारः।
 <code>अजर्घाः</code> इति। <code>गुधु अभिकाङ्क्षायाम्()</code> (धा।पा।१२४६), यङ्(), द्विर्वचनम्(), हलादिशेषः, <code>उरत्()</code> (7.4.66) इत्यत्वम्(), <code>कुहोश्चुः</code> (7.4.62) इति चुत्वम्(), <code>यङोऽचि च</code> (2.4.74) यङ्लुक्(), <code>रुग्रिकौ च लुकि</code> (7.4.91) इति रुक्()। जगृध इति स्थिते इङादयो विधेयाः। अत्र मुख्य एव गृध इत्ययं धातोर्झषन्तोऽवयवः।
 <code>गर्दभयतेः</code> इति। गर्दभशब्दात्? तदाचष्ट इति णिच्(), <code>णाविष्ठवत्? प्रातिपदिकस्य</code> (वा।८१३) इति टिलोपः। अत्र गर्वभीत्ययं मुख्य एव धातोर्झषन्तोऽवयवः।
@@ -134,9 +146,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

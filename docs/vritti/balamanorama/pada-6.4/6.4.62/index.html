@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.4\/6.4.62.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.62";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.63\",\"Previous\":\"6.4.61\",\"अकारादिक्रमसङ्ख्या\":3859,\"कौमुदीक्रमसङ्ख्या\":2757,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"चिण्-वत्\",\"विषयः २\":\"क्ङिति आर्धधातुके\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"स्यसिच्सीयुट्तासिषु भावकर्मणोरुपदेशेऽज्झनग्रहदृशां वा चिण्वदिट् च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.62.md">Edit 6.4.62!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.62";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.63\",\"Previous\":\"6.4.61\",\"अकारादिक्रमसङ्ख्या\":3859,\"कौमुदीक्रमसङ्ख्या\":2757,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"चिण्-वत्\",\"विषयः २\":\"क्ङिति आर्धधातुके\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"स्यसिच्सीयुट्तासिषु भावकर्मणोरुपदेशेऽज्झनग्रहदृशां वा चिण्वदिट् च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.62 स्यसिच्सीयुट्तासिषु भावकर्मणोरुपदेशेऽज्झनग्रहदृशां वा चिण्वदिट् च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>स्यसिच्। अच् हन ग्रह दृश् एषां द्वन्द्वात्षष्ठी। उपदेश इत्च एव विशेषणम्, नेतरेषाम्, अव्यभिचारात्। तदाह&mdash; उपदेशे योऽजिति। <code>अ</code> जित्यस्यं उपदेशान्वयित्वेऽपि सौत्रः समासः। <code>अ</code>जिति लुप्तषष्ठीकं वा। <code>चिण्व</code>दिति सप्तम्यन्ताद्वनतिः, <code>स्यसिच्सीयुट्तासिष्वि</code>त्युपमेयतः सप्तमीदर्शनात्। तदाह&ndash; चिणीवेति। अङ्गकार्यमिति। अङ्गस्येत्यधिकृतत्वादिति भावः। <code>भावकर्मवाचिषु स्यादिष्वि</code> ति नार्थः,सीयुटो लिङागमतया भावकर्मवाचित्वेऽपि स्यसिच्तासीनां भावकर्मवाचित्वाऽभावात्। नापि <code>भावकर्मवाचिनि प्रत्यये परे ये स्यादयस्तेष्वि</code>त्यर्थः, स्यसिच्तासीनां भावकर्मवाचिप्रत्ययपरत्वसंभवेऽपि सीयुटस्तदसंभवात्। सीयुडागमविशिष्टस्यैव लिङो भावकर्मवाचितया केवलसीयुटो न भावकर्मवाचिप्रत्ययपरकत्वमस्ति। अतो विषयसप्तमीति मत्वाऽऽह&ndash; स्यादीनामिडागमश्चेति। अत्र अज्झनग्रहदृशां, स्यादीनां च न यथासङ्ख्यं, व्याख्यानात्। <code>स्यादिषु परेषु अङ्गस्य इ</code> डिति नार्थः, <code>आद्र्धधातुकस्येड्वलादे</code> रित्यत्र <code>आद्र्धधातुके</code> इति योगं विभज्य <code>यावानिट् स आद्र्धधातुकस्यैवे</code>ति भाष्ये उक्तत्वात्। चिणि यदङ्गाधिकारविहितं कार्यं तस्यैवात्रातिदेशो, न तु चिणि दृष्टमात्रस्य। तेन <code>घानिष्यते</code> इत्यत्र <code>हनो वध लिङि, लुङि चे</code>ति चिणि दृष्टो वधादेशश्चिण्वदिति नातिदिश्यते, तस्य द्वैतीयीकत्वेन अङ्गाधिकारविहितत्वाऽभावात्। तथा आयिष्यते इत्यत्र इणो गादेशो न। <code>अध्यायिष्यते</code> इत्यत्र इङो गाङादेशो न , द्वैतीयीकत्वात्। चिण्वत्त्वाऽभावे अयमिण्नेत्याह&ndash; अयमिडिति। सेट्कस्य वलादित्वलक्षण इट् तु स्यादेवेति भावः। ननु भूयेतेति विधिलिङि चिम्वत्वम् इट् च स्यातामित्यत आह&ndash; इहाद्र्धधातुके इति। नेतरेषामिति। स्यसिच्तासीनां न विशेषणमित्यर्थः। अव्यभिचारादिति। स्यसिच्तासीनां सर्वत्राऽऽद्र्धधातुकत्वनियमादिति भावः। अत्र वार्तिकम्&ndash; <code>चिण्वद्वृद्धिर्युक्च हन्तेश्च घ्तवं दीर्घश्चोक्तो यो मितां वा चिणीति। इट्वाऽसिद्धस्तेन मे लुप्यते णिर्नित्यश्चायं वल्निमित्तो विघाती॥</code> इति। स्यसिच्सीयुडिति सूत्रस्य वृद्ध्यादि प्रयोजनमित्यर्थः। तत्र वृदिं?ध दर्शयति&ndash; चिण्वद्भावाद्वृद्धिरिति। लुटि भू ता इति स्थिते चिण्वत्त्वात् <code>अचोऽञ्णिती</code>ति वृद्धिरित्यर्थः। इडागमश्चेत्यपि बोध्यम्। तत्फलं तु वक्ष्यते। तथा दाधातोर्लुटि <code>आतो युक् चिण्कृतो</code> रिति युक्। तथा लृटि <code>घानिष्यते</code> इत्यत्र <code>होहन्तेर्ञ्णिन्नेषु</code> इति घत्वम्। शमेर्हेतुमण्ण्य्नताल्लुटि&ndash;शामिता शमितेत्यत्र <code>चिण्णमुलो</code>रिति वा दीर्घः। तथा अनेनैवाऽत्र इटि कृते तस्य आभीयत्वेनाऽसिद्धत्वादनिटीति निषेधाऽभावाण्णिलोपः। तथा <code>भाविष्यते</code> इत्यत्र भू-स्य इति स्थिते परमपि वलादिलक्षणं इटं बाधित्वा नित्यत्वादनेन इट्, वल्निमित्ते इटि कृतेऽकृते च चिण्वदिटः प्रवृत्त्या कृताऽकृतप्रसङ्गित्वात्। वलादिलक्षणस्त्विण्न नित्यः, चिण्वदिटि कृते वलादित्वस्य विहतत्वेन वलादिलक्षमस्य इटोऽप्रवृत्तेः। नित्यश्चायमित्यस्य <code>चिण्वदि</code>डिति शेषः। <code>वल्निमित्त इत्यनन्तरम्</code>इडनित्य इत शेषः। अनित्यत्वे हेतुः&ndash; `विघातीति। चिण्वदिटो वलादिनिमित्तविघातकत्वादित्यर्थः। एवं च सेट्कत्वेऽप्यनेनैव इट्। एतदभावपक्षे तु सेट्कत्वे वलादिलक्षण इडिति बोध्यम्। तदाह&ndash; भवितेति। चिण्वदिडभावपक्षे वलादिलक्षण इडिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

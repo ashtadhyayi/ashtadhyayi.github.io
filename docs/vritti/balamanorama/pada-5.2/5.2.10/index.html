@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-5.2\/5.2.10.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.2.10";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.2.11\",\"Previous\":\"5.2.9\",\"अकारादिक्रमसङ्ख्या\":2330,\"कौमुदीक्रमसङ्ख्या\":1811,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"परोवरपरम्परपुत्रपौत्रमनुभवति\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-5.2/5.2.10.md">Edit 5.2.10!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.2.10";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.2.11\",\"Previous\":\"5.2.9\",\"अकारादिक्रमसङ्ख्या\":2330,\"कौमुदीक्रमसङ्ख्या\":1811,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"परोवरपरम्परपुत्रपौत्रमनुभवति\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.2.10 परोवरपरम्परपुत्रपौत्रमनुभवति
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>परोवर। परोवर, परम्पर, पुत्रपौत्र-एभ्यो द्वितीयान्तेभ्योऽनुभवतीत्यर्थे खः स्यादित्यर्थः। परोवरीण इति। परे च अवरे च परावरे ताननुभवतीत्यर्थः। अवरस्योत्त्वमिति। अवरशब्दस्य आदेरकारस्य खप्रत्ययसंनियोगेन उत्त्वं निपात्यत इत्यर्थः। एवं च विग्रहवाक्ये इदमुत्त्वं न भवति। प्रकृतेरिति। परपरतरशब्दाद्द्वन्द्वात्खे सति तत्सन्नियोगेन प्रकृतेः परम्परभावो निपात्यत इत्यर्थः। नन्वेवं सति <code>कल्याणपरम्परे</code>त्यादौ कथं परम्पराशब्दः ?, परम्परभावस्य खप्रत्ययसन्नियोगशिष्टत्वादित्यत आह&ndash;परम्पराशब्दस्त्विति। तस्मादेवेति। <code>परम्परे</code>त्यव्युत्न्नप्रातिपदिकादेवेत्यर्थः। कथमिति। परावरशब्दाद्भावे वा स्वार्थे वा ष्यञि अवरस्यादेरुत्वे पारोवर्यशब्दान्मतुपि पारोवर्यवदिति कथमित्याक्षेपः, उत्त्वस्य खप्रत्ययसन्नियोगाशिष्टत्वादिति भावः। उत्त्वं दुरुपपादमेवेत्याह&ndash;असाधुरेवेति। नन्वत्र परोवरेति निर्देशात्&ndash;खादन्यत्राप्युत्त्वं किं न स्यादित्यत आह&ndash;खप्रत्ययसन्नियोगेनैवेति। अत एव भाष्ये <code>परांश्चावरंश्चानुभवती</code>त्येव विग्रहो दर्शित इति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.2\/3.2.87.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.87";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.88\",\"Previous\":\"3.2.86\",\"अकारादिक्रमसङ्ख्या\":2630,\"कौमुदीक्रमसङ्ख्या\":2998,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्विप्\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"ब्रह्मभ्रूणवृत्रेषु क्विप्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.87.md">Edit 3.2.87!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.87";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.88\",\"Previous\":\"3.2.86\",\"अकारादिक्रमसङ्ख्या\":2630,\"कौमुदीक्रमसङ्ख्या\":2998,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्विप्\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"ब्रह्मभ्रूणवृत्रेषु क्विप्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.87 ब्राहृभ्रूणवृत्रेषु क्विप्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>ब्राहृहः</code>इति। पूर्ववद्दीर्घत्वम्।
 <code>सर्वधातुभ्यः क्विब्विहित एव</code> इति। <code>क्विप् च</code> (3.2.76) इत्यनेन। <code>चतुर्विधश्चात्र नियमः</code> इति। धातुनियः, उपपदनियमः, प्रत्ययनियमः, कालनियमः। चकारोऽवधारणे &ndash; चतुर्विध एव। <code>ब्राहृआदिष्वेव हन्तेर्नान्यस्मिन्नुपपदे</code>इति धातुनियमं दर्शयति। अत एव यतएवकारकरणं ततोऽन्यत्रावधारणमिति। उपपदेभ्यः पर एवकारः प्रयुज्यमानो ह()न्त नियमयति। प्रायिकश्चायं नियमः, क्वचिदन्यस्मिन्नुपपदे दृश्यते&ndash; मधुहेतु। प्रायिकत्वञ्च तस्य वक्ष्यमाणबहुलग्रहणस्य पुरस्तादपकर्षाल्लभ्यते। <code>ब्राहृआदिषु हन्तेरेव नान्यस्मात्</code> इति उपपदनियमः। अत्र हि हन्तेः एकारः श्रूयमाण उपपदं नियमयति&ndash; ब्राहृआदिषु हन्तेर्भूते क्विबेव। <code>नान्यः प्रत्ययः</code> इति कालनियमः। ब्राहृआद्युपपदे हन्तेः क्विपि विहिते भूतकालस्य नियमितत्वात्। यदि ब्राहृआदिषु क्विबेव नान्यः प्रत्ययः इति, तदा निष्ठापि न प्राप्नोति&ndash; ब्राहृआणं हतवानिति? नैष दोषः; <code>मध्येऽपवादाः पूर्वान् विधीन् बाधन्ते, नोत्तरान्</code>(व्या।प।१०) इत्यणादय एव बाध्यन्ते, न निष्ठा। एवमपीह वृत्रस्याहन्तुरिति तृज् न प्राप्नोति? प्रायिकत्वान्नियमस्य न दोषः। <code>तथा भूतकाल एव नान्यस्मिन्</code> इति प्रत्ययनियमः, भूतकाले प्रत्ययो नियम्यत इति कृत्वा। कथं पुनरेकदा चत्वारो नियमा लभ्यन्त इत्याह&ndash; <code>तदेतत्ित्यादि।</code>बहुलं छन्दसि` (3.2.88) इति वक्ष्यमाणं बहुलग्रहणं पुरस्तादपकृव्यानेन योगेन सम्बध्यते&ndash; ब्राहृभ्रूणवृत्रेषु क्विब्()बहुलमिति, तेनायं चतुर्विधो नियमो लभ्यते॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

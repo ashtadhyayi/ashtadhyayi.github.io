@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-1.1\/1.1.9.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.1.9";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.1.10\",\"Previous\":\"1.1.8\",\"अकारादिक्रमसङ्ख्या\":1759,\"कौमुदीक्रमसङ्ख्या\":10,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"01. संज्ञाप्रकरणम्\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":14,\"विषयः १\":\"सवर्णम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तुल्यास्यप्रयत्नं सवर्णम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-1.1/1.1.9.md">Edit 1.1.9!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.1.9";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.1.10\",\"Previous\":\"1.1.8\",\"अकारादिक्रमसङ्ख्या\":1759,\"कौमुदीक्रमसङ्ख्या\":10,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"01. संज्ञाप्रकरणम्\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":14,\"विषयः १\":\"सवर्णम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तुल्यास्यप्रयत्नं सवर्णम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.1.9 तुल्याऽस्यप्रयर्नं सवर्णम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तुल्यशब्दः सदृशपर्यायः. आस्ये भवमास्यं ताल्वादिस्थानम्. प्रयतनं प्रयत्नः स्पऋष्टताऽदिर्वर्णगुणः. तुल्य आस्ये प्रयत्नो यस्य वर्णस्य येन वर्णेन सह स समानजातीयं प्रति सवर्णसंज्ञो भवति. चत्वार आभ्यन्तराः प्रयत्नाः सवर्णसंज्ञायाम् आश्रीयन्ते &ndash; स्पृष्टता, ईषत्स्पृष्टता, संवृतता, विवृतता च इति. अ अ अ इति त्रयो ऽकारा उदात्तानुदात्तस्वरिताः प्रत्येकं सानुनासिका निरनुनासिकाश्च ह्रस्वदीर्घप्लुतभेदादष्टादशधा भिद्यन्ते. तथा इवर्णः, तथा उवर्णः, तथा ऋवर्णः. ऌवर्णस्य दीर्घा न सन्ति, तं द्वादशभेदम् आचक्षते. सन्ध्यक्षराणां ह्रस्वा न सन्ति, तान्यपि द्वादशप्रभेदानि. अन्तःस्था द्विप्रभेदाः, रेफवर्जिता यवलाः सानुनासिका निरनुनासिकाश्च. रेफोष्मणां सवर्णा न सन्ति. वर्ग्यो वर्ग्येण सवर्णः. दण्डाग्रम्. खट्वाग्रम्. आस्यग्रहणं किम्? कचटतपानां भिन्नस्थानानां तुल्यप्रयत्नानां मा भूत्. किं च स्यात्? तर्प्ता, तर्प्तुम् इत्यत्र झरो झरि सवर्णे (*8,4.65) इति पकारस्य तकारे लोपः स्यात्. प्रयत्नग्रहणं किम्? इचुयशानां तुल्यस्थानानां भिन्नजातीयानां मा भूत्. किं च स्यात्? अरुश्च्योतति इत्यत्र झरो झरि सवर्णे (*8,4.65) इति शकारस्य चकारे लोपः स्यात्. ऋकारऌकारयोः सवर्णसंज्ञा वक्तव्या. होतॢकारः. होतृकारः. उभयोः ऋवर्णस्य ऌवर्णस्य च आन्तरतमः सवर्णो दीर्घो नास्ति इति र्कार एव दीर्घो भवति. सवर्णप्रदेशाः अकः सवर्णे दीर्घः (*6,1.101) इत्येवम् आदयः. (</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

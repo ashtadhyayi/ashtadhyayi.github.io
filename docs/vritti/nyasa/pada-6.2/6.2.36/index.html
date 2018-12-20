@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.37\",\"Previous\":\"6.2.35\",\"अकारादिक्रमसङ्ख्या\":486,\"कौमुदीक्रमसङ्ख्या\":3770,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आचार्योपसर्जनश्चान्तेवासी\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.36.md">Edit 6.2.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.37\",\"Previous\":\"6.2.35\",\"अकारादिक्रमसङ्ख्या\":486,\"कौमुदीक्रमसङ्ख्या\":3770,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आचार्योपसर्जनश्चान्तेवासी\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.36 आचार्योपसर्जनश्चान्तेवासी।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आचार्य उपसर्जनं प्रधानं यस्य स ततोक्तः। अन्ते वसतीत्यन्तेवासी। गौणश्चायं निर्देशः। द्वन्द्वस्य यान्यवयवभूतानि तान्याचार्योपसर्जनवाचीनि। तस्मादन्तेवासिवाचित्वाच्चाभिधेय उपचारेण तान्याचार्योपसर्जनान्तेवासिशब्दाभ्यामुच्यन्ते। तदवयवोऽपि द्वन्द्वावयवधर्मेणाचार्योपसर्जनान्तेवासीति चोच्यते। <code>आपिशलिराचार्यः</code> इति। <code>अत इञ्()</code> (4.1.95)। <code>आपिशलिरेव वा छात्रा आपिशालाः</code> इति। पूर्ववदण्()। <code>उभयथा</code> इत्यादि। उभयप्रकारेणापि व्युत्पत्तावचार्योपसर्जनश्चान्तेवासी भवति। तथा हि&ndash;उभयतर शिष्या एव प्रधानभूता एवमुच्यन्ते, आचार्यस्तु तद्विशेषणत्वादुयसर्जनीभूतः। आपिशलशब्दोऽणन्तत्वात्? प्रत्ययसवरेणान्तोदात्तः। पाणिनिना प्रोक्तमिति <code>वृद्धाच्छः</code> (4.2.113) <code>तदधीते</code> (4.2.58) इत्यण्(), तस्य लुक्()। पाणिनीयशब्दः प्रत्ययस्वरेण मध्योदात्तः।
 <code>पाणिनीयरौढीयाः</code> इति। रोढस्यापत्यं रौढिः, <code>अत इञ्()</code> (4.1.95) रौढेराचार्यस्य च्छात्रा इति <code>इञश्च</code> (4.2.111) इत्यणः प्रापतस्य <code>न द्व्यचः</code> (4.2.112) इति प्रतिषेधे कृते <code>वृद्धाच्छः</code> (4.2.113)। अथ वा&ndash;रौढिना प्रोक्तं रौढियम्(), ततश्च <code>तदधीते</code> (4.2.58) इत्यण्(), तस्य पूर्ववल्लुक्()&ndash;रौढीयाः। रौढीयशब्दोऽपि पूर्ववन्मध्योदात्तः। काशकृत्स्नेन प्रोक्तमित्यण्? तदधीयते काशकृत्स्नाः, पूर्ववदणो लुक्()।
 <code>छान्दसवैयाकरणाः</code> इति। भवत्ययमन्तेवासिना द्वन्द्वः, न त्वाचार्योपसर्जनः। त्र ह्रन्तेवासिन एव छान्दसवैयाकरणाभ्यामुच्यन्ते, न त्वाचार्योपसर्जनीभूताः। छन्दोऽधीयते च्छान्दसाः, व्याकरणमधीयत इति वैयाकरणाः। तत्र ते च यत आचार्यादधीयते तस्यान्तेवासिनः। <code>आपिशलपाणिनीये शास्त्रे</code> इति। आपिशलिना प्रोक्तमापिशलम्()। पाणिनिना प्रोक्तं पाणिनीयम्()। यत्र शास्त्रे प्राधान्येनोच्येत तत्र प्रत्ययस्य विधानादाचार्यः प्रधानभूतः; तद्विशेषणत्वात्()। आचार्यत्वं तस्येह शास्तरापेक्षम्()। न ह्राचार्यतान्तेवास्यपेक्षैव भवति, अपि तु शासत्रापेक्षापि॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

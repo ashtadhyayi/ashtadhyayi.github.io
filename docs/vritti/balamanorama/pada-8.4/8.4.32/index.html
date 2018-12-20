@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-8.4\/8.4.32.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.4.32";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.4.33\",\"Previous\":\"8.4.31\",\"अकारादिक्रमसङ्ख्या\":613,\"कौमुदीक्रमसङ्ख्या\":2838,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"इजादेः सनुमः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.4/8.4.32.md">Edit 8.4.32!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.4.32";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.4.33\",\"Previous\":\"8.4.31\",\"अकारादिक्रमसङ्ख्या\":613,\"कौमुदीक्रमसङ्ख्या\":2838,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"इजादेः सनुमः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.4.32 इजादेः सनुमः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>इजादेः। <code>णेर्विभाषा</code> इति निवृत्तम्। <code>कृत्यच</code> इत्यनुवर्तते, <code>हलश्चेजुपधा</code>दित्यतो हल इति च। प्रकृतिविशेषणत्वात्तदन्तविधिः। तथा च सनुमो हलन्तादिजुपदात् परस्य कृन्नस्य णः स्यादिति लभ्यते। एवं च प्रेङ्खणीयमित्यादौ <code>कृत्यचः</code> इत्येव सिद्धेरिदं नियमार्थमित्याह&ndash; सनुमश्चेदिति। कृत्स्थस्यैवेत्यनन्तरं <code>णत्व</code>मिति शेषः। प्रेङ्खणीयमिति। इखधातुरिदित्त्वात्सनुम्। <code>इवि प्रीणने</code> इति धातोर्ल्युटि तस्याऽनादेशे प्रेन्वनमित्यत्रापि णत्वं स्यात्, सनुमोऽस्य इजादित्वाद्धलन्तत्वाच्चेत्यत आह&ndash; नुम्?ग्रहणमित्यादि। अनुस्वारश्च सर्व एव गृह्यते, न तु नुम्?स्थानिक एव, अविशेषात्। तदाह&ndash; इह त्विति। प्रोम्भणमिति। इह उम्भधातुः स्वाभाविकानुस्वारवानेव, न तु नुम्?स्थानिकानुस्वारवानिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

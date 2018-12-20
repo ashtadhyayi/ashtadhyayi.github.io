@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.3.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.3";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.4\",\"Previous\":\"6.1.2\",\"अकारादिक्रमसङ्ख्या\":2039,\"कौमुदीक्रमसङ्ख्या\":2446,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"द्वित्वम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न न्द्राः संयोगादयः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.3.md">Edit 6.1.3!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.3";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.4\",\"Previous\":\"6.1.2\",\"अकारादिक्रमसङ्ख्या\":2039,\"कौमुदीक्रमसङ्ख्या\":2446,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"द्वित्वम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न न्द्राः संयोगादयः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.3 न न्द्राः संयोगादयः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>तदन्तर्भावात्()</code> इति। अवयवानां समुदायाभ्यन्तरत्वात्? तदन्तभविः। <code>अवयवभूताः</code> इति। आदिशब्दस्य नियतदेशावयववाचित्वाद्विशिष्टदेशावयवभूता इत्येषोऽर्थो वेदितव्यः। <code>अन्दिविषति</code> इति। <code>उन्दी क्लेदने</code>, (धा।प।१४५७) सनीट च कृते दिष्शब्दस्य द्विर्वचनम्()। <code>अड्डिडिषति</code> इति। <code>अद्ड अभियोगे (धा।पा।३४८) इत्यत्र यः संयोगः स दकारादिः, तस्य ष्टुत्वेन दकारस्य डकारः, ष्टुत्वञ्च द्विर्वचनेऽसिद्धम्(), तेन सनीटि कृते विष्शब्दो द्विरुच्यते ततः ष्टुत्वम्।</code>अर्चिचिषति<code>इति</code>अर्च पूजायाम्()<code>(धा।पा।२०४), चिष्शब्दस्य द्विर्वचनम्()।</code>ईचिक्षिषते<code>इति।</code>ईक्ष दर्शने<code>(धा।पा।६१०) सनीटि च कृते क्षिष्शब्दस्य द्विर्वचनम्?</code>हलादिः शेषः<code>(7.4.60),</code>कुहोश्चुः<code>(7.4.62) इति चुत्वम्()।</code>प्राणिणिषति<code>इति।</code>()आस प्राणने<code>(धा।पा।१०६९),</code>अन च<code>(धा।पा।१०७०) प्रपूर्वः।</code>दिद्रासति<code>इति।</code>द्रा कुत्सितायाङ्गतौ<code>(धा।पा।१०५४)। 
 </code>केचिदजादेः<code>इत्यादि। तेषां मतेनाजादेरुत्तरे ये नकारादयः संयोगादिभूतास्ते न द्विरुच्यन्त इति शूत्रार्थः। किं पुनस्तदनुवर्तनस्य प्रयोजनम्()? इत्यत आह--</code>तस्य<code>इत्यादि। दकारस्तु द्विरुच्यत एवेति कर्मधारयपञ्चम्यन्तानुवृत्तौ हि</code>तस्मादित्युत्तरस्य<code>(1.1.66) इत्यनन्तराणामेव नकारादीनां द्विर्वचनप्रतिषेधेन भवितव्यम्(); निर्दिष्टग्रहणस्यानन्तर्यार्थत्वात्()। दकारस्तत्र यद्यपि रेफदकारयोर्यः संयोगस्तदादिभूतः, तथापि नकारेण व्यवहितः। तस्माद्दकारोऽपि द्विरुच्यत एव।</code>इन्दिद्रीयिषति<code>इति। इन्द्रशब्दात्? क्वचि कृते</code>क्यचि च<code>(7.4.33) इतीत्त्वम्(), क्यजन्तात्? सन्(), इट्(),</code>अतो लोपः<code>(6.4.48) इत्यकारलोपः।</code>उब्जिजिषति<code>इति।</code>उब्ज आर्जवे<code>(धा।पा।१३०३)।</code>यदा बकारोपध उब्जरुपदिश्यते तदायं प्रतिषेधो वक्तव्यः। दकारोपदेशे तु न वक्तव्यः <code>न न्द्राः</code> इत्यनेनैव सिद्धत्वात्()। <code>बत्वं तु तदा दकारस्य विधातव्यम्()</code> इति। उब्जित, उब्जिजिषतीति यथा स्यात्()। तदपि बतद्वमकुत्वविषये विधातव्यम्(); अन्यथाऽभ्युद्गः, समुद्ग इति न सिध्येत्()। दकारोपधस्यैव युक्तः पाठः। बत्वमात्रं वक्तव्यम्()? तदपि न वक्तवयम्(); तत्र <code>भुजन्युब्जौ पाण्युपतापयोः</code> (७।३।६१) इति निपातनादेव लिङ्गाव्? बत्वं लभ्यते। न चाभ्युद्गः, समुद्ग इत्यत्रापि प्रसज्येत, अकृत्वविषयत्वान्निपातनस्य; यत्र कुत्वं नास्ति तत्रैव बत्वं विज्ञायते, न तु कुत्वविषये।
 <code>यकारपरस्य</code> इत्यादि। यकारः परो यस्मात्? तस्य प्रतिषेधो न स्यादित्येतदर्थरूपं व्याख्येयमित्यर्थः। तत्र कैश्चिदेवं व्याख्यायते&ndash;बहिरङ्गो रेफः, <code>गुणोऽर्त्तिसंयोगाद्योः</code> (7.4.29) <code>यङि च</code> (7.4.30) इति गुणोऽङ्गस्य विधीयमानो यङि भवति बहिरङ्गः, तदाश्रितो रेफोऽपि बहिरह्ग एव, ततश्च सोऽन्तरङ्गे प्रतिषेऽसद्धः। तस्मात्? तसय द्विर्वचनप्रतिषेधो न भवतीति। यद्येवम्(), इन्दिदिषतीति नुमोऽपि प्रतिषेधो न प्राप्नोतीति? नैष दोषः; वक्ष्यति ह्रेतत्()&ndash;नुम्विषावुपदेशिवद्वचनमिति।
@@ -136,9 +148,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

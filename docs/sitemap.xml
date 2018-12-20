@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ashtadhyayi.github.io/ui/</loc>
+  </url>
+  
+  <url>
     <loc>https://ashtadhyayi.github.io/ui/vritti/balamanorama/9.3.18/</loc>
   </url>
   
@@ -74418,11 +74422,6 @@
   
   <url>
     <loc>https://ashtadhyayi.github.io/ui/vritti/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ashtadhyayi.github.io/ui/</loc>
     <priority>0</priority>
   </url>
   

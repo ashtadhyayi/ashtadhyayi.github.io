@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.3\/7.3.53.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.53";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.54\",\"Previous\":\"7.3.52\",\"अकारादिक्रमसङ्ख्या\":2251,\"कौमुदीक्रमसङ्ख्या\":2864,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"चजोः कुत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"विविधाः आदेशाः\",\"सूत्रम्‌\":\"न्यङ्क्वादीनां च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.3/7.3.53.md">Edit 7.3.53!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.53";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.54\",\"Previous\":\"7.3.52\",\"अकारादिक्रमसङ्ख्या\":2251,\"कौमुदीक्रमसङ्ख्या\":2864,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"चजोः कुत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"विविधाः आदेशाः\",\"सूत्रम्‌\":\"न्यङ्क्वादीनां च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.53 न्युङ्क्वादीनां च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अधिण्ण्यदर्थोऽयमारम्भः। <code>नावञ्चतेरित्युप्रत्ययः</code> इति। तत्र <code>भृमृशीतृ()चरित्सरितनिधनिमिमस्जिभ्य उः</code> (द।उ।१।९२) इत्यनुवृत्तेः। <code>मद्गुः</code> इति। <code>टुमस्जो शुद्धौ</code> (धा।पा।१४१५), <code>झलां जश्? झशि</code> (8.4.52) इति सकारस्य दकारः। <code>मिमस्जिभ्य उः</code> इति। अनेन <code>भृमृशीतृ()चरि</code> (द।उ।१।९२) इत्यादिकमुपलक्षयति। <code>भृगुः</code> इति। <code>भ्रस्ज पाके</code> (धा।पा।१२८४)। <code>प्रथिभ्रदि</code> (द।उ।१।११३) इत्यादिके सूत्रऽत एव सूत्रा(द।उ।१।९२)दुप्रत्ययोऽनुवत्र्तते।
 <code>दूरेपाकः</code>[<code>दूरेपाकाः</code>&ndash;मु।पाठ] इति। कर्मकत्र्तरि पचाद्यच्()। <code>उकारान्तावपेर</code> इति। अधीयत इत्यपेक्ष्यते।
 <code>तञ्चतेः</code> इति। <code>तन्चु त्वन्चु गतौ</code> (धा।पा।१९१,१९२) इति, <code>वन्चु प्रलम्भने</code> (धा।पा।१७०३) <code>स्फायितञ्चिवञ्चि</code> इति सूत्रैकदेशः <code>स्फायितञ्चिवञ्चिशकिक्षिपिक्षुदिसृपिदृपितृपिवन्युन्दि()इआतिवृत्यजिनीपदिमदिमुदिखिदिभिदिछिदिमन्दिचन्दिदहिदसिदम्भिवहवसिवाशिशीङ्हससिधिशुभिभ्यो रक्()</code> (द।उ।८।३१) इत्येतत्? सूत्रमुपलक्षयति। <code>व्यतिषङ्गः</code> इति। <code>षन्ज सङ्गे</code> (धा।पा।९८७) <code>अवसर्गः</code> इति। <code>सृज विसर्गे</code> (धा।पा।११७८) पचाद्यच।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

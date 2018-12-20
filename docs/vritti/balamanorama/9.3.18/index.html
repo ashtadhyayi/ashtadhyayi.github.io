@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/9.3.18.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "9.3.18";
+        let sutraBasics = JSON.parse("null");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/9.3.18.md">Edit 9.3.18!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "9.3.18";
-          let sutraBasics = JSON.parse("null");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           9.3.18 व्योर्लघुप्रयत्नतरः शाकटायनस्य
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>व्योर्लघु। व् च य च व्यौ, तयोरिति विग्रहः। <code>पदस्ये'त्यधिकृतं, तच्च वकारयकाराभ्यां विशेष्यते, विशेषणेन तदन्तविधिः। तेन वान्तस्य यान्तस्य च पदस्येति लभ्यते। अलोऽन्त्यस्येत्यन्त्यस्य भवति, तथाच पदान्तयोर्यवयोरिति फलितम्। लघुः प्रयत्नो यस्योच्चारणे स-लघुप्रयत्नः। अतिशयितो लघुप्रयत्नः--लघुप्रयत्नतरः। अन्यपदार्थस्य च वर्तिपदार्थप्रकर्षापेक्षः प्रकर्षः। लघुतरप्रयत्नक इत्यर्थः। प्रत्येकाभिप्रायमेकवचनम्। आन्तर्याद्यस्य यः, वस्य वः।</code>अशी&rsquo;त्यनुवर्तते। शाकटायनमुनिग्रहणाद्विकल्पः। तदाह&ndash;पदान्तयोरिति। उच्चारणप्रयत्ने लघुतरत्वं विशदयति-यस्येति। ततश्च <code>भोय्-अच्युत' इत्यत्र यकारस्य पाक्षिको लघुप्रयत्नो यकारः। वकारोदाहरणं तु</code>असावादित्य इति वृत्तिः&rsquo; इति शब्देन्दुशेखरे।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-4.1\/4.1.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.5\",\"Previous\":\"4.1.3\",\"अकारादिक्रमसङ्ख्या\":65,\"कौमुदीक्रमसङ्ख्या\":454,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"टाप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अजाद्यतष्टाप्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-4.1/4.1.4.md">Edit 4.1.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.5\",\"Previous\":\"4.1.3\",\"अकारादिक्रमसङ्ख्या\":65,\"कौमुदीक्रमसङ्ख्या\":454,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"टाप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अजाद्यतष्टाप्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.4 अजाद्यतष् टाप्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अजा। देवदत्ता। स्त्रियाम् इति किम्? अजः। देवदत्तः। अजाद्यतष् टाप् (*4,1.4)। अजादिभ्यः प्रातिपदिकेभ्यः अकारान्ताच् च प्रातिपदिकात् स्त्रियां टाप् प्रत्ययो भवति। पकारः सामान्यग्रहणार्थः। टकारः सामान्यग्रहणाविघातार्थः। अजा एडका। कोकिला। चटका। अश्वा। खट्वा। देवदत्ता। तपरकरणं तत्कालार्थम्। शुभंयाः। कीलालपाः ब्राह्मणी। हल्ङ्याब्भ्यो दीर्घात् सुतिस्यपृक्तं हल् (*6,1.68) इति सुलोपः स्यात्। अजादिग्रहणं तु क्वचिज् जातिलक्षणे ङीषि प्राप्ते, क्वचित् तु पुंयोगलक्षणे, क्वचित् तु पुष्पफलौत्तरलक्षणे, क्वचित् तु वयोलक्षणे ङीपि, क्वचिट् टिल्लक्षणे। हलन्तानां तवप्राप्त एव कस्मिंश्चिदाब् विधीयते। शूद्रा च अमहत्पूर्वा जातिः इति पठ्यते। तस्य अयम् अर्थः। शूद्रशब्दष् टापम् उत्पादयति जातिश्चेद् भवति। शूद्रा। पुंयोगे ङीषैव भवितव्यम्। शूद्रस्य भार्या शूद्री। महत्पूर्वस्य प्रतिषेधः। महाशूद्री। महाशूद्रशब्दो ह्राभीरजातिवचनः, तत्र तदन्तविधिना टाप् प्राप्तः प्रतिषिध्यते। ग्रहणवता प्रातिपदिकेन तदन्तविधिर् न इति कथं तदन्तविधिः? एतदेव ज्ञापकं भवति अस्मिन् प्रकरणे तदन्तविधिः इति। तेन अतिधीवरी, अतिपीवरी, अतिभवती, अतिमहती इति भवति। अजा, एडका, चटका, अश्वा, मूसिका इति जातिः। बाला, होढा, पाका, वत्सा, मन्दा, विलाता इति वयः। पूर्वापहाणा, अपरापहाणा। टित्, निपतनाण् णत्वम्। संभस्त्राजीनशणपिण्डेभ्यः फलात्। सम्फला। भस्त्रफला। अजिनफला। शणफला। पिण्डफला। त्रिफला द्विगौ। बहुव्रीहौ त्रिफली संहतिः। सदच्प्राक्काण्डप्रान्तश्तैकेभ्यः पुष्पात्। सत्पुष्पा। प्राक्पुष्पा। कान्डपुष्पा। प्रान्तपुष्पा। शतपुष्पा। एकपुष्पा। पाककर्ण इति ङीषो ऽपवादः। शूद्रा च अमहत्पूर्वा जातिः। क्रुञ्चा, उष्णिहा, देवविशा हलन्ताः। ज्येष्टा, कनिष्ता, मध्यमा पुंयोगः। कोकिला जातिः। मूलान्नञः। अमूला।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

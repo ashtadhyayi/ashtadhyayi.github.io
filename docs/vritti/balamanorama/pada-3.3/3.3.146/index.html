@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.3\/3.3.146.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.3.146";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.3.147\",\"Previous\":\"3.3.145\",\"अकारादिक्रमसङ्ख्या\":1079,\"कौमुदीक्रमसङ्ख्या\":2803,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लिङ् लृट्\",\"विषयः २\":\"लकारार्थाः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"किंकिलास्त्यर्थेषु लृट्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.3/3.3.146.md">Edit 3.3.146!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.3.146";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.3.147\",\"Previous\":\"3.3.145\",\"अकारादिक्रमसङ्ख्या\":1079,\"कौमुदीक्रमसङ्ख्या\":2803,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लिङ् लृट्\",\"विषयः २\":\"लकारार्थाः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"किंकिलास्त्यर्थेषु लृट्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.3.146 किङ्किलाऽस्त्यर्थेषु लृट्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>किङ्किला। किंङ्किलेति। समुदायस्य, अस्त्यर्थानां च द्वन्द्वः। यावदिति। `गर्हायां चेत्तः प्रागित्यर्थः। किङ्किलेत्यस्मिन् अस्त्यर्थेषु च प्रयुज्यमानेषु अनवक्लृप्त्यमर्षयोर्लृट् स्यादित्यर्थः। पूर्वसूत्रेण लृङ्लृरटोः प्राप्तौ लृडेवेत्यर्थमिदम्। तदाह&ndash; लिङोऽपवाद इति। न श्रद्दधे इति। न संभावयामीत्यर्थः। त्वं शूद्रान्नं भोक्ष्यसे इति यत्तन्न श्रद्दधे, न मर्षये वा किङ्किलेत्यन्वयः। किङ्किलेति क्रोधं द्योतयति। अस्तीति। शूद्रस्य स्त्री शूद्री। तां गमिष्यसीत्यस्ति भवति विद्यते वेत्यन्वयः। अत्र लृङ् नेति। भविष्यति नित्यं लृङ्, भूते वेत्युक्तमिह न संभवति, अत्र लिङो विध्यभावेन लिङ्?निमित्तविरहात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

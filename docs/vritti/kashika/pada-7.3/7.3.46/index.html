@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-7.3\/7.3.46.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.46";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.47\",\"Previous\":\"7.3.45\",\"अकारादिक्रमसङ्ख्या\":743,\"कौमुदीक्रमसङ्ख्या\":465,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कात्पूर्वस्य अत इत्-त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उदीचामातः स्थाने यकपूर्वायाः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-7.3/7.3.46.md">Edit 7.3.46!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.46";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.47\",\"Previous\":\"7.3.45\",\"अकारादिक्रमसङ्ख्या\":743,\"कौमुदीक्रमसङ्ख्या\":465,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कात्पूर्वस्य अत इत्-त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उदीचामातः स्थाने यकपूर्वायाः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.46 उदीचामातः स्थाने यकपूर्वायाः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>उदीचाम् आचार्याणां मतेन यकारपूर्वायाः ककारपूर्वायाश्च आतः स्थाने यो ऽकारः, तस्यातः स्थाने इकरादेशो भवति। उदीचां ग्रहणं विकल्पार्थम्। इभ्यिका, इभ्यका। क्षत्रियिका, क्षत्रियका। ककारपूर्वायाः चटकिका, चटकका। मूषिकिका, मूषिकका। आतः इति किम्? साङ्काश्ये भवा साङ्काश्यिका। स्थानग्रहणम् अनुवादे ऽपि स्थानसम्बन्धप्रतिपत्त्यर्थम्। आतः इत्यनेन ह्यतः इति स्थानी विशिष्यते। यकपूर्वायाः इति किम्? अश्वा अश्विका। यकपूर्वायाः इति स्त्रीलिङ्गनिर्देशः आतः स्त्रीप्रत्ययस्य प्रतिपत्त्यर्थम्। इह न भवति, शुभं याति इति शुभंयाः शुभंयिका। भद्रं याति इति भद्रंया भद्रंयिका। यकपूर्वाया धात्वन्तप्रतिषेधः। धात्वन्तयोः यकारककारयोरस्य प्रतिषेधस्य प्रतिषेधो वक्तव्यः। सुनयिका। सुशयिका। सुपाकिका। अशोकिका।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

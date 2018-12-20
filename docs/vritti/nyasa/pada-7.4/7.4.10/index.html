@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.4\/7.4.10.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.4.10";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.4.11\",\"Previous\":\"7.4.9\",\"अकारादिक्रमसङ्ख्या\":854,\"कौमुदीक्रमसङ्ख्या\":2389,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लिटि\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"ऋतश्च संयोगादेर्गुणः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.4/7.4.10.md">Edit 7.4.10!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.4.10";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.4.11\",\"Previous\":\"7.4.9\",\"अकारादिक्रमसङ्ख्या\":854,\"कौमुदीक्रमसङ्ख्या\":2389,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लिटि\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"ऋतश्च संयोगादेर्गुणः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.4.10 ऋतश्च संयोगादेर्गुणः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>सस्वरतुः, सस्वरुः</code> इति। <code>स्वृ शब्दोपतापयोः</code> (धा।पा।९३२), <code>उरत्()</code> (7.4.66) इत्यभ्यासस्यात्त्वम्(), रपरत्वम्(), हलादिशेषः। <code>दध्वरतुः, दध्वरुः</code> इति। <code>ध्वृ हूच्र्छने</code> (धा।पा।९३९)। <code>सस्मरतुः, सस्मरुः</code> इति। <code>स्मृ आध्याने</code> (धा।पा।८०७)। ननु च सर्वत्रैव साभ्यासमङ्गम्(), न च तत्? संयोगादि? नैष दोषः, <code>द्विष्प्रयोगो द्विर्वचनम्()</code> इत्येषोऽत्र पक्षः, तत्र परस्याप्यङ्गसंज्ञा भवत्येव। अथापि <code>स्थाने द्विर्वचनम्()</code> इत्यप्यदोषः; सर्वत्रैव हि लिट()भ्यासः संयोगादित्वं विहन्ति, उच्यते चेदं वचनम्(), तत्रैवं विज्ञास्यामः&ndash;प्राग्द्विर्वचनात्? संयोगादित्वमस्ति, इह च द्विर्वचनात्? प्राक् संयोगादित्वमस्ति। <code>चिक्षिपतुः, चिक्षिपुः</code> इति। <code>क्षि क्षये</code> (धा।पा।२३६), इयङादेशः।
 <code>प्रतिषेधविषयेऽपि</code> इत्यादि। यः <code>क्ङिति च</code> (१।१५) इत्यसय प्रतिषेधस्य विषयो न भवति थलादिः, तत्र <code>सार्वधातुकार्धधातुकयोः</code> (7.3.84) इत्येवं गुणः सिद्धः। तस्माद्गुणप्रतिषेधविषयेऽपि यथा स्यादित्ययमारम्भः वृद्धिविषयेऽपि परत्वाद्गुणेन भवितव्यमिति कस्यचिद्भ्रान्तिः स्यात्(), अतस्तां निराकर्तुमाह&ndash;<code>वृद्धिविषये तु</code> इत्यादि। गुणस्यावकाशः&ndash;सस्वरतुः, सस्वरुरिति; ञ्णिति वृद्धेरवकाशः&ndash;स्वारकः, ध्वारक इति; सत्त्वार, दध्वारेत्यत्रोभयप्रसङ्गे पूर्वविप्रतिषेधेन वृद्धिरेव भवति।
 अथ तपरकरणं किमर्थम्(), दीर्घस्यापि मा भूदित्येवमर्थं चेत्()? नैतदस्ति; भवितव्यमेव हि दीर्घस्योत्तरसूत्रेण&ndash;<code>स्तृञ्? आच्छादने</code> (धा।पा।१४८४), आतस्तरतुः, आतस्तरुरिति। ननु चैतस्मात्? तपरकरणान्न प्राप्नोत, सावकाशं चोत्तरवचनमसंयोगादौ&ndash;<code>कृ? विक्षेपे</code> (धा।पा।१४०९) निचकरतुः, निकरुरिति? यद्येवम्(), एवे तर्हि न चेदं तपरकरणम्(), किं तर्हि तसिनायं निर्देशः।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

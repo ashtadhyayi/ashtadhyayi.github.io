@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.4\/5.4.154.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.154";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.155\",\"Previous\":\"5.4.153\",\"अकारादिक्रमसङ्ख्या\":3429,\"कौमुदीक्रमसङ्ख्या\":891,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"शेषाद्विभाषा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.4/5.4.154.md">Edit 5.4.154!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.154";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.155\",\"Previous\":\"5.4.153\",\"अकारादिक्रमसङ्ख्या\":3429,\"कौमुदीक्रमसङ्ख्या\":891,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"शेषाद्विभाषा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.154 शेषाद्विभाषा।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>शेषः कबपेक्षो वा स्यात्()&mdash;यस्माद्बहुव्रीहेः कब्न विहितः स शेष इति? समासान्तापेक्षो वा&ndash;यस्माद्()बहुव्रीहेः समासान्तो न विहितः स शेष इति? तत्र यदि कबपेक्षः शेषः स्यात्()&mdash;अनृचः, व्याघ्रपात्(), सुगन्धिरित्यत्रापि स्यात्()। न ह्रतः केनचित्? कब्विहित इति कबपेक्षे शेषे दोषं दृष्ट्वा समासान्तापेक्षया शेष इति दर्शयन्नाह&ndash;<code>यस्माद्बहुव्रीहेः समासान्तो न भवति स शेषः</code> इति। कथं ज्ञायते&ndash;समासान्तापेक्षः शेष इति? शेषग्रहणात्()। तत्र यदि कबपेक्षः शेषः स्यात्(), शेषग्रहणनर्थकं स्यात्()। आरम्भसामथ्र्यादेव हि शेषविषय एव विकल्पो भविष्यति; अन्यथा यदि यतोऽपि पूर्वेविधिवाक्यैः कब्विहितस्ततोऽप्यनेन विभाषा विधीयते, विधिवाक्यानामानर्थक्यमापद्येत। तस्माच्छेषग्रहणात्? समासान्तापेक्षः शेषो विज्ञायते। <code>बहूखट्वकः</code> इति <code>आपोऽन्यतरस्याम्()</code> (7.4.15) इति ह्यस्वः। <code>बहुखट्वः</code> इत्यत्रापि <code>गोस्त्रियोरुपसर्जनस्य</code> (1.2.48) इति।
 <code>कथम्()</code> इत्यादि। यदि समासान्तापेक्षः शेषः; अनृक्कं साम, बह्? वृक्कं सूक्तमित्यत्र कब्न सिध्यतीत्यभिप्रायः। <code>विशेषे स इष्यते</code> इति। स ह्रकारः समासान्तो विशेषे माणवे चरणाख्यायां चेष्यत इति तत्राकारो विहितः। न चापि तत्रैव विशेष कब्विहितः, किं तर्हि? विषयान्तरे&ndash;सामनि, सूक्ते च। तत्र बहुव्रीहेः समासान्तापेक्षः शेषः। तेन च प्रियपथः, प्रियमधुर इति <code>ऋक्पूरब्धूः</code> (5.4.74) इत्यादिनाऽकारः समासान्तः। अथ किमर्थं शेषग्रहणम्(), यावता याभ्यः प्रकृतिभ्यः समासान्ता विहिताः, ताभ्यस्त एव बाधका भविष्यन्ति? नैतदस्ति; निरवकाशा हि विषयो बाधका भविष्यन्ति, सावकाशाश्च समासान्ताः। कोऽवकाशः? प्रतिपदोपात्तप्रकृतयः; याभ्यः समासान्ता अर्थविशेषे समासविशेषं प्रति प्रतिपदमुपादाय विहिताः सोऽवुकाशः; विशेष प्रकृतिभ्यः प्रसङ्गे सत्युभयप्राप्तौ परत्वात्? कप्रत्ययः स्यात्()। तस्माच्छेषग्रहणं कत्र्तव्यम्()॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

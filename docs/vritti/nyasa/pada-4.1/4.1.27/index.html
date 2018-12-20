@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.27.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.27";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.28\",\"Previous\":\"4.1.26\",\"अकारादिक्रमसङ्ख्या\":1849,\"कौमुदीक्रमसङ्ख्या\":486,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दामहायनान्ताच्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.27.md">Edit 4.1.27!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.27";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.28\",\"Previous\":\"4.1.26\",\"अकारादिक्रमसङ्ख्या\":1849,\"कौमुदीक्रमसङ्ख्या\":486,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दामहायनान्ताच्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.27 दामहायनान्ताच्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>ऊधसः</code> इति निवृत्तम्,प्रकृत्यन्तरोपादानात्। <code>संख्याग्रहणनुवत्र्तते, नाव्ययग्रहणम्</code> इति। संख्याग्रहणस्यैव स्वरितत्वात्। <code>डाप्प्रतिषेधविकल्पेषु प्राप्तेषु</code> इति। <code>डाबुभाभ्यामन्यतरस्याम्</code> (4.1.13) इत्यादिना डापि प्राप्ते <code>अनो बहुव्रीहेः</code> (4.1.12) इति प्रतिषेध <code>अन उपधालोपिनोऽन्यतरस्याम्ट (4.1.28) इति विकल्पे च। द्वे दामनी अस्या इति</code>द्विदाम्नी<code>।</code>द्वौ हायनावस्या इति <code>द्विहायनी</code>।
 <code>हायनो वयसि स्मृतः</code> इति। प्रकृतिरिति शेषः। कस्य प्रकृतिः? ङीपः प्रकृतत्वात् तस्यैव। बहुव्रीह्रधिकारादत्र हायमान्तो बहुव्रीहिरिति गम्यते। एतदुक्तं भवति&ndash; हायमान्तो बहुव्रीहिर्वयसि गम्यमाने ङीपः प्रकृतिराचार्यैः स्मृत इति। तेन यदि वयो गम्यते ततो ङीब्भवति, नान्यथा। एतच्चोत्तरसूत्रेऽन्यतरस्यांग्रहणस्योभयोर्योगयोः शेषभूतत्वाद्व्यवस्थितविभाषाविज्ञानाच्च लभ्यते। अथ त्रिचतुभ्र्यां हायनस्याप्युपसंख्यानाद्यथा हि त्रिहायनी चतुर्हायणीत्यत्र णत्वं भवति; तथा त्रिहायना शाला, चतुर्हायना शालेत्यत्रापि कस्मान्न भवति? इत्याह &ndash; <code>णत्वमपि</code> इत्यादि। तदपि हि णत्वमौपसंख्यानिकमाचार्यैर्वयस्येव स्मर्यते। न च शालाया वयः सम्भवति, तस्य प्राणिधर्मत्वादिति नेह णत्वं प्रवर्तते।
 अन्तग्रहणं विस्पष्टार्थम्। बहुव्रीह्रधिकारादेव हि सामथ्र्यात् तदन्तविधिर्लभ्यते; न हि केवलयोर्दामहायनशब्दयोर्बहुव्रीहिसंज्ञा केनचिद्विहिता॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

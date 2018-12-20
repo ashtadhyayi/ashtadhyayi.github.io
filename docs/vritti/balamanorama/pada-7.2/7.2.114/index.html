@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.2\/7.2.114.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.114";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.115\",\"Previous\":\"7.2.113\",\"अकारादिक्रमसङ्ख्या\":2794,\"कौमुदीक्रमसङ्ख्या\":3473,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"मृजेर्वृद्धिः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.2/7.2.114.md">Edit 7.2.114!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.114";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.115\",\"Previous\":\"7.2.113\",\"अकारादिक्रमसङ्ख्या\":2794,\"कौमुदीक्रमसङ्ख्या\":3473,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"मृजेर्वृद्धिः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.114 मृजेर्वृद्धिः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>मृजेर्वृद्धिः। <code>इको गुणवृद्धी</code> इति परिभाषया <code>इक</code> इत्युपस्थितम्। मृजेरित्यवयवषष्ठी। तदाह&ndash;मृजेरिको वृद्धिः स्यादिति। <code>धातोः स्वरूपग्रहणे तत्प्रत्यये कार्यविज्ञान</code>मिति परिभाषामभिप्रेत्य आह&ndash; धातुप्रत्यये परे इति। धातोर्विहिते प्रत्यये इत्यर्थः। तेन परिमृङ्भ्यामित्यत्र न वृद्धिरिति भावः। गुणापवादोऽयम्। क्ङित्यजादौ वेष्यते। <code>मृजेर्वृद्धि</code>रिति शेषः। <code>इको गुणवृद्धी</code> इति सूत्रभाष्ये इदं पठितम्। व्रश्चेति ष इति। मृज्-ति इति स्थिते ऋकारस्य वृद्धौ रपरत्वे जकारस्य व्रश्चेति षत्वे तकारस्य ष्टुत्वेन टकारे मार्ष्टीति रूपमित्यर्थः। मृष्ट इति। ङित्त्वान्न वृद्धिर्नापि गुण इति भावः। मृजन्ति मार्जन्ति इति। <code>क्ङित्यजादा</code>विति वृद्धिविकल्प इति भावः। मार्षि मृष्ठः मृष्ठ। मार्ज्मि मृज्वः मृज्मः। ममार्जेति। णलि <code>मृजेर्वृद्धि</code>रिति अतुसादावजादौ किति वृद्धिविकल्पं मत्वा आह&ndash; ममार्जतुः ममृजतुरिति। ममार्जुः ममृजुरित्यपि ज्ञेयम्। ऊदित्त्वादिड्विकल्पं मृजेर्वृदिं?ध च मत्वा आह&ndash; ममार्जिथ ममार्ष्ठेति। इडभावे जस्य व्रश्चेति षः। थस्य ष्टुत्वेन ठ इति भावः। ममार्जथुः&ndash;ममृजथुः, ममार्ज&ndash;ममृज। ममार्ज, ममार्जिव-ममृजिव-मम#ऋज्व, ममार्जिम-ममृजिम- ममृज्म। लुट�आह&mdash; मार्जिता मार्ष्टेति। ऊदित्त्वदिटि, तदभावे च <code>मृजेर्वृद्धि</code>रिति भावः। मार्जिष्यति&ndash; माक्ष्र्यति। मार्ष्टु&ndash; मृष्टात्, मृष्टाम्, मार्जन्तु&ndash;मृज्नतु। मृड्ढीति। हेरपित्त्वेन ङित्त्वान् वृद्धिः। व्रश्चादिना जस्य षः। हेर्धिः, षस्य जश्त्वेन डः, धस्य ष्टुत्वे ढः। मृष्टात् मृष्टम् मृष्ट। मार्जानि मार्जाव मार्जाम। लङ्याह&ndash;अमार्डिति। तिप इकारलोपे वृद्धौ रपरत्वे हल्ङ्यादिना तकारलोपे व्रश्चादिना जस्य षः, तस्य जश्त्वचर्त्वे इति भावः। अमृष्टाम् अमार्जन्- अमृजन्। अमार्ट् अमृष्टम् अमृष्टं। अमार्जमिति। अमृज्व अमृज्म। मृज्यात्। मृज्याताम्। मृज्यात्। मृज्यास्ताम्। अमार्जीत् अमार्क्षीदिति। ऊदित्त्वादिड्विकल्प इति भावः। इट्पक्षे अमार्जिष्टाम् अमार्जिषुरित्यादि सुगमम्। इडभावे आमार्ष्टाम् अमार्क्षुः। अमार्क्षीः। अमाष्र्टम् अमाष्र्ट। अमाक्र्षम् अमार्क्ष्व अमार्क्ष्म। अमार्जिष्यत&ndash; अमाक्ष्र्यत्। रुधिर्?धातुरितित्। सेट्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

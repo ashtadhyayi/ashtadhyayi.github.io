@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-8.4\/8.4.2.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.4.2";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.4.3\",\"Previous\":\"8.4.1\",\"अकारादिक्रमसङ्ख्या\":79,\"कौमुदीक्रमसङ्ख्या\":197,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":157,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"अट्कुप्वाङ्नुम्व्यवायेऽपि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-8.4/8.4.2.md">Edit 8.4.2!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.4.2";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.4.3\",\"Previous\":\"8.4.1\",\"अकारादिक्रमसङ्ख्या\":79,\"कौमुदीक्रमसङ्ख्या\":197,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":157,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"अट्कुप्वाङ्नुम्व्यवायेऽपि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.4.2 अट्कुप्वाङ्नुम्व्यवायेऽपि
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अट्कुप्वाङ्। <code>रषाभ्या</code>मिति पञ्चमीनिर्देशाद्व्यवहितस्याऽप्राप्तौ वचनमिदम्। तत्र सर्वैर्व्यवायोऽसंभवी। <code>एकैकमात्रव्यावय</code> इत्यपि नार्थः, क्षुभ्नादिषु क्षु भ्नपाठसामर्थ्यात्, <code>सरूपाणाम्-</code>इत्यादिनिर्देशाच्चेत्यभिप्रेत्याह-व्यस्तैर्यथासंभवमिलितैश्चेत्यादि। नन्वेवं <code>कृत्स्नं</code> <code>कार्त्स्न्य</code>मित्यादावडादिव्यवधानाऽभावण्णत्वाऽभावेप्यादर्शेनेत्यादावड्वयवधानादतिप्रसङ्गः। न च अडादिभिरेव व्यवधान इति नियमः, अप्राप्ते विधिरयमित्युक्तत्वात्। सत्यम्। योगविभागोऽत्र बोध्यः। <code>व्यवायेऽपि</code> इत्येको योगो विध्यर्थः। <code>अट्कुप्वाङ्नुम्--</code>इत्यन्यो नियमार्थः। छान्दसो भिसो लुक्। अत्र योगविभागं विनापि निर्वाहः सुकर इति तु नव्याः। तथाहि&ndash;अट्कुप्वाङ्-&lsquo;इति सूत्रे <code>रषाभ्याम्</code> इत्यनुवर्तते। पञ्चमीश्रुत्या <code>तस्मादित्युत्तरस्ये</code>ति परिभाषोपतिष्ठते। उपस्थितापि सा वचनप्रामाण्यादडादिव्यावाये न प्रवर्तते। तदन्यव्यवाये तु प्रवर्तत एव। अतएव-<code>येन नाव्यवधानं तेन व्यवहितेऽपि वचनप्रामाण्यादेकवर्णव्यवहितस्यैव इको गुणो न तु भिनत्तीत्यादावनेकव्यवहितस्येकः</code>&ndash;इति <code>पुगन्तलघूपधस्ये</code>ति सूत्रे वक्ष्यति। एवं च यत्राडादिभ#इरेव व्यवधानं रामेणेत्यादौ तत्र भवत्येव णत्वम्। अत्र त्वडादिभिन्नेन व्यवधानमादर्शेनेत्यादौ, तत्र न भवति, <code>तस्मा</code>दिति परिभाषाया जागरूकत्वात्। निषेधं बाधितुमिति। तेन <code>पर्यणद्ध</code>मित्यत्र <code>उपसर्गादसमासेऽपि-</code> इति णत्वं सिध्यतीति भावः। उपलक्षणार्थमिति। नुम्स्थानिकस्य, स्वाभाविकस्य वाऽनुस्वारमात्रस्योपलक्षणार्थं नुम्ग्रहणमित्यर्थः। तेन <code>बृहि वृद्धौ</code>। इदित्त्वान्नुम्। तस्यानुस्वारः। <code>तृंहू हिंसायां</code>। स्वाभाविकोऽत्रानुसवारः। बृंहणम् तृंहणम्। उभयत्रापि णत्वं सिद्धम्। अयोगवाहानामिति। अविद्यमानो योगः=प्रत्याहारेषु संबन्धो येषां ते अयोगाः। अनुपदिष्टत्वादुपदिष्टैरगृहीतत्वाच्च प्रत्याहारसंबन्धशून्या इत्यर्थः। वाहयन्ति निर्वाहयन्ति प्रयोगमिति वाहाः। अयोगाश्च ते वाहाश्च अयोगवाहाः। अनुपदिष्टत्वे उपदिष्टैरगृहीतत्वे च सति श्रूयमाणा इत्यर्थः। अट्स्विति। निष्कर्षस्त्वकारोपरीति। तेन पयःस्वित्यादाविणः परस्येति षत्वं न भवति। अत एवोक्तं प्राक्-<code>अनुस्वारविसर्गजिह्वामूलीयोपध्मानीययमानामकारोपरी</code>ति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

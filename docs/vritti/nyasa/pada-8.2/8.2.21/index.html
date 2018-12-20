@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.21.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.21";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.22\",\"Previous\":\"8.2.20\",\"अकारादिक्रमसङ्ख्या\":49,\"कौमुदीक्रमसङ्ख्या\":2541,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अचि विभाषा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.21.md">Edit 8.2.21!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.21";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.22\",\"Previous\":\"8.2.20\",\"अकारादिक्रमसङ्ख्या\":49,\"कौमुदीक्रमसङ्ख्या\":2541,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अचि विभाषा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.21 अचि विभाषा।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>गिरति</code> इति। निगरणार्थस्य रूपम्()। <code>निगरणम्()</code> इति। ल्युट्()। <code>निगारकः</code> इति। ण्वुल्()। निगार्यते<code>इति। अत्र हि णिलोपे कृते विकल्पो न सिध्यत्यचः परस्याभावात्()? इत्येतच्चोद्यमपाकर्त्तुमाह--</code>निगार्यते<code>निगाल्यते</code> इति। स्थानिवद्भावस्तु पूर्ववत्()।
 स्यादेतत्()। नास्त्येवात्र स्थानिवद्भावः; <code>पूर्वत्रासिद्धे न स्थानिवत्()</code> (जै।प।वृ।४८) इति प्रतिषेधात्()? इत्यत आह&ndash;<code>पूर्वत्रासिद्धे</code> इत्यादि। अपवादः=दोषः, सह तेन वत्र्तत इति सापवादम्()। दोष एवायमस्याः परिभाषाया इत्यर्थः। अपिशब्दः समुच्चये। न केवलं तच्चोद्यं सापवादम्(), अपि तु <code>पूर्वत्रासिद्धं न स्थानिवत्()</code> (जै।प।वृ ४८) इत्येतदपि वचनं सापवादमेव। तदेव सापवादत्वमाप्तवचनेन प्रतिपादयितुमाह&ndash;<code>तस्य</code> इत्यादि। तत्र संयोगादिलोपविधावयं दोषः&ndash;काक्यर्थः, वास्यर्थ इति; अत्रासति यणादेशस्य स्थानिवदभावे <code>स्कोः संयोगाद्योः</code> (8.2.29) इति ककारसकारयोर्लोपः प्रसज्येत। लत्वविधौ&ndash;निगार्यते, निगाल्यत इति; णिलोपस्य सति स्थानिवद्भावे विकल्पेन लत्वं न स्यात्()। णत्वविधौ&ndash;प्रहिणोति प्रमीणीन इति; अत्र गुणेत्त्वयोरसति स्थानिवद्भावे <code>हिनुमीना</code> (8.4.15) इति णत्वं न प्राप्नोति। <code>अन्तरङ्गत्वाद्वा</code> इत्यादि। परिहारन्तरम्()। अन्तरङ्गत्वं तु लत्वविकल्पस्य वर्णाश्रयत्वात्()। णिलोपस्य तु बहिरङ्गत्वम्(); आर्धधातुकाश्रयत्वात्()।
 अथ गिरौ, गिरः&ndash;इत्यत्र लत्वं कस्मान्न भवति? इत्याह&ndash;<code>गिरौ, गिरः</code> इत्यादि। इतिकरणो हेतौ। धातोः स्वरुपेण ग्रहणे सति तत्प्रत्यये धातोरित्येव यः प्रत्ययो विहितस्तत्र तत्कार्यं विज्ञायते। तस्मादगिरो, गिर इत्यत्र न भवति। न ह्रत्र श्रातो (3.1.91) रित्येव गिरतेः क्विबन्तादौजसौ विहितौ, किं तर्हि? प्रातिपदिकाधिकारात्? (4.1.1)॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

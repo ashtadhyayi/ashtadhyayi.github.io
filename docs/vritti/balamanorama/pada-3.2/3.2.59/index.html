@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.2\/3.2.59.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.59";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.60\",\"Previous\":\"3.2.58\",\"अकारादिक्रमसङ्ख्या\":864,\"कौमुदीक्रमसङ्ख्या\":373,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्विन्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"ऋत्विग्दधृक्स्रग्दिगुष्णिगञ्चुयुजिक्रुञ्चां च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.2/3.2.59.md">Edit 3.2.59!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.59";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.60\",\"Previous\":\"3.2.58\",\"अकारादिक्रमसङ्ख्या\":864,\"कौमुदीक्रमसङ्ख्या\":373,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्विन्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"ऋत्विग्दधृक्स्रग्दिगुष्णिगञ्चुयुजिक्रुञ्चां च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.59 ऋत्विग्दधृक्रुआग्दिगुष्णिगञ्चुयुजिक्रुञ्चां च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अथ जान्ताः। अथ युज्शब्दस्य व्युत्पतिं?त दर्शयितुमाह-ऋत्विग्दधृक्। <code>धातो</code>रित्यधिकृतं। <code>स्पृशोऽनुदके क्विन्</code> इत्यतः क्विन्नित्यनुवर्तते। पञ्चम्यर्थे षष्ठी। तदाह-एभ्य इति। ऋतौ उपपदे यज्धातोः, धृष्धातोः, सृज्धातोः, दिश्धातोः ष्णिधातोः, अञ्चुधातोः, युज्धातोः, क्रुञ्च्धातोश्चेत्यर्थः। ननु ऋत्विक्, दधृगित्यादौ कुत्वद्वित्वादि कुत इत्यत आह&ndash;अलाक्षणिकमपीति। लक्षणानि=सूत्राणि तद्विहितं कार्यं लाक्षणिकम्। सूत्रतः प्रतय्क्षानुपदिष्टमपि कार्यं निपातनात्सिद्धरूपनिर्देशाल्लभ्यत इत्यर्थः। तत्र ऋतावुपपदेः यजेः क्विन्। तस्य कित्त्वात् <code>वचिस्वपियजादीना</code>मिति संप्रसारणं, <code>व्रश्चे</code>ति षत्वापवादः कुत्वं च। धृषेः क्विनि द्वित्वमन्तोदात्तत्वं च। सृजेः क्रमणि क्विन्, अमागमश्च। दिशेः कर्मणि क्विन्। उत्पूर्वात्स्निहेः क्विन्, उदोदलोपः, षत्वं च। अञ्चेः सुप्युपपदे क्विन्। युजे केवलात् क्विन्। क्रुञ्चेः क्विन्, नलोपाऽभावश्च निपात्यते। यद्यपि अञ्चे केवलस्यैवोपादानं तथाप्युष्णिक्शब्दसाहचर्यात्सोपपदस्यैवाञ्चेर्ग्रहणमित्याहुः। निरुपपदादिति। क्विन्विधिफलं हि नुमो नस्य कुत्वमेव। नुम् च असमासे एव वक्ष्यते। समासे तु सुयुगित्यादौ जस्य <code>चोः कु</code>रिति कुत्वेनैव सिद्धतया क्विनि क्विपि च विशेषाऽभावादिति भावः। कनाविताविति। <code>लशक्वतद्धिते</code> इति हलन्त्य`मिति च सूत्राभ्या&rsquo;मिति शेषः। वकारादिकारस्तूच्चारणार्थः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

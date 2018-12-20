@@ -20,9 +20,11 @@ $(document).ready(function(){
   $("#sutraSearchInputBox").change(function() {
     let sutraSelected = $(this).val();
     let sutraDetails = sutraAutocompleteMap.get(sutraSelected)
-    console.log(sutraDetails);
+    console.debug(sutraDetails);
     if (sutraDetails) {
-      window.location = getSutraLinkRelative(sutraDetails.index);
+      console.debug(getContextSensitiveSutraLink(sutraDetails.index));
+      // return;
+      window.location = getContextSensitiveSutraLink(sutraDetails.index);
     }
   });
 });

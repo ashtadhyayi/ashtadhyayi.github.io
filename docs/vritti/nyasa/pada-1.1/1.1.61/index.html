@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.1\/1.1.61.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.1.61";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.1.62\",\"Previous\":\"1.1.60\",\"अकारादिक्रमसङ्ख्या\":2480,\"कौमुदीक्रमसङ्ख्या\":260,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":209,\"विषयः १\":\"लुक्‌ श्लु लुप्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रत्ययस्य लुक्‌श्लुलुपः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.1/1.1.61.md">Edit 1.1.61!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.1.61";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.1.62\",\"Previous\":\"1.1.60\",\"अकारादिक्रमसङ्ख्या\":2480,\"कौमुदीक्रमसङ्ख्या\":260,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":209,\"विषयः १\":\"लुक्‌ श्लु लुप्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रत्ययस्य लुक्‌श्लुलुपः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.1.61 प्रत्ययलोपे प्रत्ययलक्षणम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>प्रत्ययलक्षणम्</code> इति। प्रत्ययो लक्षणं यस्येति कार्येऽन्यपदार्थे बहुव्रीहिः। प्रत्ययनिमित्तमित्यादिना सूत्रारम्भस्य प्रयोजनमाह।
 ननु च स्थानिवद्भावनाप्येतत् सिध्यति, नैतदस्ति; अलाश्रयमपि हि प्रत्ययलोपे प्रत्ययलक्षणं कार्यमिष्यते। तथा ह्रग्निचिदित्यत्र <code>ह्यस्वस्य पिति कृति तुक्</code> (6.1.69) इत्यलाश्रयोऽपि तुग् भवत्येव। <code>अग्निचित्</code> इति। <code>अग्नौ चेः</code>
 (3.2.9) इति क्विप्। अधोगिति हल्ङ्यादिसूत्रेण तिलोपः; अदादित्वाच्छपो लुक् (2.4.72) <code>दादेर्धातोर्घः</code> (8.2.32) इति धत्वम्, <code>एकाचो बशो भष्</code> (8.2.37) इत्यादिना भष् धकारः, <code>झलाञ्जशोऽन्ते</code> (8.2.39) इति जश्त्वम्, घकारस्य गकारः,तस्य <code>वावसाने</code> (8.4.55) इति चर्त्वं ककारः।
@@ -137,9 +149,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

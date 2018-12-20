@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.4\/7.4.85.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.4.85";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.4.86\",\"Previous\":\"7.4.84\",\"अकारादिक्रमसङ्ख्या\":2219,\"कौमुदीक्रमसङ्ख्या\":2643,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"यङ् यङ्-लुक्\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"नुगतोऽनुनासिकान्तस्य\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.4/7.4.85.md">Edit 7.4.85!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.4.85";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.4.86\",\"Previous\":\"7.4.84\",\"अकारादिक्रमसङ्ख्या\":2219,\"कौमुदीक्रमसङ्ख्या\":2643,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"यङ् यङ्-लुक्\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"नुगतोऽनुनासिकान्तस्य\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.4.85 नुगतोऽनुनासिकान्तस्य।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>दीर्घोऽकितः</code> (7.4.83) इत्यनेन दीर्घत्वे प्राप्ते वचनमिदमारभ्यते। <code>तन्तन्यते</code> इत्यादीनि तमिगमियमिरमीणां रूपाणि।
 यदि नुक्? क्रियते, यम्यम्यते इत्यादौ <code>नश्चापदान्तस्य झलि</code> (8.3.24) इति झल्युच्यमानोऽनुस्वारो न सिध्यति, अझल्परत्वात्()? इत्यत आह&ndash;<code>नुगित्ये तत्()</code> इत्यादि। कथं पुनर्नुगित्येतदनुस्वारोपलक्षणार्थं शक्यते द्रष्टुम्()? इत्याह&ndash;<code>स्थानिना हि</code> इत्यादि। नुका हि स्थानिनाऽत्रादेशोऽनुस्वार उपलक्ष्यते। तस्मादनुस्वार एवागमोऽत्र विधीयते, न तु नुक्()। यम्यम्यत इत्यादौ यद्यप्यझल्परताऽस्ति, तथाप्यनुस्वारः सिध्यति।
 एवं <code>अनुस्वारस्य ययि परसवर्णः</code> (8.4.57) प्राप्नोति, इष्यते च पक्षेऽनुस्वारस्य श्रवणम्(), तन्न सिध्यति, अपवान्तत्वात्()? इत्यत आह&ndash;<code>पदान्तवच्च</code> इत्यादि। पदान्तवदनुस्वारो भवतीत्येतदर्थरूपं व्याख्येयमित्यर्थः। तत्रेदं व्याख्यानम्()&ndash;तदन्तविधिर्नवानुनासिकान्तस्यानुस्वारो भवतीति नार्थोऽन्तग्रहणेन, तत्क्रियते&ndash;पदान्तस्यानुत्वारस्य यो धर्मा स नुकोऽपि स्यादित्येवमर्थम्(); तेनानुस्वारस्य पक्षे श्रवणं भविष्यतीति।
@@ -134,9 +146,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.3\/3.3.131.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.3.131";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.3.132\",\"Previous\":\"3.3.130\",\"अकारादिक्रमसङ्ख्या\":3077,\"कौमुदीक्रमसङ्ख्या\":2789,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"वर्तमानसामीप्ये वर्तमानवद्वा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.3/3.3.131.md">Edit 3.3.131!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.3.131";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.3.132\",\"Previous\":\"3.3.130\",\"अकारादिक्रमसङ्ख्या\":3077,\"कौमुदीक्रमसङ्ख्या\":2789,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"वर्तमानसामीप्ये वर्तमानवद्वा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.3.131 वर्तमानसामीप्ये वर्तमानवद्वा
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>वर्तमानसामीप्ये। स्वर्थे प्यञिति। अस्मादेव निर्देशाच्चतुर्वर्णादेराकृतिगणत्वाद्वेति भावः। इत्यारभ्येति। तृतीयस्य द्वितीये <code>वर्तमान ल</code>डित्यारभ्य आपादसमाप्तेः <code>उणादयो बहुल</code>मिति तृतीयपादादिमसूत्रात्पाग्वर्तमानाधिकारः। तस्मिन्नधिकारे येन विशेषणेन याभ्यः प्रकृतिभ्यो वर्तमाने प्रत्यया वहिताते सर्वे तेनैव विशेषणेन ताभ्यः प्रकृतिभ्यो वर्तमानसमीपकाले भूते भविष्यति च वा भवन्तीत्यर्थः। अत्र भूते भविष्यति चेत्यार्थिकं, तयोरेव वर्तमानसामीप्यसत्त्वात्। कदा आगतोऽसीत्यगतं प्रति प्रश्नः। अयमागच्छामित्युत्तरम्। अव्यवहितपूर्वकाले आगतवानस्मीत्यर्थः। वर्तमानसमीपकाले भूते लट्। <code>अय</code>मित्यनेन आगमनकालीनं प्रस्वेदपरिकरबन्धादियुक्तं रूपं निर्दिश्यते इदानीमागमनं सूचयितुम्। आगममिति। वर्तमानवत्त्वाऽभावे भूते लुङ्। कदा गमिष्यसीति गमनात्प्राक् प्रश्ने, एष गच्छामीत्युत्तम्। अव्यवहितोत्तरकाले गमिष्यामीत्यर्थः। <code>एष</code> इति तु अयमितिवद्वयाख्येयः। वर्तमानकालसमीपे भविष्यति लट्। गमिष्यामि वेति। वर्तमानवत्त्वाऽभावे भविष्यति लृट्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

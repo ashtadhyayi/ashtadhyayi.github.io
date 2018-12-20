@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-1.2\/1.2.44.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.2.44";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.2.45\",\"Previous\":\"1.2.43\",\"अकारादिक्रमसङ्ख्या\":883,\"कौमुदीक्रमसङ्ख्या\":655,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उपसर्जनम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एकविभक्ति चापूर्वनिपाते\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-1.2/1.2.44.md">Edit 1.2.44!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.2.44";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.2.45\",\"Previous\":\"1.2.43\",\"अकारादिक्रमसङ्ख्या\":883,\"कौमुदीक्रमसङ्ख्या\":655,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उपसर्जनम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एकविभक्ति चापूर्वनिपाते\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.2.44 एकविभाक्ति च अपूर्वनिपाते
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>एक विभाक्तिर् यस्य तदिदम् एकविभाक्ति। समासे विधीयमाने यन् नियतविभक्तिकं, द्वितीये सम्बन्धिनि बहुभिर्विभक्तिभिर् युज्यमाने ऽप्येकयैव विभक्त्या युज्यते तदुपसर्जनसंज्ञं भवति अपूर्वनिपाते, पूर्वनिपतं पूर्वनिपाताऽख्यम् उपसर्जनकार्यं वर्जयित्वा। निरादयः क्रान्ताऽद्यर्थे पञ्चम्या। पूर्वपदे नानाविभक्तिके ऽप्युत्तरपदं पञ्च्म्यन्तम् एव भवति। निष्क्रान्तः कौशाम्ब्या निष्कौशाम्बिः। निष्त्रान्तं कौशाम्ब्या निष्कौशाम्बिम्। निष्क्रान्तेन कौशाम्ब्या निष्कौशाम्बिना। निष्क्रान्ताय कौशाम्ब्या निष्कौशाम्बये। निष्क्रान्तात् कौशाम्ब्या निष्कौशाम्बेः। निष्क्रान्तस्य कौशाम्ब्या निष्कौशाम्बेः। निष्क्रान्ते कौशाम्ब्या निष्कौशाम्बौ। एवं निर्वाराणसिः। एकविभक्ति इति किम्? राजकुमारी। अपूर्वनिपाते इति किम्? न हि भवति कौशाम्बीनिः इति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

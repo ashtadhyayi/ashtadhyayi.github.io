@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.3\/4.3.16.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.3.16";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.3.17\",\"Previous\":\"4.3.15\",\"अकारादिक्रमसङ्ख्या\":3555,\"कौमुदीक्रमसङ्ख्या\":1387,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्दीव्यतोऽण्। शेषे\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"संधिवेलाऽऽद्यृतुनक्षत्रेभ्योऽण्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.3/4.3.16.md">Edit 4.3.16!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.3.16";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.3.17\",\"Previous\":\"4.3.15\",\"अकारादिक्रमसङ्ख्या\":3555,\"कौमुदीक्रमसङ्ख्या\":1387,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्दीव्यतोऽण्। शेषे\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"संधिवेलाऽऽद्यृतुनक्षत्रेभ्योऽण्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.3.16 सन्धिवेलाद्यृतुनक्षत्रेभ्योऽण्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>ठञोऽपवाद-ट इति।</code>कालाट्ठञ्<code>(4.3.11) इति प्राप्तस्य। अथाण्ग्रहणं किमर्थम्, यथाविहितमेवोच्येत,तेनैवमुच्यमाने न प्राप्नोतीत्याशङ्कनीयम्, यदि ठञ् स्यात् पुनर्वचनमनर्थकं स्यात्, तस्माद्वचनप्रामाण्याद्यो विहितो न स प्राप्नोति, ठञ्प्रत्ययेन बाधितत्वात् स एव भविष्यति, स वाच्य? इत्यत आह--</code>अण्ग्रहणम्<code>इत्यादि। सन्धिवेलादिषु पौर्णमासीशब्दो वृद्धः पठ()ते। स्वातिरिति नक्षत्रशब्दो वृद्धोऽस्ति। तत्र यद्यण्ग्रहणं न क्रियेत, ताभ्यां परत्वाट्ठञा छे बाधिते पुनर्वचनाच्छ एव स्यात्। तस्मात् तनपि बाधित्वा वृद्धादणेव यथा स्यादित्येवमर्थं पुनरण्ग्रहणम्।</code>तैषम्, पौषम्<code>इति। तिष्यपुष्पशब्दाभ्यां</code>नक्षत्रेण युक्तः कालः<code>(4.2.3) इत्यण्, तस्याणो</code>लुबविशेषे<code>(4.2.4) इति लुप्, ततोऽनेनाण्, तिष्यपुष्ययोर्नक्षत्राणि</code> (वा।८०८) इति यलोपः।
 <code>संवत्सरात्फलपर्वणोः</code>इति। संवत्सरशब्दादण्भवति फले पर्वणि चाभिधेये। सांवत्सरं फलम्, सावंत्सरं पर्व वा। सांवत्सरिकमन्यत्॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

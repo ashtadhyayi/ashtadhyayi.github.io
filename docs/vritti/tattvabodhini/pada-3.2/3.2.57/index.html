@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-3.2\/3.2.57.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.57";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.58\",\"Previous\":\"3.2.56\",\"अकारादिक्रमसङ्ख्या\":994,\"कौमुदीक्रमसङ्ख्या\":2974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"खिष्णुच्-खुकञ्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"कर्तरि भुवः खिष्णुच्खुकञौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-3.2/3.2.57.md">Edit 3.2.57!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.57";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.58\",\"Previous\":\"3.2.56\",\"अकारादिक्रमसङ्ख्या\":994,\"कौमुदीक्रमसङ्ख्या\":2974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"खिष्णुच्-खुकञ्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"कर्तरि भुवः खिष्णुच्खुकञौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.57 कर्तरि भुवः खिष्णुच्खुकञौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>कर्तरि भुवः। अच्व्यन्तेष्विति। अच्व्य्नतेष्विति। अच्वावित्यनुवर्तते। अन्यथा आढ्यीभविष्णुः आढ्यीभावुक इति स्यादिति भावः। <code>कर्तृग्रहणं करणाऽनुवृत्तिभ्रमनिरासार्थमुत्तरार्थ चे</code>ति प्राञ्चः। वस्तुतस्तु व्यर्थमेव, अस्वरितत्वादेवाऽननुवृत्तिसिद्धेः, उत्तरत्राप्युपयोगो नेति स्पष्टीकरिष्यमाणत्वाच्च। खकारो मुमर्थः। चकारः <code>चितः</code> अस्वरितत्वादेवाऽननुवृत्तिसिद्धेः, इकारादित्वसिद्धये इडागमे कृतेऽपि <code>आगमा अनुदात्ताः</code> इति तस्याऽनुदात्तत्वात्। न च <code>कृत्योकेष्णुच्चार्वादयश्चे</code> ति स्वरसूत्रे अस्य ग्रहणं न स्यात्, चकारानुबन्धाऽभावादिकारस्य लाक्षणिकत्वात्षत्वणत्वयोरसिद्धत्वेनेष्णु इतिरूपाऽभावाच्चेति वाच्यम्, कृतेऽपि इकारे <code>तदनुबन्धकग्रहणे नाऽतदनुबन्धकस्ये</code>ति परिभाषया अलङ्कृञादीष्णुच एव ग्रहणं स्यान्न त्वेतस्य। इकारोच्चारणसामर्थ्यादस्याऽपि ग्रहणमिति चेद्धन्तैवं खष्णुजयमस्तु, तत्रेटि कृते चकारानुबन्धसामर्थ्यादस्यापि ग्रहणमस्त्विति किमिकारेणेति चिन्त्यमेतत्। न चेह लाघवाऽभावादिकारोऽस्तु, चकार एव मास्त्विति शङ्क्यम्, <code>एकमात्रो ह्रस्वो व्यञ्जनं त्वर्द्धमात्रक</code>मिति सर्वसंमतत्वात्। यत्तु हरदत्तेनोक्तं&ndash;षत्वणत्वयोः सामर्थ्यादस्य ग्रहणमिति , तदापाततः, रुआउजपेक्षया ष्णुजुक्तौ प्रत्युत प्रक्रियालाघवेन षत्वणत्वयोः करणस्योचिततया सामर्थ्याऽयोगादिति दिक्। निवृत्तमिति। ननु स्पृशेः सकर्मकत्वात्कर्मण्युपद इत्येव प्राप्येतेति चेत्। अत्र प्राञ्चः&ndash; पूर्वसूत्रात्कर्तर इत्यनुवर्तते, सा चानुवृत्तिः <code>कर्तरि कृ</code>दित्यनेनैव कर्तरि क्विनः सिद्धत्वाद्व्यर्था सती कर्तृप्रचयार्था, कर्मण्युपपदे एकः कर्ता, करणादौ चाऽपर इत्येवं कर्तृप्रचयः, तथा च <code>सुबन्ते उपपदे</code> इति फलितं भवतीति मन्त्रस्पृगित्यादेः क्विपाऽपि सिद्धेः। न च क्विपि कुत्वं न स्यादिति वाच्यं, <code>क्विन्प्रत्ययो यस्मा</code>दिति बहुव्रीहिबलादेवकुत्वसंभवादिति दिक्। सदृगिति। तमिवेमं पश्यन्ति जनाः, स इवायं पश्यति = ज्ञानविषयो भवतीति व्युत्पत्त्या कर्मकर्तर प्रत्ययः, रूढ�र्थानुगुणत्वात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

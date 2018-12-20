@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.3\/2.3.20.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.3.20";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.3.21\",\"Previous\":\"2.3.19\",\"अकारादिक्रमसङ्ख्या\":2891,\"कौमुदीक्रमसङ्ख्या\":565,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृतीया\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"येनाङ्गविकारः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.3/2.3.20.md">Edit 2.3.20!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.3.20";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.3.21\",\"Previous\":\"2.3.19\",\"अकारादिक्रमसङ्ख्या\":2891,\"कौमुदीक्रमसङ्ख्या\":565,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृतीया\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"येनाङ्गविकारः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.3.20 येनाङ्गविकारः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अयमङ्गशब्दोऽवयवे प्रसिद्धः। स यदि तत्रैव वत्र्तमान इह गृह्रते तदाऽत्रैव स्यात्&ndash; अक्षि काणमस्येति; अत्र ह्रक्ष्णः शरीरावयवस्य विकारः काणेन गुणेन द्योत्यत इति। इह तु न स्यात्&ndash; अक्ष्णा काण इति। न ह्रत्रावयवस्याक्ष्णो विकारो लक्ष्यते, किं तर्हि? अङ्गनः समुदायस्येत्यत आह&ndash; <code>अङ्गशब्दोऽत्र</code>इत्यादि। अङ्गमस्यास्तीत्यङ्गः, अर्श आदित्वादच्प्रत्ययान्तोऽङ्गशब्द उपात्त इति दर्शयति; अङ्गिनोऽङ्गापेक्षत्वात्। यदपेक्षयाऽङ्गिनोऽङ्गित्वं तदेव येनेत्यनेन निर्दिश्यत इति दर्शयितुमाह&ndash; <code>येन</code> इत्यादि। विकृतेनेति सामथ्र्याल्लब्धमर्थं दर्शयति। न ह्रविकृतेनाङ्गनिनोऽङ्गेन विकारो लक्ष्यते। <code>लक्ष्यते</code> इति। द्योत्यत इत्यर्थः। <code>अक्ष्णा काणः</code> इति। अत्राक्ष्णाऽवयवेन विकृतेनाङ्गिनो देवदत्तस्य विकारो लक्ष्यत इति तत्सतृतीया। विभक्तिर्भवति। कथं पुनरवयवेन विकृतेन समुदायस्तथा व्यपदिश्यत इत्याह&ndash; <code>अवयवधर्मेण</code> इत्यादि। याथाऽढ()मिदं नगरमित्यवयवधर्मेणाढ()त्वेनात्र समुदायो व्यपदिश्यते, तथेहाप्यवयवेन विकृतन समुदायो व्यपदिश्यत इति। कथं पुनरत्राक्षिशब्दस्य प्रयोगः क्रियते, यावता विनाऽपि तेन काणत्वं गुणः समुदायस्य प्रत#ईयत एव? सत्यमेतत्; लौकिके शब्दप्रयोगे गुरुलाघनं प्रत्यनादरात्। यस्तु तदाद्रियते सोऽक्षिशब्दं न प्रयुङ्क्त एव।
 <code>अक्षि काणमस्य</code> इति। अत्रासत्यङ्गग्रहणे काणशब्दात् तृतीया स्यात्। लक्ष्यते हि काणत्वेन गुणेनाक्ष्णो विकारः समुदायस्यावयवस्य॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

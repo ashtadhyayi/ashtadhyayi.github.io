@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.2\/7.2.34.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.34";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.35\",\"Previous\":\"7.2.33\",\"अकारादिक्रमसङ्ख्या\":1337,\"कौमुदीक्रमसङ्ख्या\":3582,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"निषेधः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ग्रसितस्कभितस्तभितोत्तभितचत्तविकस्तविशस्तॄशंस्तृशास्तृतरुतृतरूतृवरुतृवरूतृवरुत्रीरुज्ज्वलितिक्षरितिक्षमितिवमित्यमितीति च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.2/7.2.34.md">Edit 7.2.34!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.34";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.35\",\"Previous\":\"7.2.33\",\"अकारादिक्रमसङ्ख्या\":1337,\"कौमुदीक्रमसङ्ख्या\":3582,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"निषेधः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ग्रसितस्कभितस्तभितोत्तभितचत्तविकस्तविशस्तॄशंस्तृशास्तृतरुतृतरूतृवरुतृवरूतृवरुत्रीरुज्ज्वलितिक्षरितिक्षमितिवमित्यमितीति च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.34 ग्रसितस्कभितस्तभितोत्तभितचत्तविकस्ताविशस्तृशंस्तृशास्तृतरुतृतरूतृवरुतृवरूतृवरूत्रीरुज्वलितिक्षरितिक्षमितिवमित्यमितीति च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>ग्रसु स्कन्भु स्तन्भु इत्येतेषाम्()</code> इत्यादि। <code>ग्रसु ग्लसु अदने</code> (धा।पा।६३०,६३१), <code>स्कन्भु</code>, <code>स्तन्भु</code> (3.1.82) इत्येतौ सौत्रौ धातू; <code>स्तम्भुस्तुम्भुस्कम्भुस्कुम्भुस्कुञ्भ्यः श्नुश्च</code> (3.1.82) इति सूत्रे पाठात्()। <code>स्कभितम्, स्तभितम्()</code> इति। <code>अनिदिताम्()</code> (6.4.24) इत्यनुनासिकसलोपः। <code>स्कब्धभ्(), स्तब्धम्()</code> इति। <code>झषस्तथोर्धोऽधः</code> (8.2.40) इति धत्वम्(), <code>झलां जश्? झशि</code> (8.4.55) इति जश्त्वम्()। <code>उत्तभितम्()</code> इति। <code>उदः स्थास्तम्भोःत पूर्वस्य</code> (8.4.60) इति पूर्वसवर्णः। <code>अन्योपसर्गपूर्वः स्तभितशब्दो न भवतीति इति। यदि स्यात्(), उत्पूर्वस्य निपातनमनर्थकं स्यात्()। 
 </code>चतेः, कसेश्च<code>इति।</code>चते चदे याचने<code>(धा।पा।८६५,८६६),</code>कस गतौ<code>(धा।पा।८६०)। ननु सूत्रे विकस्तशब्दाद्वहुवचनं श्रूयते, ततश्च कथमसौ वृत्तादेकवचनान्त उदह्मतः? इत्यत आह--</code>निपातनं बहुत्वापेक्षम्()। विकस्ता इति बहुवचनम्()<code>इति। सूत्रे ग्रसितादीनि निपातनानि कृतद्वन्द्वानि, अतस्तदपेक्षया बहुवचनं कृतम्()। वृत्तौ त्वसमस्त एक एवायं विकस्तशब्दः। न चैतदर्थस्य बहुवचनं विवक्षिम्(), अत एकवचनान्त एवोदाह्मतः।</code>अपरेषु<code>इति। विशस्तृप्रभृतिषु।</code>प्रत्येकं विभक्तिनिर्देशः<code>इति। बहुत्वाभावाद्बहुवचनम्(), तेन तत्र न कृतमित्यभिप्रायः। 
 शसेर्विपूर्वस्य शंसेः शासेश्चेति।</code>शसु हिसायाम्()<code>(धा।पा।७२७),</code>शन्सु स्तुतौ<code>(धा।पा।७२८)</code>शासु अनुशिष्टौ<code>(धा।पा।१०७५)। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.1\/3.1.15.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.1.15";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.1.16\",\"Previous\":\"3.1.14\",\"अकारादिक्रमसङ्ख्या\":1008,\"कौमुदीक्रमसङ्ख्या\":2671,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सनादयः\",\"विषयः २\":\"क्यङ्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्मणः रोमन्थतपोभ्यां वर्तिचरोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.1/3.1.15.md">Edit 3.1.15!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.1.15";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.1.16\",\"Previous\":\"3.1.14\",\"अकारादिक्रमसङ्ख्या\":1008,\"कौमुदीक्रमसङ्ख्या\":2671,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सनादयः\",\"विषयः २\":\"क्यङ्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्मणः रोमन्थतपोभ्यां वर्तिचरोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.1.15 कर्मणो रोमन्थतपोभ्यां वर्तिचरोः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>कर्मणो रोमन्थ। वृतुधातोर्ण्यन्तात् <code>धात्वर्थनिर्देशे इग्वक्तव्यः</code> इति इकि वर्तिशब्दः। आवर्तनमर्थः। चरेः संपदादित्वाद्भावे क्विप्। वर्ति चर अनयोर्द्वन्द्वात्सप्तमी। आवर्तने चरणे चेति लभ्यते। कर्मशब्देन कर्मकारकं विवक्षितम्। तपोभ्यामिति। रोमन्थमिति। उद्गीर्णस्य निगीर्णस्य वा मन्थो रोमन्थ इति भाष्यम्। उद्गीर्णस्य = उदरादुपरि कण्ठ्दवारा निर्गतस्य, निगीर्णस्य = अपानद्वारा निर्गतस्य च मन्थः = चर्वणं रोमन्थ इत्यर्थः। वर्तयतीति। आवर्तयतीत्यर्थः। हनुचलन इति। हनु = तालु, तच्चलने सत्येव अयं विधिरित्यर्थः। तथा च उदरगतं भक्षितं द्रव्यं तृणादिकं पुनःपुनराकृष्य तालुचलनेन चूर्णितस्य पुनः पुनः प्राशने रोमन्थशब्दात्क्यङिति फलितम्। तदाह&ndash; चर्वितस्येति। हनुचलनेन भक्षितस्य उदरं प्रविष्टस्य पुनः पुनराकृष्य हनुचलनेन भक्षणे गम्ये इति फलितमित्यर्थः। कीट इति। इह हनुचलनाऽभावान्न क्यङिति भावः। तदेवोपपादयति&ndash;अपानेति। तपसः परस्मैपदं चेति&ndash; वार्तिकम्। तपश्शब्दः कर्मकारकवृत्तिः पूर्वसूत्राच्चरणे क्यङं लभते, ङित्त्वप्रयुक्तमात्मनेपदं बाधित्वा परस्मैपदमेव च लभते इत्यर्थः। तपस्यतीति। प्रातिपदिकादेवास्य क्यङुत्पत्तेरन्वर्वर्तिविभक्त्यभावात् <code>नः क्ये</code> इति नियमाच्च पदत्वाऽभावान्न रुत्वमिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

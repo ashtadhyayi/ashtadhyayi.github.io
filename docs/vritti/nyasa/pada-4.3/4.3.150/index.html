@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.3\/4.3.150.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.3.150";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.3.151\",\"Previous\":\"4.3.149\",\"अकारादिक्रमसङ्ख्या\":1979,\"कौमुदीक्रमसङ्ख्या\":3453,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"२ अर्थौ\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"द्व्यचश्छन्दसि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.3/4.3.150.md">Edit 4.3.150!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.3.150";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.3.151\",\"Previous\":\"4.3.149\",\"अकारादिक्रमसङ्ख्या\":1979,\"कौमुदीक्रमसङ्ख्या\":3453,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"२ अर्थौ\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"द्व्यचश्छन्दसि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.3.150 तालादिभ्योऽण्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>मयडादीनामपवादः</code> इति। आदिशब्देनाञः।प्रकृतिभेदात् तयोर्बहुत्वस्य विवक्षित्वाद् द्वयोरपि बहुवचनम्। तत्र तालश्यामाकशब्दाभ्यां वृद्धलक्षणसय् मयटोऽपवादः। बर्हिणो विकारोऽवयवो वेति <code>प्राणिरजतादिभ्योऽञ्</code> (4.3.152) इत्यनेन बार्हिणशब्दोऽपि विकारावयवप्रत्यान्तः, तेन तस्मादञ् <code>ञितश्च तत्प्रत्ययात्</code> (4.3.153) इति प्राप्तस्याञोऽपवादः। शेषेभ्यस्त्विन्द्रालिशादिभ्योऽनुदात्तादिलक्षणस्याञः। लिशिदृशिभ्यामिन्द्र उपपदे <code>कप्रकरणे मूलविभुजादिब्य उपसंख्यानम्</code> (वा।२३२) इति कप्रत्ययः। <code>अन्येषामपि दृश्यते</code> (6.3.136) इति दीर्घत्वम्। <code>गतिकारकोपपदात् कृत्</code> (6.2.138) इति कृत्स्वरेणान्तोदात्तौ <code>इन्द्रालिशेन्द्रादृश</code> शब्दो। <code>इन्द्रा घु</code> शब्दः समासस्वरेणान्तोदात्तः। <code>चप सान्त्वने</code> (धा।पा।३९९) <code>पचाद्यच्</code> चपशब्दोऽन्तोदात्तः। पीयूक्षाशब्दः <code>लघावन्ते</code> (फि।सू।२।४२) इत्यादिना मध्यादात्तः। यद्यप्यस्य टापि कृते <code>लघावन्ते</code> (फि।सू।२।४२) नास्ति, प्राक्तु टापो विद्यत एव, तस्यामेवावस्थायां मध्योदात्तत्वं भवति।
 <code>तालाद्धनुषि</code> इति पठ()ते। तालशब्दादण् प्रत्ययो भवति धनुष्यभिधेय इति। तालं धनुः, तालमयमन्यत्। अथाण्ग्रहणं किमर्थम्, न यथाविहितमेवोच्येत? नैवं शक्यम्; बार्हिशब्दाद्()वृदिद्धिलक्षणो मयट् <code>ञितश्च तत्प्रत्ययात्</code> (4.3.153) इत्यणा बाधितः। तत्रारम्भसामथ्र्यादन्मयडेव स्यात्। <code>श्यामाक</code>-शब्दः <code>लघावन्ते</code> (फि।सू।२।४२) इत्यादिना मध्योदात्तः। तस्मात् <code>अनुदात्तादेरञ्</code> (4.2.43)। परत्वाद्()वृद्धलक्षणेन मय()टा बाधित इतिपुनरारम्भसामथ्र्यादञेव स्यात्। अण्ग्रहमादणेव भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

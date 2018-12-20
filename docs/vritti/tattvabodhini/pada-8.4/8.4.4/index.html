@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-8.4\/8.4.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.4.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.4.5\",\"Previous\":\"8.4.3\",\"अकारादिक्रमसङ्ख्या\":3055,\"कौमुदीक्रमसङ्ख्या\":1039,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"वनं पुरगामिश्रकासिध्रकाशारिकाकोटराऽग्रेभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-8.4/8.4.4.md">Edit 8.4.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.4.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.4.5\",\"Previous\":\"8.4.3\",\"अकारादिक्रमसङ्ख्या\":3055,\"कौमुदीक्रमसङ्ख्या\":1039,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"वनं पुरगामिश्रकासिध्रकाशारिकाकोटराऽग्रेभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.4.4 वनं पुरगामिश्रकासिध्रकासारिकाकोटराप्रेभ्यः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>वनं पुरगाष व्यत्ययेन षष्ठ�र्थे प्रथमा इत्याह&mdash;वनशब्दस्येति। एभ्य एवेति। कृतिदीर्घेभ्यः पुरगादिभ्य एव परस्य णत्वमित्यर्थः। <code>एभ्यो वनस्यैव णत्वं नान्येषा</code>मिति विपरीतनियमशङ्का तु न भवति, वनादन्यस्मिन्नुत्तरपदे पुरगादीनां दीर्घान्तत्वाऽसंभवात्। नियमार्थ इति। अयं भावः&mdash;<code>पुरगामिश्रके</code>ति दीर्घनिर्देशादसंज्ञायां दीर्घाऽभावेन संज्ञायामेणत्वमिति फलितम्। एवं च <code>पूर्वपदात्संज्ञाया</code>मित्यनेनैव वनस्य णत्वे सिद्धे पुनरपि कृतदीर्घस्य पुरगादिपञ्चकस्य णत्वविधौ निर्देशो नियमार्थ एवेति। विध्यर्थ इति। असंज्ञात्वेन <code>पूर्वपदात्संज्ञाया</code>मित्यस्याऽप्रवृत्तेरिति भावः। न च पुरगाग्रहणमपि विध्यर्थमेव, गकारव्ययधानेन <code>पूर्वपदात्संज्ञाया</code>मित्यस्य प्राप्त्यभावादिति वाच्यम्, <code>अगः</code> इत्यस्य पञ्चम्यन्तत्वं स्वीकृत्य <code>गान्तात्पूर्वपदात्परस्य णत्वं ने</code>ति व्याख्यानात्। पुरगाशब्दस्य त्वकारान्तत्वात् <code>अगः</code> इति निषेधस्याऽप्रवृत्तेः। अतएव <code>अगः</code> इत्यस्य <code>ऋगयन</code>मित्येकमेवोदाहरणमिति <code>अणृगयनादिभ्यः</code>इति निर्देशाश्रयेण तत्प्रत्याख्यातमाकरे। पुरगावणमित्यादि। नरकविशेषस्य संज्ञा। असिपत्रवनमिति। <code>एभ्यो वनस्यैवे</code>ति विपरीतनियमे तु णत्वमत्र दुर्वारमिति भावः। सप्तम्यर्थस्य प्रातिपदिकार्थेऽन्तर्भावादह&mdash;प्रथमेति। किंशुलुकादीनामुदाहरणमाह&ndash;किंशुलुकागिरिरिति। आदिशब्दग्रह्यास्तु <code>अञ्जनागिरिः</code> इत्यादयः। किंशुलुकेति किम्?। कृष्णगिरिः। रामगिरिः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

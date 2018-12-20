@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.2\/1.2.11.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.2.11";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.2.12\",\"Previous\":\"1.2.10\",\"अकारादिक्रमसङ्ख्या\":2988,\"कौमुदीक्रमसङ्ख्या\":2300,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"कित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लिङ्सिचावात्मनेपदेषु\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.11.md">Edit 1.2.11!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.2.11";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.2.12\",\"Previous\":\"1.2.10\",\"अकारादिक्रमसङ्ख्या\":2988,\"कौमुदीक्रमसङ्ख्या\":2300,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"कित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लिङ्सिचावात्मनेपदेषु\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.2.11 लिङ्सिचावात्मनेपदेषु।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>लिङसिचावात्मनेपदेषु परतः</code>इति। कथं पुनर्लिङात्मनेपदेषु परतो भवति, यावता सिच एवात्मनेपदेषु परत्वं सम्भवति, न लिङः? एवं मन्यते&ndash; लिङेकदेशेऽत्र सीयुटि लिङशब्दो वर्तते, यथा&ndash; <code>न धातुलोप आर्धधातुके</code> (1.1.4) इत्यत्र धात्वेकदेशे धातुशब्दो वर्तते। तस्मात् सीयुट एवानेन प्रकारेण कित्त्वं विधीयते। अथ वा&ndash; यथा हल्ङ्यादिसूत्रे (6.1.66) ययोरेव दीर्घत्वं सम्भवति तयोरेव ङ्यापो दीर्घादित्येतद्विशेषणम्, तथेहापि यस्मादात्मनेपदं परं सम्भवति सिचः, तस्यैवैतद्विशेषणम्। आत्मनेपदग्रहणं भवति परस्मैपदव्यवच्छेदार्थम्।
 <code>भिस्तीष्ट</code>इति। <code>आशिषि लिङलोटौ</code> (3.3.173) इति लिङ्; स्वरितत्वादात्मनेपदम्। एवमुत्तरत्रापि स्वरितञितः कत्र्रयात्मनेपदमनेनैव वेतितव्यम्। <code>सुट तिथोः</code> (3.4.107) इति सुट्। कर्तरि श्नम्, <code>लिङ सलोपोऽनन्त्यस्य</code> (7.2.79) इति च न भवति, <code>लिङाशिषि</code> (3.4.116) इत्यार्धधातुकत्वात्, तयोश्च सार्वधातुके विधानात्। <code>भुत्सीष्ट</code> इति। बुधेः <code>अनुदात्तङितः</code> (1.3.12) इत्यात्मनेपदं वेदितव्यम्। उत्तरत्राप्यनुदात्तङिद्भ्यः कर्तर्यात्मनेपदमनेनैव वेदितव्यम्। <code>अभित्त</code> इति। <code>झलो झलि</code> ८।२।२६) इति
 सिचो लोपः। <code>अबुद्ध</code> इति। <code>झषस्तथोर्धोऽधः</code> (8.2.40) इति तकारस्य धकारः, <code>झलां जश् झशि</code> (8.4.52) इति पूर्वधकारस्य दकारः। <code>यक्षीष्ट</code> इति। स्वरितेत्त्वादात्मेपदम्। पूर्ववत् षत्वं कत्वञ्च। <code>संप्रसारणं हि स्यात्</code> इति। वच्यादिसूत्रेण (6.1.15)।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

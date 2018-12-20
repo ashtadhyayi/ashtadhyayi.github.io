@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.3\/5.3.63.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.63";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.64\",\"Previous\":\"5.3.62\",\"अकारादिक्रमसङ्ख्या\":252,\"कौमुदीक्रमसङ्ख्या\":2014,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अन्तिकबाढयोर्नेदसाधौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.3/5.3.63.md">Edit 5.3.63!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.63";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.64\",\"Previous\":\"5.3.62\",\"अकारादिक्रमसङ्ख्या\":252,\"कौमुदीक्रमसङ्ख्या\":2014,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अन्तिकबाढयोर्नेदसाधौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.63 अन्तिकबाढयोर्नेदसाधौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>निमित्त्योः</code> इत्यादि। निमित्तौ प्रत्ययौ, तयोः परत आदेशविधानात्()। कस्मात्? पुनरिष्यमाणो न भवति? अल्पाच्यतस्य परनिपातात्()। स हि लक्षणान्तरानपेक्षतामाचष्टे। तेन यथासंख्यलक्षणमपीह नापेक्ष्यते। यद्येवम्(), स्थान्यादेशयोरपि यथासंख्यं न प्राप्नोति? मा भूद्यथासंख्यम्(), आन्तरतम्याद्व्यवस्था भविष्यति। ननु च व्यवस्थाकारि चेल्लक्षणान्तरं नापेक्ष्यते, स्थानेऽन्तरतमपरिभाषापि (१।१।५०) न प्राप्नोति? नैतदस्ति; निर्वेशान्यथात्वं हि निर्देशकृता व्यावस्था नास्तीत्येतदेव बोधयति, या त्वर्थकृता व्यवस्था तां न निवत्र्तयति। अपि चादेशप्रतिपत्तये <code>षष्ठी स्थाने योगा</code> (1.1.48) इत्येषा परिभाषा नियोगतोऽपेक्षणौया। तच्छेषभूता `स्थानेऽन्तरतमः (1.1.49) इति परिभाषा कथं शक्या नापेक्षितुम्()॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

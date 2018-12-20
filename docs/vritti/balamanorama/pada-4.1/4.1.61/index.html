@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-4.1\/4.1.61.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.61";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.62\",\"Previous\":\"4.1.60\",\"अकारादिक्रमसङ्ख्या\":3148,\"कौमुदीक्रमसङ्ख्या\":516,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वाहः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-4.1/4.1.61.md">Edit 4.1.61!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.61";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.62\",\"Previous\":\"4.1.60\",\"अकारादिक्रमसङ्ख्या\":3148,\"कौमुदीक्रमसङ्ख्या\":516,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वाहः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.61 वाहः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>वाहः। <code>वाह</code> इति पञ्चम्यन्तं प्रातिपदिकादित्यनुवृत्तस्य विशेषणं, तदन्तविधिः। तदाह&ndash;वाहन्तादिति। ङीषेवानुवर्तत इति। <code>अन्यतो ङीष् इत्यत</code> इति शेषः। न ङीबिति। <code>दिक्पूर्वपदात्</code> इति पूर्वसूत्रे संनिहितमपि ङीब्ग्रहणमिह नानुवर्तते, अस्वरितत्वादित्यर्थः। स्वरे विशेषः। दित्यौहीति। गवां तावत् षण्मासात्मकमेकैकं वयः। <code>गर्भाश्च मे वत्साश्च मे</code> इत्यनुवाके अनुक्रान्तानि वयांसि। तत्र तृतीयं वयो दित्यशब्देनोच्यते, इति यजुर्वेदभाष्ये, भवस्वामिधूर्तस्वाम्यादिकृतकल्पभाष्येषु च स्पष्टम्। दित्यं वहतीति विग्रहे <code>च्छन्दसि सहः</code>, <code>वहश्चे</code>ति ण्विः, उपधावृद्धिः, उपपदसमासः। दित्यवाह्शब्दात् ङीष्। <code>वाह ऊठ्</code>। <code>एत्येधत्यूठ्सु</code> इति वृद्धिः, दित्यौहीति रूपम्। ण्विप्रत्ययस्य छन्दोमात्रविषयत्वाद्वेदवाक्यमुदाह्मतम्। सोके तु वाहयतेः क्विपि, वाह्शब्दात् ङीषि, दित्यौहीति रूपमस्ति। वैदिकप्रक्रियायामुपन्यसनीयमेप्येतत्सूत्रमेतदर्थमिहोपन्यस्तम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

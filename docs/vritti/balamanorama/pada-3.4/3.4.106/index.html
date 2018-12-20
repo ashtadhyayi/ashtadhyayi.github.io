@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.4\/3.4.106.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.106";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.107\",\"Previous\":\"3.4.105\",\"अकारादिक्रमसङ्ख्या\":618,\"कौमुदीक्रमसङ्ख्या\":2257,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"इटोऽत्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.4/3.4.106.md">Edit 3.4.106!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.106";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.107\",\"Previous\":\"3.4.105\",\"अकारादिक्रमसङ्ख्या\":618,\"कौमुदीक्रमसङ्ख्या\":2257,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"इटोऽत्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.106 इटोऽत्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>इटोऽत्। इटः -अत् इति च्छेदः। <code>लिङः सीयु</code>डित्यतो लिङ इत्यनुवर्तते।तदाह&ndash;लिङादेशस्येति। <code>अच्च घे</code> रित्यत्रेव आदेशे तकार उच्चारणार्थ एव, नत्वित्संज्ञक इति शब्देन्दुशेखरे दिव औदित्यत्र प्रपञ्चितम्। इत्संज्ञक एवेत्यन्ये। न विभक्ताविति निषेधस्तु न, आदेशत्वात्प्राग्विभक्तित्वाऽभावात्। <code>झस्य र</code>न्नित्यत्र तु लक्ष्यानुरोधेन संयोगान्तलोपमाश्रित्य नकारानतरप्रश्लेषादुपदेशेऽन्त्यत्वाऽभावान्नकारस्य नेत्संज्ञेत्यलम्। एधेयेति। इट्। तस्य अकारादेशः।सीयुट् शप्। सलोपः। आद्गुणः। एधेवहि। एधेमहीति। वहिमह्योः सीयुट्। सलोपः। शप्। आद्गुणः। यलोपः। इति विधिलिङ्प्रक्रिया। आर्द्धधातुकत्वादिति। <code>लिङाशिषी</code>त्यनेनेति भावः। सलोपो नति। सार्वधातुकग्रहणस्य <code>लिङः सलोप</code> इत्यत्रानुवृत्तेरिति भावः। सीयुट्सुटोरिति। लक्ष्यभेदात्पुनःप्रवृत्तिरिति भावः। युगपदेवोभयोः षत्वमित्यन्ये। एधिषीष्टेति। आशिषि लिङस्तादेशः। आर्द्धधातुकत्वान्न शप्। सीयुट्। तकारस्य सुट्। सीयुटः सकारात्प्रागिडागमः। यलोपः। सीयुट सुटश्च सकारस्य षत्वं। तकारस्य ष्टत्वेन टकारः। एधिषीयास्तामिति। आताम् सीयुट्। अकारादुपरि तकारात्प्राक्सुट्।सीयुः प्रागिट्। तत उत्तरस्य सकारस्य षत्वम्। एधिषीरन्निति। झस्य रन्। सीयुट्। इजागमः। यकारलोपः। षत्वम्। एधिषीष्ठा इति। थास् सीयुट्। थकारस्य सुट्। सीयुटः प्रागिट्। सकारद्वयस्य षत्वम्। थकारस्य ष्टुत्वेन ठकारः। रुत्वविसर्गौ। एधिषीयास्थामिति। आथाम्। सीयुट्। अकारादुपरि थकारात्प्राक्सुट्। सीयुटः प्रागिट्। तत उत्तरस्य सकारस्य षत्वम्। एधिषीध्वमिति। ध्वम् सीयुट् यलोपः। सीयुटः प्रागिट्। षत्वम्। इणः परत्वेऽपि इण्णन्तादङ्गात्परत्वं नास्ति, इटः प्रत्ययभक्तत्वात्। ततश्च <code>इणः षीध्व</code>मिति ढत्वं न भवति। एधिषीयेति। इटोऽत्। सीयुट्। इट्। षत्वम्। एधिषीवहि एधिषीमहीति। वहिमह्योः सीयुट्। इट् षत्वम्। इत्याशीर्लिङ्प्रक्रिया। ऐधिष्टेति। लुङस्तादेशः। च्लिः। सिच्। इट्। धातोराट्। वृद्धिः। षत्वं ष्टुत्वम्। ऐधिषातामिति। आताम्। च्लिः। सिच्। इट्। आट्। वृद्धिः। षत्वम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

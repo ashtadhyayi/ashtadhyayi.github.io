@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-6.3\/6.3.74.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.74";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.75\",\"Previous\":\"6.3.73\",\"अकारादिक्रमसङ्ख्या\":1686,\"कौमुदीक्रमसङ्ख्या\":758,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे नञ्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तस्मान्नुडचि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-6.3/6.3.74.md">Edit 6.3.74!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.74";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.75\",\"Previous\":\"6.3.73\",\"अकारादिक्रमसङ्ख्या\":1686,\"कौमुदीक्रमसङ्ख्या\":758,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे नञ्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तस्मान्नुडचि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.74 तस्मान्नुडचि
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तस्मान्निडाच। <code>डः सि धुडि</code>त्यत्रेवाऽचीति सप्तम्याः षष्ठी प्रकल्प्यत इत्याह&ndash;अजादेरिति। अचा उत्तरपदविशेषणात् <code>यस्मिन्विधि</code>रिति तदादिविधिर्लभ्यत इति भावः। अन�आ इति। नुटः परादित्वेनाऽपदान्तत्वान्ङमो ह्रस्वादिति ङमुण्न भवति। ननु विन्घानामबावोऽविघ्नामित्यत्रापि परत्वात्तत्पुरुषः स्यात्, अव्ययीभावस्य निर्मक्षिकादौ सावकाशत्वात्। अन्यथा <code>अनुपलब्धिः</code>अविवाद&rsquo; इति न सिद्धयेदित्याशङ्क्याह&mdash;अर्थाभावेऽव्ययीभावेन सहेत्यादि। अविघ्नमिति। यद्यप्यविद्यमाना विग्नायस्मिन्निति बहुव्रीहिणा <code>अविघ्नं कर्मे</code>त्यादिप्रयोगः सिद्द्यति, तथापि <code>उत्तरे कर्मण्यविघ्नमस्तु</code>इत्यादिप्रयोगा अव्ययी भावं विना स्वरसतो न सिद्द्यन्तीति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

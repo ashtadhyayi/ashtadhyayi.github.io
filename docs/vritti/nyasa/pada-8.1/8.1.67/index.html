@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.1\/8.1.67.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.1.67";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.1.68\",\"Previous\":\"8.1.66\",\"अकारादिक्रमसङ्ख्या\":2409,\"कौमुदीक्रमसङ्ख्या\":3974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूजनात्‌ पूजितमनुदात्तम् (काष्ठादिभ्यः)\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.1/8.1.67.md">Edit 8.1.67!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.1.67";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.1.68\",\"Previous\":\"8.1.66\",\"अकारादिक्रमसङ्ख्या\":2409,\"कौमुदीक्रमसङ्ख्या\":3974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूजनात्‌ पूजितमनुदात्तम् (काष्ठादिभ्यः)\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.1.67 पूजानात्पूजितमनुदात्तं काष्ठादिभ्यः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>पूजनात्()</code> इति। सुपां सुपो भवन्तीति (७।१।३९।वा) बहुवचनस्य स्थान एकवचनम्(), अत एवाह&ndash;<code>पूजनवचनेभ्यः</code> इति। <code>उत्तरपदम्()</code> इति। सुबन्तं वेदितव्यम्()। ननु तिङिति वत्र्तते? सत्यमेतत्(); उत्तरत्र (8.1.68) तिङिति वचनादिह सुबन्तस्य ग्रहणं विज्ञायते। अपि च वक्ष्यत्येतत्()&ndash;इहैव समासे चैतदनुदात्तत्वमिति। समासश्च काष्ठादीनां सुबन्तेनैव सम्भवति, न तिङन्तेनेति युक्तमिह सुबन्तस्यैव पदस्य गरहणम्()। सर्व एते काष्ठादयोऽद्भुतपर्यायाः पूजनवचना भवन्ति। अद्भुतं योऽधीते स काष्ठाध्यायक इत्युच्यते। एवं दारुणादिषु वेदितव्यम्()।
 इह सर्व एवैते काष्ठादयः क्रियाविशेषणभूताः समस्यन्ते, न च क्रियाविशेषणानां समासः क्वचिद्विहितः, तत्कथमत्र समासः? इत्याह&ndash;<code>मयूरव्यंसकादित्वात्? समासः</code> इति। <code>समासे चैतत्()</code> इत्यादि। चकारोऽवधारणार्थः। समास एवेत्यर्थः। कथं पुनः समास एवैतल्लभ्यते? <code>चादिलोपे विभाषा</code> (8.1.63) इत्यतो मण्डूकप्लुतिन्यायेन विभाषाग्रहणानुवृत्तेः। सा व्यवस्थितविभाषेति विज्ञानाच्च।
 यद्येवम्(), कथं वार्त्तिककारेणोक्तम्()&ndash;मलोपश्चेति, काष्ठादिषु हि योऽकारान्तास्तेषां विभक्तेरम्भावे कृते मकारः सम्भवति, समासे चैतदनुदात्तत्वेन भवितव्यम्(), तत्र विभक्तेरभावान्मकारो न सम्भवतीति मलोपवचनमयुक्तं स्यात्()? इत्यत आह&ndash;<code>मलोपश्चेत्यनेनापि</code> इत्यादि। एवमस्माभिरनुदात्तत्वस्य विषय आख्यातः। मलोप श्चेत्यनेनापि स एवाख्यायते; यस्मात्? समासे मलोपो न भवति; विभक्तेर्लुप्तत्वात्()। असमासे विभक्तेरम्भावे कृते मकारस्य श्रवणमेव भवति, न तु लोपः।
@@ -134,9 +146,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

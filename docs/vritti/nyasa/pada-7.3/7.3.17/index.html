@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.3\/7.3.17.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.17";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.18\",\"Previous\":\"7.3.16\",\"अकारादिक्रमसङ्ख्या\":2316,\"कौमुदीक्रमसङ्ख्या\":1683,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"उत्तरपदस्य वृद्धिः तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"परिमाणान्तस्यासंज्ञाशाणयोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.3/7.3.17.md">Edit 7.3.17!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.17";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.18\",\"Previous\":\"7.3.16\",\"अकारादिक्रमसङ्ख्या\":2316,\"कौमुदीक्रमसङ्ख्या\":1683,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"उत्तरपदस्य वृद्धिः तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"परिमाणान्तस्यासंज्ञाशाणयोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.17 परमाणान्तस्यासंज्ञाशाणयोः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>संज्ञायाः परत्वं न सम्भवतीत्यतः संज्ञाशाणयोरिति विषयसप्तमीं दर्शयन्नाह&ndash;<code>संज्ञायां विषये</code> इत्यादि। <code>शाणे चोत्तरपदे</code> इति। विषय इत्यपेक्षते। यद्यप्युत्तरपदस्य[यद्युत्तरपदस्य&ndash;मुद्रित पाठः] शाणस्य परत्वमुपपद्यते, तथापि दुर्घटमेकस्याः सप्तम्या विषयसप्तमीत्वम्(), परसप्तमीतवञ्चेति। तेन शाणशब्दमप्युत्तरपदं प्रति विषयसप्तम्येषा युक्ता। <code>द्विकौडविकम्()</code> इति। <code>प्राग्वतेष्ठञ</code> (5.1.18)। अनार्हीयत्वाच्च प्रत्ययस्य <code>अध्यर्थपूर्वद्विगोः</code> (5.1.28) इति लुग्न भवति। <code>द्विसौवर्णिकः</code> [द्विसौवरणिकम्&ndash;काशिका] इति। स एव प्रत्ययः। कथं पुनरत्र वृद्धिः, यावता परिमाणान्तस्येत्युच्यते, सुवर्णञ्च गुरुत्वमानादुन्मानम्(), न परिमाणमिति? नैव दोषः; आचार्यप्रवृत्तिज्र्ञायति&ndash;<code>गुरुत्वपरिमाणमपीह परिच्छेदहेतुत्वात्? पूरिमाणं गृह्रते</code> इति; यदयम्? <code>असंज्ञाशाणयोः</code> इति शाणप्रतिषेधमारमते। अथ <code>अध्यर्धपूर्व</code> (५।१।२८) इति लुक्कस्मान्न भवति? इत्याह&ndash;<code>विभावा</code> इत्यादि। <code>द्विनैष्किकम्()</code> इति। <code>असमासे निष्कादिभ्यः</code> (५।१२०) इति ठक्()।
 <code>पाञ्चलोहितिकः</code> [पाञ्चलोहितिकम्()&ndash;काशिका] इति। तस्मिन्नेव ठकि कृते <code>भस्याढे तद्धिते</code> (वा।७३१) इति पुंवद्भावेन <code>वर्णादनुदात्तात्(), तोपधात्? तो तः</code> (4.1.39) इत्यनेन विहितयोर्ङीब्नकारयोर्निवृत्ति।
 <code>द्वैकुलिजिकम्()</code> [द्वैकुलिजिकः&ndash;काशिका] इति। प्राग्वतीयष्ठञ्च॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.3\/2.3.65.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.3.65";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.3.66\",\"Previous\":\"2.3.64\",\"अकारादिक्रमसङ्ख्या\":1001,\"कौमुदीक्रमसङ्ख्या\":623,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षष्ठी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्तृकर्मणोः कृति\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.3/2.3.65.md">Edit 2.3.65!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.3.65";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.3.66\",\"Previous\":\"2.3.64\",\"अकारादिक्रमसङ्ख्या\":1001,\"कौमुदीक्रमसङ्ख्या\":623,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षष्ठी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्तृकर्मणोः कृति\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.3.65 कर्त्तृकर्मणोः कृति।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>आसिका</code> इति। भावे <code>पर्यायार्हणोत्पत्तिषु ण्वुच्</code> (3.3.111)। <code>रुआष्टा</code>
 इति। सृजेस्तृच्<code>।</code>सृजिदृशोर्झल्यमकिति<code>(6.1.57) इत्यम्,</code>व्रश्चादिना (8.2.36) षत्वम्।
 <code>तद्धितप्रयोगे मा भूत्</code> इति। अथ तिङप्रयोगे मा भूदित्येवमर्थमपि कृद्ग्रहणं कस्मान्न भवति? तत्र <code>न लोकाव्ययनिष्ठा</code> (2.3.69) इत्यनेन षष्ठीप्रतिषेधात्। <code>कृतपूर्वी कटम्</code> इति। <code>पूर्वादिनिः</code> (5.2.85) इत्यत्र इनिरित्यनुवत्र्तमाने <code>सपूर्वाच्च</code> (5.2.86) इतीनिप्रत्ययः। अत्र कत्र्ता तद्धितेनैवोक्त इत्यत्र वाक्यमेवैतन्नोपप्रसङ्गो नास्ति, कर्म तु तेनानभिहितमित्यसति कृद्ग्रहणे कटादेः कर्मणः षष्ठी स्यात्। ननु चात्र वाक्यमेवैतन्नोपपद्यते, तथा हि&ndash; कर्मणो निष्ठयाऽभिहितत्वात् द्वितीययाऽत्र न भवितव्यम्, नापि तद्धितेन, असमाथ्र्यात्। तत्पुनरसामथ्र्य सापेक्षत्वात्। तथा हि&ndash; कृतः कटः पूर्वमनेनेति कृतशब्दः कटमपेक्षते, नैवम्; धातोरुत्पद्यमाना निष्ठा कथं कटशब्दस्य कर्मतामभिदध्यात्। तस्या हि कर्मसामान्यमेवाभिधातुं सामथ्र्यम्, न कर्मविशेषम्। वाक्ये तर्हि कथं तया कटशब्दस्य कर्मत्वमभिधीयते? तत्र युक्तमभिधानम्; कृत इत्यनेन सामानाधिकरण्यात्। तद्धिते तूत्पन्न एकार्थीभावात्सामानाधिकरण्यं निवृत्तमिति केन कटादेः कर्मभावोऽभिधीयते? क्रिया तु प्रकृत्यर्थत्वाद्यथा वाक्ये गुणीभूता साधनसम्बन्धमनुभवति, तथा वृत्तावपीति करोत्यर्थापेक्षं कटशब्दस्य कर्मत्वमुपपद्यते। तस्माद्धवितव्यमेव द्वितीयया।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

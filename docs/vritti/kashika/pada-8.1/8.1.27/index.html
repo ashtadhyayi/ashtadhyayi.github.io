@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-8.1\/8.1.27.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.1.27";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.1.28\",\"Previous\":\"8.1.26\",\"अकारादिक्रमसङ्ख्या\":1726,\"कौमुदीक्रमसङ्ख्या\":3934,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"पदात् पदस्य\",\"सूत्रम्‌\":\"तिङो गोत्रादीनि कुत्सनाभीक्ष्ण्ययोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.1/8.1.27.md">Edit 8.1.27!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.1.27";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.1.28\",\"Previous\":\"8.1.26\",\"अकारादिक्रमसङ्ख्या\":1726,\"कौमुदीक्रमसङ्ख्या\":3934,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"पदात् पदस्य\",\"सूत्रम्‌\":\"तिङो गोत्रादीनि कुत्सनाभीक्ष्ण्ययोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.1.27 तिङो गोत्रादीनि कुत्सनाऽभीक्ष्ण्ययोः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तिङन्तात् पदात् पराणि गोत्रादीनि कुत्सने आभीक्ष्ण्ये चार्थे वर्तमानानि अनुदात्तानि भवन्ति। पचति गोत्रम्। जल्पति गोत्रम्। आभीक्ष्ण्ये पचति पचति गोत्रम्। जल्पति जल्पति गोत्रम्। ब्रुवः पचति ब्रुवम्। जल्पति ब्रुवम्। पचति पचति ब्रुवम्। जल्पति जल्पति ब्रुवम्। ब्रुवः इति ब्रुवः कन्निपातनाद् वच्यादेशाभावश्च। गोत्र। ब्रुव। प्रवचन। प्रहसन। प्रकथन। प्रत्ययन। प्रचक्षण। प्राय। विचक्षण। अवचक्षण। स्वाध्याय। भूयिष्थ। वा नाम। नाम इत्येतद् वा निहन्यते। पक्षे आद्युदात्तम् एव भवति। पचति नाम। पठति नाम। तिङः इति किम्? कुत्सितं गोत्रम्। गोत्रादीनि इति किम्? पचति पापम्। कुत्सनाभीक्ष्ण्ययोः इति किम्? खनति गोत्रं समेत्य कूपम्। कुत्सनाभीक्ष्ण्यग्रहणं च पाठविशेषणं द्रष्टव्यम्। तेन अन्यत्र अपि गोत्रादिग्रहणेन कुत्सनाभीक्ष्ण्ययोरेव कार्यं भवति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

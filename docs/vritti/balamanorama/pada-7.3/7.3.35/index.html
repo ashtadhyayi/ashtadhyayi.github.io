@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.3\/7.3.35.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.35";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.36\",\"Previous\":\"7.3.34\",\"अकारादिक्रमसङ्ख्या\":1486,\"कौमुदीक्रमसङ्ख्या\":2512,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"जनिवध्योश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.35.md">Edit 7.3.35!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.35";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.36\",\"Previous\":\"7.3.34\",\"अकारादिक्रमसङ्ख्या\":1486,\"कौमुदीक्रमसङ्ख्या\":2512,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"जनिवध्योश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.35 जनिवध्योश्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>जनीवध्योश्च। <code>अत उपधायाः</code> इत्यत उपधाया इति, <code>मृजेर्वृद्धि</code>रित्यतो वृद्धिरिति, <code>नोदात्तोपदेशस्ये</code>त्यतो नेति, <code>आतो यु</code>गित्यतश्चिणकृतोरिति, <code>अचो ञ्णिती</code>त्यतो ञ्णितीति चानुवर्तते। तदाह&ndash;अनयोरिति। दीपीधातुरीदित्।<code>दीपजने</code>ति च्लेश्चिण्विकल्पं मत्वाह&mdash;अदीपि अदीपिष्टेति। पूरीधातुरपि ईदित्। <code>दीपजने</code>ति चिण्विकल्पं मत्वाह&ndash; अपूरि अपूरिष्टेति।तूरी इत्यादयोऽपि <code>चूरी दाहे</code> इत्यन्ता ईदित एव।तप ऐ�आर्ये वेति। <code>श्यन् आत्मनेपदं चे</code>ति शेषः। उभयोः प्रकृतत्वादित्यभिप्रेत्य शेषं पूरयति&ndash;श्यनं तङं चेति। अन्यदा त्विति। ऐ�आर्यादन्यार्थे वृत्तिदशायामित्यर्थः। केचित्त्विति। <code>तप ऐ�आर्ये</code> <code>वावृतु वरणे</code> इति धातुपाठे स्थितम्। तत्र <code>वावृतु वरणे</code> इत्येवं वाशब्दं वृतु इत्यस्य आद्यवयवमिच्छन्तीत्यर्थः। एवं च <code>तप ऐ�आर्ये</code> इत्येव स्थितम्। अस्मिन्पक्षेतपधातोर्नित्यमेव श्यन् तङ् चेति भावः। तप्यते इति। ईष्टे इत्यर्थः। प्रथमपक्षे ऐ�आर्ये तपतीत्यपि भवति। पत इतीति। तपधातोस्तकारपकारयोः क्रमव्यत्यासेन <code>पत ऐ�आर्ये वा</code> इति पाठान्तरमित्यर्थः। एवं व्यत्यासेन पाठे प्रयोगं दर्शयति&ndash;द्युतद्यामा नियुत इति। प्रवायुमच्छा बृतीत्यृच एकदेशोऽयम्। <code>पत्यमान</code> इत्यस्य ईशान इत्यर्थः। अत्र लटः शानजात्मनेपदं श्यन् च। पक्षान्तरे इति। <code>वावृतु</code> इति पाठपक्षे इत्यर्थः। वावृत्यते इति। वृणोतीत्यर्थः। अपेक्षते इति यावत्। वावृतुधातोः प्रयोगं दर्शयति&ndash; ततोवावृत्यमानेति। अपेक्षमाणेत्यर्थः।न्यविवक्षतेति।<code>नेर्विशः</code> इत्यात्मनेपदम्। <code>शल इगुपधा</code>दिति क्सः। अथ पञ्च स्वरितेत इति। <code>शप आक्रोसे</code> इत्यन्ता इत्यर्थः। शुच्यतीति। क्लिन्नं भवतीत्यर्थः। अशुचदिति। इरित्त्वादङिति भावः। णह बन्धने इति। णोपदेशोऽयम्। अनिट्। ननाहेति। नेहतुः। भारद्वाजनियमात्थलि वेडिति मत्वाह&ndash; नेहिथ ननद्धेति। इट्पक्षे <code>थलि चे सेटी</code>त्येत्त्वाभ्यासलोपौ। इडभावे तु <code>नहो धः</code> इति हस्य ध इति भावः। रञ्ज रागे। अनिट्। रज्यतीति। <code>अनिदिता</code>मिति नलोप इति भावः। ररञ्ज ररञ्जतुः। ररञ्जिथ- ररङ्क्थ। ररञ्जिव। रङ्क्ता इत्यादि। अथैकादशेति। <code>लिश अल्पीभावे</code> इत्यन्ता इत्यर्थः। पद गतौ। अनिट्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

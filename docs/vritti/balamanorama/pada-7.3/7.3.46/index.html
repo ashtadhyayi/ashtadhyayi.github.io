@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.3\/7.3.46.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.46";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.47\",\"Previous\":\"7.3.45\",\"अकारादिक्रमसङ्ख्या\":743,\"कौमुदीक्रमसङ्ख्या\":465,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कात्पूर्वस्य अत इत्-त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उदीचामातः स्थाने यकपूर्वायाः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.46.md">Edit 7.3.46!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.46";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.47\",\"Previous\":\"7.3.45\",\"अकारादिक्रमसङ्ख्या\":743,\"कौमुदीक्रमसङ्ख्या\":465,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कात्पूर्वस्य अत इत्-त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उदीचामातः स्थाने यकपूर्वायाः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.46 उदीचामातः स्थाने यकः पूर्वायाः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>उदीचामातः। <code>प्रत्ययस्थात्</code> इति सूत्रमनुवर्तते। यश्च कश्च यकौ, तौ पूर्वौ यस्या इति विग्रहः। यकेति वर्णग्रहणम्, अकारावुच्चारणार्थौ। <code>यकपूर्वाया</code> इत्येतदात इत्यस्य विशेषणम्। तेन अर्थगतं स्त्रीत्वमाकारे आरोप्य <code>यकपूर्वाया</code> इति स्त्रीलिङ्गनिर्देशः। तेन आकारस्य स्त्रीवाचकत्वं लभ्यते। तदाह&ndash;यकपूर्वस्येत्यादिना। उदीचांग्रहणं विकल्पार्थमेव नतु देशतो व्यवस्थार्थमिति <code>न वेति विभाषा</code> इति सूत्रे बाष्ये स्पष्टम्। नच <code>षष्ठी स्थानेयोगा</code> इत्येव सिद्धेरिह स्थानेग्रहणं व्यर्थमिति वाच्यम्, अनुवादे परिभाषाणामनुपस्थितेः। तत्र च इदमेव स्थानेग्रहणं ज्ञापकम्। अत एव <code>वृद्धिर्यस्याचामादिस्तद्वृद्ध</code>मित्यत्र यस्यादिर्वृद्धिरित्यनुवादे इक्परिभाषा न प्रवर्तते। तत्प्रवृत्तौ तु शालाशब्दस्य वृद्धसंज्ञा न स्यात्, शकारादाकारस्य इक्श्तानिकत्वाऽभावात्। ततस्च शालीय इति <code>वृद्धाच्छः</code> इति छो न स्यात्, <code>औपगवीय</code> इत्यादावेव स्यादित्यलम्। केऽण इति ह्रस्व इति। आर्याशब्दात्स्वार्थिके कप्रत्यये यकाराकारस्य <code>केऽणः</code> इति ह्रस्व इत्यर्थः। पुनष्टापि आर्यकाशब्दः। तत्र यकारादकारस्य आकारस्थानिकत्वादित्त्वविकल्पः। <code>प्रत्ययस्था</code>दिति नित्यस्येत्त्वस्यापवादः। तदाह&ndash;आर्यका-आर्यिकेति। यकारपूर्वस्य उदाहरणमिदम्। अथ ककारपूर्वस्य उदाहरति&ndash;चटकका चटकिकेति। चटकाशब्दात्स्वार्थे कः, <code>केऽणः</code> इति ह्रस्वः, पुनष्टाप्, इत्त्वविकल्प इति भावः। साङ्खाश्यिकेति। सङ्काशेन निर्वृत्तं नगरं साङ्काश्यम्। <code>वृञ्छणकठ</code>जित्यादिना सङ्काशिद्भ्यो ण्यः, आदिवृद्धिः, <code>यस्येति चे</code>त्यकारलोपः। साङ्काश्यशब्दाद्भवार्थे <code>धन्वयोपधाद्वुञ्</code>। अकादेशः <code>यस्येति चे</code>त्यकारलोपः, टाप्, <code>प्रत्ययस्था</code>दिति नित्यमित्त्वम्। इह यकारादकारस्य आकारस्थानिकत्वाऽभावादित्त्वविकल्पो न भवतीति भावः। ननु स्त्रीबोधकस्य अत इद्वा स्यादित्येवास्तु, आत इति मास्तु। साङ्काश्यकाशब्दे यकारादकारस्य वुञादेशावयवत्वेन स्त्रीबोधकत्वाभाऽदिति चेत्, तह्य्रात् इति स्पष्टार्थमित्याहुः। अ�इआकेति। अ�आआशब्दात्कः, <code>केऽणः</code> इति ह्रस्वः, पुनष्टाप्, अ�आकाशब्दः। अत्र अकारस्य आकारस्थानिकत्वेऽपि यकपूर्वकत्वा।ञभावादित्त्वविकल्पो न, किंतु <code>प्रत्ययस्था</code>दिति नित्यमित्त्वमिति भावः। स्त्रीप्रत्यय इति किमिति। <code>यकपूर्वाया</code> इति स्त्रीलिङ्गनिर्देशलब्धं स्त्रीप्रत्ययस्येति किमर्थमिति प्रश्नः। शुभंयिकेति। <code>शुभ</code>मिति मान्तमव्ययम्। तस्मिन्नुपपदे <code>या प्रापणे</code> इति धातोः <code>अन्येभ्योऽपि दृश्यते</code> इति विच्। शुभंयाशब्दात्स्वार्थे कः। <code>केऽणः</code> इति ह्रस्वः, टाप्, शुभंयकाशब्दः। अत्र यकारादकारस्य धात्ववयवस्य स्त्रीवाचकत्वाऽभावादित्त्वविकल्पो न, किन्तु <code>प्रत्ययस्थात्</code> इति नित्यमेवेत्त्वमिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

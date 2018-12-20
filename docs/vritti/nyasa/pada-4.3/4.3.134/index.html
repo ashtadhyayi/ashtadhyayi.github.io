@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.3\/4.3.134.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.3.134";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.3.135\",\"Previous\":\"4.3.133\",\"अकारादिक्रमसङ्ख्या\":1703,\"कौमुदीक्रमसङ्ख्या\":1514,\"प्रकारः\":\"अधिकारः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"तस्य विकारः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.3/4.3.134.md">Edit 4.3.134!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.3.134";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.3.135\",\"Previous\":\"4.3.133\",\"अकारादिक्रमसङ्ख्या\":1703,\"कौमुदीक्रमसङ्ख्या\":1514,\"प्रकारः\":\"अधिकारः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"तस्य विकारः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.3.134 बिल्वादिभ्योऽण्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अञ्मयटोरपवादः</code> इति। यदत्रानुदात्तादि तस्मात् <code>अनुदात्तादेश्च</code> (4.3.138) इति प्राप्तस्याञोऽपवादः। यद्()वृद्धं ततः <code>नित्यं वृद्धशरादिभ्यः</code> (4.3.142) इति मयटः। तत्र बिल्वशब्दस्य प्रातिपदिकस्वरेणान्तोदात्तत्वे प्राप्ते <code>बिल्वतिष्ययोर्वान्तस्वरितत्वम्</code> (फि।सू।१।२३) इति स्वरितत्वं भवति, उदात्तो वा। <code>व्रीहिमुद्ग</code> शब्दौ घृतादित्वादन्तोदात्तौ। <code>मसूरगोधूम</code> शब्दौ <code>लघावन्ते द्वयोश्च बह्वषो गुरुः</code> (फि।सू।२।४२) इति मध्योदात्तौ। एवं <code>गवेधुका</code> शब्दोऽपि। इषेः क्सुः, <code>इक्षुः</code>। प्रत्ययस्वरेणान्तोदात्तः। <code>वेणुः</code> शब्दोऽपि <code>विभाषा वेण्विन्धानयोः</code> (6.1.209) इतिपक्षेऽन्तोदात्त एव। <code>कर्पासीपाटली</code> शब्दौ <code>जातेरस्त्रीविषयादयोपधात्</code>  इति ङीषन्तौ। ङीष्प्रत्ययान्तत्वान्ङीष्प्त्ययस्वरेणान्तोदात्तौ। <code>कर्कन्धू</code> शब्दः <code>अन्दूदृग्भूजम्बूकफेलूकर्कन्धूदिधिषूः</code> (द।उ।१।१७६) इति निपातनान्मध्योदात्तः। <code>कुटीर</code> शब्दः <code>लघावन्ते</code> (फि।सू।२।४२) इत्यादिना मध्योदात्तः। सर्व एते <code>अनुदात्तं पदमेकवर्जम्</code> (6.1.152) इत्यनुदात्तादयः। तेनाञ्बाधनार्थं ग्रहणमिति। अथाण्ग्रहणं किमर्थम्, न बिल्वादिभ्यो यथाविहितमेवोच्येत? नैवं शक्यम्; पाटलीशब्दो ह्रत्र वृद्धः पठ()ते, तस्मादञो बाधके मयटि प्राप्ते पुनर्वचनादञेव स्यात्। अण्ग्रहणात् त्वणेव भवति। तस्मादण्ग्रहणं क्रियते॥</p>
 
 <p><code>यथायोगम्</code> इति। प्राण्योषधिवृक्षेभ्यो विकारावयवयोः, अन्येभ्यस्तु विकारमात्र इत्येषो यतायोगार्थः। <code>अञोऽपवादः</code> इति। <code>ओरञ्</code> (4.3.137), <code>अनुदात्तादेः</code> (4.3.138) इत्येताभ्यां प्राप्तस्य। <code>तित्तिडीकमाण्डूक दर्दुरूकमधूक</code>शब्दाः <code>लघावन्ते</code> (फि।सू।२।४२) इत्यादिना मध्योदात्ताः,तेनानुदात्तादयो भवन्ति॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

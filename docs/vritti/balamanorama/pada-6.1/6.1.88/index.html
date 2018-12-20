@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.1\/6.1.88.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.88";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.89\",\"Previous\":\"6.1.87\",\"अकारादिक्रमसङ्ख्या\":3289,\"कौमुदीक्रमसङ्ख्या\":72,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":41,\"विषयः १\":\"वृद्धिसन्धिः\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"वृद्धिरेचि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.1/6.1.88.md">Edit 6.1.88!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.88";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.89\",\"Previous\":\"6.1.87\",\"अकारादिक्रमसङ्ख्या\":3289,\"कौमुदीक्रमसङ्ख्या\":72,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":41,\"विषयः १\":\"वृद्धिसन्धिः\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"वृद्धिरेचि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.88 वृद्धिरेचि
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>वृद्धिरेचि। आद्गुण इत्यत आदिति पञ्चम्यन्तमनुवर्त्तते। एकऋ पूर्वपरयोरित्यधिकृतम्। तदाह&ndash;आदेचीत्यादिना। गुणापवाद इति। आद्गुण इति प्राप्तावेतदारम्भादिति भावः। कृष्णैकत्वमिति। कृष्णस्य-एकत्वमिति षष्ठीसमासः। <code>पूरणगणे</code>ति निषेधस्त्वनित्य इति तत्रैव मूले वक्ष्यते। कृष्णेति सम्बुद्ध्यन्तं पृथक्पदमित्यन्ये। अत्र अकारस्य एकारस्य च कण्ठतालुस्थानकस्य स्थाने तथाविध ऐकार एकादेशः। गङ्गा-ओघ इति स्थिते आकारस्य ओकारस्य च कण्ठोष्ठस्थानकस्य स्थाने तथाविध औकारः। एवं देवै�आर्यं कृष्णौत्कण्ठ�मित्यत्रापि। वस्तुतस्तु सङ्ख्यादिशब्दा न गुणवचना इति त्रैव वक्ष्यामः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

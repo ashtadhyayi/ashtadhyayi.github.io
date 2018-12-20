@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-2.3\/2.3.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.3.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.3.37\",\"Previous\":\"2.3.35\",\"अकारादिक्रमसङ्ख्या\":3611,\"कौमुदीक्रमसङ्ख्या\":633,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सप्तमी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तम्यधिकरणे च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-2.3/2.3.36.md">Edit 2.3.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.3.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.3.37\",\"Previous\":\"2.3.35\",\"अकारादिक्रमसङ्ख्या\":3611,\"कौमुदीक्रमसङ्ख्या\":633,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सप्तमी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तम्यधिकरणे च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.3.36 सप्तम्यधिकरने च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सप्तमी विभक्तिर् भवत्यधिकरणे कारके, चकाराद् दूरान्तिकार्थेभ्यश्च। कटे आस्ते। शकटे आस्ते। स्थाल्यां पचति। दूरान्तिकार्थेभ्यः खल्वपि दूरे ग्रामस्य। अन्तिके ग्रामस्य। अभ्याशे ग्रामस्य। दूरन्ति कार्थेभ्यश्चतस्रो विभक्तयो भवन्ति, द्वितीयातृतीयापञ्चमीसप्तम्यः। सप्तमीविधाने क्तस्येन्विषयस्य कर्मण्युपसङ्ख्यानम्। अधीती व्याकरणे। परिगणिती याज्ञिके। आम्नाती छन्दसि। साध्वसाधुप्रयोगे च सप्तमी वक्तव्या। साधुर्देवदत्तो मातरि। असाधुः पितरि। कारकार्हाणां च कारकत्वे सप्तमी वक्तव्या। ऋद्धेषु भुञ्जानेषु दरिद्रा आसते। ब्राह्मणेषु तरत्सु वृषला आसते। अकारकार्हाणां चाकरकत्वे सप्तमी वक्तव्या। दरिद्रेष्वासीनेषु ऋद्धा भुञ्जते। वृषलेष्वासीनेषु ब्राह्मणास् तरन्ति। तद्धिपर्यासे च सप्तमी वक्तव्या। ऋद्धेष्वासीनेषु दरिद्रा भुञ्जते। ब्राह्मणेष्वासीनेषु वृषलास् तरान्ति। निमित्तात् कर्मसंयोगे सप्तमी वक्तव्या। चर्मणि द्वीपिनं हन्ति दन्तयोर् हन्ति कुञ्जरम्। केशेषु चमरीं हन्ति सीम्नि पुष्कलको हतः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

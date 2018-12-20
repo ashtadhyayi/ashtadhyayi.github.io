@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.1\/3.1.7.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.1.7";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.1.8\",\"Previous\":\"3.1.6\",\"अकारादिक्रमसङ्ख्या\":1998,\"कौमुदीक्रमसङ्ख्या\":2608,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सनादयः\",\"विषयः २\":\"सन्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धातोः कर्मणः समानकर्तृकादिच्छायां वा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.1/3.1.7.md">Edit 3.1.7!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.1.7";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.1.8\",\"Previous\":\"3.1.6\",\"अकारादिक्रमसङ्ख्या\":1998,\"कौमुदीक्रमसङ्ख्या\":2608,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सनादयः\",\"विषयः २\":\"सन्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धातोः कर्मणः समानकर्तृकादिच्छायां वा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.1.7 धातोः कर्मणः समानक्रतृकादिच्छायां वा
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>धातोः कर्मणः। <code>गुप्तिज्किद्भ्यः</code> इत्यतः सन्नित्यनुवर्तते। इच्छायाः श्रुतत्वात्तां प्रत्येव कर्मत्वं विवक्षितम्। तथा समानकर्तृकत्वमपि इच्छानिरूपितमेव विवक्षितम्। कर्मेति स्ववाचकशब्दद्वारा धातौ सा मानाधिकरण्येनान्वेति। एवं च इच्छासमानकर्तृकत्वे सति इच्छाकर्मीभूतो यो व्यापारस्तद्वाचकाद्धातोरिच्छायां सन् वा स्यादिति फलति। तदाह &ndash; इषिकर्मण इत्यादि। इषिरिच्छा। इषिणा एककर्तृकतत्वादिषैकर्मीभूतव्यापारवाचकाद्धातोरित्यर्थः। ननु समानकर्तृकादित्युक्त्यैव धातोरिति लब्धम्, धात्वर्थव्यापाराश्रयस्यैव कर्तृत्वादित्यत आह&ndash; धातोरिति। धातोरिति विहितस्यैव प्रत्ययस्यार्द्धधातुकत्वं, नतु धातोः परस्य। अन्यथा जुगुप्सते इत्यत्र आर्द्धधातुकत्वे फलमाह &ndash; इडिति। द्वित्वमिति। <code>सन्यङो</code>रित्यनेनेति भावः। अभ्यासस्य इत्त्वविधिं स्मारयति&ndash; सन्यत इति। पठितुमिच्छतीति। भावस्तुमुनर्थः। <code>अव्ययकृतो भावे</code> इत्युक्तेः। धात्वर्थ एव भाव इत्युच्यते। तथा च पठितुमित्यस्य पठनक्रियैऽवार्थः। तस्मिन् पठने #इच्छाकर्मत्वम्, इच्छासमानकर्तृकत्वं च सना गम्यते। तथा च स्वकर्तृकं फटनमिच्छतीत्यर्थे पिपठिषतीति शब्दो वर्तत इत्युक्तं भवति। अथ <code>अद भक्षणे</code> इति धातोः सनि घस्लृभावं स्मारयति&ndash; लुङ्सनोर्घस्लृ इति। घस् स इति स्थिते इटमाशङ्क्य आह&ndash; एकाच इति नेडिति। घस् स इति स्थिते आह&ndash; सस्य तत्वमिति। <code>सः स्यार्द्धधातुके</code> इत्यनेनेति भावः। जिघत्सतीति। द्वित्वे अभ्यासजश्त्वचुत्वे इति भावः। य्सनोर्द्वित्वमिति। <code>तृतीयस्य व्यञ्जनस्ये</code> ति पक्षे ईर्ष्य् इस इत्यत्र यकारमात्रस्य द्वित्वे, सनः षत्वेसं युक्तद्वियकारं रूपमिति भावः। तदाह &ndash; ईर्ष्ययिषतीति। तथा च सन्नन्ते ईकाररेफषकारयकारद्वित्वेकारषकाराः। <code>तृतीयस्यैकाच</code> इति पक्षे ईर्ष्य इ स इत्यत्र स इत्यस्य द्वित्वे अभ्यासेत्?तवे सकारद्वयस्यापि षत्वे रूपं मत्वा आह&ndash; ईर्ष्यिषिषतीति। अत्र तु सन्नन्ते ईकाररेफषकारयकारेकारषकारेकारषकाराऽकाराः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

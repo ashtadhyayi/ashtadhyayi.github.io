@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.50.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.50";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.51\",\"Previous\":\"4.1.49\",\"अकारादिक्रमसङ्ख्या\":1212,\"कौमुदीक्रमसङ्ख्या\":506,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रीतात्‌ करणपूर्वात्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.50.md">Edit 4.1.50!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.50";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.51\",\"Previous\":\"4.1.49\",\"अकारादिक्रमसङ्ख्या\":1212,\"कौमुदीक्रमसङ्ख्या\":506,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रीतात्‌ करणपूर्वात्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.50 क्रीतात्करणपूर्वात्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>करणं पूर्वं यस्मिन्नित्यादिना करणपूर्वग्रहणं क्रीतग्रहणञ्च उभयमप्येतत्प्रातिपदिकस्य विशेषणमिति दर्शयति। पूर्वशब्दोऽयमवयववचनः। करणमवयवो यस्मिन्नित्यर्थः। अथ क्रीतशब्दस्यैव करणपूर्वग्रहणं विशेषणं कस्मान्न विज्ञायते? अशक्यत्वात्। क्रीतशब्दो ह्रवयववाचिनं वा पूर्वशब्दं गृहीत्वा विशेष्येत&ndash; करणं पूर्वस्मिन्निति? व्यवस्थाशब्दं वा&ndash; करणं पूर्वमस्मादिति? तत्र प्रथमः पक्षो न सम्भवति; न ह्रत्र क्रीतशब्दस्य करणवाचिशब्दान्तरमवयव उपपद्यते, द्वितीयस्तु सम्भवति, किन्तु वाक्येऽपि स्यात्&ndash; अ()ओन क्रीतेति, अस्ति ह्रत्र क्रीतशब्दात् करणं पूर्वम्। प्रातिपदिके तु विशेष्यमाणे न भवत्येष दोषः। न ह्र()ओन क्रीतेत्येतत् करणावयवं क्रीतशब्दान्तं प्रातिपदिकम्। किं तर्हि? वाक्यम्। तस्मात् प्रकृतं प्रातिपदिकं सामान्यमेवावयववाचिना पूर्वशब्देन विशेष्यते। क्रीतशब्देनापि तदेव करणपूर्वं प्रातिपदिकम्। तेन तस्मिन् विशेष्यमाणे सामथ्र्यात् तदन्तविधिः प्रसज्येतेत्याह&ndash; <code>क्रीतशब्दात् प्रातिपदिकात्</code> इति। <code>वस्त्रक्रीती, वसनक्रीती</code> इति।
 अत्र <code>गतिकारकोपपदानां कृद्भिः सह समासवचनं प्राक्सुबुत्पत्तेः</code> (व्या।प।वृ।१३८) इति वस्त्रवसनयोः करणयोः क्रीतशब्देन <code>कत्र्तकरणे कृता बहुलम्</code> (2.1.31) इति प्रागेव सुबुत्पत्तेः समासः।
 <code>सुक्रीता, दुष्क्रीता</code> इति। गत्युपपदत्वात् प्रागेव सुबुत्पत्तेः <code>कुगतिप्रादयःर</code> (2.2.18) इति समासः। दुष्क्रीतेत्यत्र <code>इदुदुपधस्य चाप्रत्यय</code> (8.3.41) इति षत्वम्।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

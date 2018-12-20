@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.12.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.12";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.13\",\"Previous\":\"6.1.11\",\"अकारादिक्रमसङ्ख्या\":1853,\"कौमुदीक्रमसङ्ख्या\":3629,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"द्वित्वम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दाश्वान् साह्वान् मीढ्वांश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.12.md">Edit 6.1.12!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.12";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.13\",\"Previous\":\"6.1.11\",\"अकारादिक्रमसङ्ख्या\":1853,\"कौमुदीक्रमसङ्ख्या\":3629,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"द्वित्वम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दाश्वान् साह्वान् मीढ्वांश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.12 दा�आआन्? साह्वान्? मीढ्वांश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अविशेषेण निपात्यन्ते</code> इति। विशेषानुपादानात्()। <code>अनिट्त्वं च</code> इति। <code>वस्वेकाजाद्घसाम्()</code> (७।२।६७) इतीट्? प्राप्नोति, अतस्तदभावो निपात्यते। ननु च कृतद्विर्वचनानामेकाचामिङ् विधास्यते, अयंचाकृतद्विर्वचनमेकाज्? भवति; अकृतद्विर्वचनत्वात्(), तदयुक्तमनिट्त्वनिपातनम्()? नैतदस्ति; लिटि हि श्रूयमाणैकाजुपलक्षणार्थं तत्र कृतद्विर्वचनग्रहणं कृतम्()। अस्ति चात्र लिटि श्रूयमाणैकाच्त्वमिति कात्रायुक्तता? <code>परस्मैपदम्()</code> इति। सहेरात्मनेपदित्वात्? परस्मैपदं न प्राप्नोतीत्यतस्तन्निपात्यते।
 किं पुनः समाथ्र्यमित्याह&ndash;<code>हलादिशेषः</code> इत्यादि। यदि हलादिशेषः स्यात्(), एवञ्च सत्यामाकारादेशमेव कुर्यात्(), न हि हलादिशेषे सत्यागमस्यादेशस्य वा विशोषोऽस्ति।
 णिलुक्चेति। <code>णेरनिटि</code> (6.4.51) इति णिलोपे सिद्धे लुग्वचनं प्रत्ययलक्षणेनोपधावृद्धिर्माभूदित्येवमर्थम्()। लोपे हि सति प्रत्यलक्षमेनोपधावृद्धिः स्यात्(), लुकि तु <code>न लुयताङ्गस्य</code> (1.1.62) इति प्रतिषेधान्न भवति॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

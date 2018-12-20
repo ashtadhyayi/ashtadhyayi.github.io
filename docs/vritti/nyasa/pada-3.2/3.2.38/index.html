@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.2\/3.2.38.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.38";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.39\",\"Previous\":\"3.2.37\",\"अकारादिक्रमसङ्ख्या\":2550,\"कौमुदीक्रमसङ्ख्या\":2953,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मणि उपपदे कृत्\",\"विषयः २\":\"खच्\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"प्रियवशे वदः खच्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.38.md">Edit 3.2.38!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.38";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.39\",\"Previous\":\"3.2.37\",\"अकारादिक्रमसङ्ख्या\":2550,\"कौमुदीक्रमसङ्ख्या\":2953,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मणि उपपदे कृत्\",\"विषयः २\":\"खच्\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"प्रियवशे वदः खच्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.38 प्रियवशे वदः खच्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>चकारः</code>खचिह्यस्वः<code>इति विशेषणार्थः</code>इति। <code>खे ह्यस्वः</code> इत्युच्यमाने खश्यपि स्यात्। ननु चैकानुबन्धकग्रहणे न द्व्यनुबन्धकस्येति (व्या।प।५२) न भविष्यति? एवं तर्हि परिभाषाश्रयणाच्चकारकरणमेव लघ्विति च मन्यते। ननु च प्रियंवदो वशंवद इति खश्यपि सिद्ध्यति, किमर्थं प्रत्ययान्तरकरणमित्याह&ndash; <code>प्रत्ययान्तरकरणमुत्तरार्थम्िति।</code>द्विषत्परयोस्तापेः<code>(3.2.39) इत्यत्र खचि ह्यस्वस्तापेर्यथा स्यात्। णिलोपश्चेत्याद्यर्थं प्रत्ययान्तरं क्रियते। अथोत्तरत्रैव खच् कस्मान्न क्रियते? अत्रापि खज्भवतीति विज्ञानार्थम्। तेन गमेरपि सुप्युपपदे खच् सिद्धो भवति।
 यदि</code>खच्()प्रकरणे गमेः सुप्यपसंख्यानम्<code>(वा।२४७), तत्रोपसंख्यानशब्दस्य प्रतिपादनार्थं प्रत्ययान्तरं क्रियते। प्रतिपादनन्त्विदमेव वेदितव्यम्।
 </code>विहायसो विह च<code>इति। गमेर्विहायःशब्द उपपदे खच्प्रत्ययः, तत्सन्नियोगेन विहायःशब्दस्य विहादेशः। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

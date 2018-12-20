@@ -55,7 +55,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.7.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.7";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.8\",\"Previous\":\"8.2.6\",\"अकारादिक्रमसङ्ख्या\":2125,\"कौमुदीक्रमसङ्ख्या\":236,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":200,\"विषयः १\":\"न-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नलोपः प्रातिपदिकान्तस्य\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -78,11 +94,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.7.md">Edit 8.2.7!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.7";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.8\",\"Previous\":\"8.2.6\",\"अकारादिक्रमसङ्ख्या\":2125,\"कौमुदीक्रमसङ्ख्या\":236,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":200,\"विषयः १\":\"न-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नलोपः प्रातिपदिकान्तस्य\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -112,7 +124,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -121,7 +133,7 @@
           8.2.7 नलोपः प्रातिपदिकान्तस्य।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>प्रातिपदिकस्य</code> इति, <code>पदस्य</code> इति समानाधिकरणे षष्ठ्यौ।</p>
 
 <p><code>अहन्नहिम्()</code> इति। हन्तेर्लङ्(), तिप्(), हल्ङ्यादिलोपः<code>(6.1.66) अदादित्वाच्छपो लुक्()।</code>अधातुः<code>(1.2.45) इति प्रतिषेधादिह प्रातिपदिकत्वं नास्ति।</code>राजा, राजानौ, राजानः<code>इति। असर्वनामस्थाने पदसंज्ञाप्रतिषेधादिह (1.4.17) प्रातिपदिकस्यावयवोऽन्तो नकारो भवति।</code>प्रातिपदिकान्तस्य<code>इति। षष्ठीतत्पुरुषेऽत्रोत्तरपदप्रधानत्वादस्यैव पदस्य तद्विशेषणं युक्तम्(), न तु गुणभूतस्य। प्रातिपदिकेनान्तशब्देन चात्र नकारो विशेषितः, स च नकारः प्रातिपदिकस्यान्तर्भूतः।</code>पदस्य<code>इति। अनिष्टयोरपि व्यधिकरणयोः पदप्रातिपदिकान्()तर्योर्विशेषणविशेष्यभावेन भवितव्यम्()--प्रातिपदिकान्तस्येति, पदस्येति। पदस्य योऽवयवः सोऽपि प्रातिपदिकस्येत्यर्थः। एवञ्च सति क्रियमाणेऽप्यन्तग्रहणे राजानौ, राजान इत्यत्र प्राप्नोत्येव नलोपः, भवति ह्रत्रापि पदावयवः प्रातिपदिकस्यान्तो नकारः()--इत्येतच्चोद्यमपाकर्तुमाह--</code>प्रातिपदिकग्रहणमसमस्तमेव<code>इति। ततश्च तस्य</code>पदस्य<code>इत्येतत्? समानाधिकरणविशेषणं युक्तमेवेत्यभिप्रायः। यदि तह्र्रसमस्तमेव प्रातिपदिकग्रहणं षष्ठ()आश्रयणं प्राप्नोतीत्यभिप्रायः? इत्यत आह--</code>सुपां सुलक्()<code>इति। अनेन यत्? षष्ठ()आं लुक्? तेन ल#उका निर्दिष्टं प्रातिप्रार्तिपदिकग्रहणम्(), अतो न भवति षष्ठ्याः प्रसङ्गः। 
@@ -136,9 +148,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

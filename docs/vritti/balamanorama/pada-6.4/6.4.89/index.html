@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.4\/6.4.89.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.89";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.90\",\"Previous\":\"6.4.88\",\"अकारादिक्रमसङ्ख्या\":835,\"कौमुदीक्रमसङ्ख्या\":2364,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उपधाया ऊत्त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"ऊदुपधाया गोहः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.89.md">Edit 6.4.89!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.89";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.90\",\"Previous\":\"6.4.88\",\"अकारादिक्रमसङ्ख्या\":835,\"कौमुदीक्रमसङ्ख्या\":2364,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उपधाया ऊत्त्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"ऊदुपधाया गोहः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.89 ऊदुपधाया गोहः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ऊदुपधायाः। <code>गोह</code>इति कृतलघूपधगुणस्य गुहेर्निर्देशः। ततश्च गुणविषय एवेदं भवति। अचिश्नुधात्वित्यतोऽनुवृत्तस्य अचीत्यस्य अङ्गाक्षिप्तप्रत्ययविशेषमत्वात्तदादिविधिः। तदाह&ndash; गुह उपधाया इत्यादिना। गुणहेताविति। गुणं प्रति परनिमित्तभूत इत्यर्थः। गुणापवादः। जुगूह। गुणहेताविति किम् ?। जुगुहतुः जुगुहुः। जुगुहे जुगुहाते जुगुहिरे। जुगूहिथ। जुगोढ। ढत्वधत्वष्टुत्वढलोपाः। जुगुहथुः जुगुह। जुगुहिषे&ndash;जुघुक्षे। ढत्वभष्भावकत्वषत्वानि। जुगुहाथे जुगुहिध्वे&ndash;जुगुढ्वे। जुगूह। जुगुहिव-जुगुह्व जुगुहिम&ndash;जुगुहृ। जुगुहे। जुगुवहिहे&ndash;जुगुह्वहे। जुगुहिमहे-जुगुहृहे। इति लिटि रूपाणि सिद्धवत्कृत्य लुटि इट्पक्षे ऊत्वे रूपमाह&ndash; गूहितेति। इडभावे अजादप्रत्ययाऽभावादूत्त्वाऽभावे गुणे ढत्वधत्वष्टुत्वलोपेषु रूपमाह&ndash; गोढेति। लृटि स्ये इट्पक्षे ऊत्त्वे रूपमाह&ndash; गूहिष्यतीति। इडभावे तु गुणढत्वभष्भावकत्वषत्वेषु रूपमाह&ndash;घोक्ष्यतीति। गूहिष्यते, घोक्ष्यते इत्यप्युदाहार्यम्। गूहतु। गूहताम्। अगूहत्। अगूह। गूहेदिति। <code>गूहेते</code>त्यपि ज्ञेयम्। गुह्यादिति। आशीर्लिङि अजादिप्रत्ययाऽभावादूत्त्वं न। कित्त्वान्न गुणः। लुङि इट्पक्षे सिज्लोपे ऊत्त्वे रूपमाह&ndash; अगूहीदिति। अगूहिष्टाम् अगूहिषुरित्यादि। इडभावे क्स इति। इगुपधशलन्तत्वादिति भावः। अघुक्षदिति। ढत्वभष्भावकत्वषत्वानि। अधुक्षताम् अघुक्षन्नित्यादि।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

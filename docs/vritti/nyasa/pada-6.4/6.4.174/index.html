@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.4\/6.4.174.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.174";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.175\",\"Previous\":\"6.4.173\",\"अकारादिक्रमसङ्ख्या\":1842,\"कौमुदीक्रमसङ्ख्या\":1145,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निपातनानि\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"दाण्डिनायनहास्तिनायनाथर्वणिकजैह्माशिनेयवाशिनायनिभ्रौणहत्यधैवत्यसारवैक्ष्वाकमैत्रेयहिरण्मयानि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.4/6.4.174.md">Edit 6.4.174!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.174";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.175\",\"Previous\":\"6.4.173\",\"अकारादिक्रमसङ्ख्या\":1842,\"कौमुदीक्रमसङ्ख्या\":1145,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निपातनानि\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"दाण्डिनायनहास्तिनायनाथर्वणिकजैह्माशिनेयवाशिनायनिभ्रौणहत्यधैवत्यसारवैक्ष्वाकमैत्रेयहिरण्मयानि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.174 दाण्डिनायनहास्तिनायनाथर्वणिकजैहृआशिनेयवासिनायनिभ्रौण्हत्येधैवत्यसारवैक्ष्वाकमैत्रेयहिरण्मयानि।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>उपचाराद्? ग्रन्थोऽप्यथर्वन्नित्युच्यते</code> इति। उपचारस्य तु तत्प्रोक्तत्वमेव निबन्धनम्()। <code>आथर्वणिकः</code> इति। <code>वसन्तादिभ्यष्ठक्()</code> (4.2.65)।
 <code>भ्रौणहत्यम्()</code> इति। भ्रणं हतवानिति <code>ब्राहृभ्रूणवृत्रेषु क्विप्()</code> (3.2.87), तदन्तात्? ष्यञ्()। <code>हरस्तोऽचिण्णलोः</code> (7.3.32) इत्यनेनैव तकारः सिद्धः, त()त्क निपात्यते? इत्याह&ndash;<code>इनस्तोऽचिण्णलोः</code> इत्यादि। <code>धातोः स्वरूपग्रहणे तत्प्रत्यये कार्यसम्प्रत्यय एव</code> (जै।वृ।३१)। <code>धातोः</code> (6.1.156) इत्येवं यो विहितः प्रत्ययः, तत्र कार्यं विज्ञायत इत्यर्थः। न च ष्यञ्प्रत्ययो धातुप्रत्ययः, किं तर्हि? प्रातिपदिकप्रत्ययः तेन तत्र <code>हनस्तोऽचिण्णलोः</code> (7.3.32) इति तकारो न प्राप्नोति, अतो निपात्यते। कथं पुनर्विज्ञापते&ndash;धातोः स्वरूपग्रहणे तत्प्रत्यये कार्यं भवतीति? नैतदस्ति; <code>न क्वादेः</code> (7.3.59) इत्यत्र हि नेति योगदिभागादपि शक्यते कुत्वनिवृत्तिः कर्त्तुम्()। <code>भ्रौणध्नः वत्र्रध्नः</code> इति। अपत्यार्थेऽण्()। इक्ष्वाकुशब्दाद्यदा <code>जनपदशब्दात्()</code> (४।१।१३८) इत्यादिनाञ्? भवति, तदैक्ष्वाकशब्दो ञित्स्वरेणाद्युदात्तः। यदा तु <code>कोपधात्()</code> (4.2.131) इति शैषिकोऽण्(), तदान्तोदात्तः।
 ननु चैवंविधसूत्र एकस्योपादानेऽपरस्य ग्रहणं न सिद्ध्यति, तस्मादुभयोरपि स्वरभिन्नयोरुपादानं कत्र्तव्यम्()&ndash;<code>ए()आकः, ऐक्ष्वकः</code> इति। एतच्चोद्यमपाकर्त्तुमाह&ndash;<code>स्वरसर्वनाम्ना</code> इत्यादि। उदात्तादीनां स्वराणा मविभागेनोच्चारणम्(), एकश्रुतिः। सा च स्वराणां सर्वनामेव सर्वनाम यथैव हि <code>तस्यापत्यम्()</code> (4.1.92) इत्यादौ निर्देश उपगुप्रभृतीन्विशेषान्विभागेन प्रतिपदयति, ततैकश्रुतिरप्युदात्तादीन्स्वरविशेषान्()। तथात्रायमैक्ष्वाकशब्दः पठ()ते&ndash;नाप्याद्युदात्तो नाप्यन्तोदात्तः, तस्य त्वेवं पठितस्य प्रत्ययविशेषात्स्वरविशेषो भवति&ndash;यदाञ्? तदान्तादोत्तः।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

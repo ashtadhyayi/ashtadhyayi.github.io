@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.3\/7.3.92.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.92";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.93\",\"Previous\":\"7.3.91\",\"अकारादिक्रमसङ्ख्या\":1766,\"कौमुदीक्रमसङ्ख्या\":2545,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्ङिति सार्वधातुके अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तृणह इम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.92.md">Edit 7.3.92!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.92";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.93\",\"Previous\":\"7.3.91\",\"अकारादिक्रमसङ्ख्या\":1766,\"कौमुदीक्रमसङ्ख्या\":2545,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्ङिति सार्वधातुके अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तृणह इम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.92 तृणह इम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तृणह इम्। <code>तृणह</code> इति षष्ठी। कृतश्नमस्तृहधातोर्निर्देशः। र<code>नाभ्यस्तस्ये</code>त्यतः पितीति, <code>उतो वृद्धि</code>रित्यतो हलीति चानुवर्तते। फलितमाह - तृहः श्नमि कृते इति। मित्?तवादन्त्यादचः परः। <code>श्नमि कृते</code> इत्यनुक्तौ तु येन नाप्राप्तिन्यायेन इमागमेन श्नम्बाध्येत, <code>सत्यपि संभवे बाधनं भवती</code>ति नयायात्। अन्यथा <code>ब्राआहृणेभ्यो ददि दीयतां, तक्रं कौण्डिन्याये</code>त्यत्र तक्रेण दधि न बाध्येत, श्नमा शप्च न बाध्येत, देशभेदेन उभयसंभवादिति भावऋ। तृणेढीति। तृणह् तस् इति इमागमे आद्गुणे तृणेह् ति स्थिते ढत्वधत्वष्टुत्वढलोपा इति भावः। तृण्ढ इति। तसि श्नमि कृते, तृणह् तस् इति स्थिते , तसोऽपित्त्वादिमागमाऽभावे <code>श्नसो</code>रित्यल्लोपे ढत्वधत्वष्टुत्वढलोपा इति भावः। तृंहन्ति. तृणेक्षि तृण्ढः तृण्ढ। तृणेहिऋ तृंह्वः तृंह्मः। ततर्हेति।ततृहतुः। ततर्हिथ। ततृहिव। तर्हितेति। सेडिति भावः। तर्हिष्यति। तृणेढु - तृण्ढात् तृण्ढाम् तृंहन्तु। तृण्ढि - तृण्ड्ढि - तृण्ढात् तृण्ढम् तृण्ढ। तृणहानि तृणहाव तृणहाम। अतृणेडिति। लङ स्तिपि श्नमि इम् हल्ङ्यादिलोपः ढत्वजश्त्वे इति भावः। अतृण्ढाम् अतंहन्। अतृणेट् अतृण्ढम् अतृण्ढ। अतृणहम् अतृंह्व अतृंह्म। तृंह्यात्। तृह्यात्। अतर्हीत्। अतर्हिष्यत्। हिसिधातोरुदाहरति - हिनस्तीति। इह श्नमि इदित्त्वान्नुमि च कृते <code>श्नान्न लोपःर</code> इति नुमो लोप इति भावः। हिंस्तः हिंसन्ति। हिनस्सि हिंस्थः हिंस्थ। हिनस्मि हिंस्वः हिंस्मः। जिहिंसेति। किति इदित्तवान्नलोपो न। जिहिंसतुः। जिहिंसिथ। हिंसितेति। सेडिति भावः। हिंसिष्यति। हिनस्तु हिंस्ताम्। हौ श्नमि नुमि कृते <code>श्नान्नलोपः</code> इतिनुमो लोपे हेरपित्त्वेन ङित्त्वात् <code>श्नसो</code>रित्यल्लोपे <code>धिचे</code>ति सलोपे, हिन्धीति रूपम्। हिंस्तात्। हिनसानि। अहिनत् अहिस्ताम् अहिंसन्. सिपि रुर्वा - अहिनः अहिनत्, अहिंस्तम्। अहिनसम् अहिंस्व। हिंस्यात् हिंस्याताम्। आशीर्लिङ श्नमभावान्नुमेव। इदित्त्वान्नलोपो न। हिंस्यादित्येव। हिंस्यास्ताम्। अहिंसीत्। अहिंसिष्यत्। उन्दी क्लेदने। उन्दन्तीति। उनत्सि उन्त्थः। उनद्मि उन्द्वः। उन्दामिति। इजादेश्चेत्याम्। उन्दिता। उन्दिष्यति। उनत्तु - उन्त्तात्। उन्द्धि। उनदानि। लह्याह - औनदिति। औत्त्वाद्वेट्। अनक्तीति। श्नमि कृते परसवर्णस्याऽसिद्धत्वात् <code>श्नान्न लोपः</code> इति नकारलोपे जस्य कुत्वेन गः, तस्य चर्त्वेन क इत भावः। अङक्त इति। नलोपे अल्लोपे जस्य कुत्वेन गः। गस्य चर्त्वेन कः। श्नमो नस्य परसवर्णो ङ इति भावः। अञ्जन्तीति। नलोपाऽल्लोपौ। श्नमो नस्य परसवर्णो ञ इति भावः। अनक्षि अङ्क्थः। अनज्मि अञ्ज्वः। अङ्ग्धीति। हौ श्नमि धिभावे नलोपाऽल्लोपौ। जस्य कुत्वेन गकारः। नस्य परसवर्णो ङकार इति भावः। अनजानीति। श्नान्नलोपः। आटः पित्त्वादल्लोपो न। लह्याह - आनगिति। आङ्क्ताम्। आञ्जन्। अञ्ज्यात्। अज्यात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

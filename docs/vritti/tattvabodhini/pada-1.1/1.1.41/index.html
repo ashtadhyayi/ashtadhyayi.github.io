@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-1.1\/1.1.41.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.1.41";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.1.42\",\"Previous\":\"1.1.40\",\"अकारादिक्रमसङ्ख्या\":405,\"कौमुदीक्रमसङ्ख्या\":451,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अव्ययीभावश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.1/1.1.41.md">Edit 1.1.41!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.1.41";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.1.42\",\"Previous\":\"1.1.40\",\"अकारादिक्रमसङ्ख्या\":405,\"कौमुदीक्रमसङ्ख्या\":451,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अव्ययीभावश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.1.41 अव्ययीभावश्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अव्ययीभावश्च। अव्ययसंज्ञः स्यात्। इह <code>लुकि मुखस्वरोपचारयोर्निवृत्तौचे</code>ति परिगणनं कर्तव्यम्। लुक्युदाहरमम्&mdash;उपग्नि। <code>अव्यया</code>दिति सुपो लिक्। मुखस्वरनिवृत्तौ उदाहरणम्&mdash;उपग्निमुखः। प्रत्यग्निमुखः। <code>मुखं स्वाङ्ग</code>मित्युत्तरपदान्तोदात्तत्वे प्राप्ते <code>नाव्ययदिक्शब्दे</code>त्यदिना प्रतिषेधः। तथाच <code>बहुव्रीहौ प्रकृत्ये</code>ति पूर्वशब्दप्रकृतिस्वर एव भवति, पूर्वपदं च समासस्वरेणाऽन्तोदात्तम्। विसर्गस्थानिकस्य सकारस्य <code>उपचार</code>इति प्राचां संज्ञा, तन्निवृत्तावुदाहरणम्&mdash;उपपयःकारः।उपपयःकामः। इह <code>अतः कृकमी</code>ति प्राप्तं सत्वम् <code>अनव्ययस्ये</code>ति पर्युदस्यते। परिगणनं किम्?। उपागन्धीयान। इह <code>सुबामन्त्रिते</code>इति पराङ्गवद्भावेन याने&rsquo;त्यादौ मा भूदिति। तथा <code>उपाग्निक</code>मित्यादौ अव्ययसर्वनाम्ना<code>मित्यकच्[च]न। उपकुम्भंमन्यः।</code>खित्यनव्ययस्ये<code>ति वर्तमाने</code>अरुर्द्विषदजन्तस्येति विहितो यो मुस्तस्येह प्रतिषेधो न। उपकुम्भीभूतः। इह <code>अस्य च्वौ</code> इतीत्त्वस्य<code>प्रतिषेधो न। ईस्वविधौ हि</code>अव्ययस्य च्वावितीत्वं ने<code>ति प्रतिषे उच्यते, दोषाभूतमाहः दिवाभूता रात्रिरित्यत्र मा भूदिति। स्यादेतत्--स्वारादित्वेनैव सिद्धत्वात्।</code>तद्धितश्चे<code>त्यादि चतुःसूत्री व्यर्था। तत्र हि</code>तसिलादिस्तद्धित एदाच्पर्यन्तः<code>इत्यादिना</code>च्व्यर्थाश्चे<code>त्यन्तेनाऽऽसिप्रत्ययमौणादिकं वर्जयित्वा</code>तद्धितश्चासर्वविभक्तिः<code>इत्यस्याऽर्थः सङ्गृह्यते।</code>कृन्मकारसन्ध्यक्षरान्तः<code>इत्यनेन</code>कृन्मेजन्तः<code>इत्यस्यार्थः सङ्गृह्यते।</code>त्त्कातोसुन्कसुनः`<code>अव्ययीभावश्चे</code>ति सूत्रद्वयं तु स्वरूपेणैव पट�त इति। अत्राहुः&ndash;पुनर्वचनमनित्यत्वज्ञापनार्थम्। तेन प्रागुक्तं <code>लुङ्मुखस्वरोपचाराः</code>इति परिगणनं लभ्यते। <code>पुरा सूर्यस्?योदेतोराधेयः</code>। <code>पुरा क्रूरस्य विसृपो विरप्श</code>न्नित्यासिद्धये <code>न लोकाव्यये</code>त्यत्र <code>अव्ययप्रतिषेधे तोसुन्कसुनोरप्रितषेधः</code>इति वक्ष्यते तदप्यनेनैव लभ्यत इति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

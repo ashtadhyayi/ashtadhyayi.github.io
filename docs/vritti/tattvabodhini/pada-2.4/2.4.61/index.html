@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-2.4\/2.4.61.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.4.61";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.4.62\",\"Previous\":\"2.4.60\",\"अकारादिक्रमसङ्ख्या\":2028,\"कौमुदीक्रमसङ्ख्या\":1086,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुक्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न तौल्वलिभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.4/2.4.61.md">Edit 2.4.61!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.4.61";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.4.62\",\"Previous\":\"2.4.60\",\"अकारादिक्रमसङ्ख्या\":2028,\"कौमुदीक्रमसङ्ख्या\":1086,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुक्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न तौल्वलिभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.4.61 न तौल्वलिभ्यः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>युवप्रत्ययस्य लुगिति। पीलाया वेत्यादि। अपत्येऽणि विहिते गोत्रापत्येऽप्यणेव, <code>एको गोत्रे</code>इति वक्ष्यमाणत्वात्। ततोऽणन्तात्पैलशब्दादपत्येऽपि विधीयमानः फैञ् युवापत्ये पर्यवस्यति। तस्य च फिञोऽनेन लुगित्यर्थः। एवं च पीलाया अपत्ये गोत्रापत्ये युवापत्ये चाऽवैरूप्येण पैलशब्दः प्रयुज्यत इत्याह&mdash;पैलः पिता पुत्रश्चेति। पैलादिषु ये इञन्ता शालङ्किसात्यकिऔदमेयिपैङ्गलिप्रभृतयस्तेभ्यः <code>इञः प्राचा</code>मिति लुकि सिद्धे अप्राचामर्थः पाठ इति ज्ञेयम्। तद्राजाच्चाणः। गणसूत्रमिदम्। तद्राजसंज्ञाकात्परस्य युवप्रत्ययस्य लुगित्यर्थः।तच्चेद्गोत्रं प्राचां भवतीति। इह प्राचाङ्ग्रहणं गोत्रविशेषणं, न तु <code>प्राचामवृद्धा</code>दित्यादिवग्विकल्पार्थमित्यर्थे व्याख्यानं शरणम्। दाक्षिः पितेत्यादि। दक्षस्यापत्यं गोत्रापत्यं च पुमान्दाक्षिः। युवापत्यं तु दाक्षयण तु दाक्षायण इति भावः। न तोल्वलिभ्यः। बहुवचननिर्देशाद्गणपाठसामथ्र्याच्चाद्यर्थावगतिरित्यभिप्रेत्याह&mdash;तोल्वल्यादिभ्य इति। देवमित्र। देवयज्ञि। �आआफल्कि। आसुरि। नैमेषि। पौष्करसादि। वैकर्णीत्यादि तौल्वल्यादिः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

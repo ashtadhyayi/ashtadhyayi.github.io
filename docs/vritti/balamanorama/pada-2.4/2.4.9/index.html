@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-2.4\/2.4.9.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.4.9";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.4.10\",\"Previous\":\"2.4.8\",\"अकारादिक्रमसङ्ख्या\":2892,\"कौमुदीक्रमसङ्ख्या\":913,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकवद्भावः\",\"विषयः २\":\"द्विगुद्वन्द्वयोः वचननिर्णयः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"येषां च विरोधः शाश्वतिकः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.4/2.4.9.md">Edit 2.4.9!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.4.9";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.4.10\",\"Previous\":\"2.4.8\",\"अकारादिक्रमसङ्ख्या\":2892,\"कौमुदीक्रमसङ्ख्या\":913,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकवद्भावः\",\"विषयः २\":\"द्विगुद्वन्द्वयोः वचननिर्णयः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"येषां च विरोधः शाश्वतिकः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.4.9 येषा च विरोधः शा�आतिकः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>येषां च। शेषपूरणेन सूत्रं व्याचष्टे&ndash;एषां प्राग्वदिति। समाहारद्वन्द्व एकवदित्यर्थः। <code>श�आ</code>दित्यव्ययं सदेत्यर्थे वर्तते। ततो भवार्थे ठञ्। निपातनादव्ययानां भमात्रे टिलोपः, <code>इसुसुक्तान्तात्कः</code> इति कादेशस्च न भवति। स्वाभाविक इत्यर्थः। अहिनकुलमिति। अहयो नकुलाश्चेति विग्रहः। अनयोः स्वभाविको विरोधः प्रसिद्धः। विरोधो&ndash;वैरं, नतु सहानवस्थितिः तेन छायातपावित्यत्र न भवति। <code>देवाऽसुराः</code> इत्यत्र तु नायमेकवद्भावः, तद्विरोधस्य कादाचित्कत्वात्। अमृतादिप्रयुक्तः कादाचित्क एव हि तेषां विरोधः, अमृतमथनादि काले तेषां विरोधाऽभावात्। ननु <code>विभाषा वृक्षमृगे</code>ति सूत्रे पशुशकुनिद्वन्द्वयोरेकवद्भावविकल्पो वक्ष्यते। तस्य तावद्गोमहिषु गोमहिषाः, हंसचक्रवाकं, हंसचक्रवाका इत्यत्रावकाशः। <code>येषां चे</code>त्यस्य-अहिनकुलमित्यवकाशः गोव्याघ्रं काकोलूकमित्यादौ तदुभयं प्रसक्तम्। तत्र परत्वाद्क्ष्यमाणविभाषा प्राप्नोतीत्याशङ्क्याह&ndash;गोव्याघ्रमिति। चकारेणेति। <code>येषां चे</code>ति चकारेणेत्यर्थः। एतच्च भाष्ये स्पष्टम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

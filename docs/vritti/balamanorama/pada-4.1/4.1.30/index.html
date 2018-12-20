@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-4.1\/4.1.30.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.30";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.31\",\"Previous\":\"4.1.29\",\"अकारादिक्रमसङ्ख्या\":1164,\"कौमुदीक्रमसङ्ख्या\":488,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"केवलमामकभागधेयपापापरसमानार्यकृत-सुमङ्गलभेषजाच्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-4.1/4.1.30.md">Edit 4.1.30!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.30";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.31\",\"Previous\":\"4.1.29\",\"अकारादिक्रमसङ्ख्या\":1164,\"कौमुदीक्रमसङ्ख्या\":488,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"केवलमामकभागधेयपापापरसमानार्यकृत-सुमङ्गलभेषजाच्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.30 केवलमामकभागधेयपापापरसमानार्यकृतसुमङ्गलभेषजाच्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>केवलमामक। नित्यं संज्ञाच्छन्दसोः&rsquo; इति पूर्वसूत्रमनुवर्तते। एवंच <code>अन उपधालोपिनोऽन्यतरस्या</code>मित्यन्यतरस्यांग्रहणं निवृत्तम्। <code>सङ्ख्याव्ययादेर्ङी</code>बित्यतो ङीबित्यनुवर्तते। तदाह-एभ्य इति। केवल, मामक, भागधेय, पाप, अपर, समान, आर्यकृत, सुमङ्गल, भेषज-इत्येतेभ्यो नवब्य इत्यर्थः। छन्दस्युदाहरति&ndash;अथोत इन्द्रः केवलीरिति। मामकी तनू इति। मदीयायामित्यर्थः। <code>युष्मदस्मदोरन्यतरस्यां खञ् चे</code>त्यणि <code>तवकममकावेकवचने</code> इति प्रकृतेर्ममकादेशः, ङीप्, <code>सुपां सुलुगि</code>ति सप्तम्या लुक्। <code>मित्रावरुणोर्भागधेयी स्थ</code>। <code>भागरूपनामभ्योधेयः</code> इति स्वार्थिको धेयप्रत्ययः। भागशब्दस्य पुंलिङ्गत्वेऽपि <code>स्वार्थिकाः प्रकृतेः क्वचिल्लिङ्गवचनान्यतदिवर्न्तते</code> इति स्त्रीत्वं, ङीप्। <code>तन्वः सन्तु पापीः</code>। पापमस्यास्तीत्यर्थे अर्श आद्यजन्तात्स्त्रीत्वे ङीप्। <code>उत वापरीभ्यो मघवा विजिग्ये</code>। अपरशब्दः पवर्गमध्यः। <code>समानीव आकूतिः।</code> आर्यकृतीति क्वचिद्वेदेऽन्वेषणीयम्। एवं सुमङ्गलीति च। <code>सुमङ्गलीरियं वधूः</code> इत्यत्र <code>छन्दसीवनिपौ च</code> इति मत्वर्थे ईप्रत्ययः। <code>शिवा रुद्रस्य भेषजा।</code> भेषजशब्दो रोगनिवर्तके औषधे प्रसिद्धः। अत एव सूत्र#आत्स्त्रीत्वमपि। यद्वा भिषज इयमित्यर्थेऽणि इकारस्य एकारोऽत एव निपातनात्। संज्ञायामप्येवमेव सर्वत्र ङीबुदाहार्यः ष संज्ञाच्छन्दोभ्यामन्यत्र सु केवला मामिका इत्यादि। नन्वणन्तत्वादेव <code>टिड्ढाणञि</code>ति ङीपि सिद्धे मामकग्रहणं व्यर्थमित्यत आह&ndash;मामकग्रहणमिति। लोकेऽसंज्ञायां च ङीब्निवृत्त्यर्थमिति भावः। एवं भेषजशब्दस्य अणन्तत्वेऽपि ज्ञेयम्। एतदर्थमेव वैदिकप्रक्रियायामिदं नोपन्यस्तम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

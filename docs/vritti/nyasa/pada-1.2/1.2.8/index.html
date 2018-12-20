@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.2\/1.2.8.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.2.8";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.2.9\",\"Previous\":\"1.2.7\",\"अकारादिक्रमसङ्ख्या\":2944,\"कौमुदीक्रमसङ्ख्या\":2609,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"कित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रुदविदमुषग्रहिस्वपिप्रच्छः सँश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.8.md">Edit 1.2.8!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.2.8";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.2.9\",\"Previous\":\"1.2.7\",\"अकारादिक्रमसङ्ख्या\":2944,\"कौमुदीक्रमसङ्ख्या\":2609,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"कित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रुदविदमुषग्रहिस्वपिप्रच्छः सँश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.2.8 रुदविदमुषग्रहिस्वपिप्रच्छः संश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>रुदिर् अश्रुविमोचने</code> (धा।पा।१०६७), <code>विद ज्ञाने</code> (धा।पा।१०६४), <code>मुष स्तेये</code> (धा।पा।१५३०), <code>ग्रह उपादाने</code> (धा।पा।१५३३), <code>ञिष्वप् शये (धा।पा। १०६८)</code>प्रच्छ ज्ञीप्सायाम्<code>(धा।पा।१४१३)।</code>ग्रहेर्विध्यर्थमेव<code>इति।</code>न क्त्वा सेट<code>(1.2.18) इति प्रतिषिद्धस्य कित्त्वस्य पुनर्विधिर्यथा स्यात्।</code>स्वपिर्विध्यर्थमेव<code>इत्यादि।</code>सन्नर्थम्<code>इति। अथ क्त्वार्थं वचनं कस्मान्न भवतीत्याह---</code>किदेव हि क्त्वा<code>स्वपिप्रच्छयोर्हि</code>एकाच उपदेशेऽनुदात्तात्<code>(7.2.10) इतीट्प्रतिषेधात् क्त्वा सेड् न भवतीत्यतः</code>न क्त्वा सेट्<code>(1.2.18) इति निषेधो न प्रवत्र्तते। तेन किदेव हि क्त्वेति।</code>रुदित्वा<code>इति।</code>समानकर्तृकयोः पूर्वकाले<code>(3.4.21) इति क्त्वा।</code>गृहीत्वा<code>इति।</code>ग्रहोऽलिटि दीर्घः<code>(7.2.37) ग्रह्रादिसूत्रेण (6.1.16) संप्रासरणम्।</code>जिघृक्षति<code>इति।</code>हो ढः<code>(8.2.31) इति तत्वम्,</code>ष()ढोः कः सि<code>(8.2.41) इति कत्वम्; 
 </code>एकाचो बसो भष्<code>(8.2.37) इत्यादिना गकारस्य घकारः,</code>सनि ग्रहगुहोश्च<code>(7.2.12) इतीट्प्रतिषेधः।</code>सुषुप्सति<code>इति। वच्यादिसूत्रेण (6.1.15) संप्रसारणम्।</code>पिपृच्छिषति<code>इति। अत्रापि ग्रह्रादिसूत्रेण (6.1.16) संप्रसारणम्;</code>छे च<code>(6.1.71) इति तुक्,</code>स्तोः श्चुना श्चुः` (8.4.39) इति श्चुत्वम्॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

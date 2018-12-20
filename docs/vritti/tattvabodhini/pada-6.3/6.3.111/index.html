@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-6.3\/6.3.111.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.111";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.112\",\"Previous\":\"6.3.110\",\"अकारादिक्रमसङ्ख्या\":1577,\"कौमुदीक्रमसङ्ख्या\":174,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":131,\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ढ्रलोपे पूर्वस्य दीर्घोऽणः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-6.3/6.3.111.md">Edit 6.3.111!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.111";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.112\",\"Previous\":\"6.3.110\",\"अकारादिक्रमसङ्ख्या\":1577,\"कौमुदीक्रमसङ्ख्या\":174,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":131,\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ढ्रलोपे पूर्वस्य दीर्घोऽणः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.111 ढ्रलोपे पूर्वस्य दीर्घोऽणः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ढ्रलोपे। <code>रे</code>त्यकार उच्चारणार्थः। ढश्च रश्च ढ्रौ, तौ लोपयतीति ढ्रलोपः। णिजन्तात्कर्मण्यण्युपपदसमासः। तृढो वृढ इति। ऊदित्त्वेन वेट्?कत्वाद्यस्य विभाषेति निष्ठायां नेट्। ढत्वधत्वष्टुत्वढलोपाः। प्राचा तु <code>दृढ</code> इति प्रत्युदाह्मतं, तदसत्, तत्र ढलोपस्यैवाऽभावात्। <code>दृढः स्थूलबलयो</code>रिति घत्वेन बाधात्। न चेडभावो ढत्वं नलोपश्च निपात्यतां, धत्वष्टुत्वढलोपास्तु भविष्यन्त्येवेति वाच्यम्, तथा सति <code>परिद्रढय्ये</code>त्यत्र <code>ल्यपि लघुपूर्वा</code>दिति णेरयादेशो न स्यात्। [तथा] <code>पारिवृढी कन्ये</code>त्यत्र <code>इतो मनुष्यजाते</code>रिति ङीषं बाधित्वा <code>अणिञो</code>रिति ष्यङ् स्यात्, ढलोपस्याऽसिद्धत्वेन गुरूपोत्तमत्वादित्याकरे स्थितम्। ननु <code>परिद्रढय्ये</code>त्यत्र ल्यबादेशः कथं भवेद्यावता परिदृढमाचण्टे इति णिचि कृते क्त्त्वाप्रत्यये च क्त्त्वान्त एव परेरन्तर्भावात्समासाऽभाव इति चेदत्र कैयटः-सङ्ग्रामयतेरेव सोपसर्गात्प्रत्ययोत्पत्तिर्नान्यस्मादिति नियमात्परिशब्दं पृथक्कृत्य दृढशब्दादेव णिच्क्रियते। णिजन्तस्य धातुत्वात्क्त्त्वाप्रत्यये कृते परेः क्त्त्वान्तेन कृदन्तेन समास इति सिद्धो ल्यबादेशः। णाविष्ठवद्भावाद्रभाव इति। ननु <code>पूर्वस्ये</code>ति व्यर्थं, सप्तमीनिर्देशादेव तल्लाभादत आह-पूर्वग्रहणमित्यादि। <code>ढ्रलोपे पूर्वस्ये</code>ति सूत्रस्योत्तरपदाधिकारस्थत्वादुत्तरपदस्थयोरेव ढरेफयोः परतो दीर्घः स्यान्न तु <code>लीढः</code> <code>अजर्घाः</code> इत्यत्रेति भावः। यद्यप्यसंभवादेवानुत्तरपदस्थे ढकारे दीर्घो भनेत्तथाप्यजर्घा इत्यत्र दीर्घो न स्यादिति ज्ञेयम्। वस्तुतस्तूत्तरपदस्य समासचरमावयवे रूढत्वात्पुना रमत इत्यादावपि न स्यात्, किंतु <code>नीरक्तं</code> <code>दूरक्त</code>मित्यादावेव स्यादिति तत्त्वम्। लीढ इति। <code>लिह आस्वादने</code> क्तः। ढत्वधत्वष्टुत्वढलोपाः। इह ढलोपं प्रति ष्टुत्वं नासिद्धं, ढकारे परतो लोपविधिसामर्थ्यात्। अतएव <code>ढो ढे लोपः</code> इत्यस्य पदाधिकारस्थत्वेऽप्यपदान्तस्य ढस्य लोपो भवति। अजर्घा इति। <code>गृधु अभिकाङ्क्षायां</code> यङ्लुकि द्वित्वे अभ्यासस्य रुक्। लङः सिपि शब्लुकि सिप ईडभावपक्षे लघूपधगुणो रपरः। <code>इतश्चे</code>तीकारलोपे हल्ङ्यादिलोपः। भष्भावः। जश्त्वं। <code>दश्चे</code>ति रुत्वपक्षे <code>अजर्घर् र्</code> इति स्थिते <code>रोरी</code>ति रेफलोपेऽनेन दीर्घः। अत्रेयं सुगमा व्याख्या-ढ्रलोपे पूर्वस्य दीर्घोऽणः। लीढः। नीरक्तं। दूरक्तम्। अणः किम् ?। तृढः वृढः। पूर्वग्रहणमनुत्तरपदेऽप#इपूर्वमात्रस्य दीर्घार्थम्। अजर्घाः। पुना रमते। हरी रम्यः। शम्भू राजते&rsquo; इति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.2\/5.2.41.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.2.41";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.2.42\",\"Previous\":\"5.2.40\",\"अकारादिक्रमसङ्ख्या\":1089,\"कौमुदीक्रमसङ्ख्या\":1842,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"किमः संख्यापरिमाणे डति च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.2/5.2.41.md">Edit 5.2.41!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.2.41";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.2.42\",\"Previous\":\"5.2.40\",\"अकारादिक्रमसङ्ख्या\":1089,\"कौमुदीक्रमसङ्ख्या\":1842,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"किमः संख्यापरिमाणे डति च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.2.41 किमः संख्यापरिमाणे डति च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>संख्यायाः परिमाणम्()</code> इति। कृद्योगलक्षणा कर्मणि षष्ठी। परिमितिः परिमाणम्()। संख्यापरिच्छेद इत्यर्थः। परिच्छेद ति भावे घञ्()। <code>संख्यापरिच्छेदे वत्र्तमानात्()</code> इति। परिच्छेदोपाधिकायां संख्यायां वत्र्तमानादित्येषोऽर्थो विवक्षितः। यथा ह्रयमेवार्थोऽस्य वचनस्योत्तरत्र तथा व्यक्तीकरिष्यते। तस्य वकारस्य घत्वमिति; <code>वो घः</code> इत्यनुवृत्तेः। <code>पृच्छ्यमानत्वात्()</code> इति। यदा संख्यायाः परिच्छेदे किंशब्दो वत्र्तते। कदा च वत्र्तते? यदा संख्या परिपृच्छ्यमाना भवति। न ह्रपरिपृच्छ्यमानायाः परिच्छेद उपपद्यते। यदा च परिपृटच्छ्यमाना भवति, तदा च किंशब्दः परिच्छेदविशिष्टायां वत्र्तत इति पृच्छ्यमानत्वात्? <code>परिच्छेदोपादिकायां संख्यायां वत्र्तमानात्? किमः प्रत्ययो भवतीति विज्ञायते। परिच्छेद उपाधिविशेषणभूतो यस्याः सा परिच्छेदोपाधिका। परिचछेदविशेषणेति यावत्()। तदनेन संक्यापरिच्छेदे वत्र्तमानात्? किम इत्यस्य योऽर्थोऽभिमतः स व्यक्तीकृतः।</code>कति<code>इति। जसः</code>षड्भ्यो लुक्()<code>(7.1.22) इति लुक्()। 
 </code>अथ वा<code>इत्यादि। अत्र च व्याख्याने</code>संख्यापरिमाणे<code>इति कर्मधारयः, निपातनादुपसर्जनस्यायं परनिपातः। परिमाणशब्दश्च परिमीयतेऽनेनेति करणसाधनः।</code>एवमात्मिकैव<code>इति। अस्यार्थं परिच्छेदस्वभावेत्यनेन विस्पष्टीकरोति। परिच्छिद्यतेऽनेनेति परिच्छेदः, स स्वभावो यस्याः सा तथोक्ता।</code>यत्र<code>इत्यादिना यदर्थं परिमाणग्रहणेन संख्या विशेष्यते तद्दर्शयति। स्यादेतत्()--नास्त्येव स विशेषो यत्र संख्यायाः परिच्छेदस्वभावो नास्ति, तदपार्थकं विशेषणमिति? अत आह--</code>क्षेपे हि<code>इत्यादि।</code>केयमेषां संख्या दशानाम्()` इति। नात्र संख्या परिच्छेदकत्वेन विवक्षिता। न ह्रत्र परिच्छेदोऽस्ति; क्षेपपरत्वाद्वाक्यस्य। किंशब्दोऽत्र क्षेपे वत्र्तते, न प्रश्ने॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

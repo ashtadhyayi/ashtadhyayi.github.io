@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-5.3\/5.3.68.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.68";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.69\",\"Previous\":\"5.3.67\",\"अकारादिक्रमसङ्ख्या\":3234,\"कौमुदीक्रमसङ्ख्या\":2023,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वार्थिकः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"विभाषा सुपो बहुच् पुरस्तात्तु\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-5.3/5.3.68.md">Edit 5.3.68!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.68";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.69\",\"Previous\":\"5.3.67\",\"अकारादिक्रमसङ्ख्या\":3234,\"कौमुदीक्रमसङ्ख्या\":2023,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वार्थिकः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"विभाषा सुपो बहुच् पुरस्तात्तु\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.68 विभाषा सुपो बहुच् पुरस्तात्तु
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>विभाषा सुपः। सूत्रे <code>सुपः</code>इति षष्ठ�न्तं, <code>षष्ठ�तसर्थप्रत्ययेने</code>त्युक्तेः। सुबन्तादिति। एतच्च पञ्चम्यन्तं युक्तमेव, पुरस्ताच्छब्दपर्यायस्य प्रागितिशब्दस्य वृत्तौ प्रयुक्तत्वात्। प्रागित्यपकृष्यत इथि तु मनोरमायां स्थितम्। नस च सूत्रस्थपुरस्ताच्छब्दसमानार्थकप्राक्?शब्दयोगेऽपि <code>षष्ठ�तसर्थे</code>ति षष्ठी स्यादिति वाच्यम्, <code>अन्यारा</code>दिति सूत्रेऽञ्चूत्तरपदस्य दिक्शब्दत्वेऽपि <code>षष्ठ�तसर्थप्रत्ययेने</code>त्येतद्बाधनार्थं पृथग्ग्रहणमिति सिद्धान्तयित्वा <code>प्राक् प्रत्यग्वा ग्रामा</code>दित्युदाह्मतत्वात्। काशिकायां तु वृत्तपवि पुरस्ताच्छब्दः प्रयुक्तः, सुबन्तादिति च प्रयुक्तं। तदसमञ्जसमिति मत्वा हरदत्तेन कथंचितं समर्थितं&mdash;<code>ल्यब्लोप एषा पञ्चमी। एवंभूतं प्रकृतित्वेनाश्रित्येत्यर्थ</code>इति। प्रागेवेति। सौत्रस्तुशब्दोऽवधारणे वर्तत इति भावः। तेन च बहुजेव विकल्प्यते, न तु पूर्वत्वम्। तुशब्दाऽभावे तु प्राक्त्वं विकल्प्येत। तथा च पक्षे बहुच् परः स्यात्। भाष्यकारस्य मते तु नेदं तुशब्दस्य फलम्। तथाहि&mdash;<code>उद�इआतोऽन्यतरस्या</code>मित्यादौ प्रधानत्वात्प्रत्यय एव विकल्प्यते, न तु परत्वं, प्रत्यय एव हि परत्वविशिष्टो विधीयत इत#इ , विशेषणस्य गुणत्वात्, <code>गुणानां च परार्थत्वादि</code>ति न्यायात्। तद्वदिहापि विभाषाग्रहणेन बहुजेब संभन्त्स्यते, न पुरस्तादित्येतत्। तुशब्दस्य तु अवधारणार्थस्याऽन्यदेव प्रयोजनं <code>पुस्तादेव सर्वं यथा स्या</code>दिति। तेन लिङ्गसङ्ख्ये अपि प्राक् प्रत्ययोत्पत्तेः प्रकृत्यवस्थायां ये दृष्टे ते एव स्तः। बहुचः प्रयोगश्च प्राक् प्रकृतेरेव भवतीति। तेन <code>बहुगुडो द्राक्षा</code>, <code>लघुर्बहुतृणं नरः</code>इत्यादौ प्रकृतिवल्लिङ्गमेव भवति, न त्विभिधेयवल्लिङ्गम्। ननु <code>स्वार्थिकाः प्रकृतितो लिङ्गवचनामि लभन्ते</code>इत्येव सिद्धमिति किमनेन तुशब्दग्रहणेनेति चेत्। अत्राहुः&mdash;एतदेव ज्ञापयति <code>ईषदसमाप्तौ ये स्वार्थिकास्तेष्वभिधेयवदेव लिङ्गवचने स्तः</code>इति। तेन <code>गुडकल्पा द्राक्षा</code> <code>शर्कराकल्पो गुड</code>इत्यादि सिद्धण्। प्रागिवात्कः। <code>सुपः</code>इत्यनुवर्तते, तेन तिङन्तात्को न।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.4\/1.4.45.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.45";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.46\",\"Previous\":\"1.4.44\",\"अकारादिक्रमसङ्ख्या\":536,\"कौमुदीक्रमसङ्ख्या\":632,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अधिकरणम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आधारोऽधिकरणम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.4/1.4.45.md">Edit 1.4.45!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.45";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.46\",\"Previous\":\"1.4.44\",\"अकारादिक्रमसङ्ख्या\":536,\"कौमुदीक्रमसङ्ख्या\":632,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अधिकरणम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आधारोऽधिकरणम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.45 आधारोऽधिकरणम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>आध्रियन्ते क्रियागुणा अस्मिन्नित्याधारः</code> इति। <code>अध्यायन्यायोद्यावट (3.3.122) इत्यादिनाऽ‌ऽधारशब्दोऽधिकरणे घञन्तो व्यत्पादित-। क्रियापेक्षत्वत् कारकस्येति क्रियाग्रहणम्। यद्याध्रियन्ति क्रिया यस्मिन् स आधारः इति, एवं हि सति कर्तृकर्मणोरेवाधिकरणसंज्ञा प्रसज्येत, तयोरेव हि क्रिया आध्रियन्ते। तथा हि- कत्र्तस्था व #आ क्रिया भवति, कर्मस्था वा, अनवकाशत्वात् कर्त्तृकर्मणोः संज्ञा न भविष्यत्येष दोष प्रसङग् इति, एतच्चानुत्तरम्; सत्यपि ह्रनवकाशत्वे तयोः पर्यायः स्यात्। एकदाधिकरणसंज्ञा भवितव्यं तं दर्शयति। प्रतिराभिमुख्ये।</code>क्रियां प्रति य आधारः<code>इति॥ क्रियाया अभिमुखो य आधार इत्यर्थः। यश्च क्रियां धारयति स क्रियाया अभिमुखो भवति। क्रियायास्तु धारणं साक्षात्, व्यवधानेन वा; कर्त्तृकर्मणोः क्रियाश्रययोर्धारणात्। अत्र पूर्वस्य व्यवच्छेदार्थं</code>कर्त्तृर्मणोः<code>इत्युक्तम्।
 तदेतदुक्तं भवति-- कर्त्तृकर्मणोः क्रियाधारभूतयोर्धारणात् क्रियाया अभिमुखो य आधारस्तस्याधिकरणसंज्ञा भवतीति। तदेवं क्रियाधारभूतकर्त्तृकर्मधारणद्वारेण क्रियाया अभिमुखो य आधारस्तस्याधिकरणसंज्ञा; यतोऽनेन विधीयते ततो न भवति पूर्वस्य दोषप्रसङ्गः। न हि कर्त्तृकर्मणोरनेन प्रकारेण क्रियां प्रत्याधारत्वम्; अपि तु साक्षादेव क्रियाधारणात्। नन्वेवमपि कर्त्तृकर्मणोर्मुख्यं क्रियाधारत्वम्, साक्षादेव क्रियाधारणात्, कर्त्तृकर्माधारस्य तु कटादेर्गौणत्वं क्रियाश्रयभूतकर्त्तृकर्मधारणद्वारेण क्रियाधारणात्। तत्र मुख्य आधारे सति गौणस्याधिकरणसंज्ञा न प्राप्नोतीति स दोषसत्दवस्थ एव? नैतदस्ति; तमब्ग्रहणेन ज्ञापितमेतत्-- गौणस्याप्याधारस्याधिकरणसंज्ञा भवतीति। भवतु गौणस्याधिकरणसंज्ञा, मुख्यस्यापि कर्त्तृ कर्मणश्च कस्मान्न भवतीति चेत्, न; परत्वादनवकाशत्वाच्च कर्त्तृकर्मसंज्ञाभ्यां बाध्यमानत्वात्। अधिकरणसंज्ञा हि पूर्वो गौण आधारे सावकाशा, तद्विपरीते तु कर्त्तृकर्मसंज्ञे इति ताभ्यां बाध्यमाना नोत्सहते तयोर्विषयमवगाहितुम्।
 </code>कटे आस्ते<code>इति। कर्त्तृस्था क्रिया यत्र पूर्वेण प्रकारेणाध्रियते तस्योदाहरणम्;; विक्लेदनक्रियायाः कर्मस्थत्वात्।</code>स्थाल्यां पचति<code>इति। कर्मस्था क्रिया यत्राध्रियते तस्योदाहरणम्; विक्लेदनक्रियाया कर्मस्थत्वात्।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

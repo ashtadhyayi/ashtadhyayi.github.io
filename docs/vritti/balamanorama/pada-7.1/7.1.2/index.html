@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.1\/7.1.2.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.1.2";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.1.3\",\"Previous\":\"7.1.1\",\"अकारादिक्रमसङ्ख्या\":558,\"कौमुदीक्रमसङ्ख्या\":475,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आयनेयीनीयियः फढखच्छघां प्रत्ययादीनाम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.1/7.1.2.md">Edit 7.1.2!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.1.2";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.1.3\",\"Previous\":\"7.1.1\",\"अकारादिक्रमसङ्ख्या\":558,\"कौमुदीक्रमसङ्ख्या\":475,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आयनेयीनीयियः फढखच्छघां प्रत्ययादीनाम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.1.2 आयनेयीनीयियः फढखछघां प्रत्ययादीनाम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आयनेयीनीयियः। आयन्, एय्, ईन्, ईय्, एषां द्वन्द्वात्प्रथमाबहुवचनम्। फ, ढ, ख, छ, घ्-एषां द्वन्द्वात्षष्ठीबहुवचनम्। फादिष्वकार उच्चारणार्थः। यथासङ्ख्यपरिभाषया क्रमेणान्वयः। तदाह&ndash;प्रत्ययादिभूतानामित्यादिना। आयनो नस्य इत्त्वेनित्वस्वरोपयोगेऽपि नेत्त्वं, फिनो नित्करणाज्ज्ञापकात्। तत्साहचर्यादीनोऽपि नस्य नेत्त्वम्। एयादिषु च यस्य नेत्त्वं, ङीषः प्राप्त्यभावात्कौरव्यशब्दाट्टाप्, माण्डूबात्तु ङीषिति भावः। यद्यपीह <code>टाम्ङीपो</code>रिति पाठः प्रायेण दृश्यते प्रयोजनाऽभावात्। ननु ष्फस्य तद्धितसंज्ञा किमर्थेत्यत आह&ndash;तद्धितान्तत्वादिति। ष्फान्तस्य प्रातिपदिकत्वे प्रयोजनमाह&ndash;वक्ष्यमाणो ङीषिति। <code>षिद्गौरादिभ्यश्चे</code>त्यत्र प्रातिपदिकादित्यनुवृत्तं, ततश्च ष्फान्तस्य प्रातिपदिकत्वाऽभावे ङीष् न स्यादिति भावः। ननु ष्फप्रत्ययेनैव स्त्रीत्वस्य द्योतितत्वादुक्तार्थानामप्रयोग इति न्यायादत्र कथं ङीषित्यत आह&ndash;षित्त्वसामर्थ्यादिति। ष्फेण द्योतितेऽपि स्त्रीत्वे षित्करणसामर्थ्यान्ङीषित्यर्थः। गार्ग्यायणीति। गर्गस्यापत्यं स्त्रीति विग्रहः। गर्गादियञन्ताद्गार्ग्यशब्दात्ष्फः, षकार इत्, फकारस्य आयन्नादेशः, <code>यस्येति चे</code>ति यकारादकारस्य लोपः, <code>हलस्तद्धितस्ये</code>ति तु न भवति, ईतीत्यनुवृत्तेः। <code>आपत्यस्य चे</code>त्यपि न, अनातीति निषेधात्। षित्त्वान्ङीष्। णत्वमिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.139.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.139";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.140\",\"Previous\":\"6.2.138\",\"अकारादिक्रमसङ्ख्या\":1259,\"कौमुदीक्रमसङ्ख्या\":3873,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गतिकारकोपपदात्‌ कृत्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.139.md">Edit 6.2.139!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.139";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.140\",\"Previous\":\"6.2.138\",\"अकारादिक्रमसङ्ख्या\":1259,\"कौमुदीक्रमसङ्ख्या\":3873,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गतिकारकोपपदात्‌ कृत्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.139 उभे वनस्पत्यादिषु यूगपत्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>वनशब्दः <code>नब्विषयस्यानिसन्तस्य</code> (फि।सू।२।२६) इत्याद्युदात्तः। पतिशब्दोऽपि प्रत्ययस्वरेण। स <code>पातेर्डतिः</code> (द।उ।१।२७) इति डतिप्रत्ययान्तः। <code>बृहदित्यन्तोदात्तम्? इत्यादि। बृहच्छब्दः</code>वर्तमाने पृषद्बृहन्महज्जगच्छतृवच्च<code>(द।उ।६५) इति केवलमन्तोदात्तो यदयपि निपात्यते, तथापि बृहस्पतिरित्यत्राद्युदात्तत्वं निपातयति। 
 </code>तनोतेरौणादिक ऊप्रत्ययः<code>इति।</code>कषिचमितनिषनिसर्जिखर्जिभ्यौउः<code>(पं।उ।१।८२) इत्यनेन तनू शब्दोऽन्तोदात्तः। न पाति न पालयतीत्यनेन</code>पा रक्षणे<code>(धा।पा।१०५६) इत्यसमान्नपादित्येतन्निपात्यत इति दर्शयति। न पातयतीत्यनेनापि।</code>नलोपो नञः<code>(6.3.72) ति नलोपः प्राप्नोति,</code>नभ्रान्नपात्()<code>(6.3.74) इत्यादिना प्रकृतिभावान्न भवति।</code>नरा अस्मिन्नासीनाः शंसन्ति<code>इति। एतेनाधिकरणसाधनं शंसशब्दं दर्शयति। एवं शंसन्तीत्यनेनापि कर्मसाधनम्()।</code>शंस स्तुतौ<code>(धा।पा।७२८) इत्यस्मात्?</code>अंकत्र्तरि च कारके<code>(3.3.19) इति घञ्()।</code>अबन्तः<code>इति।</code>ऋदोरप्()<code>(3.3.57) इत्यनेन। 
 </code>शुनःशेपः<code>इति। बहुव्रीहिरयम्()। तेनात्र पूर्वपदस्य प्रकृतिभावे प्राप्ते वचनम्()।</code>उभावाद्युदात्तौ<code>इति। तत्र ()आञ्शब्दः</code>()आन्नुक्षन्()<code>(द।उ।६।५५) इत्यादिना कनिन्प्रत्ययान्तो व्युत्पाद्यते। शेपशब्दो</code>वृङ्शीङभ्यां रूपस्वाङ्गयोः पुट्? च्()<code>(द।उ।९।६१) इत्यसुन्()प्रत्ययान्तो व्युत्पाद्यते, तेन द्वावपि तावाद्युदात्तौ। 
@@ -136,9 +148,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

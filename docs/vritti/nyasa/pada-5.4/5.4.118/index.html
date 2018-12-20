@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.4\/5.4.118.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.118";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.119\",\"Previous\":\"5.4.117\",\"अकारादिक्रमसङ्ख्या\":78,\"कौमुदीक्रमसङ्ख्या\":856,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अञ्नासिकायाः संज्ञायां नसं चास्थूलात्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.4/5.4.118.md">Edit 5.4.118!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.118";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.119\",\"Previous\":\"5.4.117\",\"अकारादिक्रमसङ्ख्या\":78,\"कौमुदीक्रमसङ्ख्या\":856,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अञ्नासिकायाः संज्ञायां नसं चास्थूलात्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.118 अञ्नासिकायाः संज्ञायां नसं चास्थूलात्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>संज्ञायामिति समुदायोपाधिः</code> इति। एतेन यदि प्रकृतिप्रत्ययसमुदायः कस्याचित्? संज्ञा भवत्येवं प्रत्ययो भवति, नान्यथेति दर्शयति। <code>द्रुणसः</code> इति। <code>पूर्वपदात्? संज्ञायामगः</code> (8.4.3) इति णत्वम्()। वर्ध्रे भवा स्त्री वार्ध्री, सा नासिका यस्य स <code>वार्ध्रीणसः</code> इति। <code>वृद्धिनिमित्तस्य च तद्वितस्यरक्तविकारे</code> (6.3.38) इति पुंवद्भावप्रतिषेधः। गौरिव नासिकास्य गोनसः। अच श्चित्करणं बहुव्रीहिस्वरबाधनार्थम्()।
 <code>खरणाः खुरणाः</code> इति। <code>अत्वसन्तस्य चाधातोः</code> (6.4.14) इति दीर्घः।
 शितर्नासिकास्य <code>शितिनाः</code>। अहिरिव नासिकास्य <code>अहिनाः</code>। अर्चेव नासिकास्य <code>अर्चनाः</code>। <code>ङ्यापोः संज्ञाच्छन्दसोर्बहुलम्()</code> (6.3.62) इति ह्यस्वः॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

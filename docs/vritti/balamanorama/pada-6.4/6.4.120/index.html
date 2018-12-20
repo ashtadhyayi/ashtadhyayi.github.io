@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.4\/6.4.120.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.120";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.121\",\"Previous\":\"6.4.119\",\"अकारादिक्रमसङ्ख्या\":100,\"कौमुदीक्रमसङ्ख्या\":2260,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लिटि एत्वम् अभ्यासलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अत एकहल्मध्येऽनादेशादेर्लिटि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.120.md">Edit 6.4.120!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.120";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.121\",\"Previous\":\"6.4.119\",\"अकारादिक्रमसङ्ख्या\":100,\"कौमुदीक्रमसङ्ख्या\":2260,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लिटि एत्वम् अभ्यासलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अत एकहल्मध्येऽनादेशादेर्लिटि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.120 अथ एकहल्मध्येऽनादेशादेर्लिटि
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तस्य लटि एधिवद्रूपाणि सिद्धवत्कृत्य लिटस्तादेशे तस्यैशि द्वित्वे दध् दध् ए इति स्थिते। अत एकहलमध्ये। आदेश आदिर्यस्येति बहुव्रीहिः। अङ्गस्येत्यधिकृतमन्यपदार्थः। लिटीति निमित्तसप्तमी अनादेशादेरित्यस्यैकदेशे आदेशेऽन्वेति। लिटि परे निमित्ते य आदेशः स आदिर्यस्य न भवति तथाविधस्याङ्गस्येति लभ्यते। अङ्गस्येत्यवयवषष्ठी। तथा च तथाविधाङ्गावयवस्याऽत इति लभ्यते। एकशब्दोऽसहायवाची। <code>एके मुख्यान्यकेवलाः</code> इत्यमरः। एकौ असंयुक्तौ हलौ एकहलौ, तयोर्मध्यः,तत्रेति विग्रहः। <code>अत</code> इत्स्यैव विशेषणमिदम्। <code>द्वसोरेद्धा</code>वित्यत एदिति, अभ्यासलोप इति चानुवर्तते। <code>गमहने</code>त्यतः कितीत्यनुवर्तते, न तु ङितीति, लिङादेशानां ङित्त्वाऽसंभवात्। लिटीत्येत्वविधौ परनिमित्तं च। आवृत्त्या उभयार्थलाभः। तदाह&mdash; लिण्निमित्तेत्यादिना।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

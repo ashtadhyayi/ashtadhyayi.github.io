@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-2.1\/2.1.55.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.1.55";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.1.56\",\"Previous\":\"2.1.54\",\"अकारादिक्रमसङ्ख्या\":769,\"कौमुदीक्रमसङ्ख्या\":733,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"उपमानानि सामान्यवचनैः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.1/2.1.55.md">Edit 2.1.55!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.1.55";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.1.56\",\"Previous\":\"2.1.54\",\"अकारादिक्रमसङ्ख्या\":769,\"कौमुदीक्रमसङ्ख्या\":733,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मधारयः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"उपमानानि सामान्यवचनैः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.1.55 उपमानानि सामान्यवचनैः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>उपमानानि। उपमीयन्ते सदृशतया परिच्छिद्यन्ते यैस्तानि&ndash;उपमानानि। सादृश्यनिरूपकाणीत्यर्थः। सामान्यम्=उपमानोपमेयसाधारणधर्मः, तमुक्तवन्तः शब्दाः सामान्यवचनाः। बाहुलकः कर्तरि ल्युट्। पूर्वं सामान्यमुक्त्वा तद्विति द्रव्ये ये पर्यवस्यन्ति ते सामान्यवचना इति यावत्। तथाच सादृश्यनिरूपकशब्दाऽपरपर्याया उपमानशब्दा उपमानोपमेयसाधारणधर्मविशिष्टवाचिभिः समानाधिकरणैः समस्यन्ते स तत्पुरुष इत्यर्थः। घनश्याम इति। नन्विह घन इव श्याम इति विग्रहे घनशब्दस्य श्यामशब्दस्य चैकार्थवृत्तित्वलक्षणसामानाधिकरण्याऽभावात्कथमिह समासः, इवशब्दापेक्षत्वेनाऽसामर्थ्याच्चेत्यत आह&ndash;इह पूर्वपदमिति। एवं च घनशब्दो लक्षणया घनसदृशे रामे वर्तते, श्यामशब्दोऽपि रामे वर्तत इति सामानाधिकरण्यम्। अत एव मृगीव चपला मृगचपलेत्यत्र <code>पुंवत्कर्मधारये</code>ति पुंवत्त्वं सिध्यति। घनशब्दस्य भूतपूर्वगत्योपमानपरत्वं निर्वाह्यम्। तथाच <code>घनसदृशश्यामः</code> इति बोधः। सादृश्यं तद्भिन्नत्वे सति तद्गतधर्मवत्त्वम्। एवंच सादृश्यप्रतियोग्यनुयोगिनोः साधारणधर्मवत्त्वं लब्धम्। स चेह साधारणधर्म उत्तरपदोपस्थाप्य एव गृह्यते, संनिहितत्वात्। तथाच घनगतश्यामत्वसदृशश्यामत्ववानिति बोधपर्यवसानम्। ननु विशेषणसमासेन सिद्धे किमर्थमिदं सूत्रमित्यत आह&ndash;पूर्वनिपातेति। अन्यथा उभयोरपि गुणवचनतया विशेषणविशेष्यभावे कामचारात्खञ्जकुब्जः कुब्जखञ्ज इतिवदनियमः स्यादिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

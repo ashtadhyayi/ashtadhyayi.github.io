@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.48.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.48";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.49\",\"Previous\":\"6.1.47\",\"अकारादिक्रमसङ्ख्या\":1209,\"कौमुदीक्रमसङ्ख्या\":2600,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रीङ्जीनां णौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.48.md">Edit 6.1.48!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.48";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.49\",\"Previous\":\"6.1.47\",\"अकारादिक्रमसङ्ख्या\":1209,\"कौमुदीक्रमसङ्ख्या\":2600,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रीङ्जीनां णौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.48 सिध्यतेरपारलौकिके।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अन्नं साध्यति</code> इति। अन्नं निष्पादयतीत्यर्थः। अत्र हि सिधिः पारलौकिके()र्थे ज्ञानविशेषे वत्र्तत इति। अस्यार्थं&ndash;<code>तापसः सिध्यति</code> इत्यादिना स्पष्टीकरोति। <code>उपसंहारन्()</code> इति। निष्पादयन्नित्यर्थः।
 <code>इह कस्मान्न भवति</code> इत्यादि। एवं मन्यन्ते&ndash;ब्राआहृणेभ्यो दास्यामीत्यनेनाभिप्रायेण योऽन्नं साधयति स जमान्तरे भवन्? फलमभ्युदयलक्षणं प्राप्नोति, तस्मात्? पारलौकिकेऽर्थे सिधिरत्र वत्र्तत इति पर्युदासेन भवितव्यमिति। सिध्यतेरत्रार्थो निष्पत्तिरित्यादिनेहलोकार्थतां त्वस्य दर्शयति। <code>तस्याः प्रयोजनमन्नम्()</code> इति। अन्नमुद्दिश्य प्रवृत्तत्वात्()। <code>तस्य</code> इति। अन्नस्य। <code>न पुनः सिद्धिरेवेति</code> इति। अर्ताल्लिङ्गविपरिणामं कृत्वा न पुनः सिद्धिरेव पारलौकिकीति सम्बन्धनीयम्()। सिद्धिर्निष्पत्तिरित्यर्थः। इतिकरणो हेतौ। यस्मात्? सिद्धो धातुर्वत्र्तते। अत्र सिद्धिः पारलौकिकी न भवति, तस्मान्नात्रात्वं पर्युदस्यते। स्यादेतत्? यद्यपि साक्षाद्()धातुः परलोकार्थो न भवति, पारम्पर्येण तु भवत्येव, तस्माद्भवितव्यमेव प्रतिषेधेन इत्याह&ndash;<code>साक्षात्()</code> इत्यादि। यदि साक्षादव्यवधानेन परलोकार्थो यः सिद्ध्यतेरर्थः, तत्रापि पारलौकिक इतीदं वचनं न कृतार्थं स्यात्(), तदा पारम्पर्येणापि यः परलोकार्थस्तत्र व्याप्रियेत&ndash;मा भूद्वचनवैयथ्र्यमिति। इदं तु ज्ञानविशेषे साक्षात्? परलोकार्थे सिध्यत्यर्थे चरितार्थम्(), ततो नोत्सहत एवंविधविषयमवगाहितुम्()। न शक्नोत्येवम्प्रकारे विषये नि,#एधः प्रवर्त्तितुमित्यर्थः।
 अथ सिद्ध्यतेः श्यना निर्देशः किमर्थः, न सिधेरित्येवोच्येत, एवं हि लघु सूत्रं भवति? इत्याह&ndash;<code>सिद्ध्यतेः</code> इत्यादि॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.1\/6.1.13.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.13";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.14\",\"Previous\":\"6.1.12\",\"अकारादिक्रमसङ्ख्या\":3501,\"कौमुदीक्रमसङ्ख्या\":1003,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रसारणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ष्यङः सम्प्रसारणं पुत्रपत्योस्तत्पुरुषे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.1/6.1.13.md">Edit 6.1.13!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.13";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.14\",\"Previous\":\"6.1.12\",\"अकारादिक्रमसङ्ख्या\":3501,\"कौमुदीक्रमसङ्ख्या\":1003,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रसारणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ष्यङः सम्प्रसारणं पुत्रपत्योस्तत्पुरुषे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.13 संप्रसारणं पुत्रपत्योस्तत्पुरुषे
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>संप्रसारणस्य दीर्घ इति। <code>ढ्रलोपे</code> इत्यतस्तदनुवृत्तेरिति भावः। उत्तरपदे इति। <code>अलुगुत्तरपदे</code> इति तदधिकारादिति भावः। कौमुदगन्ध्यायाः पुत्र इति। विग्रहवाक्यमिदम्। कुमुदगन्ध इव गन्धो यस्य स कुमुदगन्धिः। <code>सप्तम्युपमानपूर्वपदस्य बहुव्रीहिर्वाच्यो वा चोत्तरपदलोपः</code> इति बहुव्रीहिः, कुमुदगन्धशब्दे पूर्वखण्डे उत्तरस्य गन्धशब्दस्य लोपश्च। <code>उपमानाच्चे</code>तीत्त्वम्। कुमुदगन्धेरपत्यं स्त्रीत्यर्थे तस्यापत्यमित्यण्। <code>अणिञोरनार्षयो</code>रिति तस्य ष्यङादेशः। <code>यस्येति चे</code>तीकारलोपः। आदिवृद्धिः। <code>यङ्श्चाप्। कौमुदगन्ध्याशब्द इति भावः। कौमुदगन्ध्यायाः पुत्र इति। षष्ठीसमासः। सुब्लुकि</code>कौमुदगन्ध्या-पुत्र<code>इति स्थिते ष्यङः संप्रसारणेन यकारस्य इकारः। तस्य, तदुत्तराऽऽकारस्य च</code>संप्रसारणाच्चे<code>ति पूर्वरूपेण इकारे</code>संप्रसारणस्ये<code>ति दीर्घे</code>कौमुदगन्धीपुत्र<code>इति रूपमिति भावः।</code>हलः<code>इति दीर्घस्य तु नात्र प्रसक्तिः, संप्रसारणात् पूर्वस्य हलः संप्रसारमनिमित्तनिरूपिताङ्गावयवत्वाऽभावात्।कौमुदगन्धीपतिरिति। कौमुदगन्ध्यायाः पतिरिति विग्रहः। पूर्ववत्प्रक्रिया।</code>इको ह्रस्वोऽङ्यो गालवस्ये<code>ति पाक्षिकं ह्रस्वम#आशङ्क्याह--व्यवस्थितविभाषया ह्रस्वो नेति। अत्र तु व्याख्यानमेव शरणम्। स्यादेतत्। करी?षं--गोमहिषादिषुरीषम्, करीषगन्ध इव गन्धो यस्य सः करीषगन्धिः, तस्यापत्यं स्त्री--कारीषगन्ध्या, परमा चासौ कारीषगन्ध्या च परमकारीषगन्ध्या, तस्याः पुत्रः परमकारीषगन्धीपुत्र इत्यत्रापि ष्यङः संप्रसारणं, तस्य दीर्घश्चेति स्थितिः। अत्र संप्रसारणं दुर्लभम्। ष्यङः करीषगन्धिशब्दादेव विहितत्वेन परमकारीषगन्ध्याशब्दस्य पूर्वपदस्य ष्यङन्तत्वाऽभावात्प्रत्ययग्रहणे यस्मात्स विहितस्तदादेस्तदन्तस्य च ग्रहणादित्यत आह--स्त्रीप्रत्यये चेति। ष्यः स्त्रियां विहितत्वात्स स्त्रीप्रत्ययः। ततश्च</code>स्त्रीप्रत्यये चानुपसर्जने ने<code>ति परभाषया तदादिनियमाऽभावात्परमकारीषगन्ध्याशब्दोऽपि ष्यङन्त एवेति तत्र संप्रसारणे दीर्घे च</code>परमकारीषगन्धीपुत्र<code>इति रूपमिति भावः। इयं परिभाषा</code>ष्यङः संप्रसारण<code>मिति प्रकृत सूत्रेभाष्ये पठिता। तत्रानुपसर्जनग्रहणस्य प्रयोजनमाह--उपसर्जने त्विति। कारीषगन्ध्यामतिक्रान्तः अतिकारीषगन्ध्यः,</code>अत्यादयः<code>इति समासे, उपसर्जनह्यस्वः। तस्य पुत्रोऽतिकारीषगन्ध्यपुत्रः। अत्र</code>स्त्रीप्रत्यये तदादिनियमो ने`ति निषेध#ओ न भवति, अनुपसर्जन एव स्त्रीप्रत्यये तस्य निषेधस्य प्रवृत्तेः। ष्यङ् त्वयं स्त्रीप्रत्ययोऽत्र उपसर्जन एव। अतस्तत्र तदादिनियमसत्त्वादतिकारीषगन्ध्यशब्दो नैव ष्यङन्त इति न संप्रसारणमिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

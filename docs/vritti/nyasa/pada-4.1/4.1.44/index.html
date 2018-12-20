@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.44.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.44";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.45\",\"Previous\":\"4.1.43\",\"अकारादिक्रमसङ्ख्या\":3316,\"कौमुदीक्रमसङ्ख्या\":502,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वोतो गुणवचनात्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.44.md">Edit 4.1.44!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.44";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.45\",\"Previous\":\"4.1.43\",\"अकारादिक्रमसङ्ख्या\":3316,\"कौमुदीक्रमसङ्ख्या\":502,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीष्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वोतो गुणवचनात्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.44 वोतो गुणवचनात्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>गुणमुक्तवान् गुणवचनः</code> इति। भूते काले ल्युटो विधानात्। स पुनर्यः प्राग् गुणमभिधाय पश्चान्मतुब्लोपादभेदोपचाराद्वा तद्वद्द्रव्यमभिधत्ते स वेदितव्यः। <code>पट्वी, मृद्वी</code> इति। अत्र पटुत्वं मृदुत्वञ्च यताक्रमं गुणमभिधाय पटुमृदुशब्दौ तद्वति द्रव्ये वत्र्तेते इति गुणवचनौ भवतः।
 <code>शुचिः</code> इति। शुचिशब्दः शुचित्वे गुणे वर्त्तित्वा द्रव्ये वत्र्तत इति गुणवचनः, न तूकारान्तः। <code>आखुः</code> इति। जातिवचनोऽयम्, न गणवचनः।
 <code>गुणवचनान्ङीबाद्युदात्तार्थम्</code> इति। गुणवचनान्ङीब्विधेयः, न ङीष्। स्वरे विशेषः। किमर्थम्? आद्युदात्तार्थम्। अन्तोदात्तेषु <code>उदात्तयणो हल्पूर्वात्</code> (6.1.168) इत्युदात्तत्वमीकारस्य विधीयत इति नास्ति विशेषो ङीब्ङीषोः। आद्युदात्तेषु तु ङीबनुदात्त एवावतिष्ठते, तस्मात् तदर्थं ङीब्विधेयः। ननु च ङीष् प्रकृतः, तत् कथं ङीप् शक्यते विधातुम्? नैष दोषः; ङीबेव ह्रत्र मण्डूकप्लुतिन्यायेनानुवत्र्तते, न ङीष्; अस्वरितत्वात्। <code>वस्वी</code> इति। <code>वस निवासे</code> (धा।पा।१९४२) <code>भृमृशीतृचरित्सरितनि{धनि-नास्ति-द।उ।} धनिमिमस्जिभ्य उः</code> (द।उ।१।९२) इति वत्र्तमाने <code>धान्ये नित्</code> (द।उ।१।९४) इति च शृस्वृस्निहित्रप्यसिवसिहनिक्लिदिवन्धिमनिभ्यश्च<code>(द।उ।१।९५) इत्युप्रत्ययः, निच्च, नित्त्वादाद्यदात्तत्वं भवति। गुणवचनश्चायं वसुशब्दः, वसुत्वे गुणे वर्त्तित्वा तद्वति द्रव्ये वत्र्तत इति कृत्वा। पटुशब्दोऽप्याद्युदात्तत्वान्ङीपं प्रोजयति।</code>अट पट गतौ<code>(धा।पा।२९६,२९७), हेतुमण्णिच्,</code>फलिपाटिनमिमनिजनां गुक् पटिनाकिधतश्च<code>(द।उ।१।१०३) इत्युप्रत्ययः, पाटेश्च पटिरादेशः,</code>धान्ये नित्<code>(द।उ।१।९४) इत्यनुवृत्तेर्नत्वादाद्युदात्तत्वम्। मृदुशब्दश्च प्रत्ययस्वरेणान्तोदात्त इति, तत्र ङीपो ङीषो वा विशेषो नास्ति।</code>म्रद मर्दने<code>(धा।पा।७६७),</code>कुभ्र्रश्च<code>(द।उ।१।१०७) इत्यतः कुरित्यनुवत्र्तमाने</code>प्रथिम्रदिभ्रस्जां सम्प्रसारणं च<code>(द।उ।१।११३) इति कुप्रत्ययः, सम्प्रसारणं च भवति।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

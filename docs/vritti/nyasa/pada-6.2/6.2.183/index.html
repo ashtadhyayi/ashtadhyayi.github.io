@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.183.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.183";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.184\",\"Previous\":\"6.2.182\",\"अकारादिक्रमसङ्ख्या\":2542,\"कौमुदीक्रमसङ्ख्या\":3917,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रादस्वाङ्गं संज्ञायाम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.183.md">Edit 6.2.183!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.183";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.184\",\"Previous\":\"6.2.182\",\"अकारादिक्रमसङ्ख्या\":2542,\"कौमुदीक्रमसङ्ख्या\":3917,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रादस्वाङ्गं संज्ञायाम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.183 निरुदकादीनि च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>निरुदकम्()</code> इति। निष्क्रान्तमुदकमस्मादिति बहुव्रीहिः, निष्क्रान्तमुदकादिति वा प्रादिसमासः। उदकं कायतीति <code>आतोऽनुपसर्गे कः</code> (3.2.3), <code>उदकस्योदः संज्ञायाम्()</code> (6.3.56) इत्युदभावः। तेनोदकमन्तोदात्तम्()। <code>निरुपलम्()</code> इति। <code>विटपविष्टपविशिपोलपाः</code> (द।उ।७।१२) इत्युपलशब्दोऽन्तोदात्तो निपात्यते। <code>निरुपलमित्यन्ये</code> इति। उपपूर्वाल्लातेः <code>आतश्चोपसर्गे</code> (3.1.136) इति कः। तेनोपलशब्दस्थाथादि (6.2.143) स्वरेणाद्युदात्तः। <code>निर्मक्षिकम्(), निर्मशकमित्यदीनाम्()</code> इति। मशकमक्षिकाशब्दा(वा)द्युदात्तान्तोदात्तौ। तत्र हि <code>अथादिः, प्राक्(), शकटेः</code>(फि।सू।२।२४), <code>अथ द्वितीयः प्रादीषात्()</code> (फि।सू।३।५०) [<code>द्वितीयं</code>&ndash;फि।सू।] इति वर्तते। <code>एषाम्()</code> इत्यादि। यदि प्रादिसमासस्तदा निर्गतमुदकं निर्गतं वोदकादिति विग्रहः। यदा तु बहुव्रीहिस्तदा निर्गतमुदकमस्मादिति। अथाव्ययीभावोऽप्येषां कस्यान्न भवति? इत्याह&ndash;<code>अव्ययी भावे तु</code> इत्यादि। बहुव्रीहिप्रादिसमासयोस्तु समासान्तोदात्तत्वेन न सिध्यति। तथा हि&ndash;<code>बहुव्रीहौ प्रकृत्या पूर्वपदम्()</code> (6.2.1) इति समासस्वरापवादः पूर्वपदप्रकृतिस्वरो बहुव्रीहावुक्तः। प्रादिसमासेऽपि <code>तत्पुरुषे तुल्यार्थ</code> (6.2.2) इत्यादिना।
 <code>निष्कालकः</code> इति। कालशब्दः कन्प्रत्ययान्तत्वादाद्युदात्तः। <code>निष्कालिकः</code> इति। निष्क्रान्तः कालिकाया इति प्रादिसमासः। कालीति जानपदादिसूत्रेण (4.1.42) [<code>द्वितीयं</code>&ndash;फि।सू।] ङीषान्तत्वादन्तोदात्तः, ततः स्वार्थिके कनि कृतेऽप्याद्युदात्त एव भवति।
 <code>निष्पेषः</code> इति। <code>विष्लृ सञ्चूर्णने</code> (धा।पा।१४५२) अस्माद्घञ्()। तेन पेषशब्द आद्युदात्तः। <code>तरीं पाति</code> इति। <code>आतोऽनुपसर्गे कः</code> (3.2.3) इति तरीपशब्दोऽन्तोदात्तः। कुत्सितस्तरीप इति कुत्सितग्रहणेन दुस्तरीपशब्दे दुःशब्दः कुत्सायां वर्तत इति दर्शयति। <code>निस्तरीप इति केचित्()</code> इति। ते च निर्गतस्तरीप इति विगृह्र प्रादिसमासं कुर्वन्ति। <code>अपरे निस्तरीक इति</code> इति। पठन्तीति सम्बन्धः।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

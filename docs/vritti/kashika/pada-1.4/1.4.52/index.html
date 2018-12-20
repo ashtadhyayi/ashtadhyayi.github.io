@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-1.4\/1.4.52.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.52";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.53\",\"Previous\":\"1.4.51\",\"अकारादिक्रमसङ्ख्या\":1260,\"कौमुदीक्रमसङ्ख्या\":540,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्म कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गतिबुद्धिप्रत्यवसानार्थशब्दकर्माकर्मकाणामणि कर्ता\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-1.4/1.4.52.md">Edit 1.4.52!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.52";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.53\",\"Previous\":\"1.4.51\",\"अकारादिक्रमसङ्ख्या\":1260,\"कौमुदीक्रमसङ्ख्या\":540,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्म कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गतिबुद्धिप्रत्यवसानार्थशब्दकर्माकर्मकाणामणि कर्ता\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.52 गुतिबुद्धिप्रत्यवसानार्थशब्दकर्माकर्मकाणाम् अणि कर्ता स णौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अर्थशब्दः प्रत्येकम् अभिसम्बध्यते। गत्यर्थानां बुद्ध्यर्थानां प्रत्यवसानार्थानम् च धातूनां, तथ शब्दकर्मकाणाम् अकर्मकनाम् च अण्यन्तानाम् यः कर्ता, स ण्यन्तानां कर्मसंज्ञो भवति। गच्छति माणवको ग्रामम्, गमयति माणवकं ग्रामम्। याति माणवको ग्रामम्, यापयति माणवकं ग्रामम्। गत्यर्थेषु नीवह्रोः प्रतिषेधो वक्तव्यः। नयति भारम् देवदत्तः, नाययति भारम् देवदत्तेन। वहति भारम् देवदत्तः, वाह्यति भारं देवदत्तेन। वहेरनियन्तृकर्तृकस्य इति वक्तव्यम्। इह प्रैत्षेधो मा भूत्, वहन्ति यवान् बलीवर्दाः, वाहयति यवान् बलीवर्दानिति। बुद्धिः बुध्यते माणवको धर्मम्, बोधयति माणवकं दह्य्मम्। वेत्ति माणवको धर्मम्, वेदयति माणवकं धर्मम्। प्रत्यवसानम् अभ्यवहारः। भुङ्क्ते माणवक ओदनम्, भोजयति माणवकम् ओदनम्। अश्नाति मानवक ओदनम्, आशयति माणवकमोदनम्। आदिखाद्योः प्रतिशेधो वक्तव्यः। अत्ति माणवक ओदनम्, आदयते माणवकेन ओदनम्। खादति माणवकः, खादयति माणवकेन। भक्षेरहिंसार्थस्य प्रतिषेधो वक्तव्यः। भक्षयति पिण्डीं देवदत्तः, भक्षयति पिण्डीं देवदत्तेन इति। अहिंसार्थस्य इति किम्? भक्षयन्ति बलीवर्दाः सस्यम्, भक्षयन्ति बलीवर्दान् सस्यम्। शब्दकर्मणाम् अधीते मानवको वेदम्, अध्यापयति माणवकं वेदम्। पठति माणवको वेदम्। पाठयति माणवकं वेदम्। अकर्मकाणाम् आस्ते देवदत्तः, आसयति देवदत्तम्। शेते देवदत्तः, शाययति देवदत्तम्। एतेषाम् इति किम्? पचत्योदनं देवदत्तः, पाचयत्योदनं देवदत्तेन इति। अण्यन्तानाम् इति किम्? गमयति देवदत्तो यज्ञदत्तम्, तम् अपरः प्रयुङ्क्ते, गमयति देवदत्तेन यज्ञदत्तं विष्णुमित्रः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

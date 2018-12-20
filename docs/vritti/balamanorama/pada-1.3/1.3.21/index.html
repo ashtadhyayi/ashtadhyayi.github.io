@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-1.3\/1.3.21.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.3.21";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.3.22\",\"Previous\":\"1.3.20\",\"अकारादिक्रमसङ्ख्या\":1210,\"कौमुदीक्रमसङ्ख्या\":2687,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रीडोऽनुसम्परिभ्यश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.3/1.3.21.md">Edit 1.3.21!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.3.21";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.3.22\",\"Previous\":\"1.3.20\",\"अकारादिक्रमसङ्ख्या\":1210,\"कौमुदीक्रमसङ्ख्या\":2687,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्रीडोऽनुसम्परिभ्यश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.3.21 क्रीडोऽनुसंपरिभ्यश्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>क्रीडोऽनु। चादाङ इति। तथा च अनु सम परि आङ् एभ्यः परस्मात् क्रीडधातोरात्मनेपदमित्यर्थः। <code>अनोः कर्मपर्वचनीयान्ने</code>ति वार्तिकम्। तदिदं न्यायसिद्धमित्याह&ndash; उपसर्गेण समेति। <code>समोऽकूजने</code> इति वार्तिकम्। समः परस्मादकूजने विद्यमानात् क्रीडेरात्मनेपदमित्यर्थः। कूजने तु संक्रीडति चक्रमिति। कूजतीत्यर्थः। आगमेः क्षमायामिति। <code>आत्मनेपद</code>मिति शेषः। वर्तिकमिदम्। ण्यन्तस्येदं ग्रहणमिति। भाष्ये ण्यन्तस्यैवोदाहरणादिति भावः। आगमयस्व तावदिति। कंचित्कालं सहस्वेत्यर्थः। आङुपसर्गवशाद्गमधातुः क्षमायां वर्तते। <code>हन्त्यर्थाश्चे</code>ति चुरादिगणसूत्रेण स्वार्थे णिच्। चुरादेराकृतिगणत्वाद्वा। मा त्वरिष्ठा इति। फलितार्थकथनम्। <code>शिक्षेर्जिज्ञासाया</code>मितय्पि वार्तिकम्। धुनुषि शिक्षते इति। वैषयिके आधारे सप्मती। शकिः सन्नन्तः। <code>सनि मीमा</code> इति इस्। अभ्यासलोपश्च। तदाह&ndash; धनुर्विषये इत्यादि। <code>सिक्ष विद्योपादाने</code> इत्यस्य तु नेह ग्रहणम्, अनुदात्तेत्त्वादेव सिद्धेरिति भावः। कथमिति। भूभृतां पतिं किमु न नाथसे = न याचसे इत्यर्थः। आशिषोऽप्रतीतेः कथमात्मनेपदमित्यर्थः। नाधसे इति पाठ�मिति. तवर्गचतुर्थान्तोऽयम्। <code>आशिषि नाथः</code> इति नियमस्तु तवर्गद्वितीयान्तस्यैवेति भावः। <code>हरतेर्गते</code>त्यादि वार्तिकम्। <code>आत्मनेपद</code>मिति शेषः। गतं प्रकार इति। वृत्तमित्यर्थः। ताच्छील्यं = स्वभावानुसरणम्। गतिताच्छील्यमिति यावत्। गतेति पाठे भावे क्तः। पैतृकम�आआ इति। पैतृकं वृत्त�आआः स्वभावादनुसरन्तीत्यर्थः। मातृकं गाव इति। <code>अनुहरन्ते</code> इत्यनुषज्यते। मातुरनुहरतीति। अनुकरोतीत्यर्थः। अत्र सादृश्यमात्रं विवक्षितं, न तु गतिताच्छील्यमिति भावः। किरतेरिति वार्तिकम्। हर्षः = प्रमोदः, जीविका जीवनोपायो, भक्षणम्, कुलायकरणम् = आश्रयसंम्पत्तिः, एषु कृ?धातोरात्मनेपदमित्यर्थः। ननु कधातोर्विक्षेपार्थकस्य कथमेषु वृत्तिरित्यत आह&ndash; हर्षादयो विषया इति। धात्वर्थत्वाऽभावेऽपि पदान्तरसमभिव्याहारगम्या इत्यर्थः। तत्रेति। तेषु हर्षादिष्वित्यर्थः। कारणमिति। तथा च हर्षमूलकत्वं विक्षेपस्य लभ्यते इति भावः। इतरे इति। जीविकाकुलायकरणे विक्षेपस्य साध्ये इति लभ्यते। हर्षादीनामेवं विधविषयत्वे सत्येवात्मनेपदमिति फलितम्, भाष्ये तथैवोदाह्मतत्वादिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

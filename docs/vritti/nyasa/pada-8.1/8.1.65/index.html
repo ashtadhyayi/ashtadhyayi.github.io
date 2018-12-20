@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.1\/8.1.65.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.1.65";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.1.66\",\"Previous\":\"8.1.64\",\"अकारादिक्रमसङ्ख्या\":897,\"कौमुदीक्रमसङ्ख्या\":3972,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एकान्याभ्यां समर्थाभ्याम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.1/8.1.65.md">Edit 8.1.65!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.1.65";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.1.66\",\"Previous\":\"8.1.64\",\"अकारादिक्रमसङ्ख्या\":897,\"कौमुदीक्रमसङ्ख्या\":3972,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एकान्याभ्यां समर्थाभ्याम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.1.65 एकान्याभ्यां समर्थाभ्याम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>समर्थाभ्याम्()</code> इति। नायमस्यार्थः&ndash;तिङन्तेन संगताभ्यामिति; अन्यथा ह्रस्योपादानमनर्थकमेव स्यात्(), <code>चदायोगे प्रथमा</code> (8.1.59) इत्यतो योगग्रहणानुवृत्तेरेवास्यार्थस्य लब्धत्वात्()। तस्मात्? समानार्थाभ्यामित्यस्यायमर्थः। सा च समानार्थता तिङन्तापेक्षया भवतीति परस्परापेक्षया वेदितव्या। <code>एका जिन्वति</code> इति। जयतेर्लट्(), <code>व्यत्ययो बहुलम्()</code> (3.1.85) इति श्नुः, <code>बहुलं छन्दसि</code> (7.1.8) इति झेरदादेशः, <code>हुश्नुवोः सार्वधातुके</code> (6.4.87) इति यणादेशः। अनिघातपक्षे सार्वधातुकस्वरेण मध्योदात्तमेतत्()। सतिशिष्टादपि हि विकरणस्वरात्? सार्वधातुकस्वरो बलीयानिष्यते। <code>अत्ति</code> [<code>अन्ति</code>&ndash;प्रांउ।पाठः] इति। अदेः <code>खरि च</code> (8.4.54) इति चत्र्वम्()। अनिघातपक्षे धातुस्वरेणादाद्युत्तमेतत्()। <code>चाकशीति</code> इति। <code>काशृ दीप्तौ</code> (धा।पा।६४७), अस्य यङ्लुगन्तस्य रूपमेतत्()।
 <code>उपातिष्ठत्()</code> इति। तिष्ठतेर्लङ पाध्रादिसूत्रेण (7.3.78) तिष्ठादेशः। <code>एक इति संख्यापदमेतत्()</code> इति। अनेन प्रत्युदाहरण एकशब्दस्यान्यशब्देनासमानार्थतां दर्शयति। किं पुनः कारणमन्यशब्देनासमानार्थेन योगेन प्रत्युदाहरणं न दर्शितम्()? इत्याह&ndash;<code>एकशब्दस्य व्यवस्थार्थं च</code> इत्यादि। चशब्दोऽवधारणार्थः। अनेकार्थसम्भवेऽरह्थान्तराद्व्यवच्छिस्यैकत्रैवार्थे व्यवस्थानं व्यवस्था। एकशब्दस्य व्यवस्थार्थमेव समर्थग्रहणम्(); नान्यशब्दस्य व्यवस्थार्थम्()। न हि तस्यानेकार्थः सम्भवति। तस्मादेकशब्दस्य व्यवस्थार्थं समर्थग्रहणं कृतम्()। तेनैवैकशब्देनासमर्थेन योगे युक्तं प्रत्युदहरणमुपदर्शयितुम्(), नान्यशब्देनेत्यभिप्रायः। कस्मात्? पुनरेकशब्दव्यवस्थार्थमेव समर्थग्रहणं कृतम्()? इत्याह&ndash;<code>व्यभिचारित्वात्? तस्य</code> इति। एकशब्दो हि यत्रार्थेऽन्यत्रादौ वृष्टस्तं व्यभिचरति? तथा हि&ndash;स क्वचिदन्यशब्दस्यार्थे दृश्यते, क्वचित्प्राथम्ये, क्वचित्? संख्यायाम्(), तस्मादसौ व्यभिचारी। अनवस्थित इत्यर्थः। तद्व्यवस्थार्थं समर्थग्रहणं युक्तम्(), नान्यशब्दव्यवस्थार्थम्(); तस्याख्यभिचारित्वात्()। न ह्रन्यशब्दो यत्रार्थे दृष्टस्ततोऽन्यत्र वत्र्तते। नन#उ च व्यवस्थाया एतत्फलम्()&ndash;अन्यशब्दसमानार्थस्यैकशब्दस्य ग्रहणं यथा स्यादिति, एतच्चान्तरेणापि व्यवस्थाकारणं समर्थग्रहणमन्यशब्दसाहचर्यादेव लभ्यते, तदनर्थकं समर्थग्रहणम्()? नैतदस्ति; <code>निपातैर्यद्यदि</code> (8.1.30) इत्यादौ सूत्रे निपातग्रहणेन ज्ञापितम्()&ndash;साहचर्यमिह प्रकरणे व्यवस्थाकारणं न भवतीति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

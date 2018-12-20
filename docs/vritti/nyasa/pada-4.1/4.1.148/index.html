@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.148.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.148";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.149\",\"Previous\":\"4.1.147\",\"अकारादिक्रमसङ्ख्या\":3284,\"कौमुदीक्रमसङ्ख्या\":1172,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तस्यापत्यम्\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"वृद्धाट्ठक् सौवीरेषु बहुलम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.148.md">Edit 4.1.148!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.148";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.149\",\"Previous\":\"4.1.147\",\"अकारादिक्रमसङ्ख्या\":3284,\"कौमुदीक्रमसङ्ख्या\":1172,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तस्यापत्यम्\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"वृद्धाट्ठक् सौवीरेषु बहुलम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.148 वृद्धाट्ठक्सौवीरेषु बहुलम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>सौवीरेष्विति प्रकृतिविशेषणम्</code> इति। सौवीरेषु यद्()वृद्धं सौवीरगोत्राभिधायि यद्()वृद्धमित्यर्थः। <code>भागवित्तेःट इत्यादि। भगवित्तस्यापत्यं गोत्रम्।</code>अत इञ<code>(4.1.95) , तदन्तात् ठक्--</code>भागवित्तिकः<code>।</code>भागवित्तायनः<code>इति।</code>यञिञोश्च<code>(4.1.101) इति फक्। तृणादिबिन्दोरपत्यमौत्सर्गिकोऽण् तार्णबिन्दवः, ततष्ठक्--</code>तार्णबिन्दविकः<code>। पूर्वसूत्रे ठक् चानुकृष्ट इतीह नानुवत्र्तत इति पुनष्ठग्ग्रहणं ण्सय निवृत्त्यर्थम्। वापूर्वकं हि ठग्ग्रहणं णप्रत्ययेन सम्बद्धम्, अतस्तदनुवृत्तौ तस्याप्यनुवृत्तिः स्यात्।
 </code>भागपूर्वपदो वृत्तिः<code>इत्यादि। येभ्योऽनेन सूत्रेण ठगिष्यते, त एतेन श्लोकेन परिगण्यन्ते।</code>भाग<code>इत्येतत् पूर्वपदं यस्य वृत्तिशब्दस्य स तथोक्तः। अयं तावदेको भागवित्तिः, द्वितीयस्तार्णबिन्दवः, तृतीयस्त्वाकशापेयः-- य एते त्रयः शब्दाः ,गोत्रे ठग्बहुलं तत इति। सौवीरगोत्रवचनान्तात् प्रातिपदिकाद्बहुलं यष्ठगुच्यते स ततस्तेभ्य एव भागवित्तिप्रभृतिभ्यस्त्रिभ्यो भवति, नान्येभ्य इत्यर्थः।
 अथ वृद्धग्रहणं किमर्थम्, यावता पूर्वसूत्राद्गोत्रग्रहणमनुवत्र्तते, सौवीरग्रहणेनैव विशेषयिष्यामः; यच्चसौवीरगोत्रे वत्र्तते प्रातिपदिकं भागवित्त्यादिकं तद्वृद्धमेव, ततो निवृत्त्यभावादपार्थकं वृद्धग्रहणम्? इत्याह --</code>वृद्धग्रहणम्<code>इत्यादि। तद्धि गोत्रग्रहणं स्त्रिया विशेषणम्, अतस्तस्मिन्ननुवत्र्तमाने विशेष्यायाः स्त्रिया अनुवृत्तिः स्यात्। तस्मात् तन्निदृत्त्यर्थं वृद्धग्रहणम्। गोत्रग्रहणमेवानुवर्तिष्यते; तस्यैव स्वरितत्वात्, न स्त्रीति-- एतद्व्याख्येयं भवति। व्याख्यानाच्च लघु वृद्धग्रहणमेव।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

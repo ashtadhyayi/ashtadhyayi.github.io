@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-2.4\/2.4.47.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.4.47";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.4.48\",\"Previous\":\"2.4.46\",\"अकारादिक्रमसङ्ख्या\":3592,\"कौमुदीक्रमसङ्ख्या\":2615,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"धात्वादेशः\",\"विषयः २\":\"आर्धधातुके\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सनि च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.4/2.4.47.md">Edit 2.4.47!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.4.47";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.4.48\",\"Previous\":\"2.4.46\",\"अकारादिक्रमसङ्ख्या\":3592,\"कौमुदीक्रमसङ्ख्या\":2615,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"धात्वादेशः\",\"विषयः २\":\"आर्धधातुके\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सनि च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.4.47 सनि च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सनि च। <code>इणो गा लुङी</code>त्यत इण इति, <code>णौ गमिरबोधने</code> इत्यतो <code>गमिरबोधने</code> इति चानुवर्तते। तदाह&ndash; इणो गमिरित्यादि। जिगमिषतीति। <code>गमे</code>रिति इट्। अत्र <code>अज्झनगमा</code>मिति दीर्घो स्थिते <code>अजादेर्द्वितीयस्ये</code>ति सनो द्वित्वे अभ्यासेत्त्वम्। प्रतिना सवर्णदीर्घे सकारद्वयस्यापि षत्वमिति भावः। <code>इक स्मरणे</code> इत्यस्याह&ndash; इण्वदिक इति। अनेन वार्तिकेन इक्धातुरिण्वद्भवतीत्यर्थः। ततस्च <code>सनि चे</code>ति गमिरादेश इति भावः। कर्मणि तङिति। इण्धातोरिग्धातोश्च सन्नन्तात्कर्मणि लटस्तङिर्त्थः। <code>भावकर्मणो</code>रित्यनेनेति भावः। परस्मैपदेष्विति। <code>गमेरिट्परस्मैपदेषु</code> इत्युक्तेस्तङि नेडित्यर्थः। झलादाविति। <code>अज्झने</code>ति झलादौ सनि वहितो दीर्घ इत्यर्थः। जिगांस्यते इति। गन्तुमिष्यते इत्यर्थः। इणो रूपम्। अधिजिगांस्यते इति। स्मर्तुमिष्यत इत्यर्थः। इको रूपम्। जिगंस्यते इति। गम्लृधातोः सन्नन्तात्कर्मणि तङि रूपम्। गमेरजादेशत्वाऽभावान्न दीर्घः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

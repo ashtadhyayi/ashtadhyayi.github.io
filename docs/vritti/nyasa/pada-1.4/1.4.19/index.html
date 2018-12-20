@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.4\/1.4.19.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.19";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.20\",\"Previous\":\"1.4.18\",\"अकारादिक्रमसङ्ख्या\":1682,\"कौमुदीक्रमसङ्ख्या\":1896,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"भम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तसौ मत्वर्थे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.4/1.4.19.md">Edit 1.4.19!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.19";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.20\",\"Previous\":\"1.4.18\",\"अकारादिक्रमसङ्ख्या\":1682,\"कौमुदीक्रमसङ्ख्या\":1896,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"भम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तसौ मत्वर्थे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.19 तसौ मत्वर्थे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>तसौ</code> इति वर्णग्रहणम्। न च वर्णमात्रान्मत्वर्थीय सम्भति, अतः सामथ्र्यात् तदन्तविधिर्विज्ञायत इत्याह&ndash; <code>तकारान्तम्</code> इत्यादि। <code>मत्वर्थे प्रत्यये</code> इति व्यधिकरणे पदे; षष्ठीसमासः। मतोरर्थो मत्वर्थ इति, तत्र यो वत्र्तते प्रत्ययस्तस्मिन्नित्यर्थः। अथ वा- समानाधिकरणे पदे, मतुशब्देन साहचर्यान्मतुप्सहचरितार्थ उच्यते&ndash; णतुबर्थो यस्य तस्मिन्, न तु यस्मिन्निति मत्वर्थे प्रत्यय इति।
 अर्थग्रहणं कमतुपोऽन्यत्रापि यथा स्यात्; इतरथा हि मतावित्युच्यमाने मतावेव स्यात्; नान्येषु। मत्वर्थग्रहणे क्रियमाणे मतुपि न स्यात्; तस्यार्थविशेषणत्वात्। विशेषणस्य च कार्येण सम्बन्धानुपपत्तेः। न हि चित्रगुरानीयतामित्युक्ते विशेषणभूता गावोऽडप्यानीयन्ते, नैष दोषः; विशेषमपि क्वचित् कार्ये विशिष्यते, यथा हि&ndash; देवदत्तशालाया ब्राआहृणा आनीयन्तामित्युक्ते देवदत्तः शालायां विशेषणभूतो यदि ब्राआहृणो भवति तदा सोऽप्यानीयत एव। <code>उद()इआत्वान</code> इति। भत्वात् पदसंज्ञाभावे जश्त्वं सिध्यति। <code>झयः</code> (8.2.10) इति वत्वम्, <code>उगिदचाम्</code> (7.1.70) इति नुम्, <code>अत्वसन्तस्य चाधातोः</code> (6.4.14) इति दीर्घः। <code>पयस्वी, यशस्वी</code> इति। <code>अस्मायामेधारुआजो विनिः</code> (5.2.120) भत्वाद्रुत्वं न भवति। <code>इन्दरन्पूषार्यम्णां सौ</code> (6.4.12) इत्यनुवत्र्तमाने <code>सौ च</code> (6.4.13) इत्यनेन दीर्घः॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

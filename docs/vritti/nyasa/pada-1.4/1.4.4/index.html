@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.4\/1.4.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.5\",\"Previous\":\"1.4.3\",\"अकारादिक्रमसङ्ख्या\":2232,\"कौमुदीक्रमसङ्ख्या\":303,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"नदी\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नेयङुवङ्स्थानावस्त्री\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.4/1.4.4.md">Edit 1.4.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.5\",\"Previous\":\"1.4.3\",\"अकारादिक्रमसङ्ख्या\":2232,\"कौमुदीक्रमसङ्ख्या\":303,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"नदी\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नेयङुवङ्स्थानावस्त्री\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.4 नेयङुस्थानावस्त्री।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>इयङुवङस्थानौ यौ यू तौ नदीसंज्ञकौ न भवतः</code> इति। यूद्वारेण य्वन्तस्यायं प्रतिषेधो विज्ञायते, न केवलयोः; प्राप्त्यभावात्। न हि यू केवलावियङुस्तानौ स्त्र्याख्यौ विद्येते। <code>हि श्रीः, हे भ्रूः</code> इति। अत्र नदीसंज्ञाया अभावात् तन्निबन्धनः <code>अ म्बार्थनद्योह्र्यस्वः</code> (7.3.107) इति ह्यस्वो न भवति। <code>श्रिञ् सेवायाम्</code> (धा।पा।८९७) <code>क्विब्वचिप्रच्छिश्रिरुआउद्रुप्रुज्वां दीर्घौऽसम्प्रासारणञ्च</code>(वा। २८८) इति क्विपि दीर्घत्वे कृते श्रीरिति भवति। <code>भ्रमु अनवस्थाने</code> (धा।पा।१२०५) इत्यस्मात् <code>भ्रमेर्डूः</code> (द।उ।१।१७७) इति डूप्रत्यये टिलोपे भ्रुरिति भवति। उभयोः <code>अचि श्नुधातु</code> (6.4.77) इत्यादिनेयडुवङोर्विधानादियङुवङस्थानौ यू भवतः।
 <code>हे स्त्रि</code> इति। <code>ष्ट()ऐ स्त्यै शब्दसंधातयोः</code> (धा।पा।९११,९१०)। <code>आदेच उपदेशेऽशितित (6.1.44) इत्यात्त्वम्; स्त्यायतेर्ड्रट,</code>टेः<code>(6.4.155) इति टिभागलोपः;</code>लोपो व्योर्वलि<code>(6.1.64) इति वाकरस्य लोपः,</code>टिट्ढा<code>(4.1.15) इत्यादिना ङीप्। अत्र नदीसंज्ञायाः प्रतिषेधाभावात् ह्यस्वत्वं भवत्येव। स्त्रीशब्दस्य</code>स्त्रियाः<code>(6.4.79) इतीयङविधानादियङस्थान ईकारः।
 अथ स्थानग्रहणं किमर्थम्? इयङुवङस्थानयोः प्रतिषेधो यथा स्यादिति चेत्? न; यद्येतत् प्रयोजनमभिमतं स्यात्</code>इयङुवङोः<code>इत्येवं वाच्यम्। एवमप्ययमेवार्थः--- ईयङुवङोः सम्बन्धौ यौ यू तयोर्नदीसंज्ञा न भवतीति। कौ च तयोः सम्बन्धिनौ यू? यौ तयोः प्रकृतिभुतावियङुवङरस्थानाविति, अन्तरेणापि स्थानग्रहणमियङुवङस्थानयोः प्रतिषेधो विज्ञास्यते। इदं तर्हि स्थानग्रहणस्य प्रयोजनम्-- यत्रेयङ्वङोः स्थितिरभिनिवृत्तिस्तत्र प्रतिषेधो यथा स्यात्। यत्र त्वपवादेन तयोर्बाधस्तत्र मा भूदिति-- आध्यै, वर्षाभ्वै इति।</code>ध्यै चिन्तायाम्<code>(धा।पा।९०८)</code>अन्यभ्योऽपि दृश्यते<code>(3.2.178) इति क्विप्; सम्प्रसारणञ्च। सम्प्रसारणन्तु दृशिग्रहणाल्लभ्यते। तथा हि तत्रैव दृशिग्रहणं विध्यन्तरोपसंग्रहार्थम्। क्वचिद्दीर्घः, क्वचिद्द्विर्वचनमित्युक्त्वा</code>ध्यायतेः सम्प्रसारणञ्च<code>(वा।२९२) इति वक्ष्यति। कृतसम्प्रसारणस्यैव चतुर्थ्येकवचने</code>एरनेकाचः<code>(6.4.82) इत्यादिना यणादेशः। वर्षाभूशब्दस्यापि</code>वर्षाभ्वश्च` (6.4.84) इति।</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

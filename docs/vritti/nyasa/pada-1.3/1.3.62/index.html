@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.3\/1.3.62.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.3.62";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.3.63\",\"Previous\":\"1.3.61\",\"अकारादिक्रमसङ्ख्या\":2422,\"कौमुदीक्रमसङ्ख्या\":2734,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूर्ववत् सनः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.3/1.3.62.md">Edit 1.3.62!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.3.62";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.3.63\",\"Previous\":\"1.3.61\",\"अकारादिक्रमसङ्ख्या\":2422,\"कौमुदीक्रमसङ्ख्या\":2734,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूर्ववत् सनः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.3.62 पूर्ववत्सनः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>पूर्ववत्</code> इति। <code>तेन तुल्यं क्रिया चेद्वतिः</code> (5.1.114) इति वतिः।। पूर्वशब्दः सम्बन्धिशब्दत्वादवधिमपेक्षते। स चावधिः श्रुतत्वात्सन्नेव विज्ञायत इत्याह&ndash; <code>सनः पूर्वो यो धातुः</code> इति। यद्येवम्, अवधिभावोपगम एव सन्ग्रहणस्योपयुक्तत्वात्त सन्नन्तादात्मनेपदं भवतीति, न तत्रैतल्लभ्यते; कुतस्तर्हि स्यात्? धातुमात्रात्, नैतदस्ति; एवं ह्रात्मनेपदं परस्मैपदानुक्रमणमनर्थकं स्यात्। अथ प्रत्ययान्तात् स्यात्? एवमपि सन्ग्रहणमनर्थकं स्यात्, पूर्ववत् प्रत्ययादिति वाच्यं स्यात्। तस्मात् पत्र्यासन्नं सनं त्यक्त्वा न युक्त्वा न युक्ताऽन्यन्यस्याश्रुतस्य परिकल्पनेति सन्न्तादेव भवतीति विज्ञायते। <code>येन</code> इत्यादिना वत्यर्थमाचष्टे। <code>तदेव निमित्तम्</code> इति। अनुदात्तेत्वं ङित्त्वञ्च धात्वन्तरावस्थायामपि सन्नन्ताद्वचनसामथ्र्यान्निमित्तं भवति। <code>असिसिषते</code> इति। इटि कृते <code>अजादेर्द्वितीयस्य</code> (6.1.2) इति सिशब्दस्य द्विर्वचनम्। <code>निविविक्षते</code> इति। <code>विश प्रवेशने</code> (धा।पा।१४२४), पूर्ववत् कित्त्वषत्वकत्वानि। <code>आचिक्रंसते</code> इति। आत्मनेपदनिमित्तत्वात् <code>स्नुक्रमोरनात्मनेपदनिमित्ते</code> (7.2.36) इतीण् न भवति।
 <code>शिशत्सति</code>, मुमूर्षति<code>इति। अत्र सनो यः पूर्वो भागः, तस्यात्मनेपदनिमित्तत्वमस्ति; शीयते, म्रियत इत्यात्मनपददर्शनात्। तत आत्मनेपदेन भवितव्यमिति कस्यचिद्भ्रान्तिः स्यात्, अतस्तां निराकर्तुमाह--</code>इह न भवति<code>इत्यादि। किं कारणमित्याह--</code>न हि<code>इत्यादि। किं तर्हि?</code>शिदाद्यपि<code>इति। शिच्छब्देनात्र शिद्भावित्वं शित्सम्बन्धित्वञ्चोक्तम्। आदिशब्देन लुङलिङोग्र्रहणम्, तच्चेह नास्तीति न ह्रत्र सनः पूर्वभागस्य शिद्भावित्वं शित्सम्बन्धित्वं वास्ति; शित्प्रत्ययस्यास्मिन् विषयेऽत्यन्तासम्भवात्, नापि म्रियतेः परौ लुङलिङौ स्तः; तस्मान्नेह शदिम्रियत्योरात्मनेपदनिमित्तत्वमस्तीति न भवत्यात्मनेपदम्।
 इह तर्हि कस्मान्न भवति-- अनुचिकीर्षति, पराचिकीर्षतीति? करोतेर्हि गन्धनादिष्वर्थेष्वात्मनेपदं विहितम्, अतस्त्दविवक्षायां सनन्तादपि तेन भवितव्यमित्याह--</code>यस्य च<code>इत्यादि। गन्धनादिष्वर्थेषु पूर्वत्रासनन्तावस्थायाम्</code>अनुपराभ्यां कृञः<code>(1.3.79) इत्यनेन परस्मैपदविधानात् करोतेरात्मनेपदाभावः क्रियते। तस्मादाभ्यां सनन्तादप्यात्मनेपदनिमित्ताभावान्न भवति।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

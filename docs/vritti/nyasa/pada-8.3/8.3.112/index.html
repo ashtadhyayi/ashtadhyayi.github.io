@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.3\/8.3.112.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.112";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.113\",\"Previous\":\"8.3.111\",\"अकारादिक्रमसङ्ख्या\":3732,\"कौमुदीक्रमसङ्ख्या\":2640,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सिचो यङि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.112.md">Edit 8.3.112!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.112";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.113\",\"Previous\":\"8.3.111\",\"अकारादिक्रमसङ्ख्या\":3732,\"कौमुदीक्रमसङ्ख्या\":2640,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सिचो यङि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.112 न रपरसृपिसृजिस्पृशिस्पूहिसवनादीनाम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>रः परो यस्मादिति रपरः। <code>सृप्लृ गतौ</code> (धा।रा।९८३), <code>सृज विसर्गे</code> (धा।पा।१४१४), <code>स्पृश संस्पर्शे</code>, [संस्पर्शने&ndash;धा।पा।] <code>स्पृह ईप्सायाम्()</code> (धा।पा।१८७१) चुरादावदन्तः पठ()ते। सवनमादिर्येषामिति बहुव्रीहिः। <code>विरुआंसिकायाः</code> इति। <code>रुआन्सु अवरुआंसने</code> (धा।पा।७५४) अस्माद्विपूर्वात्? <code>रोयख्यायां ण्वुल्? बहुलम्()</code> (3.3.108) इति ण्वुल्()। <code>विरुआब्धः</code> इति। <code>रुआन्भु विश्रम्भे</code> <a href="धा।पा।७५७"><code>वि()आआसे</code>&ndash;धा।पा।</a>, <code>अनिदिताम्()</code> (6.4.24) इति न लोपः, <code>झषस्तथोर्थोऽधः</code> (8.2.40) इति धकारः, <code>झलां जश्? झशि</code> (8.4.52) इति भकारस्य बकारः। <code>विसृपः</code> इति। <code>सृपितृदोः कसुन्()</code> (3.4.17) इति कसुन्()। <code>विसर्जनात्()</code> इति। ल्युट्()। <code>दिविस्पृशम्()</code> इति। <code>स्पृशोऽनुदके क्विन्()</code> (3.2.58), <code>तल्पुरुषे कृति बहुलम्()</code> (6.3.13) इति सप्तम्या अलुक्()। <code>निस्यृहः</code> [निस्पृहम्()&ndash;काशिका] इति। स्पृहणं स्पुहः, <code>एरच्()</code> (3.3.56) इत्यच्(), णिलोपः, निर्गतः स्पृहो निःस्पृहः। <code>सवनेसवने</code> इति। सुनोतेर्ल्युट्(), सप्सम्येकवचनम्(), वीप्सायां द्विर्वचनम्()। <code>सूतेसूते</code> इति। <code>षूङ्? प्राणिगर्भविमोचने</code> (धा।पा।११३१) सुवतेर्वा, निष्ठा। <code>सोमेसोमे</code> इति। सुञित्येतस्मात्? <code>अर्त्तिस्तु</code> (द।उ।७।२६) इत्यादिना सोमशब्दः व्युत्पादितः। <code>सवनमुखेसवनमुखे</code> इति। सवनस्य मुखमिति षष्ठीसमासः। <code>किंसं किंसम्()</code> इति। <code>षो अन्तकर्मणि</code> (दा।पा।११४७), <code>आतोऽनुपसर्गे कः (3.2.3)। तत्र किमो कमारस्यानुस्वारे कृते</code>अयोगवहानामट्सूपदेशादङ्व्यवायेऽपि इति पूर्वपदस्थान्निमित्तात्? प्राप्तः। <code>अनुसवनमनुसवनम्()</code> [<code>अनुसवनमिति</code>&ndash;इति प्रांउ।पाठः] इति। ल्युडन्तमेतत्()। अश्यसनेव्र्युत्पत्तिर्गोसनिवत्()।
 अगा()आसनिग्रहणं किमर्थम्()? न ह्रत्र सकारस्य षत्वं प्राप्नोति, तथा हि पुर्वस्थादिण उत्तरस्य षत्वं प्राप्नोति, न चासाविण उत्तरः सकारः? इत्यत आह&ndash;<code>अ()आसनिग्रहणम्()</code> इत्यादि। किमेतज्ज्ञापनेन प्रयोजनम्()? इत्यत आह&ndash;<code>जलाषाहम्()</code>
 इत्यादि। क्वचित्? <code>विसंबिसम्(), मुसलमुसलम्()</code> इति पाठः। स्थाने द्विर्वचनपक्षे <code>आदेशप्रहत्यययोः</code> (८।३।५९) इत्यादेशसकारत्वात् प्राप्तस्य षत्वस्य प्रतिषेधो वक्तव्यः॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

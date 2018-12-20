@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.3\/8.3.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.5\",\"Previous\":\"8.3.3\",\"अकारादिक्रमसङ्ख्या\":206,\"कौमुदीक्रमसङ्ख्या\":137,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":110,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"रु, पूर्वस्य अनुनासिकः\",\"सूत्रम्‌\":\"अनुनासिकात्‌ परोऽनुस्वारः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.4.md">Edit 8.3.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.5\",\"Previous\":\"8.3.3\",\"अकारादिक्रमसङ्ख्या\":206,\"कौमुदीक्रमसङ्ख्या\":137,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":110,\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"रु, पूर्वस्य अनुनासिकः\",\"सूत्रम्‌\":\"अनुनासिकात्‌ परोऽनुस्वारः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.4 अनुनासिकात्? पोरऽनुस्वारः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अन्यशब्दोऽत्राध्याहार्यः</code> इति। असति ह्रन्यशब्दस्याध्याहरे परशब्दस्य धुतत्वात्? तदपेक्षयैवानुनासिकादित्येषा पञ्चमी स्यात्(); अन्यस्येह पञ्चमीहेतोरसम्भवात्()। ननु <code>तस्मादित्युत्तरस्य</code> (१।१।६७) उपस्थाने उत्तरशब्दापेक्षयैव पञ्चमौ स्यात्()? नैतदस्ति; यदि ह्रल्याः परिभाषाया इहोपस्थानं स्यात्? परग्रहणमनर्थकं स्यात्()। तस्मात्? परशब्दापेक्षयैव पञ्चम्या भवितव्यम्()। सा भवन्ती च <code>अन्यारादितरत्र्ते</code> (2.3.29) इत्यादिवा सूत्रेण परशब्दयोगे दिग्बृत्तिगा वा स्यात्(), अन्यार्थवृत्तिना वा? तत्र पूर्वस्मिन्? पक्षे रोः पूर्वस्मादनुनासिकादेव परोऽनुस्वारो विज्ञायेत, न च तस्मात्? पर इष्यते। इतर()स्मस्त्वयमर्थं आपद्येत&ndash;अनुनासिकात्? परो भवतदि, अनुनासिकादन्योऽनुस्चारो भवतीत्यर्थः। एवञ्च परग्रहणनर्थकं स्यात्(); न ह्रनुनासिकापेक्षयानुस्वरोऽन्यत्वं व्यभिरति। किञ्च&ndash;श्रुतत्वात्? तस्यैवानुनासिकस्यानुस्वारो विज्ञायेत, प्रकृतत्त्वाद्रोर्वाः; अनिष्टञ्चैतत्? अन्यशब्दाध्याहारे तु वस्यानुनासिको न कृतस्यस्मादेव पर इति विज्ञायते। तस्मादन्यशब्दोऽत्राध्याहार्यः। सत्यप्यन्यशब्दाध्याहारे तु यस्यानुनासिको न कृतस्यस्मादेव पर इत#इ विज्ञायते। तस्मादन्यशब्दोऽत्राध्याहार्यः। सत्यप्यन्यशाब्दाध्याहारे यदि परशब्दापेक्षयैव <code>अनुनासिकात्()</code> इत्येषा पञ्चमी स्यात्(), स दोषस्तदवस्थ एव स्यादिति मत्वाऽ‌ऽह&ndash;<code>तदपेक्षया चेयम्()</code> इत्यादि। चशब्दोऽवधारणे। अन्यशब्दापेक्षयैव, न परशभ्दापेक्षयेत्यर्थः। <code>अनुनासिकदन्यो यः</code> इत्यनेन तदेवान्यशब्दापेक्षत्वं पञ्चम्या दर्शयति। <code>रोः पूर्वः</code> इत्यनेनापि पूर्वग्रहणानुवृत्तिम्()। पूर्वत्वञ्च रुत्वापेक्षम्()। <code>यस्यानुनासिको न कृतः</code> इत्यनेनाप्यन्यशब्दाभिधेयमर्थं दर्शयति। <code>ततः</code> इत्यनेनापि पूर्वग्रहणस्यार्थादिह पञ्चम्यन्ततया विपरिणाअमम्()। अन्यशब्दस्य चाव्याह्मतस्य पञ्चम्यन्ततां पर इत्यनेनापि। तस्या अन्यशब्दस्य सम्बन्धिन्याः पञ्चम्याः परशब्दापेक्षताम्()। <code>आगमः</code> इत्यनेनाप्यादेशाभावम्()।
 परग्रहणं शक्यमकर्तुम्()। अन्यशब्दस्य पञ्चम्यन्तस्याध्याहरे सति पूर्वग्रहणस्य चार्थात्? प्रथमान्ततया विपरिणामे सत्येवं विज्ञास्यते&ndash;अनुनासिकाद्योऽन्यस्तस्मादुत्तरो यो रुस्ततः पूर्वोऽनुस्वारागमो भवति। एवञ्च विज्ञायमानेऽसत्यपि परग्रहयणे संस्कत्र्तेत्यादि सिध्यत्येव, किं परग्रहणेन? एतत्? क्रियते विस्पष्टार्थम्()॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

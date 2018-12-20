@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.3\/8.3.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.2\",\"Previous\":\"8.2.108\",\"अकारादिक्रमसङ्ख्या\":2715,\"कौमुदीक्रमसङ्ख्या\":3628,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"रु\",\"सूत्रम्‌\":\"मतुवसो रु सम्बुद्धौ छन्दसि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.1.md">Edit 8.3.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.2\",\"Previous\":\"8.2.108\",\"अकारादिक्रमसङ्ख्या\":2715,\"कौमुदीक्रमसङ्ख्या\":3628,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"रु\",\"सूत्रम्‌\":\"मतुवसो रु सम्बुद्धौ छन्दसि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.1 मतुवसो रु सम्बुद्धौ छन्दसि।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>युधोः</code> (७।१।१) इत्यत्र द्वेष्यपरीहारायोक्तं तत्? <code>मतुवसोः</code> इत्यत्रापि द्रष्टव्यम्()। <code>इन्द्रमरुत्व</code> इति। मरुच्छब्दान्मतुप्(), <code>झयः</code> (8.2.10) इति यत्वम्(), <code>उगिदचाम्()</code> (7.1.70) इति नुम्(), हल्ङ्यादि (6.1.66) संयोगान्त (8.2.23) लोपौ, नकारस्य रुत्वम्(), तस्य <code>भोभगो</code> (8.3.17) इत्यादिना यकारः, तस्यापि <code>लोपः शाकल्यस्य</code> (8.3.19) इति लोपः। <code>हरिषो मेदिनं त्वा</code> इति। हरिशब्दान्मतुप्(), <code>छन्दसीरः</code> (8.2.15) इति वत्वम्(), पूर्ववन्नुमादि। अयं त्वत्र विशेषः&ndash;<code>हशि च</code> (6.1.110) इति रोरुत्वम्(), पूर्वेण स ह <code>आद्गुणः</code> (6.1.84)।
 <code>मीढ्वस्तोकाय</code> इति। <code>मिह सेचने</code> (धा।पा।९९२) लिटः क्वसुः, <code>दा()आआन्? सह्वान्? मीढ्वांश्च</code> (6.1.12) इत्यद्वित्वम्(), अनिट्त्वम्? उपधादीर्घत्वञ्च निपात्यते, <code>हो ढः</code> (8.2.31) इति ढत्वम्(), रोर्विसर्जनीये कृते तस्य <code>विसर्जनीयस्य सः</code> (8.3.34) ति सकारः। शत्रादेशस्य वसोः सम्बुद्धौ छन्दसि दिषये प्रयोगो नास्तीति तस्यानुदाहरम्()। अत एव <code>एकानुबन्धकग्रहणे न द्व्यनुबन्धकस्य</code> (व्या।प।५२) इत्येषा परिभाषा नोपतिष्ठते; एकानुबन्धकस्य सम्बुद्धिपरस्य च्छन्दसि वसोः प्रयोगादर्शसात्()।
 <code>विद्वान्()</code> इति। <code>विदेः शतुर्वसुः</code> (7.1.36)। <code>हे पपिवन्()</code> इति। पातेः पिबतेर्वा परस्य क्वसोः <code>वस्वेकाजाद्घसाम्()</code> (7.2.67) इतीट्(), <code>आतो लोप इटि च</code> (6.4.64) इत्याकारलोपः स्थानिवद्भावाद्()द्विर्वचनम्()।
@@ -135,9 +147,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

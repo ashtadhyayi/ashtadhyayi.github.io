@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.1\/8.1.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.1.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.1.5\",\"Previous\":\"8.1.3\",\"अकारादिक्रमसङ्ख्या\":2187,\"कौमुदीक्रमसङ्ख्या\":2140,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"सर्वस्य द्वे\",\"सूत्रम्‌\":\"नित्यवीप्सयोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.1/8.1.4.md">Edit 8.1.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.1.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.1.5\",\"Previous\":\"8.1.3\",\"अकारादिक्रमसङ्ख्या\":2187,\"कौमुदीक्रमसङ्ख्या\":2140,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"सर्वस्य द्वे\",\"सूत्रम्‌\":\"नित्यवीप्सयोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.1.4 नित्यवीप्सयोः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>नित्ये चार्थे वीप्सायाञ्च</code> इति। अनेन <code>नित्यदीप्सयोः</code> इति सप्तमीयमर्थनिर्देशार्था, न तु षष्ठीयमिति दर्शयति। यदि ह्रेषा षष्ठी स्यात्(), तदा स्वरूविधिः प्रसज्येत, ततश्च <code>नित्यं क्रोडाजीविकयोः</code> (2.2.17) इति, <code>पादशतस्य संक्यादेर्वीप्सायाम्()</code> (5.4.1) इत्यादिनिर्देशो नोपपद्यते। इह नित्यशब्दोऽयं सर्वकालभादिनो य आत्माकाशादयः, यषामुत्पत्तिविनाशौ प्रयोक्तृभिर्नोपलभ्येते, तेष्वपि प्रयुज्यमानो लोके दृश्यते&ndash;नित्य आत्मा, नित्यमाकाशम्(), नित्या द्यौरिति। आभीक्ष्ण्येऽपि&ndash;नित्यं प्रहसितः, नित्यं प्रजल्पित इति। तत्र यदीह सामान्येन तत्र नाम नित्यताऽभिधेयभावेन वत्र्तते तस्य नित्यार्थवाचिनो ग्रहणं स्यात्(), आत्माकाशादिशब्दानामपि द्विर्वचनं प्रसज्येत&ndash;इत्येनेनाभिप्रायेणाह&ndash;<code>केषु नित्यता</code> इति। इतरो विदिताभिप्राय आह&ndash;<code>तिङ्क्षु नित्यताऽव्ययकृत्सुण</code> इति। अव्ययानि च तानि कृन्ति चेति कर्मधारयः। यद्यप्यात्माकाशादिशब्देष्वपि सर्वकालभावित्वलक्षणा नित्यताऽभिधेयभावेन वत्र्तते, तथापीह भावप्रधानेषु तिङ्क्ष्वव्ययकृत्सु चाभीक्ष्ण्यलक्षणा या नित्यता सैवाश्रीयते। अतोऽतिप्रसङ्गो न भवतीति भावः।
 ननु च नित्यशब्दोऽयं सामान्यवचनः। न च सामान्यशब्दाः प्रकरणादिकमन्तरेण विशेषेऽवस्थातुमुत्सहन्ते। न चेह तथाविधं किञ्चित्? प्रकरणादिकमस्ति, यतो विशेषेऽवस्थानं स्यात्(), तत्कुतो नित्यताविशेषपरिग्रहो लभ्यते? इति मन्यमान आह&ndash;<code>कुत एतत्()</code> इति। आभीक्ष्ण्यमिह नित्यतेत्याश्रीयत इति शेषः। व्याप्तेराभीक्ष्ण्यवचनस्य नित्यशब्दस्य ग्रहणादिहाभीक्ष्ण्यलक्षणा नित्यताऽ‌ऽश्रीयते, पदस्य हि द्विर्वचनमुच्यते। तच्च पदं सुबन्तं तिङन्तं च, तत्र सुप्सु दीप्सेति वक्ष्यति। यदि च नित्यशब्दोऽयं कूटस्थवचनो गृह्रते, ततश्च कूटस्थमिति सुबन्तेष्वभिधेयभावेन वत्र्तत इति सुबन्थानामेव द्विर्वचनं स्यात्(), न तिङन्तानाम्(), नाप्यव्ययकृताम्()। आभीक्ष्ण्यवचनस्य तु नित्यशब्दस्य ग्रहणे सति नित्यलक्षणद्विर्वचनमाख्यातानामव्यकृतां च भवति। वीप्सालक्षणञ्चान्येषामिति सर्व पदजातमनुगृहीतं भवति। तस्माद्वयाप्तेराभीक्षण्यवचनस्य नित्यशब्दस्य ग्रहणादिह <code>आभीक्ष्ण्यं नित्यता</code> इत्युपपन्नं भवति।
 <code>आभीक्ष्ण्यमिह नित्यता</code> (इति)। सा च तिङ्क्ष्वव्ययकृत्सु चेति। कुत एतत्()? इत्याह&ndash;<code>आभीक्ष्ण्यं च</code> इत्यादि। आभीक्ष्ण्यं हि पुनः पुनः प्रवृत्तिः। तच्च साध्यरूपायाः क्रियाया एव सम्भवतीति तस्या एव धर्मः, न तु द्रव्यस्य; तस्य सिद्धरूपस्यैव सुबन्तेनाभिधानात्()। सा च क्रिया तिङन्तादिभिरेवाभिधीयत इति तेष्वेव नित्यता। कीदृशी पुनः सा क्रिया? आभीक्ष्ण्यलक्षणेन या नित्यत्वेन योगान्नित्यशब्देनोच्यते, इत्याह&ndash;<code>याम्()</code> इत्यादि। <code>अनुपरमन्()</code> इति। <code>विरतिमकुर्वन्()</code> इत्यर्थः। <code>तन्नित्यम्()</code> इति। तत क्रियारूपं वस्तु नित्यमित्यर्थः। <code>प्राधान्येन</code> इति। यदुद्दिश्य क्रियाप्रवृत्तिस्तत्? प्रधानम्(), तस्य भावस्तथा। यद्यपि ग्रामं गन्तुमिच्छन्? वृक्षमूलोपसर्वणं पुनः पुनः करोति, तथापि न तन्नित्यमिति। एतदुक्तं भवति&ndash;न ह्रसौ प्राधान्येन तत्करोति; तदुद्दिश्याप्रवृत्तेः। तेन ग्रामं गच्छन्? वृक्षमूलान्युपसर्पतीत्यत्र सत्यप्यामभीक्षण्ये द्विर्वचनं न भवति। <code>यां क्रियाम्()</code> इत्यनेन हि क्रिया धर्मिणी दर्शिता। <code>अनुपरमन्? करोति</code> इत्यनेनापि तस्या आभीक्षण्यं धर्मः।
@@ -140,9 +152,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

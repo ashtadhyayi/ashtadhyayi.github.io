@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-8.3\/8.3.61.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.61";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.62\",\"Previous\":\"8.3.60\",\"अकारादिक्रमसङ्ख्या\":3814,\"कौमुदीक्रमसङ्ख्या\":2627,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"स्तौतिण्योरेव षण्यभ्यासात्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.3/8.3.61.md">Edit 8.3.61!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.61";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.62\",\"Previous\":\"8.3.60\",\"अकारादिक्रमसङ्ख्या\":3814,\"कौमुदीक्रमसङ्ख्या\":2627,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"स्तौतिण्योरेव षण्यभ्यासात्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.61 स्तौतिण्योरेव षण्यभ्यासात्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>स्तौतेः ण्यन्तानां च षभूते सनि परतः अभ्यासातिणः उत्तरस्य आदेशसकारस्य मूर्धन्यादेशो भवति। तुष्टूषति। ण्यन्तानाम् सिषेवयिषति। सिषञ्जयिषति। सुष्वापयिषति। सिद्धे सत्यारम्भो नियमार्थः, स्तौतिण्योः एव षणि अभ्यासाद् यथा स्यात्, अन्यस्य मा भूत्। सिसिक्षति। सुसूषति। एवकारकरणमिष्ततो ऽवधारणार्थम्। स्तौतिण्योः षणि एव इति हि विज्ञायमाने तुष्टाव इत्यत्र न स्यात्, इह च स्यादेव सिसिक्षति इति। षणि इति किम्? अन्यत्र नियमो मा भूत्, सिषेच। को विनते ऽनुरोधः? अविनते नियमो मा भूत्, सुषुप्सति। तिष्ठासति। कः सानुबन्धे ऽनुरोधः? षशब्दमात्रे नियमो मा भूत्, सुषुपिष इन्द्रम्। अभ्यासातिति किम्? अभ्यासात् या प्राप्तिः तस्या नियमो यथा स्यात्, धातोः या प्राप्तिस् तस्या नियमो मा भूत्, प्रतीषिषति। अधीषिषति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-8.2\/8.2.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.37\",\"Previous\":\"8.2.35\",\"अकारादिक्रमसङ्ख्या\":3337,\"कौमुदीक्रमसङ्ख्या\":294,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"झलि पदान्ते\",\"सूत्रम्‌\":\"व्रश्चभ्रस्जसृजमृजयजराजभ्राजच्छशां षः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.2/8.2.36.md">Edit 8.2.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.37\",\"Previous\":\"8.2.35\",\"अकारादिक्रमसङ्ख्या\":3337,\"कौमुदीक्रमसङ्ख्या\":294,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"झलि पदान्ते\",\"सूत्रम्‌\":\"व्रश्चभ्रस्जसृजमृजयजराजभ्राजच्छशां षः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.36 व्रश्चभ्रस्जसृजमृजयजराजभ्राजच्छशां षः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>व्रश्च भ्रस्ज सृज मृज यज राज भ्राज इत्येतेषाम्, छकारान्तानाम्, शकारान्तानां च षकारः आदेशो भवति झलि परतः पदान्ते च। व्रश्च व्रष्टा। व्रष्टुम्। व्रष्टव्यम्। मूलवृट्। भ्रस्ज भ्रष्टा। भ्रष्टुम्। भ्रष्टव्यम्। धानाभृट्। सृज स्रष्ट। स्रष्टुम्। स्रष्टव्यम्। रज्जुसृट्। मृज मार्ष्टा। मार्ष्टुम्। मार्ष्टव्यम्। कंसपरिमृट्। यज यष्टा। यष्टुम्। यष्टव्यम्। उपयट्। राज सम्राट्। स्वराट्। विराट्। भ्राज विभ्राट्। राजभ्राजोः पदान्तार्थं ग्रहणम्, झलादिराभ्यामिटा पर्यवपद्यते। केचित् तु राष्टिः, भ्राष्टिः इति क्विन्नन्तम् इच्छन्ति। छकारान्तानाम् प्रच्छ प्रष्टा। प्रष्टुम्। प्रष्टव्यम्। शब्दप्राट्। च्छ्वोः शूडनुनासिके च (*6,4.19) इत्यत्र क्ङिति इत्यनुवर्तते इति छग्रहणम् इह क्रियते। शकारान्तानाम् लिश् लेष्टा। लेष्टुम्। लेष्टव्यम्। लिट्। विश् वेष्टा। वेष्तुम्। वेष्टव्यम्। विट्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

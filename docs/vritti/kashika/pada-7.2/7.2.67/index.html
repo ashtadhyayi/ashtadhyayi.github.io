@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-7.2\/7.2.67.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.67";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.68\",\"Previous\":\"7.2.66\",\"अकारादिक्रमसङ्ख्या\":3096,\"कौमुदीक्रमसङ्ख्या\":3096,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्वासौ\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वस्वेकाजाद्घसाम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-7.2/7.2.67.md">Edit 7.2.67!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.67";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.68\",\"Previous\":\"7.2.66\",\"अकारादिक्रमसङ्ख्या\":3096,\"कौमुदीक्रमसङ्ख्या\":3096,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्वासौ\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वस्वेकाजाद्घसाम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.67 वस्वेकाजाद्घसाम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>कृतद्विर्वचनानां धातूनाम् एकाचाम्, आकारान्तानाम्, घसेश्च वसौ इडागमो भवति। आदिवान्। आशिवान्। पेचिवान्। शेकिवान्। धात्वभ्यासयोः एकादेशे कृते एत्वाभ्यासलोपयोश्च कृतयोः कृतद्विर्वचना एते एकाचो भवन्ति आत् ययिवान्। तस्थिवान्। घस् जक्षिवान्। सिद्धे सत्यारम्भो नियमार्थः, एकाजाद् घसाम् एव वसाविडागमो भवति न अनयेषाम्। बिभिद्वान्। चिच्छिद्वान्। बभूवान्। शिश्रिवान्। क्रादिनियमात् प्रतिषेधाभावाच् च य इट् प्रसक्तः स नियम्यते। आद्ग्रहणम् अनेकाज्ग्रहणार्थम्। द्विर्वचने हि कृते इटि हि सति आतो लोपेन भवितव्यम्। दरिद्रातेस् तु कास्यनेकाज्ग्रहणं चुलुम्पाद्यर्थम् इत्यामा भवितव्यम्। दरिद्राञ्चकार। अथाप्याम् न क्रियते तथापि च दरिद्रातेः आर्धधातुके लोपः सिद्धश्च प्रत्ययविधौ इति प्रागेव प्रत्ययोत्पत्तेराकारे लुप्ते इडागमस्य निमित्तं विहतं इति न इडागमो भवति, ददरिद्र्वानिति भवितव्यम्। घसेरपि यदि ग्रहणम् इह न क्रियते तदा द्विर्वचनात् परत्वाद् घसिभसोर्हलि च (*6,4.100) इति उपधालोपे कृते द्विर्वचनम् एव न स्यात्, अनच्कत्वात्। इह तु घसिग्रहणादुपधालोपम् अपि परत्वातिडागमो बाधते। तत्र कृते गमहनजनखनघसाम् (*6,4.98) इति उपधालोपः। स च द्विर्वचने ऽचि (*1,1.59) इति द्विर्वचने कर्तव्ये स्थानिवद् भवति, तेन जक्षिवानिति सिध्यति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

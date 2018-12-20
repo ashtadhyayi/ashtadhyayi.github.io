@@ -22,6 +22,11 @@
         <a class="ma1 white-90 hover-white " href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">Edit {{.Params.index}}!</a>
         <div id="nextSutraDiv"></div>
       {{ end }}
+      {{ if eq .File.Path "_index.md"}}
+        <div id="prevSutraDiv"></div>
+        <div id="currentSutraDiv"></div>
+        <div id="nextSutraDiv"></div>
+      {{ end }}
       {{ partialCached "social-follow.html" . }}
     </div>
   </div>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-2.4\/2.4.84.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.4.84";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.4.85\",\"Previous\":\"2.4.83\",\"अकारादिक्रमसङ्ख्या\":1774,\"कौमुदीक्रमसङ्ख्या\":658,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुक्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तृतीयासप्तम्योर्बहुलम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.4/2.4.84.md">Edit 2.4.84!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.4.84";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.4.85\",\"Previous\":\"2.4.83\",\"अकारादिक्रमसङ्ख्या\":1774,\"कौमुदीक्रमसङ्ख्या\":658,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लुक्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तृतीयासप्तम्योर्बहुलम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.4.84 तृतीयासप्तम्योर्बहुलम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अपदिशमिति। पञ्चमीव्यतिरिक्तविभक्तीनामुदाहरणमिदम्। पञ्चम्यास्तु अपदिशादित्युदाहार्यम्। विभक्तौ तावदिति। तावच्छब्दः क्रमार्थः। लौकिकं विग्रहवाक्यं प्रदर्शयति&ndash;हराविति। प्राचा तु <code>हरौ अधिकृत्ये</code>ति विगृहितं, तदसत्। अधिहरीत्यत्र अधिकृत्येत्यर्थस्याऽप्रतीतेः। हरि ङीति। अलौकिके ङिशब्दस्यैव प्रवेश उचितः, <code>अन्तरङ्गानपि---</code>इति न्यायात्। अन्यथा ङेरौत्त्वे कृते अधिहरीति समासे हरिशब्देकारो दुर्लभः स्यादिति भावः। इह<code>हरावधी</code>ति स्थिते&rsquo;इति प्राचोक्तमुपेक्षितं, नित्यसमासेषु अस्वपदविग्रहस्यैवोचितत्वात्। अभिहितेऽपीति। द्योतितेऽपीत्यर्थः। वचनसामथ्र्यादिति। <code>सुपे</code>त्यनुवर्त्त्य सुबन्तेन समासविधानसामथ्र्यात्सप्तमी स्यादेवेति भावः। नन्वभिहितेऽधिकरणे <code>प्रतिपदिकार्थमात्रे</code>ति प्रथमैव स्यान्न तु सप्तमीति चेत्। अत्राहुः&ndash;अचीत्यस्य सुबन्तेन समासस्यावश्यकत्वेऽधिशब्दद्योत्यादिकरणार्थवाचकविभाक्तेरेवेह स्वीकर्तुमुचितत्वादिति। यत्तु प्रसादकृता व्याख्यातं&ndash;<code>तिङ्कृत्तद्धितसमासैरिति परिगणनादधिनाऽभिहितेऽपि सप्तमी स्यादेवे</code>तिष। तन्न। परिगनस्याकरे प्रत्याख्यातत्वात्। <code>कर्मणि द्वितीया</code>इति सूत्रे स्वयमपि तथैवोक्तत्वात्। <code>क्रमादमुं नारद इत्यबोधि सः</code> इति प्रयोगविरोधाच्च। अत्र व्याचक्षते&mdash;<code>वचनग्रहणं विभक्त्यादिभिः प्रत्येकं संबध्यते</code>, <code>साकल्यान्तेषु</code>इत्येव वक्तव्ये वचनग्रहणात्। एवं च तत्सामथ्र्याद्विङक्त्यर्थमात्र वृत्तेरव्ययस्येह ग्रहणम्। तेन वृक्षस्योपरि वृक्षस्य पुर इत्यत्र समासो न भवति। उपर्यादयो हि दिग्देशकालेष्वपि वर्तन्ते, न तु विभक्त्यर्थमात्रे। अतएव <code>क्रमादमुं नारद इत्यूबोधि सः</code> इत्यादौ नातिप्रसङ्गः, इतिशब्दस्य सर्वनामवत्प्रकृतपरामर्शकत्वेन कर्मत्वमात्रनभिधायकत्वात्। एवं च विभक्तिशब्दं प्रायुङ्क्त&rsquo;ति। अन्ये तु&mdash;<code>लाघवात्</code>ङिसमीपसमृद्धी<code>ति वक्तव्ये विभक्तिग्रहणाद्विभक्तिशब्दो न सप्तम्यां पर्यवस्यति। ततश्च कर्मत्वमात्रद्योतकतायाम्</code>इतिनारद`मिति समासो भवत्येव&rsquo;इत्याहुः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.3\/6.3.8.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.8";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.9\",\"Previous\":\"6.3.7\",\"अकारादिक्रमसङ्ख्या\":2302,\"कौमुदीक्रमसङ्ख्या\":965,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ऽलुक्\",\"विषयः २\":\"अलुक्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"परस्य च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.3/6.3.8.md">Edit 6.3.8!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.8";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.9\",\"Previous\":\"6.3.7\",\"अकारादिक्रमसङ्ख्या\":2302,\"कौमुदीक्रमसङ्ख्या\":965,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ऽलुक्\",\"विषयः २\":\"अलुक्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"परस्य च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.8 हलदन्तात्सप्तम्याः संज्ञायाम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>युधिष्ठिरः</code> इति। <code>संज्ञायाम्()</code> (2.1.43) इति समासः, <code>गवियुधिभ्यां स्थिरः</code> (8.3.95) इति षत्वम्()। अथ गविष्ठिर इत्यत्र कथमलुक्(), न हि गोशब्दो हलन्तः, नाप्यदन्तः? स्यादेतत्()&ndash;गो+इ+स्थिर इति स्थितेऽन्तरङ्गत्वादवादेशे कृते हलन्तत्वाद्भविष्यति, एतच्च नास्ति; यतः <code>अन्तरङ्गानपि विधीन्? वहिरङ्गो लुग्? बाधते</code> (व्या।प।१२८) इति, अवश्यं चैतदभ्युपेयम्(); अन्यथा हि नद्यां कुक्कुटिका नदीकुक्कुटिक, भूम्यां पाशो भूमिपाश इत्यत्रापि यणादेशे कृतेऽलुक्? प्रसज्येत? इत्यत आह&ndash;<code>गविष्ठिर इत्यत्र तु</code> इत्यादि।
 <code>ह्मद्द्युभ्याम्()</code> इति। असंज्ञार्थमिदम्()। वक्तव्यमिति व्याख्येयमित्यर्थः। व्याख्यानं चोत्तरत्र करिष्यते। अथ वेहापि क्रियते&ndash;इहान्तग्रहणं न कत्र्तव्यम्(), विनापि तेन सपतम्या प्रातिपदिके सन्निधापिते हलदन्तता लभ्यत एव, तसमादधिकमिहान्तग्रहणं क्रियते, तदधिकं क्रियमाणमेतत्? सूचयति&ndash;अधिकेनायमलुग्भवतीति। तेन क्वचिदसंज्ञायामलुग्भवतीति। <code>ह्मदिस्पृग्दिविस्पृक्()</code> इति। <code>स्पृशोऽनुदके क्विन्()</code> (3.2.58) <code>क्विन्प्रत्यस्य कुः</code> (8.2.62) ति शकारस्य खकारः, तस्य <code>झलां जशोऽन्ते</code> (8.2.39) इति जश्त्वम्()&ndash;गकारः, तस्यापि <code>वाऽवसाने</code> (8.4.55) इति चत्र्वम्()&ndash;ककारः। अत्र चायमर्थः&ndash;ह्मदयं स्पृशति, दिवं स्पृशतीति। तथा हि भाष्ये उक्तम्()&ndash;<code>द्वितीयार्थे सप्तमी चैषा द्रष्टवया, ह्मदयं स्पृशति, दिवं स्पृशतीति</code>ह्मविस्पृक्(), दिविस्पृक<code>इति। कथं पुनः द्वितीयार्थे सा भवति? अत एव भाष्यकारवचनात्()। अथ वा--ह्मदयं यः स्पृशति स ह्मदये स्पृशत्येव, दिवं यः स्पृशति स दिवि स्पृशत्येव अत्र</code>अधिकरणे` (2.3.36) इत्येवं भविष्यति सप्तमी।
 आख्याग्रहणे प्रकृते पुनः संज्ञाग्रहणं विस्पष्टार्थम्()॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

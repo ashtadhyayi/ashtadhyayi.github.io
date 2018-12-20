@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.9.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.9";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.10\",\"Previous\":\"8.2.8\",\"अकारादिक्रमसङ्ख्या\":2770,\"कौमुदीक्रमसङ्ख्या\":1897,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"मतोः वः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"मादुपधायाश्च मतोर्वोऽयवादिभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.9.md">Edit 8.2.9!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.9";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.10\",\"Previous\":\"8.2.8\",\"अकारादिक्रमसङ्ख्या\":2770,\"कौमुदीक्रमसङ्ख्या\":1897,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"मतोः वः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"मादुपधायाश्च मतोर्वोऽयवादिभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.9 मादुपधायाश्च मतोर्वोऽयवादिभ्यः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>मकारान्तान्मकारोपधादवर्णान्तादवर्णोपधाच्चोत्तरस्य मतुपो मकारसय <code>च</code> इत्ययमादेशो भवतीत्ययमर्थोऽभिमतः। स एव यथा सम्पद्यते, तथा दर्शयितुमाह&ndash;<code>मतोरिह</code> इत्यादि। अत्र मतुप कार्यित्वेनीपात्तः। स च नास्त्यन्तरेण प्रातिपदिकत्वम्(); तद्विधौ प्रातिपदिकाधिकारात्? (4.1.1)। तस्मान्मतुपः पूर्वं सामथ्र्यलभ्यं प्रातिपदिकम्(), तन्मकारावर्णाभ्यां मादिति विशिष्यते&ndash;मकारोऽन्तो यस्यं, अवर्णोऽन्तो यस्येति। मकारावर्णविशिष्टा या चोपधेति सामथ्र्यम्()। कथम्()? पूर्वं प्रातिपदिकान्तं विशिष्यते इति सम्बन्धनीयम्()। मकारेण विशेषणेन, अवर्णेन विशेषणेन च विशिष्टा योपधा सा च विशिष्यते&ndash;मकार उपधा यस्य, अवर्ण उपधा यस्येति। मकारावर्णविशिष्टस्येति मतुपो विशेषणे <code>उपधायाश्च</code> इत्यत्र मा भूदिति? अस्यापेक्षितस्वल्लभ्यत इत्ययमर्थो भवतीति। इतिकरणो हेतौ। यस्मात्? सामथ्र्यप्राप्तं प्रातिपदिकमेव विशिष्यते, तस्मादयं वक्ष्यमाणोऽर्थः सूत्रस्यापि भविष्यतीति। <code>किंवान्()</code> इति। किमस्यास्तीति मतुप्(); <code>उगिदचाम्()</code> (7.1.70) इत्यादिना नुम्(), हलङ्यादिसंयोगान्तलौ (६।१।६८; ८।२।२३), <code>अत्वसन्तस्य चाधातोः</code> (6.4.14) इति दीर्घः।
 <code>नार्मतम्()</code> इति। नरोऽस्य सन्तीति नृमान्(), नृमत इदमिति <code>तस्येदम्()</code> (4.3.120) इत्यण्(), तत्र वृद्धौ कृतायां दार्मतमित्यत्रावर्णोपधमतुप्? प्रातिपदिकं जातमिति वत्वं प्राप्नीति, तत्? कस्मान्न भवति? इत्याह&ndash;<code>इह</code> इत्यादि। नार्मतमित्यत्र ह्रवर्णोपधमतुप्त्वं वृद्धिरेव, सा च बाहृतद्धितनिमित्ता। अतोऽवर्णौपधत्वस्य बहिरङ्गत्वम्(), वत्वं तु प्रवृत्तिनिमित्तमिति तस्यान्तरङ्गत्वम्(), असिद्धं च बहिरङ्गमन्तरङ्गे (व्या।प।४२) इति, तेन नार्मत मित्यत्र वत्वं न भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

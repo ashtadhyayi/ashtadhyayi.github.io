@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.4\/6.4.102.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.102";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.103\",\"Previous\":\"6.4.101\",\"अकारादिक्रमसङ्ख्या\":3455,\"कौमुदीक्रमसङ्ख्या\":3551,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"हेर् धिः\",\"विषयः २\":\"किति ङिति\",\"विषयः ३\":\"सार्वधातुके\",\"सूत्रम्‌\":\"श्रुशृणुपॄकृवृभ्यश्छन्दसि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.4/6.4.102.md">Edit 6.4.102!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.102";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.103\",\"Previous\":\"6.4.101\",\"अकारादिक्रमसङ्ख्या\":3455,\"कौमुदीक्रमसङ्ख्या\":3551,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"हेर् धिः\",\"विषयः २\":\"किति ङिति\",\"विषयः ३\":\"सार्वधातुके\",\"सूत्रम्‌\":\"श्रुशृणुपॄकृवृभ्यश्छन्दसि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.102 श्रुशृणुपृ?कृवृभ्यश्छन्दसि।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>श्रुणुधी</code> इति। <code>श्रुवः शृ च</code> (3.1.74) इति श्नुप्रत्ययः, श्रृभावश्च। <code>पूर्द्धि</code> इति। <code>पृ? पालनपूरणयोः</code> (धा।पा।१०८६), <code>उदोष्ठ()पूर्वस्य</code> (7.1.102) इत्युत्त्वम्(), <code>हलि च</code> (8.2.77) इति दीर्घः। <code>उपरुणस्कृधि</code> इति। उरु अस्माकं कृधीति स्थिते <code>बहुवचनस्य वस्नसौ</code> (8.1.21) इत्यस्मदो नसादेशः, <code>नश्च धातुस्थोरुषुभ्यः</code> (8.4.26) इति णत्वम्(), सकारस्य रुत्वम्(), विसर्जनीयः। तस्य <code>अतः कृकमि</code> (8.3.46) इत्यादिना सत्वम्()। <code>अपावृधि</code> इति। वृङो वृञो वा रूपम्()। वृङोऽपि हि <code>व्यत्ययो बहुलम्()</code> (3.1.85) इति च्छन्दसि परस्मैपदं भवत्येव।
 अथ श्रृणुधीत्यत्र <code>उतश्च प्रत्ययादसंयोगपूर्वात्()</code> (६।४।१०६) इत्यनेन लुक्? कस्मान्न भवति? इत्याह&ndash;<code>श्रृणुधीत्यत्र</code> इत्यादि। यद्यत्र लुक्? स्यात्? धिमावस्यानर्थस्यं स्यादिति भावः। <code>अन्येषामपि दृश्यते</code> (6.3.136) इति दीर्घत्वमपावृधीत्यत्र। ननु च श्रुधत्यत्र <code>श्रुवः श्रृ च</code> (3.1.74) इति शृभावेन इनुप्रत्ययेन च भवितव्यम्(), पूर्धीत्यत्र क्र्यादित्वात्? श्नाप्रत्ययेन, उरुणस्कृधीत्यत्र <code>तनादिकृञ्भ्यः उः</code> (3.1.79) इत्युप्रत्ययेन; अपावृधीत्यतत्र यदि वृङ तदा क्र्यादित्वात्? श्नाप्रत्ययेन, अथ वृञ्? तदा स्वादित्वात्? श्नुप्रत्ययेन; एवञ्चैतानि रूपाणि न सिध्यन्ति? इत्यत आह&ndash;<code>अतोऽन्यतर</code> इत्यादि। श्रृणुधीत्येतस्मादुदाहरणादन्येषूदाहरणेषु <code>व्यत्ययो बहुलम्()</code> (3.1.85) इति शप्(), तस्यापि <code>बहुलं छन्दसि</code> (2.4.73) इति लुक्()॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

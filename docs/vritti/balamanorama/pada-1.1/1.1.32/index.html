@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-1.1\/1.1.32.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.1.32";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.1.33\",\"Previous\":\"1.1.31\",\"अकारादिक्रमसङ्ख्या\":3202,\"कौमुदीक्रमसङ्ख्या\":225,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सर्वनाम\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"विभाषा जसि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.1/1.1.32.md">Edit 1.1.32!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.1.32";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.1.33\",\"Previous\":\"1.1.31\",\"अकारादिक्रमसङ्ख्या\":3202,\"कौमुदीक्रमसङ्ख्या\":225,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सर्वनाम\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"विभाषा जसि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.1.32 विभाषा जसि
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>विभाषा जसि। सर्वनामग्रहणमनुवर्तते, द्वन्द्व इति च। <code>जसी</code>त्यविभक्तिको निर्देशः। जस इः जशिः। आर्षः सप्तम्या लुक्। <code>इ</code>शब्द इवर्णपरः सन् <code>शी</code>तीकारमाचष्टे। ततश्च जसादेशे शीभावे कर्तव्ये इति फलितम्। तदाह &ndash;जसाधारमिति। जस् आधारो यस्येति बहुव्रीहिः। जस्स्थानकमित्यर्थः। ननु <code>जसि परतो द्वन्द्वे सर्वानामसंज्ञा वा स्या</code>दित्येव कुतो न व्याख्यायत इत्यत आह&ndash;शीभावं प्रत्येवेत्यादिना। यदि त्वकच्स्यात्तर्हि तस्याऽव्यवधायकत्वाच्छीभावः प्रसज्येत। कप्रत्यये तु सति तेन व्यवधानान्नोक्तदोष इत्याह&ndash;वर्णाश्रमेतरका इति। नचाऽकचि कर्तव्ये विकल्पाऽभावे।ञपि सर्वादीनी<code>ति नित्या सर्वनाम संज्ञा कुतोऽत्र न स्यादिति वाच्यं,</code>द्वन्द्वे चे<code>ति तस्या नित्यानिषेधात्। नच</code>द्वन्द्वे<code>चेति निषेधस्योक्तरीत्याऽवयवेषु प्रवृत्त्यभावाद्वर्णाश्रमेतरशब्दे समुदाये इतरशब्दस्याऽवयवस्य सर्वनामत्वाऽनपायादकज्दुर्वार इति वाच्यं, द्वन्द्वावयवमात्रे सुन्दरादिविशेषणान्वयाऽबाववत्कुत्सादिविवक्षाया अभावात्। समुदाये तद्विवक्षायां समुदायोत्तरप्रत्ययेनाऽवयवगतकुत्सादेरपि बोधेनोक्तार्थत्वादवयवेभ्यः पृथक् तदनुत्पत्तेः। अन्यथा अवयवेभ्यः प्रत्येकं कप्रत्ययापत्तेः। एतदेवाभिप्रेत्योक्तं भाष्ये--</code>वर्णाश्रमेतरशब्दे अकच् न भवती<code>ति। एवंच यदा इतरशब्देन द्वन्द्वं कृत्वा कुत्सिता वर्णाश्रमेतरा इति कुत्सायोगः क्रियते तदा कप्रत्यये सति</code>वर्णाश्रमेतरका` इत्येव रूपम्। यदा तु कुत्सित इतरः-इतरक इत्यकचं कृत्वा वर्णाश्च आश्रमाश्च इतरकश्चेति द्वन्द्वः क्रियते, तदा शीभावविकल्पः स्यादेव॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

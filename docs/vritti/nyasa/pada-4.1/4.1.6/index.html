@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.6.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.6";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.7\",\"Previous\":\"4.1.5\",\"अकारादिक्रमसङ्ख्या\":696,\"कौमुदीक्रमसङ्ख्या\":455,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उगितश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.6.md">Edit 4.1.6!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.6";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.7\",\"Previous\":\"4.1.5\",\"अकारादिक्रमसङ्ख्या\":696,\"कौमुदीक्रमसङ्ख्या\":455,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उगितश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.6 उगितश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>यथाकथञ्चित्</code> इति। येन केनचित् प्रकारेण। यदि वर्ण उगित् सम्भवति, यदि प्रत्ययः, अथापि प्रातिपदिकम्, सर्वर्था यत्रैषामन्यतमः सम्भवति तत् <code>उगिच्छब्दरुपम्()</code> इति। अनेनोगिच्छब्दरूपस्य विशेषणं न प्रातिपदिकस्येति दर्शयति। यदि प्रातिपदिकस्यैव विशेषमं स्यादिहैव स्यात्&ndash; भवती, महतीति; अर्वतीत्यत्र तु न स्यात्, <code>अर्वणस्त्रसावनञः</code> (6.4.127) इति नकारस्य त्रादेशः कृत इति वर्ण एव तकार उगित्, न प्रातिपदिकम्; गोमतीत्यत्र च न स्यात्, अत्रापि हि मतुप्प्रत्यय एवोगित्, न प्रातिपदिकम्; तस्मादुगिच्छब्दस्यैव विशेषणं युक्तमित्यभिप्रायः। तच्चोगिच्छब्दरूपं प्रातिपदिकस्य विशेषणम्, विशेषणेन च तदन्तविधिर्भवतीत्याह&ndash; <code>तदन्तात्</code> इत्यादि। यदि तर्ह्रुगिच्छब्दरूपान्तात् प्रातिपदिकान्ङीब्भवत्येवं सति भवतीति न सिध्यति, न ह्रत्रोगिच्छब्दरूपान्तं प्रातिपदिकं भवति, भवच्छब्दान्तादुगितः प्रातिपदिकादन्यस्य तदन्तस्याभावात्? नैष दोषः; व्यपदेशिवद्भावात् तदन्ताद्भविष्यति। ननु च <code>व्यपदेशिवद्भावोऽप्रातिपदिकेन</code> (शाक।प।६५) इति व्यपदेशिद्भावेन नात्र भवितव्यम्? नैतदस्ति; न ह्रुगिदिति प्रातिपदिकग्रहणम्, किं तर्हि? प्रातिपदिकाप्रातिपद#इकग्रहणम्; वर्णप्रत्ययोरप्युगितोग्र्रहणात्। <code>पचन्ती, यजन्ती</code> इति। शत्रन्तान्ङीप्।
 <code>धातोरुगितः प्रतिषेधः</code> इति। प्रतिपाद्यत इति शेषः।
 <code>अञ्चतेश्चोपसंख्यानम्</code> इति। अञ्चतेर्ङीप्प्रत्ययस्य प्रतिपादनं कत्र्तव्यमित्यर्थः। तत्रेदमुभयत्र प्रतिपादनम् &mdash; <code>पादोऽन्यतरस्याम्</code> (4.1.8) इति सूत्रे <code>अन्यतरस्याम्</code> इति योगविभागः करिष्यते, स च <code>उगितश्च</code> (4.1.6) <code>वनो र च</code> (4.1.7) <code>पादोऽन्यतरस्याम्</code> (4.1.8) इत्येषां त्रयाणामपि योगानां शेषः। व्यवस्थितविभाषा च सा। तेन प्रातिपदिकादुगितच्छब्दरूपान्ताद्धातूगिच्चब्दान्तादञ्चतेरेव नित्यं ङीब्भवति, ततोऽन्येभ्यस्तु न भवत्येवेति।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

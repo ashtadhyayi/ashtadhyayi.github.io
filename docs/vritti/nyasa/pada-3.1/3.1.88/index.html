@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.1\/3.1.88.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.1.88";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.1.89\",\"Previous\":\"3.1.87\",\"अकारादिक्रमसङ्ख्या\":1666,\"कौमुदीक्रमसङ्ख्या\":2771,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मवत्\",\"विषयः २\":\"विकरण-प्रत्ययाः\",\"विषयः ३\":\"धातोः प्रत्ययः परः च\",\"सूत्रम्‌\":\"तपस्तपःकर्मकस्यैव\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.1/3.1.88.md">Edit 3.1.88!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.1.88";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.1.89\",\"Previous\":\"3.1.87\",\"अकारादिक्रमसङ्ख्या\":1666,\"कौमुदीक्रमसङ्ख्या\":2771,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मवत्\",\"विषयः २\":\"विकरण-प्रत्ययाः\",\"विषयः ३\":\"धातोः प्रत्ययः परः च\",\"सूत्रम्‌\":\"तपस्तपःकर्मकस्यैव\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.1.88 तपस्तपः कर्मकस्यैव।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>तपः कर्मकस्यैव</code> इति। एवकारो विस्पष्टार्थः; व्यवच्छेदफलत्वात्, सर्ववाक्यानामित्येवं तदर्थस्य लब्धत्वात्। यदि ह्रतपःकर्मकस्यापि स्यात्, तपःकर्मग्रहणमनर्थकं स्यात्। <code>नान्यकर्मकस्य</code> इत्यवधारणेन यद्व्यवच्छिन्नं तद्दर्शयति। <code>क्रियाभेदात्</code> इति। क्रियाविसदृशत्वादित्यर्थः। पूर्वं हि क्रियासादृश्ये कर्मवद्भावो विहित इति वैसदृश्येन प्राप्नोति, अतो विध्यर्थमेतत्। अत एव कर्मस्थया क्रियया तुल्यत्वं न सम्भवतीति <code>कर्मणा तुल्यक्रियः</code> (3.1.87) इत्येतन्नानुवत्र्तते। <code>उपवासादीनि</code> इत्यादिना तमेव क्रियाभेदं दर्शयति। उपवासादिशब्देन तपः शब्दस्यार्थमाचष्टे। <code>दुःखयन्तीत्यर्थः</code> इत्यनेन तापसस्य कर्मावस्थायां तपेर्दुःखनमर्थ इति दर्शयति। <code>स्वर्गाय तपस्तप्यते</code> इति। तपःशब्दोऽत्र ज्ञानविषेय स्वर्गाद्यवाप्तिहेतौ वत्र्तते। <code>अर्जयीत्यर्थः</code>इत्यनेन तापसस्य कत्र्रवस्थायां तपिरर्जने वत्र्तत इति दर्शयति। निवत्र्तयतीत्यर्थ इति, न दुःखयतीति; तपसोऽचेतनत्वाद्दुःखासम्भवात्॥
 <code>उत्तपति सुवर्णम्</code> इत्यादौ सुवर्णकर्मकत्वात् तपेः कर्मवद्भावो न भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

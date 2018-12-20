@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.2\/3.2.48.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.48";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.49\",\"Previous\":\"3.2.47\",\"अकारादिक्रमसङ्ख्या\":250,\"कौमुदीक्रमसङ्ख्या\":2965,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मणि उपपदे कृत्\",\"विषयः २\":\"ड\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"अन्तात्यन्ताध्वदूरपारसर्वानन्तेषु डः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.48.md">Edit 3.2.48!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.48";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.49\",\"Previous\":\"3.2.47\",\"अकारादिक्रमसङ्ख्या\":250,\"कौमुदीक्रमसङ्ख्या\":2965,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मणि उपपदे कृत्\",\"विषयः २\":\"ड\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"अन्तात्यन्ताध्वदूरपारसर्वानन्तेषु डः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.48 अन्तात्यन्ताध्वदूरपारसर्वानन्तेषु डः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>डकारष्टिलोपार्थः</code>इति। डिति <code>टेः</code> (6.4.155) इति टिलोपो यथा स्यात्। कथं पुनः सत्यपि डकारे टिलोपो लभ्यते, यावता भसंज्ञकस्य हि टिलोप उच्यते, न चेह भसंज्ञाऽस्तीत्याह&ndash; <code>डित्यभस्यापि</code> इत्यादि। यदि सत्यपि डिति टिलोपो मा भूत्, तदा तस्य वैयथ्र्यं स्यादिति भावः। ननु चश्रवणार्थ भविष्यति, तत्कुतो वैयथ्र्यं स्यात्? एवं मन्यते&ndash; <code>प्रावृट्()शरत्कालदिवाञ्जे</code> (6.3.14) इति कृतटिलोपस्य जनेर्डप्रत्ययान्तस्यायं निर्देशं करोति, ततोऽवसीयते डकारस्याश्रवणार्थतेति। <code>सर्वत्र</code> इत्यादि। उपसंख्यानशब्दस्य प्रतिपादनमर्थः। तत्रेदं प्रतिपादनम्&ndash; <code>गमश्च</code> (3.2.47) इत्यतश्चकारोऽनुवत्र्तते। तस्यानुक्तसमुच्चयार्थत्वात् सर्वत्रेत्यादानुपपदे डो भविष्यतीति। सर्वत्रशब्दश्चात्र सुपीत्यनेन सम्बध्यते, न तु कर्मणीत्यनेन; तस्याधिकरणशक्तिप्रधानत्वात् कर्मत्वानुपपत्तेः। पन्नशब्दः क्रियाविशेषणत्वात् कर्मणीत्यनेन सम्बध्यते। प्रतिपादितं हि <code>करणे च स्तोकाल्प</code> (2.3.33) इत्यादिसूत्रे क्रियाविशेषणस्य कर्मत्वम्।
 <code>उरसो लोपश्च</code> इति। <code>अलोऽन्त्यस्य</code> (1.1.51) इति सकारस्य।
 <code>सुदुरोरधिकरण</code> इति। ल्युडपवादो डो विधीयते। वाऽसरूपविधिना सोऽपि भवति&ndash; सुगमनम्, दुर्गमनमिति। अधिकरण इति किम्? कर्मणि मा भूत्। <code>ईषद्()दुःसुषु</code> (3.3.126) इत्यादिना खलेव भवति&ndash; सुगमः, दुर्गम इति।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

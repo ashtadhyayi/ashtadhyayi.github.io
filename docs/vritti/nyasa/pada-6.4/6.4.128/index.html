@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.4\/6.4.128.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.128";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.129\",\"Previous\":\"6.4.127\",\"अकारादिक्रमसङ्ख्या\":2711,\"कौमुदीक्रमसङ्ख्या\":360,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृ-आदेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"मघवा बहुलम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.4/6.4.128.md">Edit 6.4.128!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.128";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.129\",\"Previous\":\"6.4.127\",\"अकारादिक्रमसङ्ख्या\":2711,\"कौमुदीक्रमसङ्ख्या\":360,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृ-आदेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"मघवा बहुलम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.128 मघवा बहुलम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>मधवेति सुव्व्यत्ययेन षष्ठ्याः स्थाने प्रथमा। <code>मधोनः</code> इति। <code>()आयुवमधोनाम्()</code> (6.4.133) इति समप्रसारणम्(), परपूर्वत्वम्(), <code>आद्गुणः</code> (6.1.84)। ननु च मघोऽस्यास्तीति मत्वर्थविवक्षायां <code>छन्दसीवनिपो वकतव्यौ</code> (वा।५८२) इति वनिप्()रत्ययान्तोऽयं मघवन्शब्दः। तत्र वनिपः सम्प्रसारणे भसंज्ञायां सत्याम्(), <code>यस्येति च</code> (6.4.148) इति लोपेन भवितव्यम्(), ततश्च <code>मधुनः</code> इत्यनिष्टं रूपं स्यात्()? नैतत्(); अन्येव हीदमव्युत्पन्नं प्रातिपदिकम्(), तथा हि भावायामपि तस्य प्रयोगो दृश्यते। अथापि वनिप्प्रत्ययान्तः स्यात्()? एवमपि बहुलवचनात्? <code>यस्येति</code> (6.4.148) इति लोपो न भविष्यतीत्यदोषः। <code>मघोनी</code> इति। <code>ऋन्नेभ्यो ङीप्()</code> (4.1.5)। <code>माघवनम्()</code> इति। पूर्ववदण्()। <code>अन्()</code> (6.4.67) इति प्रकृतिवद्भावः॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

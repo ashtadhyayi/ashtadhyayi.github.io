@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-5.1\/5.1.119.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.1.119";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.1.120\",\"Previous\":\"5.1.118\",\"अकारादिक्रमसङ्ख्या\":1700,\"कौमुदीक्रमसङ्ख्या\":1781,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"भावकर्मार्थकः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"तस्य भावस्त्वतलौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-5.1/5.1.119.md">Edit 5.1.119!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.1.119";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.1.120\",\"Previous\":\"5.1.118\",\"अकारादिक्रमसङ्ख्या\":1700,\"कौमुदीक्रमसङ्ख्या\":1781,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"भावकर्मार्थकः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"तस्य भावस्त्वतलौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.1.119 तस्य भावस्त्वतलौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तस्य भावस्त्वतलौ। प्रकृतीति। न तु यः कश्चिद्धर्मः, घटत्वमित्यत्र द्रव्यत्वपृथिवीत्वादेरभानात्। गोर्भाव इति। इह गोशब्दोऽर्थपरः, शब्दस्वरूपपरो वेति पञ्चद्वयम्। यदाऽर्थपरस्तदा धर्मविशेषः प्रत्ययार्थः, स च धर्मत्वेनैव भासते। <code>प्रकृतिजन्ये</code>त्यादिस्तु प्रयोगोपाधिः। यदा तु शब्दपरस्तदा तज्जन्यबोधप्रकारः प्रत्ययर्थः। स च धर्मविशेष एव। <code>पाचकत्व</code>मित्यत्र तु कर्तृत्वरूपसंबन्धः प्रकारः। <code>पच्यमानत्व</code>मित्यत्र तु कर्मत्वरूपसंबन्धः। तथा <code>औपगवत्व</code>मित्यत्र जन्यत्वरूपसंबन्धः प्रकारः। <code>राजपुरुषत्व</code>मित्यत्र तु स्वरूपसंबन्ध इत्याद्यह्यम्। एवं स्थिते हरिटीकायां यदुक्तं `कृत्तद्धितसमासेभ्यः संबन्धाभिधानं भावप्रत्ययेनेति, तत्र नाऽपूर्वं शक्त्यन्तरं कल्प्यम्। उक्तरीत्यैव तत्राप्युपपत्तेरिति संक्षेपः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

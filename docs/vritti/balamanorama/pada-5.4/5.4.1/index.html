@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-5.4\/5.4.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.2\",\"Previous\":\"5.3.119\",\"अकारादिक्रमसङ्ख्या\":2356,\"कौमुदीक्रमसङ्ख्या\":2073,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"पादशतस्य संख्याऽऽदेर्वीप्सायां वुन् लोपश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-5.4/5.4.1.md">Edit 5.4.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.2\",\"Previous\":\"5.3.119\",\"अकारादिक्रमसङ्ख्या\":2356,\"कौमुदीक्रमसङ्ख्या\":2073,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"पादशतस्य संख्याऽऽदेर्वीप्सायां वुन् लोपश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.1 पादशतस्य सङ्ख्यादेर्वीप्सायां वुन् लोपश्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अथ पञ्चमस्य चतुर्थपादः-पादशतस्य। पादश्चशतं चेति समाहारद्वन्द्वाल्लोपापेक्षया षष्ठी। वुन्प्रत्ययापेक्षया तु सा पञ्चम्यर्थे। सङ्ख्यावचकशब्दपूर्वकात्पादशब्दाच्च वीप्साविशिष्टार्थवृत्तेः स्वार्ते वुन्प्रत्ययः स्यात्, प्रकृतेरन्त्यस्य लोपश्चेत्यर्थः। ननु वुनोऽकादेशे सति <code>यस्येति चे</code>त्येव लोपसिद्धेरिह लोपविधिर्व्यर्थ इत्यत आह&ndash;अनैमित्तिकत्वार्थमिति। <code>यस्येति चे</code>ति लोपस्य परनिमित्तकतया तस्य <code>अचः परस्मिन्</code> इति स्थानिवत्त्वा <code>पादः प</code>दिति पदादेशो न स्यात्। अस्य तु लोपस्य परनिमित्तकत्वाऽभावेन स्थानिवत्त्वाऽप्रसक्तेः पद्भावो निर्बाध इति भावः। तद्धितार्थ इति। नच वीप्सायाः प्रकृत्यर्थविशेषणतया वुनोऽर्थाऽभावात्कथमिह<code>तद्धितार्थ</code> इति समास इति वाच्यं, वुनो द्योतकतया द्योत्यार्थेनैवार्थवत्त्वात्। वुन्नयं स्त्रियामेवेति। स्वभावादिति भावः। द्विशति कामिति। द्वे द्वे शते ददातीति विग्रहः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

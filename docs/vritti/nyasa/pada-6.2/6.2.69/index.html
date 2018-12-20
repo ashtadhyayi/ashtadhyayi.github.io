@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.69.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.69";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.70\",\"Previous\":\"6.2.68\",\"अकारादिक्रमसङ्ख्या\":1317,\"कौमुदीक्रमसङ्ख्या\":3803,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उदात्तः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गोत्रान्तेवासिमाणवब्राह्मणेषु क्षेपे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.69.md">Edit 6.2.69!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.69";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.70\",\"Previous\":\"6.2.68\",\"अकारादिक्रमसङ्ख्या\":1317,\"कौमुदीक्रमसङ्ख्या\":3803,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उदात्तः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गोत्रान्तेवासिमाणवब्राह्मणेषु क्षेपे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.69 गोत्रान्तेवासिमाणवब्राआहृणेषु क्षेपे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>गोत्राधिकारादन्यत्र गोत्रग्रहणे लोकिकं गोत्रं गृहते</code> (का।वृ।४।२।३९) इत्युक्तम्()। लोके चापत्यमात्रे प्रसिद्धम्(), तेनेह तस्यैव ग्रहणम्(), न तु पारिभाषिकस्य। अन्तेवासी=शिष्यः। तत्रान्तेवसिग्रहणादर्थग्रहणं प्रसिद्धम्()। अत इहाप्यर्थ एव गृह्रते, न स्वरूपम्()। माणवब्राआहृणयोः स्वरूपमेव। मनोरयं माणवः, अस्मादेव निपातनाण्णत्वम्()। <code>अबाधकान्यपि निपातनानि भवन्ति</code> (पु।प।वृ।९९) इति पक्षे मानव इत्यपि भवति। ब्राहृणोऽयं ब्राआहृणः। यस्तु <code>अपत्ये कुत्सिते मूढे मनोरौत्सर्गिकः स्मृतः</code> (का।वृ।४।१।१६१) इति माणवकशब्दो व्युत्पाद्यते, यश्च ब्राहृणोऽपत्यं ब्राआहृण इत्यर्थे ब्राआहृणशब्दः तयोर्गोत्रग्रहणेनैव सिद्धम्()। क्षेपः निन्दा। <code>जङ्घावात्स्यः</code> इति। <code>सुप्? सुपा</code> (2.1.4) इति समासः। कथं पुनरत्र क्षेपः? इत्याह&ndash;<code>यो जङ्घादानम्()</code> इत्यादि। जङ्घादानं किमप्याचारनियतं देयमुच्यते, तद्ददान्यहमित्यतोऽभिप्रायेण वात्स्यः सम्पद्यते। वात्स्योऽहमित्यभ्युपगच्छति यः सः जङ्घावात्स्य इत्येवं निन्द्यते। अवात्स्यस्यापि सतो जङ्घादानं प्रति वात्स्यत्वाभ्युपगमात्()। वात्स्यशब्दोऽयं गर्गादिः। <code>भार्यासौश्रुतः</code> इति। सुश्रुतोऽपत्यं सौश्रुत इत्यण्(), भार्याप्रधानः सौश्रुतो भार्यासौश्रुतः। <code>समानाधिकरणाधिकारे शाकपार्थिवादीनामुपसंख्यानमुत्तरपदलोपश्च</code> (वा।८३) इति समासः। सुश्रुतस्य भार्याप्रधानतयेत्यनेन समानाधिकरणेनात्र समास इति दर्शयति। सुश्रुतोऽपत्यमित्यनेनापि सौश्रुतस्याण्प्रतययान्तत्वम्()। <code>वशाब्राआहृकृतेयः</code> इति। तेनैवोपसंख्यानेन समासः। अत्रापि वशाप्रधानतया ब्राहृकृतापत्यस्य क्षेपः।
 <code>कुमारीदीक्षाः</code> इति। <code>सुप्? सुपा</code> (2.1.4) इति समासः। एवं <code>कम्बलचारायणीयाः</code> इत्यत्रापि। दाक्षिणा प्रोक्तं दाक्षं शास्त्रम्()। <code>इञश्च</code> (4.2.111) इत्यण्(), दाक्षमधीयते तद्वेत्तीति वा पुनरण्(), तस्य <code>प्रोक्ताल्लुक्()</code> (4.2.63) इति लुक्()। चरशब्दो नडादिः, चरस्यापत्यं चारायणः, तेन प्रोक्तं चारायणीयम्()। <code>वृद्धाच्छः</code> (4.2.113), <code>तदधीते</code> (4.2.58) इति पूर्ववदण्()। पाणिना प्रोक्तं पाणनीयम्(), ततः पूर्ववदध्येतर्यण्? तस्य च लुक्()। <code>कमार्यादिलाभकामाः</code> इति। आदिशब्देन कम्बलौदनादीनां ग्रहणम्()। अत्रापि <code>सुप्? सुपा</code> (2.1.4) इति समासः। तेनैवोपसंख्यानेन वा कुमारीलाभकामा दाक्षाः कुमारीदाक्षाः।
 <code>भिक्षामाणवः</code> इति। पूर्ववत्? समासः। भिक्षालाभकामो माणवो भिक्षामाणवः। <code>दासीब्राआहृणः</code> इति। दास्याः कामयिता ब्राआहृणो दासीब्राआहृणः। एवं <code>वृषलीब्राआहृणः</code> इति। <code>कर्त्तृकरणे कृता बहुलम्()</code> (2.1.31) इति बहुलवचनादकृतापि समासः। <code>तृतीया</code> (2.3.18) इति योगविभागाद्वा।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

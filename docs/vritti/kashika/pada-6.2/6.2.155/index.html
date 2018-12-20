@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-6.2\/6.2.155.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.155";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.156\",\"Previous\":\"6.2.154\",\"अकारादिक्रमसङ्ख्या\":2093,\"कौमुदीक्रमसङ्ख्या\":3889,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नञो गुणप्रतिषेधे सम्पाद्यर्हहितालमर्थास्तद्धिताः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-6.2/6.2.155.md">Edit 6.2.155!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.155";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.156\",\"Previous\":\"6.2.154\",\"अकारादिक्रमसङ्ख्या\":2093,\"कौमुदीक्रमसङ्ख्या\":3889,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नञो गुणप्रतिषेधे सम्पाद्यर्हहितालमर्थास्तद्धिताः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.155 नञो गुणप्रतिषेधे सम्पाद्यर्हहितालमर्थास् तद्धिताः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सम्पादि अर्ह हित अलम् इत्येवम् अर्था ये तद्धिताः तदन्तानि उत्तरपदानि नञो गुणप्रतिषेधे वर्तमानात् पराणि अन्तोदात्तानि भवन्ति। सम्पादिकर्णवेष्टकाभ्यां सम्पादि मुखं कार्णवेष्टकिकम्, न कार्णवेष्टकिकम् अकार्णवेष्टकिकम्। अर्हं छेदमर्हति छैदिकः, न छैदिकः अच्छैदिकः। हित वत्सेभ्यो हितः वत्सीयः, न वर्सीयः अवर्सीयः। अलमर्थ सन्तापाय प्रभवति सान्तापिकः, न सान्तापिकः असान्तापिकः। नञः इति किम्? गर्दभरथम् अर्हति, गार्दभरथिकः। विगार्दभरथिकः। गुणप्रतिषेधे इति किम्? गार्दभरथिकादन्यः अगार्दभरथिकः। गुण इति तद्धितार्थप्रवृत्तिनिमित्तं सम्पादित्वाद्युच्यते। तत्प्रतिषेधो यत्र उच्यते समासे तत्र अयं विधिः कर्नवेष्टकाभ्यां। सम्पादि मुखम् इति। सम्पाद्यर्हहितालमर्थाः इति किम्? पाणिनीयम् अधीते पाणिनीयः, न पाणिनीयः अपाणिनीयः। तद्धिताः इति किम्? अन्यां वोढुमर्हति कन्यावोढा, न वोढा अवोढा। अर्हे कृत्यतृचश्च (*3,3.169) इति तृच्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

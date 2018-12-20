@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.1\/2.1.32.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.1.32";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.1.33\",\"Previous\":\"2.1.31\",\"अकारादिक्रमसङ्ख्या\":1000,\"कौमुदीक्रमसङ्ख्या\":694,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृतीया\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"कर्तृकरणे कृता बहुलम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.1/2.1.32.md">Edit 2.1.32!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.1.32";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.1.33\",\"Previous\":\"2.1.31\",\"अकारादिक्रमसङ्ख्या\":1000,\"कौमुदीक्रमसङ्ख्या\":694,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तृतीया\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"कर्तृकरणे कृता बहुलम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.1.32 कृत्यैरधिकार्थवचने।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>स्तुतिनिन्दाप्रयुक्तम्</code> इति। स्तुत्या निन्दया वा यत् प्रयुक्तं प्रवर्त्तितं तत् स्तुतिनिन्दाप्रयुक्तम्। तदर्थमुच्चारितमित्यर्थः। <code>अध्यारोपितार्थवचनम्</code> इति। अध्यारोपितोऽर्थोऽसन्नेव बुद्ध्या समारोपितस्तस्य वचनमिति षष्ठीसमासः। <code>कृर्त्तृकरणयोःट इति। अर्थे कार्यासम्भवात् तदभिधायिनि सुबन्ते कार्यं विज्ञायते।</code>काकपेया<code>इति।</code>पा पाने<code>(धा।पा।९२५) इति</code>अचो यत्<code>(3.1.97)</code>ईद्यति<code>(6.4.65) ईत्त्वम्। अत्र सम्पूर्णतोयत्वोद्भावनं नद्याः स्तुतिः, अध्यारोपितः पुनरत्रार्थः काकपेयत्वम्-- एवं नाम सम्पूर्णतोया नदी यत्तटस्थैरपि काकैः शक्या पातुम्।</code>()आलेह्रः कूपः<code>इति।</code>ऋहलोण्र्यत्<code>(3.1.124) अत्राप्यासन्नोदकत्वोद्भावनं कूपस्य स्तुतिः। अध्यारोपितः पुनरत्रार्थः ()आलेह्रत्वम्-- एवं नामासन्नोदकः कूपो यतः श्नभिरपि लिह्रते।</code>बाष्पच्छेद्यानि तृणानि<code>इति। अत्र मारद्वातिशयोद्भावनं तृणानां स्तुतिः। अध्यारोपितः पुनरत्रार्थो बाष्पच्छेद्यता-- एवं नाम मृदूनि तृणानि यद्बाष्पेणापि शक्यानि छेत्तुम्।</code>कण्टकसञ्चेय ओदनः<code>इति। अत्रापि वैषद्यातिशयोद्भावनं विक्लिन्नतोद्भावनञ्चौदनस्य स्तुतिः। अध्यारोपितः पुनरत्रार्थः कण्टकसञ्चेयत्वम्-- एवं नामौदनस्य विशदतातिशयो विक्लेदश्च यत्कण्टकेनापि शक्यः सञ्चेतुम्। एवं तावत् स्तुतिप्रयुक्तेऽधिकार्यवचन उदाहरणानि।
 निन्दाप्रयुक्तेऽधिकार्थवचन एतावन्त्येव द्रष्टव्यानि। तथा हि-- काकेया नदीत्यत्राल्पतोयत्वोद्भावनं नद्या निन्दा। अध्यारोपितः पुनरत्रार्थस्तदेव पूर्वोक्तं काकपेयत्वम्, एवं ()आलेह्रादावपि पूर्वोक्त एवाध्यारोपितोऽर्थो द्रष्टव्यः-- एवं नामाल्पतोया नदी यत्काकैरपि शक्यं पातुमिति। ()आलेह्रः कूप इत्यत्राप्यशुद्धतोयत्वोद्भावनं निन्दा- एवं नामाल्प ओदनो यत्कण्टकैरपि चीयत इति। ननु च बहुलवचनादधिकार्थोऽपि पूर्वेणैव सिद्धः समासः, तत्किमर्थमिदमित्याह--</code>पूर्वस्य` इत्यादि। ते वै विधयः सुसंगृहीता येषां प्रपञ्चश्चेति। सुसंगृहीतं यथा स्यादिति पूर्वस्यायं प्रपञ्च क्रियते॥</p>
 
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

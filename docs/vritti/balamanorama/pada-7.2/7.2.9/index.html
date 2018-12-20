@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.2\/7.2.9.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.9";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.10\",\"Previous\":\"7.2.8\",\"अकारादिक्रमसङ्ख्या\":1729,\"कौमुदीक्रमसङ्ख्या\":3163,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"अनिट्-प्रत्ययः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तितुत्रतथसिसुसरकसेषु च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.2/7.2.9.md">Edit 7.2.9!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.9";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.10\",\"Previous\":\"7.2.8\",\"अकारादिक्रमसङ्ख्या\":1729,\"कौमुदीक्रमसङ्ख्या\":3163,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"अनिट्-प्रत्ययः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तितुत्रतथसिसुसरकसेषु च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.9 तितुत्रतथसिसुरकसेषु च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तितुत्रत। ति, तु, त्र, त,थ, सि, सु, सर, क , स एषां दशानां द्वन्द्वः। अत्र <code>सरे</code>त्येकम्। ति, &ndash; तन्तिः। <code>स्त्रिया</code>मिति क्तिन्। तु- सक्तुः। <code>तनिगमी</code>त्यादिना <code>तु</code>प्रत्ययः। त्र, &ndash; शस्त्रम्, पत्रम्। <code>दाम्नी</code>ति त्रप्रत्ययः। त, &ndash;हस्तः। औणादिकस्तप्रत्ययः। क्तप्रत्यये तु हसितमित्येव। थ&ndash; कुष्टम्. औणादिकः क्थप्रत्ययः। सि&ndash;कुक्षिः। कुषेरौणादिकः क्सिप्रत्ययः। सु&ndash; इक्षुः। इषेरौणादिकः क्सुप्रत्ययः। सर&ndash; अक्षरम्। अशेः सरन्। कृ शल्कः। शलेः कः। स &ndash; वत्सः। <code>वदेः सः</code>। मेढ्रमिति। <code>मिह सेचने</code> त्रः। ढत्वध्तवष्टुत्वलोपाः। दंष्ट्रेति। दंशधातोस्त्रः। क्ङित्प्रत्ययाऽभावान्नलोपो न। सूत्रे दशेति शपा नर्देशात् <code>दंशसञ्जे</code>ति नलोपः। केचित्तु देशेत्यकार उच्चारणार्थः। नलोपनिर्देशात्क्वचिदन्यस्मिन्नपि प्रत्यये अक्ङित्यपि नलोप इति <code>दशन दन्ताः</code> इत्याहुः। नद्ध्रीति। नह्यते अनयेति विग्रहः। चर्मरज्जुः। <code>नह बन्धने</code> त्रः। <code>नहो धः</code> <code>झषस्तथो</code>रिति तस्य धः। षित्त्वाङीष्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

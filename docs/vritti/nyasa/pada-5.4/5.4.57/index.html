@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.4\/5.4.57.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.57";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.58\",\"Previous\":\"5.4.56\",\"अकारादिक्रमसङ्ख्या\":399,\"कौमुदीक्रमसङ्ख्या\":2128,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"अव्ययम्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अव्यक्तानुकरणाद्द्व्यजवरार्धादनितौ डाच्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.4/5.4.57.md">Edit 5.4.57!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.57";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.58\",\"Previous\":\"5.4.56\",\"अकारादिक्रमसङ्ख्या\":399,\"कौमुदीक्रमसङ्ख्या\":2128,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"अव्ययम्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अव्यक्तानुकरणाद्द्व्यजवरार्धादनितौ डाच्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.57 अव्यक्तानुकरणाद्द्व्यजवराद्र्धदनितौ डाच्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अव्यकतस्यानुकरणमव्यक्तानुकरणम्()</code> इति। यद्यप्यनुकरणे वर्णविशेषो रूपेण न प्रकाशते, तथापि ध्वनेः समानतया तन्मात्रसादृश्येन स तवनुक्रियत इति तस्याप्यनुकरणमित्युच्यते। द्व्यजर्द्धं भवति तस्मात्? प्रत्ययो भवति, यस्य न ततोऽपि न्यूनतरमेकाज्भवति। यद्यकृते द्विवचने यस्य द्व्यजवराद्र्धता ततो डाज्भवतीति ज्ञायते, ततः पटदित्यादेर्न स्यात्(); न ह्रत्र द्व्यजवरमर्द्धं भवतीत्येतच्छेतसि कृत्वाऽ‌ऽह&ndash;<code>यस्य च</code> इत्यादि। नन्वेवं सति डाचि परभूते तदाश्रये द्विर्वचने कृते द्व्यजवराद्र्धता भवति, तस्याञ्च सत्यां डाजितीतरेतराश्रयः प्रसजति। इतरेतराश्रयाणि कार्याणि शास्त्रे न प्रकल्पन्ते? इत्याह&mdash;<code>डाचि बहुलम्()</code> इत्यादि। यद्येषा परसप्तमी स्यात्(), स्यादेष दोषः; न चैषा परसप्तमी, किं तर्हि? विषयसप्तमी। <code>पटपटाकरोति</code> इति। पटच्छब्दाड्डाचि विवक्षिते विषयभूते बुद्धिस्थेऽनुत्पन्न एव पूर्वं तावद्()द्विवैचनं पटच्छब्दस्य क्रियते, तस्मिन्? कृते द्व्यजवराद्र्धतायामुपजातायां डाचि टिलोपः, <code>नित्यमाभ्रेडिते डाचि</code> (6.1.96) इति पूर्वस्य तकारस्य पररपत्वलम्(), <code>दमदमाकरोति</code> इति। वमच्छब्दस्य पूर्ववद्()द्धिर्वचनम्(), ततो डाच्()।
 <code>दृषत्करोति</code> इति। अत्रापि द्विर्वचने कृते द्व्यजवराद्र्धत भवतीति। नाव्यक्तस्येदमनुकरणम्()। <code>श्रत्करोति</code> इति। भवत्येतदव्यक्तानुकरणम्(), न द्व्यजवराद्र्धम्()। कृतेऽपि ह्रत्र द्विर्वचने एकाजवरमर्द्धं सम्पद्यते। <code>खरटखरटाकरोति</code> इति। खरटवित्येतस्यानुकरणस्यात्र पटदित्येतस्यानुकरणस्येव पूर्ववद्()द्धिर्वचनम्(), ततो डाच्()। यदि <code>द्व्यजद्र्धम्()</code> एतावदुच्येत, इह प्रत्ययो न स्यात्(), न ह्रत्र द्व्यजद्र्धतास्ति। अवरग्रहणे तु सतीहापि भवति। तत्र हि द्व्यचोऽद्र्धाद्यस्य न्यूनतरमद्र्ध तत एव प्रत्ययेन भवितव्यम्(), अन्यतस्तु सर्वतो भवितव्यमेव; अन्यथाऽवरग्रहणमनर्थकमेवेति द्व्यजद्र्धादित्येवं ब्रायात्()। <code>पटिति करोति</code> इति। <code>अध्यक्तानुकरणस्यात इतौ</code> (6.1.95) इत्यच्छब्दस्य पररूपत्वम्()। यद्यत्र डाच्? स्यात्(), तस्य डाजन्तस्य परमिति शब्दमुच्चार्य करोतिरनन्तरः स्यादिति, न च तत्परम्(); तच्चानिष्टम्()।
 अथ चकारः किमर्थः, यावलतान्तोदात्तत्वं कृत्वादस्य प्रत्ययस्वरेणैव सिद्धम्()? इत्यत आह&ndash;<code>चकारः</code> इत्यादि। पटपटा असि इति स्थिते <code>तिङ्ङतिङः</code> (8.1.28) इत्यसिशब्दस्य निघाते कृते <code>स्वरितो वानुदात्तेऽपदादौ</code> (8.2.6) इति स्वरित एकादेशः प्राप्नेति, न च स्वरित इष्यते, तदर्थ चकारः।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

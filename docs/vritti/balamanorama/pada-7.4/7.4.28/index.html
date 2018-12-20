@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.4\/7.4.28.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.4.28";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.4.29\",\"Previous\":\"7.4.27\",\"अकारादिक्रमसङ्ख्या\":2938,\"कौमुदीक्रमसङ्ख्या\":2367,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"यकारादिषु प्रत्ययेषु च्वौ अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"रिङ् शयग्लिङ्क्षु\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.4/7.4.28.md">Edit 7.4.28!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.4.28";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.4.29\",\"Previous\":\"7.4.27\",\"अकारादिक्रमसङ्ख्या\":2938,\"कौमुदीक्रमसङ्ख्या\":2367,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"यकारादिषु प्रत्ययेषु च्वौ अङ्गकार्याणि\",\"विषयः २\":\"\",\"विषयः ३\":\"प्रकृति-प्रत्यय-कार्यम्\",\"सूत्रम्‌\":\"रिङ् शयग्लिङ्क्षु\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.4.28 रिङ् शयग्लिङ्क्षु
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आशीर्लिङि परस्मैपदे भृ यादिति स्थिते&ndash; रिङ् शय। श यक् लिङ् एषां द्वन्द्वात्सप्तमीबहुवचनम्। <code>अयङ्यि क्ङिती</code>त्यतो यीति सप्तम्यन्तमनुवृत्तं लिङो विसेषणम्। तदादिविधिः। शे तु यीति नान्वेति, असंभवात्। नापि यकि, अव्यभिचारात्। अत एव ?कृत्सार्वधातुकयोरित्यनुवृत्तमपि लिङ एव विशेषणं। तदाह&ndash;शे यकीत्यादिना। ऋत इति। <code>रीङृत</code> इत्यतस्तदनुवृत्तेरिति भावः। अङ्गस्येधिकृतम्। <code>ऋत</code> इति तद्विशेषणं। तदन्तविधिः। ऋदन्तस्याऽङ्गस्येति लभ्यते। आदेशे ङकार इत्। ङित्त्वादन्तादेशः। निर्दिश्यमानपरिभाषयैव सिद्धे ङकारोच्चारणम्, इङागमेनैव सिद्धे रेफोच्चारमं च स्पष्टार्थम्। ननु भ्रियादिति वक्ष्यमाणमुदाररणमयुक्तम्, कृते रिङि <code>अकृत्सार्वधातुकयो</code>रिति दीर्घप्रसङ्गादित्यत आहरीङि प्रकृते इति। कृते रिङि यदि दीर्घः स्यात्तर्हि रिङ्विधिर्व्यर्थः स्यात्, <code>रीङृत</code> इत्येव सिद्धेः। अतो रिङि कृते सति न दीर्घ इत्यर्थः। भ्रियादिति। भ्रियास्तमित्यादि सुगमम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

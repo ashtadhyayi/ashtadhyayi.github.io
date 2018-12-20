@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.3\/8.3.31.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.31";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.32\",\"Previous\":\"8.3.30\",\"अकारादिक्रमसङ्ख्या\":3392,\"कौमुदीक्रमसङ्ख्या\":133,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":106,\"विषयः १\":\"कुक् टुक् धुक् तुक् ङमुट्\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"शि तुक्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.31.md">Edit 8.3.31!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.31";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.32\",\"Previous\":\"8.3.30\",\"अकारादिक्रमसङ्ख्या\":3392,\"कौमुदीक्रमसङ्ख्या\":133,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":106,\"विषयः १\":\"कुक् टुक् धुक् तुक् ङमुट्\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"शि तुक्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.31 शि तुक्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>शि</code> इति सप्तम्यकृतार्था <code>नः</code> इति पूर्वसूत्रे कृतार्थायाः पञ्चम्याः षष्ठीत्वं प्रकल्पयति; <code>तस्मिन्निति निर्दिष्टे पूर्वस्य</code> (1.1.65) इति वचनात्(), तेन नकर एवागमी विज्ञायत इत्याह&ndash;<code>नकारान्तस्य</code> इत्यादि।
 अथ किमर्थं तुक्? पूर्वान्तः क्रियते, न प्रकृतो धुडेव परादिः क्रियेत; तथापि चर्त्वेन सिध्यति? इत्यत आह&ndash;<code>पूर्वान्तकरणम्()</code> इत्यादि। पूर्वान्तः=पूर्वस्यान्तः, स पुनः प्रकरणात्? तुग्विज्ञायते, तल्प करणम्()=विधानम्(), छत्वं यथा स्यादित्येवमर्थम्()। यदि प्रकृतो धुडेव विधीयेत, <code>शश्छोऽटि</code> (8.4.62) इति च्छत्वं न स्यात्()। तत्र च कारणं पूर्वमेवोक्तम्()। <code>यद्येवम्()</code> इत्यादि। यदि पूर्वान्तस्तुक्? क्रियते, कुर्वञ्चेते&ndash;इत्यत्र तुका पदान्तताया रहितत्वात्? नकारस्य <code>अट्कुष्वाङ्()</code> (8.4.2) इत्यनेन णत्वं प्राप्नोति, परादित्वे त्वेष दोषो न भवति; <code>पदान्तस्य</code> (8.4.36) इति णत्वपरतिषेधादिति भावः। <code>तत्र</code> इत्यादिना <code>न भाभूपूकमिगमि</code> (8.4.33) इत्यादेः सूत्रान्नेति वत्र्तमाने <code>स्तोः श्चुना श्चः</code> (8.4.39) इति योगविभागः क्रियते, तेन चवर्गयोगे कुर्वञ्चेते&ndash;इत्यत्र णत्वं न भवत्येव। ननु च क्रियमाणेऽपि योगदिभागे णत्वं प्राप्नोत्येव, यस्मादिह चवर्गयोगो नास्त्येव, तुकः श्चुत्वस्यासिद्धत्वात्()? योगविभागकरणसामथ्र्यात्? श्चुत्वस्यासिद्धत्वेऽपि णत्वप्रतिषेधो भविष्यतीत्यदोषः॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

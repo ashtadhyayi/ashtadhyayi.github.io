@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.3\/2.3.13.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.3.13";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.3.14\",\"Previous\":\"2.3.12\",\"अकारादिक्रमसङ्ख्या\":1391,\"कौमुदीक्रमसङ्ख्या\":570,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"चतुर्थी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"चतुर्थी सम्प्रदाने\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.3/2.3.13.md">Edit 2.3.13!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.3.13";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.3.14\",\"Previous\":\"2.3.12\",\"अकारादिक्रमसङ्ख्या\":1391,\"कौमुदीक्रमसङ्ख्या\":570,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"चतुर्थी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"चतुर्थी सम्प्रदाने\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.3.13 चतुर्थी सम्प्रदाने।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>देवदत्ताय रोचते</code> इति। <code>रुच्यर्थानां प्रीयमाणः</code> (1.4.33) इति संप्रदानसंज्ञा। <code>पुष्पेभ्यः स्पृह्रति</code> इति। अत्र <code>स्पृहेरीप्सितः</code> (1.4.36) इत्यनेन।
 <code>तादर्थ्ये उपसंख्यानम्</code> इति। तच्छब्देन चतुथ्र्यन्तस्यार्थो निर्दिश्यते। तस्मा इदं तदर्थम्, तस्य भावस्तादथ्र्यम्। तत्र चतुथ्र्या उपसंख्यानम् = प्रतिपादनं कत्र्तव्यमित्यर्थः। तत्रेदं प्रतिपादनम्&ndash; <code>चतुर्थी</code> इति योगविभागः क्रियते, तेन तादर्थ्ये चतुर्थी भवतीति। अथवा <code>चतुर्थी तदर्थार्थबलिहितसुखरक्षितैः</code>(2.1.35) इति तादर्थ्ये चतुर्थ्याः समासवचनं ज्ञापकं भवति&ndash; तादर्थ्येऽपि चतुर्थीति।
 <code>क्लृपि सम्पद्यमाने</code> इत्यादि। क्लृप्त्यर्थानां धानूनां प्रयोगे सम्पद्यमाने कत्र्तरि संपादनक्रियाविशिष्टे चतुर्थी वक्तव्या, व्याख्येयेत्यर्थः। व्याख्यानं तु तमेव योगविभागमाश्रित्य। तथा <code>उत्पातेन ज्ञाप्यमाने</code> इत्यादावपि। <code>मूत्राय कल्पते यवागूः</code> इति। यवागूर्मूत्रविकाररूपेण भवतीत्यर्थः। विकाररूपापत्तौ चतुर्ती विज्ञेया। तेनेह न भवति&ndash; देवदत्तस्य शालयः संपद्यन्त इति। यदा चाभेदविवक्षा तदा परत्वात् प्रथमैव भवति, न चतुर्थी&ndash; मूत्रमिदं संपद्यते यवागूरिति, उच्चारोऽयं सम्पद्यते यवौदन इति। यदा तु <code>जनिकर्त्तृः प्रकृतिः</code> (1.4.30) इति प्रकृतेरपादानात्वं विवक्ष्यते तदा यवाग्वा इति पञ्चम्येव स्यात्&ndash; मूत्रं सम्पद्यते यवाग्वा इति।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

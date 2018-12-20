@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.23.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.23";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.24\",\"Previous\":\"4.1.22\",\"अकारादिक्रमसङ्ख्या\":1047,\"कौमुदीक्रमसङ्ख्या\":481,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"काण्डान्तात्‌ क्षेत्रे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.23.md">Edit 4.1.23!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.23";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.24\",\"Previous\":\"4.1.22\",\"अकारादिक्रमसङ्ख्या\":1047,\"कौमुदीक्रमसङ्ख्या\":481,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"काण्डान्तात्‌ क्षेत्रे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.23 काण्डान्तात्क्षेत्रे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>नियमार्थम्</code> इति। क्षेत्र एव यथा स्यात्, अन्यत्र मा भूदिति। अथान्तग्रहणं किमर्थम्, यावता सामथ्र्यादेव तदन्तविधिर्लभ्यत एव, यथा&ndash; पूर्वस्मिन् सूत्रे, न हि केवलस्य काण्डशब्दस्य केनचिद्द्विगुसंज्ञा विहिता? सत्यमेतत्, किन्त्वसत्यग्रहणे काणडमेव क्षेत्रेण विशिष्येत&ndash; काण्डशब्द एव केवलो यः क्षेत्रे वत्र्तते इति, ततश्चेह प्रतिषेधः स्यात्&ndash; द्वाभ्यां काण्डसंज्ञकाभ्यां क्षेत्राभ्यां क्रीता द्विकाण्डी वडवेति। इह तु न स्यात्&ndash; द्वे काण्डे प्रमाणमस्याः क्षेत्रभक्तेः द्विकाण्डा क्षेत्र भक्तिरिति। अन्तसूत्रे तु सति काण्डशब्दस्य विशेषणं क्षेत्रं न भवति; तस्य द्विगो गुणभूतत्वात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

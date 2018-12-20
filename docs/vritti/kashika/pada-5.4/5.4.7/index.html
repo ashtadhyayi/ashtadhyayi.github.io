@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-5.4\/5.4.7.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.7";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.8\",\"Previous\":\"5.4.6\",\"अकारादिक्रमसङ्ख्या\":422,\"कौमुदीक्रमसङ्ख्या\":2079,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अषडक्षाशितङ्ग्वलंकर्मालम्पुरुषाध्युत्तरपदात्‌ खः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-5.4/5.4.7.md">Edit 5.4.7!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.7";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.8\",\"Previous\":\"5.4.6\",\"अकारादिक्रमसङ्ख्या\":422,\"कौमुदीक्रमसङ्ख्या\":2079,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अषडक्षाशितङ्ग्वलंकर्मालम्पुरुषाध्युत्तरपदात्‌ खः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.7 अषडक्षाऽशितङ्ग्वलङ्कर्मालम्पुरुषाध्युत्तरपदात् खः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अषडक्ष आशितङ्गु अलग्कर्म अलम्पुरुष इत्येतेभ्यः अध्युत्तरपदात् च स्वार्थे खः प्रत्ययो भवति। अविद्यमानानि षड्क्षीणि अस्य इति बहुव्रीहिः। बहुव्रीहौ सक्थ्यक्ष्णोः इति षच्, ततः खप्रत्ययः। अषडक्षीणो मन्त्रः। यो द्वाभ्यम् एव क्रियते न बहुभिः। आशिता गावो ऽस्मिन्नरण्ये आशितङ्गवीनम् अरण्यम्। निपातनात् पूर्वपदस्य मुमागमः। अकङ्कर्मन्, अलम्पुरुषः इति पर्यादयो ग्लानद्यर्थे चतुर्थ्या इति समासः। अलं कर्मणे अलङ्ककर्मीणः। अलं पुरुषाय अलंपुरुषीणः। अध्युत्तरपदस् तत्पुरुसः। अधिशब्दः शौण्डादिसु पठ्यते। राजाधीनः। नित्यश्च अयं प्रत्ययः, उत्तरत्र विभाषाग्रहणात्। अन्ये ऽपि स्वार्थिका नित्याः प्रत्ययाः स्मर्यन्ते, तमबादयः प्रक्क्नः, ञ्यादयः प्राग्वुनः, आमादयः प्राङ् मयटः, बृहतीजात्यन्ताः समानान्ताश्च इति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

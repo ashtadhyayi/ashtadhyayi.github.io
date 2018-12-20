@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.2\/7.2.67.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.67";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.68\",\"Previous\":\"7.2.66\",\"अकारादिक्रमसङ्ख्या\":3096,\"कौमुदीक्रमसङ्ख्या\":3096,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्वासौ\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वस्वेकाजाद्घसाम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.2/7.2.67.md">Edit 7.2.67!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.67";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.68\",\"Previous\":\"7.2.66\",\"अकारादिक्रमसङ्ख्या\":3096,\"कौमुदीक्रमसङ्ख्या\":3096,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"क्वासौ\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"वस्वेकाजाद्घसाम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.67 वस्वेकाजाद्घसाम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>कृतद्विर्वचनानां धातूनामेकाचाम्()</code> इति। कुत एतदवसितम्()? एकाज्ग्रहणसामथ्र्यात्()। न हि कश्चिदकृते द्विर्वचनेऽनेकाजस्ति, यन्निवृत्त्यर्थमेकान्ग्रहणं क्रियते। ननु च जागर्त्तिरस्ति, अतस्तन्निवृत्त्यर्थ तत्? स्यात्()? नैतदस्ति; न ह्रेकमूदाहरणं प्रति योगारम्भं प्रयोजयति। यद्येतत्? प्रयोजनं स्यात्(), <code>जाग्रो न</code> इत्येवं ब्राऊयात्()। तदाप्ययमर्थः&ndash;प्रतिपत्तिगौरवं परिह्मतं भवति। ननु चोर्णोतेर्निवृत्त्यर्थमपि स्यात्()? नैतत्(); उक्तं हि प्राक्&ndash;<code>वाच्यौउर्णोर्णुवद्भावः</code> (कारिका।७।२।११) इति। तस्माद्युक्तमुक्तम्()&ndash;कृतद्विर्वचनानां धातूनामेकाचामिति। <code>आदिवान्()ाशिवान्()</code> इति। <code>अद भक्षणे</code> (धा।पा।१०११), <code>अश भोजने</code> (धा।पा।१५२३)। लिटः <code>क्वसुश्च</code> (3.2.107) इति क्वसुः, द्विर्वचनम्(), अभ्यासकार्थञ्च, <code>अत आदेः (7.4.70) इति दीर्घत्वम्()। सवर्णदीर्घत्वम्(), इट्(),</code>उगिदचम्()<code>(7.2.70) इति नुम्(),</code>सान्तमहतः<code>(6.4.10) इत्यादिना दीर्घः, हल्ङ्यादि-(6.1.66)संयोगान्तलोपौ (8.2.23)।</code>पेचिवन्(), शोकिवान्()<code>इति।</code>अत एकहल्मध्ये<code>(6.4.120) इत्यादिनैत्त्वाभ्यासलोपौ।</code>धात्वभ्यासयोरेकादेशे कृते<code>इत्यादि। ननु च षाष्ठिके द्विर्षचनविधौ</code>द्विष्प्रयोगो द्विर्वचनम्()<code>इत्येव पक्षो वृत्तिकारेणाश्रितः, एवं चाकृते दात्वभ्यासयोरेकदेशेऽकृतयोरपि चैत्वाभ्यासलोपयोः कृतद्विर्वचना अप्येत एकाचो भवन्ति। स्थाने द्विर्वचने हि शब्दान्तरमनेकाजतिदिश्यत इति स्यादेषां कृतद्विर्वचनानामनेकाच्त्वम्, न तु द्विष्प्रयोगे द्विर्वचने; तत्र हि स एव धातुर्द्विरुच्यते, न चासौ शतकृत्वोऽप्युच्चार्यमाण एकाच्त्वं जहाति, किंपुनर्द्धिरुच्यमानः, तत्? क्रिमुच्यते--धात्वभ्यासयोरेकादेश एत्वाभ्यासलोपयोश्च कृतयोः कृतद्विर्वचना एत एकाचो भवन्तीति? आवृत्तिकृतमेकाचो बेदमाश्रित्यैवमुक्तमित्यदोषः। भवति हि धर्मभेदादपि धर्मिणो भेदव्यवहारः? तथा हि, वक्तारो वदन्ति--परुद्भावान्? पटुरासीत्(), पटुतरश्चैषमः, पटुतमः परारि, सोऽन्य एवासि संवृत्त इति। अथ वा--स्थाने द्विर्वचनपक्षोऽपि तत्राश्रितः, द्विष्प्रयोगश्च द्विर्वचनमिति कृत्वा। चकारात्? स्थाने द्विर्वचनमपीति स्थाने द्विर्वचनपक्षस्यापि तत्र सूचनात्()। ये तु तत्पक्षभाविनो दोषस्ते तत्र प्रतिविहिता एव।</code>तस्थिवान्()<code>इति।</code>शर्पूर्वाः खथः<code>(7.4.61) इति ख्यः शेषः;</code>अतो लोप इटि च<code>(6.4.64) इत्याकारलोपः।</code>जक्षिवान्()<code>इति। पूर्ववददेर्घस्लादेशः, इट्?</code>गमहन<code>(6.4.98) इत्यादिनोपधालोपः,</code>कुहोश्चुः<code>(7.4.62) इति चुत्वम्()--धकारस्य झकारः,</code>अभ्यासे चर्च्च<code>(8.4.53) इति झकारस्य जकारः। परस्य धकारस्य</code>खरि च<code>(8.4.54) इति चत्र्वम्()--ककारः,</code>शासिवसि<code>(8.3.60) इत्यादिना षत्वम्()। 
 ननु चात्र क्रादिनियमादिडागमः सिद्ध एव, तत् किमर्थोऽयमारम्भः? इत्याह--</code>सिद्धे<code>इत्यादि।</code>क्रादिनियमात्? प्रसक्तः<code>इत्यादिना</code>सिद्धे सत्यारम्भो नियमार्थः<code>(कात।प।५९) इत्येतदेव स्पष्टीकरोति।</code>प्रसक्तः<code>इति। प्राप्त इत्यर्थः।</code>नियम्यते<code>इति। धात्वन्तरेभ्यो व्यावर्त्त्येकाजादिष्वेव व्यवस्थाप्यत इत्यर्थः। 
 अथाद्ग्रहणं किमर्थम्(), यावताऽकारान्ता अप्यतो लोपे कृते कृतद्विर्वचना एकाचो भवन्त्येव, तत्रैकाज्ग्रहणेनैव सिद्धम्()? इत्याह--</code>आद्ग्रहणमनेकाज्ग्रहणार्थम्()<code>इति। कथं पुनस्तेषामनेकाच्त्वम्()? इत्यत आह--</code>द्विर्वचने<code>इत्यादि। इण्निमित्तत्वादाकारलोपस्येटि सति तेषामाकारलोपेन भवितव्यम्(), नासति, अतो यावदिण्न क्रियते तावदाकारलोपाभावात्? कृतद्विर्वचना एतेऽनेकाच इत्यसत्याद्ग्रहणे [</code>इत्यसत्यादिग्रहणे<code>--इति मुद्रितः पाठः] तेषां ग्रहणं न स्यात्()। तस्मादनेकाजर्थमाद्ग्रहणं कत्र्तव्यम्()। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

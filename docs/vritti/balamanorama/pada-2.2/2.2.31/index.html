@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-2.2\/2.2.31.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.2.31";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.2.32\",\"Previous\":\"2.2.30\",\"अकारादिक्रमसङ्ख्या\":2915,\"कौमुदीक्रमसङ्ख्या\":902,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पूर्वनिपातः /परनिपातः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"राजदन्तादिषु परम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.2/2.2.31.md">Edit 2.2.31!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.2.31";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.2.32\",\"Previous\":\"2.2.30\",\"अकारादिक्रमसङ्ख्या\":2915,\"कौमुदीक्रमसङ्ख्या\":902,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पूर्वनिपातः /परनिपातः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"राजदन्तादिषु परम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.2.31 राजदन्तादिषु परम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>नेष्टोद्गातृशब्दे आद्गुणश्च। राजदन्तादिषु परम्। <code>उपसर्जनं पूर्व</code>मित्यनुवर्तते। तदाह&ndash;एष्विति। राजदन्तादिष्वित्यर्थः। पूर्वप्रयोगर्हमित्यतः प्राक् <code>उपसर्जनं</code>मिति सेषः। राजदन्त इति। दन्तशब्दस्य षषष्टीतत्पुरुषेऽप्रदानतयोपसर्जनत्वेऽपि परनिपातः। इह गणे राजदन्ताग्रेवणादिशब्दास्तत्पुरुषाः,विष्वक्सेनार्जुनादयो द्?वन्द्वश्च पठिता अतो द्वन्द्वप्रकरणे तदुपन्यासः। वि�आक्सेनार्जुनावित्यत्र <code>अजाद्यदन्त</code>मित्यर्जुनशब्दस्य पूर्वनिपाते प्राप्ते परनिपातः। धर्मादिष्वनियम इति। गणसूत्रमिदम्। अन्यतरस्य पूर्वनिपात इत्यर्थः। अर्थधर्माविति। अजाद्यदन्तशब्दस्य पूर्वनिपातनियमे प्राप्ते तदनियमो वक्तव्य इत्यर्थः। निपात्यत इति। पाक्षिको राजदन्तादिगण इत्यर्थः। पत्युरभ्यर्हितत्वेऽपि परनिपातश्च। आकृतिगणोऽयमिति। वृत्तौ तु कृत्स्नोऽयं गणः पठितः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

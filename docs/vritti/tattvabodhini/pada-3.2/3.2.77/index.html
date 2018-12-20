@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-3.2\/3.2.77.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.77";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.78\",\"Previous\":\"3.2.76\",\"अकारादिक्रमसङ्ख्या\":3827,\"कौमुदीक्रमसङ्ख्या\":2987,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"स्थः क च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-3.2/3.2.77.md">Edit 3.2.77!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.77";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.78\",\"Previous\":\"3.2.76\",\"अकारादिक्रमसङ्ख्या\":3827,\"कौमुदीक्रमसङ्ख्या\":2987,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"स्थः क च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.77 स्थः च क
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>स्थः क च। शंस्था इति। क्विपि लुप्ते <code>घुमास्थे</code> ति ईत्वं न, स्थानिवद्भावस्य अनल्विधादिति निषेधात्। प्रत्ययलक्षणसूत्रं तु प्रत्ययस्याऽसाधारणं रूपं यत्राश्रीयते तत्रैवेति नियमार्थमिति निष्कर्षात्। यत्तु कैयटेनोक्तम्&ndash; <code>ईत्वमवकरादावादविति वचनाद्भाष्यकारीयोदाहणप्रामाण्याद्वा प्रत्ययलक्षणेन ईत्वं ने</code>ति, तत् <code>अतृणेडित्यादिसिद्धये प्रत्ययप्राधान्ये अल्विध्यर्थं प्रत्ययलक्षणसूत्र</code>मिति पक्षमभिप्रेत्य। तत्राप्यवकारादाविति वचनस्वीकारे सुधीवेति न सिध्येदित्यपरितोषेण पक्षान्तरस्वीकार इति बोद्ध्यम्। ननु <code>नियमार्थ</code>मिति निष्कर्ष पक्षे तु प्रागुक्तं मत्रशीरित्यत्र कथमित्त्वं भवेदिति चेत्। अत्राहुः&ndash; शास इदिति। ततः &ndash; अङि। नियमार्थमिदम्। अजादौ चेदित्त्वं स्यादड�एव नान्यत्रेति हल्ग्रहणं मास्त्विति ज्ञेयमिति। नचैवमपि हलादौ पिति सार्वधातुके तृणह इमो विधानादतृणेडित्यादि तु नियमपक्षे न सिध्यतीत्यल्विध्यर्थमिति पक्षोऽपि स्वीकर्य इति वाच्यम्, <code>उतो वृद्धि</code>रिति सूत्राद्धल्ग्रहणमनुवर्त्त्य तृणहानीत्यत्राऽनिष्टवारणाय <code>नाभ्यस्तस्याची</code>ति सूत्रादचि नेत्यनुवर्त्त्य व्याख्यानात्। एतच्च रुधादिगण एव व्याख्याताम्। स्यादेतत्&ndash; <code>सुपि स्थः</code> <code>क्विप् चे</code>ति सूत्राभ्यां कक्विपौ सिद्धौ। शमीत्यादि। धातुग्रहणसामर्थ्याद्धिधातुमात्राद्भवन्नच्?प्रत्ययो हेत्वादिषु कृञष्टं यथा बाधते तथा तिष्ठतेः कक्विपावपि बाधेतेति <code>स्थः क चे</code>त्यारम्भ इति भावः। नन्वेवं <code>शमि धातो</code>रित्यस्याऽनन्तरं <code>स्थः क चे</code>ति सूत्र्यतां, चकारेणाऽचि समुच्चिते सवर्णदीर्घे शंस्था इति भविष्यत, एवं चोत्सर्गापवादयोः समानदेशतया संदर्भशुद्धरपि लभ्यते, इत्त्वाऽभावार्थं चन यतनीयमिति महल्लाघवमिति चेत्। अत्राहुः&ndash; अशं स्था इत्यत्र <code>अच्कावशक्तौ</code> इति सूत्रेणोत्तरपदमन्तोदात्तं स्यात्। <code>कृद्ग्रहणे गतिकारकपूर्वस्यापी</code>ति शंस्थाशब्दस्याजन्तत्वात्। क्विबन्तेन नञ्समासे नञ्पूर्वपदप्रकृतिस्वरः सिध्यतीति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

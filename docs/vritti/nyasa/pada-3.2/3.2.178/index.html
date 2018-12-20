@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.2\/3.2.178.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.178";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.179\",\"Previous\":\"3.2.177\",\"अकारादिक्रमसङ्ख्या\":262,\"कौमुदीक्रमसङ्ख्या\":3158,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"वर्तमाने\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"अन्येभ्योऽपि दृश्यते\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.178.md">Edit 3.2.178!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.178";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.179\",\"Previous\":\"3.2.177\",\"अकारादिक्रमसङ्ख्या\":262,\"कौमुदीक्रमसङ्ख्या\":3158,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"वर्तमाने\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"अन्येभ्योऽपि दृश्यते\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.178 अन्येभ्योऽपि दृश्यते।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ननु चान्यभ्योऽपीत्येतावतैव सिद्धम्, तत्किमर्थं दृशिग्रहणमित्यादि? क्वचिदित्यादिना येषामुपसंग्रहार्थं दृशिग्रहणं तानि विध्यन्तराणि दर्शयति। यस्मात् विध्यन्तराणामुपसंग्रहार्थं दृशिग्रहणम्ेवञ्च कृत्वा वृत्तिकारः <code>क्विब्वचिपृच्छि</code>(वा।२८८) इत्यादिकं वाक्यं पठति। दृशिग्रहणोपात्तानि तान्येव विध्यन्तराणि दर्शयितुमित्यभिप्राय-। कथं पुनर्दृशिग्रहणेन विध्यन्तरोपसंग्रहः? दृशिग्रहणे हि सति <code>यथा दृश्यन्ते क्विबन्ता धातवस्तथैव तेऽनुगन्तव्याः</code> इत्येषोऽर्थो लभ्यते। त()स्मश्चार्थे लभ्यमाने द्विर्वचनादिविधयः संगृहीता भवन्ति। एवं हिते यथा दृश्यन्ते तथानुगता भवन्ति। यदि यथायोगं द्विर्वचनादयो विधीयन्ते, तदा क्विबन्तेषु क्वचिद्द्विर्वचनं दृश्यते, क्वचिदपि संप्रसारणमिति युक्तमुक्तम्&ndash; <code>दृशिग्रहणं विध्यन्तरोपसंग्रहार्थम्</code> इति।
 <code>वाक्</code> इति। वचेर्वच्यादिसूत्रेण (6.1.15) प्राप्तस्य सम्प्रसारणस्याभावः क्रियते। <code>शब्दप्राट्</code> इति। पृच्छेरपि ग्रह्रादिसूत्रेण (6.1.16) सम्प्रसारणस्य। व्रश्चादिसूत्रेण (8.2.36) षत्वम्, पूर्ववज्जश्त्वं चत्र्वञ्च। आयतं स्तौतीति <code>आयतस्तूः</code>। <code>ष्टुञ् स्तुतौ</code> (धा।पा।१०४३)। कटं प्रवत इति <code>कटप्रूः</code>। <code>प्रुङ गतौ</code> (धा।पा।९५७)। <code>श्रीः</code> इति। <code>श्रिञ् सेवायाम्</code> (धा।पा।८९७)। <code>दिद्युत्</code> इति। <code>जगत्</code> इति। <code>गमः क्वौ</code>(6.4.40) इत्यनुनासिकलोपः। <code>ददृत्</code> इति। <code>उरत्</code>(7.4.66) इत्यत्त्वम्, रपरत्वम्, हलादिशेषः (7.4.60)।<code>धीः</code>इति। <code>ध्यै चिन्तायाम्</code> (धा।पा।९०८) <code>हलः</code> (6.4.2) इति दीर्घः॥</p>
 
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

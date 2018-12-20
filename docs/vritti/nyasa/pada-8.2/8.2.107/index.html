@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.107.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.107";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.108\",\"Previous\":\"8.2.106\",\"अकारादिक्रमसङ्ख्या\":904,\"कौमुदीक्रमसङ्ख्या\":3626,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वाक्ये टेः प्लुत उदात्तः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एचोऽप्रगृह्यस्यादूराद्धूते पूर्वस्यार्धस्यादुत्तरस्येदुतौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.107.md">Edit 8.2.107!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.107";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.108\",\"Previous\":\"8.2.106\",\"अकारादिक्रमसङ्ख्या\":904,\"कौमुदीक्रमसङ्ख्या\":3626,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वाक्ये टेः प्लुत उदात्तः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"एचोऽप्रगृह्यस्यादूराद्धूते पूर्वस्यार्धस्यादुत्तरस्येदुतौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.107 एचोऽप्रगृह्रस्यादूरादूधूते पूर्वस्यार्घस्यादुत्तरस्येदुतौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>एचः समाहारवर्णाः तत्र एकारस्य ओकारस्य च पूर्वेण प्रकरणेन समुदायस्यैष प्लुतः, एचोः पुनरवयवयोरिदुतोः। अनन्तरसूत्रेणेदमारभ्यते <code>विषयपरिगणनं कत्र्तव्यम्()</code> इति। एतद्ग्रहणवाक्यम्()। अस्य <code>प्रश्नान्ताभिपूजित</code> इत्यादिना विवरणं करोति <code>कत्र्तव्यम्()</code> [वक्तव्यम्()&ndash;काशिका] इति। व्याख्येयमित्यर्थः। तत्रेदं व्याख्यानम्()&ndash;<code>अनुदात्तं प्रश्नान्ताभिपूजितयोः</code> (8.2.100) इत्यादयो योगा इहानुवत्र्तन्ते, तेनान्यत्र न भवति। <code>यथाविषयम्()</code> इति। यो यस्य विषयो यथाविषयम्()&ndash;<code>यथाऽसादृश्ये</code> (2.1.7) इत्यव्ययीभावः, <code>प्रश्नान्ताभिपूजितयोः</code> (8.2.100) अनुदात्तः प्लुतः। प्रश्ने तु <code>अनन्त्यस्यापि प्रश्नाख्यानयोः</code> (8.2.105) इति स्वरितः, शेषेपूदात्तः। <code>इतुतौ पुनरुदात्तावेतौ</code> इति। <code>टेरुदात्तः</code> (8.2.82) इति चाधिकारात्()। <code>विष्णुभूते विष्णुभूते३</code> इति। अत्र <code>आम्रेडितं भत्र्सने</code> (8.2.95) इति प्लुतः।
 <code>आगच्छ भो माणवक विष्णुभूते३</code> इति। अत्र <code>दूराद्घते च</code> (8.2.84) इति। ननु चासत्यपि परिगणने नैव प्लुतः प्राप्नोति; <code>अदूराद्धते</code> इति वचनात्(), तत्किमर्थमिदं परिगणनस्य प्रत्युदाहरणित्याह&ndash;<code>परिगणने च</code> इत्यादि। असति परिगणने, अदूराद्धूत [<code>अदूराद्धूतेन भविष्यतीति</code> इत्येव&ndash;कांउ।पाठः] इत्युच्यते। अ()स्मस्तु सत्येतन्न वक्तव्यम्()। परिगणनादेव हि दूराद्धूते न भविष्यतीति। <code>कत्र्तव्यम्()</code> इति। व्याख्येयमित्यर्थः। तत्रेदं व्याख्यानम्()&ndash;<code>याज्यान्तः</code> (8.2.90) इत्यतोऽन्तग्रहणमनुवत्र्तते, तेनान्तस्यैव भविष्यतीति।
 <code>भद्रं करोषि गौः</code> इति। <code>अभिपूजिते</code> (8.2.100) इति प्लुतः। अन्तग्रहणानुवृत्तेरत्रायं विधिर्न भवति, न ह्रत्रैतच्छब्दोऽश्ते, किं तर्हि? व्यञ्जनम्()।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

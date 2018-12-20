@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.2\/3.2.102.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.102";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.103\",\"Previous\":\"3.2.101\",\"अकारादिक्रमसङ्ख्या\":2206,\"कौमुदीक्रमसङ्ख्या\":3013,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्त-क्तवतु\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"निष्ठा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.102.md">Edit 3.2.102!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.102";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.103\",\"Previous\":\"3.2.101\",\"अकारादिक्रमसङ्ख्या\":2206,\"कौमुदीक्रमसङ्ख्या\":3013,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्त-क्तवतु\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"निष्ठा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.102 निष्ठा।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>कृतम्</code> इति। अत्र कित्त्वाद् गुणाभावः। <code>कृतवान्</code> इति। <code>उगिदचाम्</code> (7.1.70) इति नुम्। <code>अत्वसन्तस्य चाधातोः</code> (6.4.14) इति दीर्घः, हल्ङ्यादि (6.1.66) संयोगान्तलोपौ (8.2.23)।
 <code>निष्ठायाम्</code> इत्यादि। निष्ठासंज्ञके प्रत्यये विधातव्येऽप्रसिद्धनिष्पत्तिकस्य निष्ठासंज्ञकस्य प्रत्ययस्य निष्ठेति चास्याः संज्ञाया अप्रसिद्धिः, कुतः? इतरेतराश्रयत्वात्। कथमितरेतराश्रयत्वमित्याह&ndash; <code>संज्ञायाम्</code> इत्यादि। निष्ठेत्येवं संज्ञामुच्चार्य क्तक्तवत्वोरिह भूते विधानम्, विद्यमानयोश्च तयोः संज्ञया भवितव्यमितीतरेतराश्रयत्वम्, <code>इतरेतराश्रयाणि कार्याणि शास्त्रे न प्रकल्प्यन्ते</code>(व्या।प।२८)। यदितो क्तक्तवतू स्वरूपेण विज्ञातौ भवत एवञ्च <code>क्तक्तवतू निष्ठा</code> (1.1.25) इत्यन्यस्य संज्ञा विधातुं शक्यते,नान्यथा। अतः संज्ञाया अप्रसिद्धिः, तस्याश्चाप्रसिद्धौ तयोरप्रसिद्धिः। <code>भाविनी</code> इति। भविष्यन्तीत्यर्थः। यथा&ndash; अस्य सूत्रस्य शाटकं वयेति। भाविनीशब्दोऽयम् <code>गमेरिनिः</code>(द।उ।६।५७) <code>आङि णित्</code> (द।उ।६।५८) <code>भुवश्च</code> (द।उ।६।५९) इतीनिप्रत्ययान्तो व्यत्पादितः। स च <code>भविष्यति गम्यादयः</code> (3.3.3) इति भविष्यत्काले विहितः। तेन भाविनीत्यस्य भविष्यन्तीत्येवार्थो लभ्यते। <code>सामथ्र्यात्</code> इत्यादि। स भूते भवति यस्योत्पन्नस्य निष्ठेत्येषा संज्ञा भवति। न चान्यस्योत्पन्नस्य निष्ठेत्येषा संज्ञा भवति। अपि तु क्तक्तवत्वोरेवेति सामथ्र्यम्।
 <code>आदिकर्मणि</code> इत्यादि। कर्मशब्दोऽत्र क्रियावाची। आदिभूते क्रियारम्भादिभूते प्रथमे क्रियालक्षण इत्यर्थः। यावत्क्रियालक्षणैः सकलः कटः परिसमाप्तिमुपैति क्रियालक्षणानां तावतामपवर्गे भूतकालो भवति। आद्ये क्रियालक्षणे समुदायस्यापरिनिष्पन्नत्वात् वत्र्तमानकाल एवेति। तत्र वत्र्तमाने निष्ठा न प्राप्नोति, अतो वक्तव्यो व्याख्येयः। तत्रेदं व्याख्यानम्&ndash; यदयं <code>उदुपधाद्भावादिकर्मणोरन्यतरस्याम्</code> (1.2.21) इत्यादिकर्मणि कर्मणि निष्ठा विकल्पयति। यद्वा&ndash; <code>आदिकर्मणि क्तः कत्र्तरि च</code> (3.4.71) इत्यादि, तज्ज्ञापयति&ndash; आदिकर्मणि निष्ठा भवतीति। <code>प्रकृतः कटम्</code> इति। प्रशब्दोऽत्रादिकर्म द्योतयति। य एवार्थः प्रकरोति कटं देवदत्त इति, स एवार्थः प्रकृतः कटं देवदत्त इति॥</p>
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

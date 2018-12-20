@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.74.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.74";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.75\",\"Previous\":\"6.1.73\",\"अकारादिक्रमसङ्ख्या\":484,\"कौमुदीक्रमसङ्ख्या\":147,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तुक्-आगमः\",\"विषयः २\":\"\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"आङ्माङोश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.74.md">Edit 6.1.74!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.74";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.75\",\"Previous\":\"6.1.73\",\"अकारादिक्रमसङ्ख्या\":484,\"कौमुदीक्रमसङ्ख्या\":147,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तुक्-आगमः\",\"विषयः २\":\"\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"आङ्माङोश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.74 इको यणचि।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>इको यणादेशो भवति</code> इति। इकां यणां च साम्यात्? यथासंख्यं भवतीति वेदितव्यम्()। यश्च सवर्णोऽच्? तत्र दीर्घविधानसामथ्र्यात्? असवर्णेऽचि यणादेशो विज्ञायत इति। इक इति किम्()? वागत्रेत्यत्र कुत्वादेव सिद्धत्वाद्यणादेशो मा भूदिति। अचीति किम्()? दधि करोति।
 <code>प्लुतपूर्वस्य</code> इति। प्लुतः पूर्वो यस्मात्? स प्लुतपूर्वः। वक्तव्यः=व्याख्येयः। तत्रेदं व्याख्यानम्()&ndash;<code>इको यणचि</code> इत्यत्र तन्त्रेण द्वौ योगावृच्चारितौ; तत्रैको यणादेशार्थः, अपरस्त्विकः प्लुतपूर्वस्य सवर्णदीर्घबाधनार्थो भविष्यतीति। भो यिदम्()&ndash;भो+इ+इदमिति स्थिते <code>गुरोरनृतोऽनन्तस्याप्येकैकस्य प्राचाम्()</code> (8.2.86) इत्यनेन दूराद्धूतेऽर्थे भोशब्दस्य प्लुतः कृतः, ततः सवर्णदीर्घत्वे प्राप्ते यणादेशः॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

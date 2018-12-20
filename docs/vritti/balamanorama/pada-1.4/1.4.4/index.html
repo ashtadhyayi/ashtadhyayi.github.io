@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-1.4\/1.4.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.5\",\"Previous\":\"1.4.3\",\"अकारादिक्रमसङ्ख्या\":2232,\"कौमुदीक्रमसङ्ख्या\":303,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"नदी\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नेयङुवङ्स्थानावस्त्री\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.4/1.4.4.md">Edit 1.4.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.5\",\"Previous\":\"1.4.3\",\"अकारादिक्रमसङ्ख्या\":2232,\"कौमुदीक्रमसङ्ख्या\":303,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"नदी\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नेयङुवङ्स्थानावस्त्री\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.4 नेयङुवङ्स्थानावस्त्री
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>नेयङुवङ्स्थानावित्यतोऽस्त्रीत्यस्यानुवृत्तिर्वक्तव्या। ततश्च इयङुवङ्स्थानाविति यत्रान्वेति तत्रैव तत्संबद्धस्याऽस्त्रीत्यस्यानुवृत्तिरुचिता। एवं च ह्रस्वादिवाक्ये इयङुवङ्स्थानावित्यस्याऽनुवृत्त्यभावादस्त्रीत्यस्यापि तत्र नानुवृत्तिरिति भावः। अतिस्त्रियै इति। नदीत्वपक्षे आट् वृद्धिः। अतिस्त्रये इति। नदीत्वाऽभावे घित्वात् <code>घेर्ङिती</code>ति गुणेऽयादेशः। अतिस्त्रियाः अतिस्त्रेरिति। नदीत्वे आट्। तदभावे गुणः। <code>ङसिङसोश्चे</code>ति पूर्वरूपम्। अतिस्त्रियामिति। नदीत्वपक्षे ङेराम्, आट्। अतिस्त्राविति। नदीत्वाऽभावपक्षे <code>अच्च घेः</code>। श्रीरिति। श्रयन्त्येतामिति श्रीः। <code>क्विब्बचिप्रच्छिश्रिस्नुद्रुप्रुज्वां दीर्घोऽसंप्रसारणं चे</code>ति क्विप्, प्रकृतेदीर्घश्च। श्री शब्दात्सुः। अङ्यन्तत्वान्न सुलोपः। श्रियौ श्रिय इति। <code>दीर्घाज्जसि चे</code>ति पूर्वसवर्णदीर्घनिषेधौ <code>इको यणची</code>ति यणि प्राप्ते धात्वयवेवर्णान्तत्वादचि श्नुधात्वितीयङ्। एकाच्त्वात्संयोगपूर्वकत्वाच्च यण् न। <code>यू स्त्र्याख्यौ</code> इति नदीत्वात् <code>अम्बार्थे</code>ति ह्रस्वेप्राप्ते&ndash;नेयङुवङ्। <code>यू स्त्र्याख्यौ नदी</code> इत्यतो <code>यू</code> <code>नदी</code>त्यनुवर्तते। <code>स्थान</code> शब्दो भावे ल्युङन्तः। इयङुवङोः स्थानं स्थितिर्ययोरिति बहुव्रीहिः। इयङुवङ्योग्याविति यावत्। तदाह&ndash;इयङुवङोरित्यादिना। हे श्रीरिति। अजादाबियङ्योग्यत्वान्नदीत्वनिषेधादम्बार्थनद्यौ<code>रिति ह्रस्वो नेति भावः। श्रियमिति। अमि पूर्वरूपं बाधित्वा इयङ्। श्रियौ श्रिय इति। औट्शसोः पूर्ववत्। टा-श्रिया। श्रियै इति।</code>ङिति ह्रस्वश्चे<code>ति ङिति नदीत्वपक्षे आट्, वृद्धिः। श्रिये इति। नदीत्वाऽभावे इयङ्। श्रिया इति। ङसिङसोर्नदीत्वे आट्, वृद्धिः। श्रिय इति। नदीत्वाऽभावपक्षे इयङेव। ङित्त्वाऽभावादामि</code>ङिति ह्रस्वश्चे`ति अप्राप्ते।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

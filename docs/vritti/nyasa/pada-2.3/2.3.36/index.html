@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.3\/2.3.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.3.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.3.37\",\"Previous\":\"2.3.35\",\"अकारादिक्रमसङ्ख्या\":3611,\"कौमुदीक्रमसङ्ख्या\":633,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सप्तमी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तम्यधिकरणे च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.3/2.3.36.md">Edit 2.3.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.3.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.3.37\",\"Previous\":\"2.3.35\",\"अकारादिक्रमसङ्ख्या\":3611,\"कौमुदीक्रमसङ्ख्या\":633,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सप्तमी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तम्यधिकरणे च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.3.36 सप्तम्यधिकरणे च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>दूरान्तिकार्थेभ्यश्चतरुआओ विभक्तयो भवन्ति</code> इति। पूर्वसूत्रेण द्वितीयादयस्तिरुआः, अनेन सप्तमी।
 <code>सप्तमीविधाने क्तस्येन्विषयस्य</code> इत्यादि। इन्विषयो यः क्तस्तदीये कर्मणि सप्तमी। विधेया। कश्चेन्विषः क्तः? यस्तदन्तस्तेनैव सह प्रयुज्यत इत्यर्थः। अनन्यत्रभावार्थत्वादत्र विषयशब्दस्य। <code>अधीती व्याकरणे</code> इति। अधीतं व्याकरणमनेनेति। <code>श्राद्धमनेन भुक्तम्</code> (5.2.84) इत्यतोऽनेनेत्यनुवत्र्तमाने <code>पूर्वादीनिः</code> (5.2.85) इत्यत इनिरित्यनुवत्र्तमाने च <code>इष्टादिभ्यश्च</code> (5.2.87) इतीनिप्रत्ययः। अत्र यद्यपि कर्मण्येव क्तो विहितस्तथापि तद्धित उत्पन्नेऽधीतव्याकरणोरभिसम्बन्धो निवत्र्तते। अस्ति च धात्वर्थस्य व्याकरणेन सम्बन्ध इति कर्मैव व्याकरणं भवतीत्यतो द्वितीया स्यात्, यथा&ndash; कृतपूर्वी कटमिति। तस्मात् सप्तम्या उपसंख्यानम् = प्रतिपादनं कत्र्तव्यमित्यर्थः। तत्रेदं प्रतिपादनम्()&ndash; योऽसावधीती कत्र्ता तस्य व्याकरणं विषमत्वेन विवक्ष्यते। तस्मादधिकरण इत्येवं सिद्धा सप्तमी॥
 <code>साध्वसाधुप्रयोगे</code> इत्यादि। अनर्चार्थमिह साधुशब्दस्य ग्रहणम्। अर्चायां हि <code>साधुनिपुणाभ्यामर्चायाम्</code> (2.3.43) इत्यनेनैव सिद्धा सप्तमी। <code>साधुर्देवदत्तो मातरि</code> इत्यादि। अत्राप्यधिकरण एव सप्तमी। तथा ह्रत्र मातृस्थासु क्रियासु मातृशब्दो वर्तते, पितृस्थासु क्रियासु पितृशब्दः; तासाञ्च क्रियाणां साध्वसाधुतां प्रति विषयभावोऽस्तीति वैषयिकाधिकरण एव सप्तमी। वक्तव्यशब्दस्तु व्याख्येय इत्यर्थे वत्र्तते। एवमुत्तरत्रापि।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

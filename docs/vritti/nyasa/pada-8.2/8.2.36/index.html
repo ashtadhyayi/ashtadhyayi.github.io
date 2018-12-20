@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.37\",\"Previous\":\"8.2.35\",\"अकारादिक्रमसङ्ख्या\":3337,\"कौमुदीक्रमसङ्ख्या\":294,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"झलि पदान्ते\",\"सूत्रम्‌\":\"व्रश्चभ्रस्जसृजमृजयजराजभ्राजच्छशां षः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.36.md">Edit 8.2.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.37\",\"Previous\":\"8.2.35\",\"अकारादिक्रमसङ्ख्या\":3337,\"कौमुदीक्रमसङ्ख्या\":294,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"झलि पदान्ते\",\"सूत्रम्‌\":\"व्रश्चभ्रस्जसृजमृजयजराजभ्राजच्छशां षः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.36 व्रश्चभ्रस्जसृजमृजयजराजभ्राजच्छशां षः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>ओ व्रश्चू छेदने</code> (धा।पा।१२९२), <code>भ्रस्जो पाके</code> <a href="दा।पा।१२८४"><code>भ्रस्ज</code> इत्येव धातुपाठः</a>, <code>सृज विसर्गे</code> (धा।पा।११७८), मृजू शुद्धौ<code>(धा।पा।१०६६),</code>यज देवपूजासङ्गतिकरणदानेषु<code>(धा।पा।१००२),</code>राजू दीप्तौ<code>(धा।पा।८२२),</code>टु भ्राजृ टृभ्राशृ टुभ्लाशृ दीप्तौ<code>(धा।पा।८२३,८२४,८२५)। छ इति च्छकारान्तावां ग्रहणम्(); श इति शकारान्तानाम्()। अत्र च शकारस्य जश्त्वे प्राप्ते, इतरेषां तु कत्वे तदपवादः षकारो विधीयते।</code>व्रष्टा<code>इति।</code>स्कोः संयोगाद्योः<code>(8.2.29) इति सकारलोपः, ऊदित्त्वात्? पक्ष इडभावः।</code>मीलबृट्(), धानाभृट्? इति। <code>ग्रहिज्या</code> (6.1.16) इति सूत्रेण सम्प्रसारणम्()। <code>रुआष्टा</code> इति। <code>सृजिदृशोर्झल्यमकिति</code> (6.1.57) इत्यमागमः। <code>मार्ष्टा</code> [मार्ष्टीति का। मुद्रितपाठ] इति। <code>मृजेर्वृद्धिः</code> (7.2.114)। <code>उपयट्()</code> ति। यदेः <code>विजुपे छन्दसि</code> (3.2.73) इति विच्()। <code>सम्राट्()</code> इति। <code>मो राजि समः क्वौ</code> (8.3.25) इति समो मकारस्य मकारादेशः।
 किं पुनः कारणं राजभ्राजोर्झल्युदाहरणं न प्रदर्शितम्()? इत्याह&ndash;<code>राजभ्राजोः</code> इत्यादि। झलत्वं कस्मान्न भवतीत्याह&ndash;<code>झलादिराभ्याम्()</code> इत्यादि। आभ्यां परो यो झलादिः स इटा पर्यवपद्यत इतीङ्()विधीयते; सेट्त्वादनयोः। इतरेष्वाद्यचतुर्थे। विभाषितेटौ, स्वरतीत्यादिसूत्रेम (7.2.44) शेषास्त्वानिटः; <code>एकाचः</code> (7.2.10) इतीटृप्रतिषेधात्()। तस्मात्? तेषामुभयार्थमेव ग्रहणम्()। <code>राष्टिः भ्राष्टिः</code> इति। <code>क्वितन्नाबादिभ्यश्च</code> (वा।३०७) इति क्तिन्प्रत्ययः, <code>तितुत्र</code> (7.2.9) इत्यादिनेट्प्रतिषेधः। <code>शब्दप्राट्()</code> इति। शब्दं पृच्छतीति <code>क्विव्वचि</code> (वा।२८८) इत्यादिना क्विप्(), दीर्घश्च।
 अथ किमर्थं छग्रहणम्(), यावता <code>च्छ्वोः शूडनूमासिके च</code> (६।४।१९) इति च्छकारस्य शकारे कृते शकारान्तत्वादेव पृष्ट इत्यादौ षत्वं भविष्यति? इत्यत आह&ndash;<code>च्छदोः शूट्()</code> इत्यादि। <code>अत्र</code> इत्यादि। इतिकरणौ हेतौ। तत्र हि <code>अनुनासिकस्य क्विझलोः क्ङिति</code> (6.4.15) इत्यनुवत्र्तते, तेन च्छग्रहणं क्रियते; अन्यथा पृष्टः, पृष्टवानित्याद्येव सिध्यत्(); न तु प्रष्टा, प्रष्टुमित्यादि; तृजादावक्ङिति शत्वाभावात्()। एतच्च सूत्रकारमतेनोत्तम्()। केचिदाचार्याः छग्रहणमिह सूत्रे प्रत्याचक्षत एव। तथा हि&ndash;<code>च्छ्रवो शूडनुनासिके च</code> (6.4.19) इत्यत्रोक्तम्()&ndash;&ldquo;केचिदिह क्ङितीत्येतन्नानुवरत्तयन्ति। कथं द्युभ्याम्(), द्युभिरित्यूठि कृते? <code>दिव उत्()</code> (6.1.127) इति तपरकरणान्मात्राकालो भविष्यतीति। <code>छशां षः</code> (8.2.36) इत्यत्र च्छग्रहणं न कत्र्तव्यम्(), अनेनैव हि सर्वत्र शकारो विधीयते&rdquo; इति।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.1\/7.1.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.1.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.1.2\",\"Previous\":\"6.4.175\",\"अकारादिक्रमसङ्ख्या\":2872,\"कौमुदीक्रमसङ्ख्या\":1247,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"युवोरनाकौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.1/7.1.1.md">Edit 7.1.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.1.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.1.2\",\"Previous\":\"6.4.175\",\"अकारादिक्रमसङ्ख्या\":2872,\"कौमुदीक्रमसङ्ख्या\":1247,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"युवोरनाकौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.1.1 युवोरनाकौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>शास्त्रस्य लाघवार्थमिह, युवू प्रत्ययावुपदिष्टौ, तयोः स्थानेऽनाकावादेशौ विधीयते। यदि हि यत्र यत्र युवोरुपदेशस्तत्र तत्रानाकावादेशो विधियेयाताम्(), तदा शास्त्रस्य गौरवं स्यात्(); तयोः प्रभूतवर्णसमुदायात्मकत्वात्()। इह युवोरनुनासिकयणोः प्रत्यययोरिदं ग्रहणम्(), न च तथाविधावननुबन्धकौ युवू शास्त्रे सम्भवतः; तत्र सामथ्र्याद्विशेषकराननुबन्धानुत्सृज्य सामान्येन तयोग्र्रहणं विज्ञायते? इत्याह&mdash;<code>युवु--इत्येतयोरुत्सृष्टविशेषणयोः</code> इति। इदं ग्रहणमिति वक्ष्यमाणेन सम्बन्धः। विशेषणं यद्योयोगं लकारादि, तदुत्सृष्टं परित्यक्तं ययोस्तौ यथोक्तौ। एतेन <code>युवो</code> इति ल्युडादीनां सामान्येन निर्देश इति दर्शयति। यद्यत्र युवोरित्याविशेषेण ग्रहणं स्यात्? तदा <code>यु मिश्रणे</code> (धा।पा।१०३३) [<code>यु मिश्रणेऽमिश्रणें च</code>&ndash;धा।पा।] युतः, युतवान्(), युत्वा; <code>दिषु क्रीडादौ (धा।पा।११०७) द्यूतः, धूतवान्(), धूत्वा;</code>ऊर्णाया युस्()<code>(5.2.122) ऊर्णायुरित्येवमादावप्यनाकौ स्याताम्(), अतोऽस्यातिप्रसङ्गनिरासायाह--</code>अनुनासिकयणोः<code>इति। अनुनासिको यण्ययोरिति बहुव्रीहिः। सन्ति हि यणः सानुनासिकाः निरनुनासकाश्च, तत्र हि ययोरनुनासिको यण्? तयोरिदं ग्रहणम्()। अनुनासिकयणौ च यौ युवू तौ प्रत्ययावेव, नाप्रत्ययाविति दर्शयितुमाह--</code>प्रत्यययोः<code>इति। अन्ये ,त्वप्रत्ययनिवृत्त्यर्थं प्रत्यययोरित्युक्तमिति वर्णयन्ति, तदयुक्तम्(); अनुनासिकयणोरित्यनेनैवाप्रत्ययनिवृत्तेः सिद्धत्वात्()। तन ह्रप्रत्ययावनुनासिकयणौ युवू शास्त्रे स्तः। तस्मादनुनासिकयणौ यो यूवू तौ प्रत्ययावेव, नाप्रत्ययाविति सम्भवप्रदर्शनार्थं प्रत्यययोरित्युक्तमिति विज्ञायते। अनुनासिकयणोश्च प्रत्ययोग्र्रहणे सत्यङ्गस्येति सम्बन्धलक्षणेयं षष्ठी वित्रेया। ङ्गसम्बन्धिनोर्युवोरिति सम्बन्धः। स पुनर्निमित्तिनिमित्तभावलक्षणः। प्रत्ययनिमित्तो ह्रङ्गस्यात्मलाभ इत्यङ्गं निमित्ति, प्रत्ययो निमित्तम्()।</code>योरनो वोरकः<code>इति। अनेन यथाक्रमं स्थान्यादेशसम्बन्धमाचष्टे</code>। <code>नन्द्यादिभ्यो ल्युः</code> इति। <code>नन्दिग्रहि</code> (3.1.134) इत्यादिना। <code>नन्दनः, रमणः</code> इति। <code>टु नदि समुद्धौ</code> (धा।पा।६७), <code>रमु</code>क्रीडायाम्()<code>(धा।पा।८५३)। हेतुमति णिच्(), तदन्ताल्लयुः।</code>सायन्तनः<code>इति। सायमादिभ्यष्ट()उट()लादिति।</code>सायञ्चिरम्()<code>(4.3.23) इत्यादिना। जातादौ शैषिकेऽर्थे तद्धितः।</code>वासुदेवकः, अर्जुनकः<code>इति। वसुदेवस्यापत्यं वासुदेवः, वासुदेवो भक्तिरसयेत#इ</code>वसुदेवार्जुनाभ्यां वुन्()` (4.3.98) इति वुन्()&ndash;वासुदेवकः, अर्जुनकः।</p>
 
 <p>ऊर्णा अस्य सन्तीत्यूर्णायुः, तत्रानुनासिकयणत्वाभावान्न भवति। किं पुनः कारणमेवमादीनीं यणोऽनुनासिकत्वं नास्ति? इत्याह&ndash;<code>एवमादीनाम्()</code> इत्यादि। <code>प्रतिज्ञानुनासिक्याः पाणिनीयाः</code> इति। यत्र तैरनुनासिकत्वं प्रतज्ञायते तत्रैव भवति, नान्यत्र। न च युस्प्रभृतीनां तैस्तत्? प्रतिज्ञायते, लक्ष्यानुरोधात्()। तेन तेषां यणोऽनुनासिकत्वं न भवति। आदिशब्देन <code>अहं शुभमोर्युस्()</code> (5.2.139) इत्येवमादयो गृह्रन्ते। ननु च <code>अहंशुभमोर्युस्()</code> <code>कंशंभ्यां वभयुस्तितुतयसः</code> (5.2.137) इत्यतर, सित्करणादेव न भविष्यति, सित्करणं हि पदसंज्ञार्यम्(), पदसंज्ञा चानुस्वारार्था&ndash;तस्यां सत्यां <code>मोऽनुस्वारः</code> (8.3.23) इत्यनुस्वारो यथा स्यात्()। यदि चात्रानादेशः स्यात्? तदा सित्करणमनर्थकं स्यात्(), न ह्रनादेशे कृतेऽनुस्वारो भवति, तद्विधौ <code>हलि सर्वेषाम्()</code> (8.3.22) इत्यतो हलीत्यनुवृत्तेः। आदेशे कृते न भवति; हलादित्वाभावात्()? नैतदस्ति; वचनसामथ्र्यादजादावप्यनुस्वारः स्यात्()। सित्करणस्यान्यदपि प्रयोजनम्()&ndash;पदसंज्ञा। तत्प्रजनम्()&ndash;भसंज्ञाबाधः। भसंज्ञायामध्ययानां भमात्रे टिलोपः स्यात्()। अवग्रहार्थे वा सित्करणं स्यात्(), कुतस्यानर्थक्यम्()!
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

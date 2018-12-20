@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-4.2\/4.2.60.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.2.60";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.2.61\",\"Previous\":\"4.2.59\",\"अकारादिक्रमसङ्ख्या\":1199,\"कौमुदीक्रमसङ्ख्या\":1270,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तदधीते तद्वेद\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"क्रतूक्थादिसूत्रान्ताट्ठक्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-4.2/4.2.60.md">Edit 4.2.60!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.2.60";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.2.61\",\"Previous\":\"4.2.59\",\"अकारादिक्रमसङ्ख्या\":1199,\"कौमुदीक्रमसङ्ख्या\":1270,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तदधीते तद्वेद\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"क्रतूक्थादिसूत्रान्ताट्ठक्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.2.60 क्रतूक्थादिसूत्रान्ताट् ठक्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>क्रतुविशेषवाचिभ्यः उक्थादिभ्यश्च सूत्रान्ताच् च ठक् प्रत्ययो भवति तदधीते तद्वेद इत्येतस्मिन् विषये। अणो ऽपवादः। अग्निष्टोमम् अधीते वेद वा आग्निष्टोमिकः। वाजपेयिकः। उक्थादिभ्यः औक्थिकः। लौकायतिकः। सूत्रान्तात् वार्त्तिकसूत्रिकः। साङ्ग्रहसूत्रिकः। सूत्रान्तादकल्पादेरिष्यते। कल्पसूत्रम् अधीते काल्पसूत्रः। अणेव भवति। उक्थशब्दः केषुचिदेव सामसु रूढः। यज्ञायज्ञीयात् परेण यानि गीयन्ते, न च तान्यधीयाने प्रत्यय इष्यते, किं तर्हि, सामलक्षणे औक्थिक्ये वर्तमानः उक्थशब्दः प्रत्ययम् उत्पादयति। उक्थम् अधीते औक्थिकः। औक्थिक्यम् अधीते इत्यर्थः। औक्थिक्यशब्दाच् च प्रत्ययो न भवत्येव, अनभिधानात्। विद्यालक्षणकल्पसूत्रान्तादिति वक्तव्यम्। वायसविद्यिकः। सार्पविद्यिकः। गौलक्षणिकः। आश्वलक्षणिकः। मातृकल्पिकः। पाराशरकल्पिकः। विद्या च न अङ्गक्षत्रधर्मसंसर्गत्रिपूर्वा। अङ्गविद्याम् अधीते आङ्गविद्यः। क्षात्रविद्यः। धार्मविद्यः। सांसर्गविद्यः। त्रैविद्यः। आख्यानाख्यायिकेतिहासपुराणेभ्यष् ठग् वक्तव्यः। आख्यानाख्यायीकयोरर्थग्रहणम्, इतिहासपुराणयोः स्वरूपग्रहणं यावक्रीतिकः। प्रैयङ्गविकः। वासवदत्तिकः। सौमनोत्तरिकः। ऐतिहासिकः। पौराणिकः। सर्वसादेर् द्विगोश्च लः। सर्ववेदः। सर्वतन्त्रः। सादेः सवार्त्तिकः। ससङ्ग्रहः। द्विगोः द्विवेदः। पञ्चव्याकरणः। अनुसूर्लक्ष्यलक्षणे च। अनुसूर्नामग्रन्थः, तम् अधीते आनुसुकः। लाक्षिकः। लाक्षणिकः। इकन् बहुलं पदोत्तरपदात्। पूर्वपदिकः। शतषष्टेः षिकन् पथो बहुलम्। शतपथिकः। शतपथिकी। षष्टिपथिकः। षष्टिपथिकी। बहुलग्रहणादणपि भवति। शातपथः। षाष्टिपथः। उक्थ। लोकायत। न्याय। न्यास। निमित्त। पुनरुक्त। निरुक्त। यज्ञ। चर्चा। धर्म। क्रमेतर। श्लक्ष्ण। संहिता। पद। क्रम। सङ्घात। वृत्ति। सङ्ग्रह। गुणागुण। आयुर्वेद। सूत्रान्तादकल्पादेः। विद्यालक्षणकल्पान्तात्। विद्याचानङ्गक्षत्रधर्मसंसर्गत्रिपूर्वा। आख्यानाख्यायिकेतिहासपुराणेभ्यष् ठक्। सर्वसादेर् द्विगोश्च लः। अनुसूर्लक्ष्यलक्षणे च। द्विपदि ज्योतिषि। अनुपद। अनुकल्प। अनुगुण। इकन्बहुलं पदोत्तरपदात्। शतषष्टेः षिकन्। पथो बहुलम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

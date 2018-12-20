@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.2\/3.2.108.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.108";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.109\",\"Previous\":\"3.2.107\",\"अकारादिक्रमसङ्ख्या\":2666,\"कौमुदीक्रमसङ्ख्या\":3097,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्वसु\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"भाषायां सदवसश्रुवः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.2/3.2.108.md">Edit 3.2.108!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.108";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.109\",\"Previous\":\"3.2.107\",\"अकारादिक्रमसङ्ख्या\":2666,\"कौमुदीक्रमसङ्ख्या\":3097,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"क्वसु\",\"विषयः २\":\"भूते\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"भाषायां सदवसश्रुवः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.108 भाषायाम् सदवसश्रुवः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>भाषायाम्। सद, वस, श्रु एषां द्वन्द्वात्पञ्चमी। पुंस्त्वमेकवचनं चार्षम्। तस्य च नित्यं क्वसुरिति। वाग्रहणं लिटैव संबध्यते, तस्य क्वसुस्तु नित्य इति भाष्ये स्पष्टम्। पक्षे लुङ्, तसय् भूतसामान्ये विहितत्वात्। वाग्रहणाननुवृत्तौ तु भूतसामान्ये लिडयं नित्यं लुङपवादः स्यात्, सरूपत्वात्। अस्य च भूतसामान्ये लिटो न तिङ्, अस्य क्वसोस्तदपवादत्वात्। वासरूपविधिस्तु लोदेशेषु नेति <code>लिटः कानज्वे</code>त्यत्र उक्तमिति शब्देन्दुशेखरे विस्तरः। निषेदुषीमिति। निपूर्वात्सदेर्लिटः क्वसुः, द्वित्वम्, <code>अत एकहल्मध्ये</code> इत्येत्वाभ्यासलोपौष वसोः संप्रसारणं, पूर्वरूपं, षत्वम्। अध्यूषुष इति। अधिपूर्वाद्वसधातोर्लिटः क्वसुः, याजित्वाद्धातोर्वस्य संप्रसारणम्। पूर्वरूपम्. उस् इत्यस्य द्वित्वं, हलादिशेषः, सवर्णदीर्घः। शसि वसोः संप्रसारणं, पूर्वरूपम्?। शुश्रुवानिति। श्रुधातोर्लिटः क्वसुः। द्वित्वम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

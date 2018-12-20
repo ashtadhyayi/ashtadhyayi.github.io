@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.3\/6.3.111.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.111";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.112\",\"Previous\":\"6.3.110\",\"अकारादिक्रमसङ्ख्या\":1577,\"कौमुदीक्रमसङ्ख्या\":174,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":131,\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ढ्रलोपे पूर्वस्य दीर्घोऽणः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.111.md">Edit 6.3.111!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.111";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.112\",\"Previous\":\"6.3.110\",\"अकारादिक्रमसङ्ख्या\":1577,\"कौमुदीक्रमसङ्ख्या\":174,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":131,\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ढ्रलोपे पूर्वस्य दीर्घोऽणः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.111 ढ्रलोपे पूर्वस्य दीर्घोऽणः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ढ्रलोपे। ढच् रेफश्च ढ्रौ, तौ लोपयतीति-ढ्रलोपः। ण्यन्तात्कर्मण्युपपदे अण्, उपपदसमासः। ढलोपनिमित्तं रेफलोपनिमित्तञ्च विवक्षितम्। तच्च ढकाररेफात्मकमेव, ढो ढे लोपः, रो रीति तयोरेव ढ्रलोपनिमित्तत्वात्। तथाच ढलोपनिमित्ते ढकारे, रेफलोपनिमित्ते रेफे च परतः पूर्वस्याणो दीर्घ इत्यर्थः फलति। तदाह&ndash;ढरेफाविति। <code>ढलोपे रेफलोपे च पूर्वस्याणो दीर्घ</code> इति तु न व्याख्यातं, तथा सति चयनीयमित्यनीयर्प्रत्ययान्ते <code>तस्य लोप</code> इति रेफलोपे यकारादकारस्य, चकार चचारेत्यादौ अभ्यासे अकारस्य च हलादिशेषेण रेफलोपे दीर्घापत्तेः। पुना रमत इति। <code>पुनर्-रमते</code> इति स्थिते <code>रो री</code> ति रेफलोपः। तन्निमित्ते रेफे परे नकारादकारस्य दीर्घः। हरी रम्य इति। हरिस्&ndash;रम्य इति स्थिते रुत्वे रेफलोपे चाऽनेन दीर्घः। शम्भू राजत इति। शम्बुस्-राजते इति स्थिते रुत्वे रेफलोपेऽनेन दीर्घः। त्रयाणामुदाहरणात्पूर्वेणैव णकारेणात्राण् गृह्यत इति सूचितम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

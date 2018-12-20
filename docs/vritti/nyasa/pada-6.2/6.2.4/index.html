@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.4.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.4";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.5\",\"Previous\":\"6.2.3\",\"अकारादिक्रमसङ्ख्या\":1290,\"कौमुदीक्रमसङ्ख्या\":3738,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गाधलवणयोः प्रमाणे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.4.md">Edit 6.2.4!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.4";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.5\",\"Previous\":\"6.2.3\",\"अकारादिक्रमसङ्ख्या\":1290,\"कौमुदीक्रमसङ्ख्या\":3738,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गाधलवणयोः प्रमाणे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.4 गाधलवणयोः प्रमाणे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>शम्बगाधम्()</code> इति। गाध्यत इति गाधः, <code>गाधृ</code>प्रतिष्ठालिप्सयोः<code>(धा।पा।४) [प्रतिष्ठालिप्सयोग्र्रन्थे च--धा।पा।] अर्धर्चादित्वात्? (2.4.31) पक्षे नपुंसकत्वम्()।</code>अर्तिलूधूसू<code>इति। अनेन सूत्रैकदेशेन</code>अर्तिलूधूसूखनसहचर इत्रः<code>(3.2.184) इत्येतत्सूत्रमुपलक्ष्यते।</code>मध्योदात्तः<code>इति। प्रत्ययस्वरेण।</code>अशूप्रुषि<code>इति।</code>अशूप्रुषिलटिकणिघटिविशिभ्यः कन्()<code>(द।उ।८।१२५) [अशूप्रुषिप्लुषिलटिकटिकणिखटिविशिभ्य) क्वन्()--द।उ।] इति सूत्रमुपलक्षयति। ननु चायामः=प्रमाणम्(),</code>आयामस्तु प्रमाणं स्यात्()<code>इति वचनात्(); न च शम्बगाधमित्यादिस्तत्पुरुषः प्रमाणवाची, किं तर्हि, इयत्तावाची? इत्याह--</code>प्रमाणम्()<code>इत्यादि। इयतो भाव इयत्ता, सा परिच्छिद्यते येन स इयत्तापरिच्छेदः, स एवात्र प्रमाणं वेदितव्यम्()। न पुनरायाम एव। तत्? कथम्()? प्रमीयतेऽनेनेति प्रमाणमिति क्रियाशब्दोऽत्र प्रमाणशब्दो गृह्रते, न तु रूढिशब्दः; लक्ष्यानुरोधात्()। तेन येनेयत्ता परिच्छिद्यते तत्? सर्वं प्रमाणम्()।</code>स्वरव्यङ्ग्यं च<code>इति। अस्य स्वरे योऽयं प्रकृतिभावो विधीयते तेन व्यङ्ग्यं द्योत्यमित्यर्थ-।</code>एतेषाम्()` इति। शम्बगाधादीनाम्()॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

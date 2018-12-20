@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.4\/6.4.171.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.171";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.172\",\"Previous\":\"6.4.170\",\"अकारादिक्रमसङ्ख्या\":2634,\"कौमुदीक्रमसङ्ख्या\":1158,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निपातनानि\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"ब्राह्मोअजातौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.171.md">Edit 6.4.171!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.171";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.172\",\"Previous\":\"6.4.170\",\"अकारादिक्रमसङ्ख्या\":2634,\"कौमुदीक्रमसङ्ख्या\":1158,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निपातनानि\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"ब्राह्मोअजातौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.171 ब्राआहृओ[ऽ]जातौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ब्राआहृओ जातौ। ब्राहृन्शब्दादपत्ये अणि <code>न मपूर्वोऽपत्ये</code> इति प्रकृतिभावनिषेधो जातावेवेत्यर्थः फलति। तथा सति ब्राहृणो।ञपत्यं ब्राआहृणैति जातिविशेषे न सिध्येत्,<code>न मपूर्वः</code> इति प्रकृतिभावनिषेधे सति <code>नस्तद्धिते</code> इति टिलोपस्य दुर्वारत्वात्। किंच ब्राहृआ देवता अस्य ब्राआहृं हविरिति न सिध्येत्, <code>न मपूर्वं</code> इति प्रकृतिभावनिषेधस्य जातावेवेति नियमितत्वेन अनिति प्रकृतिभावाट्टिलोपाऽसंभवात्। अत आह&ndash;योगविभाग इति। <code>ब्राआहृ</code> इत्येकं सूत्रम्। तत्र <code>इनण्यनपत्ये</code> इत्यतोऽनपत्येऽणीत्यनुवर्तते। तदाह&ndash;ब्राआहृ इति निपात्यते अनपत्ये।ञणीति। तथाच ब्राहृन्शब्दादनपत्येऽणि अनिति प्रकृतिबावनिवृत्तेष्टिलोपः फलित इति मत्वोदाहरति&ndash;ब्राआहृं हविरिति। ब्राहृआ देवता अस्येति विग्रहः। <code>सास्य देवते</code>त्यण्। ततो जाताविति। ततो=<code>ब्राआहृ</code> इति सूत्रात्पृथगेव, जाताविति सूत्रं कर्तव्यमित्यर्थः। इह <code>न मपूर्वोऽपत्येऽवर्मणः</code> इति सूत्रादपत्ये इति, <code>प्रकृत्यैका</code>जित्यतः प्रकृत्येति चानुवर्तते। तदाह&ndash;अपत्ये जाताविति। ब्राआहृण इति। ब्राहृणः सकाशात्सजातीयायां भार्यायामुत्पन्न इत्यर्थः। योगविभागस्त्वयं भाष्ये स्पष्टः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

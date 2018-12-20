@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.3\/6.3.109.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.109";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.110\",\"Previous\":\"6.3.108\",\"अकारादिक्रमसङ्ख्या\":2437,\"कौमुदीक्रमसङ्ख्या\":1034,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निपातनानि\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पृषोदरादीनि यथोपदिष्टम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.3/6.3.109.md">Edit 6.3.109!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.109";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.110\",\"Previous\":\"6.3.108\",\"अकारादिक्रमसङ्ख्या\":2437,\"कौमुदीक्रमसङ्ख्या\":1034,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"निपातनानि\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पृषोदरादीनि यथोपदिष्टम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.109 संख्याविसायपूर्वस्याह्नस्याहनन्यतरस्यां ङौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>द्व्योरह्नोर्भवः</code> इति। भवार्थविवक्षायां <code>तद्धितार्थ</code> (2.1.50) इति समासः, ततः <code>कालाट्ठञ्()</code> (4.3.11) इति ठञ्(), तस्य <code>द्विगोर्लृगनपत्ये</code> (4.1.88) इति लुक्(), <code>राजाहःसखिभ्यष्टच्()</code> (५।४।९१) इति टच्? समासान्तः, <code>अह्नोऽह्न एतेब्यः</code> (5.4.88) इत्यह्नादेशः। <code>द्र()ह्नि</code> इति। विभाषा ङिश्योः<code>(6.4.136) इत्यकारलोपः पाक्षिकः।</code>द्व्यह्नः<code>इति।</code>आद्? गुणः<code>(6.1.84)।</code>व्यह्नः<code>इति प्रादिसमासः। शेषं पूर्ववत्()।</code>सायाह्नः<code>इति। एकदेशिसमासोऽयम्()। तत्रेदं चोद्यमाशङ्क्यते--ननु च</code>पूर्वापराधरोत्तरम्()<code>(2.2.1) इत्यादिना समासो विहितः, न च सायंशब्दस्तत्र पठ()ते, तत्कथमिह सायंशब्दसायहःशब्देन समासः सम्भवतीति? एतन्निराकर्त्तुमाह--</code>एकदेशिसमासः पूर्वादिभ्योऽन्यस्यापि<code>इत्यादि। तत्पुरुषसमासे</code>अह्नोऽह्न एतेभ्यः<code>(5.4.88) इत्यनेनाह्नादेशो विधीयते,</code>एतेभ्यः<code>इत्यनेन च</code>तत्पुरुषस्याङ्गुलेः संख्याव्ययादेः? (5.4.86) इति, तथा <code>अहःसर्वैकदेशसंख्यातपुण्याच्च रात्रेः</code> (5.4.87) इति प्रक्रान्ताः संख्याव्ययादयः प्रत्यवमृश्यन्ते। तत्र यदि पूर्वादय एवैकदेशिना समस्येरन्(), तदा न सायंशब्दः <code>एतेभ्यः</code> इत्यनेन प्रत्यवमृश्येत; तस्य संख्यादिष्वपरिपठितत्वात्()। ततश्च सायंशब्दात्? परस्याह्यादेशो न स्यात्()। एवञ्च सायम्पूर्वस्याह्नशब्दस्याभावात्? तस्येह ग्रहणं न क्रियेत, कृतञ्च, तस्मादेतदेव सायम्पूर्वस्याह्नशब्दस्य ग्रहणं ज्ञापयति&ndash;पूर्वादिभ्योऽन्यस्याप्येकदेशिसमासो भवतीति। तेन <code>मध्यमह्नो मध्याह्नः</code> इति सिद्धं भवति। <code>पूर्वाह्णे</code> इति। <code>अह्नोऽदन्तात्()</code> (8.4.7) इति णत्वम्()। <code>संख्याविसायेभ्यः</code> इत्येव वक्तव्ये पूर्वशब्दस्याधिकस्य ग्रहणं तदधिककार्यवधानसूचनार्थम्()। तेन सायाह्न इत्यत्र मकारलोपः सिद्धो भवति॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

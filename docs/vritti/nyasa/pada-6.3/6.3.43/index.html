@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.3\/6.3.43.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.43";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.44\",\"Previous\":\"6.3.42\",\"अकारादिक्रमसङ्ख्या\":1360,\"कौमुदीक्रमसङ्ख्या\":985,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ह्रस्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"घरूपकल्पचेलड्ब्रुवगोत्रमतहतेषु ङ्योऽनेकाचो ह्रस्वः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.3/6.3.43.md">Edit 6.3.43!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.43";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.44\",\"Previous\":\"6.3.42\",\"अकारादिक्रमसङ्ख्या\":1360,\"कौमुदीक्रमसङ्ख्या\":985,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ह्रस्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"घरूपकल्पचेलड्ब्रुवगोत्रमतहतेषु ङ्योऽनेकाचो ह्रस्वः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.43 नद्याः शेषस्यान्यतरस्याम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>भाषितपुंस्कादनूङ्()</code> (6.3.33) इति निवृत्तम्()। <code>कश्च शेषः</code> इति। यदि पूर्वसूत्रेण यस्य ह्यस्वो न विहितः स शेषः, ततो यद्भाषितपुंस्कं यच्च भिन्नायामाकृतौ भाषितपुंस्कं नैचाच्? तस्यापि शेषत्वं स्यात्(), ततश्चामलकीतरा, द्रोणीतरेत्यत्रापि विकल्पेन ह्यस्वत्वपं स्यात्()। न ह्रत्()र ह्यस्वत्वं पूर्वसूत्रेण विहितमित्यभिप्रायेणाऽ‌ऽह&ndash;<code>अङी च या नदी ङ्यन्तश्च यदेकाच्()</code> इति। एतेन श्रुतापेश्रयाऽत्र शेषत्वामाश्रीयते, न तु यस्य ह्यस्वो न विहितः, तदपेक्षयेति दर्शयति। कथं पुनरेतल्लभ्यते? शेषग्रहणात्()। अन्तरेणापि शेषग्रहणं शेषस्यैव विकल्पेन ह्यस्वत्वं भविष्यति। तथा हि यदि ङ्योऽनेकाचो भाषितपुंस्कस्यापि विभाषा ह्यस्वः स्यात्, तदा पूर्वयोग एवेदमन्यतरस्यांग्रहणं कुर्यात्()। इह कारणाद्यस्य पूर्वेण ह्यस्वो न विहितस्तस्यैव पाक्षिकं ह्यस्वत्वमन्तरेणापि शेषग्रहणं शेषस्यैव भविष्यतीत्यवसीयत इति किं शेषग्रहणेन? तत्? क्रियते <code>ङ्योऽनेकाचः</code> (६।३।४३) इति पूर्वसूत्रे योऽच्? श्रूयते तदपेक्षया शेषो विज्ञायत इत्येवमर्थम्()। न चमलकीतरा, द्रीणीतरेत्यत्र श्रुतापेक्षया शेषत्वमुपपद्यते; ङ्योऽनेकाच्त्वात्()। तस्मान्न भवत्यत्र ह्यस्वत्वप्रसङ्गः। <code>स्त्रीतरा</code> इति। स्त्यायतेर्डट्? डित्वाट्टिलोपः, वलिलोपश्च (6.1.64), टित्वान्? ङीप्()।
 वक्तवयः<code>इति। व्याख्येय इत्यर्थः। तत्रेदं व्याख्यानम्()--अन्यतरस्यांग्रहणस्य व्यवस्थितविभाषाविज्ञानात्? कृन्नद्या न भविष्यतीति।</code>लक्ष्मीतरा<code>इति।</code>अवितृ()स्तृ()तन्त्रिभ्य ईः<code>(द।उ।१।८२)</code>र्लक्षेर्मुट्? च`, (द।उ।१।८४) इतीकारप्रतययान्तो लक्ष्मीशब्दो व्युत्पादितः। कृन्नद्ययं भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

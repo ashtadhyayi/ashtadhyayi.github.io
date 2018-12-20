@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.83.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.83";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.84\",\"Previous\":\"8.2.82\",\"अकारादिक्रमसङ्ख्या\":2476,\"कौमुदीक्रमसङ्ख्या\":94,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वाक्ये टेः प्लुत उदात्तः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रत्यभिवादेअशूद्रे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.83.md">Edit 8.2.83!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.83";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.84\",\"Previous\":\"8.2.82\",\"अकारादिक्रमसङ्ख्या\":2476,\"कौमुदीक्रमसङ्ख्या\":94,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वाक्ये टेः प्लुत उदात्तः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"प्रत्यभिवादेअशूद्रे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.83 प्रत्यभिवादेऽशूद्रे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>यदभिवाद्यमानो गुरुः</code> इत्यादि। अत्र सामान्योपक्रमेण विशेषस्यानभिधानाद्? यदिति नपुंसकलिङ्गेन निर्देशः। <code>आयुष्मानेधि देवदत्त३</code> इति। इदमत्रोदाहरणम्(); प्रत्यभिवादवाक्यत्वात्()। अत्र <code>अभिवादये देवदत्तोऽहम्()</code> इत्येतत्तु गुरोरभिवाद्यमानतां दर्शयितुमुपन्यस्तम्। अभिवाद्यमानो गुरुर्यामाशिषं प्रयुङ्क्ते स प्रत्यभिवादः। तत्रावश्यं गुरोरभिवाद्यमानता दर्शयितव्या; अन्यथा प्रत्यभिवादो न गम्येत। <code>एधि</code> इति। भवेत्यर्थः। <code>अस भुवि</code> (धा।पा।१०६५), लोट्(), मध्यमपुरुषैकवचनम्(), <code>सेह्र्रपिच्च</code> (3.4.87), ध्वसोरेद्धावभ्यासलोपश्च<code>(6.4.119) इत्येत्त्वम्(),</code>श्नसोरल्लोपः<code>(6.4.111) इत्यकारलोपः,</code>हुझल्भ्यो हेर्धिः<code>(6.4.101) इति धिरादेशः। 
 </code>वक्तव्यः<code>इति। व्याख्येय इत्यर्थः। तत्रेदं व्याख्यानम्()--</code>सिपि धातो रुर्वा<code>(8.2.74) इत्यतो मण्डूकप्लुतिन्यायेन वेत्यनुवत्र्तते, सा च व्यवस्थितविभाषा, तेन स्त्रियां न भविष्यतीति। 
 </code>असूयकेऽपि<code>इति। असूयतीत्यसूयकः। यो गुरुमसाध्ब्या प्रवृत्त्या सामर्ष करोति स उच्यतेऽसूयक इति।</code>तस्मिन्()<code>इत्यादिना प्रतिषेध इष्यमाणोऽपि न वक्तव्य इति दर्शयति। यदा ह्रसावभिवादयिताऽसूयकत्वेन न निज्र्ञायते, तदा तेनाभिवाद्यो गुरुः प्रत्यभिवादने तस्य प्लुतं करोत्येव। यदा तु</code>असूयकोऽयं मां विहेडयितुकामः<code>इत्येवं विज्ञातो भवति, तदात्र प्रत्यभिवादना नास्त्येवेति किं प्रतिषेधेन! कथं पुनज्र्ञायते--तत्रासूयकत्वेन निज्र्ञाते प्रत्यभिवादो नास्ति? इत्याह--</code>तथा च<code>इत्यादि। केनाप्यविनीतेनोपगम्याविधिनाभिप्रायेणाभिवादयेऽयं भोः स्थालीत्येवमभिवादिते गुरुस्तस्यासूयकत्वमज्ञात्वा स्थालिञ्शब्दोऽयमस्य संज्ञेति मत्वा प्रत्यभिवादयन्? प्लुतं प्रयुक्तवान्()--</code>आयुष्मानेधि स्थालि३न्()<code>इति। अथ सोऽविनीत उक्तवान्()--नैष मम संज्ञा, मया दण्डिन्यायो विवक्षितः। ततो गुरुः प्लुतरहितं प्रत्यभिवादनं कृतवान्()--</code>आयुष्मानेधि स्थालिन्निति। पुनः स उक्तवान्()&ndash;न न मया दण्डिन्यायो विवक्षितः, संज्ञा ममैषेति; अथ स गुरुरसूयकत्वमस्य विज्ञायोनतवान्()&ndash;<code>असूयकस्त्वं जाल्म, न त्वं प्रत्यभिवादमर्हसि, भिद्यत्वं वृषल स्थालिन्()</code> इति।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

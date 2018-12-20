@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.25.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.25";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.26\",\"Previous\":\"8.2.24\",\"अकारादिक्रमसङ्ख्या\":2004,\"कौमुदीक्रमसङ्ख्या\":2249,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धि च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.25.md">Edit 8.2.25!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.25";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.26\",\"Previous\":\"8.2.24\",\"अकारादिक्रमसङ्ख्या\":2004,\"कौमुदीक्रमसङ्ख्या\":2249,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"धि च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.25 धि च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अलविध्वम्(), अलविढ्वम्()</code> इति। लुङ्(), सिच्? (3.1.44) सस्य <code>धि च</code> इति लोपः, <code>विभाषेटः</code> (8.3.79) इति पक्षे भू र्धन्यः। <code>यद्यत्र</code> इत्यादिना सति सकारलोपे यदिष्टं प्राप्नोति तद्दर्शयति। असति हि सकारलोपे सिचः <code>आदेशप्रत्यययोः</code> (८।३।५९) इति षत्वे कृते <code>झलां जश्? झशि</code> (8.4.52) इति जश्त्वे च डकारे <code>ष्टुना ष्टुः</code> (8.4.40) इति धकारस्य ष्टुत्वे ढकारेण भवितव्यम्(), ततश्च मूधन्याभावपक्षेऽपि धकारो न श्रूयते। विभाषाग्रहणं तु सिद्धं लिडर्थं लिङर्थं च स्यात्()। तस्मादमूर्धन्यपक्षे धकारस्य श्रवणं यथा स्यादिति लोपो विधीयते।
 <code>इतः प्रभृति सिचः सकारस्य लोप इष्यते</code> इति। स च <code>अचि विभाषा</code> (8.2.21) इत्यतो विभाषाग्रहणाअनुवृत्तेव्र्यवस्थितविभाषाविज्ञानाच्च लभ्यते। <code>चकाद्धि</code> इति। <code>चकासृ दीप्सौ</code> (धा।पा।१०७४), लोट्(), सिप्(), <code>सेह्र्रपिच्च</code> (3.4.87) इति हिरादेशः, <code>हुझल्भ्यो हेर्धिः</code> (6.4.101) इति हेर्धिभावः, पूर्ववच्छपो लुक्(), पूर्ववज्जश्त्वम्()&ndash;सकारस्य दकारः। <code>पयो धावति</code> इति। पयः शब्दस्य रुत्वम्(), <code>हशि च</code> (6.1.110) इत्युत्त्वम्(), <code>आद्गुणः</code> (6.1.84)। यदीतः प्रभृति सिचो लोप इष्यते, सग्धिः, बब्धायित्यत्र <code>झलो झलि</code> (8.2.26) इति सकारस्य लोपो न प्राप्नोतौति चोद्यमाशङ्क्याह-सग्धिर्बब्धाम्()<code>इत्यादि।</code>अद भक्षणे<code>(धा।पा।१०११), स्त्रियां क्तिन्? (3.3.94)</code>बहुलं छन्दसि<code>(2.4.39) इति घस्लादेशः,</code>घसिभसोर्हलि च<code>(6.4.100) इत्युपधालोपः, सकारस्य</code>बहुलं छन्दसि<code>इति च्छान्दसो लोपः। क्वचिदन्यदेवोच्यते एषोऽपि बहुलस्यार्थः। इष्यते</code>झषस्तथोर्धोऽधः<code>(8.2.40) इति तकारस्य धत्वम्(), पूर्ववज्जश्त्वम्()--घकारस्य गकारः। समाना ग्धिरिति विशेषणसमासः,</code>समानस्य च्छन्दसि<code>(6.3.83) इति सभावः। बब्धामिति--</code>भस भत्र्सनद्दीप्त्योः<code>(धा।पा।११००), लोट्? तस्य</code>लोटो लङ्वत्()<code>(३।४।८५) इत्यतिदेशात्? तसस्ताम्(), जुहोत्यादित्वाच्छपः श्लुः,</code>श्लौ<code>(6.1.10) इति द्विर्वचनम्(), पूर्ववदुपधासलोपौ, पूर्ववदेव तकारस्य दत्वञ्च, भकारस्य दकारः</code>अभ्यासे चर्च<code>(8.4.53) इति जश्त्वम्()। एवमिदं तावत्? श्लोकवार्त्तिककारस्याभिमतं दर्शितम्()। इदानीं भाष्यकारस्य मतं दर्शयितुमाह--</code>भाष्यकारस्त्वाह इत्यादि। एतेनाविशेषेणैव सकारमात्रस्य भाष्यकाशे लोपमिच्छतीति दर्शयति। <code>तेन</code> इत्यादि। अविशेषेण हि सकारमात्रस्य यो लोपमिच्छति तस्य पयो धावतीत्यत्रापि प्राप्नोति। तस्मादिह मा भूदिति यत्नान्तरमास्थेयम्()। यत्नान्तरं तु व्यवस्थितविभाषाश्रयणमेव पूर्वधत्()। अयं तु विशेषः&ndash;पूर्वत्र व्यवस्थितविभाषया धि चैव सिचो भविष्यति, नान्यस्य; इह तु यत्र समानपदस्थौ निमित्तनिमित्तिनौ तत्रैवाविशेषेण सकारमात्रस्य लोपो भवति। अत्र तु भिन्नपदस्थौ पयोधावतौत्यादौ, तत्र न भवन्येवेति। एतावता विशेषेण व्यवस्थितभाषा यत्नान्तरमित्युच्यते।
 संक्षिप्तमेतमर्थं विस्तरेण सचोद्यपरिहरं वक्तुमाह&ndash;<code>धि सकारे सिचो लोपः</code> इत्यादि। धीत्येतद्यत्र परभूते सकारलोप इत्यतः प्रभृति विधातव्यः, तदुपलक्षणं वेदितव्यम्()। कुत एतत्()? इत प्रभृति सिचः सकारस्यलोप इष्यत इति प्राग्वचनात्()। लोपं प्रति सकारस्याधिकरणत्वेन विवक्षतत्वात्? सप्तम्या निर्देशः। किं प्रयोजनम्()? इत्याह&ndash;<code>चकाद्धि</code> इत्यादि। यदि सिचो लोपः, आशाध्वं तु कथम्()? आङः शासु इच्छायाम्()<code>(धा।पा।१०२२), लोट्(), ध्वम्(), टेरेत्वम्(),</code>सवाभ्यां वामौ<code>(3.4.91) इत्यमादेशः, पूर्ववच्छपो लुक्()। अत्र सकारस्य लोप इष्यते, स न प्राप्नोति; यदि सिच एव सकारस्य लोपो विधीयते?</code>जश्त्वं सकारस्य भविष्यति<code>इति।</code>झलां जश्झशि<code>(8.4.52) इत्यनेन जश्त्वम्()--सकारस्य दकारो भविष्यतीति सिद्धम्()--आशाब्दमित्येतत्()। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

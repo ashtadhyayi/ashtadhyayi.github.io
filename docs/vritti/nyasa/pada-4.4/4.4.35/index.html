@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.4\/4.4.35.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.4.35";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.4.36\",\"Previous\":\"4.4.34\",\"अकारादिक्रमसङ्ख्या\":2254,\"कौमुदीक्रमसङ्ख्या\":1585,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"प्राग्वहते ष्ठक्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"पक्षिमत्स्यमृगान् हन्ति\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.4/4.4.35.md">Edit 4.4.35!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.4.35";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.4.36\",\"Previous\":\"4.4.34\",\"अकारादिक्रमसङ्ख्या\":2254,\"कौमुदीक्रमसङ्ख्या\":1585,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अर्थः\",\"विषयः २\":\"प्राग्वहते ष्ठक्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"पक्षिमत्स्यमृगान् हन्ति\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.4.35 पक्षिमत्स्यमृगान्हन्ति।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>स्वरूपस्य पर्यायाणाञ्च तद्विशेषणानाञ्च ग्रहमिष्यते</code> इति। कथं पुनरिष्यमाणमपि पर्यायादीनां ग्रहणं लभ्यते? अर्थप्रधानत्वान्निर्देशस्य। शब्दप्रधाने हि निर्दे()शे स्वरूपस्य ग्रहणं भवति, नार्थप्रधान इति प्रतिपादितमेतत् प्राक्। यदि तर्हि पर्यायाणामपि ग्रहणम्, अजिहृआन् हन्त्यनिमिषान् हन्तीत्यत्रापि प्राप्नोति? नैष दोषः इह द्वितीयासमर्थविभक्तौ लब्धायां पुनर्दितीयासमर्थविभक्तिनिर्देशो लौकिकवाक्यप्रदर्शनार्थः। असय् परिग्रहः&ndash; यत्र लौकिकवाक्यव्यवहारस्तत्र प्रत्ययो भवति नान्यत्रेत्यस्यार्थस्य सूचनार्थम्, तेनाजिहृआन् हन्तीत्यादौ प्रत्ययो न भवति। अजिहृआन् हन्त्यनिमिषान् हन्तीत्यस्यार्थस्य विवक्षायामाजिहिऋकः, आनिमिषिक इति लोके न व्यवहारोऽस्ति। तत्र पक्षिषु <code>पाक्षिकःर</code> इतचि स्वरूपस्योदाहरणम्। <code>शाकुनिकः</code> इति पर्यायस्य। <code>मायूरिकः, तैत्तिरिकः</code> इति। विशेषस्य। मत्स्येषु <code>मात्स्यिकःर</code> इति स्वरूपस्य। <code>मैनिकःर</code> इति पर्यायस्य। <code>शाफरिकःर, शाकुलिकः</code>इति विशेषस्य। मृगेषु <code>मार्गिकः</code> इति स्वरूपस्य। <code>हारिणिकःर</code> इति पर्यायस्य। <code>सौकरिकः, सारङ्गिकः</code> इति विशेषस्य॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

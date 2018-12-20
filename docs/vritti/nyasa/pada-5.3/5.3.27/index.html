@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.3\/5.3.27.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.27";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.28\",\"Previous\":\"5.3.26\",\"अकारादिक्रमसङ्ख्या\":1858,\"कौमुदीक्रमसङ्ख्या\":1974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययम्\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"दिक्‌शब्देभ्यः सप्तमीपञ्चमीप्रथमाभ्यो दिग्देशकालेष्वस्तातिः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.3/5.3.27.md">Edit 5.3.27!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.27";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.28\",\"Previous\":\"5.3.26\",\"अकारादिक्रमसङ्ख्या\":1858,\"कौमुदीक्रमसङ्ख्या\":1974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययम्\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"दिक्‌शब्देभ्यः सप्तमीपञ्चमीप्रथमाभ्यो दिग्देशकालेष्वस्तातिः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.27 दिक्शब्देभ्यःसप्तमीपञ्चमीप्रथमाभ्यो दिग्देशकालेष्वस्तातिः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>दिग्देशकालेषु वत्र्तमानेभ्यः</code> इति। कथं पुनर्थे दिशां शब्दास्ते देशे काले वत्र्तन्ते? स्वभावात्()। यथैव हि ते दिश स्वबावादेव वत्र्तन्ते, न हेत्वन्तरात्(),; तथा देशकालयोरपि। यद्यवम्(), त्रिषु वत्र्तमानाः कथं दिशा व्यपदिश्यन्ते&ndash;दिक्शब्देभ्य इति? कथं तर्हि व्यपदेष्टव्यम्(), दिग्देशकालशब्देभ्य इति? नैतदस्ति; एवं हि व्यपदेशस्यैतत्? फलम्()&ndash;ऐन्द्र()आं दिशि निवसतीत्यत्र मा भूदिति। एतच्चान्यतमेनापि लभ्यत इत्यनेनैव व्यापदेशो युक्तः, येन व्यपदेशाल्लधु सूत्रं भवति। दिशा च व्यपदेशे लघु भवति, दिक्शब्दस्याल्पाच्तरत्वादिति दिशां तेन व्यपदेशः। एवमपि दिक्शब्दस्य दिशि वृत्तेः विशेषणमयुक्तम्(), अवस्यं हि दिक्शब्दो दिशि वत्र्तते, तत्रैवं कत्र्तव्यम्()&ndash;देशकालयोरिति? नैतदस्ति; एवं ह्रु च्यमाने सत्युपलक्षणमेव हि दिक्शब्दः स्यात्(), प्रत्यस्तु देशकालवृत्तिभ्य एव स्यात्(), न दिग्वृत्तिभ्यः। दिग्ग्रहणे तु तेभ्योऽपि भवति।
 इह तिरुआओ विभक्तयः, त्रयश्चार्था दिगादयः, तत्र साम्याद्यथासंख्येन भवितव्यम्()&ndash;इति कस्यचिद्भ्रान्तिः स्यात्(), अतस्तामपाकर्तुमाह&ndash;<code>यथासंख्यमत्र नेष्यते</code> इति। तत्कथमिहेकवचननिर्देशे कत्र्तव्ये बहुवचननिर्देशः? प्रत्येकं दिगादिवृत्तेर्बहुलविभक्त्यन्तात्? प्रत्ययः कत्र्तव्य इति सूचनार्थः। एवञ्चायं बहुलविभक्त्यन्तात्? प्रत्ययः कृतो भवति, यदि दिग्वृत्तेरपि सप्तमीपञ्चमीप्रथमान्तादेव भवति&ndash;देशवृत्तेरपि, कालवृत्तेरपि। अथ वा-<code>था हेतौ च</code> (5.3.26) इत्यतश्चकारोऽनुवत्र्तते, स च श्रुतिमेव समुच्चिनोति। तेन दिगादिवृत्तेः प्रत्येकं सप्तमीपञ्चमीप्रथमान्तात्? प्रत्ययो भवति, न यतासंख्यम्()! यथासंख्यं हि समुच्चयो विरुध्यतेत। अथ वा&ndash;<code>स्वरितत्वे सति यथासंख्यं भवति</code> इत्युक्तम्(), न चेह यथासंख्यार्थं स्वरितत्वं प्रतिज्ञायेत, तेन यथासंक्यं न भविष्यति।
 <code>पुरस्तावधस्तात्()</code> इति। पूर्वाधरशब्दाभ्यामस्तातिः। <code>अस्ताति च</code> (5.3.40) इति वक्ष्यमाणेन यथासंख्यं पुर्(), अध&ndash;इत्येतौ पूर्वाधरशब्दयोरादेशौ।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

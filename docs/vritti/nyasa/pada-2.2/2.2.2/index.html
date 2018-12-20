@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.2\/2.2.2.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.2.2";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.2.3\",\"Previous\":\"2.2.1\",\"अकारादिक्रमसङ्ख्या\":354,\"कौमुदीक्रमसङ्ख्या\":713,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकदेशि तत्पुरुषः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"अर्धं नपुंसकम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.2/2.2.2.md">Edit 2.2.2!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.2.2";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.2.3\",\"Previous\":\"2.2.1\",\"अकारादिक्रमसङ्ख्या\":354,\"कौमुदीक्रमसङ्ख्या\":713,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकदेशि तत्पुरुषः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"अर्धं नपुंसकम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.2.2 अर्द्धं नुपंसकम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>समप्रविभागे त्वद्र्धशब्दो नपुंसकमाविष्टलिङ्गस्तस्येदं ग्रहणम्</code> इति। यद्येवम्, समग्रहणमेव कत्र्तव्यम्? नैवं शक्यम्, अनेकार्थत्वात् समशब्दस्य। तथा हि&ndash;स निम्नोन्नतादिरहितेऽपि देशे वत्र्तते&ndash; यथा&ndash;समे यजेतेति, निम्नोन्नतादिरहिते देशे यजेतेत्यर्थः। अथापि समप्रविभाग इच्युच्यते, एवमपि गुरुत्वं स्यात्, तस्मान्नपुंसकग्रहणं कत्र्तव्यम्? न कत्र्तव्यम्; अद्र्धमिति नपुंसकलिङ्गेन निर्देशादेव हि नपुंसकस्य ग्रहणं भविष्यति, नैतदस्ति; असति हि नपुंसकग्रहणं शब्दरूपापेक्षया नपुंसकनिर्देश इति विज्ञायेत, यथा&ndash; <code>स्वमज्ञातिधनाख्यायाम्</code> (1.1.34), <code>बन्थुनि बहुव्रीहौ</code> (6.1.14) इति च; ततश्चाद्र्धशब्दस्य नपुंसकलिङ्गत्वताऽनाश्रिता स्यात्। एवमनुपंसकलिङ्गोऽपि समस्येत। तस्मादद्र्धशब्दस्य नपुंसकलिङ्गत्वमाश्रयितुं नपुंसकमिति वक्तव्यम्। <code>अद्र्धपिप्तली</code> इति। <code>परवलिङ्गम्</code> (2.4.26) इति स्त्रीलिङ्गता। अथात्र <code>गोस्त्रियोरुपसर्जनस्य</code> (१।२।४८) इति ह्यस्वत्वं कस्मान्न भवति? अनुपसर्जनत्वात्। उपसर्जनत्वं तु <code>एकविभक्ति च</code> (1.2.44) इति। अत्र <code>विभाषा छन्दसि</code> (1.2.36) इत्यतो विभाषाग्रहणमनुवत्र्तते। सा च व्यवस्थितविभाषा प्रतिपादिता। <code>ग्रामार्द्धः</code> इति। ग्रामस्यैकदेश इत्यर्थः।
 <code>अद्र्ध पशोर्दैवदत्तस्य</code> इति। देवदत्तशब्देन सह समासो न भवति। अनेकदेशित्वाद्देवदत्तस्य। न ह्रसावेकदेशः, किन्तर्हि? स्वामी। यस्त्वेकदेशी पशुशब्दः, तेन सह भवत्येव समासः। सत्यपि पशुशब्दस्य सापेक्षत्वे पशोः प्राधान्यात् समासो भवत्येव&ndash; अद्र्धपशुर्देवदत्तस्येति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-2.3\/2.3.65.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.3.65";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.3.66\",\"Previous\":\"2.3.64\",\"अकारादिक्रमसङ्ख्या\":1001,\"कौमुदीक्रमसङ्ख्या\":623,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षष्ठी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्तृकर्मणोः कृति\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.3/2.3.65.md">Edit 2.3.65!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.3.65";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.3.66\",\"Previous\":\"2.3.64\",\"अकारादिक्रमसङ्ख्या\":1001,\"कौमुदीक्रमसङ्ख्या\":623,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"षष्ठी\",\"विषयः २\":\"अनभिहिते\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्तृकर्मणोः कृति\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.3.65 कर्तृकर्मणोः कृति
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>कर्तृकर्मणोः कृति। शेष इति निवृत्तं, <code>कर्तरि च कृति</code> इति सूत्रे कृते चकारेण <code>अधीगर्थ---</code>इति सूत्रात् <code>चतुथ्र्यर्थे बहुलं छन्दसि</code> इति पर्यन्तमनुवर्तमानस्य कर्मणीत्यस्यानुकर्षणसम्भवेऽपि पुनरत्र कर्मग्रहणात्। तस्माव्द्याख्यानमेवात्र शरणमित्यपरे। कर्तृकर्मणोः किम्?। शस्त्रेण भेत्ता। कृतिरिति। करणं कृतिः। <code>स्त्रियां क्तिन्</code>। कृष्णोऽत्र कर्ता। कर्मण्युदाहरति&mdash;जगत इति। कृष्णस्य तृचाऽभिहितत्वात्ततः षष्ठी न भवति। कृति किमिति। नन्विह कर्तृकर्मभ्यां क्रिया आक्षिप्यते, तद्वाची तु धातुरेव। धातोश्च द्वये प्रत्ययाः, कृतस्तिङश्च। तत्र तिङ्प्रयोगे कटं करोतीत्यादौ <code>न लोका---</code>इति प्रतिषेधेन भाव्यम्। ततश्च परिशेषात्कृद्योगे एव षष्ठी भविष्यति, त[स्मा]�त्क कृद्ग्रहणेनेति प्रश्नः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

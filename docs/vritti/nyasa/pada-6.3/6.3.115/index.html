@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.3\/6.3.115.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.115";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.116\",\"Previous\":\"6.3.114\",\"अकारादिक्रमसङ्ख्या\":990,\"कौमुदीक्रमसङ्ख्या\":1036,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"कर्णे लक्षणस्याविष्टाष्टपञ्चमणिभिन्नछिन्नछिद्रस्रुवस्वस्तिकस्य\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.3/6.3.115.md">Edit 6.3.115!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.115";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.116\",\"Previous\":\"6.3.114\",\"अकारादिक्रमसङ्ख्या\":990,\"कौमुदीक्रमसङ्ख्या\":1036,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"उत्तरपदे दीर्घः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"कर्णे लक्षणस्याविष्टाष्टपञ्चमणिभिन्नछिन्नछिद्रस्रुवस्वस्तिकस्य\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.115 नहिवृतिवृषिव्यधिरुचिसहितनिषु क्वौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>णह बन्धने</code> (धा।पा।११६६)। उपनह्रत इति <code>उपानत्()</code> सम्पदादित्वात्? क्विप्? <code>नहो धः</code> (8.2.34) इति धत्वम्(), ततो जश्त्वम्(), चत्र्वञ्च। परिणह्रतीति <code>परिणत्()</code>। <code>#उपसर्गादसमासे</code> (8.4.14) इत्यादिना णत्वम्()। निवत्र्तत इति <code>नीवृत्()</code>। <code>अन्येभ्योऽपि दृश्यते</code> (3.2.178) इति क्विप्()। एवमुत्तरत्रापि क्विबेव वेदितव्यः। <code>वृषु सेचने</code> (धा।पा।७०६) प्रवर्षतीति <code>प्रावृट्()</code>। षकारस्य जश्त्वम्()&ndash;डकारः, तस्य चर्त्वेटकारः। <code>व्यध ताडने</code> (धा।पा।११८१), मर्माणि विध्यतीति <code>मर्मावित्()</code> ग्रह्रादिसूत्रेण (6.1.16) सम्प्रसारणम्()। <code>रुच दीप्तौ</code> <a href="धा।पा।७४५"><code>रुच दीप्तावभिप्रीतौ च</code>&ndash;धा।पा।</a>, निरोचणं <code>नीरुक्()</code>। <code>चोः कुः</code> (8.2.30) इति कुत्वम्()। ऋतिं सहत इति <code>ऋतीषट्()</code>। <code>सहेः पृतनत्र्ताभ्याञ्ज</code> (8.3.109) इत्यत्र <code>सहेः</code> इति योगविभागादनुक्तसमुच्चयार्थत्वाद्वा चकारस्य षत्वम्()। परितनोतीति <code>परीतत्()</code>। अनुनासिकलोपे कृते तुक्()।
 केन पुनरत्रानुनासिकलोपः? इत्याह&ndash;<code>गमः क्वौ</code> इत्यादि। गतिकारकयोरेवेष्यत इति। तदर्थम्? <code>विभाषा पुरुषे</code> (6.3.105) इत्यतो विभाषाग्रहणनुवत्र्तते, सा च व्यवस्थितविभाषा विज्ञेया॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.3\/6.3.108.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.108";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.109\",\"Previous\":\"6.3.107\",\"अकारादिक्रमसङ्ख्या\":2277,\"कौमुदीक्रमसङ्ख्या\":3550,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कु-शब्द-आदेशाः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पथि च च्छन्दसि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.3/6.3.108.md">Edit 6.3.108!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.108";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.109\",\"Previous\":\"6.3.107\",\"अकारादिक्रमसङ्ख्या\":2277,\"कौमुदीक्रमसङ्ख्या\":3550,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कु-शब्द-आदेशाः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पथि च च्छन्दसि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.108 पृषोदरादीनि यथोपदिष्टम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>आदिशब्दः प्रकारवचनः</code> इति। यद्यत्रादिशब्दो व्यवस्थावचन आश्रीयेत, ततो, यान्येव गणे पठ()न्ते तेषामेव साधुत्वं स्यात्(), नान्येषाम्()। प्रकारवचन आदिशब्द आश्रीयमाणे सत्यपरिपठितानामपिमपि साधुभावो भवतीत्येतत्? सर्व चेतसि कृत्वाऽ‌ऽविशब्दोऽयं प्रकारवचन इति दर्शयन्नाह&ndash;<code>पृषोदरप्रकाराणि</code> इत्यादि। प्रकारः=सादृश्यम्()। अतस्तद्दर्शयितुमाह&ndash;<code>येषु</code> इत्यादि। यथा पृषोदरशब्दे लोपकार्यं शास्त्रेणाविहितं दृश्यते, तथान्यत्रापि लोपादिकार्यं शास्त्रेणाविहितं दृश्यते। तानि च पृषोदरप्रकाराणि भवन्ति। <code>यथोपदिष्टम्()</code> इति। <code>यथाऽसादृश्यते</code> (2.1.7) इति वीपसायामव्ययीभावः। अत एवास्य विवरणं करोति&ndash;<code>यानि यान्युपदिष्टानि</code> इत्यादि। दिशिस्त्रोच्चारणक्रियः। उपदिष्टान्युच्चारितानीत्तयर्थः। कैः पुनरुपदिष्टानि? शिष्टैः। शिष्टाः पुनराचारनिवासादिना वेदितव्याः। <code>तानि तथैवानुमन्तव्यानि</code> इति। यथा तैः प्रयुक्तानि तथैव तानि साधुत्वेनानुमन्तव्यानीत्यर्थः। यदि शिष्टाः शब्देषु प्रमाणं तद किमनयाऽष्टाध्याय्या, शिष्टवचनादेव हि शब्दानां साधुत्वं विज्ञास्यते? उच्यते; शिष्टपरिज्ञानार्थाऽष्टाध्यायी। अष्टाध्यायीमधीयानोऽनधीताष्टाध्यायीकमपि येऽस्यामष्टाध्याय्यां विहिताः शब्दास्तान्? प्रयञ्जानं पश्यन्नेवमध्यवस्यति&ndash;शिष्टोऽयमिति, न चासावष्टाध्यायीमधीतवान्(), अथ च तस्यां ये व्युत्पादिताः शब्दास्तान्? प्रयुङ्क्ते, नूनमयमन्यानपि जानाति&mdash;इत्येषा शिष्टपरिज्ञानार्थाऽष्टाध्यायी।
 <code>एवमन्येऽपि</code> इत्यादि। कप्य()आमहीशब्देपूपपदेषु <code>सुपि स्थः</code> (3.2.4) इति तिष्ठतेः कप्रत्ययः। सकारस्य तकारः क्रियते। महीशब्दस्यापि ह्यस्वत्वम्()।
 <code>दक्षिणतारम्()</code> इति। षष्ठीसमासः। <code>सर्वनाम्नो वृत्तिमात्रे पुंवद्भावो वक्तव्यः</code> (वा।१०४) इति पुंवद्भावः। अथ वा&ndash;दक्षिणशब्दस्यायं तीरशब्देन षष्ठीसमासः।
@@ -137,9 +149,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

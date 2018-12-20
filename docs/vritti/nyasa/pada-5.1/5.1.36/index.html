@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.1\/5.1.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.1.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.1.37\",\"Previous\":\"5.1.35\",\"अकारादिक्रमसङ्ख्या\":1960,\"कौमुदीक्रमसङ्ख्या\":1701,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"आर्हात् ठक्। प्राग्वहतेष्ठञ्। प्राक् क्रीताच्छः।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"द्वित्रिपूर्वादण् च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.1/5.1.36.md">Edit 5.1.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.1.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.1.37\",\"Previous\":\"5.1.35\",\"अकारादिक्रमसङ्ख्या\":1960,\"कौमुदीक्रमसङ्ख्या\":1701,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"आर्हात् ठक्। प्राग्वहतेष्ठञ्। प्राक् क्रीताच्छः।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"द्वित्रिपूर्वादण् च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.1.36 तेन क्रीतम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>साप्ततिकम्(), आशीतिकम्()</code> इति। <code>प्राग्वतेष्ठञ्()</code> (5.1.18) <code>नैष्किकम्()</code>; पाणिकम्()<code>इति।</code>असमासे निष्कादिभ्यः<code>(5.1.20) इति ठक्()।</code>शत्यम्(), शतिकम्()<code>इत।</code>असमासे निष्कादिभ्यः<code>(5.1.20) इति ठक्()।</code>शत्यम्(), शतिकम्()<code>इति।</code>शताच्च ठन्यतावशते<code>(5.1.21) इति।</code>द्विकम्(), त्रिकम्()<code>इति।</code>संख्याया अतिशदन्तायाः कन्()<code>(5.1.22)। 
 सामान्यार्थाभिधाने तेनेति तृतीयोपादनादिह कस्मान्न भवति--देवदत्तेन क्रीतम्, पाणिना क्रितम्()? इत्यत आह--</code>तेन<code>इत्यादि। करणे तृतीया। परिमूल्यात्? ततः प्रत्ययेन भवितव्यम्()।</code>अन्यत्र<code>इति। अन्यतर मूल्यात्? करणे तृतीया भवति।</code>अनभिधानात्()<code>इति। न हि या कत्र्तरि तृतीया याप्यमूल्यात्? करणे तृतीयोत्पद्यते, तदन्तादुत्पन्नः प्रत्यायो विवक्षितं वस्तु प्रतिपादयितुमलं सम्भवति। तथा ह--दैवदत्तिकं पाणिकमिति चोक्ते, देवदत्तेन कत्र्रा क्रीतम्? पाणिना करणेन क्रीतमित्येषोऽर्थो नावसीयते। देवदत्तेनेति कत्र्तरि तृतीया, पाणिनेति करणे। तदेतदुक्तं भवति--प्रगत्यासन्नविनिमयद्रव्यसम्बन्धानभिधानादिति। 
 </code>अनभिधानादेव<code>इति। न हि प्रास्थिकमित्युक्ते, प्रस्थाभ्यां क्रीतं प्रश्थैर्वा क्रीतमित्येषोऽवगम्यते। तत्र पुनरभिधाने को हेतुः? शब्दशक्तिरीदृशी, किमत्रान्येन हेतुना! अपि च प्रस्थादयः शब्दा अर्थतस्तु परिमाणानामर्थानां वाचका इति तेषामभिधेयस्य प्रचये प्रवृत्तिसम्भवे को हेतुः? नन्वेवं वाक्येऽपि प्रचयो नोपपद्येत? नैष दोषः; वाक्ये हि प्रचयस्य वाचिका विभक्तिरस्तीति प्रचयाभिधानं न विरुध्यते। वृत्तौ तु न कश्चित्? प्रचयमाचष्ट इति नासौ वृत्तिविषये युज्यते। 
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

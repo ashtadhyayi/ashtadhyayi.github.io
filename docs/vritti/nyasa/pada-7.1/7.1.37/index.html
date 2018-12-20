@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.1\/7.1.37.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.1.37";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.1.38\",\"Previous\":\"7.1.36\",\"अकारादिक्रमसङ्ख्या\":3644,\"कौमुदीक्रमसङ्ख्या\":3332,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"समासेऽनञ्पूर्वे क्त्वो ल्यप्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.1/7.1.37.md">Edit 7.1.37!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.1.37";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.1.38\",\"Previous\":\"7.1.36\",\"अकारादिक्रमसङ्ख्या\":3644,\"कौमुदीक्रमसङ्ख्या\":3332,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"समासेऽनञ्पूर्वे क्त्वो ल्यप्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.1.37 समासेऽनञ्पूर्वे क्त्वो ल्युप्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अनञ्पूर्वे</code> इति। न नञ्? अनञ्? अनञ्? पूर्वो यसय सोऽनञ्पूर्वः। <code>प्रकृत्य</code> इत्यादि। <code>समानकर्त्तुकयोः पूर्वकाले</code> (3.4.21) क्त्वा, <code>कुगतिप्रादयः</code> (2.2.18) इति समासः, <code>ह्यस्वस्य पिति कृति तुक्()</code> (6.1.69) इति तुक्()। <code>पार्(ातःकृत्य</code> इति। <code>स्वाङ्गे तस्प्रत्यये कृभ्वोः (3.4.61) इति क्त्वा,</code>तृतीयाप्रभृतीन्यन्यतरस्याम्()<code>(२।२।२१० इति समासः।</code>नानाकृत्य<code>इति।</code>नाधार्थप्रत्यये च्व्यर्थे<code>(3.4.62) इति क्त्वा, पूर्ववत्समासः। 
 </code>कृत्वा, ह्मत्वा<code>इति। एतत् प्रत्युदाहरणम्()। अत्र कृत्वाशब्दोऽनञ्पूर्वोऽस्ति; किन्तु समासो न भवतीति ल्यबभावः।</code>परमकृत्वा, उत्तमकृत्वा<code>इति।</code>सन्प्रहत्()<code>(2.1.60) इत्यादिना समासः। कथं पुनरनेन समासः? कथञ्चं न स्यात्()? सामानाधिकरण्याभावात्()? वात्र्तमेतत्(); कत्र्तरि क्त्वा विहितः, स एव च परमोत्तमशब्दाभ्यां विशिष्यते, तत्? कथं सामानाधिकरण्याभावः! अथ क्रियाविशेषणत्वं तयोराश्रित्य सामानाधिकरण्यभाव उच्यते, एवमपि</code>विशेषणं विशेष्येण बहुलम्()<code>(2.1.56) इत्यतो बहुलग्रहणानुवृत्तेरसामानाधिकरण्येऽपि समासो भवति। 
 ननु चानञ्पूर्वावेतौ समासौ, तत्? कथमेतत्प्रत्युदाहरणमुपपद्यते? इत्याह--</code>अनञ्()<code>इत्यादि। अनञिति नायं प्रसज्येपरतिषेधः, किं तर्हि? पर्युदासः--नञोऽन्यदनञ्()। तत्र नञिवयुक्तन्यायेन (व्या।प।६५) नञो यदन्यन्नञ्सदृशमव्ययं तदनञिति परिगृह्रते। तेन कारणेन नञव्ययमनव्ययञ्च परमशब्दादिकमुभयमप्येतदनञ्? न भवति, न तत्राव्ययेन नञा सादृश्यमस्ति। अत्यन्ताभेदादनव्ययत्वाच्च यथाक्रमम्()। तस्माद्? यथा अकृत्वा, अहत्वेत्येतत्? प्रत्युदाहरणमुपपन्नरूपम्(), एवं परमकृत्वा, उत्तमकृत्वेयपि। यदि तर्हि अनञिति नञ्सदृशमध्ययं परिगृह्रते--स्नात्वाकालकः, पीत्वास्थिरक इत्यादावपि स्यात्(), अस्ति ह्रत्रापि नञ्सदृशमध्ययं पूर्वपदम्(); क्त्वाप्रत्ययस्याव्ययत्वादित्याह--</code>स्नात्वाकालकः<code>इत्यादि। मयूरव्यंसकादिषु समाससंज्ञार्थमेते समुदायाः पठ()न्ते, तस्मान्निपातनाल्ल्यबादेशो न भवति। 
@@ -135,9 +147,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

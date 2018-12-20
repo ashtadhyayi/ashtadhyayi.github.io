@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.104.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.104";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.105\",\"Previous\":\"6.1.103\",\"अकारादिक्रमसङ्ख्या\":2146,\"कौमुदीक्रमसङ्ख्या\":165,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":147,\"विषयः १\":\"पूर्वरूपम् सवर्णदीर्घः सुपि\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"नादिचि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.104.md">Edit 6.1.104!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.104";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.105\",\"Previous\":\"6.1.103\",\"अकारादिक्रमसङ्ख्या\":2146,\"कौमुदीक्रमसङ्ख्या\":165,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":147,\"विषयः १\":\"पूर्वरूपम् सवर्णदीर्घः सुपि\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"नादिचि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.104 सम्प्रसारणाच्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सम्प्रसारणस्य यणादेशो मा भूदित्येवमर्थमिदं परपूर्वत्वं विधीयते। यदि चात्र यणादेशः स्यात्(), तदा संप्रसारणविधानामनर्थकं स्यात्? तस्मात्()। सम्प्रसारणविधानसामथ्र्यादेव यणादेशो न भविष्यति, तत्? किमर्थमिदं विधीयते? इत्याह&ndash;<code>सभ्प्रसारणविधानसामथ्र्यात्()</code> इत्यादि। सम्प्रसारणविधानसामथ्र्याद्यणादेशो न भवतीति विगृहीतस्याकृतसंहिताकार्यस्य श्रवणं प्राप्नोति, तस्मान्मा भूदेष दोष इति परपूर्वत्वं विधीयते।
 <code>वा च्छन्दसीत्येव</code> इत्यादि। अत्रापि पूर्ववद्वाक्यभेदो द्रष्टव्यः; अन्यथा भाषायां न स्यात्()। <code>यज्यमानः</code> [यज्यमानौ&ndash;काशिका] इति। परपूर्वत्वाभावपक्षे यणादेशः। कथं पुनरत्र यणादेशः, यावता विगृहीतस्यैव ग्रहणेन भवितव्यम्(), इदानीमेव ह्रुक्तम्()&ndash;सम्प्रसारणविधानसामथ्र्याद्विगृहीतस्यैव श्रवणे प्राप्ते परपूर्वत्वं विधीयते? इत्यत आह&ndash;परपूर्वत्वविधाने<code>इत्यादि। अनारब्धे हि परपूर्वत्वे विगृहीतस्यैव श्रवणं प्राप्नोति, मा भूत्? सम्प्रसारणस्य वैय्यथ्र्यमिति कृत्वा। सति तु परपूर्वत्वे यत्र परपूर्वत्वम्()--इष्टमित्यादौ, तत्रार्थवत्? सम्प्रसारणम्()। अतः परपूर्वत्वाभावपक्षे यणादेशो भवत्येव। अथेह कस्मान्न भवति--शकह्वौ शकह्वर्थमिति; अत्र हि शकं ह्वयतीति क्विप्(), यजादित्वात्? सम्प्रसारणम्(), परपूर्वत्वम्(), तस्य</code>अग्तादिवच्च<code>(६।१।८५) इति सम्प्रसारणग्रहणेन ग्रहणात्? सम्प्रसारणासम्प्रसारणयोरेकादेशस्य सम्प्रसारणस्य व्यपदेशभावत्वात्(), औकारेऽर्थशब्दे च परतो व्यवस्थिते</code>सम्प्रसारणाच्च<code>(६।१।१०८) इति परपूर्वत्वं प्राप्नोति? इत्यत आह--</code>अन्तरङ्गे चाचि<code>इत्यादि। योऽयं ह्वयतेरेचः स्थाने विहित आकारः स सम्प्रसारणस्यान्तरङ्गः प्रत्यासन्नः; उभयोरप्येकधात्वन्तर्गतत्वात्()। औकारोऽर्थशब्दाकारश्च विप्रकृष्टः। विप्रकृष्टस्तु देशतः कालतश्च, यदाह--</code>ब्राआह्रे<code>इति। यस्य धातोः सम्प्रसारणमवयवः, तत्रानन्तर्भावाद्बाह्रः। कालतश्च, यदाह--</code>पश्चात्? सन्निपतिते` इति। पूर्वरूपविधानकालादुतरकालं सन्निहित इत्यर्थः। तत्र सन्निकृष्टविप्रकृष्टयोरचोः प्रत्यासत्तेरन्तरङ्गो योऽच्? तत्रेदं वचनं प्रवत्र्तते, ततर चरितार्थमिति विप्रकृष्ट औकारादौ पश्चात्? सन्निहते न भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

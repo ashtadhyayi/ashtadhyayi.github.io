@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.191.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.191";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.192\",\"Previous\":\"6.1.190\",\"अकारादिक्रमसङ्ख्या\":3688,\"कौमुदीक्रमसङ्ख्या\":3685,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सर्वस्य सुपि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.191.md">Edit 6.1.191!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.191";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.192\",\"Previous\":\"6.1.190\",\"अकारादिक्रमसङ्ख्या\":3688,\"कौमुदीक्रमसङ्ख्या\":3685,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सर्वस्य सुपि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.191 ञ्नित्यादिर्नित्यम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>वासुदेवकः</code> इति। वासुदेवे भक्तिरस्येत्यर्थे वुन्()।
 अथेह गर्गा, विदा इति <code>यञञोश्च</code> (2.4.64) इति बहुषु लुकि कृते, चञ्चेव चञ्चेत्यत्र च <code>इवे प्रतिकृतौ</code> (५।३।९६) इत्युत्पन्नस्य कनः <code>लुम्? मनुष्ये</code> (5.2.97) इति लुपि कृते कस्मान्न भवति, लुप्तेऽपि प्रत्यये <code>प्रत्ययलोपे प्रत्ययलक्षणम्? (१।१।६२) इत्यस्ति प्राप्ति? इत्यत आह--</code>प्रत्ययलक्षणमत्र नेष्यते<code>इति। तत्? कथं पुनरिष्यमाणो न भवति?</code>संज्ञायामुपमानम्()<code>(6.1.198) इत्यत्र वक्ष्यमाणाज्ज्ञापकात्()। अथ वा</code>न लुमताङ्गस्य<code>(1.1.62) इत्यनेन यन्नाम किञ्चिदङ्गस्य कार्यमङ्गाधिकारे विहितमेव, तेन प्रतिषेधादिह प्रत्ययलक्षणं स्वीकार्यं न भविष्यति। एवमुत्तरात्रापि प्रत्ययलक्षणाभावो वेदितव्यः।</code>यञि कनि च लुप्ते` इति। चकाराद्()विदाधञि च॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

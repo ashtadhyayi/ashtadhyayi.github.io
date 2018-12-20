@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.1\/5.1.114.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.1.114";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.1.115\",\"Previous\":\"5.1.113\",\"अकारादिक्रमसङ्ख्या\":463,\"कौमुदीक्रमसङ्ख्या\":1777,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्वतेष्ठञ्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"आकालिकडाद्यन्तवचने\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.1/5.1.114.md">Edit 5.1.114!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.1.114";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.1.115\",\"Previous\":\"5.1.113\",\"अकारादिक्रमसङ्ख्या\":463,\"कौमुदीक्रमसङ्ख्या\":1777,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्वतेष्ठञ्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"आकालिकडाद्यन्तवचने\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.1.114 तेन तुल्यं क्रिया चेद्वतिः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>तुल्यम्()</code> इति। कर्मपदमेतत्(), क्रियाविशेषणत्वात्()। प्रतिपादितं हि प्राक्? क्रियाविशेषणानां कर्मत्वम्? <code>स्तोकान्तिकदूरर्थाकृच्छ्राणि क्तेन</code> (2.1.38) इति सूत्रे। <code>ब्राआहृणेन तुल्यं वत्र्तते ब्राआहृणवत्()</code> इति। का पुनरत्र क्रिया? ब्राआहृणेन तुल्यं वत्र्तते क्षत्रियादिगता अध्ययनादिका। ननु च तस्या ब्राआहृणनिष्ठयाऽध्ययनादिक्रिययैव तुल्यता। न च तां ब्राआहृणशब्द आह। किं तर्हि? जातिं द्रव्यं वा। न च ताभ्यां क्रियया तुल्यत्वम्(); स्वभावभेदात्()। यत्र हि किञ्चित् सामान्यम्(), कश्चिद्विशेषः, स विषयस्तुल्यतायाः इह त्वत्यन्तभेद एव? नैष दोषः; यद्यपि ब्राआहृणादिशब्दैः क्रिया नोच्यते, तथाप्यभिधेयसम्बन्धेन प्रतीयते, यथा&ndash;<code>गुडः</code> इत्युक्ते गुडेनानभिधीयमाना अपि माधुर्यादयः। तत्र ब्राआहृणादिशब्देन योऽर्थ उच्यते तेन तुल्यत्वं क्रियाया न सम्भवति। उच्यते चेदं वचनसामथ्र्यात्()। यासावभिधेयन ब्राआहृणेन क्रिया गम्यते तया तुलप्याता विज्ञास्यते। ननु च तृतीयासमर्थविभक्तिवाच्यया क्रिययैव प्रत्ययार्थक्रियायास्तुल्यता, तस्याश्च घञन्तोऽवकाशः&ndash;तैलपाकेन तुल्यो घृतपाक इत्यादि? नैषोऽस्त्यवकाशः; घात्वर्थो हि क्रिया, सा च पूर्वापरीभूता। अथ वा&ndash;असत्त्वभूता। न च तस्यां घञादयो भवन्ति, क्व तर्हि? तस्यैव धात्वर्थस्य धर्मे सिद्धतायामेव। घात्वर्थस्यापि घञादिस्थाया भिद्यते। तत्कथं घञादीनामर्थः क्रियेति शक्यते वक्तुम्()? न च तया घञादिवाच्यसिद्धतया द्रव्यगतायास्तुल्यता। न हि द्रव्यभूतेनासत्त्वभूतस्य वस्तुतुल्यतोपपद्यत इत्यतो नास्ति वचनस्यावकाशः। यदि तर्हि क्रिया घञादिभिर्नाभिधीयते&ndash;कर्तुं गमनम्(), भोक्तुं पाकः, करकस्य व्रजतीति <code>तुमुण्णवुलौ क्रियायं क्रियार्थायाम्()</code> (३।३।१०) इति तुमुण्ण्वुलौ न प्राप्नुतः? नैष दोषः; यदत्र प्रकृतिरूपं तस्य क्रियैवार्थ इति तदाश्रयौ तुमुण्ण्वुलौ भविष्यत इत्यलमतिप्रसङ्गेन॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.3\/8.3.86.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.86";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.87\",\"Previous\":\"8.3.85\",\"अकारादिक्रमसङ्ख्या\":310,\"कौमुदीक्रमसङ्ख्या\":3193,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अभिनिसः स्तनः शब्दसंज्ञायाम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.86.md">Edit 8.3.86!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.86";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.87\",\"Previous\":\"8.3.85\",\"अकारादिक्रमसङ्ख्या\":310,\"कौमुदीक्रमसङ्ख्या\":3193,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपदान्तस्य मूर्धन्यादेशः सः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अभिनिसः स्तनः शब्दसंज्ञायाम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.86 अभिनिसः स्तनः शबदसंज्ञायाम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अनादेशसकारत्वादप्राप्त एव षत्वे वचनम्()। <code>ष्टन शब्दे</code> (धा।पा।४६१) इति भौवादिकस्य ग्रहणम्()। <code>स्तन गदी देवशब्दे</code> <a href="धा।पा।१८५९"><code>गदी परिवेदने</code> (धा।पा।१८६०)</a> इत्यतस्य चौरादिकस्य तु न। तस्य ग्रहणे सत्यदन्तत्वात्? <code>अत उपधायाः</code> (7.2.116) इति न वृद्धिर्लभ्यते। अभि, निस्()&ndash;इत्येताभ्यामेवेदं षत्वं विधीयते। न हि व्यस्तभ्यामुत्तरस्य तस्य स्तुनतेर्मूर्धन्षे कृते शब्दसंज्ञा गम्यते। <code>अभिनिस इत्येतस्मात्()</code> इत्यादि। अभिनिसिति योऽयमुपसर्गसमवायस्तस्मादित्यर्थः। <code>अभिनिष्टानः</code> इति। अभिनिस्तव्यतेऽनेन, <code>अकर्तरि च कारके संज्ञायाम्()</code> (3.3.19) इति घञ्()। प्रादिसमासः।
 ननु च समानाधिकारादेवाभिनिःस्तनतीत्यत्र न भविष्यति। किमेतन्निवृत्त्यर्थेन शब्दसंज्ञाग्रहणेन? इत्यत आह&ndash;<code>समास इत्यतः प्रभुति निवृत्तम्()</code> इति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

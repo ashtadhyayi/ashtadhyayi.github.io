@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-1.1\/1.1.46.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.1.46";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.1.47\",\"Previous\":\"1.1.45\",\"अकारादिक्रमसङ्ख्या\":533,\"कौमुदीक्रमसङ्ख्या\":36,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":103,\"विषयः १\":\"परिभाषा\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आद्यन्तौ टकितौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.1/1.1.46.md">Edit 1.1.46!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.1.46";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.1.47\",\"Previous\":\"1.1.45\",\"अकारादिक्रमसङ्ख्या\":533,\"कौमुदीक्रमसङ्ख्या\":36,\"प्रकारः\":\"परिभाषा\",\"लघुकौमुदीविषयः\":\"04. विसर्ग सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":103,\"विषयः १\":\"परिभाषा\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आद्यन्तौ टकितौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.1.46 आद्यन्तौ टकितौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आद्यन्तौ टकितौ। आदिश्च अन्तश्च आद्यन्तौ, टश्च कच् टकौ। टकारादकार उच्चारणार्थः। टकौ इतौ ययोस्तौ टकितौ। द्वन्द्वान्त इच्छब्दः प्रत्येकं संबध्यते। टित्कितावाद्यन्तावयवौ स्तः। कस्येत्याकाङ्क्षायां यस्य तौ विहितौ तयोरित्यर्थाल्लभ्यते। तदाह&ndash;टित्कितावित्यादिना। क्रमादिति यथासङ्ख्य सूत्रलभ्यम्। टित् आद्यवयवः, किदन्तावयव इत्यर्थः। नचैवं सति मिलितयोरेकत्रान्वयाऽभावात्कथमिह द्वन्द्व इति वाच्यम्, प्रथमतः समुदायरूपेण परस्परं युगलयोरन्वयबोधमादाय द्वन्द्वप्रवृत्तौ सत्यां यथासंख्यसूत्रपर्यालोचनया पुनः प्रत्येकान्वयोपपत्तेः। <code>एचोऽयवायावः</code> इत्यादावप्येषैव गतिः। लोके त्वेवंजातीयकप्रयोगोऽसाधुरेवेति भाष्यादिषु स्पष्टम्। अत्रैव यथासङ्ख्यसूत्रोमन्यासो युक्तः। <code>आर्धधातुकस्येड्वलादेः</code> भविता। <code>ङ्णोः कुक् टुक् शरि</code>, प्राङ्?क्?षष्ट इत्याद्युदाहरणम्। <code>पुरस्तादपवादा अनन्तरान्विधीन् बाधन्ते नोत्तरान्</code> इति <code>षष्ठी स्थानेयोगे</code>त्यस्यानन्तरस्यैवायमपवादः। <code>प्रत्ययः</code> परश्चेत्यनेन तु परत्वादिदं बाध्यते। तेन चरेष्टः गापोष्टगित्यादयः परा एव भवन्ति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

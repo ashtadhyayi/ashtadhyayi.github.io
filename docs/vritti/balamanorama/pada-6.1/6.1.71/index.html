@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.1\/6.1.71.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.71";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.72\",\"Previous\":\"6.1.70\",\"अकारादिक्रमसङ्ख्या\":3972,\"कौमुदीक्रमसङ्ख्या\":2858,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तुक्-आगमः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ह्रस्वस्य पिति कृति तुक्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.1/6.1.71.md">Edit 6.1.71!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.71";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.72\",\"Previous\":\"6.1.70\",\"अकारादिक्रमसङ्ख्या\":3972,\"कौमुदीक्रमसङ्ख्या\":2858,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"तुक्-आगमः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ह्रस्वस्य पिति कृति तुक्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.71 ह्रस्वस्य पिति कृति तुक्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ह्रस्वस्य। स्पष्टमिति न व्याख्याताम्। इत्य इति। इणः क्यपि तुक्। उपेयमित्यत्र तु <code>ईङो दैवादिकाद्यत्। वृञो ग्रहणमिति। वार्तिकमिदम्। न वृङ इति।</code>वृङ् संभक्तौ<code>इति ङितः क्रैयादिकस्य न ग्रहणमित्यर्थः। वार्या ऋत्विज इति। अवश्यं भजनीया इत्यर्थः। अत्र</code>वृङ् संभक्तौ<code>इत्यस्माण्ण्यदित्यर्थः।</code>अवद्यपण्यवर्या<code>दिति निपातनसिद्धो यत्तु न , अत्र निरोध्स्य नियमस्य विवक्षितत्वात्। ननु</code>वदः सुपी<code>त्यतोऽनुवृत्त्यैव सिद्धे क्यब्ग्रहणमिह व्यर्थम्। नच चकारानुकृष्टयतोऽप्यनुवृत्तिनिवृत्तये क्यब्ग्रहणमिति वाच्यं, चकारस्य अस्वरितत्वेन</code>भुवो भावे<code>इत्याद्युत्तरसूत्रेष्वनुवृत्त्यभावादित्यत आह-- परस्यापीति।</code>ओरावश्यके<code>इति विहितस्येत्यर्थः। वेति काशिकेति। वा क्यप्। तदभावे हलन्तत्वाण्ण्यत्। भाष्ये त्वेतन्न दृश्यते इति भावः। शस्यं शंस्यमिति। क्यप्पक्षे</code>अनिदिता<code>मिति नलोपः। दुह्यमिति। क्यप्पक्षे कित्त्वान्न गुणः। अत्र</code>शंसिदुहिगुहिभ्यो वे<code>त्यस्य भाष्येऽदर्शनेऽपि शंसेर्ण्यत्क्यपौ प्रामाणिकावित्याह-- प्रशस्यस्येति।</code>प्रशस्यस्य श्रः<code>इति निर्देशबलादच्छंसेः क्यप्सिद्धः।</code>ईडवन्दवृशंसदुहा ण्यतः<code>इत्याद्युदात्तत्वविधौ शंसेर्ण्यदन्तत्वानुवादबलाण्ण्यत्सिद्धः। ततश्च शस्यं शंस्यमिति रूपद्वयं सिद्धम्। इतरयोस्तु दुहिगुह्रोः क्यब्विकल्पे मूलं नास्तीत्यर्थः। उपसङ्ख्यानमिति।</code>क्यप<code>इति शेषः। आज्यमितिन चाङ्?पूर्वकत्वे पदपाठे अवग्रहः स्यादिति वाच्यम्, इष्टापत्तेः। पदकाराणामवग्रहाऽभावस्त्वप्रामाणिक एव, पदपाठस्याऽऽधुनिकत्वादिति भाष्ये स्पष्टम्। एवं च</code>अस्मद्रियगित्यस्मद्रिय`गित्यवग्रहोऽप्रामाणिक एव। अस्मद्रि - अक् इत्येवाऽवग्रहो युक्तः, अस्मच्छब्दस्य टेरद्र�आदेशविधानादित्याद्यूह्यम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

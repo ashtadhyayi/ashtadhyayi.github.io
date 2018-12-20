@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.91.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.91";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.92\",\"Previous\":\"6.1.90\",\"अकारादिक्रमसङ्ख्या\":788,\"कौमुदीक्रमसङ्ख्या\":74,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":50,\"विषयः १\":\"वृद्धिसन्धिः\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"उपसर्गादृति धातौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.91.md">Edit 6.1.91!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.91";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.92\",\"Previous\":\"6.1.90\",\"अकारादिक्रमसङ्ख्या\":788,\"कौमुदीक्रमसङ्ख्या\":74,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"02. अच् सन्धिः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":50,\"विषयः १\":\"वृद्धिसन्धिः\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"उपसर्गादृति धातौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.91 एङि पररूपम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>उपेलयति</code> इति। <code>इल प्रेरणे</code> (धा।पा।१६६०) चुरादिणिच्()। <code>प्रोखति इति।</code>उख नख<code>(धा। पा। १२८,१३४) इत्युखिर्गत्यर्थो भ्यादौ पठ()ते। यदि</code>वा सुपि<code>(6.1.89) इत्यनुवत्र्तयन्ति, एवं सति तेन सहास्यैकवाक्यतायां सुबधातोरेवानेन विकल्पेन पररूपं क्रियते, असुपि तु पररूपं न स्यादेवेत्याह--</code>तच्च<code>इत्यादि। एकवाक्यत्वे हि सत्येष दोषः स्यात्()। न चात्रैकवाक्यता, किं तर्हि? वाक्यभेदः। तेन तदिहानुवत्र्तमानं सुब्धातावेव विकल्पं करोति, इतरतर तु नित्यमेव पररूपं प्रवत्र्तते। तत्रावर्णान्तादुपसर्गादसुबन्तावयवे धातावेङादौ पूर्वपरयोः पररूपमेकादेशो भवतीत्येकं वाक्यम्(), अवर्णान्तादुपसर्गात्? सुबन्तावयवे धातावेङादौ पूर्वपरमोर्वा पररूपमेकादेशो भवतीति द्वितीयम्()। तत्र पूर्वेण वाक्येनासुबन्तावयवे धातावुपेलयतत्यादौ नित्यं पररूपं दिधीयते। द्वितीयेन तु सुबन्तावयवे धातावुपेङकीयतीत्येवमादौ विकल्पेन पररूपं विधीयते। वाक्यभेदस्तु</code>एङि पररूपम्()<code>इति तन्त्रेण सूत्रद्वयोच्चारणाल्लभ्यते। सूत्रद्वये तूच्चार्यमाणे सत्येक एव</code>वा सुप्यापिशलेः<code>(6.1.89) इत्येदनुवर्तमानमपि लभ्यानुरोधान्नाभिसम्बध्यते, द्वितीये तु सम्बध्यत एव। तेन वाक्यद्वयं पूर्वोक्तं सम्पद्यते। 
 </code>वक्तव्यम्()<code>इति। व्याख्येयमित्यर्थः। तत्रेदं व्याख्यानाम्()--उत्तरसूत्रे चकारोऽधिकविधानार्थः, तेन शकन्ध्वादिषु पररूपं भविष्यतीति। उत्तरत्राप वक्तव्यशब्दस्यायमर्थो व्याख्यानं चैतददेव वेदितव्यम्()। 
 </code>एवे चानियोगे<code>इति। नियोगः=नियोजनम्(), व्यापारणमित्यर्थः। न नियोगोऽनियोगः=अनवक्लृप्तिः। तत्रैवशब्दे पररूपं वेदितव्यम्()। एवशब्दोऽनियमे वर्तते। यदा तमेव केवलं नियमं व्यापारेणाविशिष्टं ब्राऊते तदा पररूपं भवति। यदा तु व्यापारेम विशिष्टं तदा वृद्धिरेव। 
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

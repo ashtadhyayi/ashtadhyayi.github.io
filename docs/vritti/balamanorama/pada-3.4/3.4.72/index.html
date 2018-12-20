@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.4\/3.4.72.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.72";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.73\",\"Previous\":\"3.4.71\",\"अकारादिक्रमसङ्ख्या\":1266,\"कौमुदीक्रमसङ्ख्या\":3086,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लकार-कृत्-अर्थाः\",\"विषयः २\":\"कर्तरि क्तः\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"गत्यर्थाकर्मकश्लिषशीङ्स्थाऽऽसवसजनरुहजीर्यतिभ्यश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.4/3.4.72.md">Edit 3.4.72!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.72";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.73\",\"Previous\":\"3.4.71\",\"अकारादिक्रमसङ्ख्या\":1266,\"कौमुदीक्रमसङ्ख्या\":3086,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"लकार-कृत्-अर्थाः\",\"विषयः २\":\"कर्तरि क्तः\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"गत्यर्थाकर्मकश्लिषशीङ्स्थाऽऽसवसजनरुहजीर्यतिभ्यश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.72 गत्यर्थाऽकर्मकश्लिषशीङ्स्थासवसजनरुहजीर्यतिभ्यश्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>गत्यर्थ। गत्यर्थ, अकर्मक, श्लिष, शीङ्, स्था, आस , वस, जन, रुह, जीर्यति एषां दशानां द्वन्द्वः। <code>लः कर्मणि च भावे चे</code>त्यतो भावे कर्मणीति <code>आदिकर्मणि क्तः कर्तरि चे</code>त्यतः कर्तरि इति चानुवर्तते। तदाह&ndash; एभ्य इत्यादिना। कर्तरीत्येवानुवृत्तौ भावकर्मणोर्न स्यादिति तयोरप्यनुवृत्तिः। गङ्गां गत इति। कर्तरि क्तः। गङ्गां प्राप्त इति। <code>आप्लृ व्याप्तौ</code> उपसर्गवशाद्गतौ वर्तते। अकर्मकादुदाहरति&ndash;म्लान इति। क्षीण इत्यर्थः। <code>संयोगादेः</code> इति निष्ठानत्वम्। आश्लिष्ट इति। आलिङ्गितवानित्यर्थः। नन्वकर्मकत्वादेव सिद्धे शीङादीनां पुनर्ग्रहणं व्यर्थमित्यत आह&ndash; शेषमधिशयित इति। शेषे शयितवानित्यर्थः। <code>अधीशीङ्?स्थासाटमिति शेषः कर्म, अतो नाऽकर्मकत्वादिह प्राप्तिरिति भावः। वैकुण्ठमधिष्ठित इति। वैकुण्ठे स्थिवानित्यर्थः।</code>अधिशीङ्स्थासा<code>मिति वैकुण्ठः कर्म। अतो नाऽकर्मकत्वादिह प्राप्तिः। शिवमुपासित इति। शिवं परिचरितवानित्यर्थ-। उपवेशनार्थकत्वे अकर्मकत्वेऽपि इह उपसर्गवशेनाऽर्थान्तरे सकर्मकत्वादकर्मकेत्यनेन न प्राप्तिरिति भावः। हरिदिनमुपोषित इति।</code>वसतिक्षुधो<code>रिति इट्। यजादित्वात्संप्रसारणम्।</code>शासी<code>ति षः। हरिदिने न भुक्तवानित्यर्थः।</code>उपान्वध्याङ्वसः<code>इति हरिदिनं कर्म। ततश्चाऽकर्मकत्वाऽभावादप्राप्तिः। राममनुजात इति। अनुकृतवानित्यर्थः। अनुसृत्य जातवानिति वा।</code>ततश्चाऽकर्मकत्वाऽभावादप्राप्तिः। गरुडमारूढ इति। उपर्याक्रान्तवानित्यर्थः। वि�आमनुजीर्ण इति। हतवानित्यर्थः। व्याप्तवानिति वा। अकर्मकत्वाऽभावादप्राप्तिः। जृ?धातोः कर्तरि क्तः। <code>ऋतः</code> इतित इत्त्वं। रपरत्वं। <code>हलि चे</code> ति दीर्घः। <code>रदाभ्या</code>मिति नत्वं। णत्वम्। पक्षे इति। कर्तरि प्रत्ययाऽभावपक्षे इत्यर्थः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.62.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.62";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.63\",\"Previous\":\"8.2.61\",\"अकारादिक्रमसङ्ख्या\":1222,\"कौमुदीक्रमसङ्ख्या\":377,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कुत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्विन्प्रत्ययस्य कुः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.62.md">Edit 8.2.62!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.62";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.63\",\"Previous\":\"8.2.61\",\"अकारादिक्रमसङ्ख्या\":1222,\"कौमुदीक्रमसङ्ख्या\":377,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कुत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"क्विन्प्रत्ययस्य कुः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.62 क्विन्प्रत्ययस्य कुः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>घृतस्पृक्()</code> इति। अत्र शकारस्य विवृत्तकरणस्य ()आआसानुप्रदानस्याघोषस्य तादृश एव खकारः, तस्य जश्त्वम्()&ndash;गकारः। गकारस्यापि चत्र्वम्()&ndash;ककारः।
 अथ प्रत्ययग्रहणं किमर्थम्(), न क्विन इत्येवोच्येत, न हि क्विन्? प्रत्ययत्वं व्यभिचरति। एवमुच्यमाने लोपापवादः क्विन एव कुत्वं स्यादित्येतच्च नाशङ्कनीयम्(), तथा हि&ndash;क्विन्निति प्रत्ययग्रहणं यत्र प्रत्ययग्रहणं प्रत्ययग्रहणपरिभाषया (भो।प।सू।७) क्विन्नन्त उपस्थापिते क्विनो लोपे कत्र्तव्ये कुत्वस्यासिद्धत्वात्? पूर्वं लोपेनैव भवितव्यम्()। तस्मिन्? सति पश्चाद्भवत्कुत्वं परिशिष्टस्य धातोरेव भविष्यिति? इत्यत आह&ndash;<code>क्विनः कुरिति वक्तव्ये</code> इत्यादि। असति हि प्रत्ययग्रहणे क्विन्प्रत्ययान्तस्यैव पदान्तस्य स्यात्(), मान्यप्रत्ययान्तस्य, तस्यापि चेष्यते। तस्मात्? प्रत्ययग्रहणं क्रियते। प्रत्ययग्रहणे सति बहुव्रीहिर्लभ्यते। तेन बहुव्रीहिणा यस्माद्विहितः स धातुरूपलक्ष्यत इति सर्वस्य सिध्यति। <code>मानो अरुआआक्(), मानो अद्राक्()</code> इति। <code>सृज विसर्गे</code> (धा।पा।१४१४) <code>दृक्षिर्? प्रेक्षणे</code> (धा।पा।९८८), लुङ्(), च्लेः सिच्? (3.1.44), तिप्(), <code>सृजिदृशोर्झल्यमकिति</code> (6.1.57) इत्यमागमः, <code>वदव्रज</code> (7.2.3) इत्यादिना वृद्धिः, हल्ङ्यादिलोपः (6.1.66), अडागमः, अनेन कृत्वम्()।
 <code>सृजिदृशिभ्यां क्विन्विहितः</code> इति। <code>ऋत्विक्()</code> (3.2.59) इत्यादिना सृजेः क्विन्विहितः। दृशेरपि <code>त्यवादिषु दुशेरनालोचने कञ्च</code> (3.2.60) इत्यनेन। कथं पुनरत्राडागमः, यावता <code>न माङयोगे</code> (६।४।७४) इति प्रतिषिद्धोऽसो? इत्यत आह-<code>माङ्योगेऽपि</code> इत्यादि। छान्दसौ ह्रेतौ प्रयोगौ। तेन सत्यपि माङ्योगे <code>बहुलं छन्दस्यामाङ्योगेऽपि</code> (6.4.75) इत्यडागमो भवत्येव। <code>अस्तिसिचोऽपृक्ते</code> (७।३।९६) इतीट्? तर्हि कस्मान्न भवति? इत्याह-ईट्? च न भवति<code>इत्यादि।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

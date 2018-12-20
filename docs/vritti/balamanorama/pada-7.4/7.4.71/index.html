@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.4\/7.4.71.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.4.71";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.4.72\",\"Previous\":\"7.4.70\",\"अकारादिक्रमसङ्ख्या\":1687,\"कौमुदीक्रमसङ्ख्या\":2288,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"लिटि\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"तस्मान्नुड् द्विहलः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.4/7.4.71.md">Edit 7.4.71!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.4.71";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.4.72\",\"Previous\":\"7.4.70\",\"अकारादिक्रमसङ्ख्या\":1687,\"कौमुदीक्रमसङ्ख्या\":2288,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"लिटि\",\"विषयः ३\":\"अभ्यासस्य\",\"सूत्रम्‌\":\"तस्मान्नुड् द्विहलः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.4.71 तस्मान्नुड् द्विहलः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>लिटि णलि द्वित्वे हलादिशेषे अत आदेरित्यभ्यासाकारस्य दीर्घे आ अर्देति स्थिते&ndash;तस्मान्नुट्। द्वौ हलौ यस्य तस्येति विग्रहः। तच्छब्देन <code>अत आदे</code>रिति कृतदीर्घः परामृश्यते। तदाह&mdash;दीर्घीभूतादिति। टकार इत्। उच्चारणार्थः। टित्त्वादाद्यवयवः। तदाह&ndash; आनर्देति। आर्दीदिति। <code>इट ईटी</code>ति सिज्लोपः। नर्देत्यादि स्पष्टम्। कर्देति। कुत्सितशब्देन कुत्सितविशेषो विवक्षित इत्याह&ndash; कौक्ष इति। कुक्षिभवे इत्यर्थः। खर्देति। दन्दशूकः&ndash; दंशनस्वभावः सर्पः। <code>दन्दशूको बिलेशयः</code> इत्यमरः। ननु सर्पस्य क्रियात्वाऽभावात्कथं धात्वर्थत्वमित्यत आह&ndash;दंशनेति। अति अदीति। इदित्त्वान्नुम्। तदाह&ndash;अन्ततीति। आनन्तेति। <code>अत आदे</code>रिति दीर्घः। <code>तस्मान्नुड् द्विहलः</code> इति नुट्। एवम्-अन्दति। आनन्देति। नुट्। आन्दीत्। इदीति। परमै�आर्यम् = परमे�आरीभवनम्। इन्दतीति। इदित्त्वान्नुम्। इन्दांचकारेति। <code>इजादेश्चे</code>त्याम्। बिदीति। इदित्त्वान्नुमित्याह&ndash;बिन्दतीति। नन्ववयवस्य अक्रियारूपत्वातक्थं धात्वर्थमित्यत आह&ndash; अवयवं करोतीत्यर्थ इति। अबिन्दीत्। अबिन्दिष्टामित्यादि। पाटान्तमिति। पवर्गीयचतुर्थादिरित्यर्थः। गडीति। वदनैकदेश इति। तत्क्रियायामित्यर्थः। गण्डति। अगण्डीत्। अन्तत्यादय इति। अति अदि बन्धने, इदि परमै�आर्ये, बिदि अवयवे, गडि वदनैकदेशे इति पञ्च धातवस्तिङ्?प्रकृतयो न भवन्तीति काश्यपमतमित्यर्थः। अन्य इति। काश्यपादन्ये मुनयस्तिङमपि एभ्य् इच्छन्तीत्यर्थः। णिदीति। इदित्त्वान्नुम्। णोपदेशत्वाण्णस्य नत्वम्। तदाह&ndash;निन्दतीति। प्रणिन्दतीति। <code>उपसर्गादसमासेऽपी</code>ति णत्वम्। टु नदीति। समृद्धिः&ndash;प्रजाप�आआदिसम्पत्तिः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

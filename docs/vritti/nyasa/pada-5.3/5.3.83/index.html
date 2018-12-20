@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.3\/5.3.83.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.83";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.84\",\"Previous\":\"5.3.82\",\"अकारादिक्रमसङ्ख्या\":1567,\"कौमुदीक्रमसङ्ख्या\":2035,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"कः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"ठाजादावूर्ध्वं द्वितीयादचः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.3/5.3.83.md">Edit 5.3.83!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.83";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.84\",\"Previous\":\"5.3.82\",\"अकारादिक्रमसङ्ख्या\":1567,\"कौमुदीक्रमसङ्ख्या\":2035,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"कः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"ठाजादावूर्ध्वं द्वितीयादचः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.83 ठाजादावूध्र्वं द्वितीयादचः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अस्मिन्? प्रकरणे</code> इत्यादि। अनेनास्मिन्? प्रकरणे यौ विहितौ ठाजादी तत्र लोपी भवति, यौ तु प्रकरणान्तरे तत्र न भवतीति दर्शयति। एतच्चैतत्प्रकरण विहितयोष्ठाजाद्योरिहानुवुत्तेर्लभ्यते। अथोध्र्वग्रहणं किमर्थम्(), यावता <code>द्वितीयादचः</code> इति पञ्चमी, तस्मादन्तरेणाप्यूष्र्वग्रहणम्(), <code>तस्मादित्युत्तरस्य</code> (१।१।६७) इत्यूध्र्वं यच्छब्दरूपं तस्यैव लोपो भविष्यति? इत्यत आह&ndash;<code>उध्र्वंग्रहणम्()</code> इत्()यादि। असत्यूध्र्वंग्रहणे <code>आदेः परस्य</code> (1.1.53) इति द्वितीयादचो यः परस्तस्यादेर्लोपः स्यात्(), तस्मिस्तदु सति सर्वे निवत्र्तते। अतः सर्वस्य लोपो यथा स्यादित्येवमर्थमूध्र्वंग्रहणम्()।
 अथ ठग्रहणं किमर्थम्(), यावता ठस्येकादेशे कृतेऽजादावित्येव सिद्धम्()? इत्यत आह&ndash;<code>ठग्रहणम्()</code> इत्यादि। उको द्वितीयत्वे सत्यकृत एवेकादेशे ठावस्थायामेव द्वितीयादूध्र्वस्य लोपे कृते <code>इसुसुक्तान्तात्? कः</code> (7.3.51) इति कविधिर्यथा स्यादित्येवमर्थं ठग्रहणम्()। तत्रैतत्? स्यात्? चोद्यम्()&ndash;इकादेशे कृतेऽजादिलक्षते च द्वितीयादूध्र्वस्य लोपे स्थानिवद्भावाट्ठग्रहणेन ग्रहणात्? कादेशो भविष्यति? इत्याह&ndash;<code>अजादिलक्षणे हि</code> इत्यादि। इहादेशविधौ तत्र ठग्रहणं वर्णग्रहणं स्यात्(), सङ्घातग्रहणं वा; तत्र वर्णग्रहणेऽल्विधित्वात्? स्थानिवद्भावो नोपपद्यते। सह्घातग्रहणे यद्यप्युपपद्यते, तथापि <code>सन्निपातलक्षणो विधिरनिमित्तं तद्विघातस्य</code> (व्या।प।१२) इत्यजादित्वसन्निपातकृतमुकः ठप्रत्ययेनानन्तय्र्यमिति तदजादित्वविघातं न कुर्यात्()। ततश्च यथा&ndash;मथितं पण्यमस्य माथितिक इत्यत्र यस्येति (6.4.148) लोपे सत्यपि तकारेण ठस्यानन्तर्य्ये कादेशो न भवति, तता वायुदत्तो वायुक इति न स्यात्()। तस्मादुको द्वितीयत्वे कविधानार्थं ठग्रहणम्()।
 <code>उवर्णाल्लः</code> इति। तस्य च लोप इत्यर्थः। स चादेरेव भवति, न सर्वस्य। अथवा&ndash;ल इत्यादेशएवायं सर्वे लस्य विधीयते। च चानेकाल्त्वात्सर्वस्यैव भवति।
@@ -134,9 +146,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.196.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.196";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.197\",\"Previous\":\"6.2.195\",\"अकारादिक्रमसङ्ख्या\":3251,\"कौमुदीक्रमसङ्ख्या\":3930,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"विभाषोत्पुच्छे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.196.md">Edit 6.2.196!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.196";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.197\",\"Previous\":\"6.2.195\",\"अकारादिक्रमसङ्ख्या\":3251,\"कौमुदीक्रमसङ्ख्या\":3930,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उत्तरपदात् अनोः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"विभाषोत्पुच्छे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.196 द्वित्रिभ्यां पाद्दन्मूर्धसु बहुव्रीहौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>द्वित्रिभ्याम्()</code> इति। दिग्योगलक्षणा(2.3.29)पञ्चमी। <code>पाद्दन्मूर्धसु</code> इति। <code>यस्य च भावेन भावलक्षणम्()</code> (2.3.37) इति भावलक्षणा सप्तमी। बहुव्रीहीः कार्यी। अत आह&ndash;<code>द्वि त्रि इत्येताभ्याम्()</code> इत्यादि। <code>द्विपात्(), त्रिपात्()</code> इति। <code>पादस्य लोपोऽहस्त्यादिभ्यः</code> (5.4.138), <code>संख्यासुपूर्वस्य</code> (5.4.140) इत्यकारलोपः। पादशब्दो घञन्तत्वादाद्युदात्त इति पाच्छब्दश्चाद्युदात्तः एव भवति। <code>द्विदन्()</code> इति। <code>वयसि दन्तस्य</code> (5.4.141) इति दत्रादेशः। दन्तशब्द आद्युदात्त इत्युक्तम्()। तेन दत्रादेशोऽपि स्थानिवद्भावेनाद्युदात्त एव भवति। <code>द्विमूर्धा</code> इति। मूर्धशब्दः <code>()आन्नुक्षन्पूषन्प्लीहन्()</code> (द।उ।६।५५) इत्यादिना रन्()प्रत्ययान्तो निपात्यते। तेनाद्युदात्तः। <code>मूर्धन्()</code> इत्यादि। <code>द्वित्रिभ्यां ष मूध्र्नः</code> (5.2.114) [<code>षो</code> इति मु। पाठः] इति षः समासान्तः प्राप्नोति, स न कृतः। तेनात्र नान्त एव मूर्धशब्दः। किं पुनः कारणमकृतसमासान्त एव मूर्धञ्शब्द उपात्तः? इत्यात आह&ndash;<code>तस्य</code> इत्यादि। यदि कृतसमासान्त उपादीयेत तदा सत्येव समासान्तेऽन्तोवात्तत्वं स्यात्(), असति न स्यात्()। तस्मादसत्यपि समासान्तेऽन्तोदात्तत्वं यथा स्यादित्येतत्? प्रयोजनमकृतसमासान्तनिर्देशस्य। ननुच नित्यमेव समासन्तेन भवितव्यम्(), तत्? कुतस्तस्यासत्त्वम्()? इत्यत आह&ndash;<code>एतदेव</code> इत्यादि। यदिदमस्य प्रयोजनस्य सम्पादनारथमकृतसमासान्तस्य मूर्धन्()शब्दस्योपादनाम्(), एतदेव ज्ञापकम्&ndash;अनित्यः समासान्तो भवतीति। तेन द्विमूर्धत्यादिप्रयोग उपपन्नो भवति। यदि तह्र्रकृतसमासान्त इह मूर्धन्()शब्द उपात्तः, एवं सति यदा समासान्तः क्रियते तदान्तोदात्तेन न भवितव्यम्()। कृतसमासान्तस्य शब्दान्तरत्वादित्यत आह&ndash;<code>यद्यपि</code> इत्यादि। इह हि बहुव्रीहिः कार्यी, तदेकदेशित्वं च समासान्तस्य। एकदेशोऽस्यासतीत्येकदेशी, स बहुव्रीहिरेकदेशी यसय समासान्तस्य स तदेकदेशी, तद्भावसतदेकदेशित्वम्()। एतेन बहुव्रीह्रवयवत्वं समासान्तस्य दर्शयन्? कृतसमासान्तस्य शब्दान्तरत्वं निरस्यति। तदेवं यस्मादिह बहुव्रीहिः कार्यी तदेकदेशित्वञ्च समासान्तस्य, तस्माद्यदापि समासान्तः क्रियते तदापि पक्षेऽन्तोदात्तत्वं भवत्येव। <code>कल्याणमूर्धा</code> इति। कल्याणशब्दः <code>नब्विषयस्य</code> (फि।सू।२।२६) इत्याद्युदात्तः। <code>द्वयोर्मूर्धा</code> इति। अत्र नित्यमेव समासान्तोदात्तत्वं भवति॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

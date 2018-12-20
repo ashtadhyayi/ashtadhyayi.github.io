@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.3\/6.3.43.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.43";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.44\",\"Previous\":\"6.3.42\",\"अकारादिक्रमसङ्ख्या\":1360,\"कौमुदीक्रमसङ्ख्या\":985,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ह्रस्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"घरूपकल्पचेलड्ब्रुवगोत्रमतहतेषु ङ्योऽनेकाचो ह्रस्वः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.43.md">Edit 6.3.43!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.43";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.44\",\"Previous\":\"6.3.42\",\"अकारादिक्रमसङ्ख्या\":1360,\"कौमुदीक्रमसङ्ख्या\":985,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ह्रस्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"घरूपकल्पचेलड्ब्रुवगोत्रमतहतेषु ङ्योऽनेकाचो ह्रस्वः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.43 घरूपकल्पचेलड्ब्राउवगोत्रमतहतेषु ङ्योऽनेकाचो ह्रस्वः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अथ समासाश्रयविधिर्निरूप्यते&ndash;घरूप। <code>उत्तरपदे</code> इत्यधिकृतं चेलडादिष्वन्वेति, नतु घरूपकल्पेषु , घशब्दवाच्यतरप्तमपोः रूपप्कल्पपोश्च प्रत्ययत्वात्। नच तदन्तग्रहणे सति तेषूत्तरपदत्वं संभवतीति वाच्यं, <code>ह्मदयस्य ह?ल्लेखे</code>त्यत्र उत्तरपदाधिकारे प्रत्ययग्रहणे तदन्तग्रहणाऽभाव इति भाष्ये उक्तत्वात्। <code>स्त्रियाः पुंव</code>दित्यतो भाषित पुंस्कादित्यनुत्तम्। ङ्य इतितदन्तग्रहणं, केवस्यानेकाच्त्वाऽभावात्। तदाह&mdash;भाषितपुंस्काद्यो ङीति। एतदर्तमेव <code>स्त्रियाः पुंव</code>दित्यत्र बाशितपुंस्कादिति पञ्चम्यन्तमुपात्तं ष तत्र <code>भाषितपुंस्काद्यो ङीति। एतदर्थमेव</code>स्त्रियाः पुंव<code>दित्यत्र भाषितपुंस्कादिति पञ्चम्यन्तमुपात्तं। तत्र</code>भाषितपुंस्काद्यो ङीति। एतदर्थमेव <code>स्त्रियाः पुंव</code>दित्यत्र भाषितपुंस्कादिति पञ्चम्यन्तमुपात्तं। तत्र <code>भाषितपुंस्काया</code> इति षष्ठ�न्तोपादाने तु इह तदनुव?त्तिर्न स्यात्, असंभवात्। नहि ङीप्प्रत्ययस्य तदन्तस्य भाषितपुंस्कत्वमस्ति। नच तत्रापि नार्थवत्स्यात्, अनूङिति पर्युदासात्स्त्रीप्रत्ययलाभेन तदन्तस्य भाषितपुंस्कत्वाऽभावादिति वाच्यम्, तत्र स्त्रिया<code>इत्यस्वरितत्वात्स्त्रीप्रत्ययग्रहणं नेत्य#उक्तत्वात्। ब्राआहृणितरा ब्राआहृणितमेति। अतिशायने तरप्तमपौ। नच</code>तसिलादिष्वि<code>ति पुंवत्त्वेन ङीफो निवृत्तिः सङ्ख्याः,</code>जातेश्चे<code>ति निषेधात्। ब्राआहृणिरूपेति</code>प्रशंसायां रूपप्<code>। ब्राआहृणिकल्पेति।</code>ईषदसमाप्तौ<code>इति कल्पप्। ब्राआहृणिचेलीति।</code>चिल वसने<code>तस्मादचि चेलडिति पचादौ पठितम्। टित्त्वान्ङीप्। इत्यादीति। ब्राआहृणिमता। ब्राआहृणिहता। ब्राऊञ इति। ब्राऊञ्धातोरचि कृते</code>ब्राउवो वचि<code>रिति वच्यादेशस्य लघूपधगुणस्य च अभावो निपात्यत इत्यर्थः। चेलडादीनीति। समासवृत्तिविषये चेलङ् ब्राउवगोत्रहता इत्युत्तरपदानि कुत्सनवाचीनीति कृत्वा</code>कुत्सितानि कुत्सनै<code>रिति कर्मधारय इत्यर्थः। आमलकोतरेति। आमलकीशब्दस्य वृक्षवाचित्वे नित्यस्त्रीलिङ्गत्वाद्भाशितपुंस्कत्वाऽभावेन न ह्रस्व इति भावः। ननु</code>न पदान्ते<code>ति सूत्रे भाष्ये बिम्बबदर्यामलकशब्दानां भाषितपुंस्कत्वावगमात्कथमामलकीशब्दस्य वृक्षविशेषे नित्यस्त्रीलिङ्गत्वमित्यरुचेराह--कुवलीतरेति। बृक्षनिषेशे नित्यस्त्रीलिङ्गोऽयमिति भावः। अमरस्तु</code>कर्कन्धूर्बदरी कोली घोण्टा <code>कुबलफनिले</code> इति नपुंसकत्वमाह।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

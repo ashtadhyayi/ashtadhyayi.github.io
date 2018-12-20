@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-1.1\/1.1.38.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.1.38";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.1.39\",\"Previous\":\"1.1.37\",\"अकारादिक्रमसङ्ख्या\":1648,\"कौमुदीक्रमसङ्ख्या\":448,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तद्धितश्चासर्वविभक्तिः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.1/1.1.38.md">Edit 1.1.38!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.1.38";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.1.39\",\"Previous\":\"1.1.37\",\"अकारादिक्रमसङ्ख्या\":1648,\"कौमुदीक्रमसङ्ख्या\":448,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अव्ययम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तद्धितश्चासर्वविभक्तिः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.1.38 तद्धितश्चाऽसर्वविभक्तिः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अथ स्वरादिचादिभिन्नान्यव्ययान्याह&ndash;तद्धितश्चासर्व। असर्वविभक्तिरिति बहुर्वीहिः। तत्र सर्वा विभक्तयो यस्मान्न भवन्तीति बहुवचनान्तविग्रहो न संभवति, अव्ययेभ्यः सप्तानां विभक्तीनामुत्पत्त्यभ्युपगमात्। तथाहि <code>तद्धितश्चे</code>ति प्रकृतसूत्रे भाष्ये तावत् <code>द्व्येकयोर्द्विवचनैकवचने</code> <code>बहुषु बहुवचन</code>मिति सूत्रविन्यासं भङ्क्त्वा <code>एकवचनं</code> <code>द्वयोर्द्विवचने</code><code>बहुषु बहुवचन</code>मिति सूत्रन्यासं कृत्वा एकवचनमुत्सर्गतः करिष्यते, द्विबह्वोरर्थयोस्तस्य द्विवचनबहुवचने बाधके इत्यादि स्थितम्। ततश्च एकवचन<code>मित्यनेन ङ्याप्प्रातिपदिकादेकवचनं भवतीति सामान्यविधिना द्वित्वबहुत्वाऽभावे एकवचनमिति लभ्यते। एवं च द्विबहुत्वाऽभावे सति एकत्वे तदभावे च एकवचनमिति फलति। तत्र द्वित्वबहुत्वयोर्द्विवचनबहुवचनोक्त्यैव ततोऽन्यत्र एकवचनस्य सिद्धत्वात्</code>एकवचनम्<code>इति सूत्रं कर्मत्वाद्यभावेऽपि प्रापणार्थं संपद्यते। तथाच अलिङ्गसंख्येभ्योऽव्ययेभ्य एकवचनं प्रवर्तमानं विनिगमनाविरहात्सर्वविभक्त्येकवचनं भवति। अत एव</code>अव्ययादाप्सुपः<code>इत्यत्र प्रत्याहारग्रहणमर्थवत्। तस्मात्सर्वा विभक्तियो यस्मादिति न विग्रहः, किन्तु सर्वशब्दोऽत्र सर्व पटो दग्ध इतिवदवयवकार्त्स्न्ये वर्तते। एवंच सर्वा वचनत्रयात्मिका विभक्तिर्यस्मान्नोत्पद्यते। किन्त्वेकवचनान्येवोत्पद्यन्ते, स तद्धितान्तोऽव्ययसंज्ञः स्यादिति फलतीत्यभिप्रेत्याह--यस्मादिति। सर्वेति। वचनत्रयात्मिकेत्यर्थः। नोत्पद्यत इति।</code>किन्त्वेकवचनान्येवोत्पद्यन्ते<code>इति शेषः। स्यादेतत्-तिङ्श्चे-त्यनुवृत्तौ</code>प्रशंसायां रूप<code>मिति रूपप्प्रत्यये</code>ईषदसमाप्तौ कल्प<code>बिति कल्पप्प्रत्यये च पचतिरूपं पचतिकल्पमिति रूपम्। प्रशस्तं पचति, ईषत् पचतीत्यर्थः। अत्राप्यव्ययत्वं स्यात्, अरुआवविभक्तितद्धितान्तत्वात्। किञ्च उभयशब्देऽतिव्याप्तिः, तस्याप्यसर्वविभक्तितद्धितान्तत्वादित्यत आह-परिगणनमिति। वार्तिकमेतत्। तसिलादय इति।</code>पञ्चम्यास्तसिल्<code>इत्यारभ्य</code>द्वित्र्योश्च धमु<code>ञित्यर्थः। शस्प्रभृतय इति।</code>बह्वल्पार्था<code>दित्यरभ्य</code>अव्यक्तानुकरणा<code>दिति डाजन्ता इत्यर्थः। अम् आमिति।</code>अमु च च्छन्दसी<code>त्यम्,</code>किमेत्तिङव्यये<code>त्यमा च गृह्यते। कृत्वोऽर्था इति।</code>सङ्ख्यायाः क्रियाभ्यावृत्तिगणने कृत्वसुच्<code>,</code>द्वित्रिचतुर्भ्यःसुच्<code>,</code>विभाषा बहोर्थे<code>ति त्रय इत्यर्थः। तसिवती इति।</code>तेनैकदिक्<code>,</code>तसिश्च<code>इति तसि#ः</code>तेन तुल्यम्<code>इत्यादिविहितो वतिश्च गृह्यते।</code>प्रतियोगे पञ्चम्यास्तसिः<code>इत्यस्य तु शस्प्रभृतित्वादेव सिद्धम्। एवं च स्वरादिषु वदित्यस्य प्रयोजने चिन्त्यम्। नानाञाविति।</code>निनञ्भ्यां नानाञौ न सहे<code>ति विहातौ नानाञौ। इति परिगणनंकर्तव्यमित्यन्वयः। परिगणनेनैव सिद्धे</code>तद्धितश्चे`ति सूत्रं न कर्तव्यमिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

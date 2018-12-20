@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.3\/7.3.29.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.29";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.30\",\"Previous\":\"7.3.28\",\"अकारादिक्रमसङ्ख्या\":1609,\"कौमुदीक्रमसङ्ख्या\":1130,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"उभयपद-वृद्धिः तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"तत्प्रत्ययस्य च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.3/7.3.29.md">Edit 7.3.29!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.29";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.30\",\"Previous\":\"7.3.28\",\"अकारादिक्रमसङ्ख्या\":1609,\"कौमुदीक्रमसङ्ख्या\":1130,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"उभयपद-वृद्धिः तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"तत्प्रत्ययस्य च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.29 तत्प्रत्ययस्य च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>प्रावाहणेयिः</code> इति। <code>अत इञ्()</code> (4.1.95)। <code>प्रावाहणेयकम्()</code> इति। <code>गोत्रचरणादषुञ्()</code> (4.3.126)।
 अथ किमर्थमिदमुच्यते, यावता ढप्रत्ययन्तस्य प्रवाहणेयशब्दस्योत्तरपदं नित्यं वृद्धिमदेदेति, तदर्थस्तावदारम्भो न युक्तः; पूर्वपदस्य वृद्धेर्विकल्पो यथा स्यादित्येवमर्थोऽपि नैवास्यारम्भो युज्यते; इञादावपि तद्धिते तन्निमित्तां वृदिं()ध बाधित्वा पूर्वसूत्रेण च निमित्त एव विकल्पो भविष्यति, न हीञादावुतपन्ने तद्धिते ढस्य परत्वमपैति? इत्याह&ndash;<code>बाह्रतद्धित</code> इत्यादि। बाह्रतद्धिनो निमित्तं यस्याः सा तथोक्ता। बाहृत्वं पुनरित्रदेस्तद्धितस्य प्रावाहणेयशब्देऽनन्तर्भावात्()। सैवं बाह्रं तद्धितं निमित्तमाश्रित्य भवन्ती बहिरङ्गा। प्रागेव तु ब्राआहृतद्धितोत्पत्तेर्ढाश्रयो विकल्पो भवन्नन्तरङ्गस्तां बाधितुं न शक्नोति। ततश्च यदीदं नारभ्येत तदा स्यादेव। तस्माद्विकल्पार्थमिदमारभ्यते॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-7.2\/7.2.61.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.61";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.62\",\"Previous\":\"7.2.60\",\"अकारादिक्रमसङ्ख्या\":47,\"कौमुदीक्रमसङ्ख्या\":2294,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"थल्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अचस्तास्वत्‌ थल्यनिटो नित्यम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-7.2/7.2.61.md">Edit 7.2.61!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.61";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.62\",\"Previous\":\"7.2.60\",\"अकारादिक्रमसङ्ख्या\":47,\"कौमुदीक्रमसङ्ख्या\":2294,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"थल्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"अचस्तास्वत्‌ थल्यनिटो नित्यम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.61 अचस्तास्वत्थल्यनिटो नित्यम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अचस्तास्वत्। उत्तरसूत्रादुपदेश इत्यपकृष्यते, तच्चाऽजन्तस्य विशेषणमित्याह&ndash; उपदेशेऽजन्त इति। धातुरित्याक्षेपाल्लभ्यते। न ह्यधातोस्थल् संभवति. नित्यग्रहणमनिटो विशेषणम्। क्व नित्यमनिडित्यपेक्षायां संनिधानात्तासावेवेति विज्ञायते, <code>तासि च क्लृपःर</code> इति सन्निहितं वाऽनुवर्तते। <code>न वृद्भ्यः</code> इत्यस्मान्नेत्यनुवर्तते , तदाह&ndash; तासौ नित्यानिट् ततः परस्येत्यादि। तासाविव तास्वदिति सप्तम्यन्ताद्वतिः। यथा तासौ न भवति एवं थल्यपीत्यर्थः। अच इति किम् ?। बिभेदिथ। रुरोधिथ। उपदेशे इति किम् ?। जहर्थ। इह परत्वान्नित्यत्वच्च गुणे रपरत्वे च कृते अजन्तत्वाऽभावादेतस्याऽप्रवृत्ताविट् प्रसज्येतेत्युपदेश इत्युक्तम्। थलीति किम् ?। पपिव पपिम। नित्यमनिटः किम्?। सस्वरिथ। सस्वर्थ। नाऽयं तासौ नित्यमनिट्, <code>स्वरतिसूती</code>ति विकल्पितेट्?त्वात्। इह तासीति नेति चानुवृत्त्यैवेष्टसिद्धेस्तास्वदित्येतन्नातीवोपयुज्यत इति केचित्। अन्ये तु &ndash;यस्य तासौ विद्यमानत्वं तस्मादेव परस्य थल इण्निषेध इत्येतल्लाभार्थं तत्।तेन उवयिथ, जघसिथेत्यत्र न निषेध इत्याहुः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.3\/4.3.23.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.3.23";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.3.24\",\"Previous\":\"4.3.22\",\"अकारादिक्रमसङ्ख्या\":3721,\"कौमुदीक्रमसङ्ख्या\":1391,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्दीव्यतोऽण्। शेषे\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"सायंचिरम्प्राह्णेप्रगेऽव्ययेभ्यष्ट्युट्युलौ तुट् च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.3/4.3.23.md">Edit 4.3.23!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.3.23";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.3.24\",\"Previous\":\"4.3.22\",\"अकारादिक्रमसङ्ख्या\":3721,\"कौमुदीक्रमसङ्ख्या\":1391,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्दीव्यतोऽण्। शेषे\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"सायंचिरम्प्राह्णेप्रगेऽव्ययेभ्यष्ट्युट्युलौ तुट् च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.3.23 सायञ्चिरम्प्राह्णेप्रगेऽव्ययेभ्यष्ट�उट�उलौ तुट् च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>कालाट्ठञ्</code> (4.3.11) इति ठञि प्राप्ते सायमादिभ्यः ट()उट()उलौ विधीयेते, तयोश्च तुडागमः। ठञपवादत्वाच्च् ट()उट()उलोः। ठञैव च्छस्य बाधित्वादेताभ्यां पुनश्छस्य सम्प्रधारणैव नास्ति। तेन वृद्धादपि ट()उट()उलावेव भवतः&ndash; प्राक्तनमिति। <code>तयोश्च</code> इत्यादि। यद्यनादिष्टयोस्तुट् स्यात् तदा युरूपौ प्रत्ययौ न भवत इत्यनादेशो न स्यात्। तस्मादादिष्टयोस्तयोः कृतादेशयोस्तुडागमः। एतच्च <code>घकालतनेषु काल नाम्नः</code> (6.3.16) इति निर्देशाल्लभ्यते। न ह्रनादिष्टयोस्तुड्()विधानेन तनशब्द उपपद्यते। अथ प्रत्ययोष्टित्करणं किमर्थम्, न तुट एव टित्त्वेन प्रत्ययोरपि टित्त्वं विज्ञास्यत इति, यतस्तद्()ग्रहणेन ग्रहणादागमानाम्? नैतदस्ति; युक्तं यत् प्रत्ययधर्मा आगमे भवन्ति तस्य प्रत्ययभक्तत्वात्, नत्वागयधर्मा प्रत्यये। तस्माट्टित्कार्यार्थं प्रत्ययोरपि टित्त्वमासज्यते। <code>स्यतेरन्तकर्मणः</code> इति। <code>षोऽन्तकर्मणि</code> (धा।पा।११४७) इत्यस्य। <code>प्राह्णे प्रगे इत्येकारान्तम्</code> इति। निपात्यत इति सम्बन्धः। ननु च <code>घकालतनेषु कालनाम्नः</code> (6.3.16) इति सप्तम्या अलुकैव सिद्धम्, तदपार्थकं निपातनम्? यत्र तर्हि सप्तम्यर्थो नास्ति तदर्थं निपानम् &mdash; ग्राह्णः स#ओढोऽस्य प्राह्णेतनः, प्रगः सोढोऽस्य प्रगेतन इति। अत्र हि <code>तदस्य सोढम्</code> (4.3.52) इति प्रथमासमर्थात्प्रत्ययविधानात्सप्तम्यर्थो नास्ति। तदभावत्सप्तम्यपि नास्त्येव।
 <code>चिरपरुत्परारिभ्यस्त्नो वक्तव्यः</code> इति। व्याख्येय इत्यर्थः। व्याख्यानं तु <code>तद्धिताः</code> (4.1.76) इत्यत्रैव कृतम्। एवमुत्तरत्रापि वेदितव्यम्। चिरशब्दस्य सूत्रे चोपादानाट्ट()उलावपि भवतः।
 <code>प्रगस्य च्छन्दसि गलोपश्च</code> इति।वक्तव्य इति सम्बन्धः। वक्तव्यशब्दस्य स एवार्थः। व्याख्यानात् त्विहापि <code>प्रत्नपूर्ववि()ओमात् थाल् च्छन्दसि</code> (5.3.111) इतिनिपातनमाश्रित्य कत्र्तव्यम्।</p>
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

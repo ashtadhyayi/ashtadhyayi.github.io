@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.1\/3.1.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.1.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.1.37\",\"Previous\":\"3.1.35\",\"अकारादिक्रमसङ्ख्या\":614,\"कौमुदीक्रमसङ्ख्या\":2237,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आम्\",\"विषयः २\":\"विकरण-प्रत्ययाः\",\"विषयः ३\":\"धातोः प्रत्ययः परः च\",\"सूत्रम्‌\":\"इजादेश्च गुरुमतोऽनृच्छः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.1/3.1.36.md">Edit 3.1.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.1.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.1.37\",\"Previous\":\"3.1.35\",\"अकारादिक्रमसङ्ख्या\":614,\"कौमुदीक्रमसङ्ख्या\":2237,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आम्\",\"विषयः २\":\"विकरण-प्रत्ययाः\",\"विषयः ३\":\"धातोः प्रत्ययः परः च\",\"सूत्रम्‌\":\"इजादेश्च गुरुमतोऽनृच्छः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.1.36 इजादेश्च गुरुमतोऽनृच्छः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>{यजादेः इति मुद्रितः पाठः।} इजादेः</code> इति। आदिर्यस्येति बहुव्रीहिः। <code>इच्</code> इति प्रत्याहारग्रहणम्। गुरुरस्यास्तीति गुरुमान्। <code>ऋच्छतिवर्जितः</code> ऋच्छिना त्यक्तः। तद्रूपरहित इत्यर्थः। <code>ईहाचञ्क्रे</code> इति। <code>ईह चेष्टायाम्</code> (धा।पा।६३२) <code>ऊहाञ्चक्रे</code> इति। <code>ऊह वितर्के</code> (धा।पा।६४८)।
 <code>ततक्ष, ररक्ष</code> इति। <code>तक्षू त्वक्षू तनूकरणे</code> (धा।पा।६५५, ६५६), <code>रक्ष पालने</code> (धा।पा।६५८)। <code>इयज; उवप</code> इति। यजिवप्योरुत्तमे णलि <code>णलुत्तमो वा</code> (7.1.91) इति णित्त्वाभावपक्षे वृद्ध्यभावाद्गुरुमत्ताभावः। केचित् इयेष, उवोषेति प्रत्युदाहरन्ति। <code>{इष धा।पा।} इषु इच्छायाम्</code> (धा।पा।१३५१) <code>उष दाहे</code> (धा।पा।६९६), णलि लघूपधगुणःष द्विर्वचनम्, <code>अभ्यासस्यासवर्णे</code> (6.4.78) इतीयङुवङौ। ननु च गुणे कृत एतावपि गुरुमन्तो भवत इति भवितव्यमेवामात्र? न भवितव्यम्; <code>सन्निपातलक्षणो विधिरनिमित्तं तद्विघातस्य</code> (व्या।प।१२) इति लिट्सन्निपातो गुरुमत्ताया हेतुः। गुरुमत्ता च <code>आमः</code> (2.4.81) इति लिटमेव विहन्ति। अथ वा&ndash; गुरुमत इति नित्ययोगे मतुप्, तेन नित्यं यस्य गुरुमा योगस्ततो भवितव्यम्, न चेषेरुषेश्च नित्यं गुरुणा सह योगः। यद्येवम्, <code>उछी विवासे</code> (धा।पा।२१६) &ndash; उच्छाञ्चकारेत्यत्र तुकि कृते न प्राप्नोति? नैष दोषः; ऋच्छिप्रतिषेधो हि ज्ञापयति&ndash; आगमनिमित्ता गुरुमत्ता यस्य ततोऽपि भवतीति।
 <code>आनच्र्छ</code> इति। <code>ऋच्छ गतीन्द्रियप्रलयमूर्तिभावेषु</code> (धा।पा।१२९६), <code>छे च</code> (6.1.71) इति तुक्, <code>ऋच्छत्यृ()ताम्</code> (7.4.11) इतिगुणः, द्विर्वचनम्, हलादिशेषः, <code>अत आदेः</code> (7.4.70) इति दीर्घः, <code>तस्मान्नुड् द्विहलः</code> (7.4.71) इति नुट्। ननु च <code>ऋच्छत्यृ()ताम्</code>(7.4.11) इति ऋच्छतेरनन्तरे लिटि गुणवचनं ज्ञापकम्&ndash; ऋच्छेराम् न भवति। सति हि तस्मिन्नागमनिमित्ता गुरुमत्ता यस्य ततोऽपि भवतीत्येतज्ज्ञापितं न स्यात्। तस्मादनृच्छ इति प्रतिषेधः कत्र्तव्यः।
@@ -134,9 +146,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

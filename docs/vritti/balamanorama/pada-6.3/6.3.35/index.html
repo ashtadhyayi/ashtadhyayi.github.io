@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.3\/6.3.35.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.35";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.36\",\"Previous\":\"6.3.34\",\"अकारादिक्रमसङ्ख्या\":1679,\"कौमुदीक्रमसङ्ख्या\":836,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तसिलादिषु आकृत्वसुचः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.3/6.3.35.md">Edit 6.3.35!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.35";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.36\",\"Previous\":\"6.3.34\",\"अकारादिक्रमसङ्ख्या\":1679,\"कौमुदीक्रमसङ्ख्या\":836,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तसिलादिषु आकृत्वसुचः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.35 तसिलादिष्वाकृत्वसुचः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तसिलादिष्वाकृत्वसुचः। <code>स्त्रियाः पुंव</code>दित्यनुवर्तते। <code>आ कृत्वसुच</code> इत्याङ् अभिविध्यर्थकः, तमभिव्याप्येत्यर्थः। तदाह&ndash;तसिलादिषु कृत्वसुजन्तेष्विति। <code>पञ्चम्यास्तसि</code>लित्यारभ्य <code>सङ्ख्यायाः क्रियाभ्यावृत्तिगणने कृत्वसु</code>जित्येतत्पर्यन्तसूत्रविहितेष्वित्यर्थः। उत्तरपदपरकत्वाऽभावात्स्त्रियाः पुंवदित्यप्राप्तौ वचनमिदम्। ननु तिल्थ्यन्शसां कृत्वसुचः परत्रैव पाठात्तसिलादिष्वनन्तर्भावात्तेषु परेषु <code>वकृतिः</code> <code>अजथ्या</code> <code>बहुशः</code> इत्यत्र पुंवत्त्वं न स्यादित्याव्याप्तिः। <code>ईषदसमाप्तौ कल्पब्देश्यदेशीयरः</code> इति देश्यस्य, <code>षष्ठ�आ रूप्य चे</code>ति रूप्यस्य च तसिलादिष्वन्तर्भावात्तयोः परतः <code>पट्वीदेश्ये</code>त्यत्र च <code>शुभ्रारूप्ये</code>त्यत्र च पुवत्त्वं स्यादित्यतिव्याप्तिरित्यत आह&ndash;परिगणनमिति। अव्याप्त्यतिव्याप्तीति। इष्टस्थले अप्रवृत्तिः&ndash;अव्याप्तिः। अनिष्टस्थले प्रवृत्तिः&ndash;अतिव्याप्तिः। परिगणनप्रकारमाह&ndash;त्रतसावित्यादिना। बह्वीषु बहुत्रेति। बह्णीष्वित्यर्थे बह्णीशब्दात् <code>सप्तम्यास्त्र</code> लिति त्रलि पुंवत्त्वे ङीषो निवृत्तौ बहुत्रेति रूपमित्यर्थः। बहुत इति। <code>पञ्चम्यास्तसि</code>लिति बह्णीशब्दात्तसिल्, पुवत्त्वान्ङीष#ओ निवृत्तिरिति भावः। दर्शनीयतरेति। अनयोरियमतिशयेन दर्शनीयेत्यर्थे दर्शनीययाशब्दात् <code>द्विवचनविभज्योपपदे तर</code>विति तरप्। पुंवत्त्वे टापो निवृत्तिरिति भावः। दर्शनीयतमिति। आसामियमतिशयेन दर्शनीयेत्यर्थे दर्शनीयाशब्दात् <code>अतिळायने तमविष्ठनौ</code> इति तमप्। पुंवत्त्वे टापो निवृत्तिरिति भावः। ननु पट्वीशब्दात्तरपि तमपि च पट्वीतरा पट्वीतमेत्यत्रापि पुंवत्त्वे ङीषो निवृत्तौ पटुतरा पटुतमेति स्यादित्यत आह&ndash;घरूपेति। तथा च ह्रस्वेन पुंवत्त्वे बाधिते सति ङीषो निवृत्त्यभावे तस्य ह्रस्वे सति पट्वितरा पट्वितमेति रूपमित्यर्थः। पटुचरीति। पट्वीशब्दात् <code>भूतपूर्वे चर</code>डिति पुंवत्त्वे ङीषो निवृत्तिरिति भावः। पूर्वं पट्वीत्यर्थः। पटुजातीयेति। पट्वीशब्दात् <code>प्रकारवचने जातीय</code>रिति पुंवत्त्वे ङीषो निवृत्तिरिति भावः। पटुसदृशीत्यर्थः। दर्शनीयकल्पेति। <code>ईषदसमाप्तौ</code> इति दर्शनीयाशब्दात्कल्पप्। पुंवत्त्वे ङीषो निवृत्तिरिति भावः। प्रायेण दर्शनीयेत्यर्थः। दर्शनीयदेशीयेति। <code>ईषदसमाप्तौ</code> इति दर्शनीयशब्दाद्देशीयर्। पुंवत्त्वे टापो निवृत्तिरिति भावः। प्रशस्तत्वेन द्रष्टुं योरयेत्यर्थः। दर्शनीयपासेति। दर्शनीयाशपब्दाद्याप्ये पाशप्। पुंवत्त्वे टापो निवृत्तिरिति भावः। कुत्सितत्वेन द्रष्टुमयोग्येत्यर्थः। बहुथेति। बह्वीशब्दात्प्रकारवचने थाल्। पुंवत्त्वे ङीषो निवृत्तिरिति भावः। बहुप्रकारेत्यर्थः। वृकतिरिति। <code>प्रशंसाया</code>मित्यनुवृत्तौ <code>बृकज्येष्ठाभ्यां तिल्तातिलौ च छन्दसी</code>ति वृकीशब्दाज्जातिलक्षणङीषन्तात्तिल्। पुंवत्त्वे ङीषो निवृत्तिरिति भावः। अजथ्येति। <code>तस्मै हित</code>मित्यधिकारे <code>अजाविभ्यां थ्य</code>न्नित्यजाशब्दात्थ्यन्। पुंवत्त्वे टापो निवृत्तिरिति भावः। <code>वृकतिरजथ्या</code> इत्यत्र <code>जातेश्चे</code>ति पुंवत्त्वनिषेधो न, परिगणनसामर्थ्यात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

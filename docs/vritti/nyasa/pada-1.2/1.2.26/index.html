@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-1.2\/1.2.26.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.2.26";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.2.27\",\"Previous\":\"1.2.25\",\"अकारादिक्रमसङ्ख्या\":2911,\"कौमुदीक्रमसङ्ख्या\":2617,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"अक्तित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रलो व्युपधाद्धलादेः संश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-1.2/1.2.26.md">Edit 1.2.26!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.2.26";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.2.27\",\"Previous\":\"1.2.25\",\"अकारादिक्रमसङ्ख्या\":2911,\"कौमुदीक्रमसङ्ख्या\":2617,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अतिदेशः\",\"विषयः २\":\"अक्तित्त्वातिदेशः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रलो व्युपधाद्धलादेः संश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.2.26 रलो व्युपधाद्धलादेः संश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>क्त्वाप्रत्ययश्च <code>न क्त्वा सेट्</code> (1.2.18) इति कित्त्वे प्रतिषिद्धे सनोऽप्यकित्वे स्वभावत एव व्यवस्थित उभयत्रेदं विधिमुखेनैव प्रवत्र्तत इतिपक्षे कित्त्वं भवतीति।
 <code>{दिद्युतिषते</code> &ndash; काशिका,पदमंजरी च} विदद्युतिषते<code>इति।</code>द्युतिस्वाप्योः संप्रासरणम्<code>(7.4.67) इत्यभ्यासस्य संप्रासरणम्।</code>एषिषिषति<code>इति।</code>इषु इच्छायाम्<code>(धा।पा।१३५१), इडागमे कृते</code>अजादेर्द्वितीयस्य<code>(6.1.2) इति द्वितीयस्यैकाचो द्विर्वनचम्।</code>बुभुक्षते<code>इति।</code>हलन्ताच्च<code>(2.1.10) इति नित्यं कित्त्वं भवति। लाघवार्थम्</code>इणुपधात्<code>इति वाच्ये, इण्ग्रहणानि सर्वाणि परेम णकारेणेति ज्ञापनार्थं</code>व्युपधात्<code>इत्युक्तम्। तेन</code>लण्<code>इत्यत्र यदुक्तम्--</code>इण्ग्रहणानि सर्वाणि परेण णकारेण` इति तदुपपन्नं भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

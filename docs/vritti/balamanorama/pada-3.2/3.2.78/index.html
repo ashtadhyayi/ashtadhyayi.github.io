@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.2\/3.2.78.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.78";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.79\",\"Previous\":\"3.2.77\",\"अकारादिक्रमसङ्ख्या\":3765,\"कौमुदीक्रमसङ्ख्या\":2988,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"णिनिः\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"सुप्यजातौ णिनिस्ताच्छिल्ये\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.2/3.2.78.md">Edit 3.2.78!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.78";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.79\",\"Previous\":\"3.2.77\",\"अकारादिक्रमसङ्ख्या\":3765,\"कौमुदीक्रमसङ्ख्या\":2988,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"णिनिः\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"सुप्यजातौ णिनिस्ताच्छिल्ये\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.78 सुप्यजातौ णिनिस्ताच्छील्ये
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सुप्यजातौ। <code>सुपि स्थः</code> इत्यतः सुपीत्यनुवृत्तौ पुनः सुब्ग्रहणमुपसर्गेऽपि विधानार्थमम्?। अन्यथा <code>आतोऽनुपसर्गे</code> इत्यतोऽनुपसर्गे इत्यनुवर्तेत। तद्ध्वनयन्नुदाहरति&ndash; उष्णभोजीति। उष्णभोजनशील इत्यर्थः। उपसर्गभिन्न एवेति। अनुपसर्ग इत्यनुवर्तते। सुब्ग्रहणं तु <code>सत्सूद्विषे</code>ति सूत्रादुपसर्गेऽपीत्यनुवृत्तिनिवृत्तये इति भावः। उपसर्गभिन्न एवेति। अनुपसर्ग इत्यनुवर्तते। सुब्ग्रहणं तु <code>सत्सूद्विषे</code>ति सूत्रादुपसर्गेऽपीत्यनुवृत्तये इति भावः। उत्प्रतिभ्यामिति। उत्प्रतिभ्यां परे आङि प्रयुज्यमाने सति तत्पूर्वात्सर्तेर्णिनेरुपसङ्ख्यानमिति तदर्थः। उदासारिणी प्रत्यासारिणीत्युदाहरणम्। भाष्यविरोधादिति। सुब्ग्रहणमुपसर्गग्रहणाऽनुवृत्तिनिवृत्त्यर्थम्, उपसर्गे अनुपसर्गे च सुबन्ते उपपदे धातोर्णिनिरित्येव भाष्ये उदाह्मतत्वादिति भावः। तथा च <code>उत्प्रतिभ्यामाङि सर्त्ते</code>रिति वचं नादर्तव्यम्। भाष्ये तत्पाठस्तु प्रक्षिप्त एवेति भावः। अत एव <code>अनुगादिनष्ठ</code> गिति सूत्रप्रयोगश्च सङ्गच्छते इति ज्ञेयम्। <code>उपसर्गभिन्न एव सुपि णिनि</code>रिति मतं शिष्टप्रयोगविरुद्धं चेत्याहु&mdash;- प्रसिद्धश्चोपसर्गेऽपि णिनिरिति। <code>इत्यादा</code>वित्यत्रान्वयः। साधुकारिणीति। कृञ्ग्रहणं सर्वधातूपलक्षणम्। साधुकारीत्यात्युदाहरणात्। ब्राहृणि वद इति। <code>णिनेरुपसङ्ख्यान</code>मिति शेषः। <code>णिनेरुपसङ्ख्यान</code>मिति शेषः। ननु <code>सुप्यजातौ</code> इत्येव सिद्धे किमर्थमिदं वार्तिकमित्यत आह&ndash; अताच्छील्यार्थमिति। साधुदायीति। आतो युक्। ब्राहृवादीति। ब्राहृ - वेदः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

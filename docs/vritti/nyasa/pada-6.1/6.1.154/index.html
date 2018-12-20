@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.154.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.154";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.155\",\"Previous\":\"6.1.153\",\"अकारादिक्रमसङ्ख्या\":2754,\"कौमुदीक्रमसङ्ख्या\":1068,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सुट्\",\"विषयः २\":\"\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"मस्करमस्करिणौ वेणुपरिव्राजकयोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.154.md">Edit 6.1.154!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.154";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.155\",\"Previous\":\"6.1.153\",\"अकारादिक्रमसङ्ख्या\":2754,\"कौमुदीक्रमसङ्ख्या\":1068,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सुट्\",\"विषयः २\":\"\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"मस्करमस्करिणौ वेणुपरिव्राजकयोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.154 उञ्छादीनां च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>उञ्छः, म्लेच्छः, जञ्जः, जल्पः</code> इति। <code>उछि उञ्छे (धा।पा।२९५)</code>म्लेच्छ अव्यक्तायां वाचि<code>(धा।पा।१६६२),</code>जज जजि युद्धे<code>(धा।पा।२४२,२४३),</code>जप जल्प व्यक्तायां वाचि<code>(धा।पा।३९७,३९८)। जञ्जेः कुत्वाभावो निपातनात्()।</code>जपो व्यध इत्यवन्तौ<code>इति। तत्र</code>व्यघजपोरनुपसर्गे<code>(3.3.61) इत्यबन्तत्वम्()। बधशब्दो हि</code>हनश्च वधः<code>(3.3.76) इति।</code>तयोर्धातुसवरः प्राप्तः<code>इति।</code>धातोः<code>(6.1.156) इत्युदात्तत्वम्()।</code>व्यधः<code>इति।</code>व्यध ताडने<code>(धा।पा।११८१)। अत्रापि व्यधजपोरित्यबन्तत्वम्(), पूर्ववद्धातुस्वरः प्राप्तः।</code>कालविशेषे<code>इति। कृतद्वापरादौ।</code>रथाद्युपकरणे च<code>इति। आदिशब्देन हलादेग्र्रहणम्()।</code>गरः<code>इति।</code>गृ निगरणे<code>(धा।पा।१४१०)।</code>ऋदोरप्()<code>(3.3.57) इत्यबन्तः।</code>विषम्()<code>इत्यनेन दूष्यशब्दस्य विशेषे वृतिं()त दर्शयति।</code>अन्यत्राद्युदात्त एव<code>इति। धातुस्वरेण।</code>वेदवेगवेष्टबन्धाः<code>इति।</code>विद ज्ञाने (धा।पा।१०६४) <code>विचिर्? पृथगभावे</code> (धा।पा।१४४२) <code>वेष्ट वेष्टने</code> (धायपा।२५५) <code>बन्ध बन्धने</code> (धा।पा।१५०८)। एभ्यो यथायोगं पर्याद्युपसर्गपूर्वेभ्यः क्विप्(), प्रादसमासः। <code>अन्यत्र मध्योदात्तः</code> इति।
 वत्र्तनिशब्दो हि <code>अर्त्तिसृ()घृ()</code> (द।उ।१।२) इत्यतोऽनिप्रत्ययेऽनुवत्र्तमाने <code>वृतेश्च</code> (द।३।१।६) इत्यनेन <code>वृतु वत्र्तने (धा।पा।७५८) इत्येतस्मादनिप्रत्ययमुत्पाद्य व्युत्पाद्यते। तस्मात्? प्रत्ययस्वरेण मध्योदात्तो भवति।</code>दरः<code>इति।</code>दृ विदारणे<code>(धा।पा।१४९३) ऋकारान्तत्वादबन्तः। 
 </code>साम्बतापौ भावग्रर्हायाम्()<code>इति। सहाम्बया वर्तत इति साम्बः,</code>बहुव्रीहौ प्रकृत्या पूर्वपदम्()<code>(6.2.1) इति प्रकृतिस्वरेण सहशब्दस्य</code>निपाता आद्युदात्ताः<code>(फि।सू।४।८०) इत्युदात्तत्वे प्राप्ते भावगर्हायामन्तोदात्तत्वं विधीयते। साम्बो भिक्षते। भिक्षणमत्र भावग्रर्हा। तपनं तापः</code>तप सन्तापे<code>(धा।पा।९८५) इत्यस्माद्घञ्()। आद्युदात्तत्वे प्राप्ते वचनम्()। तापो दस्यूनां धार्मिकेषु भावगर्हायामिति किम्()? साम्बस्तिष्टति, तापो महान्? ग्रीष्मस्य। अनयोराद्युदात्तत्वमेव। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

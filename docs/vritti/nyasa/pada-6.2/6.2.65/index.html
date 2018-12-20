@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.65.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.65";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.66\",\"Previous\":\"6.2.64\",\"अकारादिक्रमसङ्ख्या\":3610,\"कौमुदीक्रमसङ्ख्या\":3799,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उदात्तः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तमीहारिणौ धर्म्येऽहरणे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.65.md">Edit 6.2.65!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.65";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.66\",\"Previous\":\"6.2.64\",\"अकारादिक्रमसङ्ख्या\":3610,\"कौमुदीक्रमसङ्ख्या\":3799,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"उदात्तः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तमीहारिणौ धर्म्येऽहरणे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.65 सप्तमीहारिणौ धम्र्येऽहरणे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>हारीत्यावश्यके णिनिः। सप्तमीत्यनेन साहचर्याधारीति स्वरूपग्रहणं न भवति। अत एवाह&ndash;<code>हारिवाचि पर्वपदम्()</code> इति। <code>धम्र्ये</code> इत्यत्रापि स्वरूपग्रहणं न भवति; अहरण इति प्रतिषेधात्()। अत एवाह&ndash;<code>धम्र्यवाचिनि</code> इति। <code>आचारनियतम्()</code> इति। आचारे नियतमिति; ततोऽन्यत्राभावत्()। आचारे नियतम्(), आचारेण वा नियतमाचारनियतम्()। यदाचारवशादवश्यकत्र्तव्यं तदाचारनियतं भवति। कथं पुनराचारनियतं धर्मयमुच्यते? इत्याह&ndash;<code>धर्मो ह्रनुवृत्तः</code> इत्यादि। अनुवृत्त इति व्यवस्थित इत्यर्थः। <code>तस्मात्()</code> इति। धर्मादनपेतमिति। अनुगतमित्यर्थः। <code>तेन</code> इति। धर्मेण। <code>प्राप्तम्()</code> इति। लभ्यमित्यर्थः। उभयथाप्यर्थे <code>नौवयोधर्म</code> (4.4.91) इत्यादिना यत्()। इतिकरणो हिशब्दश्च हेतौ। यस्मादाचारविशेषो धर्म उच्यते, यच्च तस्माद्धर्मादनपेतम्()। यद्वा तेन प्राप्यं तद्धम्र्यम्()। तेनाचारनियतं धम्र्यमित्युच्यते। <code>संज्ञायाम्()</code> (2.1.43) इति सप्तमीसगासः<code>इति। यद्येवम्(), विभक्तेर्लुक्? प्राप्नोति? इत्यत आह--</code>कारनाम्नि च<code>इत्यादि।</code>याज्ञिका()आः<code>इत्यादौ तु षष्ठीसमासः। 
 </code>क्वचित्<code>इत्यादिना स्तूपेशाण इत्याद्युदाहरणेषु शाणादेर्यस्याचारनियततां दर्शयत्? उत्तरपदस्य धम्र्यवाचित्वं दर्शयति--</code>याज्ञिकादीनाम()आआदि<code>इति। क्वचिदयमाचारे व्यवस्थित इत्यनेन दातव्यमित्यनेन च सम्बन्धः। याज्ञिकादयो हि हारिणः, ते देयम()आआदिकं स्वीकुर्वन्ति। 
 </code>स्तम्बेरमः<code>इति। म्तम्बकर्णयो रमिजपोः</code> (3.2.13) इत्यच्(), उपपदसमासः, <code>तत्पुरुषे कृति बहुलम्()</code> (6.3.13) इति विभक्तेरलुग्भवति। अत्र स्तम्बेरम इत्यत्र स्तम्ब इत्येत्? सप्तम्यन्तम्(), न तु रमशब्दो धम्र्यवाची। <code>कर्मकरवर्द्धितकः</code> इति। अत्र कर्मकरो हारी भवति, स हि वर्द्धितकं स्वीकरोति। न तु वर्द्धितकशब्दो धम्र्यवाची। न हि क्वचिदयमाचारो व्यवस्थितः कर्मकराय वर्द्धितको दातव्य इति। <code>वडवाया अयं वाडवः</code> इति। <code>तस्येदम्()</code> (4.3.120) इत्यण्()। <code>बीजनिषेकात्()</code> इति। गर्भाधानम्()=बीजनिषेकः। अत्र वाडवोऽ()आओ हारी स हि हरणं देयं स्वीकरोति। हरणम्()=देयं धम्र्यम्()। क्वचिदयमाचारो व्यवस्थितः&ndash;येना()ओन वडवायां गर्भ आधीयते तस्य बीजनिषेकादुत्तरकलं शरीरपुष्ट()र्थं योग्याशनादिकं दातव्यमिति। तेन हरणशब्दो धम्र्यवाची भवति। तथाप्यहरण इति प्रतिषेधान्न भवति। ततश्च कृत्स्वरे प्राप्ते <code>अनो भावकर्मवचनः</code> (6.2.149) इत्युत्तरपदं ल्युडन्तमन्तोदात्तं भवति। ननु च परत्वादेवायं स्वरो भविष्यति, तत्? किमहरण इति प्रतिषेधेन? इत्यत आह&ndash;<code>परोऽपि</code> इत्यादि। तेनेत्यादिना ज्ञापनस्य प्रयोजनं दर्शयति। <code>वाडवहार्यम्()</code> इति। <code>ऋहलोण्र्यत्()</code> (3.1.124) इति हरतेण्र्यत्()&ndash;हार्यम्(), तत्? पुनस्तदेव ग्रहणम्()। वाडवस्य हार्यं वाडवहार्यम्()। तत्र यदि ज्ञापनार्थमनन्तरोक्तस्यार्थस्य हरणप्रतिषेधो न क्रियेत, तदा परत्वात्? <code>गतिकारकोपपदात्? कृत्? (6.2.138) इति कृत्स्वरेणोत्तरपदस्यान्तस्वरितत्वं स्यात्()। अ()स्मस्तु सत्ययमेव हारिस्वरो भवति। स्तूपेशाण इत्यादौ यत्र सम्पम्यन्तं पूर्वपदं तत्र</code>समासस्य<code>(6.1.217) इत्यस्यापवादे</code>तत्पुरुषे तुल्यार्थ<code>(6.2.2) इत्यादिना पूर्वपदप्रकृतित्वरे प्राप्ते पूर्ववदाद्युदात्तमिदमुच्यते। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

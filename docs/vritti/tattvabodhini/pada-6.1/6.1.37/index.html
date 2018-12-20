@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-6.1\/6.1.37.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.37";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.38\",\"Previous\":\"6.1.36\",\"अकारादिक्रमसङ्ख्या\":2077,\"कौमुदीक्रमसङ्ख्या\":363,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रसारणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न सम्प्रसारणे सम्प्रसारणम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-6.1/6.1.37.md">Edit 6.1.37!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.37";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.38\",\"Previous\":\"6.1.36\",\"अकारादिक्रमसङ्ख्या\":2077,\"कौमुदीक्रमसङ्ख्या\":363,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रसारणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न सम्प्रसारणे सम्प्रसारणम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.37 न संप्रसारेण संप्रसारणम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>न संप्रसारणे। <code>ह्वः</code> संप्रसारण<code>मित्यतः</code>संप्रसारणमित्यनुवर्तमानेऽपि पुनः सम्प्रसारणग्रहणात्प्रदेशान्तरस्थं <code>�आयुवमघोना</code>मित्यपि संप्रसारणं निषिध्यते, तदाह&ndash;इति यकारस्य नेत्वमिति। यून इति। ननू कारेण व्यवधानात्कथमत्र निपेधः?, <code>विव्याध</code><code>विव्यथे</code>इत्यादावव्यवधानेऽपि निषेधस्य चरितार्थत्वात्। न च सम्प्रसारणग्रहणादेव व्यवधानमिति वाच्यम्, <code>अचः परस्मि</code>न्निति स्थानिवत्त्वात्। अत्राहुः&ndash;विदेशस्थानिषेधार्थत्पुनः सम्प्रसारणग्रहणादेव व्यवधानेऽप्यत्र निषेधोभविष्यतीत्यदोषः। न च<code>व्यथो लिटी</code>ति विदेशस्थेन यकारस्य संप्रसारणे कृते वकारस्य तदभावाय <code>न सम्प्रसारणे</code>इति सूत्रं प्रवर्त्त्य पुनः संप्रसारणग्रहणं चरितार्थमिति व्यवधेने निषेधो न भविष्यतीति शङ्क्यं, <code>व्यथो लिटी</code>त्येतद्धलादिः शेषापवाद<code>इत्याकरे स्पष्टत्वात्।</code>उत्सर्गसदेशश्चापवाद<code>इति परस्यैव संप्रसारणं भवति न पूर्वस्ये</code>ति कैयटेन व्याख्यातत्वाच्चेचि।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

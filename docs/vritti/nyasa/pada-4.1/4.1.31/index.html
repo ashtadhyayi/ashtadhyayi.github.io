@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.31.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.31";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.32\",\"Previous\":\"4.1.30\",\"अकारादिक्रमसङ्ख्या\":2929,\"कौमुदीक्रमसङ्ख्या\":3445,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रात्रेश्चाजसौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.31.md">Edit 4.1.31!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.31";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.32\",\"Previous\":\"4.1.30\",\"अकारादिक्रमसङ्ख्या\":2929,\"कौमुदीक्रमसङ्ख्या\":3445,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रात्रेश्चाजसौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.31 रात्रेश्चाजसौ।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अजसौ</code> इति। विषयसप्तमीयम्, न परसप्तमी, कुतः? स्त्रीप्रत्ययस्यान्तरङ्गत्वाज्जसः परत्वाविरोधाद्विषयसप्तमीत्वे न दोष इत्याह&ndash; <code>जस्विषयत्वात्</code> इत्यादि।
 <code>अजसादिष्विति वक्तव्यम्िति।जासादिविषयादन्यत्र रात्रिशब्दान्ङीब्भवतीत्येदर्थरूपं व्याख्येयमित्यर्थः। तत्रेदं व्याख्यानम्-- इह लाघवार्थं</code>अजसि<code>इति वक्तव्येऽजसावित्युक्तम्, मात्राधिक्यादर्थाधिक्यसूचनार्थम्, तेनाजसादिषु ङीब्भवतीति। आदिशब्देनामादीनां ग्रहणम्।
 </code>कथम्<code>इत्यादि।</code>रात्र्यः<code>इति। रात्रिशब्दस्य जसन्तस्य प्रयोगः। एवं हि</code>दीर्घाज्जसि च<code>(6.1.101) इति सवर्णदीर्घत्वे प्रतिषिद्धे यणादेश उपपद्यते, नान्यथा। यदि तु रात्रिशब्दस्यायं प्रयोगः स्यात्, ततः</code>जसि च<code>(7.3.109) इति गुणे कृतेऽयादेशे च रात्रय इति रूपं स्यात्। ईकारान्तश्च रात्रिशब्दो न सम्भवति;अजसाविति ङीप्प्रतिषेधात्। ततश्च रात्र्य इति प्रयोगो नोपपद्यत इत्यभिप्रायः।</code>ङीषयम्ित्यादि। ननुच रात्रिशब्दो बह्वादिषु पठ()ते, तत्कथं बह्वादिलक्षणस्ततो ङीष्भविष्यति? इत्यत आह&ndash;<code>तत्र हि</code> इत्यादि। <code>कृदिकारादक्तिनः</code>इति। कृत इकारः कृदिकारः,तदन्तान्ङीष् भवति।<code>वृदृभ्यां विन्</code> (द।उ। १।२३) वर्वी, दर्वी। यस्तु क्तिन्सम्बन्धी तदन्तान्न भवति&ndash; <code>स्त्रियां क्तिन्</code> (3.3.94) कृतिः, ह्मतिः। <code>सर्वतोऽक्तिन्नर्थादित्येके</code> इति। एक आचार्या सर्वतोऽक्तिन्नर्थात् कृदिकारादकृदिकाराच्च ङीष् भवतीत्याहुः, राजिः राजी। राजिशब्दोऽव्ययुत्पत्तिपक्षे कृतिकारान्तो न भवति। अक्तिन्नर्थादिति, न विद्यते क्तिन्नर्थो यस्य सोऽक्तिन्नर्थः, तस्मात् सर्वतो ङीष् भवति। यस्तु क्तिन्नर्थस्तदन्तान्न भवति&ndash; कृतिः ह्मतिः। <code>आक्रोशे नञ्यनिः</code> (3.3.112) &ndash; अकरणिः, अहरणिः। रात्रिशब्दश्चायं व्युत्पत्तिपक्षे कृदिकारान्तो भवति, <code>रा आदाने</code> (धा।पा।१०५७), <code>राशदिभ्यां त्रिप्</code> (द।उ।१।३६) रात्रिः, तस्मात् पक्षे ङीष् रात्री। अव्युत्पत्तपक्षे तु कृदिकारान्तो न भवति, ततः <code>सर्वतोऽक्तिन्नर्थात्</code> (ग।सू।५१) इति ङीष्॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

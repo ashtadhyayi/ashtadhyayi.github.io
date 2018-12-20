@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.35.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.35";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.36\",\"Previous\":\"4.1.34\",\"अकारादिक्रमसङ्ख्या\":2181,\"कौमुदीक्रमसङ्ख्या\":492,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नित्यं सपत्न्य्आदिषु\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.35.md">Edit 4.1.35!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.35";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.36\",\"Previous\":\"4.1.34\",\"अकारादिक्रमसङ्ख्या\":2181,\"कौमुदीक्रमसङ्ख्या\":492,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नित्यं सपत्न्य्आदिषु\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.35 नित्यं सपत्न्यादिषु।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>सपत्न्यादिषु</code> इति। के पुनः सप्त्नत्यादयः? ये पठ()न्ते। तेषु प्रातिपदिकेषु येषां समानादीनि पूर्वपदानि ते सपत्न्यादयः। कुत एतत्? समानादीनां गणे पाठात्, सपत्न्यादीनां चापाठात्। लाघवार्थं समानार्थं समानादिष्विति प्रवक्तव्ये कृते नकारदेशस्य सप्रत्ययस्य च सपत्न्यादिष्विति समुदायस्योच्चारणम्&ndash; नियोगत एव समुदाय ईकारन्त एव यथा स्यादित्येवमर्थम्। तेन सपत्नी भार्या यस्य स सपत्नीभार्य इति <code>स्त्रियां पुंवत्</code> (6.3.33) इति पुंवद्भावो न भवति। <code>सपत्न्यादिषु नित्यम्</code> इत्यादि। समानादिषु पूर्वेष्वयवयवेषु सत्सु नित्यं पतिशब्दस्य नकारादेशो भयतीत्यर्थः। यदि पूर्वेण विकल्पे प्राप्त इदं वचनम्, एवं हि नित्यग्राहणयनर्थकम्, आरम्भसामथ्र्यादेव हि नित्यं विधिर्भविष्यतीत्यत आह&ndash; <code>नित्यग्रहणं विस्पष्टार्थम्</code> इति।
 <code>दासाच्छन्दसि</code> इति। दासशब्दात् परो यः पतिशब्दस्तदन्तस्य प्रातिपदिकस्य चछन्दसि विषये नित्यं नकारादेशो भवति। दासः पतिर्यस्याः सा दासपत्नी। भाषायां तु पूर्()वेण विकल्पः&ndash; दासपतिः, दासपत्नीति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

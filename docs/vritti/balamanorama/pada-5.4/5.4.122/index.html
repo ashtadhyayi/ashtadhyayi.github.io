@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-5.4\/5.4.122.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.122";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.123\",\"Previous\":\"5.4.121\",\"अकारादिक्रमसङ्ख्या\":2185,\"कौमुदीक्रमसङ्ख्या\":862,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"नित्यमसिच् प्रजामेधयोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-5.4/5.4.122.md">Edit 5.4.122!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.122";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.123\",\"Previous\":\"5.4.121\",\"अकारादिक्रमसङ्ख्या\":2185,\"कौमुदीक्रमसङ्ख्या\":862,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"नित्यमसिच् प्रजामेधयोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.122 नित्यमसिच् प्रजामेधयोः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>नित्यमसिच्। नञ्दुःसुभ्य इत्येवेति। पूर्वसूत्रादनुवर्तत इति भावः। एतेभ्यः पराभ्यां प्रजामेधाशब्दाभ्यां नित्यमसिच्समासान्त स्यात्, स तद्धित इत्यर्थः। असिचस्चकार इत्। इकार उच्चारणार्थः। <code>अन्यतरस्या</code>मित्यनुवृत्तिनिवृत्त्यर्थं नित्यग्रहणम्। अस्वरितत्वादेव तदनुवृत्त्यभावे सिद्धे स्पष्टार्थमिति तत्त्वम्। अप्रजा इति। अविद्यमाना प्रजा यस्येति विग्रहः। <code>नञोऽस्त्यर्थाना</code>मिति समासः। असिचि <code>यस्येति चे</code>त्यकारलोपादप्रजस्शब्दात्सुबुत्पत्तिः। सौ तु <code>अत्वसन्तस्ये</code>ति दीर्घः। <code>हळ्ङ्या</code>बिति सुलोपः। यद्यप्यकारं विना सिचि विहितेऽपि सिद्धमिदन्तथापि सिच्यभत्वेन आकारलोपाऽभावादप्रजास्शब्दात्सुबुत्पत्तौ, प्रथमैकवचने <code>अप्रजा</code> इति रूपसिद्धावपि अप्रजासाविति न स्यात्। किंतु अप्रजासावित्यादि स्यात्। तस्मादकारोच्चारमं भत्वसंपादनार्थमावश्यकम्। दुष्प्रजा इति। दुर्गता प्रजा यस्येति विग्रहः। <code>प्रादिभ्यो धातुजस्ये</code>ति समासः। असिजादि पूर्ववत्। अमेधा इत्यादि।अविद्यमानां मेधा यस्येति विग्रहः। असिजादि पूर्ववत्। केचित्तु नित्यग्रहणमन्यतो विदानार्थं तेनाल्पमेधस इत्यादि सिध्यतीत्यप्याहुः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

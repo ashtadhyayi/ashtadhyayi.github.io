@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.1\/3.1.2.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.1.2";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.1.3\",\"Previous\":\"3.1.1\",\"अकारादिक्रमसङ्ख्या\":2298,\"कौमुदीक्रमसङ्ख्या\":181,\"प्रकारः\":\"अधिकारः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":140,\"विषयः १\":\"प्रत्ययस्य परत्वाधिकारः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"परश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.1/3.1.2.md">Edit 3.1.2!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.1.2";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.1.3\",\"Previous\":\"3.1.1\",\"अकारादिक्रमसङ्ख्या\":2298,\"कौमुदीक्रमसङ्ख्या\":181,\"प्रकारः\":\"अधिकारः\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":140,\"विषयः १\":\"प्रत्ययस्य परत्वाधिकारः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"परश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.1.2 परश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अयमप्यधिकारः</code> इति। न केवलं प्रत्यय इत्यपिशब्दार्थः। <code>योगे योगे उपतिष्ठते</code> इति। परिभाषाया अधिकारस्य भेदं दर्शयति। परिभाषा ह्रेकदेशस्थैव सर्वत्र शास्त्रे व्याप्रियते, न तु प्रतियोगमुपतिष्ठते। <code>परिभाषा वा</code> इति। पक्षान्तरं दर्शयति। एकदेशस्यैव सर्वत्र शास्त्रे व्याप्रियत इत्येष परिभाषाधर्मो वृत्तौ न दर्शितः; अधिकारधर्मप्रदर्शनद्वारेणावगम्यमानत्वात्। यदि हि प्रयोगमुपतिष्ठमाना परिभाषा कार्यसिद्धौ व्याप्रियेत तदाऽधिकारपरिभाषयोर्भेदो न स्यात्, तथा च तयोरिह भेदेनोपन्यसो निष्फलः स्यात्। लिङ्गवती चेयं परिभाषा, लिङ्गञ्चास्याः प्रत्ययसंज्ञैव। धातोर्वेति क्रियावाचिन्या प्रकृतेरिदमुपलक्षणम्, तेन तिङन्तमपि गृह्रते। तदपि क्रियाप्रधानत्वात् क्रियावाचीति शक्यते व्यपदेष्टुम्। प्रधानेन हि व्यपदेशा भवन्ति, यथा&mdash; राजधानीति। <code>प्रातिपदिकाद्वा</code> इति। अक्रियाभिधायिन्याः प्रकृतेरिदमुपक्षणम्, तेन ङ्यापावपि गृह्रेते। <code>तैत्तिरीयम्</code> इति। प्रोक्तार्थे <code>तित्तिरवरतन्तुखण्डिकोखाच्छण्</code> (4.3.102) इति छण्। तदन्तात् <code>तदधीते तद्वेद</code> (2.4.59) इत्यण्। तस्य <code>प्रोक्ताल्लुक्</code> (4.2.63) इति लुक्। अथ चकारः किमर्थः; यावता नात्र किञ्चित् प्रकृतमस्ति यच्चकारेण समुच्चीयते? इत्याह&ndash; <code>चकारः पुनः</code> इत्यादि। अन्यस्य समुच्चेतव्यस्याभावादस्यैव समुच्चयार्थश्चकारो विज्ञायते, तेन बहुलाधिकारेऽपि ये प्रत्यया विधीयन्ते तेष्वप्यृणादिषु परत्वं न विकल्प्यते।
 किमर्थं पुनरिदमुच्यते? परो यथा स्यात्, पूर्वो मा भूदिति। नैतदस्ति प्रयोजनम्, तथा हि&ndash; यमिच्छति पूर्वं तमाह&mdash; <code>अव्ययसर्वनाम्नामकच् प्राक्टेः</code> (5.3.71) इति। य इदानीमतोऽन्यः प्रत्ययः सोऽन्तरेणापि वचनं पर एव भविष्यति? नैतदस्ति; येषामेव हि प्रत्ययानां देशो नियम्यते त एव नियतदेशाः स्युः। य इदानीमतोऽन्योऽनियतदेशः स कदाचित् परे, कदाचित् पूर्वे, कदाचिन्मध्ये स्यात्, तस्मात् परश्चेति वक्तव्यम्? न वक्तव्यम्; यस्मात् धातोः प्रतिपदिकादिति च दिग्योगलक्षमेयं पञ्चमी; अन्यस्यापादानादेः पञ्चमीनिमित्तस्याभावात्। तस्मादेषैव परदिक्शब्दाध्याहारं करिष्यति? नैतदस्ति; पूर्वदिक्शब्दाध्याहारः स्यात्, तथा च पूर्वेऽपि कदाचित् सन्नादयः स्युः। <code>तस्मादित्युत्तरस्य</code> (१।१।६७) इत्यनया परिभाषया तर्हि व्यवस्था भविष्यति? नैतदस्ति; यत्र पञ्चमीनिर्दिष्टात् परस्य षष्ठीनिर्देशस्य कार्यं विधीयते सोऽस्य विषयः, न च सन्नादयः षष्ठ()आ निर्दिश्यन्ते, तनापि तेषां सम्बन्धिकार्यं विधीयते, तेषामेव भाव्यमानत्वात्। ननु च प्रत्ययसंज्ञाकार्यं विधीयते? नैवम्, कथं पुनरसतां तेषां शक्यं संज्ञाकार्यं विधातुम्? किञ्च येषां प्रत्ययसंज्ञैव न विधीयते&ndash; <code>कणेष्ठः</code> (द।उ। ५।६) <code>शमेर्ढः</code> (५।११), इत्येवमादीनाम्, तत्र का गतिः स्यात्? न ह्रेषां प्रत्ययसंज्ञेष्यते, तथा हि&ndash; कण्ठः, शण्ढ इत्यत्र प्रत्ययस्योच्यमानमिकादेशादिकार्यं न भवति। यद्येवम्, प्रत्ययस्योच्यमानं परत्वमपि न स्यात्? परश्चेत्यधिकारसामथ्र्याद्भविष्यति। असति ह्रेतस्मिन् वचने सत्यपि तस्याः परिभाषाया उपस्थाने बहुलाधिकारे विधीयमानत्वादुणादिषु परत्वं विकल्प्येत। तस्मात् कत्र्तव्यमेतत्॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

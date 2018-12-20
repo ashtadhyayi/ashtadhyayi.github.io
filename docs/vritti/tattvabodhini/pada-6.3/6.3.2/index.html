@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-6.3\/6.3.2.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.2";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.3\",\"Previous\":\"6.3.1\",\"अकारादिक्रमसङ्ख्या\":2264,\"कौमुदीक्रमसङ्ख्या\":959,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ऽलुक्\",\"विषयः २\":\"अलुक्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पञ्चम्याः स्तोकादिभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-6.3/6.3.2.md">Edit 6.3.2!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.2";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.3\",\"Previous\":\"6.3.1\",\"अकारादिक्रमसङ्ख्या\":2264,\"कौमुदीक्रमसङ्ख्या\":959,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे ऽलुक्\",\"विषयः २\":\"अलुक्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पञ्चम्याः स्तोकादिभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.2 हलः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>हलः। र<code>संप्रसारणस्ये</code>त्यनुवर्तते। <code>अङ्गस्ये</code>त्यवयवषष्ठी। <code>हल</code> इति पञ्चमी। तदेतदाह&ndash;अङ्गावयवादिति। अङ्गावयवात्किम् ?। निरुतम्। दुरुतम्। तदन्ताङ्गस्य किम् ?। विध्यति। क्षीष् हिंसायाम्। षित्त्वादङ्। <code>क्षिया</code>। <code>हेति क्षियायाम्</code>। <code>क्षियाशी</code>रित्यादौ <code>क्षिया धर्मव्यतिक्रम आचारभेद</code> इति वक्ष्यति। दीर्घनिर्देशसामर्थ्यादिति। ननु दीर्घग्रहणेनाऽङ्गवृत्तपिरभाषा ज्ञाप्यत इत्याकरे स्थितम्। अन्यथा ज्ञाजनोर्जं विदध्यात्, <code>अतो दीर्घो यञी</code>ति दीर्घसिद्धेः। तथा च दीर्घनिर्देशसामर्थ्यस्योपक्षयात्कथमिह ह्रस्वाऽभावसिद्धिरिति चेत्। अत्राहुः&ndash; ह्रस्वाऽभावे सत्येव दीर्घनिर्देश उक्तपरभाषाया ज्ञापकः। सति तु ह्रस्वे पुनरङ्गकार्यं प्रवृत्तमेवेति न ज्ञापकः। तथा च ह्रस्वाऽभावसिद्धौ न किंचिद्बाधकमिति। किंच <code>अङ्गवृत्ते पुनरङ्गवृत्तावविधि</code>रित्येव परिभाषाशरीरम्। तञ्चोक्तज्ञापकात्सिद्धम्। यदि तु <code>भ्यसो भ्य</code>मिति सूत्रे भाष्ये परिनिष्ठितस्येत्येव पाठस्तर्हि स्वतन्त्रमेवेदं वचनं न तु ज्ञापकमिति पक्षोऽपि युष्मदस्मच्छब्दगतमनोरमाग्रन्तादवगम्यते। त�स्मस्तु पक्षे दीर्घग्रहणसामर्थ्यं नोपक्षीणमिति सम्यगेवायं ग्रन्थ इति। केच#इत्तु संज्ञापूर्वकविधेरनित्यत्वान्न ह्रस्व इति व्याख्येयमित्याहुः। बध्नातीति। <code>अनिदिता</code>मिति नलोपः। अभान्त्सीदिति। <code>वदव्रजे</code>ति वृद्धिः। भष्भावः। अबान्द्?धामिति। <code>झषस्तथो</code>रिति तस्य धत्वम्। <code>झरो झरी</code>ति वा लोपः। वृङ् संभक्तौ। भक्तिर्भजनम्। श्रन्थ। कित्त्वपक्षे इति। <code>श्रन्थिग्रन्थदम्भिस्वञ्जीनां लिटः कित्त्वं वे</code>ति व्याकरणान्तरमित्युक्तत्वात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

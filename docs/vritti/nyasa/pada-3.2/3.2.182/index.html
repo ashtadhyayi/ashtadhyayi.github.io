@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.2\/3.2.182.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.182";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.183\",\"Previous\":\"3.2.181\",\"अकारादिक्रमसङ्ख्या\":1850,\"कौमुदीक्रमसङ्ख्या\":3162,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"वर्तमाने\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"दाम्नीशसयुयुजस्तुतुदसिसिचमिहपतदशनहः करणे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.182.md">Edit 3.2.182!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.182";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.183\",\"Previous\":\"3.2.181\",\"अकारादिक्रमसङ्ख्या\":1850,\"कौमुदीक्रमसङ्ख्या\":3162,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"वर्तमाने\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"दाम्नीशसयुयुजस्तुतुदसिसिचमिहपतदशनहः करणे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.182 दाम्नीशसयुयुजस्तुतुदसिसिचमिहपतदशनहः करणे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>दाप् लवने</code> इति। यथा <code>दाधा घ्वदाप्</code>(1.1.19) इति सूत्रे <code>दैप् शोधने</code> (धापा।९२४) इत्यस्यापि ग्रहणम्। तर्हीहापि कस्मान्न भवति? अनभिधानात्। प्रकृत्यैव हि दात्रमिति ष्ट्रन्प्रत्ययान्तेन लवनस्य करणमुच्यते, न शोधनस्य। <code>करणे कारके</code> इति। एतेन करणप्रत्ययार्थतां दर्शयन्नुपपदत्वं निराकरोति। यद्युपपदत्वमस्यस्यात् तदाजादिषु दंष्ट्राशब्दस्य पाठो नोपपद्यते। <code>योक्त्रम्</code> इति। <code>चोः कुः</code>(8.2.30) इति कुत्वम्। <code>मेढ्रम्</code> इति। <code>हो ढः</code> (8.2.31) इति ढत्वम्, <code>झषस्तथोर्धोऽधः</code> (8.2.40) इति घत्वम्, <code>ष्टुना ष्टुः</code> (8.4.40) इति ष्टुत्वम्, <code>ढो ढे लोपः</code> (8.3.13) <code>दंष्ट्रा</code>इति। अजादित्वाट्टाप्।
 <code>दंशेः</code>इत्यादि। ननु च यथा <code>त्यजरज</code> (3.2.142) इति रञ्जेरनुनासिकनिर्देशे धिनुण्प्रत्यये रागीत्यनुनासिकलोपो भवति, तथा दंशेः ष्ट्रन्प्रत्यये न लोपो भविष्यति,तत्कथमस्य ज्ञापकतोपपद्यते? नैष दोषः; यद्ययं निर्देशो दंशेः ष्ट्रन्प्रत्ययेऽनुनासिकलोपार्थः स्यात्, तदा दंष्ट्राशब्दस्याजादिपाठो विरुध्यते। तस्माज्ज्ञापकार्थत्वम्। <code>नद्ध्री</code>इति। <code>नहो धः</code>(8.2.34) इति धत्वम्, <code>झषस्तथोर्धो।धः</code> (8.2.40) इति तकारस्य धत्वम्, धकारस्य <code>झलां जश् झशि</code> (8.4.52) इति जश्त्वम्, <code>षिद्()गौरादिभ्यश्च</code> (4.1.41) इति ङीष्। येऽत्र सेटो धातवः शस्प्रभृतयस्तेषां हि <code>तितुत्रतथ</code> (7.2.9) इत्यादिनेट्()प्रतिषेधः॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

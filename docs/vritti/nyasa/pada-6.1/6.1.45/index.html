@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.45.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.45";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.46\",\"Previous\":\"6.1.44\",\"अकारादिक्रमसङ्ख्या\":529,\"कौमुदीक्रमसङ्ख्या\":2370,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आदेच उपदेशेऽशिति\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.45.md">Edit 6.1.45!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.45";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.46\",\"Previous\":\"6.1.44\",\"अकारादिक्रमसङ्ख्या\":529,\"कौमुदीक्रमसङ्ख्या\":2370,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"आदेच उपदेशेऽशिति\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.45 न व्यो लिटि।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>व्येञ् संवरणे</code> (धा।पा।१००७)। अथालिटीति कस्मान्न ज्ञायते, तुल्या हि संहिता? नैतदस्ति; यदि ह्रेवं स्यात्(), <code>लिटि व्यः</code> इति नियम एव कृतः स्यात्()&ndash;लिट()एवात्त्वम्(), नान्यत्रेति। लक्ष्यस्थित्या च विपरीतनियमो भविष्यति। द्विवचनबहुवचनयोः सम्प्रसारणे पूर्वरूपत्व आत्त्()वे च सत्यसति वा नास्ति विशेष इत्येकवचनान्तमुदाह्मतम्()। <code>संविव्ययिर्थः</code> इति। थलि वलादिलक्षणस्येटः <code>एकाचः</code> (7.2.10) इत्यादिना प्रतिषेधः। पुनरपि क्रादिनियमार्थः प्राप्तः, सोऽपि <code>अचस्तास्वत्? (7.2.61) इत्यादिना प्रतिषिद्धः, पुनः</code>ऋतो भारद्वाजस्य<code>(7.2.63) इति नियमाद्विकल्पे प्राप्ते</code>इडर्त्तिव्ययतीनाम्()` (7.2.66) इति नित्यं क्रियते॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

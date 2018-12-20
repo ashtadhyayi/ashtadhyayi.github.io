@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-4.1\/4.1.178.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.178";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.2.1\",\"Previous\":\"4.1.177\",\"अकारादिक्रमसङ्ख्या\":2044,\"कौमुदीक्रमसङ्ख्या\":1197,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्दीव्यतोऽण्। तस्यापत्यम्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"न प्राच्यभर्गादियौधेयादिभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-4.1/4.1.178.md">Edit 4.1.178!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.178";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.2.1\",\"Previous\":\"4.1.177\",\"अकारादिक्रमसङ्ख्या\":2044,\"कौमुदीक्रमसङ्ख्या\":1197,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राग्दीव्यतोऽण्। तस्यापत्यम्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"न प्राच्यभर्गादियौधेयादिभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.178 न प्राच्यभर्गादियौधेयादिभ्यः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तद्राजस्यऽकारस्येति। सूत्रे तपरकरणं विस्पष्टार्थमिति भावः। शूरसेनीति। अञो लुकि <code>जाते</code>रिते ङीष्। न त्वञन्तदलक्षणो ङीन्, <code>अञो योऽकारस्तदन्ता</code>दिति व्याख्यानात्। कारूशीति। कृञ उः करुः, तं वष्टि करुशः। <code>वश कान्तौ</code>मूलविभुजादित्वात्कः। <code>ग्रहिज्ये</code>ति संप्रसारणम्। तस्यापत्यं राजा वा कारुशः। स्त्रियां कारूशी। एतेन मूर्धन्योष्मोपधः पाठो निरस्तः। यौधेयादिभ्यो लुक्प्रतिषेधमुदाहर्तुमाह&mdash;युधाष शुक्रेत्यादि। अतश्चेति लुकि त्विति। <code>ञ्यादस्तद्राजाः</code>इति वक्ष्यमाणत्वादञोऽस्य तद्राजत्वमस्तीति भावः। योपधत्वान्ङीषः प्राप्तिर्नेत्याशयेनाह&mdash;ङीपीति। उदात्तनिवृत्तिस्वर इति। <code>अनुदात्तस्य च यत्रोदात्तलोपः</code> इत्यनेन ङीबुदात्तः स्यादित्यर्थः। सिद्धान्ते त्वञो लुगभावान्ङीन्याद्युदात्तत्वमिति ज्ञेयम्। स्यादेतत्। <code>अतश्चे</code>ति सूत्रेण विधीयमानो लुक् चातुरर्थिकानामेव तद्राजानां भवतु संनिधानात्, न तु <code>ञ्यादयस्तद्राजाः</code>इति पाञ्चमिकानामपि तद्राजानामिति किमनेन यौधेयादिग्रहणेन?। सत्यम्। <code>व्याप्तिन्यायेन पाञ्चमिकस्यापीह ग्रहण</code>मिति ज्ञापयितुं यौधेयादिग्रहणम्। तेन पार्�आआद्यणः स्त्रियां लुक् सिध्यति। तथा हि पर्शुः क्षत्रिय#ओ जनपदेन समानशब्दः। तस्यापत्यं स्त्री। <code>द्व्यञ्महधे</code>त्यण्, तस्य <code>अतश्चे</code>ति लुक्। पुनः पर्�आआदिलक्षणः स्वार्थिकोऽण्। तस्यापि लुकि <code>ऊङुतः</code>पर्शूः। एवं रक्षसः क्षत्रियस्यापत्यं स्त्री रक्षाः। पूर्ववदण्द्वयस्यापि लुकि <code>अत्वसन्तस्ये</code>ति दीर्घः। उक्तं च वार्तिककृता&mdash;<code>पर्�आआदिभ्यो लुग्वक्तव्यः। यौधेयादिप्रतिषेधो वा ज्ञापकः--पार्�आआदिलुगि</code>ति यौधेयीत्यादि। युधायाः शुक्राया अपत्यं स्त्रीति विग्रहः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

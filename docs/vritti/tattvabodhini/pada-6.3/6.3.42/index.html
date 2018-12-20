@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-6.3\/6.3.42.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.42";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.43\",\"Previous\":\"6.3.41\",\"अकारादिक्रमसङ्ख्या\":2379,\"कौमुदीक्रमसङ्ख्या\":746,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पुंवत्‌ कर्मधारयजातीयदेशीयेषु\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-6.3/6.3.42.md">Edit 6.3.42!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.42";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.43\",\"Previous\":\"6.3.41\",\"अकारादिक्रमसङ्ख्या\":2379,\"कौमुदीक्रमसङ्ख्या\":746,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पुंवत्‌ कर्मधारयजातीयदेशीयेषु\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.42 पुंवत्कर्मधारयजातीयदेशीवेषु
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>भाषुतपुंस्कादित्यादि। एतच्च <code>स्त्रियाः पुंव</code>दिति सूत्रे स्फुटीकरिष्यते। ननु तेनैव कर्मधारयेऽपि सिद्धं जातीयदेशीययोस्तु <code>तसिलादिष्वि</code>ति सिद्धं, तत्किमनेन सूत्रेणेत्यत आह&ndash;पूरणीप्रियादिष्विति। तथेति च। महानवमीति। नवानां पूरणी। <code>तस्य पूरणे डट्</code><code>नान्तादसङ्ख्यादेर्मट</code>। टित्त्वान्ङीप्। महती चासौ नवमी चेत् विग्रहः। पुंवद्भावे कृते वक्ष्यमाणेन महत आकारः। कोपधादेरिति। <code>न कोपधायाः</code> <code>संज्ञापूरण्योश्च</code> <code>वृद्धिनिमित्तस्य च तद्धितस्याऽरक्तविकारे</code> <code>त्वाह्गाच्चेतः</code><code>जातेश्चे</code>ति पञ्चसूत्र्या प्रितषिद्ध इत्यर्थः। क्रमेणोदाहरति&ndash;पाचकस्त्रीति। जातीयदेशययोरपि प्रतिप्रसवमुदाहरति&ndash;एवमिति। पाचिकाप्रकारवती पाचकजातीया। <code>प्रकारवचने जातीयर्</code>। पाचकदेशीयेति। <code>ईषदसमाप्तौ</code>इति देशीयर्। उभयत्र <code>तसिलादिषु</code>इति पुंवद्भावस्य <code>न कोपधायाः</code> इति निषेधः प्राप्तः, पटुजातीया पटुदेशीयेत्यादौ तस्य चरितार्थत्वात्। इत्यादीति। आदिपदाद्दत्तजातीया, पञ्चमजातीया, रुआऔग्ध्नजातीया, सुकेशजातीयै, ब्राआहृणजातीया। एवं दत्तदेशीयेत्याद्युदाहार्यम्। स्त्रीपुंसलक्षणेति। स्तनश्मश्र्वादियुक्ता स्त्रीत्यर्थः। उद�इआदिति। <code>तक्रं ह्युद�इआन्मथितं प#आदाम्ब्वार्धाऽम्बु निर्जल</code>मित्यमरः। कठधूर्त इति। नात्र कठत्वं कुत्स्यते, अतः <code>कित्सितानि कुत्सनैः</code> इति गतार्थता शङ्क्या, प्रवृत्तिनिमित्तकुत्सायामेव तस्य प्रवृत्तेः। <code>जनयति कुमुदभ्रान्ति धूर्तबको बालमत्स्याना</code>मित्यत्र <code>धूर्तबक</code>इत्यसाधुरेव।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

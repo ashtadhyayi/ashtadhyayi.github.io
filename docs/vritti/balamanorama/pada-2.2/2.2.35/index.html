@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-2.2\/2.2.35.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.2.35";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.2.36\",\"Previous\":\"2.2.34\",\"अकारादिक्रमसङ्ख्या\":3609,\"कौमुदीक्रमसङ्ख्या\":898,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पूर्वनिपातः /परनिपातः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तमीविशेषणे बहुव्रीहौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-2.2/2.2.35.md">Edit 2.2.35!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.2.35";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.2.36\",\"Previous\":\"2.2.34\",\"अकारादिक्रमसङ्ख्या\":3609,\"कौमुदीक्रमसङ्ख्या\":898,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पूर्वनिपातः /परनिपातः\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सप्तमीविशेषणे बहुव्रीहौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.2.35 सप्तमीविशेषणे बहुव्रीहौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सप्तमीविशेषणे। <code>उपसर्जनं पूर्व</code>मित्यतः पूर्वमित्यनुवर्तते। प्रत्ययग्रहणपरिभाषया सप्तमीति तदन्तग्रहणं। तदाह&ndash;सप्तम्यन्तमिति। कण्ठेकाल इति। <code>कण्ठे तिष्ठतीति कण्ठेस्थः, स कालो यस्येति विग्रहः।</code>सुपी<code>ति योगविभागात्कः।</code>सप्तम्युपमानपूर्वपदस्ये<code>ति बहुव्रीहि समासः, स्थशब्दलोपश्चे</code>ति <code>अनेकमन्यपदार्थे</code> इति सूत्रे भाष्ये स्पष्टम्। <code>अमूर्धमस्तका</code>दिति सप्तम्या अलुक्। अत एवेति। यद्यपि कण्ठेस्थशब्दः प्रथमान्त एवात्र बहुव्रीहौ पूर्वपदं, तस्य कालशब्देन सामानाधिकरण्यमस्त्येवेति कथं सप्तमीग्रहणं व्यधिंकरणपदबहुव्रीहिज्ञापकम्। किंच विशेषणत्वादेव सिद्धे किं वा सप्तमीग्रहणेन ?। तथापि यदा स्थपदमनादृत्य <code>कण्ठे</code> इत्यस्याधिकरणत्वं, तस्य च कालरूपे उत्तरपदार्थे उपसङ्क्रमस्तदा <code>कण्ठे</code> इत्यस्याऽप्रथमान्तत्वाद्बहुव्रीहेरप्रसक्तेस्तत्र सप्तम्यन्तस्य पूर्वनिपातविधिरभित्तिचित्रायितः स्यात्। ततश्च सप्तमीग्रहणादप्रथमान्तोऽपि बहुव्रीहिः क्वचिदस्तीति विज्ञायते इति योज्यम्। तेन <code>सच्चास्त्रजन्मा हि विवेकलाभः</code> इत्यादि सिद्धम्। चित्रगुरिति। उभयोरपि प्रथमानिर्दिष्टत्वेन विग्रहे नियतविभक्तिकत्वेन चान्यतरस्य प#ऊर्वनिपाते प्राप्ते उत्तरपदविशेषणस्यैव पूर्वनिपातार्थं विशेषग्रहणमिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

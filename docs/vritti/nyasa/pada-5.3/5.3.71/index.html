@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.3\/5.3.71.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.71";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.72\",\"Previous\":\"5.3.70\",\"अकारादिक्रमसङ्ख्या\":401,\"कौमुदीक्रमसङ्ख्या\":2026,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"कः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अव्ययसर्वनाम्नामकच् प्राक् टेः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.3/5.3.71.md">Edit 5.3.71!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.71";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.72\",\"Previous\":\"5.3.70\",\"अकारादिक्रमसङ्ख्या\":401,\"कौमुदीक्रमसङ्ख्या\":2026,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"कः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"अव्ययसर्वनाम्नामकच् प्राक् टेः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.71 अव्ययसर्वनाम्नामकच्प्राक्? टेः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>कस्यापवादः</code> इति। ननु च भिन्नदेशत्वात्? काकचोर्विरोधो नास्ति, न चासति विरोधे बाध्यबाधकभावः, ततः कथं कस्यापवादः? नैष दोषः; नैवावश्यं देशकृत एव विरोधो भवति, अपि त्वर्थकृतोऽपीत्युक्तम्()&mdash;<code>अकच्()प्रत्ययेन समानोर्थः</code> इति। अकचा द्योतिततवात्? तस्यार्थस्य कप्रत्ययो न भविष्यति।
 यद्यत्र प्रातिपदिकादित्यनुवृत्तेः प्रातिपदिकस्य प्राक्? टेरकज्विधीयते, त्वयका मयकेत्यादि न सिध्यति? अथ सुप इति प्राक्? टेर्विधीयेत, एवमपि युष्मकाभिरिति न सिष्यति? इत्यत आह&ndash;<code>प्रातिपदिकात्सुपः</code> इति। <code>द्वयमपि</code> इत्यादि। ननु च द्वयानुवृत्तावपि क्वचित्? सुबन्तस्यैव प्राक्टेर्भवति, क्वचित्? प्रातिपदिकस्य&ndash;इत्येषा व्यवस्था न लभ्यते? इत्याह&ndash;<code>तत्र</code> इत्यादि। वचनग्रहणं व्यवस्थार्थमिहानुवत्र्तते। तेन यत्र प्रातिपदिकस्य प्राक्टेरुत्पद्यमानेनार्थद्योतनं शक्यते कर्तुम्(), तत्र प्रातिपदिकस्य प्राक्? टेर्भवति; यत्र सुबन्तादुत्पन्नेनार्थद्योतनं शक्यं सम्पादयितुं, तत्र सुबन्तस्यैव।
 अकचश्चित्करणमन्तोदात्तार्थम्()। तद्धि सप्रकृतेः समुदायस्य। तथा च वक्ष्यति&ndash;<code>चितः सप्रकृतेर्बह्वकजर्थम्()</code> (वा। ६।१।१६३)।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

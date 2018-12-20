@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-2.2\/2.2.21.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.2.21";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.2.22\",\"Previous\":\"2.2.20\",\"अकारादिक्रमसङ्ख्या\":1773,\"कौमुदीक्रमसङ्ख्या\":784,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उपपदम्\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"तृतीयाप्रभृतीन्यन्यतरस्याम्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-2.2/2.2.21.md">Edit 2.2.21!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.2.21";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.2.22\",\"Previous\":\"2.2.20\",\"अकारादिक्रमसङ्ख्या\":1773,\"कौमुदीक्रमसङ्ख्या\":784,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उपपदम्\",\"विषयः २\":\"समासः विभाषाधिकारे\",\"विषयः ३\":\"तत्पुरुषः\",\"सूत्रम्‌\":\"तृतीयाप्रभृतीन्यन्यतरस्याम्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.2.21 तृतीयाप्रभृतीन्यन्यतरस्याम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तृतीयाप्रभृतीन्यन्यतरस्याम्। उभयत्रविभाषेयम्। अमैव तुल्यविधानस्य प्राप्तेऽमा चान्येन च तुल्यविधानस्याऽप्राप्ते चारम्भात्। प्राप्ते यथा&mdash;<code>उपदशस्तृतीयायाम्</code>। मूलककेनोपदंशं। मूलकोपदंशम्। अप्राप्ते यथा&ndash;<code>अव्ययेऽयथाभिप्रेताख्याने</code>ति क्त्वाणमुलौ। उच्चैःकारम्। इह समासपक्षे कृदृत्तरपदप्रकृतिस्वरः&ndash;<code>आदिर्ण मुल्यन्यतरस्या</code>मित्याद्युदात्तत्वम्। असमासे तु उच्चैरित्यन्तोदात्तत्वम्। <code>उदि चेर्डै सिः</code>इति व्युत्पत्तिपक्षे प्रत्ययस्वरस्य, अव्युत्पत्तिपक्षे तु <code>फिषः</code>इत्यस्य च प्रवृत्तेरित्याहुः। मनोरमायां तूच्चैरित्यन्तोदात्तः, स्वरादिषु तथा पाठादिति स्थितम्। <code>अमे</code>त्यनुवर्तत इत्याह&ndash;अमन्तेनेति। तेनेह न&ndash;पर्याप्तो भोक्तुम्। <code>पर्याप्तिवचनेष्वि</code>ति तुमुन्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-2.4\/2.4.26.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "2.4.26";
+        let sutraBasics = JSON.parse("{\"Next\":\"2.4.27\",\"Previous\":\"2.4.25\",\"अकारादिक्रमसङ्ख्या\":2297,\"कौमुदीक्रमसङ्ख्या\":812,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्वन्द्व-तत्पुरुषयोः लिङ्गनिर्णयः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"परवल्लिङ्गं द्वन्द्वतत्पुरुषयोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-2.4/2.4.26.md">Edit 2.4.26!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "2.4.26";
-          let sutraBasics = JSON.parse("{\"Next\":\"2.4.27\",\"Previous\":\"2.4.25\",\"अकारादिक्रमसङ्ख्या\":2297,\"कौमुदीक्रमसङ्ख्या\":812,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"द्वन्द्व-तत्पुरुषयोः लिङ्गनिर्णयः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"परवल्लिङ्गं द्वन्द्वतत्पुरुषयोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           2.4.26 कपरवल्लिङ्गं द्वन्द्वतत्पुरुषयोः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>किमर्थमिदम्? इहायं द्वन्द्वः रुआवपदार्थप्रधानः, स यदा भिन्नलिङ्गवयवो भवति तदा पूर्वोत्तरयोः पदयोर्भिन्नलिङ्गयोरनुग्राहकमेकं लिङ्गं नास्ति येन समुदायो व्यपदिश्यते। उभाभ्याञ्च युगपदसम्भवादशक्यो व्यपदेशः कर्तृम्। अतः पर्यायः स्यादिति द्वन्द्वे नियमार्थं वचनम्। तत्पुरुषोऽपि द्विविधः&ndash; पूर्वपदार्थप्रधानः, उत्तरपदार्थप्रधानश्चेति। ततो य उत्तरपदार्थप्रधानस्तत्पुरुषस्तस्य प्रधानत्वादेव परस्य यल्लिङगं तत्समुदायस्य भविष्यतीति तं प्रत्यनर्थकं वचनम्। यस्तु पूर्वपदार्थप्रधानस्तस्य पूर्वपदस्य यल्लिङ्गं तस्मिन् प्रसक्त उत्तरपदस्य यल्लिङ्गं तद्विधीयत इति तत्र विध्यर्थमेतद्भवति। <code>द्वन्द्वस्य तत्पुरुषस्य च</code> इति। द्वन्द्वतत्पुरुषयोरिति षष्ठीयपरशब्दस्य सम्बन्धिशब्दत्वात्। तथा च मयूरीकुक्कुटावित्यत्र पूर्वपदस्य स्त्रीप्रत्ययो निवत्र्तेत, तत्पुरुषेऽप्यर्थपिप्पलीत्यत्र पूर्वपदस्यापि स्त्रीप्रत्ययः स्यात्; तस्मात षष्ठीयम्। तथा च सति समासार्थस्यायमतिदेशो विज्ञायते। पूर्वपद्सय न प्रतिषिध्यते; नापि विधीयत इति न भवति पूर्वोक्तदोषावसरप्रसङ्गः। समासार्थस्य लिङ्गातिदेशादनुप्रयोगोऽपि समासार्थस्यैव विशेषणमिति तल्लिङ्गमेव भवति। क<code>कुक्कुटमयूर्याविमे</code> इति। उपसर्जनह्यस्वत्वं न भवति, उपसर्जनसंज्ञाया अभावात्। उक्तं ह्रेतत् प्राक्&ndash; <code>उपसर्जनमिति महत्याः संज्ञायाः प्रयोजनमन्वर्थसंज्ञा यथा विज्ञायेत-- अप्रधानमुपसर्जनम्</code> इति। द्वन्द्वश्च सर्वपदार्थप्रधान इति नास्त्युपसर्जनसंज्ञा। अर्धपिप्पलीत्यादावपि सत्येकविभक्तियोगे यथा पिप्पल्यादेरुपसर्जनसंज्ञा न भवति, तथोपसर्जनसंज्ञाविधावेव तत्प्रतिपादितम्।
 <code>वक्तव्यः</code> इति। व्याख्येय इत्यर्थः। तत्रेदं व्याख्यानम्&ndash; <code>तत्पुरुषः</code> (2.4.19) इत्यनुवर्तमाने पुनस्तत्पुरुषग्रहणस्यैतत् प्रयोजनम्&ndash; तत्पुरुषविशेषस्य परवल्लिङ्गता यथा स्यादिति। तेन द्विगुप्राप्तापन्नलम्पूर्वगतिसमासेषु परवल्लिङ्गता न भवति; अन्यथा यदि सर्वस्थेयं तत्पुरुषस्य परवल्लिङ्गता स्यात् तदा <code>परकवल्लिङ्गं द्वन्द्वस्य च</code> इत्येवं ब्राऊयात्। चकाराद्धि प्रकृतस्य तत्पुरुषस्येति विज्ञास्यत एवेति। <code>पञ्चकपालः</code> इति। तद्धितार्थे द्विगुः। संस्कृतार्थ उत्पन्नस्याणः <code>द्विगोर्लुगनपत्ये</code>(4.1.88) इति लुक्। <code>प्राप्तजीविकः</code> इति। प्राप्तापन्ने च द्वितीयया<code>(2.2.4) इति समासः।</code>अलञ्जीविकः<code>इति।</code>पर्यादयो ग्लानाद्यर्थे चतुथ्र्या<code>(वा। ९३) इति समासः। निष्कौशाम्बिः</code> इति। <code>निरादयः क्रान्ताद्यर्थे पञ्चम्या</code> (वा।९४) इति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

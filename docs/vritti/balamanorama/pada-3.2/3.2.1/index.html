@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-3.2\/3.2.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.2\",\"Previous\":\"3.1.150\",\"अकारादिक्रमसङ्ख्या\":1018,\"कौमुदीक्रमसङ्ख्या\":2913,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अण्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"कर्मण्यण्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-3.2/3.2.1.md">Edit 3.2.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.2\",\"Previous\":\"3.1.150\",\"अकारादिक्रमसङ्ख्या\":1018,\"कौमुदीक्रमसङ्ख्या\":2913,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अण्\",\"विषयः २\":\"\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"कर्मण्यण्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.1 कर्मण्यण्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>कर्मण्यण्। कर्मण्युपपदे इति। <code>तत्रोपपदं सप्तमीस्थ</code>मित्यत्र <code>तत्रे</code>त्यनेनदं लभ्यत इति तत्रैवोक्तम्। प्रत्ययस्तु कर्तर्येव। उपपदसमास इति। <code>उपपदमति</code>ङित्यनेनेति भावः। कुम्भं करोतीति। अस्वपदो लौकिकविग्रहोऽयम्। कुम्भ अस् कार इत्यलौकिकविग्रह वाक्ये सुबुत्पत्तेः प्रागेव कारशब्देन कृदन्तेन कुम्भ अस् इति षष्ठ�न्तस्य समास इति प्रागेवोक्तम्। ननु आदित्यं पश्यतीत्यादित्यदर्शः, हिमवन्तं शृणोतीति हिमवच्छ्रावः, ग्रामं गच्छतीति ग्रामगाम इत्यादि स्यादित्यत आह&ndash; आदित्यं पश्यतीत्यादावनभिधानान्नेति। एतच्च भाष्ये स्पष्टम्। शालीति। शीलि, कामि, भक्षि, आचरि एभ्यो णप्रत्ययो वाच्य इत्यर्थः। ननु <code>कर्मण्य</code> णित्यणैव सिद्धे किमर्थमिदत्यत आह&ndash; अणोऽपवादार्थमिति. अण्णन्तत्वे तु ङीप् स्यात्, तन्निवृत्त्यर्थं णविधानमिति भावः। तदाह&ndash; मांसशीलेति। <code>शील समाधौ</code> इति भ्वादिः। इह तु स्वभावतः सेवने वर्तते। मांसं स्वभावतः सेवमानेत्यर्थः। मांसकामेति। मांसकामेति। मांसं कामयते इति विग्रहः। मांसभक्षेति। मांसं भक्षयते इति विग्रहः। कल्याणाचारेति। कल्याणमाचरतीति विग्रहः। सर्वत्र टाप्। ईक्षिक्षमिभ्यामिति। वार्तिकमिदम्। <code>ण</code> इति शेषः। कथमिति। कर्मण्यणि गङ्गाधार इत्यादि स्यादित्याक्षेपः। `कर्मणः शेषत्वेति. तथा च कर्मोपपदाऽभावान्नाऽणिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-8.1\/8.1.67.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.1.67";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.1.68\",\"Previous\":\"8.1.66\",\"अकारादिक्रमसङ्ख्या\":2409,\"कौमुदीक्रमसङ्ख्या\":3974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूजनात्‌ पूजितमनुदात्तम् (काष्ठादिभ्यः)\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-8.1/8.1.67.md">Edit 8.1.67!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.1.67";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.1.68\",\"Previous\":\"8.1.66\",\"अकारादिक्रमसङ्ख्या\":2409,\"कौमुदीक्रमसङ्ख्या\":3974,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"पूजनात्‌ पूजितमनुदात्तम् (काष्ठादिभ्यः)\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.1.67 पूजनात् पूजितम् अनुदात्तं काष्ठादिभ्यः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>पूजनेभ्यः काष्ठादिभ्यः उत्तरपदं पूजितम् अनुदात्तं भवति। काष्ठ काष्ठाध्यापकः। काष्ठाभिरूपकः। दारुण दारुणाध्यापकः। दारुणाभिरूपकः। अमातापुत्र अमातापुत्राध्यापकः। अयुत अयुताभिरूपकः। अयुताध्यापकः। अद्भुत अद्भुताध्यापकः। अनुक्त अनुक्ताध्यापकः। भृश भृशाध्यापकः। घोर घोराध्यापकः। परम परमाध्यापकः। सु स्वध्यापकः। अति अत्यध्यापकः। मलोपश्च। इति वार्तिककारमतम्। मयूरव्यंसकादित्वात् समासः। समासे च एतदनुदात्तत्वम्। समासान्तोदात्तत्वापवाद इष्यते। दारुणम् अध्यापकः इत्येवम् आदिषु न भवति। मलोपश्च इत्यनेन अप्ययम् एव विषय आख्यायते, यत्र विभक्तेरभावात् मकारो न श्रूयते तत्र औदात्तत्वम् इति। असमासे हि मलोपो न एव इष्यते। दारुणंधीते दारुणमध्यायकः इति। पूजनातित्येव पूजितपरिग्रहे सिद्धे पूजितग्रहणम् अनन्तरपूजितप्रतिपत्त्यर्थं। एतदेव ज्ञापकम् इह प्रकरणे पञ्चमीनिर्देशे ऽपि नानन्तर्यमाश्रीयते इति। तथा च यद्वृत्तान् नित्यम् (*8,1.66) इत्यत्र उदाहृतम्। अनुदात्तम् इति वर्तमाने पुनरनुदात्तग्रहणम् प्रतिषेधनिवृत्त्यर्थम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

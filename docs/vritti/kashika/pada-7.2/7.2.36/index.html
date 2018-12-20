@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-7.2\/7.2.36.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.36";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.37\",\"Previous\":\"7.2.35\",\"अकारादिक्रमसङ्ख्या\":3842,\"कौमुदीक्रमसङ्ख्या\":2323,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"आर्धधातुकस्य\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"स्नुक्रमोरनात्मनेपदनिमित्ते\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-7.2/7.2.36.md">Edit 7.2.36!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.36";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.37\",\"Previous\":\"7.2.35\",\"अकारादिक्रमसङ्ख्या\":3842,\"कौमुदीक्रमसङ्ख्या\":2323,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"इट्-आगमः\",\"विषयः २\":\"आर्धधातुकस्य\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"स्नुक्रमोरनात्मनेपदनिमित्ते\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.36 स्नुक्रमोरनात्मनेपदनिमित्ते
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>नियमार्थम् इदम्। स्नुक्रमोः आर्धधातुकस्य वलादेः इडागमो भवति, न चेत् स्नुक्रमी आत्मनेपदस्य निमित्तं भवतः। क्व च तावात्मनेपदस्य निमित्तम्? यत्र आत्मनेपदं तदाश्रयं भवति, भावकर्मकर्मकर्तृकर्मव्यतिहाराः क्रमेर् वृत्त्यादयश्च। तेन अयम् सत्यात्मनेपदे प्रतिषेधो भवति न असति इति। प्रतिषेधफलं च इदं सूत्रम्। स्नुक्रमोरुदित्वातिट् सिद्ध एव। प्रस्नविता। प्रस्नवितुम्। प्रस्नवितव्यम्। प्रक्रमिता। प्रक्रमितुम्। प्रक्रमितव्यम्। अनात्मनेपदनिमित्ते इति किम्? प्रस्नोषीष्ट। प्रक्रंसीष्ट। प्रस्नोष्यते। प्रक्रंस्यते। प्रसुस्नूषिष्यते। प्रचिक्रंसिष्यते। सर्वत्र एव अत्र स्नैतिः क्रमिश्च आत्मनेपदस्य निमित्तम्। सनन्तादपि पूर्ववत्सनः (*1,3.62) इति आत्मनेपदं विधीयते। निमित्तग्रहणं किम्? सीयुडादेस् तत्परपरस्य च प्रतिषेधार्थम्। इह तु प्रस्नवितेवाचरति इति प्रस्नवित्रीयते इति क्यङतम् आत्मनेपदस्य निमित्तम्, न स्नौतिः। क्रमेस् तु कर्तर्यात्मनेपदविषयादसत्यात्मनेपदे कृति प्रतिषेधो वक्तव्यः। प्रक्रन्ता। उपक्रन्ता। कर्तरि इति किम्? प्रक्रमितव्यम्। उपक्रमितव्यम्। आत्मनेपदविषयातिति किम्? निष्ट्रमितिआ। स्नौतेः सनि किति च प्रत्यये श्र्युकः किति (*7,2.11), सनि ग्रहगुहोश्च (*7,2.12) इत्येव प्रतिषेधो भवति। प्रसुस्नूषति। प्रस्नुतः। प्रस्नुतवान्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

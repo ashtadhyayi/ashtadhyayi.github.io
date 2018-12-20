@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.1\/8.1.50.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.1.50";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.1.51\",\"Previous\":\"8.1.49\",\"अकारादिक्रमसङ्ख्या\":3435,\"कौमुदीक्रमसङ्ख्या\":3957,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"पदात् पदस्य\",\"सूत्रम्‌\":\"शेषे विभाषा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.1/8.1.50.md">Edit 8.1.50!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.1.50";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.1.51\",\"Previous\":\"8.1.49\",\"अकारादिक्रमसङ्ख्या\":3435,\"कौमुदीक्रमसङ्ख्या\":3957,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वर-प्रकरणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"पदात् पदस्य\",\"सूत्रम्‌\":\"शेषे विभाषा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.1.50 शेषे विभाषा।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>शेषः सन्निहितापेक्षः। शेषत्रयञ्च पूर्वसूत्रे सन्निहतं निघातकारणम्&ndash;आहो उताहोशब्दौ, अनन्तर मित्येतत्(), अपूर्वमित्येतच्च। तत्र न ज्ञायते&ndash;किं कारणभावापेक्षः शेष इति। किमाहोउताहोशब्दापेक्षः? उतानन्तरभावापेक्षः? आहोस्विदपूर्वभावापेक्षः()&ndash;इत्यतः पृच्छति&ndash;<code>कश्च शेषः</code> इति। इह निघातमिच्छता तत्कारणमवश्यमेवापेक्षणीयम्()। <code>आहो उदाहो</code> इति। अपूर्वमित्येतदपि, द्विश्चकारेणानुकृष्टत्वात्()। तस्य हि द्वयोर्योगयोश्चकारोऽनुकर्षणार्थ एव कृतः। कथं नामात्रापि तदपेक्षा स्यादिति! अन्यथा हि समनन्तरातीति एव सूत्रे तदनुकर्षणार्थश्चकारः क्रियते। किंवृत्तादिसूत्रे (8.1.48) हि स्वरितत्वादेव तदनुवत्र्तत इति। तस्मात्? पारिशेष्यादनन्तरभावपेक्षः शेषो विज्ञायते? इत्यत आह&ndash;<code>यदन्यदनन्तरात</code> इति॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

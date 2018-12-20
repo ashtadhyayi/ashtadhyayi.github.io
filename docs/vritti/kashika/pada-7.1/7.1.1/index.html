@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/kashika\/pada-7.1\/7.1.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.1.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.1.2\",\"Previous\":\"6.4.175\",\"अकारादिक्रमसङ्ख्या\":2872,\"कौमुदीक्रमसङ्ख्या\":1247,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"युवोरनाकौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/kashika/pada-7.1/7.1.1.md">Edit 7.1.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.1.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.1.2\",\"Previous\":\"6.4.175\",\"अकारादिक्रमसङ्ख्या\":2872,\"कौमुदीक्रमसङ्ख्या\":1247,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"युवोरनाकौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           KASHIKA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.1.1 युवोरनाकौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>यु वु इत्येतयोः उत्सृष्टविशेषणयोः अनुनासिकयणोः प्रत्यययोर् ग्रहणम्, तयोः स्थाने यथासङ्ख्यम् अन अक इत्येतावादेशौ भवतः। योः अनः, वोः अकः। नन्द्यादिभ्यो ल्युः नन्दनः। रमणः। सायमादिभ्यष्ट्युट्युलौ तुट् च सायनतनः। चिरन्तनः। ण्वुल्तृचौ कारकः। हारकः। वासुदेवार्जुनाभ्यां वुन् (*4,3.98) वूसुदेवकः। अर्जुनकः। अनुनासिकयणोः इति किम्? ऊर्णाया युस् (*5,2.123) ऊर्णायुः। भुजिमृङ्भ्यां युक्त्युकौ भुज्युः, मृत्युः इति। एवम् आदीनां हि यणो ऽनुनासिकत्वं न प्रतिज्ञायते, प्रतिज्ञानुनासिक्याः पाणिनीयाः। इह युवोरिति निर्देशाद् द्वन्द्वैकवद्भावपक्षे अनित्यम् आगमशासनम् इति नुम् न क्रियते। नपुंसकलिङ्गता वा लिङ्गमशिष्यं लोकाश्रयत्वाल् लिङ्गस्य इति न भवति। इतरेतरपक्षे तु छान्दसत्वात् वर्णलोपो द्रष्टव्यः। युवोश्चेद् द्वित्वनिर्देशो द्वित्वे यण् तु प्रसज्यते। अथ चेदेकवद्भावः कथं पुंवद् भवेदयम्। द्वित्वे वैगमिको लोप एकत्वे नुमनित्यता। अशिष्यत्वाद् धि लिङ्गस्य पुंस्त्वं वेह समाश्रितम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

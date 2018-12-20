@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.29.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.29";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.30\",\"Previous\":\"6.1.28\",\"अकारादिक्रमसङ्ख्या\":2997,\"कौमुदीक्रमसङ्ख्या\":2327,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रसारणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लिड्यङोश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.29.md">Edit 6.1.29!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.29";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.30\",\"Previous\":\"6.1.28\",\"अकारादिक्रमसङ्ख्या\":2997,\"कौमुदीक्रमसङ्ख्या\":2327,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"संप्रसारणम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लिड्यङोश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.29 लिङ्यङोश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>विभाषेति निवृत्तम्()</code> इति। उत्तरसूत्रे पुनर्विभाषाग्रहणात्()। अन्यथापीदमेव तत्रानुवर्त्तिष्यत इति तन्न कुर्यात्()। अत एवोच्यते&ndash;द्वयोर्दिभाषयार्मध्ये ये विधयस्ते नित्या भवन्तीति। <code>प्यायः पीत्येतच्चशब्देनानुकृष्यते</code> इति। इतरथा हि सम्प्रसारणस्य प्रकृतत्वाल्लिङ्यङोः प्यायः सम्प्रसारणं विज्ञायेत। चशब्दे तु सत्यनन्तरेणैवपीभावेन सम्बन्धः सुखमवसीयते। नाप्राप्ते द्विर्वचने पीभावो विधीयते। तेन तस्य बाधकं प्राप्नोतीति कस्यचिदाशङ्का स्यात्()। अतस्तां निराकर्त्तुमाह&ndash;<code>परत्वात्()</code> इत्यादि। विरोधे हि सति बाधा स्यात्(), इह तु विरोधो नास्ति। अतः परत्वात्? पीभावे कृते पुनःप्रसङ्गवज्ञानात्? सिद्धमिति द्विर्वचनं भवतीति॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

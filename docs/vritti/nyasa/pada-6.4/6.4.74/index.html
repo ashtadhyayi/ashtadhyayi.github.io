@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.4\/6.4.74.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.74";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.75\",\"Previous\":\"6.4.73\",\"अकारादिक्रमसङ्ख्या\":2052,\"कौमुदीक्रमसङ्ख्या\":2228,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आड्-आट्\",\"विषयः २\":\"\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"न माङ्योगे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.4/6.4.74.md">Edit 6.4.74!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.74";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.75\",\"Previous\":\"6.4.73\",\"अकारादिक्रमसङ्ख्या\":2052,\"कौमुदीक्रमसङ्ख्या\":2228,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आड्-आट्\",\"विषयः २\":\"\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"न माङ्योगे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.74 न माङ्योगे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अनन्तरस्य वा विधिर्वा भवति प्रतिषेधो वा</code> (व्या।प।१९) इत्याट एवायं प्रतिषेध इति कस्यचिद्()भ्रान्तिः स्यात्(), अतस्तां निराकर्त्तुमाह&ndash;<code>माङ्योगे लुङलङलृङक्षु परतो यदुक्तं तन्न भवति</code> इति। एतोनोभयोरप्यडाटोः प्रतिषेध इति दर्शयति। उभावपि तौ लृङ्लङ्()लृङ्क्षूक्तौ। कथं पुनद्र्वयोरपि प्रतिषेधो लभ्यते? आटाप्यत्रानुवृत्तेः। न च तस्मिन्ननुवर्तमाने सत्यजादीनामष्यट्? प्राप्नोतीत्येष दोषः प्रसज्यते; मण्डूकपलुतिन्यायेनात्राटोऽनुवृत्तेः। योगविभागाद्वा, अयमटोऽपि प्रतिषेध इत्यवसीयते; यदि ह्राट एव प्रतिषेधोऽभिमतः स्यात्? तदा <code>आडजादीनां न माङ्योगे</code> इत्येकमेव योगं कुर्यात।
 अथ वा&ndash;<code>लुङ्लङ्लृङ्क्षु</code> (6.4.71) इत्येतावन्मात्रमनुवर्तते, तेन लुडादिषु यदुक्तं तस्य सर्वस्य प्रतिषेधो न विज्ञायते। न चैवमतिप्रसङ्ग; यतः प्रत्यागन्तेरस्मिन्नेव लुङलङ्लृङ्प्रकरणे यत्? कार्यं विहितं तस्यैव प्रतिषेधो लभ्यते, न सर्वस्य प्रकरणान्तरविहितस्य। अत्र तु प्रकरणेऽडाटावेव विहितौ, अतस्तयोरेव प्रतिषेधः।
 <code>मा भवान्? कार्षीत्()</code> इति। <code>माङि लुङ</code>, (3.3.175) इति लुङः। <code>मा स्म करोत्()</code> इति। <code>स्मोत्तरे लङः च</code> (3.3.176) इति लङः। <code>माङ्()</code> इति ङ्कारानुबन्धवत उपादानम्()&ndash;अस्मादादेशी यो माशब्दस्तस्य ग्रहणं मा भूदित्येवमर्थम्(); अन्यथा <code>भवान्? सुखिनं मात्राकार्षींत्()</code> इत्यत्रापि प्रतिषेधः स्यादिति केचित्()। लाक्षणिकत्वादेवास्मदादेशस्याग्रहणमित्ययुक्तमेतत्()। निपात एव त्वनयोऽङिन्माशब्दोऽस्ति&ndash;<code>मा बालिपथमन्वगाः</code>। <code>मा भवतु तस्य पापम्()</code> इति तु यस्य प्रयोगस्तद्योगे प्रतिषेधो मा भूदित्येवमर्थं ङिद्विशिष्टस्य ग्रहणम्()। योगग्रहणन्तु&ndash;योगमात्रे प्रतिषेधो यथा स्यादिति, तेन व्यवहितेऽपि भवति॥</p>
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

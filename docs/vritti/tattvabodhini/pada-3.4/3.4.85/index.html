@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-3.4\/3.4.85.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.85";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.86\",\"Previous\":\"3.4.84\",\"अकारादिक्रमसङ्ख्या\":3023,\"कौमुदीक्रमसङ्ख्या\":2198,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लोटो लङ्वत्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-3.4/3.4.85.md">Edit 3.4.85!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.85";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.86\",\"Previous\":\"3.4.84\",\"अकारादिक्रमसङ्ख्या\":3023,\"कौमुदीक्रमसङ्ख्या\":2198,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लोटो लङ्वत्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.85 लोटो लङ्वत्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>लोट</code> इत्युपमेये षष्ठीदर्शनात् [उपमानादपि] षष्ठ�न्तादेव वतिः, तदाह&ndash;तेनेति। अडादौ तु नातिदिश्येते, न हि तौ लङः क्रियेते, किं तु लङि अङ्गस्येति भावः॥ नन्वेमपि यान्तु वान्तु इत्यत्र <code>लङः वाग्रहणमिहानुवर्त्य व्यवस्थितविभाषाश्रयणान्न जुस्। यद्वा</code>लङः शाकटायनस्ये<code>ति सूत्रे</code>नित्यं ङितःर<code>इत्यतो</code>ङित<code>इत्यनुवृत्त्यैवेष्टसिद्धेर्लचङ्ग्रहणमतिरित्यते, लुङि सिचा, लृङि स्यप्रत्ययेन च व्यवधानात्, लिङि तु</code>झेर्जु<code>सिति जुसो विहितत्वाच्च,</code>ङित<code>इत्यस्य लड�एव पर्यवसानात्। ततो लड्ग्रहणं विभज्यते। नियमश्चायं</code>लडेव यो लङ् तस्यैव झेर्जुस् न तु लङ्वद्भावेन यो लङ् तस्ये<code>त्यतो नोक्तदोष' इति। तञ्चिन्त्यम्। अदुरित्यत्र</code>सिजभ्यस्ते<code>ति नित्यजुसं बाधित्वा परत्वाच्छाकटायनस्येति विकल्पप्रसङ्गात्। तस्माल्लड्ग्रहणं शाकटायनसूत्रे कर्तव्यमेव, न तु तदतिरिच्यते। न च</code>आतः<code>इति सूत्रेणाऽदुरित्यत्र नित्यं रजुस्स्यादिति वाच्यं, तस्य नियमार्थत्वेन विद्यर्थत्वा।योगात्, अन्यथा अभूवन्नित्यत्र</code>सिजभ्यस्ते<code>ति जुस् दुर्वार एव स्यादिति नव्याः॥ यदि त्विह</code>आतः<code>इति सूत्रमावर्त्त्य विध्यर्थता नियमार्थता च व्याख्यायेत तदा तूक्तद#ओषाऽभावाद्यद्वेति समाधानमपि सम्यगेव, शाकटायनस्येति जुसो वैकल्पिकत्वात्। तदभावपक्षे पुनःप्रसङ्गविज्ञानात्</code>सिजभ्यस्ते`ति जुसि स्वीकृते तु सुतरां सम्यगेव, परं तु जुह्वतु विन्दत्वित्यत्र जुस्?वारणाय व्यवस्थितविभाषा त्वाश्रयणीयैवैति दिक्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

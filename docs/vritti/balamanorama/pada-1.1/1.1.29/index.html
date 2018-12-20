@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-1.1\/1.1.29.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.1.29";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.1.30\",\"Previous\":\"1.1.28\",\"अकारादिक्रमसङ्ख्या\":2045,\"कौमुदीक्रमसङ्ख्या\":222,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सर्वनाम\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न बहुव्रीहौ\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.1/1.1.29.md">Edit 1.1.29!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.1.29";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.1.30\",\"Previous\":\"1.1.28\",\"अकारादिक्रमसङ्ख्या\":2045,\"कौमुदीक्रमसङ्ख्या\":222,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सर्वनाम\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न बहुव्रीहौ\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.1.29 न बहुव्रीहौ
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>तत्रेदमारभ्यते&ndash;<code>न बहुव्रीहौ</code>। <code>सर्वादीनि सर्वनामानी</code>त्यनुवर्तते। बहुव्रीहौ सर्वादीनि सर्वनामानि न स्युरित्यर्थः प्रतीयते। एवं सति सूत्रमिदं व्यर्थं, <code>प्रियसर्वाये</code>त्यादीनां बहुव्रीहिवर्तिनां सर्वादीनां स्वार्थोपसङ्क्रान्तार्थान्तप्रधानकतयोपसर्जनत्वादेव सर्वनामत्वनिषेधसिद्धेः, <code>संज्ञोपसर्जनीभूतास्तु न सर्वादयः</code> इति वक्ष्यटमाणत्वात्। अतो व्याचष्टे &ndash; चिकीर्षित इति। बहुव्रीहाविति विषयसप्तम्याश्रयणादयमर्थो लभ्यते। तथाच बहुव्रीहौ प्रसक्ते सति ततः प्रागेव विग्रहवाक्येऽयं निषेधोर्थवान्। एकार्थीभावात्मकसामर्थ्यस्य समासदशायामेव सत्त्वेन विग्रहवाक्ये तदभावेन तदानीमुक्तोपसर्जनत्वस्याऽभावादिति भावः। अथ लौकिकविग्रहवाक्यं दर्शयल्लँक्ष्यभूतं बहुव्रीहिं दर्शयति&ndash;त्वकं पितेत्यादिना। सर्वनामत्वाऽभावात्कप्रत्यये <code>प्रत्ययोत्तरपदयोश्चे</code>ति त्वमादेशे त्वत्को मत्क इति च रूपम्। ननु बहुव्रीहिप्रवृत्तेः प्रागलौकिकविग्रहवाक्ये सर्वनामत्वनिषेधात्त्वं पितेति कथं लोकिकविग्रहवाक्यप्रदर्शनमित्यत आह&ndash;इहेति। <code>न बहुव्रीहा</code>वित्यस्मिन्सूत्र इत्यर्थः। प्रक्रियावाक्य इति। युष्मद् स्-पितृ स्, अस्मद् स्-पित#ऋ स्&ndash;इत्यलौकिकविग्रहवाक्य एवेत्यर्थः। लोकिकविग्रहवाक्ये तु नायं निषेधः, बहुव्रीहिवत्तस्य स्वार्थे परिनिष्ठितत्वेन स्वतन्त्रप्रयोगार्ह्मतया बहुव्रीहेस्तत्र चिकीर्षितत्वाऽभावादलौकिकविग्रहात्मके प्रक्रियावाक्य एव तस्य चिकीर्षितत्वात्। यथा चैतत्तथा समासनिरूपणे वक्ष्यते नन्वलौकिकविग्रहवाक्ये मास्तु सर्वनामतानिषेधः, को दोषः?। तत्राह-अन्यथेति। न बहुव्रीहावित्यलौकिकविग्रहवाक्ये निषेधाऽभावे सतीत्यर्थः। तत्रापीति। अलौकिकविग्रहवाक्येऽपीत्यर्थः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

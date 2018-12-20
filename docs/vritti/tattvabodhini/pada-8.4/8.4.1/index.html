@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-8.4\/8.4.1.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.4.1";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.4.2\",\"Previous\":\"8.3.119\",\"अकारादिक्रमसङ्ख्या\":2913,\"कौमुदीक्रमसङ्ख्या\":235,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"रषाभ्यां नो णः समानपदे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-8.4/8.4.1.md">Edit 8.4.1!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.4.1";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.4.2\",\"Previous\":\"8.3.119\",\"अकारादिक्रमसङ्ख्या\":2913,\"कौमुदीक्रमसङ्ख्या\":235,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"रषाभ्यां नो णः समानपदे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.4.1 रषाभ्यां नो णः समानपदे
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>रषाभ्यां नो णः। अत्र <code>अपदान्तस्य मूर्धन्यः</code> इत्यनुवर्त्त्य णप्रहणं, <code>पदान्तस्ये</code>ति सूत्रं च भाष्ये प्रत्याख्यातम्। समानपदे इति। निमित्तनिमित्तनोरपदस्थत्वाऽसंभवात्पदे इतीयतैव सामर्थ्यादेकपदत्वे लब्धे समानग्रहणं यत्समानमेव पदं, निमित्तवत्पदभिन्नपदस्थत्वाऽभावादिति यावत्, तत्र यथा स्यादित्येतदर्थम्। तेन समासे <code>रामनाम</code> <code>गन्धर्वगान</code>दित्यादौ न भवति। तत्र हि नकारस्यैकपदवृत्तित्वेऽपि निमित्तवत्पदभिन्नपदस्थत्वात्। भवति हि <code>यूष्ण</code> इत्यादौ णत्वम्, निमित्तवत्पदभिन्नपदत्वाऽभाववद्वृत्तित्वान्नाकारस्य। <code>मातृभोगीण</code> इत्यादावपि नस्य णत्वं भवत्येव, प्रत्ययवृत्तित्वेऽपि निमित्तवत्पदभिन्नपदस्थत्वाऽभावात्। एतेन समानग्रहणमखण्टपदलाभार्थमिति व्याख्याय <code>रामनामे</code>त्यादावपिप्रसङ्गे निवारितेऽपि <code>मातृभोगीण</code> इत्यादावव्याप्तिः स्यादेवेति केषांचिदुक्तिः परास्ता। उक्तरीत्या त्वव्याप्तिशङ्काया निरस्तत्वात्। यूष्ण इति। यूषो मण्डः। <code>मुद्रामलकयूषस्तु भेदी दीपनपाचनः</code> इति दर्शनात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

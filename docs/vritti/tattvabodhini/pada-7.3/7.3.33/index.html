@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-7.3\/7.3.33.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.33";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.34\",\"Previous\":\"7.3.32\",\"अकारादिक्रमसङ्ख्या\":504,\"कौमुदीक्रमसङ्ख्या\":2761,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"आतो युक् चिण्कृतोः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-7.3/7.3.33.md">Edit 7.3.33!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.33";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.34\",\"Previous\":\"7.3.32\",\"अकारादिक्रमसङ्ख्या\":504,\"कौमुदीक्रमसङ्ख्या\":2761,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"आतो युक् चिण्कृतोः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.33 आतो युक् चिण्कृतोः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आतो युक्। <code>अचो ञ्णिती</code>त्यतो ञ्णितीत्यनुवर्तते। तच्च कृतो विशेषणं न तु चिणः, तस्य णित्त्वेनाऽव्यभिचारात्। चिण्कृतोः किम् ?। चौडिः। बालाकिः। बाह्वादित्वादिञ्। ददौ। ञ्णितीति किं ?। पानीयम्। दानीयम्। अदायिषातामिति। <code>स्थाधवोरिच्चे</code>त्येतद्बाधित्वा परत्वाच्चिण्वदिटि कृते <code>घुमास्थे</code> तीत्वं न भवति, अजादित्वात्। <code>स्थाध्वोरिच्चे</code>त्यपि पुनर्न् भवति, अज्झलादित्वादित्याहुः। तेषामयमाशयः&ndash; इको झ&rsquo;लिति सूत्राज्झलनुवर्तते। तथा च झलादिरेव सिच् किन्न त्वयमिडादिः सिच्। एवं च तत्संनियोगशिष्टत्वादित्त्वमप्यत्र न भवतीति। वस्तुतस्तु सत्यपि तस्मिन्नेह काचित्क्षतिः- सिचः कित्त्वेऽप्यनिग्लक्षणाया अनिषेधात् <code>अचो ञ्णिती</code>ति वृद्ध्या रूपनिष्पत्तेः। आशीर्लिङीति। न तु लुङि। तत्र चिण्वद्भावात् <code>आत्मनेपदेष्वन्यतस्यार</code>मिति वधादेशस्यापि वैकल्पिकतया येन नाप्राप्तिन्यायऽभावादिति भावः। आर्द्धधातुके सीयुटीत्यादि। यद्यपि <code>हनो वध लिङी</code> त्यत्रापि आर्द्धधातुकाधिकारादार्द्धधातुके लिङीत्यपि समानं, तथापि लिङीति पदद्वयसाधारणं , सीयुट् तु आत्मनेपद एवेति विशेषविहितत्वमस्तीति भावः। अहसातामिति। चिण्वदिटोऽभावे <code>हनः सि</code>जिति कित्त्वात्, <code>अनुदात्तोपदेशे</code> त्यनुनासिकलोपः। चिणि वधादेशस्य दृष्टत्वाच्चिण्वद्भावेन स्यादिषु प्राप्तिमाशङ्क्य परहरति&ndash; नचेत्यादिना। अदर्शिषातामिति। <code>न दृशः</code> इति क्सस्य निषेधादिह सिचि चिण्वदिट्। सिचः कित्त्वादिति। <code>लिङ्गिचावात्मनेपदेषु</code> इत्यनेन। लत्वमिति। <code>अचि विभाषे</code>ति। गिरते रेफस्य ल्वे षट्। ढत्वमिति। <code>विभाषेटः</code> इत्यनेन। षण्णां ढत्वे द्वादश। द्वित्वत्रयं चेति। <code>अनचि चे</code>ति। द्वादशानां मध्ये षण्णां ढस्य, षण्णां धस्य च द्वित्वे चतुर्विशतिः (24)। <code>मय</code> इति पञ्चमी <code>यण</code> इति षष्ठीति पक्षे वकारस्य द्वित्वे त्वष्टाचत्वारिंशत् (48)। अनचि चे<code>ति मकारस्य द्वित्वे षण्णवतिः (96)। ढवमानामिति।</code>अचो रहाभ्या<code>मिति द्वित्वे द्वयम् (2)। द्वयोरपि वस्य</code>यणो मयः<code>इति द्वित्वे चत्वारि (4)। चतुर्णामपि मस्य</code>अनचि च` इति द्वित्वे त्वष्टौ (8)।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

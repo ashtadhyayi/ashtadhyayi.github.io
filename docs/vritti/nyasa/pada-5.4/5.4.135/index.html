@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.4\/5.4.135.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.4.135";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.4.136\",\"Previous\":\"5.4.134\",\"अकारादिक्रमसङ्ख्या\":1271,\"कौमुदीक्रमसङ्ख्या\":874,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"गन्धस्येदुत्पूतिसुसुरभिभ्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.4/5.4.135.md">Edit 5.4.135!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.4.135";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.4.136\",\"Previous\":\"5.4.134\",\"अकारादिक्रमसङ्ख्या\":1271,\"कौमुदीक्रमसङ्ख्या\":874,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"बहुव्रीहिसमासान्तप्रत्ययाः\",\"विषयः २\":\"समासान्ताः\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"गन्धस्येदुत्पूतिसुसुरभिभ्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.4.135 गन्धस्येदुत्पूतिसुसुरभिभ्यः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>इका आदेशो भवति</code> इति। कथं पुनज्र्ञायते&ndash;आदेशोऽयं न प्रत्यय इति? <code>गन्धस्य</code> इति षष्ठ()आ निर्देशात्()। यदि हि प्रत्ययः स्यात्? असन्दिग्धार्थं <code>गन्धात्()</code> इति पञ्चम्या निर्देशं कुर्यात्(), षष्ठ()आ तु निर्देशः। तस्मादादेशोऽयमिति विज्ञायते।
 <code>गन्धस्येत्त्वे</code> इत्यादि। गन्धो द्विविधः। गुणो गन्धः, सोऽन्यपदार्थस्यैकान्तो न भवति। यस्तु शोभनो गन्दोऽस्येति सुगन्ध आपणिक इति तत्र द्रव्यगन्धो गन्धशब्देनोच्यते, तच्चापणिकस्यैकदेशो भवति। तत्र गुणगन्धे यथा स्यात्(), द्रव्यगन्धे मा भूदित्येवमर्थं गन्धस्येत्त्वे विधेये तदेकान्तग्रहणं कत्र्तव्यम्()। तदित्यनेन बहुव्रीह्रर्थः सामथ्र्यान्निर्दिश्यते। तस्यैकान्त एकदेशो वा धर्मोऽवयवस्तदेकान्तः संगृह्रते। येन तदेकान्तग्रहणं कत्र्तव्यम्()। एतदुक्तं भवति&ndash;तादृशं व्याख्यानं कत्र्तव्यं येनेत्त्वविधाविह गन्धोऽन्यपदार्थस्यैकदेशात्? तत आश्रयितव्य इति। तत्रेदं व्याख्यानम्()&ndash;<code>वा संज्ञायाम्()</code> (5.4.133) इत्यतो वाग्रहममनुवत्र्तते, सा च व्यवस्थितविभाषा। तेन यत्र गन्धोऽन्यपदार्थस्यैकदेशभूतस्तत्रैवेत्त्वं भवति, नान्यत्रेति। अथ वा&ndash;अस्त्ययं गन्धशब्दो द्रव्यवचनः&mdash;गन्धान्? विक्रीणीत इति। अस्ति गुणवचनो यथा&ndash;गन्धवती पृथिवी। तत्र गुणवचनस्येदं ग्रहणम्(), न द्रव्यवचनस्य। तस्माद्द्रव्यवचनो बहवचनान्त एव द्रव्ये वत्र्तते&ndash;गन्धान विक्रीणीते, गन्धाः पण्यमस्येति। इह गन्धस्येत्यकवचनेनैव निर्देशः। तस्मादवसीयते&ndash;गुणवचनस्येदं ग्रहणमिति। गुणवचनस्य तु ग्रहणे तत्र गुणो गन्धोऽन्यपदार्थस्यैकदेशो भवति, तेन तदेकान्तभूतस्यैव गन्धस्येत्त्वं भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

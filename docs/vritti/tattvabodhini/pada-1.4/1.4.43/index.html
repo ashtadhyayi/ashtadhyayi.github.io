@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-1.4\/1.4.43.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.43";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.44\",\"Previous\":\"1.4.42\",\"अकारादिक्रमसङ्ख्या\":1865,\"कौमुदीक्रमसङ्ख्या\":562,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"करणम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दिवः कर्म च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.4/1.4.43.md">Edit 1.4.43!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.43";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.44\",\"Previous\":\"1.4.42\",\"अकारादिक्रमसङ्ख्या\":1865,\"कौमुदीक्रमसङ्ख्या\":562,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"करणम्‌ कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"दिवः कर्म च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.43 दिवः कर्म च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>द्विद्रोणेनेति। द्वयोर्द्रोणयोः समाहारो द्विद्रेणम्। पात्रादित्वात्स्त्रित्वाऽभावः। द्रोणद्वयसम्बन्धि धान्यमित्यर्थः। इह षष्ठी प्राप्ता। द्विद्रोणपरिमितधान्यार्थे मूल्ये द्विद्रोणशब्दः, तस्य च क्रयं प्रति करणत्वमितीहापि तृतीया सिद्धेति दिक्। चादिति। करणशब्दानुवृत्त्या, <code>परिक्रयणे संप्रदानमन्यतरस्या</code>मित्युत्तरसूत्रस्थाऽन्यतरस्याङ्ग्रहणापकर्षणेन वा संज्ञयोः पर्यायत्वे लब्धे चग्रहणं समुच्चयार्थम्। तेन <code>मनसा दीव्यती</code>ति <code>मनसदिव</code>इत्यत्र कर्मण्यण्, करणे तृतीया चोभयं युगपत्सिध्यति। <code>मनसः संज्ञायाम्</code>इत्यलुक्। किञ्च <code>अक्षैर्देवयते देवदत्तो यज्ञदत्तेने</code>त्यत्र सकर्मकत्वादणि कर्तुर्णौ <code>गतिबुद्धी</code>त्यनेन कर्मत्वं न, <code>अणावकर्मका</code>दिति परस्मैपदमपि न भवति। ननु कर्मकरणसंज्ञासमावेशस्य <code>मानसादेव</code>इत्यत्र क-तार्थत्वादक्षान्दीव्यतीत्यत्र परत्वातृतीयैव स्यान्न तु द्वितीयेति चेत्?, अत्राहुः&ndash;कार्यकालपक्षे <code>कर्मणि द्वितीये</code>त्यत्र यदस्योपस्थानं तस्यानवकाशत्वाद्द्वितीयेति। स्यादेतत्&ndash;<code>दीव्यन्तेऽक्षा</code>इत्यत्राभिहितेऽपि कर्मणि करणत्वस्याऽनभिधानातृतीयं स्यात्। तथा <code>देवना अक्षा</code>इत्यत्र ल्युटा करणत्वस्याभिधानेऽप#इ कर्मणोऽनभिधानद्द्वितीया स्यात्। मैवम्। एकाव ह्यत्र शक्तिः संज्ञाद्वययोगिनी, तथा चैकस्यां शक्तावभिहितायामन्यस्या अप्यभिधानादुभयत्राप्यभिधानमेव, न त्वन भिहितत्वम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

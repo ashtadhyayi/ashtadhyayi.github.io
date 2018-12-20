@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-1.3\/1.3.37.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.3.37";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.3.38\",\"Previous\":\"1.3.36\",\"अकारादिक्रमसङ्ख्या\":1003,\"कौमुदीक्रमसङ्ख्या\":2710,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्तृस्थे चाशरीरे कर्मणि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-1.3/1.3.37.md">Edit 1.3.37!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.3.37";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.3.38\",\"Previous\":\"1.3.36\",\"अकारादिक्रमसङ्ख्या\":1003,\"कौमुदीक्रमसङ्ख्या\":2710,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्मनेपदम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"कर्तृस्थे चाशरीरे कर्मणि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.3.37 कर्तृस्थे चाऽशरीरे कर्मणि
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>कर्तृस्थे। निय इति। कर्मकारके कर्तृस्थे सति णीञ्धातोर्यदात्मनेपदं कर्तृगे फले ञित्त्वात्प्राप्तं, तच्छरीरावयवभिन्न एव सति कर्मकारके स्यात्। कर्मणः शरीरावयवत्वे तु कर्तृगेऽपि फले परस्मैपदमेवेत्यर्थः। ननु सूत्रे शरीरग्रहणात्कथं शरीरावयवेत्युक्तमित्यत आह&ndash; सूत्रे इति। शीरतादात्म्यापन्नस्यैव कर्तृतया शरीरस्य कर्तृस्थ्तवं न संभवति। शरीरावयवानां तु समवायेन आधारतया तत्संभवतीति भावः। ननु क्रोधापगमस्य क्रोध विषयशत्रुगताऽनिष्टपरिहारफलकत्वाञ्ञित्वेऽप्यात्मनेपदऽप्राप्तेस्तद्विध्यर्थत्वात्कथमुक्तनियमार्थत्वमस्य सूत्रस्येत्यत आह&ndash; तत्फलस्येत्यादि। गडुं विनयतीति। कर्मणो गडोः शरीरावयवत्वान्नात्मनेपदमित्यर्थः। कथं तर्हीति। पौरुषस्य कर्मणः शरीरावयवभिन्नतया आत्मनेपदप्रसङ्गादिति भावः। कर्तृगामित्वेति। कर्तृस्थे कर्मणि नियः कर्तृगे फले ञित्त्वात् प्राप्तमात्मनेपदं शरीरावयवभिन्न एवेति नियम्यते, ननु विधीयते। अत्र तु फलस्य कर्तृगामित्वं सदपि न विवक्षितम्, अतो नात्मनेपदमिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.8.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.8";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.9\",\"Previous\":\"8.2.7\",\"अकारादिक्रमसङ्ख्या\":2024,\"कौमुदीक्रमसङ्ख्या\":352,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"न-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न ङिसम्बुद्ध्योः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.8.md">Edit 8.2.8!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.8";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.9\",\"Previous\":\"8.2.7\",\"अकारादिक्रमसङ्ख्या\":2024,\"कौमुदीक्रमसङ्ख्या\":352,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"न-लोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न ङिसम्बुद्ध्योः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.8 न ङिसम्बुद्ध्योः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>चर्मन्()</code> इति। <code>सुपां सुलृक्()</code> (7.1.39) इति ङेर्लुक्()। ननु च सुराजन्निति प्रातिपदिकसंज्ञा हि विद्यते, प्रत्ययलक्षणेन (1.1.61) <code>अप्रत्ययः</code> (1.2.45) इति न प्रतिषेधात्()। <code>आद्र्रे चर्मन्()</code> इति। अत्र तु न केवल प्रातिपदिकसंज्ञा पूरवोक्तादेव हेतोर्नास्ति; प्रत्ययलक्षणेन प्रवृत्तया भसंज्ञया बाधितत्वात्()। अतो नलोपप्राप्तिर्मास्त्येवेत्यर्थः।
 कथं प्रतिषेधः? इत्यत आह&ndash;<code>एतस्मादेव</code> इत्यादि। <code>भसंज्ञा च न भवति</code> इति। अत्राप्येतस्मादेव प्रतिषेधवचनात्? प्रत्ययलक्षणेन च ज्ञाप्यत इति सम्बध्यते। <code>तथा च</code> इत्यादिना ज्ञापनप्रयोजनं दर्शयति तदेवमेतस्मात्? प्रतिषेधादर्थद्वयं ज्ञाप्यते। एवञ्च कृत्वा&ndash;राजपुरुष इत्यत्र प्रातिपदिकसंज्ञायां सत्यां नलोपश्च भवति। भसंज्ञायामसत्यां <code>अल्लोपोऽनः</code> (6.4.134) इत्यलोपश्च न भवति। न भसंज्ञाभावन्चेत्यस्येह <code>यथोद्देर्श संज्ञापरिभाषम्()</code> (व्या।प।५९) इत्यस्मिन्? दर्शने प्रयोजनं वेदितव्यम्()। <code>कार्यकालं हि संज्ञापरिभाषम्()</code> (व्या।प।५८) इत्यस्मिन्? दर्शने भसंज्ञायामङ्गकार्यं भवतीति <code>न लुमताङ्गस्य</code> (1.1.62) इति प्रत्ययलक्षणप्रतिषेधादेव भसंज्ञा न भवतीति नार्थस्तत्र भसंज्ञाया अभावज्ञापनेन।
 <code>ङावुत्तरपदे</code> इत्यादिनायं ङौ परतो नलोपप्रतिषेधस्य प्रतिषेध उक्तः। तस्योत्तरपदे परतो यो ङिस्तत्र प्रतिषेधो वक्तव्यः। <code>वक्तव्यः</code> इति। व्याख्येय इत्यर्थः। तत्रेदं व्याख्यानम्()&ndash;<code>स्वरितो दानुदात्तं पदादौ</code> (8.2.6) इत्यतः <code>वा</code> इत्यनुवत्र्तते, सा च व्यवस्थितविभाषा, तेन ङावुत्तरपदे न भविष्यतौति। <code>चर्मणि तिला अस्य चर्मतिलः</code> इति। वैयधिकरण्येऽपि गमकत्वात्? समासः। ननु चात्यल्पमिदमुच्यते&ndash;ङावुत्तरपदे प्रतिषेधो वक्तव्य [अयं भागः का। मुद्रितपूस्तके नास्ति] इति। सम्बुद्धावपि ह्रुत्तरपदे प्रतिषधो [अयं भागः का। मुद्रितपूस्तके नास्ति] वक्तव्य एव; अन्यथा हि हे राजन्? वृन्दारकेति विगृह्र <code>वृन्दारकनागकुञ्जरैः</code> (२।१।६२) इति समासे कृते हेराजन्? वृन्दारकेत्यत्र नलोपो न स्यात्()? इत्यत आह&ndash;<code>हे राजन्? वृन्दारकेत्यत्र तु</code> इत्यादि। समानार्थेन वाक्येन समासेन भवितव्यम्(), एवं हि सामथ्र्यं भवति, नान्यथा। तथा चोक्तम्()&ndash;ग्रहणवाक्यार्थाभिधाने यः शक्तः स समर्थो वेदितव्य इति। यश्चेहार्थो हे राजन्? वृन्दारकेति वाक्येन गम्यते, स न ज्ञायते&ndash;हे राजवृन्दारकेति समासेन। वाक्येन ह्रेकार्थीभावाभावात्? सम्बोधनं गम्यते, समासे तु विपर्ययात्? समुदायार्थः सम्बोधनम्()। तस्माद्राजा चासौ वृन्दारकश्चेत्येवमेव विगृह्र समासः कत्र्तव्यः, ततः सम्बुद्धिः, एवञ्च सम्बुद्ध्यन्तं पूर्वपदम्()। हे राजन्? वृन्दारकेत्यत्र समासो भविष्यत्येव; ततश्चोत्तरपदे परतः सम्बुद्धेरभावान्नलोपप्रतिषेधस्य प्राप्तिरेव नास्तीति नार्थस्ततप्रतिषेधेन।
@@ -132,9 +144,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

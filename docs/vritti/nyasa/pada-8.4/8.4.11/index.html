@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.4\/8.4.11.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.4.11";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.4.12\",\"Previous\":\"8.4.10\",\"अकारादिक्रमसङ्ख्या\":2539,\"कौमुदीक्रमसङ्ख्या\":1055,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"प्रातिपदिकान्तनुम्विभक्तिषु च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.4/8.4.11.md">Edit 8.4.11!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.4.11";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.4.12\",\"Previous\":\"8.4.10\",\"अकारादिक्रमसङ्ख्या\":2539,\"कौमुदीक्रमसङ्ख्या\":1055,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"णत्वम्\",\"सूत्रम्‌\":\"प्रातिपदिकान्तनुम्विभक्तिषु च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.4.11 प्रातिपदिकान्तनुम्विभक्तिषु च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अन्तशब्दोऽवयवववाची। <code>माषवापिणौ</code> इति। <code>बहुलमाभीक्ष्ण्ये</code> (3.2.81) इति णिनिः, न तु <code>सुप्यजाती णिनिस्ताच्छील्ये</code> (3.2.78) इति; जातिवाचित्वादुपपदस्य। <code>माषवापाणि</code> इत्युपपदसमासः, माषान्? वपन्तीति <code>कर्मण्यण्()</code> (3.2.1), <code>जश्शसोः शिः</code> (7.1.20) इति शिरादेशः; <code>नपुंसकस्य झलचः</code> (7.1.72) इति नुम्(), <code>सर्वनामस्थाने चासम्बुद्धौ</code> (6.4.8) इति दीर्घः। <code>माषवापेण</code> इति। माधवापशब्दात्? तृतीयैकवचनस्य <code>टाङसिङसामिनात्स्याः</code> (7.1.12) इतीनादेशः।
 अथह कस्मान्न भवति&ndash;गर्गाणाअं भगिनो गर्गभगिनीति, अत्रापि गर्गशब्दात्? परो भगिन्नित्येष शब्दः प्रातिपदिकम्(), तस्य चान्तो नकारो भवतीत्यस्ति प्राप्तिः? इत्यत आह&ndash;<code>पूर्वपदाधिकारात्()</code> इत्यादि। <code>पूर्वपदात्संज्ञायामगः</code> (8.4.3) इत्यतः <code>पूर्वपदात्()</code> इत्यनुवत्र्तते, पूर्वशब्दस्य सम्बन्दिशब्दत्वात्(), यदपेक्षया तस्य पूर्वपदत्वं तदेवोत्तरपदमुपस्थापयति। तेन यद्यपीह प्रातिपदिकस्य विशेषो नोपात्तः, तथाप्युत्ततरपदं यत्? प्रातिपदिकं तदन्तस्य नकारस्यैव णकारादेशो भवति। <code>इह हि न भवति</code> इति। हिशब्दो हेतौ। यस्मात्? पूर्वपदाधिकारादुत्तरपदं यत्? प्रातिपदिकं तदन्तस्यैव नकारस्य णत्वं विज्ञायते, तस्माद्गर्गभगिनीत्यत्र न भवति। न ह्रत्र भगिन्नित्येतच्छब्दरूपमृत्तरपदम्(), किं तर्हि? भगिनीत्येव शब्दः, स च प्रातिपदिकं न भवति; <code>अप्रत्ययः</code> (1.2.45) इति निषेधात। न च तस्यान्तो नकारः, किं तर्हि? ईकारः।
 ननु गर्()गभगिणीत्ययमपि च प्रयोगो दृशर्()यते, स चैवं सति नोपपद्यते? इत्यत आह&ndash;<code>यदा तु</code> इत्यादि। यदा तु गर्गाणां भगिनीत्येवं व्युत्पत्तिः, तदा न भवितव्यं णत्वेन। यदा तु गर्गस्य भग इति भगशब्देन षष्ठीसमासं कृत्वा, ततः स्त्रियां मत्वर्य इञिः&ndash;इति व्युत्पाद्यते, तदैवं व्युत्पत्तौ सत्यां यथा मातृभोगीण इत्यत्र नित्यं णत्वं भवति, तता गर्गभगिणीत्यत्रापि णत्वेन भवितव्यम्()। <code>मातृभोगीणवत्()</code> इत्यनेन तदापि नानेन सूत्रेण वा णत्वम्(), किं तर्हि? लक्षणान्तरेणेति दर्शयति। तेनैतदुक्तं भवति&ndash;यदैवं व्युत्पत्तिर्भवति तदा यथा मातृबोगीण इत्यत्र अट्कुप्वादिना (8.4.2) नित्यं तद्धितस्य नकारस्य णत्वं भवति; तथा गर्गभगिणीत्यत्रापि। अत्र तद्धितस्थ एव नकारः, न तूत्तरपदस्थः। अत एव भिन्नपदस्थता निमित्तनिमित्तिनोर्नाशङ्कनीया। यथा <code>पूर्वपदात्संज्ञायामगः</code> (8.4.3) इत्यनेन नियमेन णत्वं न निवर्त्त्यते, तथा तत्रैव प्रतिपादितम्()।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

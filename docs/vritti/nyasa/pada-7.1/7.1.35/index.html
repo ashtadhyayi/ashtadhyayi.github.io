@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.1\/7.1.35.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.1.35";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.1.36\",\"Previous\":\"7.1.34\",\"अकारादिक्रमसङ्ख्या\":1761,\"कौमुदीक्रमसङ्ख्या\":2197,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तुह्योस्तातङाशिष्यन्यतरस्याम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.1/7.1.35.md">Edit 7.1.35!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.1.35";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.1.36\",\"Previous\":\"7.1.34\",\"अकारादिक्रमसङ्ख्या\":1761,\"कौमुदीक्रमसङ्ख्या\":2197,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"प्रत्ययादेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तुह्योस्तातङाशिष्यन्यतरस्याम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.1.35 तुह्रोस्तातङाशिष्यन्यतरस्याम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>जोवताद्भवान्()</code> इति। <code>आशिषि लिङ्लोटौ</code> (३।३।१७३) इति लोट्? तिप्(), शप्? <code>एरुः</code> (3.4.86) इत्युत्वम्(), तस्य तुशब्दस्य तातङ्()। जीवतात्त्वम्()<code>इति। सिप्(),</code>सेह्र्रपिच्च<code>(3.4.87) इति हिरादेशः; तस्य तातङ्।</code>जीव त्वम्()<code>इति।</code>अतो हेः<code>(6.4.105) इति हेर्लुक्()। अथ जीवतात्? त्वमित्यत्र स्थानिवद्भावेन तातङो हिग्रहणेन ग्रहणाल्लुक्कस्मान्न भवति?</code>हुझल्भ्यो हेर्घिः (6.4.101) इत्यतो हेरित्यनुवत्र्तमाने पुनः <code>अतो हेः</code> (6.4.105) इति ग्रहणात्()। तस्य ह्रेतत्? प्रयोजनम्()&ndash;हिरूपावस्थितस्यैव हेर्लुग्यथा स्यात्()। स्थानिवद्भावेन यच्छब्दान्तरं हिग्रहणेन गृह्रते तस्य मा भूत्()।
 अथ <code>ङिच्च</code> (१।१।५३) इति वचनात्? तातङ्यमन्त्यस्य कस्मान्न भवति? इत्याह&ndash;<code>ङित्करणम्()</code> इत्यादि। गणप्रतिषेधार्थम्()&ndash;ब्राऊयात्? भवानित्यत्र। वृद्धिप्रतिषेधार्थम्()&ndash;मृष्टादित्यत्र। इतिकरणो हेतौ। यस्माद्गुणवृद्धिप्रतिषेधार्थं ङित्करणं तस्मात्सर्वादेशस्तातङ् भवति। यदि हि तस्यान्यत्? प्रयोजनं न स्यात्(), स्यादेवान्त्यस्य तातङ्()। अस्ति च तस्यान्यत्? प्रयोजनं गुणवृद्धिप्रतषेधः। तस्मिन्? सति किं <code>ङिच्च</code> (1.1.52) इत्यन्त्यस्य भवतु, अथ <code>अनेकाल्शित्सर्वस्य</code> (१।१।५५) इति सर्वस्य वा? तत्र परत्वात्? सर्वादेशेनैव युक्तं भवितुम्()। तस्मात्? <code>अनेकाल्शित्सर्वस्य</code> (१।१।५५) इति सर्वस्य वा? तत्र परत्वात्? सर्दादेशेनैव युक्तं भवितुम्()। तस्मात्? <code>अनेकाल्शित्सर्वस्य</code> (1.1.54) इति सर्वस्यैव स्यादिति सर्वादेशो भवति। ननु च तुस्थानिकस्य तातङः स्थानिवदभावेन पित्त्वं प्राप्नोति; ततश्च हलि पिति सार्वधातुके यता ब्रावीत्वित्यत्रेङ् भवति, तथा ब्राऊताद्भवानित्यत्राणीटा भवितव्यम्()?&ndash;एतच्चोद्यमपाकत्र्तमाह&ndash;<code>ङित्त्वाच्च</code> इत्यादि। अस्येति तातङः। किं कारणं निवर्तते? इत्याह&ndash;<code>ङिच्च</code> इत्यादि। चकारो हेतौ। तुस्थानिकस्य तातङो नाप्राप्ते पित्त्वे ङित्त्वमारभ्यत इति ङित्त्वेन हि पित्त्वं बाध्यते। तथासौ ङिद्भवत यदि स्थानिवद्भावेन प्राप्तं पित्त्वं निवत्र्तते। <code>तेन</code> इत्यादि। यत एवं पित्त्वं निवत्र्तते तेन पित्त्वाश्रय ईण्न भवति। ग्रामं गच्छतु भवान्()। त्वं गच्छेति। <code>लोट्? च</code> (3.3.62) इति बिध्यादौ लोट्()॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

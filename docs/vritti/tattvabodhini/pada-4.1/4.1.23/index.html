@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-4.1\/4.1.23.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.23";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.24\",\"Previous\":\"4.1.22\",\"अकारादिक्रमसङ्ख्या\":1047,\"कौमुदीक्रमसङ्ख्या\":481,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"काण्डान्तात्‌ क्षेत्रे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-4.1/4.1.23.md">Edit 4.1.23!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.23";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.24\",\"Previous\":\"4.1.22\",\"अकारादिक्रमसङ्ख्या\":1047,\"कौमुदीक्रमसङ्ख्या\":481,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"काण्डान्तात्‌ क्षेत्रे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.23 काण्डान्तात्क्षेत्रे
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>काम्ढान्तात्। षोडशहस्तप्रमाणो दण्डः काण्डम्। यद्यपि विशेषणेन तदन्तविधिः सिद्धः, तथाप्यसत्यन्तग्रहणे <code>क्षेत्रे</code>इत्येतत् श्रुतत्वात्काण्डस्यैव विशेषणं स्यान्न तु काण्डान्तस्य। ततश्च द्वाभ्यां काण्डाभ्यां=काण्डप्रमिताभ्यां क्रीता <code>द्विकाण्डी वडवे</code>त्यत्र निषेधः स्यात्। इह तु निषेधो न स्यात्&ndash;<code>द्विकाण्?डा क्षेत्र भक्ति</code>रिति। अत्र हि काण्डं प्रमाणे वर्तते, काण्डान्तस्तु क्षेत्रे, अतोऽन्तग्रहणं कृतम्। इह <code>द्विगो</code>रित्यनुवर्तते <code>न तद्धितलुकी</code>ति च, तदाह&ndash;द्विगुस्ततो न ङीबत्यादि। मात्रच इति।<code>द्वयसचो लु</code>गिति प्राचोक्तं नादर्तव्यम्। <code>प्रथमश्च द्वितीयश्च ऊर्ध्वमाने मतौ ममे</code>ति सिद्धान्तादिति भावः। द्विकाण्डी रज्जुरिति। द्वे काण्डे प्रमाणमस्याः। पूर्ववत्ताद्धितलुक्। द्विगोः&rsquo;इति ङीप्। नन्विहापरिमाणान्तादिति पूर्वेण निषेधः स्यात्, काण्डशब्दस्यायामपरतया अपरिमाणार्थत्वात्, परितः सर्वत आरोहतः परिणाहतश्च येन मीयते तद्धि परिमाणम्&ndash;आढककुडवादि, नतु यथाकथञ्चिच्परिच्छेदकमात्रम्। यदाहुः&ndash;<code>ऊर्ध्वमानं किलोन्मानं परिमाणं तु सर्वतः। आयामस्तु प्रमाणं स्यात्सङ्ख्या बाह्या तु सर्वतः</code>इति। अतएव <code>द्विहस्ता भित्ति</code>रित्यत्र ङीम्न भवतीति चेदत्रीहुः&ndash;नियमार्थमिदं <code>क्षेत्र एव निषेधा यथा स्या</code>दिति। तथा च <code>द्विकण्डी रज्जु</code>रित्यत्र ङीबेव सूत्रारम्भस्य फलमिति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

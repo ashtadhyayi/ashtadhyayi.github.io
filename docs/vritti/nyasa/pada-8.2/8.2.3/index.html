@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.3.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.3";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.4\",\"Previous\":\"8.2.2\",\"अकारादिक्रमसङ्ख्या\":2053,\"कौमुदीक्रमसङ्ख्या\":439,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न मु ने\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.3.md">Edit 8.2.3!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.3";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.4\",\"Previous\":\"8.2.2\",\"अकारादिक्रमसङ्ख्या\":2053,\"कौमुदीक्रमसङ्ख्या\":439,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"न मु ने\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.3 न मु ने।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>मु</code> इत्यविभक्तिकोऽयं निर्देशः। <code>अमुना</code> इति। अदसस्त्यदाद्यत्वम्(), <code>अदसोऽदेर्दादु दो मः</code> (8.2.80) इत्युत्वमत्वे, <code>अच्च घेः</code> (7.3.118) इत्यतः <code>घेः</code> इत्यनुवत्र्तमान <code>आङी नास्त्रियाम्()</code> (7.3.119) इति नाभावः। यदि मुभावो नाभावे कत्र्तव्ये नासिद्धो भवति&ndash;इत्येव सूत्रार्थः स्यात्(), एवं सति नाभावे कृते यत्? कार्यं प्राप्नोति तत्र तस्यासिद्धत्वं न स्यात्(), ततश्चामुनेत्यत्राकारान्तस्याङ्गस्य <code>सुपि च</code> (७।३।१०२) इति विधीयमानं दीर्घत्वं प्रसज्येत? इत्यत आह&ndash;<code>कृते तु नाभावे</code> इत्यादि। ह्यस्वसन्निपातेन हि नाभावो ह्यस्वस्य विघातं प्रति निमित्तं न भवतीति सत्यप्यसिद्धत्वे न भवति दीर्घत्वप्रसङ्गः।
 <code>अथ वा</code> इत्यादि। यथैकेन हि क इतो धावतीति पृष्टोऽपरेणापि किंवर्णो धावतीति प्रश्ने कश्चिन्निपुणमतिस्तन्त्रेण वाक्यद्वयमुत्तरयति&ndash;()ओतो धावतीति, तथेहापि योगद्वयमेतत्? तन्त्रेणोच्चरितम्()। तत्र द्वितीयस्य योगस्य न परतो यत्? प्राप्नोति तस्मिन्? कत्र्तव्यं भुभावो नासिद्ध इत्येव सूत्रार्थः। तेन दीर्घत्वं न भविष्यति।
 एकस्मिन्नेव योगे दीर्घत्वप्राप्तिमपाकर्त्तुमाह&ndash;<code>अथ वा</code> इत्यादि। ननु चास्मिन्? सूत्रार्थे ने कर्त्व्ये मुभावस्य यत्? सिद्धत्वं तत्? सूत्रेण संगृहीतं स्यात्(), ततश्च नाभाव एव तावन्न प्राप्नोति, कुतः पुनस्तस्मिन्? परतो यत्? प्राप्नोति तस्मिन्? कत्र्तव्ये मुभावस्यासिद्धत्वम्()? इत्याह&ndash;<code>ने तु कत्र्तव्ये</code> इत्यादि। यथा पुत्रा मे बहुक्षीरघृतमोदनं सुवर्णापात्र्यां भुञ्जोरन्निति वरं प्रार्थयमानया वृद्धकुमार्या अर्थतः पतिः पुत्रा गावो धनं संगृहीतम्(), एवमिहापि ने परतो यत्? कार्यं प्राप्नोति तस्मिन्? कत्र्तव्ये मुभावस्य सिद्धत्वं ब्राउवता ने कत्र्तव्ये मुभावस्यासिद्धत्वं नाश्रितम्()। <code>तेन</code> इत्यष्दि। यस्मादेव एव वाक्यार्थः&ndash;ने कत्र्तव्ये मुभावस्य यत्? सिद्धत्वं तदर्थतो गृहीतम्(), तेन हेतुना नाभावश्च भवति, दीर्घत्वञ्च न भवतीति।
@@ -147,9 +159,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

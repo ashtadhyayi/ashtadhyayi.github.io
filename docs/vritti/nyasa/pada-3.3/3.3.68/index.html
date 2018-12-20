@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.3\/3.3.68.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.3.68";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.3.69\",\"Previous\":\"3.3.67\",\"अकारादिक्रमसङ्ख्या\":2493,\"कौमुदीक्रमसङ्ख्या\":3245,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"भावे अकर्तरि\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"प्रमदसम्मदौ हर्षे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.3/3.3.68.md">Edit 3.3.68!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.3.68";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.3.69\",\"Previous\":\"3.3.67\",\"अकारादिक्रमसङ्ख्या\":2493,\"कौमुदीक्रमसङ्ख्या\":3245,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"भावे अकर्तरि\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"प्रमदसम्मदौ हर्षे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.3.68 प्रमदसंमदौ हर्षे।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ननु च <code>मदः</code> (३।३।६७) इत्यनुवत्र्तते, तत्र प्रसंभ्यामिति वक्तव्यम्, एवमप्यभीष्टं सिध्यत्येव,त()त्क निपात्यते? इत्यत आह&ndash; <code>प्रसंभ्याम्</code> इत्यादि। रूढिशब्देनेह प्रमदसंमदाभ्यामन्यस्याश्रुतत्वादनयोश्च रूढिशब्दत्वादेतादेव विवक्षितताविति गम्यते। अवधारणञ्चेह द्रष्टव्यम्, सावरधारणत्वात् सर्ववाक्यानाम्। तेन रूढ()र्थं निपातनम्। प्रमदसम्मदशब्दार्थमेवैषोऽर्थः सम्पद्यते। अनेन सूत्रेण <code>प्रमदसम्मदौ</code> इत्यनयोरेव रूढिशब्द्योव्र्युत्पत्तिर्यथा स्यान्न शब्दान्तराणामित्यवमर्थं निपातनमिति यावत्। यदि हि मदिग्रहणमनुवर्त्त्य प्रसंभ्यामित्येतावदुच्येत, तर्हि यदापि प्रसंभ्यां समस्ताभ्यामुत्तरो मदिर्भविष्यति तदापि प्रत्ययः स्यात्। तथा यदा प्रसमावन्यस्मादुपसर्गात् परौ भवतः प्रसंभ्यञ्च परो मदिर्भवति तदापि स्यात्। ततश्च प्रसम्मदः, अभिप्रसम्मदः, प्रनिसम्मदः&ndash; इत्येवमाद्यरूढिशब्दार्थमपि सूत्रं स्यात्, न प्रमदसम्मदार्थमेव। निपातने तु सति नियमो विज्ञायते&ndash; प्रत्येकमेवेतौ;न समस्तौ, नाप्यन्योपसर्गसहिताविति। तेन रूढ()र्थं सूत्रं सम्पद्यते॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.4\/6.4.51.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.51";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.52\",\"Previous\":\"6.4.50\",\"अकारादिक्रमसङ्ख्या\":1585,\"कौमुदीक्रमसङ्ख्या\":2313,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"णेर् लोपः\",\"विषयः २\":\"आर्धधातुके\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"णेरनिटि\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.4/6.4.51.md">Edit 6.4.51!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.51";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.52\",\"Previous\":\"6.4.50\",\"अकारादिक्रमसङ्ख्या\":1585,\"कौमुदीक्रमसङ्ख्या\":2313,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"णेर् लोपः\",\"विषयः २\":\"आर्धधातुके\",\"विषयः ३\":\"अङ्गस्य\",\"सूत्रम्‌\":\"णेरनिटि\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.51 णेरनिटि।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>णेः</code> इति। णिङणिचोर्विशेषकरावनुबन्धावुबन्धावुत्सृ()ज्य यत्? समान्यं णिमात्रं तस्य ग्रहणम्()। इयङादिभिः सर्वस्य विषयस्यावष्टब्धत्वादनवकाशीऽयं णिलोपस्तेषामपवादोऽयं विज्ञायत इत्यत आह&ndash;<code>इयङ्यण्()</code> इत्यादि। <code>अततक्षत्(), अररक्षत्()</code> इति। तक्षिरक्षिभ्यां हेतुमण्णिच्(), तदन्तालुङ्? <code>णिश्रिदुरुआउभ्यः (3.1.48) इत्यादिना च्लेश्चङ्(), ङित्त्वाद्? गुणस्य प्रसङ्ग एव नास्तीतीयङादेशः स्यात्()। अतस्तस्यापवादो णिलोपः।</code>आटिटत्(), आशिशत्()<code>। अट()शिभ्यां पूर्वं णिजादिषु कृतेषु</code>अजादेर्द्वितीयस्य<code>(6.1.2) इति टिशब्दशिशब्दौ द्विरुच्येते। अत्र</code>एरनेकाचः<code>(6.4.82) इत्यादिना प्राप्तस्य यणादेशस्यायमपवादः।</code>कारणा, हारणा<code>इति। अत्र</code>सार्वधातुकार्धधातुकयोः<code>(7.3.84) इति प्राप्तस्य गुणस्य।</code>कारकः, हारकः<code>इति। अत्र</code>अचो ञ्णिति<code>(7.2.115) इति वृद्धेः।</code>कार्यते, हार्यते<code>इति। अत्र</code>अकृत्सार्वधातुकयोः<code>(7.4.25) इति प्राप्तस्य दीर्घस्य।</code>ज्ञीप्सति<code>इति।</code>अज्झनगमां सनि<code>(6.4.16) इति प्राप्तस्य दीर्घस्यैव। जानातेर्णिचि</code>अर्त्तिह्यी<code>(7.3.36) इत्यादिना पुक्(),</code>मारणतोषणनिशामनेषु ज्ञा<code>(धा।पा।८११) इति घटादिपाठात्?</code>घटादयो मितः<code>(ग।सू।धा।पा।८१७) इति मित्संज्ञा,</code>मितां ह्यस्वः<code>(6.4.92) इति ह्यस्वत्वम्(),</code>अत्र लोपोऽभ्यासस्य<code>(7.4.58) इत्यभ्यासलोपः। 
 </code>कारयिता, हारयिता<code>इति।</code>अनिटि<code>इति वचनादिह न भवति।</code>अनिटि<code>इति शक्यमकर्तुम्()। कथम्()?</code>निष्ठायां सेटि<code>(6.4.52) इति नियमार्थं भविष्यति--निष्ठायामेव सेटि, नान्यत्रेति? अयुक्तमेतत्(), विपरीतनियमोऽप्याशङ्क्येत--</code>सेट()एव निष्ठायाम्()<code>इति। तथा च सति</code>कारयिता<code>इत्यत्र स्यादेव णिलोपः। तस्माद्विपरीतनियमाशङ्कानिरासार्थं</code>अनिटि` इत्युक्तम्()॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

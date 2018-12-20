@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-7.3\/7.3.3.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.3";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.4\",\"Previous\":\"7.3.2\",\"अकारादिक्रमसङ्ख्या\":2058,\"कौमुदीक्रमसङ्ख्या\":1098,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"न य्वाभ्यां पदान्ताभ्याम् पूर्वौ तु ताभ्यामैच्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-7.3/7.3.3.md">Edit 7.3.3!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.3";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.4\",\"Previous\":\"7.3.2\",\"अकारादिक्रमसङ्ख्या\":2058,\"कौमुदीक्रमसङ्ख्या\":1098,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वृद्धि-प्रकरणम्\",\"विषयः २\":\"तद्धितेषु किति\",\"विषयः ३\":\"ञ्णिति\",\"सूत्रम्‌\":\"न य्वाभ्यां पदान्ताभ्याम् पूर्वौ तु ताभ्यामैच्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.3 न य्वाभ्यां पदान्ताभ्यां पूर्वौ तु ताभ्यामैच्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>न य्वाभ्यां। य्च वश्च य्वाविति विग्रहः। वकारादकार उच्चारणार्थं। तदाह&ndash;यकारवकाराभ्यामिति। <code>परस्ये</code>त्यध्याहारलभ्यम्। न वृद्धिरिति। <code>मृजेर्व-द्धि</code>रित्यतस्तदनुवृत्तेरिति भावः। <code>तु</code> शब्दो विशेषप्रदर्शनार्थ इत्याह&ndash;किंत्विति। ताभ्यामिति। यकारवकाराभ्यामित्यर्थः। पूर्वाविति। पूर्वावयवावित्यर्थः। तेन आगमत्वं लभ्यते। तदाह&ndash;ऐचावागमाविति। ऐच्&ndash;प्रत्याहारः। यथासङ्ख्यं यकारात्पूर्व ऐकारः, वकारात्पूर्व औकारः। वैयासकिरिति। वेदान्व्यस्यति=विवधमस्यति&ndash;शाखाभेदेन विभजतीति वेदव्यासः। कर्मण्यण्। अत्र नामैकदेशग्रहणम्। व्यासस्यापत्यमिति विग्रहः। इञ्प्रत्ययः। प्रकृतेरकडादेशः। अत्र यकारः पदान्तः। तस्मात्परस्य आकारस्य पर्जन्यवल्लक्षणप्रवृत्त्या आदिवृद्धिः प्राप्ता न भवति, किंतु यकारात्पूर्व ऐकार आगमः। वैयसकिरिति रूपम्। स्व�आस्यापत्यं सौव�इआरित्यत्र वकारात्परस्य न वृद्धिः, किन्तु ततः पूर्व औकारः। नच ऐचो वृद्द्यापवादत्वादेव वृद्ध्यभावसिद्धेस्तन्निषेधो व्यर्थ इति वाच्यं, यत्र य्वाभ्यां परस्य प्रसक्ताया वृद्धेर्निषेधस्तत्रैव ऐजागमाविति विषयनिर्देशार्थत्वात्। तेन दाध्य�इआरित्यादौ न। वृद्धिनिषेधोऽयं येन नाप्राप्तिन्यायेन आदिवृद्धेरेव। तेन द्वे अशीती भृतो <code>द्व्याशीतिक</code> इत्यत्र <code>सङ्ख्यायाः संवत्सरसङ्ख्यस्य च</code> इत्युत्तरपदवृद्धिर्भवत्येव। वरुडादयो जातिविशेषाः। वारुडकिः। नैषादकिः। चाण्डालकिः। बैम्बकिः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

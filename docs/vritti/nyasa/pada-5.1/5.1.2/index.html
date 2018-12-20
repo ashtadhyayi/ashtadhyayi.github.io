@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.1\/5.1.2.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.1.2";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.1.3\",\"Previous\":\"5.1.1\",\"अकारादिक्रमसङ्ख्या\":695,\"कौमुदीक्रमसङ्ख्या\":1662,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राक् क्रीताच्छः। यत्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"उगवादिभ्योऽत्‌\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.1/5.1.2.md">Edit 5.1.2!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.1.2";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.1.3\",\"Previous\":\"5.1.1\",\"अकारादिक्रमसङ्ख्या\":695,\"कौमुदीक्रमसङ्ख्या\":1662,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"प्राक् क्रीताच्छः। यत्\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"उगवादिभ्योऽत्‌\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.1.2 उगवादिभ्यो यत्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>उगिति प्रत्याहारग्रहणं वा स्यात्? उवर्णग्रहणं वा? तत्राद्ये पक्षेऽयं वाक्यार्थो जायते-उगन्तेभ्यः प्रातिपदिकेभ्योऽवादिभ्योऽवकारादिभ्योऽवसुप्रभृतिभ्य इति। वकारादीन्? वर्जयित्वेत्यर्थः। ननु चैवं सति पञ्चम्या निर्देशः स्यात्()? नैष दोषः; <code>सुपां सुलुक्()</code> (7.1.39) इति लुका निर्दष्टत्वात्()। एवं तर्हि प्रातिपदिकेषु गवादिपाठसामथ्र्यात्? प्रत्याहारग्रहणं न भवति; अन्यथा हि गवादीनां पाठोऽनर्थकः स्यात्()। एतत्? सर्वं मनसि कृत्वाऽ‌ऽह-<code>उवर्णान्तात्()</code> इति। सर्वत्रग्रहणे तदन्तविधेरभ्युपगमादित्यभिप्रायः। <code>शङ्कव्यम्()</code> इति। <code>ओर्गुणः</code> (6.4.146) <code>वान्तो यि प्रत्यये</code> (6.1.76) इत्यवादेशः। <code>सनङगुः</code> इत्यादि। चर्मविकारलक्षणस्याञोऽव काशाः&ndash;वाध्र्रम्(), वारत्रम्(), उवर्णान्तलक्षणस्य यतोऽवकाशः&ndash;शङ्कव्यम्? पिचव्यमिति; सनङगुर्नाम चर्मविकारः, तत्रोभयप्राप्तौ परत्वात्? <code>चर्मणोऽञ्()</code> (५।१।१५) इत्यञ्? प्राप्नोति <code>तथा</code> इत्यादि।
 <code>अन्नविकारेभ्यश्च</code> इति। अपूपादिलक्षणास्य प्क्षीकस्य यतोऽवकाशः&ndash;अपूप्यास्तण्डुलाः, अपूपीया इति, उवर्णान्तलक्षणस्य स एव; चरुर्नाम हविर्विशेषः; सक्तुश्चान्नविकारः, तत उभयप्रसङ्गे परत्वात्? <code>विभाषा हविरपूपादिभ्यः</code> (5.1.4) इति हविर्लक्षणोऽन्नविकारलक्षणश्च विधिः प्राप्नोति। तदेवं सनङ्गुशब्दादञ्? प्राप्तः, चरुसक्तुशब्दाभ्यां विकल्पेन यत्(), नित्यश्चेष्यते, तदर्थं पूर्वविप्रतिषेधो भाषितव्य इति। <code>ओर्गुणः</code> (6.4.146), <code>वान्तो यि प्रत्यये</code> (6.4.79) इत्यवादेशः। <code>सनङ्गव्यम्()</code> इत्यादि। एतच्चेष्टवाचित्वात्? परशब्दस्य लभ्यत इत्यवगन्तव्यम्()।
 <code>गवादिषु नाबि नभञ्चेति पठ()ते</code> इति। अत्र कस्यचिदियमाशङ्का स्यात्()&ndash;भसंज्ञाप्रतिषेदो विधियत ति, ततश्च यस्येति लोपेन भवितव्यमित्यत आह&ndash;<code>नाभिशब्दो यत्प्रत्ययम्()</code> इति। शरीरावयवो यो नाभिशब्दस्तत्र कथं भवितव्यमित्याह&ndash;<code>यस्तु</code> इत्यादि। ततः शरीरावयवाद्यति कृते परत्वात्? <code>नाभ्यं तैलम्()</code> इति। ननु च शरीरावयवलक्षणे यति सति नभभावः कस्मान्न भवतीतियाह-<code>गवादिषु यता</code> इत्यादि। स हि गवादियता सह विहितः। तेन <code>सन्नियोगशिष्टानामन्यतराबाव उभयोरप्यभावः</code> (व्य।प।४८) इति नभभावो न भवति।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

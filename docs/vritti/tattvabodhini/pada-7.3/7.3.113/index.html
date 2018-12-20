@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-7.3\/7.3.113.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.3.113";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.3.114\",\"Previous\":\"7.3.112\",\"अकारादिक्रमसङ्ख्या\":2855,\"कौमुदीक्रमसङ्ख्या\":290,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सुप्-अङ्गकार्यम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"याडापः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-7.3/7.3.113.md">Edit 7.3.113!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.3.113";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.3.114\",\"Previous\":\"7.3.112\",\"अकारादिक्रमसङ्ख्या\":2855,\"कौमुदीक्रमसङ्ख्या\":290,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"सुप्-अङ्गकार्यम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"याडापः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.3.113 याडापः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>याडापः। <code>घेर्ङिती</code>त्यतोऽनुवृत्तं <code>ङिति</code>ति सप्तम्यन्तमाप इति पञ्चम्यनुरोधेन षष्ट�न्तं विपरिणम्यत् इत्याह&mdash;ङिद्वचनस्येति। अत्र <code>सुपि चे</code>त्यतः <code>सुपी</code>त्यमुवर्तनात्सुप एव याट्। तेन अपित्सार्वधातुकस्य ङित्त्वेऽपि मालेवाचरतो <code>मालात</code>इत्यादौ तसादेर्न भवति। एतच्च <code>अचः परस्मि</code>न्नित्यत्र पूर्वस्यविधिः पूर्वविधिरिति षष्ठीसमासपक्षाभ्युपगमेनोक्तम्। पञ्चमीसमासपक्षाभ्युपगमे तु शपः स्थानिवत्त्वेन व्यवधानात् <code>मालात्</code>इत्यादौ याटः प्रसङ्ग एव नास्तीत्याहुः। <code>य</code>डित्येव वक्तव्ये दीर्घोच्चारणं स्पष्टप्रतिपत्त्यर्थम्। न च <code>अतो गुणे</code>इति पररूपापत्तिः, अकारोच्चारणसामथ्र्यादेव तद्बाधात्। वृद्धिरेचीति। प्राचा तु <code>आटश्चे</code>त्युपन्यस्तंतदुपेक्षितम्। याट्स्याटोष्टकारस्य समुदायानुबन्धत्वेनेह आटोऽभावात्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

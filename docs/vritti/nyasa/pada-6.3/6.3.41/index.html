@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.3\/6.3.41.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.41";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.42\",\"Previous\":\"6.3.40\",\"अकारादिक्रमसङ्ख्या\":1506,\"कौमुदीक्रमसङ्ख्या\":842,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"जातेश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.3/6.3.41.md">Edit 6.3.41!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.41";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.42\",\"Previous\":\"6.3.40\",\"अकारादिक्रमसङ्ख्या\":1506,\"कौमुदीक्रमसङ्ख्या\":842,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"पुंवद्भावः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"जातेश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.41 पुंवत्कर्मधारयजातीयदेशीयेषु।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ननु च कर्मधारये <code>स्त्रियाः पुंवत्()</code> (6.3.33) इत्यादिना पुंवद्भावः सिद्धः, जातीयदेशीयशब्दयोरपि <code>तसिलादिष्वाकृत्वसुचः</code> (6.3.34) इत्यादिना, तत्? किमर्थोऽयमारंभः? इत्यत आह&ndash;<code>प्रतिषेधार्योऽयमारमभः</code> इति। परतिषेधविषयः प्रतिषेधशब्देनोक्तः। साहचर्यात्? प्रतिषेधोऽर्थः प्रयोजनं यस्येति स तथोक्तः। यत्र विषये प्रतिषेध उक्तस्तत्र पुंवद्भावः प्रयोजनमित्यर्थः। अथ वा&ndash;अर्थशब्दो निवृत्ताविह&ndash;वत्र्तते, यथा&ndash;मशकार्थो धूम इति। तेनायमर्थो भवति&ndash;प्रतिषेधनिवृत्यर्थोऽयमारम्भ इति।
 <code>भाषितपुंस्कादित्येव</code> इति। यदि <code>भाषितपुंस्कादनूङ्()</code> (6.3.33) इति च नानुवत्र्तते, तदाऽभाषितपुंस्कार्थमनूङर्थञ्चेदं वचनं स्यात्(), न प्रतिषेधार्थम्()। एवं च खट्वावृन्दारिका, ब्राहृबन्धूवृन्दारिकेत्यात्रापि पुंवद्भावः स्यात्()। तस्माद्भाषितपुंस्कादनूङित्यनुवत्र्तनीयम्()।
 <code>कुक्कुट()आदीनाम्()</code> इत्यादि। उत्तरपदस्यान्तादेरस्त्रीत्वादसामानाधिकरण्याच्च पुंवद्भावो न प्राप्नोतीत्युपसंख्यायते। <code>न वा</code> इत्यनेनोपसंख्यानं प्रत्याचष्टे&ndash; न वा वक्तव्यः, कस्मात्()? अस्त्रीपूर्वपदस्य विवक्षितत्वात्()। अस्त्रीलिङ्गस्य पूर्वपदस्य विवक्षितत्वादित्यभिप्रायः। अस्यैवार्थं विस्पष्टीकर्त्तुमाह&ndash;<code>स्त्रीत्वेन विना</code> इत्यादि। अत्र हि मयूरादिजात्यन्तरस्या निवृत्तिर्विवक्षिता। जात्यन्तरनिवृत्तिपरायां देशनायां लिङ्गविशेषोपादानमनुपकारकमेव। विनापि तेन जात्यन्तरनिवृत्तिः शक्यत एव कत्र्तम्()। तथा हि&ndash;मृगमांसमित्युक्ते अन्तरेणापि लिङ्गविशेषोपादानं जात्यन्तरसय व्यवच्छेद उपपद्यते&ndash;मृगजातिसम्बन्धि मांसम्(), नान्यजातिसम्बन्धीति। तस्मात्? स्त्रीत्वमत्रानुपकारित्वान्न विवक्षितम्(), अतः स्त्रीत्वेन विना पूर्वपदस्यार्थोऽत्रि कुक्कुटाण्डादौ जातिसामान्येन स्त्रीत्वदविशेषविहितो विवक्षित इत्यर्थः। ततश्चास्त्रीलिङ्गा एवात्र कुक्कुटादयः शब्दा अण्डादिभिः शब्दं समस्यन्त इति भावः। कः पुनरसौ पूर्वपदार्थः? कुक्कुटादिजात्या व्यवछिन्नं द्रव्यमात्रम्()।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

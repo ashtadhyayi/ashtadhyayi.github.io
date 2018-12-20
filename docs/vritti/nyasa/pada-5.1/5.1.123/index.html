@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.1\/5.1.123.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.1.123";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.1.124\",\"Previous\":\"5.1.122\",\"अकारादिक्रमसङ्ख्या\":3071,\"कौमुदीक्रमसङ्ख्या\":1787,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"त्वतलौ\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"वर्णदृढादिभ्यः ष्यञ् च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.1/5.1.123.md">Edit 5.1.123!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.1.123";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.1.124\",\"Previous\":\"5.1.122\",\"अकारादिक्रमसङ्ख्या\":3071,\"कौमुदीक्रमसङ्ख्या\":1787,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"त्वतलौ\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"वर्णदृढादिभ्यः ष्यञ् च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.1.123 गुणवचनब्राआहृणादिभ्यः कर्मणि च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>तस्येदम्()</code> (4.3.120) इति शैषिकेषु प्राप्तेषु कर्मणि ष्यञ्विधानम्(), चकारद्भावे च। <code>कर्मशब्दः क्रियावचनः</code> इत। साधनकर्मवचनशङ्कामपाकरोति। ये हि जडादिशब्दाः गुणशब्दाः, गुमवचनाः, ब्राआहृणादयश्च तेषां साधनकर्मणा सम्बन्दो न सम्भवति; क्रियावाचकत्वाभावात्()। तस्मात्? क्रियाशब्द एव कर्मशब्दः। <code>ब्राआहृणादिराकृतिगणः</code> इति। अवृत्कृतत्वात्()। <code>आदिशब्दः प्रकारे</code> [<code>प्रकारवचनः</code>&ndash;काशिका, पदमञ्जरी च] इति। एवं प्रकारेभ्यः ष्यञ्? भवतीत्येवमर्थमादिशब्दः प्रकरवचनत्वं बोधयति। यद्येवम्(), गुणवचनग्रहणं प्रातिपदिकेषु च ब्राआहृणादीनामनुक्रमणमनर्थकं स्यात्()? नानर्थकम्(); प्रपञ्चार्थ हि तत्? स्वार्थे विधानार्थञ्च। तत्र ब्राआहृणशब्दात्? <code>प्राणभृज्जाति</code> (5.1.128) इति जातिवचनत्वादञि प्राप्ते तद्बाधनार्थं ष्यञ्विधीयते। माणववाडवाभ्यां गोत्रलक्षणे वुञि।
 <code>अर्हतो नुम्? च</code> इति। अस्य नुमर्थः पाठः&ndash;अर्हन्त्यम्()। चोरधूत्र्ताभ्यां मनोज्ञादित्वाद्()वुञि प्राप्ते। आराधय, विराधय, अपराधय&ndash;इत्येतेभ्योऽपत्यविवक्षायां <code>जनपदशब्दात्? क्षत्रियादञ्()</code> (4.1.166), तस्य <code>कम्बोजाल्लुक्()</code> (4.1.173) इति लुक्()। ततो गोत्रवुञि प्राप्ते पाठः। एकभवादीनामन्यभावपर्यन्तानां स्वार्थे विधानार्थम्। अक्षेत्रज्ञशब्दस्य <code>नञ्पूर्वात्()</code> (5.1.120) इति प्रतिषेधे प्राप्ते। प्राग्बालिशशब्दात्? कुशलादीनां युदादित्वादणि प्राप्ते। बालिशशब्दो वयोवचनः, तस्माद्वयोलक्षणेऽञि प्राप्ते। अनी()आरशब्दस्य <code>न नञ्पूर्वात्()</code> (5.1.120) इति प्रतिषेधे प्राप्ते। <code>अलस</code> इति बहुव्रीहिः ष्यञमुत्पादयति, तत्पुरुषात्तु, <code>न नञ्पूर्वात्()</code> (5.1.120) इति प्रतिषेधेन भवितव्यम्(); तस्य प्रपञ्चार्थः पाठः। राजन्()शब्दस्य पुरोहितदित्वाद्यकि प्राप्ते। <code>संवादिन्()</code> <code>संवेशिन्()</code>, <code>बहुभाषिन्(),</code>शीर्षधातिन्()<code>,</code>सयस्थ<code>,</code>परमस्थ<code>,</code>दुष्पुरुष<code>--इत्येवमादीनां नञ्पूर्वार्थः पाठः।</code>गणपति<code>,</code>अधिपति<code>--इत्येतयोः पत्यन्तलक्षणे यकि प्राप्ते।</code>गडुल<code>,</code>दायाद<code>,</code>विशस्ति`&ndash;इत्येतेषां त्वतलोर्निवृत्त्यर्थः। शेषाणां प्रपञ्चार्थः। गुणवचना एके राशिः, ब्राआहृणादयो द्वितीयः, ताभ्यां भावे कर्मणि यथासंख्यं प्राप्नोति, तत्? कस्मान्न भवति? ब्राहृणादिशब्दस्याल्पाच्तरस्य परनिपातात्()। स हि लक्षणे निरपेक्षतां निर्देशस्य ज्ञापयन्? यथासंक्यलक्षणानपेक्षतामपि बोधयति, तेन यथासंख्यं न भवति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

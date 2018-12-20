@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-6.4\/6.4.134.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.134";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.135\",\"Previous\":\"6.4.133\",\"अकारादिक्रमसङ्ख्या\":374,\"कौमुदीक्रमसङ्ख्या\":234,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अङ्गलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"अल्लोपोऽनः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-6.4/6.4.134.md">Edit 6.4.134!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.134";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.135\",\"Previous\":\"6.4.133\",\"अकारादिक्रमसङ्ख्या\":374,\"कौमुदीक्रमसङ्ख्या\":234,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अङ्गलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"अल्लोपोऽनः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.134 अचः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>अचः। <code>अल्लोपोऽनः</code>इत्यतोऽल्लोप इत्यनुवर्तते, <code>भस्ये</code>ति च। तदाह&mdash;भस्याकारस्य लोपः स्यादिति। अत्र नव्याः&ndash;यद्यत्राञ्चतेर्भस्येति सामानाधिकरण्येनान्वयः स्वीक्रियते तर्हि <code>प्रतीचः</code><code>प्रतीचे</code>त्यादि न सिध्येत्। उपसर्गसहितस्यैव भत्वेन केवलस्याऽञ्चतेर्भत्वाऽभावात्। <code>भस्यावयवस्याञ्चते</code>रिति वैयधिकरण्येनान्वये तु प्रत्यगात्मनेत्यादावञ्चतेकारस्य लोपः स्यात्। <code>अञ्चत्यन्तस्य भस्याकारस्य लोप</code>इति व्याख्यानेतु <code>प्राचः</code> <code>प्रातीचे</code>प्रशब्दाकारस्यापि लोपः स्यात्। तन्त्रावृत्त्यादिनाऽञ्चत्यन्तस्य भस्याञ्चतेरकारस्येति व्याख्यानेऽपि&ndash;प्रत्यञ्चमञ्चति प्रत्यङ्। ततः शसादिषु <code>प्रत्यक्वः</code><code>प्रत्यक्चे</code>त्यादावतिप्रसङ्ग एव। तस्मात् <code>अल्लोपोऽनः</code>इत्यत्रेवात्रापि <code>अङ्गावयवोऽसर्वनामस्थानयजादिस्वादिपरो योऽञ्चतिस्तस्याऽकारस्य लोपः स्या</code>दिति व्यख्येयम्। <code>द्युप्रागपागुदक्प्रतीचः</code>इति निर्देशश्चेह व्याख्याने लिङ्गमित्याहुः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-8.3\/8.3.21.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.21";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.22\",\"Previous\":\"8.3.20\",\"अकारादिक्रमसङ्ख्या\":703,\"कौमुदीक्रमसङ्ख्या\":170,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"व/यकारस्य आदेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"उञि च पदे\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.3/8.3.21.md">Edit 8.3.21!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.21";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.22\",\"Previous\":\"8.3.20\",\"अकारादिक्रमसङ्ख्या\":703,\"कौमुदीक्रमसङ्ख्या\":170,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"व/यकारस्य आदेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"उञि च पदे\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.21 उञि च पदे
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>उञि च पदे। अपूर्वस्येति, पदस्येति, व्योरिति लोप इति चानुवर्तते। तदाह&ndash;अवर्णेति। स उ एकाग्निरिति। <code>उ</code> इति निपातः। सस् उ इति स्थिते सस्य रुः, भोभगो इत्यपूर्वत्वाद्यत्वम्। लोपश्शाकल्यस्येति विकल्पनिवृत्त्यर्थमिदम्। वकारोदाहरणं तु <code>असा उ एकाग्नि</code>रिति वृत्तिः। पदे किमिति। उञः पदत्वाऽव्यभिचारात्पदे इति तद्विशेषणस्य किं प्रयोजनमिति प्रश्नः। तन्त्रयुतमिति। तन्त्रे-उतमिति विग्रहः। अयादेशः। अत्र यकारस्य लोपनिवृत्त्यर्थं पदग्रहणमिति भावः। नन्वत्र उञ्?परकत्वाऽभावादेव लोपनिवृत्तिसम्भवात्पदग्रहणं व्यर्थमेवेत्यत आह&ndash;वेञ, इति। <code>वेञ् तन्तुसन्ताने</code> इत्यतः क्तप्रत्यये, <code>वचिस्वपियजादीनाम्</code> इति वकारस्य संप्रसारणे उकारे, पूर्वरूपे, उतमिति रूपम्। अत्र उञ्परकत्वे।ञपि तस्य उञः पदत्वाऽभावात्तस्मिन् परे यस्य लोपो न भवतीत्यर्थः। ननु स उ एकाग्निरित्यत्र उञ् प्रतिपदोक्तः, चादौ पठितत्वात्। उतमित्यत्र तु उञ् लाक्षणिकः , संप्रसारणादिविधिनिष्पन्नत्वात्। ततश्च <code>लक्षणप्रतिपदोक्तयोः प्रतिपदोक्तस्यैव ग्रहण</code>मिति परिभाषया चादिपठितस्यैव उञोऽत्र ग्रहणं भविष्यति। नतु उतमित्यत्र उञोऽपि। अतः पदग्रहणं व्यर्थमेवेत्यत आह-यदीति। उत्ररार्थमिति। ङमो ह्रस्वादचीत्यर्थमित्यर्थः। एतच्चात्रैव भाष्ये स्पष्टम्।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.2\/3.2.46.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.2.46";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.2.47\",\"Previous\":\"3.2.45\",\"अकारादिक्रमसङ्ख्या\":3537,\"कौमुदीक्रमसङ्ख्या\":2963,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मणि उपपदे कृत्\",\"विषयः २\":\"खच्\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"संज्ञायां भृतॄवृजिधारिसहितपिदमः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.2/3.2.46.md">Edit 3.2.46!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.2.46";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.2.47\",\"Previous\":\"3.2.45\",\"अकारादिक्रमसङ्ख्या\":3537,\"कौमुदीक्रमसङ्ख्या\":2963,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"कर्मणि उपपदे कृत्\",\"विषयः २\":\"खच्\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"संज्ञायां भृतॄवृजिधारिसहितपिदमः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.2.46 संज्ञायां भृतृवृधारिसहितपिदमः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>संज्ञावशात्</code> इति। संज्ञाशब्दा हि द्विविधा भवन्ति&ndash; केचिदवयवार्थानुगताः,यथा&ndash; सप्तवर्ण इति; केचित्तु विपरीताः, यथा तैलपायिकेति। तदिह यत्रावयवार्थानुगमोऽस्ति वि()आम्भरः, शत्रुन्तप इत्यादिषु , तत्र कर्मणीति सम्बध्यते&ndash; वि()आं बिभत्र्तीति वि()आम्भरः। यत्र त्ववयवार्थानुगमो नास्ति, यथा&ndash; रथन्तरं सामेति, तत्र व्यत्पत्त्यर्थं सुपीति सम्बध्यते&ndash; रथेन तरतीति, रथे तरतीति वा। <code>पतिंवरा</code> इति। <code>वृञ् वरणे</code> (धा।पा।१२५४), <code>वृङ सम्भक्त्रौ</code>(धा।पा।१५०९)। पतिं वृणीते, पतिं वृणुत इति विग्रहः। शत्रुं जयतीति <code>शत्रुञ्जयः</code>। <code>धारि</code> इति। धृञो ण्यन्तस्य ग्रहणम्। युगं धारयतीति <code>युगन्धरः</code>। पूर्वपदध्रस्वत्वम्। शत्रुं सहत इति <code>शत्रुंसहः</code>। शत्रुं तपतीति <code>शत्रुंतपः</code>। अरिं दाम्यतीति <code>अरिन्दमः</code>। यद्यपि दमिरकर्मकः, तथाप्यन्तर्भावितण्यर्थत्वात् सकर्मको भविष्यति। अरिं दमयतीत्यर्थः॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-4.1\/4.1.6.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.6";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.7\",\"Previous\":\"4.1.5\",\"अकारादिक्रमसङ्ख्या\":696,\"कौमुदीक्रमसङ्ख्या\":455,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उगितश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-4.1/4.1.6.md">Edit 4.1.6!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.6";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.7\",\"Previous\":\"4.1.5\",\"अकारादिक्रमसङ्ख्या\":696,\"कौमुदीक्रमसङ्ख्या\":455,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"उगितश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.6 उगितश्च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>उगितश्च। उक् प्रत्याहारः। उक् इद्यस्य स उगित्।<code>उगित</code> इति पञ्चम्यन्तम्, ते प्रातिपदिकादित्येतद्विशेष्यते, तदन्तविधिः। <code>उगिद्वर्णग्रहणवर्ज</code>मित्युक्तेः <code>समासप्रत्ययविधौ</code> इति प्रतिषेधो न। पूर्वसूत्रान्ङीबित्यनुवर्तते। तदाह-उगिदन्तादिति। उगिद्द्विविधं, प्रातिपदिकं प्रत्ययश्च। तत्र प्रातिपदिकमुदाहरति&ndash;भवतीति। सर्वादिगणे <code>भवतु</code> इत्यव्युत्पन्नं प्रातिपदिकं पठितं, तस्य व्यपदेशिवत्त्वे उगदन्तत्वान्ङीप्। ङपावितौ। <code>आच्छीनद्योर्नुम्</code><code>शप्श्यनोर्नित्य</code>मिति नुम्न, शत्रन्तत्वाऽभावात्। <code>उगिदचा</code>मित्यपि न सर्वनामस्थानत्वाऽभावात्। अथ द्वितीयमुगितमुदाहरति-पचन्तीति। पचेर्लटः शतरि शषि पररूपे पचच्छब्दः। तत्र शतृप्रत्यय उगित्, तदन्तं पचदिति प्रातिपदिकमिति तस्मान्ङीपि <code>शप्श्यनोर्नि</code>मिति नुमिति भावः। यदि तु सर्वादिगणे पठितं भवतु इत्येतत् <code>भातेर्डवतुः</code>इति व्युत्पाद्यते, तदा उगित्प्रत्ययान्तस्यैवोदाहरणं बोध्यम्। भूधातोः शतरि शपि ऊकारस्य गुणेऽवादेशे भवच्छब्दान्ङीपि तु, <code>शप्श्यनोर्नित्य</code>मिति नुमि भवन्तीति रूपम्। नच भवच्छब्दस्याऽप्युत्पन्नत्वे तस्य कथं व्यपदेशिवत्त्वेनोगिदन्तत्वं, <code>व्यपदेशिवद्भावोऽप्रातिपदिकेने</code>ति वचनादिति वाच्यं, प्रातिपदिकस्य तत्तत्स्वरूपेण ग्रहण एव तत्प्रवृत्तेः। <code>उगिदचामिति सूत्र</code> इत्यादिग्रन्थो हलन्ताधिकारे गोमच्छब्दनिरूपणे व्याख्यातः। तेनेति। अञ्चुव्यतिरिक्तधातोरुगित्कार्याऽभावलाभेनेत्यर्थः। उखेति। उखा=कुण्डी। उखायाः रुआंसते, पर्णाद्ध्वंसतेइति विग्रहः। <code>पिठरं स्थाल्युखा कुण्ड</code>मित्यमरः। <code>रुआंसु ध्वंसु अवरुआंसने</code>। सुपीत्यनुवृत्तौ <code>क्विप्चे</code>ति क्विप्, उपपदसमासः, सुब्लुक्,<code>अनिदिता</code>मिति न लोपः, हल्ङ्यादिना सोर्लोपः, <code>वसुरुआंसु</code>इति दत्वमिति भावः। स्यादेवेति। <code>ङी</code>बिति शेषः। प्राचीति। प्रपूर्वादञ्चतेः <code>ऋत्विक</code> इत्यादिना क्विन्, <code>अनिदिता</code>मिति नलोपः। उगित्त्वान्ङीप्, <code>अचः</code>इत्यकारलोपे <code>चौ</code>इति दीर्घः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

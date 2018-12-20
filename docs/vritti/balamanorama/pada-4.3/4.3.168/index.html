@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-4.3\/4.3.168.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.3.168";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.4.1\",\"Previous\":\"4.3.167\",\"अकारादिक्रमसङ्ख्या\":955,\"कौमुदीक्रमसङ्ख्या\":1547,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"२ अर्थौ\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"कंसीयपरशव्ययोर्यञञौ लुक् च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-4.3/4.3.168.md">Edit 4.3.168!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.3.168";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.4.1\",\"Previous\":\"4.3.167\",\"अकारादिक्रमसङ्ख्या\":955,\"कौमुदीक्रमसङ्ख्या\":1547,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"२ अर्थौ\",\"विषयः २\":\"प्राग्दीव्यतोऽण्।\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"कंसीयपरशव्ययोर्यञञौ लुक् च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.3.168 कंसीयपरशब्दयोर्यञञौ लुक् च
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>कंसीयपरशब्द। अत्र यञञोर्न लुक्, विधिवैयर्थ्यात्। नापि प्रकृत्योः, प्रत्ययाऽदर्शनस्यैव लुक्त्वात्। अतः परिशेषात्प्रकृत्येकदेशयोश्छयतोरिति लभ्यते। तदाह&ndash;छयतोरिति। कंसीयमिति। कंसो नाम धातुर्लोहविशेषः। <code>तस्मै हित</code>मिति छः। कांस्यमिति। कंसीयशब्दाद्यञि छस्य लुकि आदिवृद्धौ <code>यस्येति चे</code>त्यकारलोपः। परशब्दमिति। <code>तस्मै हित</code>मित्यधिकारे <code>उगवादिभ्यो य</code>दिति ओर्गुणे <code>वान्तो यी</code>त्यवादेशः। पारशव इति। परशब्दशब्दादञि यतो लुकि ओर्गुणे पारशवः। <code>हलस्तद्धितस्ये</code>ति तु न, ईतीत्यनुवृत्तेः। अनापत्यत्वात् <code>आपत्यस्य चे</code>त्यपि लोपो न प्रसज्यत इति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

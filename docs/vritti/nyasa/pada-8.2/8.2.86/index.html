@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.2\/8.2.86.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.2.86";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.2.87\",\"Previous\":\"8.2.85\",\"अकारादिक्रमसङ्ख्या\":1301,\"कौमुदीक्रमसङ्ख्या\":97,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वाक्ये टेः प्लुत उदात्तः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गुरोरनृतोऽनन्त्यस्याप्येकैकस्य प्राचाम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.2/8.2.86.md">Edit 8.2.86!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.2.86";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.2.87\",\"Previous\":\"8.2.85\",\"अकारादिक्रमसङ्ख्या\":1301,\"कौमुदीक्रमसङ्ख्या\":97,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"वाक्ये टेः प्लुत उदात्तः\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"गुरोरनृतोऽनन्त्यस्याप्येकैकस्य प्राचाम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.2.86 गुरोरनृतोऽनन्त्यस्याप्यैकैकस्य प्राचाम्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>प्रत्यभिवादादिषु वाक्यस्य टेः प्लुत उदात्तः। स एव तु ऋकारवर्जितस्य गुरोरनन्त्यस्य प्लुत उच्यते। <code>अव्त्यस्यापि टेः</code> इति। अनेनापिशब्दष्टेः तमुच्चयं करोतीति दर्शयति। यदि ह्रपिशब्देन गुरोः समुच्चयः क्रियते, अनन्त्यस्यापि,गुरोरन्त्यस्यापीति, तदानेन गुरावनन्त्ये प्लुतः। लघुरन्त्यः पूर्वेण प्लुत एव। ततश्च द्वयोः प्लुतयोः श्रवणं युगपत्? प्रसज्येत। न च <code>अनुदात्तं पदमेकवर्जम्()</code> (6.1.152) इति वचनान्न भविष्यतीति शक्यं वक्तुम्(); तस्मिन्? कत्र्तव्ये प्लुतस्यासिद्धत्वात्()। यदा टिसंज्ञकोऽपिशब्देन समुच्चीयते तदानेनैव सूत्रेणान्त्यस्य[सूत्रेणानन्त्यस्य&ndash;प्रांउ।पाठः] गुरोरनन्त्यस्य च टेः प्लुतो विधीयते। तत्रैकैकस्येति वचनाद्यथानन्त्यस्य पर्यायो न भवति, तथान्त्यस्यापीति न भवति यौगपद्यप्रसङ्गः।
 <code>एकैकग्रहणम्()</code> इत्यादि। यद्येकैकग्रहणं न क्रियत, तदा पक्षे युगपदेव सर्वेषां प्रसज्येत। तस्मात्? पर्यायेण यथा स्यादित्येनमर्थमेकैकग्रहणम्()। एतच्च <code>यथोद्देशं संज्ञापरिभाषम्()</code> (व्या।प।५९) इत्याश्रित्य कृतमिति वेदितव्यम्()। दर्शनान्तरे <code>अनुदात्तं पदमेकवर्जम्()</code> (6.1.152) इत्यस्योपस्थाने सति न प्लुतयोद्र्वयोर्यौगपद्यप्रसङ्गः।
 अथ प्राचामिति किम; यावतैकैकग्रहणादेव विभाषा सिध्येत्()? इत्यत आह&ndash;<code>प्राचाम्()</code> इति। सर्वस्य प्लुतस्येत्यभिप्रायः। अत एवाह&ndash;<code>तदनेन</code> इत्यादि। अपायहेतुमविमृश्य प्रवृत्तिः=साहसम्()॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

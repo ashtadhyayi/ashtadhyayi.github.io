@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-7.1\/7.1.13.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.1.13";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.1.14\",\"Previous\":\"7.1.12\",\"अकारादिक्रमसङ्ख्या\":1376,\"कौमुदीक्रमसङ्ख्या\":204,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":162,\"विषयः १\":\"प्रत्ययादेशः - सुप्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ङेर्यः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-7.1/7.1.13.md">Edit 7.1.13!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.1.13";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.1.14\",\"Previous\":\"7.1.12\",\"अकारादिक्रमसङ्ख्या\":1376,\"कौमुदीक्रमसङ्ख्या\":204,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"05. अजन्त पुँल्लिङ्गाः\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":162,\"विषयः १\":\"प्रत्ययादेशः - सुप्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ङेर्यः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.1.13 ङेर्यः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ङेर्यः। <code>ङे</code>रिति चतुर्थ्येकवचनस्य ग्रहणं, न सप्तम्येकवचनस्य, व्याख्यानात्। अतएव <code>ङेरा</code>मित्यत्रास्याऽग्रहणम्, <code>समानाधिकरणे</code><code>स्त्रिया</code>मित्यादिनिर्देशाच्च। स्थानिवद्भवेनेति। आदेशालाश्रयविधौ स्थानिवत्त्वनिषेधाऽभावादिति भावः। सुपि चेति दीर्घ इति। न च परत्वात् <code>अकृत्सार्वधातुकयोः--</code> इति दीर्घोऽस्त्विति शङ्क्यम्, तत्र <code>अयङ्?यि क्ङिति</code> इत्यतः <code>क्ङिती</code>त्यनुवर्तनात्। अन्यथा <code>उरुये</code>त्यत्रापि दीर्घः स्यात्। उरुशब्दात्परस्य <code>टा</code> इत्यस्य <code>सुपां सुलुक्</code> इति यादेशः। एतच्च काशिकायां स्पष्टम्। यद्यपि ङेर्यादेशस्य ङित्त्वमस्ति <code>न ल्यपि</code> इति ज्ञापकेन अनुबन्धकार्येष्वनल्विधावपि स्थानिवत्त्वाभ्युपगमात्, तथापि शानचः शित्त्वेन लिङ्गेन क्वचिदनुबन्धकार्येषु स्थानिवत्त्वानभ्युपगमाद्यादेशे ङित्त्वं नेत्यभ्युपेत्येदं। विरोधाऽभावात्परत्वमत्राकिंचित्करभित्यनादरेण वा <code>अकृत्सार्वधातुकयोः-</code> इति दीर्घेण ज्यायानिति रूपसिद्धेरिति भाष्ये स्थितं, तदिदानीं विरुध्येत, <code>क्ङिती</code>त्यनुवृत्तौ तु <code>ज्याया</code>नित्यत्र <code>अकृत्सार्वे</code>ति दीर्घाऽप्रवृत्तेः। तथाच <code>अकृत्-</code> इति सूत्रे क्ङितीति नानुवर्तनीयम्, उरुया धृष्णुयेत्यत्र दीर्घाभावश्छान्दस इत्येवाभ्युपेयमिति चेत्, अत्राहुः, <code>ज्ञाजनोर्जा</code> इत्याकारग्रहणमुक्तपरिभाषालिङ्गम्। अन्यथा जमेव विदध्यात्। <code>अतो दीर्घो यञि</code> इति <code>जायते</code> <code>जानातीत्यादौ दीर्घसिद्धेरित्यपि भाष्ये स्थितं, तच्च ज्ञापकम्</code>अकृत्-<code>इत्यत्र क्ङितीत्यनुवृत्तावपि सङ्गच्छते। एवं च सति</code>ज्यादात्` इत्याकारग्रहणं लिङ्गमिति तु भाष्ये प्रौढवादमात्रमस्तु।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

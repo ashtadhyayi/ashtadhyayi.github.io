@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-7.2\/7.2.98.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "7.2.98";
+        let sutraBasics = JSON.parse("{\"Next\":\"7.2.99\",\"Previous\":\"7.2.97\",\"अकारादिक्रमसङ्ख्या\":2460,\"कौमुदीक्रमसङ्ख्या\":1373,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विभक्तौ परतः प्रकृति-आदेशः\",\"विषयः २\":\"मपर्यन्तस्य\",\"विषयः ३\":\"युष्मदस्मदोः\",\"सूत्रम्‌\":\"प्रतयोत्तरपदयोश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-7.2/7.2.98.md">Edit 7.2.98!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "7.2.98";
-          let sutraBasics = JSON.parse("{\"Next\":\"7.2.99\",\"Previous\":\"7.2.97\",\"अकारादिक्रमसङ्ख्या\":2460,\"कौमुदीक्रमसङ्ख्या\":1373,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विभक्तौ परतः प्रकृति-आदेशः\",\"विषयः २\":\"मपर्यन्तस्य\",\"विषयः ३\":\"युष्मदस्मदोः\",\"सूत्रम्‌\":\"प्रतयोत्तरपदयोश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           7.2.98 प्रत्ययोत्तरपदयोश्च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>एकवचने वत्र्तमानयोः</code> इति। एकार्थाभिधानविषयोयोरित्यर्थः। <code>त्वदीयः मदीयः</code> इति। <code>त्यदादीनि च</code> (१।१।७४) इति वृद्धसंज्ञकत्वात्? <code>वृद्धाच्छः</code> (4.2.113) इति च्छप्रत्ययः। <code>त्वत्तरः, मत्तरः</code> इति। <code>द्विवचनविभदज्योपपदे तरबीयसुनौ</code> (5.3.57) इति तरप्()। <code>त्वद्यति, मद्यति</code> इति। <code>सुप आत्मनः क्यच्()</code> (3.1.8)। <code>त्वद्यते, मद्यते</code> इति। <code>कर्त्तुः क्यङ सलोपश्च</code> (3.1.11) इति क्यङ।
 ननु च पूर्वेणेवदेशौ सिद्धौ, तत्? किमर्थोऽयमारम्बः? इत्यत आह&ndash;<code>विभक्तावित्यधिकारात्()</code> इत्यादि।
 <code>ननु च</code> इत्यादि देशकः। प्रकृतिप्रत्यययोः पूर्वोत्तरपदयोश्च या मध्र्ये वत्र्तते साऽन्तर्वत्तिनी विभक्तिः। नैवं शक्यम्()<code>इतीतरः।</code>लुका तस्य भवितव्यम्()<code>इति, अश्यतायां हेतुः।</code>सुपो धातुप्रातिपदिकयोः<code>(2.4.71) इति प्रागेवादेशाभ्यां लुका भवितव्यमिति, ततश्च तन्निमित्तावादेशौ न स्यातामित्यभिप्रायः।</code>बहिरङ्गो लुक्()<code>इत्यादि देशकः। विभक्तिमात्रं ह्रादेशयोराश्रयः लुकस्तु धातुत्वं प्रातिपदिकत्वञ्चापरम्()। तदेवं धातुप्रतिपदिकत्वे यथायोगं बाह्रप्रत्ययापेक्षत्वात्? समासापेक्षत्वाच्च बहिरङ्गे किं पुनस्तदपेक्षया लुको बहिरङ्गता?</code>असिद्धं बहिरङ्गमन्तरङ्गे<code>(व्या।प।४२) इत्यादेशावेव प्रथमं भविष्यतः।</code>एतदेवेत्यादि<code>इतरोऽपि।</code>अन्तरङ्गानपि विथीन्? बहिरङ्गो लुग्न बाधते<code>इति पूर्वेणैव सिद्धत्वाददेशवचनं न कुर्यात्(), कृतञ्च, तदेव ज्ञापयति--</code>अन्तरङ्गानपि विधीन्? बहिरङ्गो लुग्? बाधते<code>(व्या।प।१२८) इति। किमेतस्य ज्ञापकस्य प्रयोजनम्()? इत्यत आह--</code>तेन<code>इत्यादि। यद्ययमर्थो न ज्ञाप्यते, तदा गोमान्? प्रियोऽस्येति गोमत्प्रिय इत्यन्तरङ्गत्वाल्लुकः प्राक्?</code>उगिदचाम्()<code>(७।१।७०) इति नुम्? स्यात्(),</code>अत्वसन्तस्य चाधातोः<code>(6.4.14) इति दीर्घत्वम्(), ततश्च संयोगान्तलोपे (8.2.23) कृते गोमान्प्रिय इत्यनिष्टं रूपं प्रसज्येत। अस्मिन्? हयर्थे ज्ञापिते, अन्तरङ्गमपि नुमादिकं बहिरङ्गेण लुका बाध्यत इति न भवत्येष दोषप्रसङ्गः। एकेनादिशब्देन गोमन्तमिच्छति गोमत्यति, गोमानिवाचरति गोमत्यते--इत्यादेग्र्रहणम्()। द्वितीयेन दीर्घत्वस्य हल्ङ्यादिलोपस्य (6.1.64)। यद्यन्तरङ्गत्वाद्? हल्ङ्यादिलोपः (6.1.64) स्यात्(), प्रत्ययलक्षणेन नुमादिकं स्यात्(), ततश्च तदेवानिष्टं रूपं स्यात्()। लुकि च सति</code>न लुमताङ्गस्य<code>(1.1.62) इति प्रत्ययलक्षणप्रतषेधान्न भवति। 
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

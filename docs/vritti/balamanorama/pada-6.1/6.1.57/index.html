@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.1\/6.1.57.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.57";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.58\",\"Previous\":\"6.1.56\",\"अकारादिक्रमसङ्ख्या\":2183,\"कौमुदीक्रमसङ्ख्या\":2569,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नित्यं स्मयतेः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.1/6.1.57.md">Edit 6.1.57!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.57";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.58\",\"Previous\":\"6.1.56\",\"अकारादिक्रमसङ्ख्या\":2183,\"कौमुदीक्रमसङ्ख्या\":2569,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"आत्वम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"नित्यं स्मयतेः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.57 नित्यं स्मयतेः
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>नित्यं स्मयतेः। <code>आदेच उपदेशे</code> इत्यत एच इति, आदिति चानुवर्तते। चित्फुरो<code>रित्यतो णाविति,</code>बिभेतेर्हेतुभये<code>इत्यतो हेतुभये इति च। तत्र च भयग्रहणं स्मयस्याप्युपलक्षणम्, अत्र तु स्मय एव विवक्षितः, स्मयतेर्भीत्यर्थकत्वाऽसंभवात्। तदाह -- स्मयतेरेच इत्यादि।</code>विभाषा लीयते<code>रित्यतो विभाषानुवृत्तिनिवृत्तये नित्यग्रहणम्। अथ</code>बिभेतेर्हेतुभये<code>इति,</code>नित्यं स्मयते<code>रिति च आत्त्वविधौ,</code>भीस्म्योर्हेतुभये<code>इति आत्मनेपदविधौ च हेतुग्रहणस्य प्रयोजनमाह-- हेतोश्चेद्भयस्मयावित्युक्तेर्नेहेति। कुञ्चिकयैनमिति। केशबन्धविशएषः कुञ्चिका। तस्याश्च करणतया प्रयोजककर्तृत्वाऽभावादात्त्वं षुक् च नेति भावः। आक्षिपति-- कथमिति। रघुवंशकारव्ये--</code>तमार्यगृह्यं निगृहीतधेनुर्मनुष्यवाचा मनुवंशकेतुम्। विस्मापयन् विस्मितमात्मवृत्तौ सिंहोरुसत्त्वं निजगाद सिंहः॥ इति श्लोके विस्मापयन्निति कथमित्याक्षेपः। प्रयोजकाद्भ्याऽभावेन आत्त्वपुगनुपपत्तेरिति भावः। ननु मनुष्यवागेव तत्र प्रयोजिककेत्यत आह&ndash; मनुष्येति। मनुष्यवाचेति तृतीयान्तगम्यकरणान्मनुष्यवागात्मकादेव हि तत्र स्मयः। ननु करणभूताऽपि मनुष्यवाक् प्रयोजिका कुतो नेत्यत आह&ndash; अन्यथेति। मनुष्यवाचः स्मयप्रयोजकत्वमभ्युपगम्य आत्त्वाश्रयणे <code>भीस्म्योर्हेतुभये</code> इत्यात्मनेपदमपि स्यादित्यर्थः। स्मयोऽत्र प्रयोजकमूलको नेति युक्तमेव, किन्त्वात्त्वपुगाक्षेपो न युज्यते इत्यर्द्धाङ्गीकरेण परिहरति - सत्यमिति। विस्माययन्नित्येति। णौ आयादेशे स्मायीत्यस्माल्लटः शतरि शपि णेर्गुणे अयादेशे विस्माययन्नित्येव कालिदासो महाकविः प्रायुङ्क्त। <code>विस्मापय</code> न्निति पकारपाठस्तु लेखप्रमादकृत इति भावः। यद्वेति। राजा दिलीपो विस्मयते। तं सिंहोच्चारिता मनुष्यवाक् प्रयोजयति&ndash; <code>विस्मापयते मनुष्यवाक् राजानम्</code>। अत्र मनुष्यवाक् प्रयोजककर्त्री। राजा तु प्रयोज्यकर्तेति स्थितिः। अत्र स्मयस्य प्रयोजककर्तृभूतमनुष्यवाङ्मूलकत्वादात्त्वे पुक्। मूले <code>प्रयोज्यकर्त्री</code>त्येव पाठः सुगमः। तां विस्मापयमानां प्रयोजककर्त्री मनुष्यवाचं प्रयोजयति सिंहः विस्मापयति। स्मापीति ण्यन्ताण्णौ प्रथमणेर्लोपे स्मापि इत्यस्माच्चतृप्रत्यये शपि णेर्गुणे अयादेशे विस्मापयन्निति भवतीत्यप्रेत्य आह &ndash;तया सिंह इति। प्रयोजककर्तरि तृतीया। आत्मनेपदं भीस्मिप्रकृतिकण्यन्तादेव, नतु ण्यन्तप्रकृतिकण्यन्तादिति भावः।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

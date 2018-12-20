@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-8.3\/8.3.46.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.3.46";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.3.47\",\"Previous\":\"8.3.45\",\"अकारादिक्रमसङ्ख्या\":101,\"कौमुदीक्रमसङ्ख्या\":160,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विसर्जनीयस्य आदेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"अतः कृकमिकंसकुम्भपात्रकुशाकर्णीष्वनव्ययस्य\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-8.3/8.3.46.md">Edit 8.3.46!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.3.46";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.3.47\",\"Previous\":\"8.3.45\",\"अकारादिक्रमसङ्ख्या\":101,\"कौमुदीक्रमसङ्ख्या\":160,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विसर्जनीयस्य आदेशः\",\"विषयः २\":\"\",\"विषयः ३\":\"हल्/विसर्ग-सन्धिः\",\"सूत्रम्‌\":\"अतः कृकमिकंसकुम्भपात्रकुशाकर्णीष्वनव्ययस्य\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.3.46 अतः कृकमिकंसकुम्भपात्रकुशाकर्णीष्वनव्ययस्य।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>कुप्वोः क पौ च</code> (8.3.37) इति प्राप्ते वचनमिदम्()। <code>अयस्कारः</code> इति। <code>कर्मण्यण</code> (3.2.1)। एवं <code>अयस्कामः</code> इत्यत्रापि। <code>शीलिकामिभिक्ष्याचरिभ्यो णो वकतव्यः</code> (वा।२२९) इति त्वत्र न प्रवत्र्तते। तत्रोपसंख्याने ण्यन्तस्य कमेरुपादानात्(), इह त्वण्न्तस्य। यदा <code>आयादय आर्धधातुके वा</code> (३।१।३१) इति कमेर्णिङ्? नास्ति, तदा कमेरण्यन्तता। <code>अयस्कंसः</code> इति। षष्ठीसमासः। ननु कमेरेव <code>वृ()तृ()वदिहनिकमिकषिभ्यः सः</code> (द।उ।९।२९) इति से कृते कंस इति भवति, तत्र कमिग्रहणेनैव सिद्धत्वात्()। कंसग्रहणमनर्थकम्()? न; ज्ञापनार्थत्वात्()। एतदनेन ज्ञाप्यते&ndash;अस्तीदमपि दर्शनम्()&ndash;<code>उणादयोऽव्युत्पन्नानि। प्रापतिपदिकानि</code> (है।प।पा।१०३) इति,। <code>अयस्कुम्भः</code> इति। अयसो विकारः कुम्भ इति <code>समानाधिकरणाधिकारे शाकपार्थिवादीनामुपसंख्यानमुत्तरपदलोपश्च</code> (वा।८३) इति पध्यपदलोपी समासः। षष्ठीसमासो वा। <code>अय स्कुम्भी</code> इति। गौरादित्वाङङीष्()। अयस्कुम्भवत्समासः।
 <code>अयस्पात्री</code> इति। पात्रशब्दः ष्टुन्प्रत्ययान्तः, <code>षिद्गौरादिभ्यश्च (4.1.41) इति ङीष्()।</code>अयस्कुशा<code>इति। अयोदिकारोऽत्र न विवक्षितः। तेन जानपदाविसूत्रेण (4.1.42) इति ङीष्()।</code>अयस्कुशा<code>इति। अयोदिकारोऽत्र न विवक्षितः। तेन जानपदादिसूत्रेण (४।१।४२) ङीष्? न भवति। अय इव कर्णावस्या इत्ययस्कर्णी,</code>नासिकोदर<code>(4.1.55) इत्यादिना ङीव्()। ईकारान्तस्य कर्णशब्दस्य ग्रहणम्()। अतः शुनःकर्ण इत्यत्र सत्वेन त भवितव्यमिति कस्यचिद्भ्रान्तिः स्यात्(), निराकर्तुमाह--</code>शुनस्कर्ण इत्ययं तु<code>इत्यादि। 
 </code>भाःकरणम्()<code>इति। ल्युडन्तेन समासः। यदि तर्हि तपरकरणं न क्रियेत भास करोतीति विवादिसूत्रेण (३।२।२१) टे कृते भास्कर इत्यत्रापि भवति? अत आह--</code>भास्कर इत्ययं तु` इत्यादि। सुबोधम्()॥</p>
@@ -131,9 +143,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

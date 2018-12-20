@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.2\/6.2.113.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.2.113";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.2.114\",\"Previous\":\"6.2.112\",\"अकारादिक्रमसङ्ख्या\":3554,\"कौमुदीक्रमसङ्ख्या\":3847,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"संज्ञौपम्ययोश्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.2/6.2.113.md">Edit 6.2.113!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.2.113";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.2.114\",\"Previous\":\"6.2.112\",\"अकारादिक्रमसङ्ख्या\":3554,\"कौमुदीक्रमसङ्ख्या\":3847,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"स्वरः\",\"विषयः २\":\"बहुव्रीहौ उत्तरपदात् इः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"संज्ञौपम्ययोश्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.2.113 कण्ठपृष्ठग्रीवाजङ्घं च।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>कणेष्ठः</code> (पं।उ।१।१०५) इति ठप्रत्ययान्तत्वात्? कण्ठशब्दोऽन्तोदात्तः। <code>डित्यपृष्ठगूथयूथप्रोथाः</code> (द।उ।६।३७) [तिथ&ndash;द।उ; पं।उ।] इति पृष्ठशब्दोऽन्तोदात्तो निपात्यते। <code>इण्शीभ्यां वन्()</code> (द।उ।८।१२६) इत्यतो वन्प्रत्ययेऽनुवर्तमाने <code>शेवयह्वजिह्वाग्रीवाप्वमावा:</code> (द।उ।८।१२८) इति ग्रीवाशब्दोऽन्तोदात्तो निपात्यते। अत्यन्तं हनित गच्छतीति हन्तेर्यङ्(), द्विर्वचनम्(), नुगतोऽनुनासिकान्तस्य<code>(7.4.85) इति नुक्(),</code>अभ्यासाच्च<code>(7.3.55) इति कुत्वम्(), जङ्घन्य इति स्थिते पचाद्यच्?</code>यङोऽचि च<code>(2.4.74) इति यङो लुक्(); टाप्(), चित्स्वरेण जङ्घाशब्दोऽन्तोदात्तः। अथ वा--</code>हन्तेरच्? जङ्घ च<code>(2.4.74) इति यङो लुक्(); टाप्(), चित्स्वरेण जङ्घाशब्दोऽन्तोदात्तः। अथ वा--</code>हन्तेरच्? जङ्घ च<code>(पं।उ।५।३१) [</code>अच्? तस्य जङ्घ च&ndash;पं।उ।] इति हन्तेरच्प्रत्ययो जङ्घ इत्ययमादेश इत्येवं वा जङ्घशब्दो व्युत्पाद्यते। एषां कण्ठादीनां समाहारे द्वन्द्वः।
 <code>शितिकण्ठः</code> इति। <code>सर्वधातुभ्य इन्()</code> (पं।उ।४।११७) इति वर्तमानं <code>क्रमितमिशाडिस्तम्भामत इच्च</code> (पं।उ।४।१२१) [शति&ndash;पं।उ।] इति शितिशब्द आद्युदात्तः। <code>नीलकण्ठः</code> इति। <code>नील वर्णे</code> (धा।पा।५२२), [<code>नील वर्णे--धा।प।] अस्मात्? घञ्(), तेन नीलशब्दोऽप्याद्युदात्तः।</code>खरकण्ठः<code>इति। खरस्येव कण्ठोऽस्येति विग्रहः। खमस्यास्तीति</code>रप्रकरणे खमुखकुञ्जेभ्य उपसंख्यानात्? (वा।५७७) रप्रत्ययः, तेन खरोऽन्तोदात्तः। <code>उष्ट्रकण्ठः</code> इति। उष्ट्रस्येव कण्ठोऽस्येति <code>ष्ट्रन्()</code> (द।उ।८।७९) इति वर्तमाने <code>उषखनिब्यां कित्()</code> (द।उ।८।८२) इति <code>उष दाहे</code> (धा।पा।६९६) इत्यस्मात्? ष्ट्रन्(), किच्च। तेनोष्ट्रशब्द आद्युदात्तः।
 <code>काण्डपृष्ठः</code> इति। काण्डं पृष्ठमस्येति काण्डशब्दः <code>नब्विषयस्यानिसन्तस्य</code> (फि।सू।२।२६) इत्युदात्तः। <code>नाकपृष्ठम्()</code> इति। नास्याकमस्तीति <code>न भ्राट्()</code> (6.3.74) इत्यादिना प्रकृतिभावान्नलोपाभावः। <code>नञ्सुभ्याम्()</code> (6.2.171) इत्युत्तरपदान्तोदात्तविधानान्नाकशब्दोऽन्तोदात्तः <code>गोपृष्ठम्()</code> इ। गोरिव पृष्ठमस्येति। गोशब्द उक्तस्वरः। <code>अजपृष्ठम्()</code> इति। अजस्येव पृष्ठमस्येति <code>अज गतिक्षेपणयोः</code> (धा।पा।२३०) अस्मात्? पचाद्यच्()। अजादिष्वजाशब्दस्य पाठाद्वीभावो न भवति। चित्स्वरेणाजशब्दोऽन्तोदात्तः।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

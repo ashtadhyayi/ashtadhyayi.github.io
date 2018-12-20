@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/tattvabodhini\/pada-1.4\/1.4.24.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "1.4.24";
+        let sutraBasics = JSON.parse("{\"Next\":\"1.4.25\",\"Previous\":\"1.4.23\",\"अकारादिक्रमसङ्ख्या\":2009,\"कौमुदीक्रमसङ्ख्या\":586,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपादानम् कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ध्रुवमपायेऽपादानम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/tattvabodhini/pada-1.4/1.4.24.md">Edit 1.4.24!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "1.4.24";
-          let sutraBasics = JSON.parse("{\"Next\":\"1.4.25\",\"Previous\":\"1.4.23\",\"अकारादिक्रमसङ्ख्या\":2009,\"कौमुदीक्रमसङ्ख्या\":586,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अपादानम् कारकम्‌\",\"विषयः २\":\"कारकम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ध्रुवमपायेऽपादानम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           TATTVABODHINI
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           1.4.24 ध्रुवमपायेऽपादानम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>ध्रुवमपाये। <code>ध्रु गतिस्थैर्ययोः</code> अस्मात्पचाद्यचि कुटादित्वान्ङित्त्वे उवङ्। <code>ध्रुव स्थेर्ये</code> इति केचित्। तत्र <code>इगुपध--</code>इति कः। ध्रुवं स्थिरम्। अपायशब्देन विवक्षितमाह&ndash;विश्लेष इति। एवं च प्रकृतधात्वर्थाऽनाश्रयत्वे सति तज्जन्यविभागाश्रयो ध्रुवमिति फलितम्। तच्चाऽर्थादवधिरेवेत्याह&ndash;अवधिभूतमिति। धावत इति। इह धावनक्रियाविशिष्टस्याऽप्य�आस्य प्रकृतपतनधातूपात्तक्रियां प्रत्यवधित्वं न विरुध्यते, <code>परस्परस्मान्मेषावपसरतः</code> इत्यत्र तु सृधातुना गतिद्वयस्याप्युपादानादेकनिष्ठां गतिं प्रति इतरस्याप्यपादानत्वं न विरुध्यते। उक्तं च हरिणा&ndash;<code>अपाये यदुदासीनां चलं वा यदि वाऽचलम्। ध्रुवमेवाऽतदावेशात्तदपादानमुच्यते। पततो ध्रुव एवास्वो यस्माद�आआत्पतत्यसौ। तस्याप्य�आस्य पतेन कुड�आदि ध्रुवमिष्यते। मेषान्तरक्रियापेक्षमवधित्वं पृथकं पृथक्। मेषयोः स्वक्रियापेक्षं कर्तृत्वं च पृथक् पृथक्</code>॥ इति। <code>पर्वतात्पततोऽ�आआत्पतती</code>त्यत्र तु पर्वतावधिकपतनाश्रयो योऽ�आस्तदवधिकं देवदत्तादिनिष्ठं पतनमर्थः, पञ्चम्यर्थाऽवधौ अभेदेन संसर्गे प्रकृत्यर्थः परवतादिर्विशेषणम्, प्रत्ययार्थस्तु पतनक्रियायाम्, स चाऽवधिरूपो धर्मी, न तु धर्ममात्रम्, <code>उद्धृतौदन स्थाली</code> त्यात्रौदनकर्मकोद्धरणावधिभूता स्थालीति सामानाधिकरण्यदर्शमात्। एतच्च मनोरमायां स्थितम्। नन्विह ध्रुवग्रहणं किमर्थम्?। न च <code>ग्रामादागच्छति शकटेने</code>त्यत्र शकटेऽतिव्याप्तिवारणाय तदिति वाच्यम्, परत्वात्तत्र करणसंज्ञाप्रवृत्तेः। न च संज्ञिनिर्देशार्थं ध्रुवग्रहणम्, कारकाऽधिकारात् कारकमिति लभ्यत इति ध्रुवग्रहणं चिन्त्यप्रयोजनमिति चेत्। अत्र वदन्ति&ndash;कारकत्वरूपव्यापकधर्ममात्रविवक्षायां साधकतमत्वेन विवक्षाऽभावदशायां करणसंज्ञाप्रसङ्गेन शकटस्याऽपादानत्वं स्यात्तन्मा भूदित्येतदर्थं ध्रुवग्रहणमिति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

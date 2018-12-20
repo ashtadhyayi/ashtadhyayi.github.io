@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.108.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.108";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.109\",\"Previous\":\"6.1.107\",\"अकारादिक्रमसङ्ख्या\":3662,\"कौमुदीक्रमसङ्ख्या\":330,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पूर्वरूपम्\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"सम्प्रसारणाच्च\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.108.md">Edit 6.1.108!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.108";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.109\",\"Previous\":\"6.1.107\",\"अकारादिक्रमसङ्ख्या\":3662,\"कौमुदीक्रमसङ्ख्या\":330,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"पूर्वरूपम्\",\"विषयः २\":\"एकादेशः\",\"विषयः ३\":\"संहितायाम्\",\"सूत्रम्‌\":\"सम्प्रसारणाच्च\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.108 ख्यत्यात्परस्य।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>ख्यत्यादिति खिशब्दखीशब्दयोस्तिशब्दतीशब्दयोश्च कृतयणादेशयोरिदं ग्रहणम्()</code> इति। यमादेशे कृते तुल्यं रूपमिति विशेषाभावात्()। अथ कस्मादत्राकारान्तयोरेव ख्यशब्दत्यशब्दयोरिदं ग्रहणं न भवति? केवलस्य ख्यशब्दस्य त्यशब्दस्यासम्भवादिति चेत्()? न; यदि केवलौ न स्तः, तदन्तानां तर्हि मुख्यगोसंख्यादीनामपत्य गार्हपत्यादीनाञ्च ग्रहणमस्तु? नैतदस्ति; एवं हि&ndash;<code>सख्युरसम्बुद्धौ</code> (7.1.92), <code>पत्युर्नो यज्ञसंयोगे</code> (4.1.33) इति निर्देशौ नोपपद्येयाताम्()।
 <code>सह खेन वत्र्तत इति सखः</code> इति। <code>तेन सहेति तुल्ययोगे</code> (2.2.28) इति बहुव्रीहिः, <code>वोपसर्जनस्य</code> (6.3.81) इति सहस्य सभावः। <code>सखीयति</code> इति। <code>क्यचि च</code> (7.4.33) इतीत्त्वम्()। <code>सखीः</code> इति। क्विप्? <code>अतो लोपः</code> (6.4.48) इत्यकारलोपः <code>लोपो व्योरवलि</code> (6.1.64) इति यकारस्य च। <code>लुनम्</code> इति। <code>ल्वादिभ्य</code> (8.2.44) इति निष्ठानत्वम्()। ननु च नायं तीशब्दः, तत्कथं तस्योदमुदाहरणमित्यत आह&ndash;<code>निष्ठानत्वम्()</code> इत्यादि।
 अथेह कस्मान्न भवति&ndash;अतसखेरागच्छति, सेनापतेरागच्छतीति, असति ह्रत्रापि खिशब्दः तिशब्दश्च? इत्यत आह&ndash;<code>विकृतनिर्देशात्()</code> इत्यादि। योऽयं ख्यत्यादित्यागन्तुकेनाकारेम यणादेशं कृत्वा विकृतनिर्देशः कृतस्तस्यैतदेव प्रयोजनम्()&ndash;यत्र यणादेशः, तत्रैव यथा स्यात्()। न चात्र यणादेशोऽस्ति, अतो न भवति, अन्यथा हि विकृतनिर्देशोऽनर्थकः स्यात्()। ननु च लध्वर्थः स्यात्(), अन्यथा हि <code>खितिखीतीभ्यः</code> इत्युच्यमाने गौरवं स्यात्()? एवं मन्यते&ndash;यदि यतर यण्? न भवति, तत्रापि भवितव्यम्(), तदा खीतीभ्यामित्येवं ब्राऊयात्()। न चैवमुच्यमाने ह्यस्वन्ताभ्यान्न प्राप्नोति; खिशब्दात्? <code>सख्युर्यः</code>, (५।१।१२६) तिशब्दात्? <code>पत्युर्नो यज्ञसंयोगे</code> (4.1.33) इति निर्देशाभ्यामेव सिद्धेः अत्र हि सखिपतिशब्दयोग्र्रहणम्(), न सखीपतीशब्दयोः। न हीह पतीशब्दस्य यज्ञेन संयोगोऽस्ति, नापि <code>सह खेन वत्र्तते</code> इत्यादिना प्रकारेम व्युत्पादितो यः सखीशब्दस्तत उत्पन्नो यः प्रत्ययः स प्रकृत्यर्थाभिधाने समर्थो भवति; यतोऽभिधानलक्षणा हि कृत्तद्धितसमासा भवन्ति। तस्माद्विकृतनिर्देशस्य पूर्वोक्तमेव प्रयोजनमिति।
@@ -133,9 +145,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

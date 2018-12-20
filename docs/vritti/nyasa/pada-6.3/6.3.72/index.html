@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.3\/6.3.72.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.3.72";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.3.73\",\"Previous\":\"6.3.71\",\"अकारादिक्रमसङ्ख्या\":2928,\"कौमुदीक्रमसङ्ख्या\":1008,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे मुम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रात्रेः कृति विभाषा\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.3/6.3.72.md">Edit 6.3.72!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.3.72";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.3.73\",\"Previous\":\"6.3.71\",\"अकारादिक्रमसङ्ख्या\":2928,\"कौमुदीक्रमसङ्ख्या\":1008,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे मुम्\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"रात्रेः कृति विभाषा\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.3.72 नलोपो नञः।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>सानुबन्धकग्रहणमिह मा भूत्()&ndash;<code>पामनपुत्रः</code> इति। पामान्यस्य सन्तीति <code>लोमादिपामादि</code> (5.2.99) इत्यादिना नप्रत्ययः। तदन्तस्य पुत्रशब्देन षष्ठीसमासः। अथ क्रियमाणे सानुबन्धकग्रहणे स्त्रिया अयमिति <code>स्त्रिपुंसाभ्याम्()</code> (4.1.87) इत्यादिना नञ्()&ndash;स्त्रैणः, स्त्रैणश्चासावर्थश्चेति स्त्रैणार्थं इत्यत्र कस्मान्न भवति? पूर्वपदभूतस्य नञो ग्रहणात्()। कुत एतत्()? उत्तरपदस्य सम्बन्धिशब्दत्वात्()। पूर्वपदं ह्रपेक्ष्योत्तरपदं सम्भवति। अत उत्तरपदाधिकारात्? पूर्वपदभूतस्यात्र नञो ग्रहणम्()। अथ वा&ndash;विभाषाग्रहणमनुवत्र्तते, तस्य व्यवस्थितविभाषात्वविज्ञानान्न भविष्यति। यद्येवम्(), पामनपुत्र इत्यत्राप्यत एव न भविष्यतीति नार्थः सानुबन्धकग्रहणेन? एवं तर्हि विस्पष्टार्थं सानुबन्धकग्रहणम्()। न च <code>नस्य</code> इत्युच्यमाने कश्चिल्लाघवकृतो विशेषो भवति।
 <code>अवक्षेपे तिङ्युपसंख्यानं कत्र्तव्यम्()</code> इति। अवक्षेपः=निन्दा। उत्तरपदे नलोपो विधीयमानस्तिङन्ते न प्राप्नोति, तस्मात्? तस्योपसंख्यानां कत्र्तव्यम्()। ननु चास्त्येवाकारः परतिषेधवाची, <code>अ मा नो नाः प्रतिषेधवचनाः</code> इति वचनात्(), ततश्च तस्यैवाक्षेपे तिङि प्रयोगो भविष्यतीति किमुपसंख्यानेन? नञोऽपि तह्र्रवक्षेपे तिङि परतः प्रयोगः प्राप्नोति। तस्मादवक्षेपे नञोकृतनलोपस्य प्रयोगनिवुत्त्यर्थमुपसंख्यानं कत्र्तव्यमिति। उपसंख्यानशब्दस्य प्रतिपादनमर्थः। तत्रेदं प्रतिपादनम्()&ndash;<code>वाचंयमपुरन्दरौ च</code> (6.3.68) इत्यतश्चकरोऽनुवत्र्तते, स चानुक्तसमुच्यार्थः। तेन तिङन्तेऽप्यवक्षेपे गम्यमाने नञो नलोपो भविष्यति॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

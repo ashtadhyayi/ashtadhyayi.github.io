@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-5.3\/5.3.7.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "5.3.7";
+        let sutraBasics = JSON.parse("{\"Next\":\"5.3.8\",\"Previous\":\"5.3.6\",\"अकारादिक्रमसङ्ख्या\":2266,\"कौमुदीक्रमसङ्ख्या\":1953,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विभक्तिः अव्ययम्\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"पञ्चम्यास्तसिल्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-5.3/5.3.7.md">Edit 5.3.7!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "5.3.7";
-          let sutraBasics = JSON.parse("{\"Next\":\"5.3.8\",\"Previous\":\"5.3.6\",\"अकारादिक्रमसङ्ख्या\":2266,\"कौमुदीक्रमसङ्ख्या\":1953,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"विभक्तिः अव्ययम्\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"पञ्चम्यास्तसिल्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           5.3.7 पञ्चम्यास्तसिल्?।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>तसिल प्रत्ययो भवति</code> इति। आदेशा एवामी तसिलादयः पञ्चम्यादीनां स्थाने कस्मात्र क्रियन्ते, एवं हि विभक्तितसंज्ञा न कत्र्तव्या भवति? अशक्या एत आदेशाः कर्तुम्(); आदेशत्वे ह्रेषामव्यायात्? त्यपि (4.2.103)&ndash;ततस्त्यः, यतस्त्य इत्यत्र <code>सुपो धातुप्रातिपदिकयोः</code> (2.4.71) इति लुक्()। लभन्ते हि स्थानिवद्भावेन सुबादेशाः सुबाश्रयं कार्यम्()। तत इति, <code>अनुदात्तौ सुप्पितौ</code> (3.1.4) इत्यनुदात्तः। कुत इति, <code>धेङिति</code> (7.3.111) इति गुणः। एतर्हीति, <code>सुपि च</code> (7.3.102) इति दीर्घः। तत्रेति, <code>बहुवचनेझल्येत्? (7.3.103) इत्येत्वम्()। कुत्रेति,</code>अच्च घेः<code>(7.3.118) इत्यौत्त्वम्()। ततः, तत्रेति,</code>ङसिङ्योः स्मात्स्मिनौ<code>(7.1.15) इति स्मात्स्मिनौ। तस्मान्नादेशा अमी क्रियन्ते। यद्येवम्(),</code>तसु उपक्षये<code>(धा। पा। १२१२) इत्यस्मात्? तस्यन्नित्यत्र धातुरूपस्य पञ्चम्याः परस्य</code>तसेश्च<code>(५।३।८) इति तसिलादेशः प्राप्नोति? नैष दोषः; स्वार्थिकविज्ञानान्न भविष्यति। स्वार्थिका ह्रेते तसिलादयः, तन्मध्ये तसिलादेशो विधीयमानस्तथा विज्ञायते यथा स्वार्थे क्रियामाणः, स्वार्थिकत्वं नातिक्रामति।</code>अपादाने चाहीयरूहोः` (5.4.45) इत्यनेन विहितस्तस्य स्व#आर्थिकस्य साथाने भवंस्तसिलपि स्वार्थिक एव भवति। धातुस्तु प्रातिपदिकादर्थान्तरे वत्र्तत इति तदादेशो भवंस्तसिल्? स्वार्थिको न भवति॥</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

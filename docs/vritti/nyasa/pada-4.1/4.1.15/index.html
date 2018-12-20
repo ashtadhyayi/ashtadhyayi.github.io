@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-4.1\/4.1.15.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "4.1.15";
+        let sutraBasics = JSON.parse("{\"Next\":\"4.1.16\",\"Previous\":\"4.1.14\",\"अकारादिक्रमसङ्ख्या\":1558,\"कौमुदीक्रमसङ्ख्या\":470,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"टिड्ढाणञ्द्वयसज्दघ्नञ्मात्रच्तयप्ठक्ठञ्कञ्क्वरपः\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-4.1/4.1.15.md">Edit 4.1.15!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "4.1.15";
-          let sutraBasics = JSON.parse("{\"Next\":\"4.1.16\",\"Previous\":\"4.1.14\",\"अकारादिक्रमसङ्ख्या\":1558,\"कौमुदीक्रमसङ्ख्या\":470,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"ङीप्\",\"विषयः २\":\"स्त्रियाम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"टिड्ढाणञ्द्वयसज्दघ्नञ्मात्रच्तयप्ठक्ठञ्कञ्क्वरपः\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           4.1.15 टिड्रढाणञ्द्वयसज्दघ्नञ्मात्रच्तयप्ठक्ठञ्कञक्वरप्ख्युनाम्।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>सर्वत्र</code> इति। स्त्रीप्रकरणे। ननु च <code>पत्युर्नो यज्ञसंयोगे</code> (4.1.33) <code>इतो मनुष्यजातेः</code> (4.1.65) इत्यादौ नानुवत्र्तते, तस्यात इत्यस्यासम्भवाद्विशेषणं नोपपद्यत इत्याह&ndash; <code>तत् सति</code> इत्यादि। यत्र सम्भवति तत्र विशेषणं भवति, यत्र तु न सम्भवति तत्रोत्तरार्थमेवानुवत्र्तते। इह कस्मान्न भवति&ndash; <code>पचमाना</code> इति। स्थानिवद्भावेन शानचष्टित्त्वमस्ति, अतस्तदन्तादपि ङीपा भवितव्यमित्यभिप्रायः। <code>द्वयनुबन्धकत्वाल्लटः</code> इति। तेन <code>एकानुबन्धकग्रहणे न द्व्यनुबन्धकस्य</code> (व्या।प।५२) इत्येतया परिभाषया लटोऽत्र ग्रहणं नास्तीति दर्शयति, तस्य ह्रकारो द्वितीयोऽनुबन्धोऽस्ति।
 <code>ल्युडादिषु कथम्</code> इति। ईकारो भवतीति शेषः। आदिशब्देन <code>गापोष्टक्</code> (3.2.8) इत्येवमादयो गृह्रन्ते। ल्युडादीनामपि द्व्यनुबन्धकत्वाट्टिद्ग्रहणेन भवितव्यम्, अतस्तदन्तेभ्यो ङीब्न स्यात्, ततश्चक करणी, सामगीत्यादि न सिध्येत्। <code>टित्करणसामथ्र्यात्</code> इति। यदि तेषामपि टिद्()ग्रहणेन ग्रहणं न स्याट्टित्करणमनर्थकं स्यात्; प्रयोजनान्तरासम्भवात्। तस्मात् सत्यपि द्व्यनुबन्धकत्वे टित्करणसामथ्र्याल्ल्युडादयो गृह्रन्त इत्यदोषः। लटोऽपि तर्हि टित्करणसामथ्र्यादेव ग्रहणेन भवितव्यमित्यत आह&ndash;<code>इतरत्र</code> इति। लटि हि टित्करमस्य <code>टित आत्मनेपदानां टेरे</code> (3.4.79) इति टेरेत्वं फलम्। अतो यद्यपि ग्रहणं न भवति, तथापि नैव टित्करणस्य वैयथ्र्यं प्रसज्येत। तस्मात् टित्करणसामथ्र्याल्ल्युडादयो गृह्रन्त इत्यदोषः। लटोऽपि तर्हि टित्करणसामथ्र्यादेव ग्रहनेन भवितव्यमित्यत आह&ndash;<code>इतरत्र</code> इति। लटि हि टित्करणस्य <code>टित आत्मनेपदानां टेरे</code> (3.4.79) इति टेरेत्वं फलम्। अतो यद्यपि तस्येदं ग्रहणं न भवति, तथापि नैव टित्करणस्य वैयथ्र्यं प्रसज्येत। तस्मात् टित्करणस्य चरितार्थत्वादयुक्तं तस्येदं ग्रहणम्।
 <code>पठिता विद्या</code> इति। अत्रापि कथमिति सम्बध्यते। इडागमस्य हि प्रत्ययभक्तत्वात् प्रत्ययस्य टित्त्वमस्ति, ततस्च ङीपा भवितव्यम्, तत्कथं पठितेत्येतद्रूपं भवतीति?<code>आगमटित्त्वमनिमित्तम्</code> इति। प्रकृतत्वात् ङीप इति विज्ञायते। कथं ज्ञायतेऽयमनिमित्तमित्याह&ndash;<code>ट()उट()उलौ</code> इत्यादि। तुड् वेत्यागमटित्त्वेनैव सिद्धे ङीपि <code>सायंचिरं प्राह्ण</code> (4.3.23) इत्यादिसूत्रे <code>ट()उट()उलौ</code> इति पुनः प्रत्ययोष्टत्करणं ज्ञापकम्&mdash; आगमटित्त्वमनिमित्त्वं ङीप इति।
@@ -143,9 +155,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

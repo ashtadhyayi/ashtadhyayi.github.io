@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-6.1\/6.1.7.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.1.7";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.1.8\",\"Previous\":\"6.1.6\",\"अकारादिक्रमसङ्ख्या\":1746,\"कौमुदीक्रमसङ्ख्या\":3509,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"द्वित्वम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तुजादीनां दीर्घोऽभ्यासस्य\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-6.1/6.1.7.md">Edit 6.1.7!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.1.7";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.1.8\",\"Previous\":\"6.1.6\",\"अकारादिक्रमसङ्ख्या\":1746,\"कौमुदीक्रमसङ्ख्या\":3509,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"द्वित्वम्\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"तुजादीनां दीर्घोऽभ्यासस्य\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.1.7 तुजादीनां दीर्घोऽभ्यासस्य।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आदिशब्दोऽयमस्त्येव व्यवस्थायाम्(), अस्ति च प्रकारे, तत्र यदि व्यवस्थायां वत्र्तमानो गृह्रेत, तदा <code>तुज पिज हिंसायाम्()</code> (धा।पा।१५६६,१५६७) इत्यत आरभ्य ये पठितास्तेषामेव ग्रहणं स्यात्(); एवञ्च सौत्राणां गणान्तरपठितानाञ्च दीर्घो न स्यादित्येतदालोच्याह&ndash;<code>तुजादीनाम्()</code> इत्यादि। <code>प्रकार आदिशब्दः</code> इति। स च प्रकारोऽनिर्दिष्टत्वान्न ज्ञायत इति पृच्छति&ndash;<code>कश्च प्रकारः</code> इति। तुजो दीर्घत्वमित्यादिना प्रकारार्थत्वं दर्शयति। <code>ये तथाभूताः</code> इति। अनन्तरोक्तप्रकारमापन्ना इत्यर्थः। <code>दीर्घः साधुर्भवति</code> इति। एतेन सत एव दीर्घस्य साधुत्वमात्रमनेन क्रियते। न त्वपूर्वो दीर्घ इति दर्शयति। <code>तूतुजानः</code> इति। लिट्()। एतच्च प्रकारवाचिन आदिशब्दस्य परिग्रहाल्लभ्यते, तस्य कनाच्()। <code>मामहानः</code> इति। <code>मह पूजायाम्()</code> (धा।प।७३०) शेषं पूर्ववत्()। <code>दधान</code> [उदाहरणमिदं नास्ति&ndash;काशिका] इति। <code>डुधाञ्? धारणपोषणयोः</code> (धा।पा।१०९२)। <code>मीमाय</code> इति। <code>डुमिञ्? प्रक्षेपणे</code>, (धा।पा।१२५०) लिट्? णल्()। <code>दधार</code> इति। <code>धृञ्? धारणे</code> (धा।पा।९००) <code>तूनाव</code> इति। <code>तु</code> इति सौत्रो धातुः; <code>तुरुस्तुशम्यम</code> (7.3.95) इत्यादिसूत्रे पठितत्वात्()।
 <code>दीर्घश्चैषाम्()</code> इत्यादिना यस्य सत एव साधुत्वमनेन क्रियते, स च दीर्घश्छन्दस्येव दृश्यते, न भाषायाम्()। तत्रापि च्छन्दसि विषये प्रत्ययविषये कानजादौ, न प्रत्ययमात्रे। <code>ततोऽन्यत्र न भवति</code> इति। यथोक्ताद्विषयादन्यत्र न भवतीत्यर्थः। तुजेश्छन्दसि कानचि दृष्टः, ततोऽन्यत्र भाषायां छन्दस्यपि कानजादौ प्रत्ययान्तरे न भवति। यच्चैवं तेनास्यान्यत्राव्यापारः। सत एव दीर्घस्य साधुत्वमात्रमनेन विधीयते। न चान्यत्र दीर्घोऽस्ति यस्यानेन विधीयेत साधुत्वम्()। एतच्च प्रकारवाचिन आदिशब्दाल्लभ्यत इति। <code>तुतोज</code> इति। भाषायां प्रयोगः। यदि तर्हि च्छन्दसि सत एव दीर्घस्य साधुत्वमनेन विधीयते, <code>व्यत्ययो बहुलम्()</code> (३।१।८५) इत्यनेन सुब्ब्यत्ययस्य विहितत्वादपार्थकमेतत्()? नापार्थकम्(); तस्यैव प्रपञ्चार्थत्वात्()॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

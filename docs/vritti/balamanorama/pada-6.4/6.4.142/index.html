@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-6.4\/6.4.142.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "6.4.142";
+        let sutraBasics = JSON.parse("{\"Next\":\"6.4.143\",\"Previous\":\"6.4.141\",\"अकारादिक्रमसङ्ख्या\":1720,\"कौमुदीक्रमसङ्ख्या\":844,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अङ्गलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"ति विंशतेर्डिति\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-6.4/6.4.142.md">Edit 6.4.142!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "6.4.142";
-          let sutraBasics = JSON.parse("{\"Next\":\"6.4.143\",\"Previous\":\"6.4.141\",\"अकारादिक्रमसङ्ख्या\":1720,\"कौमुदीक्रमसङ्ख्या\":844,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"अङ्गलोपः\",\"विषयः २\":\"\",\"विषयः ३\":\"भस्य\",\"सूत्रम्‌\":\"ति विंशतेर्डिति\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           6.4.142 ति विंशतेर्डिति
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>आसन्नशब्दस्य विंशतिशब्देन षष्ठ�न्तेन समासे डचि कृते <code>टे</code>रितीकारमात्रस्य लोपे प्राप्ते आह&ndash;ति विंशतेर्डिति। तीति लुप्तषष्ठीकम्। <code>भस्ये</code>त्यधिकृतम्। <code>अल्लोपोऽनः</code> इत्यनुवर्तते। तदाह&ndash;विंशतेर्भस्येति। अलोऽन्त्यस्ये<code>ति न भवति,</code>नानर्थकेऽलोऽन्त्यविधि<code>रित्युक्तेः। आसन्नविंशा इति। विंशतिसङ्क्याऽऽसन्नसङ्क्यावन्त इत्यर्थः। डचि कृते आसन्नविंशति-अ-इति स्थिते, तिलोपे सवर्णदीर्घ बाधित्वा</code>अतो गुणे<code>इति पररूपे, आसन्नविंशशब्दोऽदन्तः।</code>उत्तरपदत्वे चापदादिविधौ प्रतिषेधः<code>इति प्रत्ययलक्षणाऽभावेनाऽपदत्वात्। अथाऽदूरशब्दस्योदाहरति--अदूरतिं?रशा इति। तिं?रशतोऽदूरा इति विग्रहः। तिं?रशत्सङ्ख्याया अदूरसङ्ख्यावन्त इत्यर्थः। डचि टिलोपः। अधिकस्योदाहरति--अदिकचत्वारिंशा इति। चत्वारिंशतोऽधिका इति विग्रहः। चत्वारिंशत्सङ्ख्याया अधिकसङ्ख्यावन्त #इत्यर्थः। डचि टिलोपः। सङ्ख्यावाचकशब्दस्य सङ्ख्यावाचकशब्देन समासमुदाहरति--द्वित्रा इति।</code>वाऽर्थे बहुव्रीहिः। द्वित्यन्यतरा इत्यर्थः। डचि टिलोपः। ननु <code>द्वित्रा आनीयन्ता</code>मित्युक्ते कदाचिद्द्वावानयति, तदा कथं बहुवचनमिति चेत्, अत्र भाष्ये <code>अनिश्चये बहुवचनं प्रयोक्तव्य</code>मिति वचनात् समाहितम्। तथा <code>कार्यान्वये विकल्पः शब्दात्तु नियमेन कोटिद्वयोपस्थिति। तदुपस्थित्यनन्तरमन्यतरानयनमिच्छया। अतः शब्दान्नियमेन पञ्चानामुपस्थिति</code>रित्यपि समाहितम्। नच वाऽर्थप्राधान्यात् <code>अनेकमन्यपदार्थे</code> इत्येवाऽत्र सिद्धमिति वाच्यं, <code>शेषाद्विभाषे</code>ति कबभावार्थकत्वात्। स हि कप् <code>अनेकमन्यपदार्थे</code> इति विहितबहुव्रीहावेव प्रवर्तत इति भाष्ये स्पष्टम्। अथ सङ्ख्यायाः सङ्ख्यया समासे उदाहरणान्तरमाह&ndash;द्विदशा इति। शब्दशक्तिस्वाभाव्यात्सुजर्थान्तर्भावेण पूर्वपदस्य वृत्त्याश्रयणात् समासे सुचो न श्रवणमिति भाष्ये स्पष्टम्। द्वित्वसङ्ख्याकदशत्ववन्त इत्यर्थः। फलितमाह&ndash;विंशतिरित्यर्थ इति।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

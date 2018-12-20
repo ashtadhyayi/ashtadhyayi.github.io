@@ -49,15 +49,31 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="{{ relURL "js/sutraNavigation.js" }}"></script>
+    <script src="{{ relURL "js/handleIncludes.js" }}"></script>
     <script type="text/javascript">
+      let pageSource = "{{.File.Path}}";
+      let baseURL = "{{.Site.BaseURL}}";
+      console.log(pageSource);
       {{ if isset .Params "vritti"}}
         let sutraId = "{{.Params.index}}";
         let sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
       {{ end }}
+      {{ if eq .File.Path "_index.md"}}
+        let sutraId = "1.1.1";
+        let querySutraId = getQueryVariable("sutra");
+        if (querySutraId) {
+          sutraId = querySutraId;
+        }
+        let allSutraBasics = JSON.parse({{$.Site.Data.sutraBasics | jsonify}});
+        let sutraBasics = allSutraBasics[sutraId];
+      {{ end }}
+
       let autocompletePageUrl = "{{ "data/sutrANi.tsv" | relURL }}";
     </script>
+    <script src="{{ relURL "js/onDocumentReady.js" }}"></script>
 
-    <script src="{{ relURL "js/sutraNavigation.js" }}"></script>
     <script src="{{ relURL "js/autocomplete.js" }}"></script>
   </head>
 

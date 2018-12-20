@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/balamanorama\/pada-8.1\/8.1.14.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "8.1.14";
+        let sutraBasics = JSON.parse("{\"Next\":\"8.1.15\",\"Previous\":\"8.1.13\",\"अकारादिक्रमसङ्ख्या\":2833,\"कौमुदीक्रमसङ्ख्या\":2149,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"सर्वस्य द्वे\",\"सूत्रम्‌\":\"यथास्वे यथायथम्\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/balamanorama/pada-8.1/8.1.14.md">Edit 8.1.14!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "8.1.14";
-          let sutraBasics = JSON.parse("{\"Next\":\"8.1.15\",\"Previous\":\"8.1.13\",\"अकारादिक्रमसङ्ख्या\":2833,\"कौमुदीक्रमसङ्ख्या\":2149,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"\",\"विषयः ३\":\"सर्वस्य द्वे\",\"सूत्रम्‌\":\"यथास्वे यथायथम्\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           BALAMANORAMA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           8.1.14 यथास्वे यथायथम्
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p>यथास्वे यथायथम्। वीप्सायामिति। कार्त्स्न्येसंबन्धो वीप्सेत्युक्तम्। स्वशब्दार्थगतकार्त्स्न्ये द्योत्ये यथाशब्दस्य स्वशब्देनाऽव्ययीभाव इत्यर्थः। कृत्स्न श्चासौ स्वश्चेत्यस्वपदविग्रहः, नित्यसमासत्वात्। स्वशब्दस्तु आत्मात्मीयज्ञातिधनवाची। इह तु आत्मात्मीयवाच्येव गृह्यते, नतु ज्ञातिधनवाची, व्याख्यानादित्यभिप्रेत्य विग्रहवाक्यस्य फलितमर्थमाह&ndash;द्वे इति। <code>स्त</code> इति शेषः। निपातनादिति भावः। न च <code>नित्यवीप्सयो</code>रित्येव वीप्सया द्वित्वमिह सिद्धमिति शङ्क्यम्, द्वित्वविषयस्य शब्दस्य लक्षणया कार्त्स्न्यविशिष्टे वृत्तावेव वीप्सायां द्विर्वचनविधानात्। अन्यथा <code>सर्वो घटः</code> इत्यादौ सर्वशब्दस्यापि द्वित्वापत्तेरिति भावः। क्लीबत्वमिति। <code>यथा-यथा इति समुदायस्ये</code>ति शेषः। अन्यथा अव्ययत्वादलिङ्गत्वं स्यादिति भावः। एवं च कृत्तद्वित्वस्य नपुंसकह्रस्वत्वं च फलितम्। यथायथं ज्ञातेति। अत्र <code>ज्ञाते</code>ति तृन्नन्तम्। <code>तद्योगे</code>न लोके<code>ति षष्ठीनिषेधात्कर्मणि द्वितीया। तृजन्तत्वे तु</code>यथायथस्य ज्ञाते`त्येव।</p>
 
       </div>
@@ -129,9 +141,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>

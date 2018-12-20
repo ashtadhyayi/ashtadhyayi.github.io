@@ -52,7 +52,23 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="/ui/js/sutraNavigation.js"></script>
+    <script src="/ui/js/handleIncludes.js"></script>
+    <script type="text/javascript">
+      let pageSource = "vritti\/nyasa\/pada-3.4\/3.4.111.md";
+      let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
+      console.log(pageSource);
+      
+        let sutraId = "3.4.111";
+        let sutraBasics = JSON.parse("{\"Next\":\"3.4.112\",\"Previous\":\"3.4.110\",\"अकारादिक्रमसङ्ख्या\":2968,\"कौमुदीक्रमसङ्ख्या\":2463,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लङः शाकटायनस्यैव\"}");
+      
+      
+
+      let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
+    </script>
+    <script src="/ui/js/onDocumentReady.js"></script>
+
     <script src="/ui/js/autocomplete.js"></script>
   </head>
 
@@ -75,11 +91,7 @@
         
         <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/nyasa/pada-3.4/3.4.111.md">Edit 3.4.111!</a>
         <div id="nextSutraDiv"></div>
-        <script type="text/javascript">
-          let sutraId = "3.4.111";
-          let sutraBasics = JSON.parse("{\"Next\":\"3.4.112\",\"Previous\":\"3.4.110\",\"अकारादिक्रमसङ्ख्या\":2968,\"कौमुदीक्रमसङ्ख्या\":2463,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"तिङन्तप्रक्रिया\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"लङः शाकटायनस्यैव\"}");
-          let autocompletePageUrl = "\/ui\/data\/sutrANi.tsv";
-        </script>
+      
       
       
 <div hidden>
@@ -109,7 +121,7 @@
   <div class="flex-l mt2 mw8 center">
     <article class="center cf pv5 ph3 ph4-ns mw7">
       <header>
-        <p class="f6 b helvetica tracked">
+        <p id="vrittiIdElement" class="f6 b helvetica tracked">
           NYASA
         </p>
         <h1 class="f1">
@@ -118,7 +130,7 @@
           3.4.111 लङः शाकटायनस्यैव।
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <p><code>अयुः, अवुः</code> इति। पूर्ववच्छपो लुक्, पूर्ववच्च पररूपत्वम्।
 <code>लङेव</code> इत्यादि। यत्सम्बन्धिनो झेर्जुस्भावो विधेयः। तिङत्वमधिकृत्येमुक्तम्। कुतः एतत्? लङलिङोरप्याकारान्तादनन्तरयोः सम्भवात्। तत्सम्बन्धिनोस्तु <code>झेर्जुस्</code> (3.4.108) इत्येवमादिनैव शास्त्रेण जुस्भावो विहित इति न तावदधिकृत्येदमुच्यते। एवकारस्तु लृङव्यवच्छेदार्थः, स्यप्रत्ययेन झेव्र्यवधानात्। स चातिदेशद्वारेण यस्य लङवद्भावो न भवति स वेदितव्यः। यस्य ह्रतिदेशद्वारेण लङवद्भावो विहितः स उपचारेण लङित्युच्यते। परमार्थतस्तु लोडेवासौ, न लङेव। <code>लङवद्भावेन यः</code> इति। लङिति सम्बध्यते।लङा तुल्यं मा भूदिति मुख्यस्यैव लङो ग्रहणं यथा स्यादित्येवमर्थं लङ्ग्रहणं क्रियते। केन पुनर्लङवद्भावो भवतीत्याह&ndash; <code>लोटो लङ्वत्</code> इति। अनेन हि सूत्रेण (3.4.85) लोटो लङ्वत् कार्यष्वतिदिष्टेषु लङ्कार्ययोगात् तस्य लङ्वद्भावो भवति। तेन लङसदृशभूत उपचारेण लङिति व्यपदिश्यते। अत्रायमर्थः&ndash;यदि मुख्यस्य लङः परिग्रहार्थं लङ्ग्रहणं न क्रियते, ततः <code>लोटो लङ्वत्</code> (3.4.85) इत्यतिदेशाद्यथा तामादिकार्यं लोटो भवति, तथेदमपि स्यात्। अतोऽस्य दोषस्य निवृत्यर्थं लङग्रहणं क्रियत इति मा भून्नामायं जुस्; लोटो लङग्रहणाद्यत्नात्॥ यस्तु <code>सिजभ्यस्तविद#इभ्यश्च</code> (3.4.109) इत्यनेन विधीयते स विभ्यतु, जाग्रतु, विदन्त्वित्यादौ कस्मान्न भवति, न हि किञ्चित् तत्र यत्नान्तरमस्ति? इत्याह&ndash; <code>सिजभ्यस्त</code> इत्यादि। कथं पुनर्विना यत्नेन पूर्वको जुस् लोटो न भवतीत्याह&ndash; <code>जुस्भावमात्रं हि</code> इत्यादि। न ह्रयमेव जुस् मुख्येन लङा विशिष्यते,किं तर्हि? जुस्भावमात्रम्। योऽस्मिन् प्रकरणे जुस् विहितः स मुख्यस्यैव लङो भवति, नेतरस्येति। तेन पूर्वकोऽपि जुस् न भवति। <code>एककार उत्तरार्थः</code> इति। अथ तदर्थं एवकारः कस्मान् भवति? विध्यर्थत्वात् तस्य। न हि विध्यर्थवाक्य एवकारस्यार्थवत्वमुपपद्यते। स हि नियमार्थेषूपयुज्यते, न हि विध्यर्थेषु। न चेदं नियमार्थम्; सिद्धे हि विधिरारभ्यमाणो नियमार्थो भवति (का।दु।प।५९), न च सिद्धेऽयमारभ्यते। तस्मादुत्तरार्थं एवकारः। ननु शाकटायनस्यैव मतेन यथा स्यादन्येषां मते मा भूदित्येवमर्थमिहैवकारः स्यात्? न; तेन विनाऽप्यस्य नियमस्य सिद्धत्वात्। यद्यन्येषां मते न स्यात्, शाकटायनग्रहणमनर्थकं स्यात्॥</p>
 
@@ -130,9 +142,12 @@
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/ui/about/" >
-    &copy; 2018 अष्टाध्यायी - मूलस्रोतः
+    परिचयः
   </a>
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />Creative Commons Attribution 4.0 International License</a>.
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>.
     <div>
 <div hidden>
   <span id="new-window-0">Opens in a new window</span>
