@@ -12,6 +12,6 @@ $( document ).ready(function() {
 
 $( document ).ready(function() {
   if (pageSource == "_index.md") {
-    $("h1").text(sutraId);
+    $("h1").text(`${sutraId} ${sutraBasics["सूत्रम्‌"]}`);
   }
 });

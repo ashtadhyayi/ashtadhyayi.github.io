@@ -57,6 +57,8 @@
     <script src="/ui/js/handleIncludes.js"></script>
     <script type="text/javascript">
       let pageSource = "vritti\/samhita\/pada-1.2\/1.2.4.md";
+      let siteParams = JSON.parse("{\x22githubeditmepathbase\x22:\x22https:\/\/github.com\/sanskrit\/ashtadhyayi\/edit\/master\/\x22,\x22mainSections\x22:[\x22vritti\x22],\x22mainsections\x22:[\x22vritti\x22]}");
+      let pageParams = JSON.parse("{\x22draft\x22:false,\x22index\x22:\x221.2.4\x22,\x22iscjklanguage\x22:false,\x22sutra\x22:\x22सार्वधातुकमपित्\x22,\x22vritti\x22:\x22samhita\x22}");
       let baseURL = "https:\/\/ashtadhyayi.github.io\/ui\/";
       console.log(pageSource);
       
@@ -89,7 +91,7 @@
       
         <div id="prevSutraDiv"></div>
         
-        <a class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/blob/master/samhita/pada-1.2/1.2.4.md">Edit 1.2.4!</a>
+        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="https://github.com/sanskrit/ashtadhyayi/edit/master/samhita/pada-1.2/1.2.4.md">Edit 1.2.4!</a>
         <div id="nextSutraDiv"></div>
       
       

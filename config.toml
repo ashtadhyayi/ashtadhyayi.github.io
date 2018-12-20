@@ -5,4 +5,4 @@ theme = "ananke"
 publishDir = "docs"
 ignorefiles = [ "vritti/scripts/.*" ]
 [params]
-  githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/blob/master/"
+  githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"

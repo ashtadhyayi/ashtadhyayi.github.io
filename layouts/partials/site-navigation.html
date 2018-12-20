@@ -19,7 +19,7 @@
       {{ if isset .Params "vritti"}}
         <div id="prevSutraDiv"></div>
         {{$dataRepoPath := replace .File.Path "vritti/" "" }}
-        <a class="ma1 white-90 hover-white " href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">Edit {{.Params.index}}!</a>
+        <a id="currentSutraDiv" class="ma1 white-90 hover-white " href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">Edit {{.Params.index}}!</a>
         <div id="nextSutraDiv"></div>
       {{ end }}
       {{ if eq .File.Path "_index.md"}}

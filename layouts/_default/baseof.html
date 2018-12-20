@@ -54,6 +54,8 @@
     <script src="{{ relURL "js/handleIncludes.js" }}"></script>
     <script type="text/javascript">
       let pageSource = "{{.File.Path}}";
+      let siteParams = JSON.parse("{{.Site.Params | jsonify}}");
+      let pageParams = JSON.parse("{{.Page.Params | jsonify}}");
       let baseURL = "{{.Site.BaseURL}}";
       console.log(pageSource);
       {{ if isset .Params "vritti"}}
