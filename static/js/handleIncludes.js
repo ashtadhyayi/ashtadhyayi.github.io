@@ -40,7 +40,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
                 `<a class='btn btn-secondary' href='${editMePath}'>सम्पाद्यताम्।</a></div>` +
                 "</div>";
                 var collapseStyle = "collapse show";
-                console.debug(isCollapsed);
+                // console.debug(isCollapsed);
                 if (isCollapsed) {
                   collapseStyle = "collapse";
                 }
@@ -50,10 +50,20 @@ function fillJsInclude(jsIncludeJqueryElement) {
             }
         },
         error: function(xhr, error){
+            var elementToInclude = $("<div class='included-post-content card'/>")
             var titleHtml = "";
-            var title = "Missing page.";
-            titleHtml = "<div id='" + title + "'>" + title + "</div>";
-            jsIncludeJqueryElement.html(titleHtml + "Could not get: " + includedPageUrl + " See debug messages in console for details.");
+            var title = includedPageUrl.split("/").slice(0,2).join("_");
+            titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
+            `<div id='Missing vritti' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
+            `<i class="fas fa-caret-down"></i></a> </div> </div>`;
+            var collapseStyle = "collapse show";
+            // console.debug(isCollapsed);
+            if (isCollapsed) {
+              collapseStyle = "collapse";
+            }
+            var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">Could not get: ${includedPageUrl}. See debug messages in console for details.</div>`;
+            elementToInclude.html(titleHtml + contentHtml);
+            jsIncludeJqueryElement.html(elementToInclude);
             console.debug(xhr); console.debug(error);
         }
     });
