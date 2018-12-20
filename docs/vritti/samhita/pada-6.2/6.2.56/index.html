@@ -98,8 +98,7 @@
             type: "GET",
             url: "\/ui\/data\/sutrANi.tsv",
             dataType: "text",
-            success: function(response)
-            {
+            success: function(response) {
               var options={"separator" : "\t"};
               sutraList = $.csv.toObjects(response, options);
               for (var sutraObject of sutraList) {
@@ -110,6 +109,14 @@
               $("#sutraSearchInputBox").autocomplete({
                 source: Array.from(sutraAutocompleteMap.keys())
               });
+            }
+          });
+          $("#sutraSearchInputBox").change(function() {
+            let sutraSelected = $(this).val();
+            let sutraDetails = sutraAutocompleteMap.get(sutraSelected)
+            console.log(sutraDetails);
+            if (sutraDetails) {
+              window.location = getSutraLinkRelative(sutraDetails.index);
             }
           });
         </script>
