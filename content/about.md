@@ -22,6 +22,7 @@ We use the Hugo static site generator to generate webpages. The UI heavily copie
 URL-s for various vRtti-s are maintained to look like this: [kAshikA 1.1.1](../vritti/kashika/pada-1.1/1.1.1/) or [nyAsa 1.1.1](../vritti/nyasa/pada-1.1/1.1.1/).
 
 ### Updating the UI with the latest content
+- Update the content - `git pull --recurse-submodules`
 - Install [Hugo](gohugo.io)
 - Run `hugo` (Takes ~ 16s as of 20181216.)
 - Check in and push the changed files to github.
