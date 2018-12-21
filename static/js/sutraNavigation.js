@@ -40,10 +40,10 @@ function setSutraNavigationLinks(){
     let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
     if (sutraBasics.Previous) {
       // console.log(nextSutraPaada);
-      $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, "btn btn-primary", "", "<i class=\"fas fa-caret-left\"></i>"));
+      $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, "btn btn-secondary", "", "<i class=\"fas fa-caret-left\"></i>"));
     }
     if (sutraBasics.Next) {
-      $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, "btn btn-primary", "<i class=\"fas fa-caret-right\"></i>"));
+      $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, "btn btn-secondary", "<i class=\"fas fa-caret-right\"></i>"));
       // console.log(nextSutraPaada);
     }
   } catch(e) {
