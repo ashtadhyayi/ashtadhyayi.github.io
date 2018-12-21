@@ -2,14 +2,9 @@
 title: About
 ---
 
-
 ## Intro
 
-<<<<<<< HEAD
 Welcome! We are a few [open source sanskrit programmers](https://groups.google.com/forum/#!forum/sanskrit-programmers), and this is [our centralized repository](https://github.com/sanskrit/ashtadhyayi) + [ui](https://ashtadhyayi.github.io/ui/) of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or [improvements to the UI](https://github.com/ashtadhyayi/ui).
-=======
-Welcome! We are a few [open source sanskrit programmers](https://groups.google.com/forum/#!forum/sanskrit-programmers), and this is our centralized repository of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or [improvements to the UI](https://github.com/ashtadhyayi/ui).
->>>>>>> e6f2b52744f06b8c0e2008a531e49cf9dd2f7321
 
 ### Motivation
 This data is presented in many places on the internet (wikisource, [sanskritdocuments.org](sanskritdocuments.org), avg-sanskrit, [ashtadhyayi.com](ashtadhyayi.com) etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion. Hence this repository.
@@ -20,24 +15,6 @@ The content is curated in [https://github.com/sanskrit/ashtadhyayi](https://gith
 
 ### Contributing corrections
 #### Via Github pull requests (preferred)
-<<<<<<< HEAD
-=======
-
-Follow the following steps (which only seem complicated at first, but are very simple):
-
-- Just click on the appropriate <i class="fas fa-edit small"></i> icon.
-  - This will take you to a Github page, where you will be prompted to sign up/in, and "make a fork" as necessary.
-- Make and save your edits.
-- Send us a "pull request".
-  - Helpful videos: [here](https://youtu.be/YTbRzhQju4c?t=157), here
-- Some repository moderator will then review, accept your changes and regenerate the site.
-
-#### Manual notification.
-Just [send us a message](https://github.com/sanskrit/ashtadhyayi/issues/new) (with the full corrected vritti text).
-
-### Data origin
-The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from files ephemerally shared on the internet. This content then went through many hands. Some of this content was [also retrieved](https://github.com/ashtadhyayi/ashtadhyayi_org_data) from the excellent [ashtadhyayi.com](ashtadhyayi.com) site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.
->>>>>>> e6f2b52744f06b8c0e2008a531e49cf9dd2f7321
 
 Follow the following steps (which only seem complicated at first, but are very simple):
 
