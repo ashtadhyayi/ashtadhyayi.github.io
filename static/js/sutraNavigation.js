@@ -1,6 +1,10 @@
-function getSutraLinkRelative(sutraId) {
+function getSutraLinkRelative(sutraId, resourceType) {
   let sutraPaada = sutraId.split(".").slice(0,2).join(".");
-  return `../../pada-${sutraPaada}/${sutraId}/`;
+  if (resourceType == "txt") {
+    return `../../pada-${sutraPaada}/${sutraId}.txt`
+  } else {
+    return `../../pada-${sutraPaada}/${sutraId}/`;
+  }
 }
 
 function getContextSensitiveSutraLink(sutraId) {
