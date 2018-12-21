@@ -11,7 +11,9 @@ Welcome! We are a few open source sanskrit programmers, and this is our centrali
 This data is presented in many places on the internet (wikisource, [sanskritdocuments.org](sanskritdocuments.org), avg-sanskrit, [ashtadhyayi.com](ashtadhyayi.com) etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion. Hence this repository.
 
 ## Content
-The content is curated in [https://github.com/sanskrit/ashtadhyayi](https://github.com/sanskrit/ashtadhyayi). Each file is devanagari encoded markdown text with yaml frontmatter.
+The content is curated in [https://github.com/sanskrit/ashtadhyayi](https://github.com/sanskrit/ashtadhyayi).  Each file is devanagari encoded markdown text with yaml frontmatter.
+
+The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from files ephemerally shared on the internet. This content then went through many hands. Some of this content was also retrieved from the excellent [ashtadhyayi.com](ashtadhyayi.com) site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.
 
 ## UI
 We use the Hugo static site generator to generate webpages. The UI heavily copies shrI nIlesh's [ashtadhyayi.com](ashtadhyayi.com).
