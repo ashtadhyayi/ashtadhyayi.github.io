@@ -1,16 +1,18 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
   <div>
-    <article class="col-xs-12 card">
+    <article class="col-xs-12 card mt-2">
       <header>
-        <div id="vrittiIdElement" class="f6 b helvetica tracked card-title">
+        <div id="vrittiIdElement" class="mt-2 card-title">
+          {{$dataRepoPath := replace .File.Path "vritti/" "" }}
+          <a id="currentSutraDiv" class="btn btn-primary" href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">{{.Params.index}}<i class="fas fa-edit"></i></a>
           {{ humanize .Params.vritti | upper  }}
+          <a href="{{ "/" | relURL }}?sutra={{.Params.index}}" class="btn btn-secondary"> सर्ववृत्तिसहितमीक्षताम्</a>
         </div>
         <h2 class="card-title  border  d-flex justify-content-between">
           {{ .Params.type }}
           {{ $sutraTitle := (print .Params.index " " .Params.sutra) }}
           {{ .Title | default $sutraTitle}}
-          <a href="{{ "/" | relURL }}?sutra={{.Params.index}}" class="btn btn-secondary"> सर्ववृत्तिसहितमीक्षताम्</a>
         </h2>
       </header>
       <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">

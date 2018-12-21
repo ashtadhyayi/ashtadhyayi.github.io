@@ -1,14 +1,16 @@
 <nav role="navigation">
-  <div class="container-fluid d-flex justify-content-between">
-    <a  href="{{ "/" | relURL }}" class="btn btn-default">
+  <div class="row">
+    <a  href="{{ "/" | relURL }}" class="btn btn-default col">
       <i class="fas fa-gopuram ">पाणिनीयमूलस्रोतः</i>
     </a>
-    <div id="sutraNavigationDiv" class="row">
-      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter"><i class="btn fas fa-search "></i>
+    <div class="col-md-auto d-flex justify-content-center">
+      </i><input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter"><i class="btn fas fa-search "></i>
+    </div>
+    <div class="row col  d-flex justify-content-center">
       {{ if isset .Params "vritti"}}
         <div id="prevSutraDiv"></div>
         {{$dataRepoPath := replace .File.Path "vritti/" "" }}
-        <a id="currentSutraDiv" class="btn btn-primary" href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">सम्पाद्यताम् {{.Params.index}}।</a>
+        <a id="currentSutraDiv" class="btn btn-primary" href="{{print .Site.Params.githubEditMePathBase $dataRepoPath }}">{{.Params.index}}<i class="fas fa-edit"></i></a>
         <div id="nextSutraDiv"></div>
       {{ end }}
       {{ if eq .File.Path "_index.md"}}

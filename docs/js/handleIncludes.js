@@ -1,6 +1,7 @@
 function fillJsInclude(jsIncludeJqueryElement) {
     var includedPageUrl = jsIncludeJqueryElement.attr("relativeUrlBase") + getSutraLinkRelative(sutraId);
     var isCollapsed =  jsIncludeJqueryElement.hasClass("collapsed");
+    var title = jsIncludeJqueryElement.attr("title");
     // console.debug(includedPageUrl);
     $.ajax(includedPageUrl,{
         success: function(responseHtml) {
@@ -8,12 +9,6 @@ function fillJsInclude(jsIncludeJqueryElement) {
             // Tip from: https://stackoverflow.com/questions/15113910/jquery-parse-html-without-loading-images
             var virtualDocument = document.implementation.createHTMLDocument('virtual');
             var virtualJqPage = $(responseHtml, virtualDocument);
-            var titleElements = virtualJqPage.find("#vrittiIdElement");
-            var title = "";
-            if (titleElements.length > 0) {
-                // console.debug(titleElements[0]);
-                title = titleElements[0].textContent.trim();
-            }
             var editMePath = "";
             var editLinkElements = virtualJqPage.find("#currentSutraDiv");
             // console.debug(editLinkElements);
@@ -36,8 +31,8 @@ function fillJsInclude(jsIncludeJqueryElement) {
                 titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
                 `<div id='${title}' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
                 `<i class="fas fa-caret-down"></i></a> </div>` +
-                "<div><a class='btn btn-secondary' href='" + includedPageUrl + "'>पृथगीक्षताम्।</a> " +
-                `<a class='btn btn-secondary' href='${editMePath}'>सम्पाद्यताम्।</a></div>` +
+                `<div><a class='btn btn-secondary' href='${includedPageUrl}'><i class="fas fa-external-link-square-alt"></i></a>` +
+                `<a class='btn btn-secondary' href='${editMePath}'><i class="fas fa-edit"></i></a></div>` +
                 "</div>";
                 var collapseStyle = "collapse show";
                 // console.debug(isCollapsed);
@@ -52,7 +47,6 @@ function fillJsInclude(jsIncludeJqueryElement) {
         error: function(xhr, error){
             var elementToInclude = $("<div class='included-post-content card'/>")
             var titleHtml = "";
-            var title = includedPageUrl.split("/").slice(0,2).join("_");
             titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
             `<div id='Missing vritti' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
             `<i class="fas fa-caret-down"></i></a> </div> </div>`;
@@ -61,7 +55,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
             if (isCollapsed) {
               collapseStyle = "collapse";
             }
-            var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">Could not get: ${includedPageUrl}. See debug messages in console for details.</div>`;
+            var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">न लब्धा वृत्तिः। <a href="https://github.com/sanskrit/ashtadhyayi/issues/new">सतायां प्रेष्यताम्।</a></div>`;
             elementToInclude.html(titleHtml + contentHtml);
             jsIncludeJqueryElement.html(elementToInclude);
             console.debug(xhr); console.debug(error);
