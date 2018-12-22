@@ -1,6 +1,8 @@
 box: debian
 build:
   steps:
+    - install-packages:
+        packages: hugo
     - arjen/hugo-build:
         version: "0.17"
         flags: --buildDrafts=true
@@ -8,3 +10,10 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
+    - add-to-known_hosts:
+        hostname: github.com
+        fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+    - script:
+        name: update vrittis
+        cwd: content/vritti/
+        code: git pull

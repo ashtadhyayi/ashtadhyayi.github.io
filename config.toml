@@ -6,3 +6,4 @@ publishDir = "docs"
 ignorefiles = [ "vritti/scripts/.*" ]
 [params]
   githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"
+  env = "production"
