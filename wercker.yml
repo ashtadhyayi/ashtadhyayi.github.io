@@ -4,3 +4,7 @@ build:
     - arjen/hugo-build:
         version: "0.17"
         flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
