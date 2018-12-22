@@ -68,7 +68,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
             if (isCollapsed) {
               collapseStyle = "collapse";
             }
-            var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">न लब्धा वृत्तिः। <a href="https://github.com/sanskrit/ashtadhyayi/issues/new">सतायां प्रेष्यताम्।</a></div>`;
+            var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">न लब्धा वृत्तिः। <a href="https://github.com/sanskrit/ashtadhyayi/issues/new">सत्यां प्रेष्यताम्।</a></div>`;
             elementToInclude.html(titleHtml + contentHtml);
             jsIncludeJqueryElement.html(elementToInclude);
             console.debug(xhr); console.debug(error);
