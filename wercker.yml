@@ -1,8 +1,14 @@
 box: debian
 build:
   steps:
+    - install-packages:
+        packages: git ssh-client
+    - script:
+        name: update vrittis
+        cwd: content/vritti/
+        code: git pull
     - arjen/hugo-build:
-        version: "0.53"
+        version: "0.50"
         theme: "ananke"
         flags: --buildDrafts=true
 deploy:
@@ -12,7 +18,3 @@ deploy:
     - add-to-known_hosts:
         hostname: github.com
         fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
-    - script:
-        name: update vrittis
-        cwd: content/vritti/
-        code: git pull
