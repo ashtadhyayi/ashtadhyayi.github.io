@@ -67,6 +67,7 @@
       {{ if isset .Params "vritti"}}
         let sutraId = "{{.Params.index}}";
         let sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
+        let vrittiBasics = JSON.parse({{index $.Site.Data.vrittiBasics  | jsonify}});
       {{ end }}
       {{ if eq .File.Path "_index.md"}}
         let sutraId = "1.1.1";

@@ -17,6 +17,9 @@ $( document ).ready(function() {
 });
 
 $( document ).ready(function() {
-  // console.debug($("#vrittiContentDiv"));
-  $("#vrittiContentDiv").html(addLinks($("#vrittiContentDiv").html()));
+  console.debug(pageSource);
+  if (pageSource.startsWith("vritti")) {
+    $("#vrittiTitleSpan").text(vrittiBasics[pageParams.vritti]["name"]);
+    $("#vrittiContentDiv").html(addLinks($("#vrittiContentDiv").html()));
+  }
 })

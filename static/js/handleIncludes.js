@@ -1,5 +1,5 @@
 function addLinks(htmlIn) {
-  return htmlIn.replace(/(\d\.\d\.\d+)/,`<a href="${baseURL}?sutra=$1">$1</a>`);
+  return htmlIn.replace(/(\d\.\d\.\d+)/g,`<a href="${baseURL}?sutra=$1">$1</a>`);
 }
 
 function fillJsInclude(jsIncludeJqueryElement) {
