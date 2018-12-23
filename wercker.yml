@@ -1,9 +1,9 @@
 box: debian
 build:
   steps:
-    - install-packages:
-        packages: hugo
     - arjen/hugo-build:
+        version: "0.53"
+        theme: "ananke"
         flags: --buildDrafts=true
 deploy:
   steps:
