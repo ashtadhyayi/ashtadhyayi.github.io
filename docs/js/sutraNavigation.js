@@ -69,3 +69,8 @@ function setSutraNavigationLinks(){
     console.log("Not a sutra page, probably.");
   }
 }
+
+function getEditMePath(pageUrl) {
+  // console.debug(pageUrl);
+  return siteParams.githubeditmepathbase + pageUrl.replace("vritti/", "").replace(/\/$/, ".md");
+}

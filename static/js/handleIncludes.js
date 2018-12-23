@@ -14,6 +14,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
     if (isCollapsed) {
       collapseStyle = "collapse";
     }
+    var editLinkHtml = `<a class='btn btn-secondary' href='${getEditMePath(includedPageUrl)}'><i class="fas fa-edit"></i></a>`;
     // console.debug(includedPageUrl);
     $.ajax(includedPageUrl,{
         success: function(responseHtml) {
@@ -22,6 +23,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
               titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
               `<div id='${title}' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
               `<i class="fas fa-caret-down"></i></a> </div>` +
+              `${editLinkHtml}` +
               "</div>";
               var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${addLinks(responseHtml)}</div>`;
               elementToInclude.html(titleHtml + contentHtml);
@@ -32,16 +34,6 @@ function fillJsInclude(jsIncludeJqueryElement) {
             // Tip from: https://stackoverflow.com/questions/15113910/jquery-parse-html-without-loading-images
             var virtualDocument = document.implementation.createHTMLDocument('virtual');
             var virtualJqPage = $(responseHtml, virtualDocument);
-
-            var editMePath = "";
-            var editLinkElements = virtualJqPage.find("#currentSutraDiv");
-            // console.debug(editLinkElements);
-            if (editLinkElements.length == 0) {
-                console.warn("Could not get \"currentSutraDiv\" element.");
-                console.log(responseHtml);
-            } else {
-              editMePath = editLinkElements[0].getAttribute("href");
-            }
 
             var contentElements = virtualJqPage.find("#vrittiContentDiv");
             // console.log(contentElements);
@@ -55,7 +47,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
                 `<div id='${title}' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
                 `<i class="fas fa-caret-down"></i></a> </div>` +
                 `<div><a class='btn btn-secondary' href='${includedPageUrl}'><i class="fas fa-external-link-square-alt"></i></a>` +
-                `<a class='btn btn-secondary' href='${editMePath}'><i class="fas fa-edit"></i></a></div>` +
+                `${editLinkHtml}</div>` +
                 "</div>";
                 var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${addLinks(contentElements[0].innerHTML)}</div>`;
                 elementToInclude.html(titleHtml + contentHtml);
