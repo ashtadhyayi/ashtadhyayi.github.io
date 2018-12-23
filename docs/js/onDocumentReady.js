@@ -15,3 +15,8 @@ $( document ).ready(function() {
     $("h1").text(`${sutraId} ${sutraBasics["सूत्रम्‌"]}`);
   }
 });
+
+$( document ).ready(function() {
+  // console.debug($("#vrittiContentDiv"));
+  $("#vrittiContentDiv").html(addLinks($("#vrittiContentDiv").html()));
+})

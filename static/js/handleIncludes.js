@@ -1,3 +1,7 @@
+function addLinks(htmlIn) {
+  return htmlIn.replace(/(\d\.\d\.\d+)/,`<a href="${baseURL}?sutra=$1">$1</a>`);
+}
+
 function fillJsInclude(jsIncludeJqueryElement) {
     var resourceType = jsIncludeJqueryElement.attr("dataType");
     var includedPageUrl = jsIncludeJqueryElement.attr("relativeUrlBase") + getSutraLinkRelative(sutraId, resourceType);
@@ -19,7 +23,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
               `<div id='${title}' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
               `<i class="fas fa-caret-down"></i></a> </div>` +
               "</div>";
-              var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${responseHtml}</div>`;
+              var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${addLinks(responseHtml)}</div>`;
               elementToInclude.html(titleHtml + contentHtml);
               jsIncludeJqueryElement.html(elementToInclude);
               return;
@@ -53,7 +57,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
                 `<div><a class='btn btn-secondary' href='${includedPageUrl}'><i class="fas fa-external-link-square-alt"></i></a>` +
                 `<a class='btn btn-secondary' href='${editMePath}'><i class="fas fa-edit"></i></a></div>` +
                 "</div>";
-                var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${contentElements[0].innerHTML}</div>`;
+                var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${addLinks(contentElements[0].innerHTML)}</div>`;
                 elementToInclude.html(titleHtml + contentHtml);
                 jsIncludeJqueryElement.html(elementToInclude);
             }
