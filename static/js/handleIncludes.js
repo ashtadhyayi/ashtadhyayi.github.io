@@ -55,10 +55,13 @@ function fillJsInclude(jsIncludeJqueryElement) {
             }
         },
         error: function(xhr, error){
+            var createLinkHtml = `<a class='btn btn-secondary' href='${getGithubCreationPath(includedPageUrl)}'><i class="fas fa-edit"></i></a>`;
             var titleHtml = "";
             titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
-            `<div id='Missing vritti' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
-            `<i class="fas fa-caret-down"></i></a> </div> </div>`;
+            `<div id='${title}' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
+            `<i class="fas fa-caret-down"></i></a> </div>` +
+            `${createLinkHtml}` +
+            "</div>";
             var collapseStyle = "collapse show";
             // console.debug(isCollapsed);
             if (isCollapsed) {

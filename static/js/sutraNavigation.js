@@ -74,3 +74,7 @@ function getEditMePath(pageUrl) {
   // console.debug(pageUrl);
   return siteParams.githubeditmepathbase + pageUrl.replace("vritti/", "").replace(/\/$/, ".md");
 }
+
+function getGithubCreationPath(pageUrl) {
+  return getEditMePath(pageUrl).replace("/edit/", "/create/").split("/").slice(0,-1).join("/");
+}
