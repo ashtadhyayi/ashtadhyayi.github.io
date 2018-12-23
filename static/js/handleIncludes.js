@@ -1,5 +1,5 @@
 function addLinks(htmlIn) {
-  return htmlIn.replace(/(\d\.\d\.\d+)/g,`<a href="${baseURL}?sutra=$1">$1</a>`);
+  return htmlIn.replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml).replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari);
 }
 
 function fillJsInclude(jsIncludeJqueryElement) {

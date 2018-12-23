@@ -1,3 +1,29 @@
+function sutraIdToDevanagari(sutraId) {
+  return Sanscript.t(sutraId, "slp1", "devanagari").split("।").join(".");
+}
+
+function getSutraLinkTag(sutraId, style, preHtml, postHtml) {
+  let sutraLink = "";
+  if (preHtml == null) {
+    preHtml = "";
+  }
+  if (postHtml == null) {
+    postHtml = "";
+  }
+  return `<a href="${getContextSensitiveSutraLink(sutraId)}"  class="${style}">${preHtml} ${sutraIdToDevanagari(sutraId)} ${postHtml}</a>`;
+}
+
+function getSutraLinkHtml(sutraId) {
+  return getSutraLinkTag(sutraId, style="contentSutraLink");
+}
+
+
+function getSutraLinkHtmlFromDevanagari(sutraIdDevanagari) {
+  let sutraId = Sanscript.t(sutraIdDevanagari, "devanagari", "slp1");
+  return getSutraLinkTag(sutraId, style="contentSutraLink");
+}
+
+
 function getSutraLinkRelative(sutraId, resourceType) {
   let sutraPaada = sutraId.split(".").slice(0,2).join(".");
   if (resourceType == "txt") {
@@ -16,17 +42,6 @@ function getContextSensitiveSutraLink(sutraId) {
 
 }
 
-function getSutraLinkTag(sutraId, style, preHtml, postHtml) {
-  let sutraLink = "";
-  if (preHtml == null) {
-    preHtml = "";
-  }
-  if (postHtml == null) {
-    postHtml = "";
-  }
-  return `<a href="${getContextSensitiveSutraLink(sutraId)}"  class="${style}">${preHtml} ${sutraId} ${postHtml}</a>`;
-}
-
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -41,7 +56,6 @@ function getQueryVariable(variable) {
 
 function setSutraNavigationLinks(){
   try{
-    let currentSutraPaada = sutraId.split(".").slice(0,2).join(".");
     if (sutraBasics.Previous) {
       // console.log(nextSutraPaada);
       $(prevSutraDiv).append(getSutraLinkTag(sutraBasics.Previous, "btn btn-secondary", "", "<i class=\"fas fa-caret-left\"></i>"));

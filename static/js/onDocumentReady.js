@@ -11,9 +11,7 @@ $( document ).ready(function() {
 });
 
 $( document ).ready(function() {
-  if (pageSource == "_index.md") {
-    $("h1").text(`${sutraId} ${sutraBasics["सूत्रम्‌"]}`);
-  }
+  $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraBasics["सूत्रम्‌"]}`);
 });
 
 $( document ).ready(function() {
@@ -22,4 +20,7 @@ $( document ).ready(function() {
     $("#vrittiTitleSpan").text(vrittiBasics[pageParams.vritti]["name"]);
     $("#vrittiContentDiv").html(addLinks($("#vrittiContentDiv").html()));
   }
-})
+});
+
+$( document ).ready(function() {
+});

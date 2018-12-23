@@ -10,7 +10,7 @@ $(document).ready(function(){
       var options={"separator" : "\t"};
       sutraList = $.csv.toObjects(response, options);
       for (var sutraObject of sutraList) {
-        let autocompleteText = sutraObject.index + " " + sutraObject.sutra;
+        let autocompleteText = `${sutraObject.index} ${sutraObject.sutra} ${sutraIdToDevanagari(sutraObject.index)}`;
         sutraAutocompleteMap.set(autocompleteText, sutraObject);
       }
       // console.log(sutraAutocompleteMap.keys());
