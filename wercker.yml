@@ -20,6 +20,11 @@ build:
         flags: --buildDrafts=true
 deploy:
   steps:
+    - install-packages:
+        packages: git ssh-client
+    - add-ssh-key:
+        keyname: github_key
+        host: github.com
     - lukevivier/gh-pages:
             token: $GIT_TOKEN
             branch: master
