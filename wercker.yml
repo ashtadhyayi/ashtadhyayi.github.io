@@ -22,8 +22,9 @@ build:
         version: "0.50"
         theme: "ananke"
         flags: --buildDrafts=true
-    - lordlothar99/git-push:
-         host: github.com
+    # - lordlothar99/git-push:
+    #   The push below fails for unknown reasons.
+    #      host: github.com
 deploy:
   steps:
     - install-packages:
