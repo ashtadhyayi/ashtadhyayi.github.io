@@ -25,6 +25,6 @@ deploy:
     - add-ssh-key:
         keyname: github_key
         host: github.com
-    - gsserge/git-push@0.7.19
+    - gsserge/git-push@0.7.19:
             gh_oauth: $GIT_TOKEN
             branch: master
