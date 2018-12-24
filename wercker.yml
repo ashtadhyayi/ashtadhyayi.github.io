@@ -13,7 +13,7 @@ build:
     - script:
         name: initialize git submodules
         code: |
-            git submodule update --init --recursive
+            git submodule foreach "(git checkout master; git pull)&"
     - arjen/hugo-build:
         version: "0.50"
         theme: "ananke"
