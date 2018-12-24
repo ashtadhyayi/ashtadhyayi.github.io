@@ -4,7 +4,7 @@ title: About
 
 ## Intro
 
-Welcome! We are a few [open source sanskrit programmers](https://groups.google.com/forum/#!forum/sanskrit-programmers), and this is [our centralized repository](https://github.com/sanskrit/ashtadhyayi) + [ui](https://ashtadhyayi.github.io/ui/) of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or [improvements to the UI](https://github.com/ashtadhyayi/ui).
+Welcome! We are a few [open source sanskrit programmers](https://groups.google.com/forum/#!forum/sanskrit-programmers), and this is [our centralized repository](https://github.com/sanskrit/ashtadhyayi) + [user inteface](https://ashtadhyayi.github.io/ui/) of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or [improvements to the UI](https://github.com/ashtadhyayi/ui).
 
 ### Motivation
 This data is presented in many places on the internet (wikisource, [sanskritdocuments.org](sanskritdocuments.org), avg-sanskrit, [ashtadhyayi.com](ashtadhyayi.com) etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion. Hence this repository.
@@ -31,8 +31,11 @@ Just [send us a message](https://github.com/sanskrit/ashtadhyayi/issues/new) (wi
 ### Data origin
 The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from files ephemerally shared on the internet. This content then went through many hands. Some of this content was [also retrieved](https://github.com/ashtadhyayi/ashtadhyayi_org_data) from the excellent [ashtadhyayi.com](ashtadhyayi.com) site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.
 
-## UI
+## User Interface
 We use the Hugo static site generator to generate webpages, and github to host the site at [https://ashtadhyayi.github.io/ui/](https://ashtadhyayi.github.io/ui/). The UI heavily copies shrI nIlesh's [ashtadhyayi.com](ashtadhyayi.com).
+
+### Status
+[![wercker status](https://app.wercker.com/status/d0eeae8d13a5701771b428486ae1de1b/s/master "wercker status")](https://app.wercker.com/project/byKey/d0eeae8d13a5701771b428486ae1de1b)
 
 ### Updating the UI with the latest content
 - Update the content - `git pull --recurse-submodules; cd content/vritti; git pull; cd ../..`
