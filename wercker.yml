@@ -13,12 +13,17 @@ build:
     - script:
         name: initialize git submodules
         code: |
+            git submodule update --init --recursive
+    - script:
+        name: update vrittis
+        code: |
             git submodule foreach "(git checkout master; git pull)&"
     - arjen/hugo-build:
         version: "0.50"
         theme: "ananke"
         flags: --buildDrafts=true
-deploy:
+    - lordlothar99/git-push:
+         host: github.com
   steps:
     - install-packages:
         packages: git ssh-client
@@ -28,4 +33,3 @@ deploy:
     - lukevivier/gh-pages:
             token: $GIT_TOKEN
             basedir: docs
-            branch: gh-pages
