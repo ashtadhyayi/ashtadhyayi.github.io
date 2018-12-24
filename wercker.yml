@@ -20,6 +20,6 @@ build:
         flags: --buildDrafts=true
 deploy:
   steps:
-    - gh-pages:
+    - lukevivier/gh-pages:
             token: $GIT_TOKEN
             branch: master
