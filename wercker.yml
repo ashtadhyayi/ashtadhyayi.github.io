@@ -24,6 +24,7 @@ build:
         flags: --buildDrafts=true
     - lordlothar99/git-push:
          host: github.com
+deploy:
   steps:
     - install-packages:
         packages: git ssh-client
