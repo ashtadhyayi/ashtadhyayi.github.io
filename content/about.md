@@ -29,7 +29,7 @@ Follow the following steps (which only seem complicated at first, but are very s
 Just [send us a message](https://github.com/sanskrit/ashtadhyayi/issues/new) (with the full corrected vritti text).
 
 ### Data origin
-The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from files ephemerally shared on the internet. This content then went through many hands. Some of this content was [also retrieved](https://github.com/ashtadhyayi/ashtadhyayi_org_data) from the excellent [ashtadhyayi.com](ashtadhyayi.com) site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.
+Many vrittis were typeset via the short-lived sansknet project by Rashtriya Sanskrit Vidyapeetha, Tirupati. The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from such files ephemerally shared on the internet. This content then went through many hands. Some of this content was [also retrieved](https://github.com/ashtadhyayi/ashtadhyayi_org_data) from the excellent [ashtadhyayi.com](ashtadhyayi.com) site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.
 
 ## User Interface (UI)
 We use the Hugo static site generator to generate webpages, and github to host the site at [https://ashtadhyayi.github.io/ui/](https://ashtadhyayi.github.io/ui/). The UI heavily copies shrI nIlesh's [ashtadhyayi.com](ashtadhyayi.com).
