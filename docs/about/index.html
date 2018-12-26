@@ -16,43 +16,33 @@
     
 
     
-    
-      <link href="/ui/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
 
     <meta property="og:title" content="About" />
-<meta property="og:description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; ui of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+<meta property="og:description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; user inteface of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
 Motivation This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ashtadhyayi.github.io/ui/about/" />
 
 <meta itemprop="name" content="About">
-<meta itemprop="description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; ui of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+<meta itemprop="description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; user inteface of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
 Motivation This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion.">
 
 
 
-<meta itemprop="wordCount" content="391">
+<meta itemprop="wordCount" content="452">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; ui of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+<meta name="twitter:description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; user inteface of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
 Motivation This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion."/>
 
       
     
 
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -100,21 +90,6 @@ Motivation This data is presented in many places on the internet (wikisource, sa
       
     </div >
       
-      
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-
   </div>
 </nav>
 
@@ -123,22 +98,27 @@ Motivation This data is presented in many places on the internet (wikisource, sa
 
     <main class="container p-3" role="main">
       
-  <div class="flex-l mt2 mw8 center">
-    <article class="center cf pv5 ph3 ph4-ns mw7">
+  <div>
+    <article class="col-xs-12 card mt-2">
       <header>
-        <p class="f6 b helvetica tracked">
+        <div id="vrittiIdElement" class="mt-2 card-title">
           
-        </p>
-        <h1 class="f1">
+          <a id="currentSutraDiv" class="btn btn-primary" href="https://github.com/sanskrit/ashtadhyayi/edit/master/about.md"><i class="fas fa-edit"></i>
+          <span id="vrittiTitleSpan"></span></a>
+          <a href="/ui/?sutra=" class="btn btn-secondary"> सर्ववृत्तिसहितमीक्षताम्</a>
+        </div>
+        <h2 id="sutraHeading" class="card-title  border  d-flex justify-content-between">
+          
+          
           About
-        </h1>
+        </h2>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div id="vrittiContentDiv" class="card-body nested-links nested-img mid-gray">
         
 
 <h2 id="intro">Intro</h2>
 
-<p>Welcome! We are a few <a href="https://groups.google.com/forum/#!forum/sanskrit-programmers">open source sanskrit programmers</a>, and this is <a href="https://github.com/sanskrit/ashtadhyayi">our centralized repository</a> + <a href="https://ashtadhyayi.github.io/ui/">ui</a> of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or <a href="https://github.com/ashtadhyayi/ui">improvements to the UI</a>.</p>
+<p>Welcome! We are a few <a href="https://groups.google.com/forum/#!forum/sanskrit-programmers">open source sanskrit programmers</a>, and this is <a href="https://github.com/sanskrit/ashtadhyayi">our centralized repository</a> + <a href="https://ashtadhyayi.github.io/ui/">user inteface</a> of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or <a href="https://github.com/ashtadhyayi/ui">improvements to the UI</a>.</p>
 
 <h3 id="motivation">Motivation</h3>
 
@@ -177,19 +157,26 @@ Motivation This data is presented in many places on the internet (wikisource, sa
 
 <h3 id="data-origin">Data origin</h3>
 
-<p>The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from files ephemerally shared on the internet. This content then went through many hands. Some of this content was <a href="https://github.com/ashtadhyayi/ashtadhyayi_org_data">also retrieved</a> from the excellent <a href="ashtadhyayi.com">ashtadhyayi.com</a> site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.</p>
+<p>Many vrittis were typeset via the short-lived sansknet project by Rashtriya Sanskrit Vidyapeetha, Tirupati. The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from such files ephemerally shared on the internet. This content then went through many hands. Some of this content was <a href="https://github.com/ashtadhyayi/ashtadhyayi_org_data">also retrieved</a> from the excellent <a href="ashtadhyayi.com">ashtadhyayi.com</a> site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.</p>
 
-<h2 id="ui">UI</h2>
+<h2 id="user-interface-ui">User Interface (UI)</h2>
 
 <p>We use the Hugo static site generator to generate webpages, and github to host the site at <a href="https://ashtadhyayi.github.io/ui/">https://ashtadhyayi.github.io/ui/</a>. The UI heavily copies shrI nIlesh&rsquo;s <a href="ashtadhyayi.com">ashtadhyayi.com</a>.</p>
 
-<h3 id="updating-the-ui-with-the-latest-content">Updating the UI with the latest content</h3>
+<h3 id="automatic-updates">Automatic updates</h3>
+
+<p>Ordinarily, wercker piplenes set up under the <a href="https://github.com/sanskrit/ashtadhyayi/">ashtadhyayi</a> and <a href="https://github.com/ashtadhyayi/ui/">ashtadhyayi-ui</a> projects are automatically triggered upon updates to the respective repositories, leading to the updated UI.
+- Status
+  - content triggering UI builds: <a href="https://app.wercker.com/project/byKey/ce8ccbe942e0226ce16ba45e0d2fc10f"><img src="https://app.wercker.com/status/ce8ccbe942e0226ce16ba45e0d2fc10f/s/master" alt="wercker status" title="wercker status" /></a>
+  - ui builds: <a href="https://app.wercker.com/project/byKey/d0eeae8d13a5701771b428486ae1de1b"><img src="https://app.wercker.com/status/d0eeae8d13a5701771b428486ae1de1b/s/master" alt="wercker status" title="wercker status" /></a></p>
+
+<h3 id="updating-the-ui-with-the-latest-content-manully">Updating the UI with the latest content (Manully)</h3>
 
 <ul>
-<li>Update the content - <code>git pull --recurse-submodules; cd content/vritti; git pull; cd ../..</code></li>
+<li>Update the content - <code>git submodule foreach &quot;(git checkout master; git pull)&amp;&quot;</code></li>
 <li>Install <a href="gohugo.io">Hugo</a></li>
-<li>Run <code>hugo</code> (Takes ~ 12s as of 20181221.)</li>
-<li>Check in and push the changed files to github.</li>
+<li>Run <code>hugo</code> (Takes ~ 16s as of 20181224.)</li>
+<li>Check in and push the changed files in the doc directory to github gh-page branch.</li>
 </ul>
 
 <h3 id="technical-considerations">Technical considerations</h3>

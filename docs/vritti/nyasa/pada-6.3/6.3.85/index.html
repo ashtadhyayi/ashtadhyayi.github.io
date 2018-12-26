@@ -16,17 +16,6 @@
     
 
     
-    
-      <link href="/ui/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
 
     <meta property="og:title" content="" />
 <meta property="og:description" content="चरणशब्दोऽयमध्ययननिमित्तमुपादाय पुरुषादिषु वत्र्तते। ब्राहृआ चरतीति ब्राहमचारी, व्रते (3.2.80) इति णिनिः। सब्राहृचारी इति। पूर्ववत्? कर्मधारयः। सब्राहृचारीत्यस्यायमर्थोऽभिमतः&ndash;समाने ब्राहृणि व्रतं चरतीति। एष चात्रार्थो यथोपपद्यते, तथा दर्शयितुमाह&ndash;ब्राहृ वेदः इत्यादि। तदध्यनार्थ यद्व्रतं तदपि ब्राह्रेति। तादथ्र्यात्? ताच्छब्द्यम्(), यथा&ndash;इन्द्रार्था स्थूणा इन्द इति। तच्चरतीति तत्? सम्पादयति, परिपालयतीत्यर्थः। केन पुनरसौ समानः? इत्याह&ndash;समानस्तस्यैव इत्यादि। तस्यैवेति वेदाख्यस्य ब्राहृणः। इतिकरणो हेतौ। यत एव मुपचारेण लब्धब्राहृव्यपदेशं व्रतं यश्चरति ब्राहृणश्च समानत्वादयः समानः स सब्राहृचारी। तेन सबहृचारीत्यस्यायमर्थो भवति&ndash;समाने ब्राहृणि व्रतचारीति। यदि ह्रसमाने ब्राहृणि व्रतं चरेत्? तदा समानत्वं न स्यात्()। तथापि ब्राहृआख्यं व्रतं न चरेदेवमपि ब्राहृचारित्वं न स्यात्()। तस्माद्यः समाने ब्राहृणि ब्राहृचारी, सोऽवश्यं समाने ब्राहृणि व्रतचारीति भवति। सब्राहृचारीत्ययमस्यर्थः सम्पदयते&ndash;समाने ब्राहृणि व्रतचारीति। अथ वा&ndash;तस्यैवेत्युपचारेण लब्धब्राहृव्यपदेशस्य व्रतस्यात्र पक्षे परमर्शः। समाने ब्राहृणि इत्यत्र ब्राहृशब्दो वेदे वत्र्तते, प्रतिवेदं हि भिद्यते, तदध्ययनार्थं यद्व्रतं तत्र यः समाने वेदेऽध्येतव्ये व्रतं चरति स एव सब्राहृचारीत्युच्यते॥" />
@@ -50,6 +39,7 @@
       
     
 
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -73,7 +63,7 @@
       
         let sutraId = "6.3.85";
         let sutraBasics = JSON.parse("{\"Next\":\"6.3.86\",\"Previous\":\"6.3.84\",\"अकारादिक्रमसङ्ख्या\":1536,\"कौमुदीक्रमसङ्ख्या\":1013,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"उत्तरपदे समानस्य\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"ज्योतिर्जनपदरात्रिनाभिनामगोत्ररूपस्थानवर्णवयोवचनबन्धुषु\"}");
-        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
+        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"satishabodha\":{\"name\":\"सतीशबोधः\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
       
       
 
@@ -105,21 +95,6 @@
       
     </div >
       
-      
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-
   </div>
 </nav>
 

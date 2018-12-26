@@ -16,17 +16,6 @@
     
 
     
-    
-      <link href="/ui/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
 
     <meta property="og:title" content="" />
 <meta property="og:description" content="सुप्तिङिति प्रत्याहारग्रहणमिति। सुबिति सप्तमीबहुवचनस्य ग्रहणं न भवति; यदि स्यात्, ङिसंबुद्ध्योः पदत्वाभावादेव नलोपस्याप्रसङ्गात् ठ्न ङिसंबुद्ध्योःऽ इति प्रतिषेधोऽनर्थकः स्यादिति भावः। सप्तमीबहुवचनस्य च पकारेण प्रत्याहारो न कपः पकारेण; तस्याहारस्तदा स्वरविधावपि तथैवेति सुप्त्वादेव स्वरसिद्धेः पित्वमनर्थकमेव स्यात्। यदि च सुब्ग्रहणेषु कपः पकारेण प्रत्याहारोऽभिमतः स्यात् ठ्सुप्यसर्वनामस्थानेऽ इत्येव ब्रूयात्, ठ्स्वादिषुऽ इति गुरुनिर्देशोऽनर्थकः स्यात्। ब्राह्मणा इति। पदत्वाद्रुत्वविशर्जनीयौ। ननु यस्मात्प्रत्ययविधिस्तदादीत्यनुवृतस्य सुप्तिङ्भ्यां विशेषणादेव तदन्तस्य ग्रहणं सिद्धम्, नार्थोऽन्तग्रहणेन, तत्राह-पदसंज्ञायामिति। इहासत्यन्तग्रहणे सुप्तिङमेव संज्ञा स्यात्, ततश्चाग्निष्वित्यादौ ठ्सात्पदाद्योःऽ इति षत्वनिषेधः स्यादित्याशङ्ग्य क्रियमाणमन्तग्रहणमुक्तस्यार्थस्य ज्ञापकं संपद्यते। गौरीब्राह्मणितरेति। तरबन्तस्य घसंज्ञायां सत्यां तत्रोतरपदे परतो गौरीशब्दस्य पुंवद्भावं बाधित्वा परत्वाद् ह्रस्वत्वं स्यात्। तरपि तु परतो ब्राह्मणीशब्दस्य न स्यात्; ततश्च गौरीब्राह्मणतरेति स्याद्, गौरब्राह्मणितरेति चेष्यते। वृतौ तु समासप्रदर्शनपरं वाक्यमुपातम्, न त्वेतत्कार्योदाहरणम्। गौरब्राह्मणितरेति समासे रूपम्॥" />
@@ -50,6 +39,7 @@
       
     
 
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -73,7 +63,7 @@
       
         let sutraId = "1.4.14";
         let sutraBasics = JSON.parse("{\"Next\":\"1.4.15\",\"Previous\":\"1.4.13\",\"अकारादिक्रमसङ्ख्या\":3763,\"कौमुदीक्रमसङ्ख्या\":29,\"प्रकारः\":\"संज्ञा\",\"लघुकौमुदीविषयः\":\"01. संज्ञाप्रकरणम्\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":20,\"विषयः १\":\"पदम्‌\",\"विषयः २\":\"\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"सुप्तिङन्तं पदम्\"}");
-        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
+        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"satishabodha\":{\"name\":\"सतीशबोधः\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
       
       
 
@@ -105,21 +95,6 @@
       
     </div >
       
-      
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-
   </div>
 </nav>
 

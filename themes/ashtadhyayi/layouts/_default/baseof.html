@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    {{ .Hugo.Generator }}
+    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    {{ else }}
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    {{ end }}
+
+    {{ if .RSSLink }}
+      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+    {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+    {{- template "_internal/opengraph.html" . -}}
+    {{- template "_internal/google_news.html" . -}}
+    {{- template "_internal/schema.html" . -}}
+    {{- template "_internal/twitter_cards.html" . -}}
+
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+      {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ relURL "css/fonts.css" }}">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="{{ relURL "js/sanscript.js" }}"></script>
+    <script src="{{ relURL "js/sutraNavigation.js" }}"></script>
+    <script src="{{ relURL "js/handleIncludes.js" }}"></script>
+    <script type="text/javascript">
+      let pageSource = "{{.File.Path}}";
+      let siteParams = JSON.parse("{{.Site.Params | jsonify}}");
+      let pageParams = JSON.parse("{{.Page.Params | jsonify}}");
+      let baseURL = "{{.Site.BaseURL}}";
+      console.log(pageSource);
+      {{ if isset .Params "vritti"}}
+        let sutraId = "{{.Params.index}}";
+        let sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
+        let vrittiBasics = JSON.parse({{index $.Site.Data.vrittiBasics  | jsonify}});
+      {{ end }}
+      {{ if eq .File.Path "_index.md"}}
+        let sutraId = "1.1.1";
+        let querySutraId = getQueryVariable("sutra");
+        if (querySutraId) {
+          sutraId = querySutraId;
+        }
+        let allSutraBasics = JSON.parse({{$.Site.Data.sutraBasics | jsonify}});
+        let sutraBasics = allSutraBasics[sutraId];
+      {{ end }}
+
+      let autocompletePageUrl = "{{ "data/sutrANi.tsv" | relURL }}";
+    </script>
+    <script src="{{ relURL "js/onDocumentReady.js" }}"></script>
+    <script src="{{ relURL "js/autocomplete.js" }}"></script>
+  </head>
+
+  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+
+    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+    <main class="container p-3" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+  </body>
+</html>

@@ -16,17 +16,6 @@
     
 
     
-    
-      <link href="/ui/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
 
     <meta property="og:title" content="" />
 <meta property="og:description" content="मताविति मत्वर्थ उच्यत इति। साहचर्याद् मुख्यस्य ग्रहणं न भवति। कथं हि मतुरभिधेयः स्याच्छब्दस्य शब्दः ? मत्वर्थग्रहणेनेत्यादि। समर्थविभक्तिः प्रथमा, प्रकृतेरर्थद्वारकं विशेषणम् अस्तित्वम्, प्रत्ययार्थः&ndash;अस्यास्मिन्निति च। तत्र यद्यपि प्रत्ययार्थो मतोरभिदेयम्, इतरदनभिधेयम्; तथापि साहचर्यमविशिष्टमिति सर्वमेतदाक्षिप्यतेउसन्निधाप्यते, उपस्थाप्यत इत्यर्थः। अथ वा&ndash;प्रधानवशब्तित्वाद् गुणानां प्रधाने प्रत्ययार्थे उपस्थापिते समर्थविभक्त्यादिकमपि गुणभूतमुपस्थाप्यते एव, आचमनादिवत्, यथा&ndash;व्रहाह्णा भोज्यन्तामित्युक्तेऽनुक्ता अप्याचमनादयोऽह्गभूता आक्षिप्यन्ते। इहास्यवाम इत्यस्मिन्नस्तीति षष्ठीप्रथमयोरुपलम्भादनेकपदसमुदायोऽयम्, ततश्चार्तवत्समुदायानां समासग्रहणं नियमार्थमिति प्रातिपदिकसंज्ञाया अभाबादेवंविधेभ्यः प्रत्ययो न प्राप्नोतीत्यत आह&ndash;अनुकरणशब्दाश्चेति। स्वरूपमात्रप्रधान इति। नात्र तदानीमुच्चरितमनुकरणस्वरूपं विवक्षैतम्, किं तर्हि ? अनुकार्यस्वरूपम्। मात्रशब्दो बाह्यर्थव्यवच्छेदार्थः, एतदुक्तं भवति&ndash;यथा गवादयः शब्दाः सास्नादिमदाकृतिमर्थं प्रत्यायन्तस्तेनार्थेन तद्वति मतुपमुत्पादयन्ति&ndash;गोमान्, वृक्षवानिति; तथानुकरणशब्दाः प्रथमासमर्थाः स्वेनानुकार्येण तद्वति च्छप्रत्ययमिति। तत्र ठनुकरणशब्दाःऽ इत्यनेन पदसमुदायत्वं निरस्यति। अनुकार्थो हि पदसमुदायः न त्वनुकरणम्। किं पुनरन्यदनुकार्यमनुकरणं च, ननु रूपभेदो नोपलभ्यते ?" />
@@ -50,6 +39,7 @@
       
     
 
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -73,7 +63,7 @@
       
         let sutraId = "5.2.59";
         let sutraBasics = JSON.parse("{\"Next\":\"5.2.60\",\"Previous\":\"5.2.58\",\"अकारादिक्रमसङ्ख्या\":2719,\"कौमुदीक्रमसङ्ख्या\":1859,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"मतौ च्छः सूक्तसाम्नोः\",\"विषयः २\":\"\",\"विषयः ३\":\"तद्धितः\",\"सूत्रम्‌\":\"मतौ च्छः सूक्तसाम्नोः\"}");
-        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
+        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"satishabodha\":{\"name\":\"सतीशबोधः\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
       
       
 
@@ -105,21 +95,6 @@
       
     </div >
       
-      
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-
   </div>
 </nav>
 

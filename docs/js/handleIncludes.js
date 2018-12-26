@@ -38,7 +38,7 @@ function fillJsInclude(jsIncludeJqueryElement) {
             var contentElements = virtualJqPage.find("#vrittiContentDiv");
             // console.log(contentElements);
             if (contentElements.length == 0) {
-                console.warn("Could not get \"vrittiContentDiv\" element.");
+                console.warn(`Could not get \"vrittiContentDiv\" element from ${includedPageUrl}.`);
                 console.log(responseHtml);
             } else {
                 // We don't want multiple post-content divs, hence we replace with an included-post-content div.

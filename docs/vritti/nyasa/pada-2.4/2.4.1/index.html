@@ -16,17 +16,6 @@
     
 
     
-    
-      <link href="/ui/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
 
     <meta property="og:title" content="" />
 <meta property="og:description" content="अत्र यदि पारिभाषिकमेकवचनं गृह्रेत तदानुप्रयोग एकवचनं न स्यात्&ndash; पञ्चपूलीयं शोभनेति, अनुप्रयोगस्याद्विगुत्वात्। यदि पारिभाषिकमेकवचनमिहाभिप्रेतं स्यात् तदा द्विगोरेकवचनमित्येवं ब्राऊयात्, तस्मादन्वर्थस्यैकवचनस्येदं ग्रहणं न पारिभाषिकस्येति मनसि कृत्वाह&ndash; एकस्य वचनमेकवचनम् इति। एतेनैकवचनशब्दस्य षष्ठीसमासतां दर्शयन्नन्वर्थतां दर्शयति। एकस्य वचनं वाचकमेकवचनमिति। वक्तीति वचनम्, कृत्यल्युटो बहुलम् (3.3.113) इति कत्र्तरि ल्युट्। एकवचनस्यैवार्थं पर्यायान्तरेण स्पष्टीकर्तुमाह&ndash; एकार्थस्य इत्यादि। ननु चैकवचनमिति पुंल्लिङ्गेन भवितव्यम्; कथम्? द्विगोः पुंल्लिङ्गत्वात्; न; लिङ्गसामान्यस्य विवक्षितत्वान्नपुंसकलिङ्गेनैव सामान्येन निर्देशः कृत इत्यदोषः। तदनेन प्रकारेण इति। अन्वर्थस्यैकवचनशब्दग्रहणात्मकेनेत्यर्थः। नचानेकार्थाभिधायिनः शब्दस्य वचनशतैरप्येकार्मथाभिधायित्वं शक्यते कर्त्तुम्; शब्दानामर्थाभिधायित्वस्य स्वाभाविकत्वात्; उच्यते चेदं वचनम्, ततः सामथ्र्यादतिदेशोऽयं विज्ञायत इत्यत आह&ndash; द्विग्वर्थस्यैकवद्भावो विधीयते इति। अस्यैवार्थं स्पष्टीकत्र्तमाह&ndash; द्विग्वर्थ एकवद्भवति इति। यद्येवम्, तद्धितार्थो यो द्विगुस्तस्याप्यकवद्भावः प्राप्नोति&ndash; पञ्चसु कपालेषु संस्कृतौ संस्कृता वा पञ्चकपालौ पञ्चकपाला वेत्यत आह&ndash; समाहारद्विगोश्च इत्यादि। चकारोऽवधारणे। समाहारद्विगोरेवेति यावत्। कथं पुनः समाहारद्विगोरेव ग्रहणं लभ्यते?" />
@@ -50,6 +39,7 @@
       
     
 
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -73,7 +63,7 @@
       
         let sutraId = "2.4.1";
         let sutraBasics = JSON.parse("{\"Next\":\"2.4.2\",\"Previous\":\"2.3.73\",\"अकारादिक्रमसङ्ख्या\":1943,\"कौमुदीक्रमसङ्ख्या\":731,\"प्रकारः\":\"अतिदेशः\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"एकवद्भावः\",\"विषयः २\":\"द्विगुद्वन्द्वयोः वचननिर्णयः\",\"विषयः ३\":\"\",\"सूत्रम्‌\":\"द्विगुरेकवचनम्‌\"}");
-        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
+        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"satishabodha\":{\"name\":\"सतीशबोधः\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
       
       
 
@@ -105,21 +95,6 @@
       
     </div >
       
-      
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-
   </div>
 </nav>
 

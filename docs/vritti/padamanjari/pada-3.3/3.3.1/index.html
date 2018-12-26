@@ -16,17 +16,6 @@
     
 
     
-    
-      <link href="/ui/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
 
     <meta property="og:title" content="" />
 <meta property="og:description" content="पदमञ्जरी वर्तमाने इत्येवेति । ठ्वर्तमाने लट्ऽ इत्यतो वर्तमानग्रहणानुवृतेरविच्छेदमेवकारेण दर्शयति । संज्ञायामिति चेति । ठ्पुवः संज्ञायाम्ऽ इत्यतः ॥ ठुणादयःऽ इत्येव सूत्रमुणादीनां शास्त्रान्तरपरिपठितानां साधुत्वानुज्ञानार्थमस्तु, किं बहुलग्रहणेन ? तत्राह&mdash;बाहुलकमिति । ठ्ला आदानेऽ, बहूनर्थान् लाति&mdash;बहुलम्, तस्य भावो बाहुलकम्, मनोज्ञादित्वाद् वुञ् । तत्पुनर्बह्वर्थादानं बहुलशब्दप्रवृत्तिनिमितम् । बहवः पुनरर्थाः&mdash;क्वचित्प्रवृत्तिः, क्वचिदप्रवृत्तिरिति वक्ष्यमाणलक्षणाः । प्रकृतेरिति । जातावेकवचनम् । तनुशब्दोऽत्र वृत्तिविषये गुणमात्रवचनः । प्रकृतीनां तानवमल्पत्वं दृष्ट्वा तद्बाहुलकमुक्तम्, तेनापठिताभ्योऽपि प्रकृतिभ्य उणादयो भवन्ति, यथा&mdash;हृषेरुलजुक्तः शकेरपि भवति&mdash;शङ्कुलेति । तथा तेषामुणादीनां पञ्चपाद्यां प्रायेण समुच्चयनं कृतम्, न तु साकल्येन; बहुलवचनात्वविहिता अपि भवन्ति, यथा&mdash;अर्तेः फिडफिड्डौ भवतः&mdash;ऋफिडः, ऋफिड्ड इति । कार्यसशेषविधेश्च । कार्याणि च सशेषाणि विहितानि न निः शेषाणि । बहुलवचनात्वविहितान्यपि भवन्ति । ठ्षणु दानेऽ, ठ्ञमन्ताड्डःऽ, ठ्धात्वादेः पः सऽ इति सत्वं न भवति, कृते वा सत्वे षत्वं भवति । स्यादेतत्&mdash;यावत्यः प्रकृतयः पञ्चपाद्यामुपाताः, यावन्तश्च प्रत्ययाः, यावन्ति च कार्याणि विहितानि तावन्त्येव भवन्तु, मा भूदन्येषां बहुलग्रहणेन संग्रह इति ?" />
@@ -50,6 +39,7 @@
       
     
 
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/solid.css" integrity="sha384-+0VIRx+yz1WBcCTXBkVQYIBVNEFH1eP6Zknm16roZCyeNg2maWEpk/l/KsyFKs7G" crossorigin="anonymous">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -73,7 +63,7 @@
       
         let sutraId = "3.3.1";
         let sutraBasics = JSON.parse("{\"Next\":\"3.3.2\",\"Previous\":\"3.2.188\",\"अकारादिक्रमसङ्ख्या\":706,\"कौमुदीक्रमसङ्ख्या\":3169,\"प्रकारः\":\"\",\"लघुकौमुदीविषयः\":\"\",\"लघुसिद्धान्तकौमुदीक्रमसङ्ख्या\":\"\",\"विषयः १\":\"\",\"विषयः २\":\"वर्तमाने\",\"विषयः ३\":\"कृतः\",\"सूत्रम्‌\":\"उणादयो बहुलम्\"}");
-        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
+        let vrittiBasics = JSON.parse("{\"balamanorama\":{\"name\":\"बालमनोरमा\"},\"kashika\":{\"name\":\"काशिका\"},\"laghusiddhantakaumudi\":{\"name\":\"लघुसिद्धान्तकौमुदी\"},\"mahabhashyam\":{\"name\":\"महाभाष्यम्\"},\"nyasa\":{\"name\":\"न्यासः\"},\"padamanjari\":{\"name\":\"पदमञ्जरी\"},\"satishabodha\":{\"name\":\"सतीशबोधः\"},\"siddhantakaumudi\":{\"name\":\"सिद्धान्तकौमुदी\"},\"tattvabodhini\":{\"name\":\"तत्त्वबोधिनी\"}}");
       
       
 
@@ -105,21 +95,6 @@
       
     </div >
       
-      
-<div hidden>
-  <span id="new-window-0">Opens in a new window</span>
-  <span id="new-window-1">Opens an external site</span>
-  <span id="new-window-2">Opens an external site in a new window</span>
-</div>
-
-
-
-
-
-
-
-
-
   </div>
 </nav>
 
