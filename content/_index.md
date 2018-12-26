@@ -8,7 +8,10 @@ type: "page"
 <div class="js_include vritti_l2 collapsed " relativeUrlBase="vritti/anuvritti/pada-1.1/1.1.1/"  title="अनुवृत्तिः" dataType="txt"> </div>  
 <div class="js_include vritti_l2 collapsed " relativeUrlBase="vritti/topic/pada-1.1/1.1.1/"  title="विषयः" dataType="txt"> </div>  
 </div>
+<div class="card-group border border-secondary">
 <div class="js_include vritti_l1" relativeUrlBase="vritti/sumit_garg_english/pada-1.1/1.1.1/"  title="गार्गसुमितानुवादः" dataType="txt"> </div>  
+<div class="js_include vritti_l1 collapsed" relativeUrlBase="vritti/satishabodha/pada-1.1/1.1.1/"  title="सतीशबोधः"> </div>  
+</div>
 <div class="card-group border border-primary">
 <div class="js_include vritti_l1" relativeUrlBase="vritti/kashika/pada-1.1/1.1.1/" title="काशिका"> </div>  
 <div class="js_include collapsed vritti_l2" relativeUrlBase="vritti/nyasa/pada-1.1/1.1.1/"  title="न्यासः"> </div>  
