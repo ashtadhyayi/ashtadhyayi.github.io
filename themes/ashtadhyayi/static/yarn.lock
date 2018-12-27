@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.6.3.tgz#61c122c420d7a91613f393d6a06e5a4c6ae6abf3"
   integrity sha512-s5PLdI9NYgjBvfrv6rhirPHlAHWx+Sfo/IjsAeiXYfmemC/GSjwsyz1wLnGPazbLPXWfk62ks980o9AmsxYUEQ==
 
+"@sanskrit-coders/sanscript@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sanskrit-coders/sanscript/-/sanscript-1.0.2.tgz#6514f18c9e7cccb6ad8bf45837142a49a02cae33"
+  integrity sha512-Q8eBt0VCgMC+W79SpwBJ0uJM7ZNAYV0F8K3+/R8Y40JObbIHvVNRwzV7B4iEyShHaVpzguxDHHqMoT8QFhzWkw==
+
 bootstrap@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.2.1.tgz#8f8bdca024dbf0e8644da32e918c8a03a90a5757"
