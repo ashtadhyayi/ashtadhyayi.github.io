@@ -20,7 +20,7 @@ build:
             git submodule foreach "(git checkout master; git pull)&"
     - arjen/hugo-build:
         version: "0.50"
-        theme: "ananke"
+        theme: "ashtadhyayi"
         flags: --buildDrafts=true
     # - lordlothar99/git-push:
     #   The push below fails for unknown reasons.
