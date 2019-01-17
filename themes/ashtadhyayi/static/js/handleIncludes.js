@@ -1,5 +1,8 @@
 function addLinks(htmlIn) {
-  return htmlIn.replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml).replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari);
+  // Replace stuff like ६.४.१३ or 6.4.13.
+  let htmlOut = htmlIn.replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml).replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari);
+  htmlOut = htmlOut.replace(/\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtml);
+  return htmlOut;
 }
 
 function fillJsInclude(jsIncludeJqueryElement) {
