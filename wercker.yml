@@ -19,9 +19,14 @@ build:
         code: |
             git submodule foreach "(git checkout master; git pull)&"
     - arjen/hugo-build:
-        version: "0.50"
+        version: "0.53"
         theme: "ashtadhyayi"
         flags: --buildDrafts=true
+    - arjen/hugo-build:
+        version: "0.53"
+        theme: "ashtadhyayi"
+        flags: --buildDrafts=true
+        config: config_offline_android.toml
     # - lordlothar99/git-push:
     #   The push below fails for unknown reasons.
     #      host: github.com
@@ -32,6 +37,11 @@ deploy:
     - add-ssh-key:
         keyname: github_key
         host: github.com
-    - lukevivier/gh-pages:
-            token: $GIT_TOKEN
-            basedir: docs
+    - sf-zhou/gh-pages@0.2.6:
+        token: $GIT_TOKEN
+        basedir: build_github
+        branch: gh-pages
+    - sf-zhou/gh-pages@0.2.6:
+        token: $GIT_TOKEN
+        basedir: build_offline_android
+        branch: offline_android

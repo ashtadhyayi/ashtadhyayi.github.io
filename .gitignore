@@ -1,2 +1,3 @@
 .wercker
-docs
+build_github
+build_offline_android

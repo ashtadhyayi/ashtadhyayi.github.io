@@ -1,8 +1,8 @@
-baseURL = "https://ashtadhyayi.github.io/ui/"
+baseURL = "file:///storage/emulated/0/sanskrit/ashtadhyayi"
 languageCode = "en-us"
 title = "अष्टाध्यायी - मूलस्रोतः"
 theme = "ashtadhyayi"
-publishDir = "build_github"
+publishDir = "build_offline_android"
 ignorefiles = [ "vritti/scripts/.*" ]
 [params]
   githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"
