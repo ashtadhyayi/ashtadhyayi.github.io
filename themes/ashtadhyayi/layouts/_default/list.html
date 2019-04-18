@@ -1,17 +1,25 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-  <main class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    {{- .Content -}}
-  </main>
-    <ul>
-      {{ range .Paginator.Pages }}
-        <li>
-          <a href="{{ .URL }}" class="link black dim">
-            {{ $sutraTitle := (print .Params.index " " .Params.sutra) }}
-            {{ .Title | default $sutraTitle}}
-          </a>
-        </li>
+<main>
+  <article class="col-xs-12 card mt-2">
+    <header>
+      <h2 id="sutraHeading" class="card-title  border  d-flex justify-content-between">
+        {{ .Params.type }}
+        {{ $sutraTitle := (print .Params.index " " .Params.sutra) }}
+        {{ .Title | default $sutraTitle}}
+      </h2>
+    </header>
+    <div id="contentDiv" class="card-body nested-links nested-img mid-gray">
+      {{ .Content }}
+    </div>
+    <div class="css-treeview box">
+      {{ range .Pages}}
+      <li>
+        {{partial "article-params-card" .}}
+      </li>
       {{ end }}
-    </ul>
+    </div>
   </article>
+</main>
 {{ end }}
+
