@@ -13,13 +13,35 @@
       {{ .Content }}
     </div>
     <div class="css-treeview box">
-      {{ range .Pages}}
-      <li>
-        {{partial "article-params-card" .}}
-      </li>
-      {{ end }}
+      {{ template "section-tree-nav" .CurrentSection }}
     </div>
   </article>
 </main>
 {{ end }}
 
+{{ define "section-tree-nav" }}
+<ul>
+  <li><input type="checkbox" id="section-tree-item-{{.Title}}" checked="checked" /><label for="section-tree-item-{{.Title}}">{{.Title}}</label>
+    <ul>
+      <!--This conditional ordering must be done more elegantly. Conditionally (re)assigning $pages within the if condition does not work.-->
+      {{if eq .Params.order "reverseDate"}}
+      {{ $pages := .Pages }}
+      {{ range $pages}}
+      {{partial "article-params-card" .}}
+      {{ end }}
+      {{ else }}
+      {{$pages := .Pages}}
+      {{ range $pages}}
+      {{partial "article-params-card" .}}
+      {{ end }}
+      {{ end }}
+
+      {{ range .Sections.ByTitle}}
+      <li>
+        {{ template "section-tree-nav" . }}
+      </li>
+      {{ end }}
+    </ul>
+  </li>
+</ul>
+{{ end }}

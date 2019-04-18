@@ -11,12 +11,14 @@ $( document ).ready(function() {
 });
 
 $( document ).ready(function() {
-  $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraBasics["सूत्रम्‌"]}`);
+if (typeof sutraId === 'string') {
+    $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraBasics["सूत्रम्‌"]}`);
+}
 });
 
 $( document ).ready(function() {
   // console.debug(pageSource);
-  if (pageSource.startsWith("vritti")) {
+  if (pageSource.startsWith("vritti") && !pageSource.endsWith("_index.md")) {
     $("#vrittiTitleSpan").text(vrittiBasics[pageParams.vritti]["name"]);
     $("#vrittiContentDiv").html(addLinks($("#vrittiContentDiv").html()));
   }

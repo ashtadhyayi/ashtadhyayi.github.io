@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="{{ relURL "node_modules/@fortawesome/fontawesome-free/css/solid.min.css" }}">
     <link rel="stylesheet" href="{{ relURL "node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" }}">
     <link rel="stylesheet" href="{{ relURL "css/fonts.css" }}">
+    <link rel="stylesheet" href="{{ relURL "css/external/treeview.css" }}">
     <script src="{{ relURL "node_modules/jquery/dist/jquery.min.js" }}"></script>
     <script src="{{ relURL "node_modules/jquery-csv/src/jquery.csv.min.js" }}"></script>
     <script src="{{ relURL "node_modules/jquery-ui-dist/jquery-ui.min.js" }}"></script>
@@ -48,14 +49,17 @@
     <script src="{{ relURL "js/sutraNavigation.js" }}"></script>
     <script src="{{ relURL "js/handleIncludes.js" }}"></script>
     <script type="text/javascript">
+      // Note that we define page-specific variables below and not in a partial like hugo-site-vars-to-js-general.html. Reason: Hugo builds this partial just once and includes it everywhere.
       let pageSource = "{{.File.Path}}";
       let siteParams = JSON.parse("{{.Site.Params | jsonify}}");
       let pageParams = JSON.parse("{{.Page.Params | jsonify}}");
       let baseURL = "{{.Site.BaseURL}}";
       console.log(pageSource);
+      let sutraBasics = null;
+      let sutraId = null;
       {{ if isset .Params "vritti"}}
-        let sutraId = "{{.Params.index}}";
-        let sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
+        sutraId = "{{.Params.index}}";
+        sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
         let vrittiBasics = JSON.parse({{index $.Site.Data.vrittiBasics  | jsonify}});
       {{ end }}
       {{ if eq .File.Path "_index.md"}}

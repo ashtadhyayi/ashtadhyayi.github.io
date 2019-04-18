@@ -54,6 +54,9 @@ function getQueryVariable(variable) {
 }
 
 function setSutraNavigationLinks(){
+  if (!sutraBasics) {
+    return;
+  }
   try{
     if (sutraBasics.Previous) {
       // console.log(nextSutraPaada);
