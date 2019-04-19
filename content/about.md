@@ -38,7 +38,7 @@ We use the Hugo static site generator to generate webpages, and github to host t
 Ordinarily, wercker piplenes set up under the [ashtadhyayi](https://github.com/sanskrit/ashtadhyayi/) and [ashtadhyayi-ui](https://github.com/ashtadhyayi/ashtadhyayi.github.io/) projects are automatically triggered upon updates to the respective repositories, leading to the updated UI.
 - Status
   - content triggering UI builds: [![wercker status](https://app.wercker.com/status/ce8ccbe942e0226ce16ba45e0d2fc10f/s/master "wercker status")](https://app.wercker.com/project/byKey/ce8ccbe942e0226ce16ba45e0d2fc10f)
-  - ui builds: [![wercker status](https://app.wercker.com/status/d0eeae8d13a5701771b428486ae1de1b/s/master "wercker status")](https://app.wercker.com/project/byKey/d0eeae8d13a5701771b428486ae1de1b)
+  - ui builds: [![wercker status](https://app.wercker.com/status/ad825f9de7285c39858a47f6dbe0ecb2/s/master "wercker status")](https://app.wercker.com/project/byKey/ad825f9de7285c39858a47f6dbe0ecb2)
 
 ### Updating the UI with the latest content (Manully)
 - Update the content - `git submodule foreach "(git checkout master; git pull)&"`
