@@ -1,5 +1,6 @@
 ---
-type: "page"
+aliases:
+    - /ui/
 ---
 <div class="card-group border border-primary">
 <div class="js_include vritti_l2 " relativeUrlBase="../vritti/padachcheda/pada-1.1/1.1.1/"  title="पदच्छेदः" dataType="txt"> </div>  
