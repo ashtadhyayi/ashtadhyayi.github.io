@@ -11,7 +11,7 @@
         {{ $sutra_info := index $.Site.Data.sutraBasics $adhyaaya_paada_suutra }}
         {{ $sutra_topics := index $sutra_info "विषयाः" }}
         {{ $sutra_text := index $sutra_info "सूत्रम्" }}
-        {{ $url := "/sutra-details/?sutra={{$adhyaaya_paada_suutra}}" | absURL}}
+        {{ $url := printf "%s%s%s" ("/sutra-details/" | absURL ) "?sutra=" $adhyaaya_paada_suutra}}
         <url>
             <loc>{{ $url }}</loc>
         </url>
