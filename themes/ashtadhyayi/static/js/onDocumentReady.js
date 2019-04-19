@@ -11,7 +11,7 @@ $( document ).ready(function() {
 });
 
 $( document ).ready(function() {
-if (typeof sutraId === 'string') {
+if (sutraId != null) {
     $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraBasics["सूत्रम्‌"]}`);
 }
 });

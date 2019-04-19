@@ -34,7 +34,7 @@ function getSutraLinkRelative(sutraId, resourceType) {
 
 function getContextSensitiveSutraLink(sutraId) {
   if (!pageSource.startsWith("vritti")) {
-    return `${baseURL}?sutra=${sutraId}`;
+    return `${baseURL}/sutra-details/?sutra=${sutraId}`;
   } else {
     return getSutraLinkRelative(sutraId);
   }
@@ -54,7 +54,8 @@ function getQueryVariable(variable) {
 }
 
 function setSutraNavigationLinks(){
-  if (!sutraBasics) {
+  if (sutraBasics == null) {
+    console.debug("No sutraBasics. Returning", sutraBasics);
     return;
   }
   try{

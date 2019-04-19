@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    // Note that this file should not contain definitions for page-specific variables. Reason: Hugo builds this partial just once and includes it everywhere.
+    let baseURL = "{{.Site.BaseURL}}";
+    let basePath = "/" + baseURL.split("/").slice(3).join("/");
+    let siteParams = JSON.parse("{{.Site.Params | jsonify}}");
+    let pageDefaultsList = JSON.parse("{{.Site.Data.page_defaults | jsonify}}");
+    let sidebarsData = JSON.parse("{{$.Site.Data.sidebars | jsonify}}");
+    let autocompletePageUrl = "{{ "data/sutrANi.tsv" | relURL }}";
+    let kaumudiToAshtadhyayiIndexUrl = "{{ "data/kaumudiToAshtadhyayiIndex.tsv" | relURL }}";
+    
+</script>

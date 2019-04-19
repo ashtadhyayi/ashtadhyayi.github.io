@@ -8,16 +8,9 @@
       <a href="{{ "google_site_search/" | relURL }}"  class="btn btn-default">Google</a>
     </div>
     <div class="row col  d-flex justify-content-center">
-      {{ if isset .Params "vritti"}}
-        <div id="prevSutraDiv"></div>
-        {{$dataRepoPath := replace .File.Path "vritti/" "" }}
-        <div id="nextSutraDiv"></div>
-      {{ end }}
-      {{ if eq .File.Path "_index.md"}}
         <div id="prevSutraDiv"></div>
         <div id="currentSutraDiv"></div>
         <div id="nextSutraDiv"></div>
-      {{ end }}
     </div >
       {{ if .Site.Menus.main }}
       <div >
