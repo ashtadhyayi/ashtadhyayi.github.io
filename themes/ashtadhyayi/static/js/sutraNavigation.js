@@ -28,7 +28,7 @@ function getSutraLinkRelative(sutraId, resourceType) {
   if (resourceType == "txt") {
     return `../../pada-${sutraPaada}/${sutraId}.txt`
   } else {
-    return `../../pada-${sutraPaada}/${sutraId}/`;
+    return `../../pada-${sutraPaada}/${sutraId}.md`;
   }
 }
 

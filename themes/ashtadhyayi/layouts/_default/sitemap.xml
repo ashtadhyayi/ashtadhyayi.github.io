@@ -1,0 +1,40 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    {{range $adhyaaya := seq 1 8}}
+    {{range $paada := seq 1 4}}
+        {{ $adhyaaya_paada := printf "%d.%d" $adhyaaya $paada }}
+        {{ $sutra_count := index $.Site.Data.vrittiBasics.ashtadhyayi.sutraCount $adhyaaya_paada }}
+    {{range $suutra := seq 1 $sutra_count}}
+        {{ $adhyaaya_paada_suutra := printf "%d.%d.%d" $adhyaaya $paada $suutra}}
+        {{ $adhyaaya_paada_suutra_dashed := printf "%d-%d-%d" $adhyaaya $paada $suutra}}
+        {{ $sutra_info := index $.Site.Data.sutraBasics $adhyaaya_paada_suutra }}
+        {{ $sutra_topics := index $sutra_info "विषयाः" }}
+        {{ $sutra_text := index $sutra_info "सूत्रम्" }}
+        {{ $url := "/sutra-details/?sutra={{$adhyaaya_paada_suutra}}" | absURL}}
+        <url>
+            <loc>{{ $url }}</loc>
+        </url>
+    {{end}}
+    {{end}}
+    {{end}}
+
+    {{ range .Data.Pages }}
+    <url>
+        <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+        <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
+        <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+        <priority>{{ .Sitemap.Priority }}</priority>{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
+        <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Lang }}"
+                href="{{ .Permalink }}"
+        />{{ end }}
+        <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Lang }}"
+                href="{{ .Permalink }}"
+        />{{ end }}
+    </url>
+    {{ end }}
+</urlset>

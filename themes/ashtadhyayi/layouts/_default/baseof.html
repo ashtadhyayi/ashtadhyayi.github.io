@@ -10,12 +10,7 @@
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     {{ .Hugo.Generator }}
-    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    {{ else }}
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    {{ end }}
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
     {{ if .RSSLink }}
       <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -45,7 +40,8 @@
     <script src="{{ relURL "node_modules/jquery-ui-dist/jquery-ui.min.js" }}"></script>
     <script src="{{ relURL "node_modules/bootstrap/dist/js/bootstrap.min.js" }}"></script>
     <script src="{{ relURL "node_modules/@sanskrit-coders/sanscript/sanscript.js" }}"></script>
-
+    <script src="{{ relURL "node_modules/showdown/dist/showdown.js" }}"></script>
+    
     <script src="{{ relURL "js/sutraNavigation.js" }}"></script>
     <script src="{{ relURL "js/handleIncludes.js" }}"></script>
       {{ partialCached "hugo-site-vars-to-js-general.html" .}}
