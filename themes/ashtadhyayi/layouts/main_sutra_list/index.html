@@ -10,11 +10,13 @@
     <div id="contentDiv" class="card-body nested-links nested-img mid-gray">
       {{ .Content }}
     </div>
-    <div class="box">
+    <div class="css-treeview box">
       <ul>
           {{ $vritti_basics := .Site.Data.vrittiBasics}}
           {{range $adhyaaya := seq 1 8}}
+          <li><input type="checkbox" id="section-tree-item-{{$adhyaaya}}" checked="checked" /><label for="section-tree-item-{{$adhyaaya}}">{{$adhyaaya}}</label><ul>
           {{range $paada := seq 1 4}}
+          <li><input type="checkbox" id="section-tree-item-{{$adhyaaya}}-{{$paada}}" checked="checked" /><label for="section-tree-item-{{$adhyaaya}}-{{$paada}}">{{$adhyaaya}}-{{$paada}}</label><ul>
           {{ $adhyaaya_paada := printf "%d.%d" $adhyaaya $paada }}
           {{ $ashtadhyayi := index $vritti_basics "ashtadhyayi"}}
           {{ $sutra_count := index $ashtadhyayi.sutraCount $adhyaaya_paada }}
@@ -26,7 +28,11 @@
               </div>
           </li>
           {{end}}
+          </ul>
+          </li>
           {{end}}
+          </ul>
+          </li>
           {{end}}
       </ul>
     </div>
