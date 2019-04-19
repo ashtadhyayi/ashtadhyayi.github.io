@@ -22,11 +22,13 @@ build:
         version: "0.53"
         theme: "ashtadhyayi"
         flags: --buildDrafts=true
+        command-timeout: 30
     - arjen/hugo-build:
         version: "0.53"
         theme: "ashtadhyayi"
         flags: --buildDrafts=true
         config: config_offline_android.toml
+        command-timeout: 30
     # - lordlothar99/git-push:
     #   The push below fails for unknown reasons.
     #      host: github.com
