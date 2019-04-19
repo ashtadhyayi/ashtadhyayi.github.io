@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "अष्टाध्यायी - मूलस्रोतः"
 theme = "ashtadhyayi"
 publishDir = "build_github"
+enableGitInfo = true
 ignorefiles = [ "vritti/scripts/.*" ]
 [params]
   githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"

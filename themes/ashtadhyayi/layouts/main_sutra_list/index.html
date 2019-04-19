@@ -1,0 +1,35 @@
+{{ define "main" }}
+<!--Note that this template is used for sections as well as taxonomies.-->
+<main>
+  <article class="col-xs-12 card mt-2">
+    <header>
+      <h2 id="sutraHeading" class="card-title  border  d-flex justify-content-between">
+        {{ .Title}}
+      </h2>
+    </header>
+    <div id="contentDiv" class="card-body nested-links nested-img mid-gray">
+      {{ .Content }}
+    </div>
+    <div class="box">
+      <ul>
+          {{ $vritti_basics := .Site.Data.vrittiBasics}}
+          {{range $adhyaaya := seq 1 8}}
+          {{range $paada := seq 1 4}}
+          {{ $adhyaaya_paada := printf "%d.%d" $adhyaaya $paada }}
+          {{ $ashtadhyayi := index $vritti_basics "ashtadhyayi"}}
+          {{ $sutra_count := index $ashtadhyayi.sutraCount $adhyaaya_paada }}
+          {{range $suutra := seq 1 $sutra_count}}
+          {{ $adhyaaya_paada_suutra := printf "%d.%d.%d" $adhyaaya $paada $suutra}}
+          <li>
+              <div class="card-title bg-light-gray border d-flex justify-content-between">
+                  <a href="sutra-details/sutra={{$adhyaaya_paada_suutra}}">{{$adhyaaya_paada_suutra}} </a>
+              </div>
+          </li>
+          {{end}}
+          {{end}}
+          {{end}}
+      </ul>
+    </div>
+  </article>
+</main>
+{{ end }}
