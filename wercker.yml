@@ -44,7 +44,7 @@ deploy:
     - sf-zhou/gh-pages@0.2.6:
         token: $GIT_TOKEN
         basedir: build_github
-        branch: gh-pages
+        branch: master
     - sf-zhou/gh-pages@0.2.6:
         token: $GIT_TOKEN
         basedir: build_offline_android
