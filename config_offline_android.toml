@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "अष्टाध्यायी - मूलस्रोतः"
 theme = "ashtadhyayi"
 publishDir = "build_offline_android"
-ignorefiles = [ "vritti/scripts/.*" ]
+ignorefiles = [ ".git.*" ]
 [params]
   githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"
   env = "production"

@@ -4,7 +4,8 @@ title = "अष्टाध्यायी - मूलस्रोतः"
 theme = "ashtadhyayi"
 publishDir = "build_github"
 enableGitInfo = true
-ignorefiles = [ "vritti/scripts/.*" ]
+# The below wont work as of 201903 - see https://github.com/gohugoio/hugo/pull/5649
+ignoreFiles = [ "\\.git.*" ]
 [params]
   githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"
   env = "production"
