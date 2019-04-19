@@ -19,12 +19,12 @@ build:
         code: |
             git submodule foreach "(git checkout master; git pull)&"
     - arjen/hugo-build:
-        version: "0.53"
+        version: "0.55"
         theme: "ashtadhyayi"
         flags: --buildDrafts=true
         command-timeout: 30
     - arjen/hugo-build:
-        version: "0.53"
+        version: "0.55"
         theme: "ashtadhyayi"
         flags: --buildDrafts=true
         config: config_offline_android.toml
