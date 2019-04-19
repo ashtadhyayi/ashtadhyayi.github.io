@@ -10,6 +10,7 @@
     "jquery": "^3.3.1",
     "jquery-csv": "^0.8.9",
     "jquery-ui-dist": "^1.12.1",
+    "showdown": "^1.9.0",
     "tachyons": "^4.11.1"
   }
 }

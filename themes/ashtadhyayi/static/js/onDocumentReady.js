@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 $( document ).ready(function() {
 if (sutraId != null) {
-    $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraBasics["सूत्रम्‌"]}`);
+    $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraBasics["सूत्रम्"]}`);
 }
 });
 
