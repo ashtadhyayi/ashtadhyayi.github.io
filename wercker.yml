@@ -21,13 +21,13 @@ build:
     - arjen/hugo-build:
         version: "0.55.2"
         theme: "ashtadhyayi"
-        flags: --buildDrafts=true --templateMetrics --debug
+        flags: --buildDrafts=true --templateMetrics
         command-timeout: 30
         no-response-timeout: 10
     - arjen/hugo-build:
         version: "0.55.2"
         theme: "ashtadhyayi"
-        flags: --buildDrafts=true --templateMetrics --debug
+        flags: --buildDrafts=true --templateMetrics
         config: config_offline_android.toml
         command-timeout: 30
         no-response-timeout: 10
