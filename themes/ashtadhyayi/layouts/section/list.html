@@ -1,0 +1,39 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+<main>
+  <article class="col-xs-12 card mt-2">
+    <header>
+      <h2 id="sutraHeading" class="card-title  border  d-flex justify-content-between">
+        {{ .Params.type }}
+        {{ $sutraTitle := (print .Params.index " " .Params.sutra) }}
+        {{ .Title | default $sutraTitle}}
+      </h2>
+    </header>
+    <div id="contentDiv" class="card-body nested-links nested-img mid-gray">
+      {{ .Content }}
+    </div>
+    <div class="css-treeview box">
+      {{ template "section-tree-nav" .CurrentSection }}
+    </div>
+  </article>
+</main>
+{{ end }}
+
+{{ define "section-tree-nav" }}
+<ul>
+  <li><input type="checkbox" id="section-tree-item-{{.Title}}" checked="checked" /><label for="section-tree-item-{{.Title}}">{{.Title}}</label>
+    <ul>
+      <!--This conditional ordering must be done more elegantly. Conditionally (re)assigning $pages within the if condition does not work.-->
+      {{ range sort (.Pages.ByParam "index_padded") }}
+      {{partial "article-params-card" .}}
+      {{ end }}
+
+      {{ range .Sections.ByTitle}}
+      <li>
+        {{ template "section-tree-nav" . }}
+      </li>
+      {{ end }}
+    </ul>
+  </li>
+</ul>
+{{ end }}

@@ -1,5 +1,6 @@
 {{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
+<!--Note that this template is used for sections as well as taxonomies.-->
 <main>
   <article class="col-xs-12 card mt-2">
     <header>
@@ -13,35 +14,11 @@
       {{ .Content }}
     </div>
     <div class="css-treeview box">
-      {{ template "section-tree-nav" .CurrentSection }}
+      
+      {{ range sort (.Pages.ByTitle) }}
+      {{partial "article-params-card" .}}
+      {{ end }}
     </div>
   </article>
 </main>
-{{ end }}
-
-{{ define "section-tree-nav" }}
-<ul>
-  <li><input type="checkbox" id="section-tree-item-{{.Title}}" checked="checked" /><label for="section-tree-item-{{.Title}}">{{.Title}}</label>
-    <ul>
-      <!--This conditional ordering must be done more elegantly. Conditionally (re)assigning $pages within the if condition does not work.-->
-      {{if eq .Params.order "reverseDate"}}
-      {{ $pages := .Pages }}
-      {{ range $pages}}
-      {{partial "article-params-card" .}}
-      {{ end }}
-      {{ else }}
-      {{$pages := .Pages}}
-      {{ range $pages}}
-      {{partial "article-params-card" .}}
-      {{ end }}
-      {{ end }}
-
-      {{ range .Sections.ByTitle}}
-      <li>
-        {{ template "section-tree-nav" . }}
-      </li>
-      {{ end }}
-    </ul>
-  </li>
-</ul>
 {{ end }}
