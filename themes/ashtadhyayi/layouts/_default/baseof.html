@@ -58,11 +58,10 @@
         sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
         let vrittiBasics = JSON.parse({{index $.Site.Data.vrittiBasics  | jsonify}});
       {{ end }}
-      if (pageSource == "sutra-details.md") {
+      if (pageSource == "sutra-details.md" || pageSource == "ui.md") {
         sutraId = "1.1.1";
-        let querySutraId = getQueryVariable("sutra");
-        if (querySutraId) {
-          sutraId = querySutraId;
+        if (getQueryVariable("sutra")) {
+          sutraId = getQueryVariable("sutra");
         }
         let allSutraBasics = JSON.parse({{$.Site.Data.sutraBasics | jsonify}});
         sutraBasics = allSutraBasics[sutraId];

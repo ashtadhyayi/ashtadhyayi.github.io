@@ -3,6 +3,6 @@
 <div name="manualRedirectionDiv"/>
 
 <script>
-redirectToPage("../sutra-details/?sutra=" + querySutraId, document.getElementsByName("manualRedirectionDiv"));
+redirectToPage("../sutra-details/?sutra=" + sutraId, document.getElementsByName("manualRedirectionDiv"));
 
 </script>
