@@ -21,7 +21,7 @@ build:
     - arjen/hugo-build:
         version: "0.55.2"
         theme: "ashtadhyayi"
-        flags: --buildDrafts=true --templateMetrics stepAnalysis --debug
+        flags: --buildDrafts=true --templateMetrics --stepAnalysis --debug
         command-timeout: 30
         no-response-timeout: 10
     - arjen/hugo-build:
