@@ -5,5 +5,7 @@
     let siteParams = JSON.parse("{{.Site.Params | jsonify}}");
     let autocompletePageUrl = "{{ "data/sutrANi.tsv" | relURL }}";
     let kaumudiToAshtadhyayiIndexUrl = "{{ "data/kaumudiToAshtadhyayiIndex.tsv" | relURL }}";
+    window.allSutraBasics = JSON.parse({{$.Site.Data.sutraBasics | jsonify}});
+    window.vrittiBasics = JSON.parse({{index $.Site.Data.vrittiBasics  | jsonify}});
     
 </script>

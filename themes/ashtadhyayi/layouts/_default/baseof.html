@@ -27,24 +27,7 @@
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
 
-    <link rel="stylesheet" href="{{ relURL "node_modules/tachyons/css/tachyons.min.css" }}">
-    <link rel="stylesheet" href="{{ relURL "node_modules/bootstrap/dist/css/bootstrap.min.css" }}">
-    <link rel="stylesheet" href="{{ relURL "node_modules/jquery-ui-dist/jquery-ui.min.css" }}">
-    <link rel="stylesheet" href="{{ relURL "node_modules/jquery-ui-dist/jquery-ui.min.css" }}">
-    <link rel="stylesheet" href="{{ relURL "node_modules/@fortawesome/fontawesome-free/css/solid.min.css" }}">
-    <link rel="stylesheet" href="{{ relURL "node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" }}">
-    <link rel="stylesheet" href="{{ relURL "css/fonts.css" }}">
-    <link rel="stylesheet" href="{{ relURL "css/external/treeview.css" }}">
-    <script src="{{ relURL "node_modules/jquery/dist/jquery.min.js" }}"></script>
-    <script src="{{ relURL "node_modules/jquery-csv/src/jquery.csv.min.js" }}"></script>
-    <script src="{{ relURL "node_modules/jquery-ui-dist/jquery-ui.min.js" }}"></script>
-    <script src="{{ relURL "node_modules/bootstrap/dist/js/bootstrap.min.js" }}"></script>
-    <script src="{{ relURL "node_modules/@sanskrit-coders/sanscript/sanscript.js" }}"></script>
-    <script src="{{ relURL "node_modules/showdown/dist/showdown.js" }}"></script>
 
-    <script src="{{ relURL "js/redirect.js" }}"></script>
-    <script src="{{ relURL "js/sutraNavigation.js" }}"></script>
-    <script src="{{ relURL "js/handleIncludes.js" }}"></script>
       {{ partialCached "hugo-site-vars-to-js-general.html" .}}
     <script type="text/javascript">
       // Note that we define page-specific variables below and not in a partial like hugo-site-vars-to-js-general.html. Reason: Hugo builds this partial just once and includes it everywhere.
@@ -53,23 +36,14 @@
       console.log(pageSource);
       let sutraBasics = null;
       let sutraId = null;
-      {{ if isset .Params "vritti"}}
-        sutraId = "{{.Params.index}}";
-        sutraBasics = JSON.parse({{index $.Site.Data.sutraBasics .Params.index | jsonify}});
-        let vrittiBasics = JSON.parse({{index $.Site.Data.vrittiBasics  | jsonify}});
-      {{ end }}
-      if (pageSource == "sutra-details.md" || pageSource == "ui.md") {
-        sutraId = "1.1.1";
-        if (getQueryVariable("sutra")) {
-          sutraId = getQueryVariable("sutra");
-        }
-        let allSutraBasics = JSON.parse({{$.Site.Data.sutraBasics | jsonify}});
-        sutraBasics = allSutraBasics[sutraId];
-      }
 
     </script>
-    <script src="{{ relURL "js/onDocumentReady.js" }}"></script>
-    <script src="{{ relURL "js/autocomplete.js" }}"></script>
+    <script src="{{ relURL "dist/main-bundle.js" }}"></script>
+    <script src="{{ relURL "dist/ui_lib-bundle.js" }}"></script>
+
+    <link rel="stylesheet" href="{{ relURL "css/@fortawesome/fontawesome-free/css/solid.min.css" }}">
+    <link rel="stylesheet" href="{{ relURL "css/@fortawesome/fontawesome-free/css/fontawesome.min.css" }}">
+
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
