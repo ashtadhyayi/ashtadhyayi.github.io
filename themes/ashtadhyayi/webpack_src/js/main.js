@@ -27,13 +27,4 @@ if (sutraId != null) {
 }
 });
 
-import {addLinks} from "./sutraNavigation";
-$( document ).ready(function() {
-  // console.debug(pageSource);
-  if (pageSource.startsWith("vritti") && !pageSource.endsWith("_index.md")) {
-    $("#vrittiTitleSpan").text(vrittiBasics[pageParams.vritti]["name"]);
-    $("#vrittiContentDiv").html(addLinks($("#vrittiContentDiv").html()));
-  }
-});
-
 import "./autocomplete";

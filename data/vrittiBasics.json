@@ -1,4 +1,6 @@
 {
+  "comment": "SYNC WITH CANONICAL LOCATION - SEE FIELD BELOW.",
+  "canonical_location": "https://github.com/sanskrit/ashtadhyayi/master/data/",
   "ashtadhyayi": {
     "sutraCount": {
       "1.1": 75,
