@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "watch": {
+    "build": "{js,css}/*"
+  },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "npm-watch"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
@@ -23,12 +27,14 @@
     "css-loader": "^2.1.1",
     "font-awesome-loader": "^1.0.2",
     "node-sass": "^4.11.0",
+    "npm-watch": "^0.6.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-dev-server": "^3.3.1",
+    "webpack-server": "^0.1.2"
   }
 }

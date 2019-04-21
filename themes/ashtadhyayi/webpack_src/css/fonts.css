@@ -26,3 +26,8 @@ code {
 
 
 /************************************************************/
+/*For the sutra title search autocomplete.*/
+.ui-autocomplete {
+    background: #ebe893;
+    z-index: 2;
+}

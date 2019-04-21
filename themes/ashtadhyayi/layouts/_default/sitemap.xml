@@ -8,9 +8,6 @@
     {{range $suutra := seq 1 $sutra_count}}
         {{ $adhyaaya_paada_suutra := printf "%d.%d.%d" $adhyaaya $paada $suutra}}
         {{ $adhyaaya_paada_suutra_dashed := printf "%d-%d-%d" $adhyaaya $paada $suutra}}
-        {{ $sutra_info := index $.Site.Data.sutraBasics $adhyaaya_paada_suutra }}
-        {{ $sutra_topics := index $sutra_info "विषयाः" }}
-        {{ $sutra_text := index $sutra_info "सूत्रम्" }}
         {{ $url := printf "%s%s%s" ("/sutra-details/" | absURL ) "?sutra=" $adhyaaya_paada_suutra}}
         <url>
             <loc>{{ $url }}</loc>

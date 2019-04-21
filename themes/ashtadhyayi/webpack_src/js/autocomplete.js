@@ -3,37 +3,35 @@ import csv from "jquery-csv";
 import {sutraIdToDevanagari, getContextSensitiveSutraLink} from "./sutraNavigation";
 import 'webpack-jquery-ui';
 
-$(document).ready(function(){
-  let sutraAutocompleteMap = new Map();
-  $.ajax({
-    type: "GET",
-    url: autocompletePageUrl,
-    dataType: "text",
-    success: function(response) {
-      var options={"separator" : "\t"};
-      let sutraList = csv.toObjects(response, options);
-      for (var sutraObject of sutraList) {
-        let autocompleteText = `${sutraObject.index} ${sutraObject.sutra} ${sutraIdToDevanagari(sutraObject.index)}`;
-        sutraAutocompleteMap.set(autocompleteText, sutraObject);
-      }
-      // console.log(sutraAutocompleteMap.keys());
+import {getAllSutraBasics} from "./dbInterface";
+
+let sutraAutocompleteMap = new Map();
+
+function loadSutraHandler() {
+  let sutraSelected = $("#sutraSearchInputBox").val();
+  if (sutraSelected == "") {
+    return;
+  }
+  let sutraId = sutraAutocompleteMap.get(sutraSelected);
+  // console.debug(sutraId);
+  if (sutraId) {
+    console.debug(getContextSensitiveSutraLink(sutraId));
+    // return;
+    window.location = getContextSensitiveSutraLink(sutraId);
+  }
+}
+
+$(document).ready(function() {
+  getAllSutraBasics().then(allSutraBasics => {
+    // console.debug(allSutraBasics);
+    Object.keys(allSutraBasics).forEach(sutraIdx => {
+      let sutraObject = allSutraBasics[sutraIdx];
+      let autocompleteText = `${sutraIdx} ${sutraObject["सूत्रम्"]} ${sutraIdToDevanagari(sutraIdx)}`;
+      sutraAutocompleteMap.set(autocompleteText, sutraIdx);
       $("#sutraSearchInputBox").autocomplete({
         source: Array.from(sutraAutocompleteMap.keys())
       });
-    }
+    });
+    $("#sutraSearchInputBox").change(loadSutraHandler);
   });
-  $("#sutraSearchInputBox").change(function loadSutra() {
-    let sutraSelected = $("#sutraSearchInputBox").val();
-    if (sutraSelected == "") {
-      return;
-    }
-    let sutraDetails = sutraAutocompleteMap.get(sutraSelected);
-    // console.debug(sutraDetails);
-    if (sutraDetails) {
-      console.debug(getContextSensitiveSutraLink(sutraDetails.index));
-      // return;
-      window.location = getContextSensitiveSutraLink(sutraDetails.index);
-    }
-  }
-);
 });

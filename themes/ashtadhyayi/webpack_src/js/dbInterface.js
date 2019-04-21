@@ -14,3 +14,13 @@ export async function getAllSutraBasics() {
     }
 }
 
+export async function getVrittiBasics() {
+    if (window.vrittiBasics != null) {
+        return window.vrittiBasics;
+    } else {
+        return $.ajax(vrittiBasicsJsonUrl).then(function (vrittiBasics) {
+            window.vrittiBasics = vrittiBasics;
+            return vrittiBasics;
+        });
+    }
+}
