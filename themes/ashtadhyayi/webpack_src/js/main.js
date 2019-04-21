@@ -25,3 +25,11 @@ if (sutraId != null) {
 });
 
 import "./autocomplete";
+
+import {redirectToRandomPage, redirectToPage} from "./redirect";
+// So that these can be used like module_main.default.redirectToPage(..).
+export default {
+    redirectToRandomPage: redirectToRandomPage,
+    redirectToPage: redirectToPage
+}
+
