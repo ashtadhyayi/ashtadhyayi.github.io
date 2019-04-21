@@ -56,7 +56,6 @@ function getMarkdownContentCard(responseHtml, includeElement) {
     var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${addLinks(renderedHtml)}</div>`;
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
-    includeElement.html(elementToInclude);
     return elementToInclude;
 }
 
@@ -68,7 +67,7 @@ function setContentCard(responseHtml, includeElement) {
     } else if (includedPageUrl.endsWith(".md")) {
         elementToInclude = getMarkdownContentCard(responseHtml, includeElement);
     }
-    return elementToInclude;
+    includeElement.html(elementToInclude);
 }
 
 function setMissingContentCard(error, includeElement) {
@@ -88,7 +87,6 @@ function setMissingContentCard(error, includeElement) {
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
     includeElement.html(elementToInclude);
-    return elementToInclude;
 }
 
 async function fillJsInclude(includeElement) {
@@ -101,7 +99,7 @@ async function fillJsInclude(includeElement) {
     // console.debug(includedPageUrl);
     let includedPageUrl = getIncludePageUrl(includeElement);
     let ajaxResponsePromise = $.ajax(includedPageUrl);
-    return ajaxResponsePromise.then((x) => setContentCard(x, includeElement)).catch((e) => setMissingContentCard(e, includeElement));
+    return ajaxResponsePromise.then((x) => {setContentCard(x, includeElement); return includeElement;}).catch((e) => setMissingContentCard(e, includeElement));
 }
 
 export default function handleIncludes() {

@@ -3,7 +3,7 @@ import csv from "jquery-csv";
 import {sutraIdToDevanagari, getContextSensitiveSutraLink} from "./sutraNavigation";
 import 'webpack-jquery-ui';
 
-import {getAllSutraBasics} from "./dbInterface";
+import {getSutraBasicsList} from "./dbInterface";
 
 function loadSutraHandler() {
   let sutraSelected = $("#sutraSearchInputBox").val();
@@ -20,12 +20,11 @@ function loadSutraHandler() {
 }
 
 $(document).ready(function() {
-  getAllSutraBasics().then(allSutraBasics => {
-    // console.debug(allSutraBasics);
+  getSutraBasicsList().then(sutraBasicsList => {
+    // console.debug(sutraBasicsMap);
     let sutraAutocompleteList = [];
-    Object.keys(allSutraBasics).forEach(sutraIdx => {
-      let sutraObject = allSutraBasics[sutraIdx];
-      let autocompleteText = `${sutraIdx} ${sutraObject["सूत्रम्"]} ${sutraIdToDevanagari(sutraIdx)}`;
+    sutraBasicsList.forEach (sutraObject  => {
+      let autocompleteText = `${sutraObject["id"]} ${sutraObject["सूत्रम्"]} ${sutraIdToDevanagari(sutraObject["id"])}`;
       sutraAutocompleteList.push(autocompleteText);
       $("#sutraSearchInputBox").autocomplete({
         source: sutraAutocompleteList

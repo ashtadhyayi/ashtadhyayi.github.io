@@ -20,7 +20,7 @@ $( document ).ready(handleIncludes);
 
 $( document ).ready(function() {
 if (sutraId != null) {
-    getSutraBasics(sutraId).then(x => x["सूत्रम्"]).then(sutraTitle => $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraTitle}`)); 
+    getSutraBasics(sutraId).then(x => {return x["सूत्रम्"]}).then(sutraTitle => $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraTitle}`)); 
 }
 });
 

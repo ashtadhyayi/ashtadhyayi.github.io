@@ -1,16 +1,16 @@
 
 export async function getSutraBasics(sutraId) {
-    return getAllSutraBasics().then(x => x[sutraId]);
+    return getSutraBasicsList().then(sutraBasicsList => {return sutraBasicsList.find(x => {return x["id"] == sutraId;})});
 }
 
-export async function getAllSutraBasics() {
-    if (window.allSutraBasics != null) {
-        return window.allSutraBasics;
+export async function getSutraBasicsList() {
+    if (window.sutraBasicsList != null) {
+        return window.sutraBasicsList;
     } else {
-        return $.ajax(sutraBasicsJsonUrl).then(function (allSutraBasics) {
-                window.allSutraBasics = allSutraBasics;
-                return allSutraBasics;
-            });
+        return $.ajax(sutraBasicsJsonUrl).then(function (sutraBasicsList) {
+            window.sutraBasicsList = Array.from(sutraBasicsList["sutraDetails"]);
+            return window.sutraBasicsList;
+        });
     }
 }
 
