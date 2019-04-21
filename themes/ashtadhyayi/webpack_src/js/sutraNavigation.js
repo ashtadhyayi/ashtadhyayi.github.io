@@ -62,7 +62,7 @@ export function getQueryVariable(variable) {
     console.log('Query variable %s not found', variable);
 }
 
-export function setSutraNavigationLinks(){
+export function setSutraNavigationLinks(sutraBasics){
   if (sutraBasics == null) {
     console.debug("No sutraBasics. Returning", sutraBasics);
     return;

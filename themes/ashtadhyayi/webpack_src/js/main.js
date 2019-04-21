@@ -5,25 +5,22 @@ if (pageSource == "sutra-details.md" || pageSource == "ui.md") {
     if (getQueryVariable("sutra")) {
         sutraId = getQueryVariable("sutra");
     }
-    sutraBasics = window.allSutraBasics[sutraId];
 }
 
+import {getSutraBasics} from "./dbInterface";
 
-$(document).ready(setSutraNavigationLinks);
-
-import {fillJsInclude} from "./handleIncludes";
-$( document ).ready(function() {
-    $('.js_include').each(function() {
-        // console.debug("Inserting include for " + $(this).html());
-        var jsIncludeJqueryElement = $(this);
-        // The actual filling happens in a separate thread!
-        fillJsInclude(jsIncludeJqueryElement);
-    });
+$(document).ready(function() {
+    getSutraBasics(sutraId).then(function (sutraBasics) {
+        setSutraNavigationLinks(sutraBasics);
+    })
 });
+
+import handleIncludes from "./handleIncludes";
+$( document ).ready(handleIncludes);
 
 $( document ).ready(function() {
 if (sutraId != null) {
-    $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraBasics["सूत्रम्"]}`);
+    getSutraBasics(sutraId).then(x => x["सूत्रम्"]).then(sutraTitle => $("#sutraHeading").text(`${sutraIdToDevanagari(sutraId)} ${sutraTitle}`)); 
 }
 });
 

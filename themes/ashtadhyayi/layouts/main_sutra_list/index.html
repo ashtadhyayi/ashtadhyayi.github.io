@@ -10,7 +10,7 @@
     <div id="contentDiv" class="card-body nested-links nested-img mid-gray">
       {{ .Content }}
     </div>
-    <div class="css-treeview box">
+    <div id="sutraListDiv" >
       <ul>
           {{range $adhyaaya := seq 1 8}}
           <li><input type="checkbox" id="section-tree-item-{{$adhyaaya}}" checked="checked" /><label for="section-tree-item-{{$adhyaaya}}">{{$adhyaaya}}</label><ul>
