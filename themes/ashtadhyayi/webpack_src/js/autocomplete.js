@@ -1,5 +1,5 @@
 
-import csv from "jquery-csv";
+// import csv from "jquery-csv";
 import {sutraIdToDevanagari, getContextSensitiveSutraLink} from "./sutraNavigation";
 import 'webpack-jquery-ui';
 
