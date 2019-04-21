@@ -22,7 +22,7 @@ function getIncludePageUrl(includeElement) {
     return includeElement.attr("relativeUrlBase") + getSutraLinkRelative(sutraId, resourceType);
 }
 
-function getTextContentCard(responseHtml, includeElement) {
+async function getTextContentCard(responseHtml, includeElement) {
     let title = includeElement.attr("title");
     let resourceType = includeElement.attr("dataType");
     let includedPageUrl = includeElement.attr("relativeUrlBase") + getSutraLinkRelative(sutraId, resourceType);
@@ -33,13 +33,13 @@ function getTextContentCard(responseHtml, includeElement) {
         `<i class="fas fa-caret-down"></i></a> </div>` +
         `${getEditLinkHtml(includedPageUrl)}` +
         "</div>";
-    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${addLinks(responseHtml)}</div>`;
+    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${await addLinks(responseHtml)}</div>`;
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
     return elementToInclude;
 }
 
-function getMarkdownContentCard(responseHtml, includeElement) {
+async function getMarkdownContentCard(responseHtml, includeElement) {
     let title = includeElement.attr("title");
     let resourceType = includeElement.attr("dataType");
     let includedPageUrl = getIncludePageUrl(includeElement);
@@ -53,19 +53,19 @@ function getMarkdownContentCard(responseHtml, includeElement) {
         `<i class="fas fa-caret-down"></i></a> </div>` +
         `${getEditLinkHtml(includedPageUrl)}` +
         "</div>";
-    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${addLinks(renderedHtml)}</div>`;
+    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${await addLinks(renderedHtml)}</div>`;
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
     return elementToInclude;
 }
 
-function setContentCard(responseHtml, includeElement) {
+async function setContentCard(responseHtml, includeElement) {
     let elementToInclude = null;
     let includedPageUrl = getIncludePageUrl(includeElement);
     if (includedPageUrl.endsWith(".txt")) {
-        elementToInclude = getTextContentCard(responseHtml, includeElement);
+        elementToInclude = await getTextContentCard(responseHtml, includeElement);
     } else if (includedPageUrl.endsWith(".md")) {
-        elementToInclude = getMarkdownContentCard(responseHtml, includeElement);
+        elementToInclude = await getMarkdownContentCard(responseHtml, includeElement);
     }
     includeElement.html(elementToInclude);
 }

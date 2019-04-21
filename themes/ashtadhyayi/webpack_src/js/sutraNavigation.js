@@ -1,8 +1,9 @@
-export function addLinks(htmlIn) {
+
+import {replaceAsync} from "./utils";
+export async function addLinks(htmlIn) {
   // Replace stuff like ६.४.१३ or 6.4.13.
   let htmlOut = htmlIn.replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml).replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari);
-  htmlOut = htmlOut.replace(/\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtml);
-  return htmlOut;
+  return replaceAsync(htmlOut, /\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtmlAsync);
 }
 
 import Sanscript from "@sanskrit-coders/sanscript";
@@ -91,9 +92,9 @@ export function getGithubCreationPath(pageUrl) {
   return getEditMePath(pageUrl).replace("/edit/", "/create/").split("/").slice(0,-1).join("/");
 }
 
-import {kaumudiToAshtadhyayiIndex} from "./dbInterface";
-function getSkSutraLinkHtml(sutraId) {
-  let ashtadhyayiSutraId = kaumudiToAshtadhyayiIndex.get(sutraId.replace("\(सि.कौ. ", "").replace("\)", ""));
-  console.debug(sutraId, ashtadhyayiSutraId);
-  return `<a href="${getContextSensitiveSutraLink(ashtadhyayiSutraId)}">${sutraIdToDevanagari(sutraId)}</a>`;
+import {getSutraBasicsFromSkId} from "./dbInterface";
+async function getSkSutraLinkHtmlAsync(sutraId) {
+  let ashtadhyayiSutraObj = await getSutraBasicsFromSkId(sutraId.replace("\(सि.कौ. ", "").replace("\)", ""));
+  console.debug(sutraId, ashtadhyayiSutraObj);
+  return `<a href="${getContextSensitiveSutraLink(ashtadhyayiSutraObj["id"])}">${sutraIdToDevanagari(sutraId)}</a>`;
 }
