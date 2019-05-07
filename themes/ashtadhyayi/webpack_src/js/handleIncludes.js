@@ -4,6 +4,7 @@ import showdown from "showdown";
 var showdownConverter = new showdown.Converter();
 
 function getEditLinkHtml(includedPageUrl) {
+    console.debug(includedPageUrl, getEditMePath(includedPageUrl));
     return `<a class='btn btn-secondary' href='${getEditMePath(includedPageUrl)}'><i class="fas fa-edit"></i></a>`    
 }
 

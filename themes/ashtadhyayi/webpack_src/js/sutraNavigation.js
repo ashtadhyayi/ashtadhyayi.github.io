@@ -85,7 +85,7 @@ export function setSutraNavigationLinks(sutraBasics){
 
 export function getEditMePath(pageUrl) {
   // console.debug(pageUrl);
-  return siteParams.githubeditmepathbase + pageUrl.replace("vritti/", "").replace(/\/$/, ".md");
+  return siteParams.githubeditmepathbase + pageUrl.replace(/.*vritti\//, "").replace(/\/$/, ".md");
 }
 
 export function getGithubCreationPath(pageUrl) {
