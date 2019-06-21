@@ -98,7 +98,7 @@ async function getSkSutraLinkHtmlAsync(sutraId) {
   console.debug(sutraId, ashtadhyayiSutraObj);
   if (ashtadhyayiSutraObj === undefined) {
     console.error(sutraId, ashtadhyayiSutraObj);
-    return ${sutraIdToDevanagari(sutraId)};
+    return sutraIdToDevanagari(sutraId);
   } else {
     return `<a href="${getContextSensitiveSutraLink(ashtadhyayiSutraObj["id"])}">${sutraIdToDevanagari(sutraId)}</a>`;
   }
