@@ -35,7 +35,7 @@ function getSutraLinkHtmlFromDevanagari(sutraIdDevanagari) {
 
 export function getSutraLinkRelative(sutraId, resourceType) {
   let sutraPaada = sutraId.split(".").slice(0,2).join(".");
-  if (resourceType == "txt") {
+  if (resourceType === "txt") {
     return `../../pada-${sutraPaada}/${sutraId}.txt`
   } else {
     return `../../pada-${sutraPaada}/${sutraId}.md`;
@@ -56,7 +56,7 @@ export function getQueryVariable(variable) {
     var vars = query.split('&');
     for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split('=');
-        if (decodeURIComponent(pair[0]) == variable) {
+        if (decodeURIComponent(pair[0]) === variable) {
             return decodeURIComponent(pair[1]);
         }
     }
@@ -96,5 +96,10 @@ import {getSutraBasicsFromSkId} from "./dbInterface";
 async function getSkSutraLinkHtmlAsync(sutraId) {
   let ashtadhyayiSutraObj = await getSutraBasicsFromSkId(sutraId.replace("\(सि.कौ. ", "").replace("\)", ""));
   console.debug(sutraId, ashtadhyayiSutraObj);
-  return `<a href="${getContextSensitiveSutraLink(ashtadhyayiSutraObj["id"])}">${sutraIdToDevanagari(sutraId)}</a>`;
+  if (ashtadhyayiSutraObj === undefined) {
+    console.error(sutraId, ashtadhyayiSutraObj);
+    return ${sutraIdToDevanagari(sutraId)};
+  } else {
+    return `<a href="${getContextSensitiveSutraLink(ashtadhyayiSutraObj["id"])}">${sutraIdToDevanagari(sutraId)}</a>`;
+  }
 }
