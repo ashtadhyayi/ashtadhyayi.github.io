@@ -1,10 +1,16 @@
 import {setSutraNavigationLinks, sutraIdToDevanagari, getQueryVariable} from "./sutraNavigation";
 
-if (pageSource == "sutra-details.md" || pageSource == "ui.md") {
+if (pageSource === "sutra-details.md" || pageSource === "ui.md") {
     sutraId = "1.1.1";
     if (getQueryVariable("sutra")) {
         sutraId = getQueryVariable("sutra");
     }
+
+    // Set canonical URL so that Google does not exclude this page from the index. See https://github.com/ashtadhyayi/ashtadhyayi.github.io/issues/11 .
+    var link = !!document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']") : document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    link.setAttribute('href', location.protocol + '//' + location.host + "sutra-details/?sutra=" + sutraId);
+    document.head.appendChild(link);
 }
 
 import {getSutraBasics} from "./dbInterface";
