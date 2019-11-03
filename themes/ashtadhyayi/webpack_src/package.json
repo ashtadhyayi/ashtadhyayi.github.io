@@ -14,7 +14,7 @@
     "@fortawesome/fontawesome-free": "^5.6.3",
     "@sanskrit-coders/sanscript": "^1.0.2",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "jquery-csv": "^0.8.9",
     "jquery-ui-dist": "^1.12.1",
     "popper.js": "^1.15.0",
