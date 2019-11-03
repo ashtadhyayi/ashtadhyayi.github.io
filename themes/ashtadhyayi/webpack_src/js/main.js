@@ -9,7 +9,7 @@ if (pageSource === "sutra-details.md" || pageSource === "ui.md") {
     // Set canonical URL so that Google does not exclude this page from the index. See https://github.com/ashtadhyayi/ashtadhyayi.github.io/issues/11 .
     var link = !!document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']") : document.createElement('link');
     link.setAttribute('rel', 'canonical');
-    link.setAttribute('href', location.protocol + '//' + location.host + "sutra-details/?sutra=" + sutraId);
+    link.setAttribute('href', location.protocol + '//' + location.host + "/sutra-details/?sutra=" + sutraId);
     document.head.appendChild(link);
 }
 
