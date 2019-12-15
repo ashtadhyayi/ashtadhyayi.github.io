@@ -6,9 +6,15 @@ publishDir = "build_github"
 enableGitInfo = true
 # The below wont work as of 201903 - see https://github.com/gohugoio/hugo/pull/5649
 #ignoreFiles = [ "\\.git.*" ]
+
 [params]
   githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"
   env = "production"
+
 [taxonomies]
   index = "indices"
   sutra = "sutras"
+
+
+[markup.goldmark.renderer]
+  unsafe= true
