@@ -29,7 +29,7 @@ if (sutraId != null) {
     getSutraBasics(sutraId).then(x => {return x["सूत्रम्"]}).then(sutraTitle => {
         let titleText = `${sutraIdToDevanagari(sutraId)} ${sutraTitle}`;
         $("#sutraHeading").text(titleText);
-        document.title = titleText;
+        document.title = `अष्टाध्यायी - सूत्रविण्वरणानि - ${titleText}`;
     }); 
 }
 });
