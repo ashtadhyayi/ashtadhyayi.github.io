@@ -80,10 +80,23 @@ export function setSutraNavigationLinks(sutraBasics){
       $(nextSutraDiv).append(getSutraLinkTag(sutraBasics.Next, "btn btn-secondary", "<i class=\"fas fa-caret-right\"></i>"));
       // console.log(nextSutraPaada);
     }
+    if (sutraId != null) {
+      let urls = getAshtadhyayiComUrls();
+      $(ashtadhyayiComDiv).append(`<a href="${urls.url}" class="btn btn-secondary">A</a><a href="${urls.editUrl}" class="btn btn-secondary">A<i class=\"fas fa-edit\"></i></a>`);
+    }
+    
   } catch(e) {
     console.debug(e);
     console.log("Not a sutra page, probably.");
   }
+}
+
+export function getAshtadhyayiComUrls() {
+  let sutraParts = sutraId.split(".");
+  return {
+    "editUrl": `https://github.com/ashtadhyayi-com/data/blob/master/sutraani/${sutraParts[0]}/${sutraParts[1]}/${sutraId}.txt`,
+    "url": `https://ashtadhyayi.com/sutraani/${sutraParts[0]}/${sutraParts[1]}/${sutraParts[2]}`
+  };
 }
 
 export function getEditMePath(pageUrl) {
