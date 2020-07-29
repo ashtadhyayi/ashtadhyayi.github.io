@@ -1,0 +1,91 @@
+/************************************************************/
+@font-face {
+    font-family: 'siddhanta';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/siddhanta.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Adishila';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Adishila.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansDevanagari-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansDevanagari-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansKannada-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansKannada-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansTelugu-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansTelugu-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansTamil-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansTamil-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansMalayalam-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansMalayalam-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansOriya-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansOriya-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansBengali-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansBengali-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansGujarati-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansGujarati-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansGurmukhi-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansGurmukhi-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansBrahmi-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSansBrahmi-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NotoSerifTibetan-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/NotoSerifTibetan-Medium.ttf) format('truetype');
+}
+/************************************************************/
+
+code {
+  font-size: 100%;
+}
+
+
+/************************************************************/

@@ -10,6 +10,7 @@ title: सूत्रविवरणानि
 </div>
 <div class="card-group border border-secondary">
 <div class="js_include vritti_l1" relativeUrlBase="../vritti/sumit_garg_english/pada-1.1/1.1.1/"  title="गार्गसुमितानुवादः" dataType="txt"> </div>  
+<div class="js_include vritti_l1 collapsed" relativeUrlBase="../vritti/vAsu/pada-1.1/1.1.1/"  title="श्रीश्चन्द्रवासुः" dataType="txt"> </div>  
 <div class="js_include vritti_l1 collapsed" relativeUrlBase="../vritti/satishabodha/pada-1.1/1.1.1/"  title="सतीशबोधः"> </div>  
 </div>
 <div class="card-group border border-primary">
