@@ -1,3 +1,4 @@
+import {getSutraBasicsFromSkId} from "./dbInterface";
 
 import {replaceAsync} from "./utils";
 export async function addLinks(htmlIn) {
@@ -66,7 +67,7 @@ export function getQueryVariable(variable) {
     console.log('Query variable %s not found', variable);
 }
 
-export function setSutraNavigationLinks(sutraBasics){
+export async function setSutraNavigationLinks(sutraBasics){
   if (sutraBasics == null) {
     console.debug("No sutraBasics. Returning", sutraBasics);
     return;
@@ -83,6 +84,15 @@ export function setSutraNavigationLinks(sutraBasics){
     if (sutraId != null) {
       let urls = getAshtadhyayiComUrls();
       $(ashtadhyayiComDiv).append(`<a href="${urls.url}" class="btn btn-secondary">A</a><a href="${urls.editUrl}" class="btn btn-secondary">A<i class=\"fas fa-edit\"></i></a>`);
+      
+      let skId = sutraBasics["कौमुदीक्रमसङ्ख्या"];
+      if (skId > 0) {
+        let sutraBasicsPrev = await getSutraBasicsFromSkId(skId-1);
+        // console.debug(sutraBasicsPrev, getContextSensitiveSutraLink(sutraBasicsPrev.id));
+        $(skDiv).append(`<a href="${getContextSensitiveSutraLink(sutraBasicsPrev.id)}" class="btn btn-secondary"><i class=\"fas fa-caret-left\"></i>कौ${skId - 1}</a>`);
+        let sutraBasicsNext = await getSutraBasicsFromSkId(skId+1);
+        $(skDiv).append(`<a href="${getContextSensitiveSutraLink(sutraBasicsPrev.id)}" class="btn btn-secondary">कौ${skId + 1}<i class=\"fas fa-caret-right\"></i></a>`);
+      }
     }
     
   } catch(e) {
@@ -108,7 +118,6 @@ export function getGithubCreationPath(pageUrl) {
   return getEditMePath(pageUrl).replace("/edit/", "/create/").split("/").slice(0,-1).join("/");
 }
 
-import {getSutraBasicsFromSkId} from "./dbInterface";
 async function getSkSutraLinkHtmlAsync(sutraId) {
   let ashtadhyayiSutraObj = await getSutraBasicsFromSkId(sutraId.replace("\(सि.कौ. ", "").replace("\)", ""));
   console.debug(sutraId, ashtadhyayiSutraObj);
