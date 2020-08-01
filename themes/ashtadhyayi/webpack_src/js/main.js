@@ -1,11 +1,9 @@
 import {setSutraNavigationLinks, sutraIdToDevanagari, getQueryVariable} from "./sutraNavigation";
 
-if (pageSource === "sutra-details.md" || pageSource === "ui.md") {
-    sutraId = "1.1.1";
-    if (getQueryVariable("sutra")) {
-        sutraId = getQueryVariable("sutra");
-    }
+import {getSutraBasics} from "./dbInterface";
+import handleIncludes from "./handleIncludes";
 
+function setCanonicalUrl() {
     // Set canonical URL so that Google does not exclude this page from the index. See https://github.com/ashtadhyayi/ashtadhyayi.github.io/issues/11 .
     var link = !!document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']") : document.createElement('link');
     link.setAttribute('rel', 'canonical');
@@ -13,18 +11,21 @@ if (pageSource === "sutra-details.md" || pageSource === "ui.md") {
     document.head.appendChild(link);
 }
 
-import {getSutraBasics} from "./dbInterface";
+$( document ).ready(function() {
+if (pageSource.endsWith("sutra-details.md") || pageSource.endsWith("ui.md")) {
+    sutraId = "1.1.1";
+    if (getQueryVariable("sutra")) {
+        sutraId = getQueryVariable("sutra");
+    }
+    setCanonicalUrl();
+}
 
-$(document).ready(function() {
-    getSutraBasics(sutraId).then(function (sutraBasics) {
-        setSutraNavigationLinks(sutraBasics);
-    })
+console.log(sutraId);
+
+getSutraBasics(sutraId).then(function (sutraBasics) {
+    setSutraNavigationLinks(sutraBasics);
 });
 
-import handleIncludes from "./handleIncludes";
-$( document ).ready(handleIncludes);
-
-$( document ).ready(function() {
 if (sutraId != null) {
     getSutraBasics(sutraId).then(x => {return x["सूत्रम्"]}).then(sutraTitle => {
         let titleText = `${sutraIdToDevanagari(sutraId)} ${sutraTitle}`;
@@ -32,6 +33,7 @@ if (sutraId != null) {
         document.title = `पाणिनीयमूलस्रोतः - ${titleText}`;
     }); 
 }
+    handleIncludes();
 });
 
 import "./autocomplete";
