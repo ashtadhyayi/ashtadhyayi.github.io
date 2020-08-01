@@ -4,11 +4,17 @@ title = "अष्टाध्यायी - मूलस्रोतः"
 theme = "ashtadhyayi"
 publishDir = "build_github"
 enableGitInfo = true
+
 # The below wont work as of 201903 - see https://github.com/gohugoio/hugo/pull/5649
 #ignoreFiles = [ "\\.git.*" ]
 
 [params]
-  githubEditMePathBase = "https://github.com/sanskrit/ashtadhyayi/edit/master/"
+  # Note: CamelCase is removed within hugo. Can't help it.
+  "githubEditMePathBase" = "https://github.com/sanskrit/ashtadhyayi/edit/master/"
+  "autocompletePageUrl" = "https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/data/sutrANi.tsv"
+  "sutraBasicsJsonUrl" = "https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/data/sutraBasics.json"
+  "vrittiBasicsJsonUrl" = "https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/data/vrittiBasics.json"
+  "kaumudiToAshtadhyayiIndexUrl" = "https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/data/kaumudiToAshtadhyayiIndex.tsv"
   env = "production"
 
 [taxonomies]

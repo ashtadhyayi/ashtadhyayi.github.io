@@ -3,8 +3,8 @@
     let baseURL = "{{.Site.BaseURL}}";
     let basePath = "/" + baseURL.split("/").slice(3).join("/");
     let siteParams = JSON.parse("{{.Site.Params | jsonify}}");
-    let autocompletePageUrl = "{{ "vritti/data/sutrANi.tsv" | relURL }}";
-    let sutraBasicsJsonUrl = "{{ "vritti/data/sutraBasics.json" | relURL }}";
-    let vrittiBasicsJsonUrl = "{{ "vritti/data/vrittiBasics.json" | relURL }}";
-    let kaumudiToAshtadhyayiIndexUrl = "{{ "data/kaumudiToAshtadhyayiIndex.tsv" | relURL }}";
+    let autocompletePageUrl = siteParams.autocompletepageurl;
+    let sutraBasicsJsonUrl = siteParams.sutrabasicsjsonurl;
+    let vrittiBasicsJsonUrl = siteParams.vrittibasicsjsonurl;
+    let kaumudiToAshtadhyayiIndexUrl = siteParams.kaumuditoashtadhyayiindexurl;
 </script>
