@@ -54,4 +54,4 @@ Ordinarily, wercker piplenes set up under the [ashtadhyayi](https://github.com/s
 ### Technical considerations
 - github.io is a convenient place to present the data (no money needed for server resources).
 - The Jekyll static site generator is just too slow for data of this magnitude.
-- Using javascript to dynamically include content from github.com runs into CORS problems. +++(TODO: Is this still true? To what extant?)+++
+- Content is loaded from github. If running off the internet, you can easily clone the repository within static directory and point the attributes in the js_include tags in the details page to point to it.
