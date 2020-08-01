@@ -14,6 +14,11 @@ This data is presented in many places on the internet (wikisource, [sanskritdocu
 The content is curated in [https://github.com/sanskrit/ashtadhyayi](https://github.com/sanskrit/ashtadhyayi).  Each vritti file is devanagari encoded markdown text with yaml frontmatter. Shorter files (padachcheda, anuvritti, adhikara, full_sutra) are plain text files (to avoid extra work for static website generators who might be using this data). Helpful scripts are located [here](https://github.com/ashtadhyayi/data_curation).
 
 ### Contributing corrections
+#### Preferring ashtadhyayi.com repo
+Since 2020, shrI nIlesh of ashtadhyayi.com reports that several study groups are actively contributing corrections to the ashtadhyayi.com repo (see [here](https://github.com/ashtadhyayi/ashtadhyayi.github.io/issues/22)). Hence, for classical vRtti-s such as siddhAnta-kaumudI, kAshikA, mahAbhAShyam - contribute to his repo directly - you can use the links to links to ashtadhyai.com site and edit url on our interface (pictured below).
+
+![image](https://user-images.githubusercontent.com/2664797/88753318-8886b900-d179-11ea-8d58-e4f69abdb2b8.png)
+
 #### Via Github pull requests (preferred)
 
 Follow the following steps (which only seem complicated at first, but are very simple):
@@ -49,4 +54,4 @@ Ordinarily, wercker piplenes set up under the [ashtadhyayi](https://github.com/s
 ### Technical considerations
 - github.io is a convenient place to present the data (no money needed for server resources).
 - The Jekyll static site generator is just too slow for data of this magnitude.
-- Using javascript to dynamically include content from github.com runs into CORS problems.
+- Using javascript to dynamically include content from github.com runs into CORS problems. +++(TODO: Is this still true? To what extant?)+++
