@@ -54,4 +54,8 @@ Ordinarily, wercker piplenes set up under the [ashtadhyayi](https://github.com/s
 ### Technical considerations
 - github.io is a convenient place to present the data (no money needed for server resources).
 - The Jekyll static site generator is just too slow for data of this magnitude.
-- Content is loaded from github. If running off the internet, you can easily clone the repository within static directory and point the attributes in the js_include tags in the details page to point to it.
+- Content is loaded from github. 
+
+### Running off internet
+- clone the data repository within static subdirectory and point the attributes in the js_include tags in the details page to point to it.
+- Fix the variables in the hugo config.toml file appropriately.

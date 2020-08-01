@@ -40,7 +40,7 @@ deploy:
         token: $GIT_TOKEN
         basedir: build_github
         branch: master
-    - sf-zhou/gh-pages@0.2.6:
-        token: $GIT_TOKEN
-        basedir: build_offline_android
-        branch: offline_android
+#    - sf-zhou/gh-pages@0.2.6:
+#        token: $GIT_TOKEN
+#        basedir: build_offline_android
+#        branch: offline_android
