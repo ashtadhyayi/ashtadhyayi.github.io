@@ -24,6 +24,8 @@ title: सूत्रविवरणानि
 <div class="js_include collapsed vritti_l2" urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="पदमञ्जरी" dataType="json" fieldName="padamanjari"> </div>  
 </div>
 
+<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt" title="नीलेशविस्तारः" dataType="json" fieldName="sd"> </div>  
+
 <div class="card-group border border-primary">
 <div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt" title="महाभाष्यम्" dataType="json" fieldName="mahabhashyam"> </div>  
 <div class="js_include collapsed vritti_l1" urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt" title="प्रदीपः" dataType="json" fieldName="pradeep"> </div>  
