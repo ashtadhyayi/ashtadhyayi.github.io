@@ -5,6 +5,8 @@ export async function addLinks(htmlIn) {
   let htmlOut =
       // Process text like 6.4.13.
       htmlIn.replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml)
+          .replace(/\[(\d\|\d\|\d+)\]/g, getSutraLinkHtml)
+          .replace(/\[(\d\।\d\।\d+)\]/g, getSutraLinkHtml)
       // Process text like ६.४.१३
       .replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari);
   return replaceAsync(htmlOut, /\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtmlAsync);
