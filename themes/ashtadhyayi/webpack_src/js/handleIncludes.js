@@ -19,14 +19,15 @@ function getCollapseStyle(jsIncludeJqueryElement) {
 }
 
 function getIncludePageUrl(includeElement) {
-    let resourceType = includeElement.attr("dataType");
-    return includeElement.attr("relativeUrlBase") + getSutraLinkRelative(sutraId, resourceType);
+    let idBits = sutraId.split(".");
+    console.debug(includeElement.attr("urlPattern").toString());
+    return includeElement.attr("urlPattern").toString().replace(/ADHYAAYA/g, idBits[0]).replace(/PAADA/g, idBits[1]).replace(/SUUTRA/g, idBits[2]);
 }
 
 async function getTextContentCard(responseHtml, includeElement) {
     let title = includeElement.attr("title");
     let resourceType = includeElement.attr("dataType");
-    let includedPageUrl = includeElement.attr("relativeUrlBase") + getSutraLinkRelative(sutraId, resourceType);
+    let includedPageUrl = includeElement.attr("urlPattern") + getSutraLinkRelative(sutraId, resourceType);
     let collapseStyle = getCollapseStyle(includeElement);
 
     let titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
