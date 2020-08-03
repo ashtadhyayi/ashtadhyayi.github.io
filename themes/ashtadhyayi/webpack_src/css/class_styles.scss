@@ -1,0 +1,86 @@
+body {
+  font-family: 'siddhanta', 'NotoSansDevanagari-Regular', serif !important;
+}
+
+.card-title {
+  background:lightyellow;
+}
+
+div {
+  .card-body {
+    font-size: 130%;
+  }
+}
+
+div[script="english"]{
+  .card-body {
+    font-size: 100%;
+  }
+}
+
+figure {
+  align-content: center;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+  display: inline-block;
+}
+figure.thumbnail {
+  width: 250px;
+  height: 250px;
+  img {
+      max-width: 100%;
+      max-height: 100%;
+  }
+}
+
+
+
+blockquote {
+  padding-left: 2rem;
+  border-left-style: solid;
+  border-width: .25rem;
+}
+
+.inline_comment {
+  font-size: 70%;
+  color: firebrick;
+  display: inline;
+  vertical-align: sub;
+}
+
+audio {
+  width: 100%;
+}
+
+.handsontable th, .handsontable td {
+  line-height: 1.2em;
+}
+
+.audioCaption {
+  text-align: center;
+  font-style: italic;
+}
+
+*[emphasis_as_inline_comments=true] {
+  em {
+    // Copied from inline_comments class above.
+    font-size: 80%;
+    color: firebrick;
+    display: inline;
+    vertical-align: sub;
+  }
+}
+
+#sidebar {
+  li {
+    background-color: antiquewhite;
+    .active {
+      >a, >span {background-color: wheat;}
+    }
+  }
+}

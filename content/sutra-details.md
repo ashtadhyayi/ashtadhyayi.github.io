@@ -11,9 +11,9 @@ title: सूत्रविवरणानि
 </div>
 
 <div class="card-group border border-secondary">
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/sumit_garg_english/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="गार्गसुमितानुवादः" dataType="txt"> </div>  
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt" title="नीलेशाङ्ग्लवृत्तिः" dataType="json" fieldName="sae"> </div>  
-<div class="js_include vritti_l1 collapsed" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/vAsu/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="श्रीशचन्द्रवासुः"> </div>  
+<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/sumit_garg_english/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="गार्गसुमितानुवादः" dataType="txt" script="english"> </div>  
+<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt" title="नीलेशाङ्ग्लवृत्तिः" dataType="json" fieldName="sae" script="english"> </div>  
+<div class="js_include vritti_l1 collapsed" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/vAsu/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="श्रीशचन्द्रवासुः" script="english"> </div>  
 <div class="js_include vritti_l1 collapsed" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/satishabodha/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="सतीशबोधः"> </div>  
 <div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt" title="नीलेशवृत्तिः" dataType="json" fieldName="sa"> </div>  
 </div>

@@ -8,3 +8,4 @@ import 'tachyons/css/tachyons.min.css';
 
 // import "../css/fonts.css";
 import "../css/external/treeview.css";
+import "../css/class_styles.scss";
