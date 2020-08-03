@@ -3,7 +3,7 @@ title: सूत्रविवरणानि
 ---
 <div class="card-group border border-primary">
 <div class="js_include vritti_l2 " urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/padachcheda/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="पदच्छेदः" dataType="txt"> </div>  
-<div class="js_include vritti_l2 " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="पदच्छेदः २" dataType="json" fieldName="ss"> </div>  
+<div class="js_include vritti_l2 " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="सानुवृत्तिसूत्रम् २" dataType="json" fieldName="ss"> </div>  
 <div class="js_include vritti_l1 " urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/full_sutra/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="सानुवृत्तिसूत्रम्" dataType="txt"> </div>  
 <div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="अधिकारः" dataType="json" fieldName="ad"> </div>  
 <div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/master/sutraani/ADHYAAYA/PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="अनुवृत्तिः" dataType="json" fieldName="an"> </div>  
