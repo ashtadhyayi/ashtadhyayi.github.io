@@ -59,7 +59,7 @@ async function getJsonContentCard(responseString, includeElement) {
         console.warn(`No ${fieldName} in ${responseJson}`);
         var renderedHtml = `Error getting ${fieldName} in Json. See console.` ;
     } else {
-        data = data.replace(/\r\n/g, "\n\n").replace(/<</g, "_").replace(/>>/g, "_").replace(/##/g, "  \n").replace(/\$(\d)\$(\d)\$(\d+)/g, " ($1.$2.$3)").replace(/\$(\d)(\d)0*(\d+)/g, " ($1.$2.$3)");
+        data = data.replace(/\r?\n/g, "\n\n").replace(/<</g, "_").replace(/>>/g, "_").replace(/##/g, "  \n").replace(/\$(\d)\$(\d)\$(\d+)/g, " ($1.$2.$3)").replace(/\$(\d)(\d)0*(\d+)/g, " ($1.$2.$3)");
         var renderedHtml = showdownConverter.makeHtml(data);
     }
 
