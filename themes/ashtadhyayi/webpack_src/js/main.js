@@ -18,22 +18,21 @@ if (pageSource.endsWith("sutra-details.md") || pageSource.endsWith("ui.md")) {
         sutraId = getQueryVariable("sutra");
     }
     setCanonicalUrl();
-}
+    console.log(sutraId);
 
-console.log(sutraId);
+    getSutraBasics(sutraId).then(function (sutraBasics) {
+        setSutraNavigationLinks(sutraBasics);
+    });
 
-getSutraBasics(sutraId).then(function (sutraBasics) {
-    setSutraNavigationLinks(sutraBasics);
-});
-
-if (sutraId != null) {
-    getSutraBasics(sutraId).then(x => {return x["सूत्रम्"]}).then(sutraTitle => {
-        let titleText = `${sutraIdToDevanagari(sutraId)} ${sutraTitle}`;
-        $("#sutraHeading").text(titleText);
-        document.title = `पाणिनीयमूलस्रोतः - ${titleText}`;
-    }); 
-}
+    if (sutraId != null) {
+        getSutraBasics(sutraId).then(x => {return x["सूत्रम्"]}).then(sutraTitle => {
+            let titleText = `${sutraIdToDevanagari(sutraId)} ${sutraTitle}`;
+            $("#sutraHeading").text(titleText);
+            document.title = `पाणिनीयमूलस्रोतः - ${titleText}`;
+        });
+    }
     handleIncludes();
+}
 });
 
 import "./autocomplete";

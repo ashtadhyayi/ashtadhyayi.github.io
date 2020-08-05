@@ -7,8 +7,10 @@ export async function addLinks(htmlIn) {
       htmlIn.replace(/\[\[(\d)[।.|](\d)[।.|](\d+)\]\]/g, "($1.$2.$2)")
           .replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml)
       // Process text like ६.४.१३
-      .replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari);
-  return replaceAsync(htmlOut, /\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtmlAsync);
+      .replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari)
+          .replace(/<\{(\d+)\}>/g, "(सि.कौ. $1)");
+  htmlOut = replaceAsync(htmlOut, /\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtmlAsync);
+  return htmlOut;
 }
 
 import Sanscript from "@sanskrit-coders/sanscript";
