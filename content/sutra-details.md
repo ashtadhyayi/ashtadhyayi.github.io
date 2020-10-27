@@ -5,13 +5,15 @@ title: सूत्रविवरणानि
 
 <div class="js_include vritti_l2 " urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/padachcheda/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="पदच्छेदः" dataType="txt"> </div>  
 
-<div class="js_include vritti_l2 " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/processed_data/sUtra-commentaries/sAnuvRtti-sUtram/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="सानुवृत्तिसूत्रम् २"> </div>  
+<div class="js_include vritti_l2 " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/processed_data/sUtra-commentaries/sUtra-basics/ss/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="सानुवृत्तिसूत्रम् २"> </div>  
 
 <div class="js_include vritti_l1 " urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/full_sutra/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="सानुवृत्तिसूत्रम्" dataType="txt"> </div>  
 
-<div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/processed_data/sUtra-commentaries/adhikAra/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="अधिकारः"> </div>  
+<div class="js_include vritti_l2 " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/processed_data/sUtra-commentaries/sUtra-basics/pc/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="पदच्छेदः २"> </div>  
 
-<div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/processed_data/sUtra-commentaries/anuvRtti/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="अनुवृत्तिः"> </div>  
+<div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/processed_data/sUtra-commentaries/sUtra-basics/ad/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="अधिकारः"> </div>  
+
+<div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/ashtadhyayi-com/data/processed_data/sUtra-commentaries/sUtra-basics/an/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="अनुवृत्तिः"> </div>  
 
 <div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/topic/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="विषयः" dataType="txt"> </div>  
 </div>
