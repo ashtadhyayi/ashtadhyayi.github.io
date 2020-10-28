@@ -5,7 +5,13 @@ var showdownConverter = new showdown.Converter();
 
 function getEditLinkHtml(includedPageUrl) {
     // console.debug(includedPageUrl, getEditMePath(includedPageUrl));
-    return `<a class='btn btn-secondary' href='${getEditMePath(includedPageUrl)}'><i class="fas fa-edit"></i></a>`    
+    let url = ""
+    if(includedPageUrl.includes("ashtadhyayi_com")) {
+        url  = "https://github.com/ashtadhyayi-com/data/blob/master/";
+    } else {
+        url  = getEditMePath(includedPageUrl);
+    }
+    return `<a class='btn btn-secondary' href='${url}'><i class="fas fa-edit"></i></a>`    
 }
 
 function getCollapseStyle(jsIncludeJqueryElement) {

@@ -105,10 +105,9 @@ export async function setSutraNavigationLinks(sutraBasics){
 }
 
 export function getAshtadhyayiComUrls() {
-  let sutraParts = sutraId.split(".");
   return {
-    "editUrl": `https://github.com/ashtadhyayi-com/data/blob/master/sutraani/${sutraParts[0]}/${sutraParts[1]}/${sutraId}.txt`,
-    "url": `https://ashtadhyayi.com/sutraani/${sutraParts[0]}/${sutraParts[1]}/${sutraParts[2]}`
+    "editUrl": `https://github.com/ashtadhyayi-com/data/blob/master/`,
+    "url": `https://ashtadhyayi.com/sutraani/`
   };
 }
 
