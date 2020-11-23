@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>अष्टाध्यायी - मूलस्रोतः  | About</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.55.2" />
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+    
+
+    <meta property="og:title" content="About" />
+<meta property="og:description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; user inteface of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+Motivation This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ashtadhyayi.github.io/about/" />
+<meta property="article:modified_time" content="2020-08-01T19:57:55&#43;05:30"/>
+
+<meta itemprop="name" content="About">
+<meta itemprop="description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; user inteface of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+Motivation This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion.">
+
+
+<meta itemprop="dateModified" content="2020-08-01T19:57:55&#43;05:30" />
+<meta itemprop="wordCount" content="538">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="About"/>
+<meta name="twitter:description" content="Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository &#43; user inteface of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+Motivation This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion."/>
+
+      
+    
+
+
+      <script type="text/javascript">
+    
+    let baseURL = "https:\/\/ashtadhyayi.github.io\/";
+    let basePath = "/" + baseURL.split("/").slice(3).join("/");
+    let siteParams = JSON.parse("{\x22autocompletepageurl\x22:\x22https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/sutrANi.tsv\x22,\x22env\x22:\x22production\x22,\x22githubeditmepathbase\x22:\x22https:\/\/github.com\/sanskrit\/ashtadhyayi\/edit\/master\/\x22,\x22kaumuditoashtadhyayiindexurl\x22:\x22https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/kaumudiToAshtadhyayiIndex.tsv\x22,\x22mainSections\x22:null,\x22mainsections\x22:null,\x22sutrabasicsjsonurl\x22:\x22https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/sutraBasics.json\x22,\x22vrittibasicsjsonurl\x22:\x22https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/vrittiBasics.json\x22}");
+    let autocompletePageUrl = siteParams.autocompletepageurl;
+    let sutraBasicsJsonUrl = siteParams.sutrabasicsjsonurl;
+    let vrittiBasicsJsonUrl = siteParams.vrittibasicsjsonurl;
+    let kaumudiToAshtadhyayiIndexUrl = siteParams.kaumuditoashtadhyayiindexurl;
+</script>
+
+    <script type="text/javascript">
+      
+      let pageSource = "about.md";
+      let pageParams = JSON.parse("{\x22draft\x22:false,\x22iscjklanguage\x22:false,\x22lastmod\x22:\x222020-08-01T19:57:55\x2b05:30\x22,\x22title\x22:\x22About\x22}");
+      console.log(pageSource);
+      let sutraBasics = null;
+      let sutraId = null;
+
+    </script>
+    <script src="/dist/main-bundle.js"></script>
+    <script src="/dist/ui_lib-bundle.js"></script>
+
+    <link rel="stylesheet" href="/css/@fortawesome/fontawesome-free/css/solid.min.css">
+    <link rel="stylesheet" href="/css/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    <header>
+  <div class="bg-yellow  p-1">
+    <nav role="navigation">
+  <div class="row">
+    <a  href="/" class="btn btn-default col">
+      <i class="fas fa-gopuram ">पाणिनीयमूलस्रोतः</i>
+    </a>
+    <div class="col-md-auto d-flex justify-content-center">
+      <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter"><i class="btn fas fa-search "></i>
+      <a href="/google_site_search/"  class="btn btn-default">Google</a>
+    </div>
+    <div class="row col  d-flex justify-content-center">
+        <div id="prevSutraDiv"></div>
+        <div id="currentSutraDiv"></div>
+        <div id="nextSutraDiv"></div>
+        <div id="ashtadhyayiComDiv"></div>
+        <div id="skDiv"></div>
+    </div >
+      
+  </div>
+</nav>
+
+  </div>
+</header>
+
+    <main class="container p-3" role="main">
+      
+  <div>
+    <article class="col-xs-12">
+      <header>
+        <h1 id="sutraHeading">
+        </h1>
+      </header>
+      <div id="indexContentDiv" class="">
+        
+
+<h2 id="intro">Intro</h2>
+
+<p>Welcome! We are a few <a href="https://groups.google.com/forum/#!forum/sanskrit-programmers">open source sanskrit programmers</a>, and this is <a href="https://github.com/sanskrit/ashtadhyayi">our centralized repository</a> + <a href="https://ashtadhyayi.github.io/">user inteface</a> of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or <a href="https://github.com/ashtadhyayi/ashtadhyayi.github.io/">improvements to the UI</a>.</p>
+
+<h3 id="motivation">Motivation</h3>
+
+<p>This data is presented in many places on the internet (wikisource, <a href="sanskritdocuments.org">sanskritdocuments.org</a>, avg-sanskrit, <a href="ashtadhyayi.com">ashtadhyayi.com</a> etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion. Hence this repository.</p>
+
+<h2 id="content">Content</h2>
+
+<h3 id="format-and-location">Format and location</h3>
+
+<p>The content is curated in <a href="https://github.com/sanskrit/ashtadhyayi">https://github.com/sanskrit/ashtadhyayi</a>.  Each vritti file is devanagari encoded markdown text with yaml frontmatter. Shorter files (padachcheda, anuvritti, adhikara, full_sutra) are plain text files (to avoid extra work for static website generators who might be using this data). Helpful scripts are located <a href="https://github.com/ashtadhyayi/data_curation">here</a>.</p>
+
+<h3 id="contributing-corrections">Contributing corrections</h3>
+
+<h4 id="preferring-ashtadhyayi-com-repo">Preferring ashtadhyayi.com repo</h4>
+
+<p>Since 2020, shrI nIlesh of ashtadhyayi.com reports that several study groups are actively contributing corrections to the ashtadhyayi.com repo (see <a href="https://github.com/ashtadhyayi/ashtadhyayi.github.io/issues/22">here</a>). Hence, for classical vRtti-s such as siddhAnta-kaumudI, kAshikA, mahAbhAShyam - contribute to his repo directly - you can use the links to links to ashtadhyai.com site and edit url on our interface (pictured below).</p>
+
+<p><img src="https://user-images.githubusercontent.com/2664797/88753318-8886b900-d179-11ea-8d58-e4f69abdb2b8.png" alt="image" /></p>
+
+<h4 id="via-github-pull-requests-preferred">Via Github pull requests (preferred)</h4>
+
+<p>Follow the following steps (which only seem complicated at first, but are very simple):</p>
+
+<ul>
+<li>Just click on the appropriate <i class="fas fa-edit small"></i> icon.
+
+<ul>
+<li>This will take you to a Github page, where you will be prompted to sign up/in, and &ldquo;make a fork&rdquo; as necessary.</li>
+</ul></li>
+<li>Make and save your edits.</li>
+<li>Send us a &ldquo;pull request&rdquo;.
+
+<ul>
+<li>Helpful videos: <a href="https://youtu.be/YTbRzhQju4c?t=157">here</a>, here</li>
+</ul></li>
+<li>Some repository moderator will then review, accept your changes and regenerate the site.</li>
+</ul>
+
+<h4 id="manual-notification-not-preferred">Manual notification (Not preferred)</h4>
+
+<p>Just <a href="https://github.com/sanskrit/ashtadhyayi/issues/new">send us a message</a> (with the full corrected vritti text).</p>
+
+<h3 id="data-origin">Data origin</h3>
+
+<p>Many vrittis were typeset via the short-lived sansknet project by Rashtriya Sanskrit Vidyapeetha, Tirupati. The content was originally gathered by diligent folks such as shrI ajit and shrI dhaval from such files ephemerally shared on the internet. This content then went through many hands. Some of this content was <a href="https://github.com/ashtadhyayi/ashtadhyayi_org_data">also retrieved</a> from the excellent <a href="ashtadhyayi.com">ashtadhyayi.com</a> site (where shrI nIlesh personally curates the content). We plan to periodically compare with such independently maintained sources and correct the content.</p>
+
+<h2 id="user-interface-ui">User Interface (UI)</h2>
+
+<p>We use the Hugo static site generator to generate webpages, and github to host the site at <a href="https://ashtadhyayi.github.io/">https://ashtadhyayi.github.io/</a>. The UI heavily copies shrI nIlesh&rsquo;s <a href="ashtadhyayi.com">ashtadhyayi.com</a>.</p>
+
+<h3 id="automatic-updates">Automatic updates</h3>
+
+<p>Ordinarily, wercker piplenes set up under the <a href="https://github.com/sanskrit/ashtadhyayi/">ashtadhyayi</a> and <a href="https://github.com/ashtadhyayi/ashtadhyayi.github.io/">ashtadhyayi-ui</a> projects are automatically triggered upon updates to the respective repositories, leading to the updated UI.
+- Status
+  - content triggering UI builds: <a href="https://app.wercker.com/project/byKey/ce8ccbe942e0226ce16ba45e0d2fc10f"><img src="https://app.wercker.com/status/ce8ccbe942e0226ce16ba45e0d2fc10f/s/master" alt="wercker status" title="wercker status" /></a>
+  - ui builds: <a href="https://app.wercker.com/project/byKey/ad825f9de7285c39858a47f6dbe0ecb2"><img src="https://app.wercker.com/status/ad825f9de7285c39858a47f6dbe0ecb2/s/master" alt="wercker status" title="wercker status" /></a></p>
+
+<h3 id="updating-the-ui-with-the-latest-content-manully">Updating the UI with the latest content (Manully)</h3>
+
+<ul>
+<li>Update the content - <code>git submodule foreach &quot;(git checkout master; git pull)&amp;&quot;</code></li>
+<li>Install <a href="gohugo.io">Hugo</a></li>
+<li>Run <code>hugo</code> (Takes ~ 16s as of 20181224.)</li>
+<li>Check in and push the changed files in the doc directory to github gh-page branch.</li>
+</ul>
+
+<h3 id="technical-considerations">Technical considerations</h3>
+
+<ul>
+<li>github.io is a convenient place to present the data (no money needed for server resources).</li>
+<li>The Jekyll static site generator is just too slow for data of this magnitude.</li>
+<li>Content is loaded from github.</li>
+</ul>
+
+<h3 id="running-off-internet">Running off internet</h3>
+
+<ul>
+<li>clone the data repository within static subdirectory and point the attributes in the js_include tags in the details page to point to it.</li>
+<li>Fix the variables in the hugo config.toml file appropriately.</li>
+</ul>
+
+      </div>
+    </article>
+  </div>
+
+    </main>
+    <footer class="bg-yellow  p-1" role="contentinfo">
+  <div class="container-fluid d-flex justify-content-between">
+  <a class="btn btn-secondary" href="/about/" >
+    परिचयः
+  </a>
+  <a class="btn btn-secondary" href="https://github.com/sanskrit/ashtadhyayi/issues/new" >
+    प्रतिस्पन्दः
+  </a>
+  <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+  <div class="btn small border">
+    Built on 2020 Nov 23 14:06:03 UTC. (<a href="http://google.com/search?q=14%3a06%3a03%20UTC to IST">IST</a>)</div>
+  </div>
+</footer>
+
+  </body>
+</html>

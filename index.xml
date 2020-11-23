@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>सूत्रावली on अष्टाध्यायी - मूलस्रोतः</title>
+    <link>https://ashtadhyayi.github.io/</link>
+    <description>Recent content in सूत्रावली on अष्टाध्यायी - मूलस्रोतः</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://ashtadhyayi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://ashtadhyayi.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashtadhyayi.github.io/about/</guid>
+      <description>Intro Welcome! We are a few open source sanskrit programmers, and this is our centralized repository + user inteface of data pertaining to the ashtadhyayi and its commentaries. We welcome you to contribute corrections to the content or improvements to the UI.
+Motivation This data is presented in many places on the internet (wikisource, sanskritdocuments.org, avg-sanskrit, ashtadhyayi.com etc..), but there was no centralized place where corrections and curations could happen in a crowdsourced yet controlled fashion.</description>
+    </item>
+    
+    <item>
+      <title>जालक्षेत्रमिदमन्विष्यताम्</title>
+      <link>https://ashtadhyayi.github.io/google_site_search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashtadhyayi.github.io/google_site_search/</guid>
+      <description>  (function() { var cx = &#39;003441740804712584864:bvledr2q0pc&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = &#39;https://cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();    </description>
+    </item>
+    
+    <item>
+      <title>सूत्रविवरणानि</title>
+      <link>https://ashtadhyayi.github.io/sutra-details/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ashtadhyayi.github.io/sutra-details/</guid>
+      <description>             
+                         --- </description>
+    </item>
+    
+  </channel>
+</rss>
