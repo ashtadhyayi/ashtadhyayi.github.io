@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>सूत्रावली on अष्टाध्यायी - मूलस्रोतः</title>
@@ -35,8 +35,7 @@ Motivation This data is presented in many places on the internet (wikisource, sa
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ashtadhyayi.github.io/sutra-details/</guid>
-      <description>             
-                         --- </description>
+      <description>                                       ---  </description>
     </item>
     
   </channel>
