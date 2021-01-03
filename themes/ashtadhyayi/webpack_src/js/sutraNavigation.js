@@ -12,6 +12,7 @@ export async function addLinks(htmlIn) {
           // Process dhAtupATha references from ashtadhyayi.com db
           .replace(/\{!(\d+) +(.+?) *!\}/g, "$2")
           .replace(/\{\$(.+?)\$\}/g, "$1")
+          // Fix $S$5$1$ (सुबन्त पञ्चमी एकवचनम्)
           .replace(/\$(.)\$(.)\$(.)\$/g, " $1-$2-$3")
   ;
   htmlOut = replaceAsync(htmlOut, /\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtmlAsync);
