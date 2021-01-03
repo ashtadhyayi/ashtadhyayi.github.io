@@ -8,7 +8,12 @@ export async function addLinks(htmlIn) {
           .replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml)
       // Process text like ६.४.१३
       .replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari)
-          .replace(/<\{(\d+)\}>/g, "(सि.कौ. $1)");
+          .replace(/<\{SK(\d+)\}>/g, "(सि.कौ. $1)")
+          // Process dhAtupATha references from ashtadhyayi.com db
+          .replace(/\{!(\d+) +(.+?) *!\}/g, "$2")
+          .replace(/\{\$(.+?)\$\}/g, "$1")
+          .replace(/\$(.)\$(.)\$(.)\$/g, " $1-$2-$3")
+  ;
   htmlOut = replaceAsync(htmlOut, /\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtmlAsync);
   return htmlOut;
 }
