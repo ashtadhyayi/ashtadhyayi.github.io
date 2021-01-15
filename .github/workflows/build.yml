@@ -3,6 +3,12 @@ name: Build Hugo site
 on:
   push:
     branches: [ hugo-source ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        default: 'warning'
 
 jobs:
   transform:
