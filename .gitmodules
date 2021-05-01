@@ -1,3 +1,4 @@
 [submodule "static/vritti"]
 	path = static/vritti
 	url = https://github.com/sanskrit/ashtadhyayi.git
+	update = merge
