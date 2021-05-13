@@ -5,10 +5,6 @@
     <link>https://ashtadhyayi.github.io/sutras/</link>
     <description>Recent content in Sutras on अष्टाध्यायी - मूलस्रोतः</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://ashtadhyayi.github.io/sutras/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://ashtadhyayi.github.io/sutras/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
