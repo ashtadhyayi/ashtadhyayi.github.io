@@ -36,6 +36,11 @@
     let baseURL = "https:\/\/ashtadhyayi.github.io\/";
     let basePath = "/" + baseURL.split("/").slice(3).join("/");
     let siteParams = JSON.parse("{\u0022autocompletepageurl\u0022:\u0022https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/sutrANi.tsv\u0022,\u0022env\u0022:\u0022production\u0022,\u0022githubeditmepathbase\u0022:\u0022https:\/\/github.com\/sanskrit\/ashtadhyayi\/edit\/master\/\u0022,\u0022kaumuditoashtadhyayiindexurl\u0022:\u0022https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/kaumudiToAshtadhyayiIndex.tsv\u0022,\u0022mainSections\u0022:[\u0022suutra\u0022],\u0022mainsections\u0022:[\u0022suutra\u0022],\u0022sutrabasicsjsonurl\u0022:\u0022https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/sutraBasics.json\u0022,\u0022vrittibasicsjsonurl\u0022:\u0022https:\/\/raw.githubusercontent.com\/sanskrit\/ashtadhyayi\/master\/data\/vrittiBasics.json\u0022}");
+    let pageDefaultsList = JSON.parse("[{\u0022scope\u0022:{\u0022pathPrefix\u0022:\u0022\u0022},\u0022values\u0022:{\u0022comments\u0022:true,\u0022footernav\u0022:\u0022top_bar\u0022,\u0022layout\u0022:\u0022page\u0022,\u0022search\u0022:true,\u0022sidebar\u0022:\u0022home_sidebar\u0022,\u0022topnav\u0022:\u0022top_bar\u0022,\u0022unicode_script\u0022:\u0022devanagari\u0022}}]");
+    
+    
+    
+    var pageRelUrlTree = {};
     let autocompletePageUrl = siteParams.autocompletepageurl;
     let sutraBasicsJsonUrl = siteParams.sutrabasicsjsonurl;
     let vrittiBasicsJsonUrl = siteParams.vrittibasicsjsonurl;
@@ -45,13 +50,25 @@
     <script type="text/javascript">
       
       let pageSource = "suutra\/8.4\/_index.md";
-      let pageParams = JSON.parse("{\u0022draft\u0022:false,\u0022iscjklanguage\u0022:false,\u0022lastmod\u0022:\u00222021-07-20T09:14:23\u002b05:30\u0022,\u0022title\u0022:\u0022\u002b८।४\u0022}");
+      let pageVars = {};
+      pageVars.pageUrlMinusBasePath = "\/suutra\/8.4\/".replace(basePath, "/");
+      pageVars.pageParams = {};
+      pageVars.pageSource = "suutra\/8.4\/_index.md";
+      console.log(pageVars.pageSource);
+      var pageDefaults;
+      for (let possiblePageDefaults of pageDefaultsList) {
+        if (pageVars.pageSource.startsWith(possiblePageDefaults.scope.pathPrefix)) {
+          pageDefaults = possiblePageDefaults.values
+        }
+      }
+      let pageParams = JSON.parse("{\u0022draft\u0022:false,\u0022iscjklanguage\u0022:false,\u0022lastmod\u0022:\u00222021-07-20T09:52:58\u002b05:30\u0022,\u0022title\u0022:\u0022\u002b८।४\u0022}");
       console.log(pageSource);
       let sutraBasics = null;
       let sutraId = null;
 
     </script>
     <script src="/dist/main-bundle.js"></script>
+    <script src="/dist/transliteration-bundle.js"></script>
     <script src="/dist/ui_lib-bundle.js"></script>
 
     <link rel="stylesheet" href="/css/@fortawesome/fontawesome-free/css/solid.min.css">
@@ -68,6 +85,27 @@
     <a  href="/" class="btn btn-default col">
       <i class="fas fa-gopuram ">पाणिनीयमूलस्रोतः</i>
     </a>
+    <select name="transliterationDropdown" size="1" onchange="module_transliteration.updateTransliteration()">
+      <option value="devanagari" selected="">स</option>
+      <option value="iso">ā</option>
+      <option value="kannada">ಅ</option>
+      <option value="malayalam">അ</option>
+      <option value="telugu">క</option>
+      <option value="tamil_superscripted">க²</option>
+      <option value="tamil_extended">க</option>
+      <option value="grantha">𑌅</option>
+      <option value="gujarati">અ</option>
+      <option value="oriya">ଅ</option>
+      <option value="assamese">অস</option>
+      <option value="bengali">অ</option>
+      <option value="gurmukhi">ਅ</option>
+      <option value="cyrillic">пу</option>
+      <option value="sinhala">අ</option>
+      <option value="sharada">𑆑𑇀𑆰</option>
+      <option value="brahmi">𑀅</option>
+      <option value="modi">𑘦𑘻𑘚𑘲</option>
+      <option value="tirhuta_maithili">𑒁</option>
+    </select>
     <div class="col-md-auto d-flex justify-content-center">
       <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       <a href="/google_site_search/"  class="btn btn-default">Google</a>
@@ -123,7 +161,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.1 रषाभ्यां नो णः समानपदे</li>
         
@@ -148,7 +186,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.10 वा भावकरणयोः</li>
         
@@ -173,7 +211,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.11 प्रातिपदिकान्तनुम्विभक्तिषु च</li>
         
@@ -198,7 +236,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.12 एकाजुत्तरपदे णः</li>
         
@@ -223,7 +261,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.13 कुमति च</li>
         
@@ -248,7 +286,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.14 उपसर्गादसमासेऽपि णोपदेशस्य</li>
         
@@ -273,7 +311,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.15 हिनुमीना</li>
         
@@ -298,7 +336,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.16 आनि लोट्</li>
         
@@ -323,7 +361,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.17 नेर्गदनदपतपदघुमास्यतिहन्तियातिवातिद्रातिप्सातिवपतिवहतिशाम्यतिचिनोतिदेग्धिषु च</li>
         
@@ -348,7 +386,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.18 शेषे विभाषाऽकखादावषान्त उपदेशे</li>
         
@@ -373,7 +411,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.19 अनितेः</li>
         
@@ -398,7 +436,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.2 अट्कुप्वाङ्नुम्व्यवायेऽपि</li>
         
@@ -423,7 +461,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.20 अन्तः</li>
         
@@ -448,7 +486,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.21 उभौ साभ्यासस्य</li>
         
@@ -473,7 +511,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.22 हन्तेरत्पूर्वस्य</li>
         
@@ -498,7 +536,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.23 वमोर्वा</li>
         
@@ -523,7 +561,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.24 अन्तरदेशे</li>
         
@@ -548,7 +586,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.25 अयनं च</li>
         
@@ -573,7 +611,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.26 छन्दस्यृदवग्रहात्‌</li>
         
@@ -598,7 +636,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.27 नश्च धातुस्थोरुषुभ्यः</li>
         
@@ -623,7 +661,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.28 उपसर्गाद् बहुलम्</li>
         
@@ -648,7 +686,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.29 कृत्यचः</li>
         
@@ -673,7 +711,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.3 पूर्वपदात्‌ संज्ञायामगः</li>
         
@@ -698,7 +736,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.30 णेर्विभाषा</li>
         
@@ -723,7 +761,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.31 हलश्च इजुपधात्‌</li>
         
@@ -748,7 +786,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.32 इजादेः सनुमः</li>
         
@@ -773,7 +811,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.33 वा निंसनिक्षनिन्दाम्</li>
         
@@ -798,7 +836,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.34 न भाभूपूकमिगमिप्यायीवेपाम्</li>
         
@@ -823,7 +861,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.35 षात्‌ पदान्तात्‌</li>
         
@@ -848,7 +886,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.36 नशेः षान्तस्य</li>
         
@@ -873,7 +911,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.37 पदान्तस्य</li>
         
@@ -898,7 +936,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.38 पदव्यवायेऽपि</li>
         
@@ -923,7 +961,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.39 क्षुभ्नाऽऽदिषु च</li>
         
@@ -948,7 +986,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.4 वनं पुरगामिश्रकासिध्रकाशारिकाकोटराऽग्रेभ्यः</li>
         
@@ -973,7 +1011,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.40 स्तोः श्चुना श्चुः</li>
         
@@ -998,7 +1036,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.41 ष्टुना ष्टुः</li>
         
@@ -1023,7 +1061,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.42 न पदान्ताट्टोरनाम्</li>
         
@@ -1048,7 +1086,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.43 तोः षि</li>
         
@@ -1073,7 +1111,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.44 शात्‌</li>
         
@@ -1098,7 +1136,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.45 यरोऽनुनासिकेऽनुनासिको वा</li>
         
@@ -1123,7 +1161,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.46 अचो रहाभ्यां द्वे</li>
         
@@ -1148,7 +1186,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.47 अनचि च</li>
         
@@ -1173,7 +1211,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.48 नादिन्याक्रोशे पुत्रस्य</li>
         
@@ -1198,7 +1236,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.49 शरोऽचि</li>
         
@@ -1223,7 +1261,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.5 प्रनिरन्तःशरेक्षुप्लक्षाम्रकार्ष्यखदिरपियूक्षाभ्योऽसंज्ञायामपि</li>
         
@@ -1248,7 +1286,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.50 त्रिप्रभृतिषु शाकटायनस्य</li>
         
@@ -1273,7 +1311,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.51 सर्वत्र शाकल्यस्य</li>
         
@@ -1298,7 +1336,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.52 दीर्घादाचार्याणाम्</li>
         
@@ -1323,7 +1361,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.53 झलां जश् झशि</li>
         
@@ -1348,7 +1386,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.54 अभ्यासे चर्च्च</li>
         
@@ -1373,7 +1411,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.55 खरि च</li>
         
@@ -1398,7 +1436,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.56 वाऽवसाने</li>
         
@@ -1423,7 +1461,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.57 अणोऽप्रगृह्यस्यानुनासिकः</li>
         
@@ -1448,7 +1486,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.58 अनुस्वारस्य ययि परसवर्णः</li>
         
@@ -1473,7 +1511,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.59 वा पदान्तस्य</li>
         
@@ -1498,7 +1536,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.6 विभाषौषधिवनस्पतिभ्यः</li>
         
@@ -1523,7 +1561,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.60 तोर्लि</li>
         
@@ -1548,7 +1586,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.61 उदः स्थास्तम्भोः पूर्वस्य</li>
         
@@ -1573,7 +1611,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.62 झयो होऽन्यतरस्याम्</li>
         
@@ -1598,7 +1636,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.63 शश्छोऽटि</li>
         
@@ -1623,7 +1661,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.64 हलो यमां यमि लोपः</li>
         
@@ -1648,7 +1686,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.65 झरो झरि सवर्णे</li>
         
@@ -1673,7 +1711,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.66 उदात्तादनुदात्तस्य स्वरितः</li>
         
@@ -1698,7 +1736,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.67 नोदात्तस्वरितोदयमगार्ग्यकाश्यपगालवानाम्‌</li>
         
@@ -1723,7 +1761,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.68 अ अ इति</li>
         
@@ -1748,7 +1786,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.7 अह्नोऽदन्तात्‌</li>
         
@@ -1773,7 +1811,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.8 वाहनमाहितात्‌</li>
         
@@ -1798,7 +1836,7 @@
         
         <li>iscjklanguage: false</li>
         
-        <li>lastmod: 2021-07-20 09:14:23 &#43;0530 &#43;0530</li>
+        <li>lastmod: 2021-07-20 09:52:58 &#43;0530 &#43;0530</li>
         
         <li>title: 8.4.9 पानं देशे</li>
         
@@ -1827,7 +1865,7 @@
   </a>
   <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
   <div class="btn small border">
-    Built on 2021 Jul 20 03:44:56 UTC. (<a href="http://google.com/search?q=03%3a44%3a56%20UTC to IST">IST</a>)</div>
+    Built on 2021 Jul 20 04:23:26 UTC. (<a href="http://google.com/search?q=04%3a23%3a26%20UTC to IST">IST</a>)</div>
   </div>
 </footer>
 
