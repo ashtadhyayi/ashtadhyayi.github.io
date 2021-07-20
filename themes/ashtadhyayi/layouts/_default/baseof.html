@@ -56,6 +56,32 @@
     <link rel="stylesheet" href="{{ relURL "css/@fortawesome/fontawesome-free/css/solid.min.css" }}">
     <link rel="stylesheet" href="{{ relURL "css/@fortawesome/fontawesome-free/css/fontawesome.min.css" }}">
     <link rel="stylesheet" href="{{ relURL "css/fonts.css" }}">
+
+    <!-- Reference: https://support.google.com/webmasters/answer/189077  
+     Should correspond to site-header.html options.
+     -->
+    <link rel="alternate" hreflang="sa-Deva" href="{{.Permalink}}" />
+    <link rel="alternate" hreflang="sa-Deva" href="{{.Permalink}}?transliteration_target=devanagari" />
+    <link rel="alternate" hreflang="sa-Knda" href="{{.Permalink}}?transliteration_target=kannada" />
+    <link rel="alternate" hreflang="sa-Mlym" href="{{.Permalink}}?transliteration_target=malayalam" />
+    <link rel="alternate" hreflang="sa-Telu" href="{{.Permalink}}?transliteration_target=telugu" />
+    <link rel="alternate" hreflang="sa-Taml-t-sa-Taml-m0-superscript" href="{{.Permalink}}?transliteration_target=tamil_superscripted" />
+    <link rel="alternate" hreflang="sa-Taml" href="{{.Permalink}}?transliteration_target=tamil" />
+    <link rel="alternate" hreflang="sa-Gran" href="{{.Permalink}}?transliteration_target=grantha" />
+    <link rel="alternate" hreflang="sa-Gujr" href="{{.Permalink}}?transliteration_target=gujarati" />
+    <link rel="alternate" hreflang="sa-Orya" href="{{.Permalink}}?transliteration_target=oriya" />
+    <link rel="alternate" hreflang="sa-Beng-t-sa-Beng-m0-assamese" href="{{.Permalink}}?transliteration_target=assamese" />
+    <link rel="alternate" hreflang="sa-Beng" href="{{.Permalink}}?transliteration_target=bengali" />
+    <link rel="alternate" hreflang="sa-Guru" href="{{.Permalink}}?transliteration_target=gurmukhi" />
+    <link rel="alternate" hreflang="sa-Cyrl" href="{{.Permalink}}?transliteration_target=cyrillic" />
+    <link rel="alternate" hreflang="sa-Sinh" href="{{.Permalink}}?transliteration_target=sinhala" />
+    <link rel="alternate" hreflang="sa-Shar" href="{{.Permalink}}?transliteration_target=sharada" />
+    <link rel="alternate" hreflang="sa-Brah" href="{{.Permalink}}?transliteration_target=brahmi" />
+    <link rel="alternate" hreflang="sa-Modi" href="{{.Permalink}}?transliteration_target=modi" />
+    <link rel="alternate" hreflang="sa-Tirh" href="{{.Permalink}}?transliteration_target=tirhuta_maithili" />
+    <link rel="alternate" hreflang="sa-Latn-t-sa-Zyyy-m0-iso" href="{{.Permalink}}?transliteration_target=iso" />
+    <link rel="alternate" hreflang="sa-Latn-t-sa-Zyyy-m0-iast" href="{{.Permalink}}?transliteration_target=iast" />
+
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
