@@ -5,13 +5,13 @@ import YAML from 'yaml'
 var showdownConverter = new showdown.Converter();
 
 function getEditLinkHtml(includedPageUrl) {
-    // console.debug(includedPageUrl, getEditMePath(includedPageUrl));
     let url = ""
     if(includedPageUrl.includes("ashtadhyayi_com")) {
         url  = "https://github.com/ashtadhyayi-com/data/blob/master/";
     } else {
         url  = getEditMePath(includedPageUrl);
     }
+    // console.debug("Edit path", includedPageUrl, url);
     return `<a class='btn btn-secondary' href='${url}'><i class="fas fa-edit"></i></a>`    
 }
 
@@ -34,7 +34,8 @@ function getIncludePageUrl(includeElement) {
 async function getTextContentCard(responseHtml, includeElement) {
     let title = includeElement.attr("title");
     let resourceType = includeElement.attr("dataType");
-    let includedPageUrl = includeElement.attr("urlPattern") + getSutraLinkRelative(sutraId, resourceType);
+    let includedPageUrl = getIncludePageUrl(includeElement);
+    // console.debug("includedPageUrl", includedPageUrl);
     let collapseStyle = getCollapseStyle(includeElement);
 
     let titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
@@ -107,6 +108,7 @@ async function getContentCardFromObject(responseJson, includeElement) {
 async function getMarkdownContentCard(responseHtml, includeElement) {
     let title = includeElement.attr("title");
     let includedPageUrl = getIncludePageUrl(includeElement);
+    // console.debug("includedPageUrl", includedPageUrl);
     let collapseStyle = getCollapseStyle(includeElement);
 
     let mdContent = responseHtml.split("---").slice(2).join("\n");
