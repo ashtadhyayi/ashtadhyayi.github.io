@@ -214,7 +214,6 @@ export default function handleIncludes() {
             // The below lines do not having any effect if not called without the timeout.
             setTimeout(function () {
                 main.prepareContentWithoutIncludes();
-                updateToc();
             }, 5000);
             return values;
         })
