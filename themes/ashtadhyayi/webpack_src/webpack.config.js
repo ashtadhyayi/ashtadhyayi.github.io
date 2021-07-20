@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
     entry: {
         main: "./js/main.js",
-        ui_lib: "./js/ui-lib.js"
+        ui_lib: "./js/ui-lib.js",
+        transliteration: "./js/transliteration.js"
     },
     output: {
         filename: "[name]-bundle.js",
@@ -44,6 +45,18 @@ module.exports = {
                         name: 'images/[hash]-[name].[ext]'
                     }
                 }]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/' // under the main output folder defined above in the output tuple.
+                        }
+                    }
+                ],
             }
         ]
     },

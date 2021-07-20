@@ -1,6 +1,8 @@
 import {addLinks, getSutraLinkRelative, getEditMePath, getGithubCreationPath} from "./sutraNavigation";
-import showdown from "showdown";
+import * as main from "./main";
 import YAML from 'yaml'
+import toml from 'toml';
+import showdown from "showdown";
 
 var showdownConverter = new showdown.Converter();
 
@@ -194,11 +196,27 @@ async function fillJsInclude(includeElement) {
     return ajaxResponsePromise.then((x) => {setContentCard(x, includeElement); return includeElement;}).catch((e) => setMissingContentCard(e, includeElement));
 }
 
+// Process includes of the form:
+// <div class="js_include" url="../xyz/"/>.
+// can't easily use a worker - workers cannot access DOM (workaround: pass strings back and forth), cannot access jquery library.
 export default function handleIncludes() {
-    if ($('.js_include').length == 0 ) { return; }
-    return Promise.all($('.js_include').map(function() {
+    console.log("Entering handleIncludes.");
+    if ($('.js_include').length === 0) {
+        return;
+    }
+    return Promise.allSettled($('.js_include').map(function () {
         var jsIncludeJqueryElement = $(this);
         // The actual filling happens in a separate thread!
-        return fillJsInclude(jsIncludeJqueryElement);
-    }));
+        return fillJsInclude(jsIncludeJqueryElement, undefined);
+    }))
+        .then(function (values) {
+            console.log("Done including.", values);
+            // The below lines do not having any effect if not called without the timeout.
+            setTimeout(function () {
+                main.prepareContentWithoutIncludes();
+                updateToc();
+            }, 5000);
+            return values;
+        })
+        .catch(reason => console.error(reason));
 }

@@ -3,6 +3,27 @@
     <a  href="{{ "/" | relURL }}" class="btn btn-default col">
       <i class="fas fa-gopuram ">पाणिनीयमूलस्रोतः</i>
     </a>
+    <select name="transliterationDropdown" size="1" onchange="module_transliteration.updateTransliteration()">
+      <option value="devanagari" selected="">स</option>
+      <option value="iso">ā</option>
+      <option value="kannada">ಅ</option>
+      <option value="malayalam">അ</option>
+      <option value="telugu">క</option>
+      <option value="tamil_superscripted">க²</option>
+      <option value="tamil_extended">க</option>
+      <option value="grantha">𑌅</option>
+      <option value="gujarati">અ</option>
+      <option value="oriya">ଅ</option>
+      <option value="assamese">অস</option>
+      <option value="bengali">অ</option>
+      <option value="gurmukhi">ਅ</option>
+      <option value="cyrillic">пу</option>
+      <option value="sinhala">අ</option>
+      <option value="sharada">𑆑𑇀𑆰</option>
+      <option value="brahmi">𑀅</option>
+      <option value="modi">𑘦𑘻𑘚𑘲</option>
+      <option value="tirhuta_maithili">𑒁</option>
+    </select>
     <div class="col-md-auto d-flex justify-content-center">
       <input id="sutraSearchInputBox" placeholder="सूत्रमन्विष्यताम् + Enter">
       <a href="{{ "google_site_search/" | relURL }}"  class="btn btn-default">Google</a>

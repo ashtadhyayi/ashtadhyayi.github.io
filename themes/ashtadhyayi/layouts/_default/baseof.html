@@ -32,6 +32,17 @@
     <script type="text/javascript">
       // Note that we define page-specific variables below and not in a partial like hugo-site-vars-to-js-general.html. Reason: Hugo builds this partial just once and includes it everywhere.
       let pageSource = "{{.File.Path}}";
+      let pageVars = {};
+      pageVars.pageUrlMinusBasePath = "{{.RelPermalink}}".replace(basePath, "/");
+      pageVars.pageParams = {};
+      pageVars.pageSource = "{{ with .File }}{{.Path}}{{ end }}";
+      console.log(pageVars.pageSource);
+      var pageDefaults;
+      for (let possiblePageDefaults of pageDefaultsList) {
+        if (pageVars.pageSource.startsWith(possiblePageDefaults.scope.pathPrefix)) {
+          pageDefaults = possiblePageDefaults.values
+        }
+      }
       let pageParams = JSON.parse("{{.Page.Params | jsonify}}");
       console.log(pageSource);
       let sutraBasics = null;
@@ -39,6 +50,7 @@
 
     </script>
     <script src="{{ relURL "dist/main-bundle.js" }}"></script>
+    <script src="{{ relURL "dist/transliteration-bundle.js" }}"></script>
     <script src="{{ relURL "dist/ui_lib-bundle.js" }}"></script>
 
     <link rel="stylesheet" href="{{ relURL "css/@fortawesome/fontawesome-free/css/solid.min.css" }}">

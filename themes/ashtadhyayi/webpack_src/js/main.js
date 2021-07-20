@@ -1,4 +1,6 @@
 import {setSutraNavigationLinks, sutraIdToDevanagari, getQueryVariable} from "./sutraNavigation";
+import * as transliteration from "./transliteration";
+import * as comments from "./comments";
 
 import {getSutraBasics} from "./dbInterface";
 import handleIncludes from "./handleIncludes";
@@ -9,6 +11,11 @@ function setCanonicalUrl() {
     link.setAttribute('rel', 'canonical');
     link.setAttribute('href', location.protocol + '//' + location.host + "/sutra-details/?sutra=" + sutraId);
     document.head.appendChild(link);
+}
+
+export function prepareContentWithoutIncludes() {
+    comments.setInlineCommentsInPostContent();
+    transliteration.transliterate();
 }
 
 $( document ).ready(function() {
@@ -36,6 +43,7 @@ if (pageSource.endsWith("sutra-details.md") || pageSource.includes("suutra/")){
             document.title = `पाणिनीयमूलस्रोतः - ${titleText}`;
         });
     }
+    prepareContentWithoutIncludes();
     handleIncludes();
 }
 });
