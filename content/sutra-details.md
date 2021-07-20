@@ -57,21 +57,3 @@ title: सूत्रविवरणानि
 <div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/laghukaumudi/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="लघुकौमुदी" > </div>  
 
 
-<!---
-OLD DATA SOURCED FROM ASHTADHYAYI CENTRAL REPO. CURRENTLY DEPRECATED.
-<div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/adhikara/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="अधिकारः" dataType="txt"> </div>  
-<div class="js_include vritti_l2 collapsed " urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/anuvritti/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.txt"  title="अनुवृत्तिः" dataType="txt"> </div>  
-
-<div class="card-group border border-primary">
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/kashika/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="काशिका"> </div>  
-<div class="js_include collapsed vritti_l2" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/nyasa/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="न्यासः"> </div>  
-<div class="js_include collapsed vritti_l2" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/padamanjari/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="पदमञ्जरी"> </div>  
-</div>
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/mahabhashyam/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="महाभाष्यम्"> </div>  
-<div class="card-group border border-primary">
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/siddhantakaumudi/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="सिद्धान्तकौमुदी"> </div>  
-<div class="js_include collapsed vritti_l2" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/balamanorama/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="बालमनोरमा"> </div>  
-<div class="js_include collapsed vritti_l2" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/tattvabodhini/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="तत्त्वबोधिनी"> </div>  
-</div>  
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/laghusiddhantakaumudi/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="लघुकौमुदी"> </div>  
---->

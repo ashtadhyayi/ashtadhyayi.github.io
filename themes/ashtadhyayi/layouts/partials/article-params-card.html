@@ -1,9 +1,12 @@
-{{ $cleaned_title := replace .File.Path " " "_"}}
+{{ $cleaned_title := ""}}
+{{ with .File }}
+{{ $cleaned_title := replace .Path " " "_"}}
 {{ $cleaned_title := replace $cleaned_title "." "_"}}
 {{ $cleaned_title := replace $cleaned_title "/" "_"}}
+{{ end }}
 <aside class="card border" id="section-tree-item-{{$cleaned_title}}">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
-        <a href="{{.Permalink}}">{{$.Params.index}} </a>
+        <a href="{{.Permalink}}">{{ if not .Date.IsZero }}{{.Date.Format "2006-01-02"}}  | {{ end }}{{.Title}} </a>
         <a data-toggle="collapse" href="#section-tree-item-body-{{$cleaned_title}}" role="button" aria-expanded="false" aria-controls="section-tree-item-body-{{$cleaned_title}}" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
     </div>
     <nav id="section-tree-item-body-{{$cleaned_title}}" class="card-body p-0 collapse">

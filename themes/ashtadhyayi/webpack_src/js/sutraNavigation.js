@@ -49,14 +49,14 @@ function getSutraLinkHtmlFromDevanagari(sutraIdDevanagari) {
 export function getSutraLinkRelative(sutraId, resourceType) {
   let sutraPaada = sutraId.split(".").slice(0,2).join(".");
   if (resourceType === "txt") {
-    return `../../pada-${sutraPaada}/${sutraId}.txt`
+    return `../../${sutraPaada}/${sutraId}.txt`
   } else {
-    return `../../pada-${sutraPaada}/${sutraId}.md`;
+    return `../../${sutraPaada}/${sutraId}/`;
   }
 }
 
 export function getContextSensitiveSutraLink(sutraId) {
-  if (!pageSource.startsWith("vritti")) {
+  if (!pageSource.startsWith("suutra/")) {
     return `${baseURL}/sutra-details/?sutra=${sutraId}`;
   } else {
     return getSutraLinkRelative(sutraId);

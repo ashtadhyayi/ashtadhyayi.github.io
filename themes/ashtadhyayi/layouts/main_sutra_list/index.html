@@ -19,6 +19,7 @@
           {{ $adhyaaya_paada := printf "%d.%d" $adhyaaya $paada }}
           {{ $sutra_count := index $.Site.Data.vrittiBasics.ashtadhyayi.sutraCount $adhyaaya_paada }}
           {{range $suutra := seq 1 $sutra_count}}
+          {{ $adhyaaya_paada := printf "%d.%d" $adhyaaya $paada}}
           {{ $adhyaaya_paada_suutra := printf "%d.%d.%d" $adhyaaya $paada $suutra}}
           {{ $adhyaaya_paada_suutra_dashed := printf "%d-%d-%d" $adhyaaya $paada $suutra}}
           {{ $sutra_info := index $.Site.Data.sutraBasics $adhyaaya_paada_suutra }}
@@ -27,7 +28,7 @@
           <li>
               <aside class="card border" id="section-tree-item-{{$adhyaaya_paada_suutra_dashed}}">
               <div class="card-title bg-light-gray border d-flex justify-content-between">
-                  <div><a href="sutra-details/?sutra={{$adhyaaya_paada_suutra}}">{{$adhyaaya_paada_suutra}}</a> {{$sutra_text}}</div>
+                  <div><a href="suutra/{{$adhyaaya_paada}}/{{$adhyaaya_paada_suutra}}">{{$adhyaaya_paada_suutra}}</a> {{$sutra_text}}</div>
                   <a data-toggle="collapse" href="#section-tree-item-body-{{$adhyaaya_paada_suutra_dashed}}" role="button" aria-expanded="false" aria-controls="section-tree-item-body-{{$adhyaaya_paada_suutra_dashed}}" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
               </div>
               <nav id="section-tree-item-body-{{$adhyaaya_paada_suutra_dashed}}" class="card-body p-0 collapse">

@@ -12,12 +12,17 @@ function setCanonicalUrl() {
 }
 
 $( document ).ready(function() {
-if (pageSource.endsWith("sutra-details.md") || pageSource.endsWith("ui.md")) {
+if (pageSource.includes("suutra/")) {
+    sutraId = document.location.toString().split("/").slice(-2)[0];
+}
+if (pageSource.endsWith("sutra-details.md")) {
     sutraId = "1.1.1";
     if (getQueryVariable("sutra")) {
         sutraId = getQueryVariable("sutra");
     }
     setCanonicalUrl();
+}
+if (pageSource.endsWith("sutra-details.md") || pageSource.includes("suutra/")){
     console.log(sutraId);
 
     getSutraBasics(sutraId).then(function (sutraBasics) {
