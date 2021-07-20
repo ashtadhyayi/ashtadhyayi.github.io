@@ -118,7 +118,7 @@ export function getAshtadhyayiComUrls() {
 }
 
 export function getEditMePath(pageUrl) {
-  console.debug(pageUrl);
+  // console.debug(pageUrl);
   if(pageUrl.startsWith("https://raw.githubusercontent.com/")) {
     // Example: Get https://github.com/sanskrit/ashtadhyayi/edit/master/laghusiddhantakaumudi/pada-1.1/1.1.7.md from https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/laghusiddhantakaumudi/pada-1.1/1.1.7.md
     return pageUrl.replace("raw.githubusercontent.com", "github.com").replace("master", "edit/master");
