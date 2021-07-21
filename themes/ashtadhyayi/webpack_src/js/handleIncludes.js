@@ -1,4 +1,4 @@
-import {addLinks, getSutraLinkRelative, getEditMePath, getGithubCreationPath} from "./sutraNavigation";
+import {addLinks, getEditMePath, getGithubCreationPath} from "./sutraNavigation";
 import * as main from "./main";
 import YAML from 'yaml'
 import toml from 'toml';

@@ -46,22 +46,10 @@ function getSutraLinkHtmlFromDevanagari(sutraIdDevanagari) {
 }
 
 
-export function getSutraLinkRelative(sutraId, resourceType) {
-  let sutraPaada = sutraId.split(".").slice(0,2).join(".");
-  if (resourceType === "txt") {
-    return `../../${sutraPaada}/${sutraId}.txt`
-  } else {
-    return `../../${sutraPaada}/${sutraId}/`;
-  }
-}
-
 export function getContextSensitiveSutraLink(sutraId) {
-  if (!pageSource.startsWith("suutra/")) {
-    return `${baseURL}/sutra-details/?sutra=${sutraId}`;
-  } else {
-    return getSutraLinkRelative(sutraId);
-  }
-
+  let sutraPaada = sutraId.split(".").slice(0,2).join(".");
+  // return `${baseURL}/sutra-details/?sutra=${sutraId}`;
+  return `/suutra/${sutraPaada}/${sutraId}/`;
 }
 
 export function getQueryVariable(variable) {
