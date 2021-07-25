@@ -45,7 +45,7 @@ async function getTextContentCard(responseHtml, includeElement) {
         `<i class="fas fa-caret-down"></i></a> </div>` +
         `${getEditLinkHtml(includedPageUrl)}` +
         "</div>";
-    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${await addLinks(responseHtml)}</div>`;
+    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${responseHtml}</div>`;
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
     return elementToInclude;
@@ -73,7 +73,7 @@ async function getJsonContentCard(responseString, includeElement) {
         var renderedHtml = showdownConverter.makeHtml(data);
     }
 
-    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${await addLinks(renderedHtml)}</div>`;
+    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${renderedHtml}</div>`;
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
     return elementToInclude;
@@ -101,7 +101,7 @@ async function getContentCardFromObject(responseJson, includeElement) {
         var renderedHtml = showdownConverter.makeHtml(data);
     }
 
-    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${await addLinks(renderedHtml)}</div>`;
+    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${renderedHtml}</div>`;
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
     return elementToInclude;
@@ -119,9 +119,15 @@ async function getMarkdownContentCard(responseHtml, includeElement) {
     if (fieldNames !== undefined) {
         let yamlText = responseHtml.split("---")[1];
         // console.debug(yamlText);
+        let yamlObj = {};
+        try {
+            yamlObj = YAML.parse(yamlText);
+        } catch(err) {
+            let message = `YAML parse error. Check [file](${includedPageUrl}).`;
+            console.error(message);
+            mdContent = `${message}\n\n${mdContent}`;
+        }
         let fieldData = fieldNames.split(",").map(fieldName => {
-            try {
-                let yamlObj = YAML.parse(yamlText);
                 console.debug(fieldName, yamlObj);
                 let data = yamlObj[fieldName];
                 if (data !== undefined) {
@@ -129,12 +135,6 @@ async function getMarkdownContentCard(responseHtml, includeElement) {
                 } else {
                     return "";
                 }
-            }
-            catch(err) {
-                let message = `YAML parse error. Check <a href='${includedPageUrl}'>file.</a>`;
-                console.error(message);
-                return message;
-            }
         });
         mdContent = fieldData.join("\n\n") + "\n\n" + mdContent;
     }
@@ -146,7 +146,7 @@ async function getMarkdownContentCard(responseHtml, includeElement) {
         `<i class="fas fa-caret-down"></i></a> </div>` +
         `${getEditLinkHtml(includedPageUrl)}` +
         "</div>";
-    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${await addLinks(renderedHtml)}</div>`;
+    var contentHtml = `<div id='${title}_body' class="card-body ${collapseStyle}">${renderedHtml}</div>`;
     var elementToInclude = $("<div class='included-post-content card'/>")
     elementToInclude.html(titleHtml + contentHtml);
     return elementToInclude;
@@ -168,6 +168,7 @@ async function setContentCard(responseHtml, includeElement) {
             elementToInclude = await getJsonContentCard(responseHtml, includeElement);
         }
     }
+    await addLinks(elementToInclude);
     includeElement.html(elementToInclude);
 }
 

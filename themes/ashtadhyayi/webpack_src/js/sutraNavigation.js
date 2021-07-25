@@ -1,22 +1,35 @@
 import {getSutraBasicsFromSkId} from "./dbInterface";
 
-import {replaceAsync} from "./utils";
-export async function addLinks(htmlIn) {
-  let htmlOut =
-      // Process text like 6.4.13.
-      htmlIn.replace(/\[\[(\d)[।.|](\d)[।.|](\d+)\]\]/g, "($1.$2.$2)")
-          .replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml)
+import {replaceAsync, textNodesUnder} from "./utils";
+
+
+async function addLinksInHtml(htmlIn) {
+  // Process text like 6.4.13.
+  let htmlOut = htmlIn.replace(/\[\[(\d)[।.|](\d)[।.|](\d+)\]\]/g, "($1.$2.$2)")
+      .replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml)
       // Process text like ६.४.१३
       .replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari)
-          .replace(/<\{SK(\d+)\}>/g, "(सि.कौ. $1)")
-          // Process dhAtupATha references from ashtadhyayi.com db
-          .replace(/\{!(\d+) +(.+?) *!\}/g, "$2")
-          .replace(/\{\$(.+?)\$\}/g, "$1")
-          // Fix $S$5$1$ (सुबन्त पञ्चमी एकवचनम्)
-          .replace(/\$(.)\$(.)\$(.)\$/g, " $1-$2-$3")
-  ;
+      .replace(/<\{SK(\d+)\}>/g, "(सि.कौ. $1)")
+      // Process dhAtupATha references from ashtadhyayi.com db
+      .replace(/\{!(\d+) +(.+?) *!\}/g, "$2")
+      .replace(/\{\$(.+?)\$\}/g, "$1")
+      // Fix $S$5$1$ (सुबन्त पञ्चमी एकवचनम्)
+      .replace(/\$(.)\$(.)\$(.)\$/g, " $1-$2-$3");
   htmlOut = replaceAsync(htmlOut, /\(सि.कौ. (\d+)\)/g, getSkSutraLinkHtmlAsync);
   return htmlOut;
+}
+
+
+export async function addLinks(jqElement) {
+  // TODO: Process just the textElements below.
+  let jsElement = jqElement[ 0 ];
+
+  let textElements = textNodesUnder(jsElement);
+  textElements.forEach(async function (textNode) {
+    let fixedHtml = await addLinksInHtml(textNode.textContent);
+    $(textNode).replaceWith(fixedHtml);
+  });
+
 }
 
 import Sanscript from "@sanskrit-coders/sanscript";
