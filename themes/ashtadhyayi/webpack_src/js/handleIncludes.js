@@ -120,13 +120,20 @@ async function getMarkdownContentCard(responseHtml, includeElement) {
         let yamlText = responseHtml.split("---")[1];
         // console.debug(yamlText);
         let fieldData = fieldNames.split(",").map(fieldName => {
-            let yamlObj = YAML.parse(yamlText);
-            console.debug(fieldName, yamlObj);
-            let data = yamlObj[fieldName];
-            if (data !== undefined) {
-                return data;
-            } else {
-                return "";
+            try {
+                let yamlObj = YAML.parse(yamlText);
+                console.debug(fieldName, yamlObj);
+                let data = yamlObj[fieldName];
+                if (data !== undefined) {
+                    return data;
+                } else {
+                    return "";
+                }
+            }
+            catch(err) {
+                let message = `YAML parse error. Check <a href='${includedPageUrl}'>file.</a>`;
+                console.error(message);
+                return message;
             }
         });
         mdContent = fieldData.join("\n\n") + "\n\n" + mdContent;
