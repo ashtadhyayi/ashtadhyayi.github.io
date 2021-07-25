@@ -21,7 +21,6 @@ async function addLinksInHtml(htmlIn) {
 
 
 export async function addLinks(jqElement) {
-  // TODO: Process just the textElements below.
   let jsElement = jqElement[ 0 ];
 
   let textElements = textNodesUnder(jsElement);

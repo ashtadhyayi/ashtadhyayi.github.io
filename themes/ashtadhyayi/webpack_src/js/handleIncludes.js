@@ -1,6 +1,6 @@
 import {addLinks, getEditMePath, getGithubCreationPath} from "./sutraNavigation";
 import * as main from "./main";
-import YAML from 'yaml'
+const yaml = require('js-yaml');
 import toml from 'toml';
 import showdown from "showdown";
 
@@ -121,7 +121,7 @@ async function getMarkdownContentCard(responseHtml, includeElement) {
         // console.debug(yamlText);
         let yamlObj = {};
         try {
-            yamlObj = YAML.parse(yamlText);
+            yamlObj = yaml.load(yamlText);
         } catch(err) {
             let message = `YAML parse error. Check [file](${includedPageUrl}).`;
             console.error(message);
