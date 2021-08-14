@@ -138,6 +138,7 @@ async function getMarkdownContentCard(responseHtml, includeElement) {
         });
         mdContent = fieldData.join("\n\n") + "\n\n" + mdContent;
     }
+    mdContent = mdContent.replaceAll("<!", "**").replaceAll("!>", "**");
     var renderedHtml = showdownConverter.makeHtml(mdContent);
 
     var titleHtml = "";
