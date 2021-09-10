@@ -5,7 +5,7 @@ import {replaceAsync, textNodesUnder} from "./utils";
 
 async function addLinksInHtml(htmlIn) {
   // Process text like 6.4.13.
-  let htmlOut = htmlIn.replace(/\[\[(\d)[।.|](\d)[।.|](\d+)\]\]/g, "($1.$2.$2)")
+  let htmlOut = htmlIn.replace(/\[\[(\d)[।.|](\d)[।.|](\d+)\]\]/g, "($1.$2.$3)")
       .replace(/(\d\.\d\.\d+)/g, getSutraLinkHtml)
       // Process text like ६.४.१३
       .replace(/([०-९][।.][०-९][।.][०-९]+)/g, getSutraLinkHtmlFromDevanagari)
