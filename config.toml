@@ -23,4 +23,17 @@ enableGitInfo = true
 
 
 [markup.goldmark.renderer]
-  unsafe= true
+  unsafe = true
+
+[markup.highlight]
+  anchorLineNos = false
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ''
+  lineAnchors = ''
+  lineNoStart = 1
+  lineNos = true
+  lineNumbersInTable = true
+  noClasses = true
+  style = 'friendly'
+  tabWidth = 2
