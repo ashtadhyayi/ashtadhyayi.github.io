@@ -23,7 +23,7 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: "0.83.1"
+        hugo-version: "0.94.2"
         # extended: true
       # Step 3 - Clean and don't fail
     - name: Clean build_github directory
