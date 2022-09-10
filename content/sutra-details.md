@@ -25,12 +25,13 @@ title: सूत्रविवरणानि
 
 <div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/sutrartha_english/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="नीलेशाङ्ग्लवृत्तिः" > </div>  
 
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/vasu_english/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="श्रीशचन्द्रवासुः" script="english"> </div>  
+
+<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/vAsu-summary/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" fieldNames="vRtti,vRtti_eng" title="श्रीशचन्द्रवासुः-सारः" script="english"> </div>  
+
+<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/vasu_english/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="श्रीशचन्द्रवासुः-आङ्ग्लसारः" script="english"> </div>  
 
 
 <div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/vasu_english/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="श्रीशचन्द्रवासुः" script="english"> </div>  
-
-<div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/vAsu/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" fieldNames="vRtti" title="श्रीशचन्द्रवासुः-संस्कृतम्" script="english"> </div>  
 
 <div class="js_include vritti_l1 collapsed" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi/master/satishabodha/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md"  title="सतीशबोधः"> </div>  
 
