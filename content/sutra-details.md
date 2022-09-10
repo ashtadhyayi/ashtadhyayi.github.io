@@ -52,7 +52,6 @@ title: सूत्रविवरणानि
 
 <div class="card-group border border-primary">
 <div class="js_include vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/bhashya/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="महाभाष्यम्" > </div>  
-<div class="js_include collapsed vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/pradeep/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="प्रदीपः" > </div>  
 <div class="js_include collapsed vritti_l1" urlPattern="https://raw.githubusercontent.com/sanskrit/ashtadhyayi_com_transforms/master/sUtra-commentaries/laghushabdendushekhar/pada-ADHYAAYA.PAADA/ADHYAAYA.PAADA.SUUTRA.md" title="लघुशब्देन्दुशेखरः" > </div>  
 </div>
 
