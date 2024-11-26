@@ -31,7 +31,7 @@
     "css-loader": "^5.2.4",
     "file-loader": "^6.2.0",
     "font-awesome-loader": "^1.0.2",
-    "node-sass": "^6.0.0",
+    "node-sass": "^7.0.0",
     "npm-watch": "^0.9.0",
     "postcss-loader": "^5.2.0",
     "sass-loader": "^12.0.0",
